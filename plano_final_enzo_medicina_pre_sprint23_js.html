@@ -1,0 +1,1418 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plano Final Medicina — Enzo Pozzobon</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+:root{--pri:#1a3a5c;--acc:#2980b9;--ok:#27ae60;--warn:#f39c12;--bad:#e74c3c;--bg:#f0f2f5;--txt:#2c3e50;--mut:#7f8c8d;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--txt);line-height:1.65;font-size:15px;}
+.hdr{background:linear-gradient(135deg,#0d1b2a,#1b3a4b 40%,#2980b9 100%);color:#fff;padding:2.2rem;text-align:center;}
+.hdr h1{font-size:1.8rem;}.hdr .sub{opacity:.85;font-size:.92rem;}
+.hdr .tags{display:flex;justify-content:center;gap:.7rem;margin-top:.8rem;flex-wrap:wrap;}
+.hdr .tag{background:rgba(255,255,255,.16);padding:.25rem .8rem;border-radius:18px;font-size:.78rem;}
+.hdr .tag-a{background:rgba(231,76,60,.6);font-weight:600;}
+.ctn{max-width:1300px;margin:0 auto;padding:1.2rem;}
+.tabs{display:flex;gap:2px;flex-wrap:wrap;}
+.tab{padding:.55rem 1rem;background:#dfe6e9;border-radius:9px 9px 0 0;cursor:pointer;font-weight:600;font-size:.8rem;border:none;transition:.15s;}
+.tab.active{background:#fff;color:var(--acc);}
+.tab:hover{background:#c8d6e5;}
+.tc{display:none;background:#fff;border-radius:0 10px 10px 10px;padding:1.4rem;box-shadow:0 2px 10px rgba(0,0,0,.06);margin-bottom:1.3rem;}
+.tc.active{display:block;}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:1.3rem;margin-bottom:1.3rem;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;margin-bottom:1.3rem;}
+.g1{margin-bottom:1.3rem;}
+.pnl{background:#fff;border-radius:11px;padding:1.3rem;box-shadow:0 2px 8px rgba(0,0,0,.06);}
+.pnl h2{font-size:1.05rem;margin-bottom:.8rem;color:var(--pri);border-bottom:2px solid #eee;padding-bottom:.4rem;}
+.co{border-radius:9px;padding:.9rem 1.1rem;margin:.6rem 0;border-left:4px solid;}
+.co h3{font-size:.9rem;margin-bottom:.35rem;}.co ul{margin-left:1.1rem;}.co li{margin-bottom:.2rem;font-size:.84rem;}.co p{font-size:.84rem;}
+.co-g{background:#e8f8f0;border-color:var(--ok);}.co-r{background:#fde8e8;border-color:var(--bad);}
+.co-b{background:#eaf2fb;border-color:var(--acc);}.co-y{background:#fffbe6;border-color:var(--warn);}
+.co-p{background:#f4ecf7;border-color:#8e44ad;}.co-o{background:#fef3e2;border-color:#e67e22;}
+.quote{background:#f8f9fa;border-left:3px solid #bdc3c7;padding:.5rem .9rem;margin:.5rem 0;font-style:italic;font-size:.83rem;border-radius:0 6px 6px 0;}
+.quote .fix{color:var(--ok);font-style:normal;font-weight:600;}
+.quote .err{color:var(--bad);text-decoration:line-through;font-style:normal;}
+.quote .arrow{color:var(--acc);font-weight:700;}
+.example-box{background:#f0faf0;border:1px solid #c3e6cb;border-radius:8px;padding:.9rem;margin:.5rem 0;font-size:.84rem;}
+.example-box .label{font-weight:700;color:var(--ok);margin-bottom:.25rem;}
+.bad-box{background:#fdf0f0;border:1px solid #f5c6cb;border-radius:8px;padding:.9rem;margin:.5rem 0;font-size:.84rem;}
+.bad-box .label{font-weight:700;color:var(--bad);margin-bottom:.25rem;}
+.criteria-row{display:flex;align-items:center;gap:.8rem;padding:.45rem 0;border-bottom:1px solid #eee;}
+.criteria-name{min-width:220px;font-weight:600;font-size:.84rem;}
+.criteria-bar{flex:1;height:20px;background:#eee;border-radius:10px;overflow:hidden;}
+.criteria-fill{height:100%;border-radius:10px;display:flex;align-items:center;justify-content:flex-end;padding-right:7px;font-size:.7rem;font-weight:700;color:#fff;}
+.criteria-score{min-width:65px;text-align:right;font-weight:700;font-size:.84rem;}
+.tip-card{border:1px solid #e8e8e8;border-radius:9px;padding:.9rem;margin-bottom:.7rem;border-left:4px solid var(--acc);}
+.tip-card .num{display:inline-block;width:24px;height:24px;border-radius:50%;background:var(--acc);color:#fff;text-align:center;line-height:24px;font-size:.75rem;font-weight:700;margin-right:.4rem;}
+.tip-card .title{font-weight:700;font-size:.88rem;display:inline;}.tip-card .desc{font-size:.83rem;color:#555;margin-top:.25rem;}
+.book{border:1px solid #e0e0e0;border-radius:8px;padding:.8rem;margin-bottom:.6rem;display:flex;gap:.8rem;align-items:flex-start;}
+.book .icon{font-size:1.6rem;flex-shrink:0;}.book .info{flex:1;}.book .bt{font-weight:700;font-size:.88rem;color:var(--pri);}
+.book .au{font-size:.78rem;color:var(--mut);}.book .ds{font-size:.82rem;margin-top:.2rem;}
+/* Simulado */
+.sim-month{border:2px solid var(--acc);border-radius:12px;margin-bottom:1.2rem;overflow:hidden;}
+.sim-header{background:var(--acc);color:#fff;padding:.7rem 1rem;display:flex;justify-content:space-between;align-items:center;cursor:pointer;}
+.sim-header h3{font-size:.95rem;}.sim-header .arrow-icon{transition:.3s;font-size:1.2rem;}
+.sim-header .arrow-icon.open{transform:rotate(180deg);}
+.sim-body{padding:1rem;display:none;}
+.sim-body.open{display:block;}
+.q-block{background:#f8f9fa;border-radius:8px;padding:.8rem;margin-bottom:.7rem;border-left:3px solid #bdc3c7;}
+.q-block.mat{border-left-color:#e74c3c;}.q-block.fis{border-left-color:#8e44ad;}
+.q-block.qui{border-left-color:#f39c12;}.q-block.bio{border-left-color:#27ae60;}
+.q-block.por{border-left-color:#3498db;}.q-block.hum{border-left-color:#d4ac0d;}
+.q-block.red{border-left-color:#c0392b;}.q-block.ing{border-left-color:#1abc9c;}
+.q-num{font-weight:700;font-size:.82rem;color:var(--pri);}.q-disc{font-size:.72rem;display:inline-block;padding:1px 7px;border-radius:10px;color:#fff;margin-left:.4rem;}
+.q-disc.mat{background:#e74c3c;}.q-disc.fis{background:#8e44ad;}.q-disc.qui{background:#f39c12;}
+.q-disc.bio{background:#27ae60;}.q-disc.por{background:#3498db;}.q-disc.hum{background:#d4ac0d;}
+.q-disc.red{background:#c0392b;}.q-disc.ing{background:#1abc9c;}
+.q-text{font-size:.84rem;margin:.4rem 0;}
+.q-opts{margin:.3rem 0 .3rem .5rem;font-size:.83rem;}
+.q-opts div{margin:.15rem 0;}
+.gab-btn{background:var(--acc);color:#fff;border:none;padding:.35rem .9rem;border-radius:6px;font-size:.78rem;font-weight:600;cursor:pointer;margin-top:.4rem;transition:.2s;}
+.gab-btn:hover{background:#1a6fa0;}
+.gab-box{display:none;margin-top:.4rem;padding:.5rem .8rem;background:#d5f5e3;border-radius:6px;font-size:.83rem;font-weight:600;color:#1e8449;}
+.gab-box.show{display:block;}
+.week-tag{display:inline-block;background:#eee;padding:1px 8px;border-radius:10px;font-size:.72rem;color:#555;margin-left:.3rem;}
+.sch td{padding:.35rem;text-align:center;border:1px solid #e8e8e8;vertical-align:top;min-width:95px;font-size:.76rem;}
+.sch th{background:var(--pri);color:#fff;padding:.45rem;font-size:.78rem;}
+.sch .tc2{background:#f8f9fa;font-weight:600;color:var(--pri);white-space:nowrap;min-width:60px;}
+.s{border-radius:4px;padding:1px 3px;display:block;margin:1px 0;font-size:.72rem;}
+.s-mt{background:#fde8e8;color:#922;}.s-fs{background:#e8d5f5;color:#6c3483;}
+.s-qm{background:#fef3e2;color:#935116;}.s-bi{background:#d5f5e3;color:#1e8449;}
+.s-pt{background:#d6eaf8;color:#1b4f72;}.s-rd{background:#fadbd8;color:#922b21;}
+.s-hm{background:#fdebd0;color:#7e5109;}.s-ig{background:#d1f2eb;color:#0e6655;}
+.s-rv{background:#e8e8e8;color:#555;}.s-sm{background:#d5d8dc;color:#2c3e50;font-weight:600;}
+.w{border-radius:4px;padding:1px 4px;display:block;margin:1px 0;font-size:.72rem;}
+.w-w{background:#d6eaf8;color:#1a5276;}.w-f{background:#fef9e7;color:#7d6608;}
+.w-e{background:#d5f5e3;color:#196f3d;}.w-d{background:#f9ebea;color:#922b21;}
+.w-s{background:#e8daef;color:#6c3483;}
+@media(max-width:900px){.g2,.g3{grid-template-columns:1fr;}.profile-card{flex-direction:column;text-align:center;}.profile-photo{margin:0 auto;}}
+/* Cadastro */
+.profile-card{display:flex;gap:2rem;align-items:flex-start;padding:2rem;background:linear-gradient(135deg,#f8f9fa,#ffffff);border-radius:16px;border:1px solid #e0e0e0;margin-bottom:1.5rem;}
+.profile-photo{width:160px;height:160px;border-radius:16px;overflow:hidden;flex-shrink:0;box-shadow:0 4px 15px rgba(0,0,0,.15);border:3px solid #fff;outline:3px solid var(--acc);}
+.profile-photo img{width:100%;height:100%;object-fit:cover;}
+.profile-photo .avatar-placeholder{width:100%;height:100%;background:linear-gradient(135deg,#2980b9,#1a3a5c);display:flex;align-items:center;justify-content:center;font-size:3.5rem;font-weight:800;color:#fff;letter-spacing:2px;}
+.profile-info{flex:1;}
+.profile-info h2{font-size:1.5rem;color:var(--pri);margin-bottom:.2rem;}
+.profile-info .subtitle{font-size:.92rem;color:var(--mut);margin-bottom:1rem;}
+.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:.6rem 2rem;}
+.info-item{display:flex;align-items:center;gap:.5rem;padding:.45rem 0;border-bottom:1px solid #f0f0f0;}
+.info-item .label{font-size:.78rem;color:var(--mut);min-width:110px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;}
+.info-item .value{font-size:.9rem;font-weight:500;color:var(--txt);}
+.obj-section{margin-top:1.5rem;}
+.obj-section h3{font-size:1rem;color:var(--pri);margin-bottom:.8rem;padding-bottom:.3rem;border-bottom:2px solid var(--acc);}
+.city-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;}
+.city-card{background:#fff;border:2px solid #e8e8e8;border-radius:12px;padding:1rem;text-align:center;transition:.2s;}
+.city-card:hover{border-color:var(--acc);transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,0,0,.08);}
+.city-card .city-icon{font-size:1.8rem;margin-bottom:.3rem;}
+.city-card .city-name{font-weight:700;font-size:.95rem;color:var(--pri);}
+.city-card .city-state{font-size:.78rem;color:var(--mut);}
+.city-card .city-uni{font-size:.8rem;color:var(--acc);font-weight:600;margin-top:.3rem;}
+.status-badges{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1rem;}
+.status-badge{padding:.35rem .9rem;border-radius:20px;font-size:.78rem;font-weight:600;}
+.badge-curso{background:#e8f8f0;color:#1e8449;border:1px solid #a9dfbf;}
+.badge-ano{background:#eaf2fb;color:#1a5276;border:1px solid #aed6f1;}
+.badge-idade{background:#fef9e7;color:#7d6608;border:1px solid #f9e79f;}
+.badge-meta{background:#fdedec;color:#922b21;border:1px solid #f5b7b1;}
+@media(max-width:900px){.info-grid{grid-template-columns:1fr;}.city-cards{grid-template-columns:1fr;}}
+
+/* ===== SPRINT 1 ===== */
+.info-item .value{cursor:pointer;border-radius:4px;padding:2px 5px;transition:.15s;}.info-item .value:hover{background:#eaf2fb;outline:1px dashed var(--acc);}
+.score-form{background:#f8f9fa;border-radius:10px;padding:1rem;border:1px solid #e0e0e0;margin-bottom:.5rem;}
+.score-form h3{font-size:.85rem;color:var(--pri);margin-bottom:.6rem;font-weight:700;}
+.score-row{display:flex;align-items:center;gap:.6rem;padding:.28rem 0;border-bottom:1px solid #f0f0f0;}.score-row:last-child{border-bottom:none;}
+.score-row label{min-width:90px;font-size:.76rem;font-weight:600;color:var(--txt);}
+.score-row input[type=number]{width:58px;padding:3px 5px;border:1px solid #ccc;border-radius:5px;font-size:.82rem;text-align:center;}
+.score-row .pct{min-width:40px;font-size:.76rem;font-weight:700;text-align:right;}
+.score-row .bar-mini{flex:1;height:7px;background:#e0e0e0;border-radius:4px;overflow:hidden;}
+.score-row .bar-fill{height:100%;border-radius:4px;transition:.4s;}
+.nota-input-box{background:#f8f9fa;border-radius:11px;padding:1.2rem;margin-bottom:1.3rem;border:1px solid #e0e0e0;}
+.nota-input-box h2{font-size:.95rem;margin-bottom:.8rem;color:var(--pri);}
+.export-btn{color:#fff;border:none;padding:.45rem 1.1rem;border-radius:8px;font-size:.8rem;font-weight:600;cursor:pointer;transition:.2s;}
+.export-btn:hover{filter:brightness(.9);}
+.q-radio-opt{display:flex;align-items:center;gap:.5rem;padding:.25rem .5rem;border-radius:5px;cursor:pointer;transition:.12s;font-size:.83rem;margin:.1rem 0;}
+.q-radio-opt:not(.locked):hover{background:#eaf2fb;}
+.q-radio-opt.correct{background:#d5f5e3 !important;font-weight:600;color:#1e8449;}
+.q-radio-opt.wrong{background:#fde8e8 !important;color:#e74c3c;}
+.q-radio-opt.locked{pointer-events:none;}
+.q-radio-opt input[type=radio]{cursor:pointer;flex-shrink:0;}
+.sim-score-card{margin:.8rem 0;padding:.9rem;background:linear-gradient(135deg,#eaf2fb,#e8f8f0);border-radius:10px;border:2px solid var(--acc);text-align:center;}
+.sim-score-num{font-size:2rem;font-weight:800;line-height:1;}.sim-score-sub{font-size:.8rem;color:var(--mut);margin-top:.2rem;}
+.sim-timer{display:inline-block;font-size:.72rem;background:rgba(255,255,255,.35);padding:2px 7px;border-radius:10px;margin-left:.5rem;font-family:monospace;font-weight:700;}
+.gab-box-v2{margin-top:.35rem;padding:.45rem .8rem;background:#d5f5e3;border-radius:6px;font-size:.83rem;font-weight:600;color:#1e8449;}
+.cumpr-section{background:#fff;border-radius:11px;padding:1.3rem;box-shadow:0 2px 8px rgba(0,0,0,.06);margin-top:1.3rem;}
+.cumpr-section h2{font-size:1.05rem;margin-bottom:.8rem;color:var(--pri);border-bottom:2px solid #eee;padding-bottom:.4rem;}
+.cumpr-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(185px,1fr));gap:.45rem;margin-bottom:.7rem;}
+.cumpr-item{display:flex;align-items:center;gap:.5rem;padding:.38rem .6rem;border-radius:6px;border:1px solid #eee;font-size:.75rem;cursor:pointer;user-select:none;transition:.15s;}
+.cumpr-item:hover{background:#f0f4f8;}.cumpr-item.done{background:#d5f5e3;border-color:#a9dfbf;}
+.cumpr-item input[type=checkbox]{cursor:pointer;width:14px;height:14px;flex-shrink:0;}
+.cumpr-bar{height:10px;background:#eee;border-radius:6px;overflow:hidden;margin:.4rem 0;}
+.cumpr-bar-fill{height:100%;background:linear-gradient(90deg,var(--acc),var(--ok));border-radius:6px;transition:.5s;}
+.cumpr-pct{font-size:.83rem;font-weight:700;color:var(--pri);}
+
+/* === SPRINT 2+3 === */
+.profile-photo{cursor:pointer;position:relative;transition:.2s;}
+.profile-photo:hover{outline:3px solid var(--ok);}
+.photo-hint{position:absolute;bottom:4px;right:4px;background:rgba(0,0,0,.55);color:#fff;border-radius:50%;width:26px;height:26px;font-size:.75rem;display:flex;align-items:center;justify-content:center;}
+.diag-auto{background:#fff;border-radius:11px;padding:1.2rem;box-shadow:0 2px 8px rgba(0,0,0,.06);margin-bottom:1.3rem;}
+.diag-auto h2{font-size:1rem;margin-bottom:.7rem;color:var(--pri);border-bottom:2px solid #eee;padding-bottom:.4rem;}
+.diag-row{display:flex;align-items:center;gap:.6rem;padding:.35rem .5rem;border-radius:7px;margin:.25rem 0;}
+.diag-row .dr-name{min-width:90px;font-size:.78rem;font-weight:700;}
+.diag-row .dr-bar{flex:1;height:8px;background:#eee;border-radius:4px;overflow:hidden;}
+.diag-row .dr-fill{height:100%;border-radius:4px;transition:.4s;}
+.diag-row .dr-pct{min-width:38px;text-align:right;font-size:.74rem;font-weight:700;}
+.diag-row .dr-badge{font-size:.65rem;padding:1px 6px;border-radius:8px;color:#fff;font-weight:700;margin-left:.2rem;}
+.diag-texto{font-size:.83rem;color:var(--txt);margin-top:.7rem;padding:.6rem .8rem;background:#f8f9fa;border-radius:7px;border-left:3px solid var(--acc);}
+.modal-overlay{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.5);z-index:1000;align-items:flex-start;justify-content:center;padding-top:4vh;}
+.modal-overlay.show{display:flex;}
+.modal-box{background:#fff;border-radius:16px;padding:1.8rem;max-width:520px;width:95%;max-height:90vh;overflow-y:auto;}
+.modal-box h3{font-size:1.05rem;color:var(--pri);margin-bottom:1rem;border-bottom:2px solid #eee;padding-bottom:.5rem;}
+.form-row{margin-bottom:.7rem;}.form-row label{display:block;font-size:.75rem;font-weight:600;color:var(--mut);margin-bottom:.2rem;}
+.form-row input,.form-row select,.form-row textarea{width:100%;border:1px solid #ccc;border-radius:7px;padding:.38rem .65rem;font-size:.85rem;}
+.form-row textarea{min-height:60px;resize:vertical;}
+.btn-primary{background:var(--acc);color:#fff;border:none;padding:.45rem 1.2rem;border-radius:8px;font-size:.84rem;font-weight:600;cursor:pointer;}
+.btn-secondary{background:#eee;color:var(--txt);border:1px solid #ccc;padding:.45rem 1rem;border-radius:8px;font-size:.84rem;cursor:pointer;}
+.red-card{border:1px solid #e0e0e0;border-radius:10px;padding:1rem;margin-bottom:.7rem;}
+.red-card .rc-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.5rem;}
+.red-card .rc-title{font-weight:700;font-size:.9rem;color:var(--pri);}
+.red-card .rc-sub{font-size:.74rem;color:var(--mut);}
+.red-card .rc-score{font-size:1.2rem;font-weight:800;color:var(--acc);}
+.book-footer{display:flex;align-items:center;gap:.4rem;margin-top:.5rem;flex-wrap:wrap;}
+.bs-btn{border:1px solid #ccc;background:#f8f8f8;padding:2px 7px;border-radius:9px;font-size:.68rem;cursor:pointer;transition:.15s;}
+.bs-btn.active-nao{background:#fde8e8;border-color:var(--bad);color:#c0392b;font-weight:700;}
+.bs-btn.active-lendo{background:#fef9e7;border-color:var(--warn);color:#7d6608;font-weight:700;}
+.bs-btn.active-ok{background:#d5f5e3;border-color:var(--ok);color:#1e6b41;font-weight:700;}
+.book-notes{display:none;margin-top:.4rem;}
+.book-notes.open{display:block;}
+.book-notes textarea{width:100%;border:1px solid #e0e0e0;border-radius:6px;padding:.35rem .55rem;font-size:.76rem;resize:vertical;min-height:50px;}
+.today-card{background:linear-gradient(135deg,#0d1b2a,#1b3a4b 50%,#2980b9 100%);color:#fff;border-radius:12px;padding:1rem 1.5rem;margin-bottom:1.2rem;}
+.today-card h3{font-size:.95rem;margin-bottom:.4rem;opacity:.85;}
+.today-slots{display:flex;flex-wrap:wrap;gap:.35rem;margin-top:.4rem;}
+.today-slot{background:rgba(255,255,255,.2);padding:.2rem .7rem;border-radius:10px;font-size:.76rem;}
+.sim-controls{background:#f8f9fa;border:1px solid #e0e0e0;border-radius:10px;padding:.7rem 1rem;margin-bottom:1rem;display:flex;flex-wrap:wrap;gap:.7rem;align-items:center;}
+.sim-controls label{font-size:.8rem;font-weight:600;}
+.sim-controls select{border:1px solid #ccc;border-radius:5px;padding:.28rem .55rem;font-size:.8rem;}
+.sim-controls button{background:var(--acc);color:#fff;border:none;padding:.35rem .9rem;border-radius:7px;font-size:.78rem;font-weight:600;cursor:pointer;}
+.err-card{background:#fde8e8;border:1px solid #f5c6cb;border-radius:8px;padding:.7rem .9rem;margin-bottom:.5rem;}
+.err-card .eq{font-weight:700;font-size:.83rem;margin-bottom:.25rem;color:var(--pri);}
+.err-card .eo{font-size:.78rem;color:#888;text-decoration:line-through;}
+.err-card .eg{font-size:.78rem;color:var(--ok);font-weight:700;}
+.err-card .es{font-size:.72rem;color:var(--mut);}
+.meta-cell{cursor:pointer;transition:.12s;}.meta-cell:hover{background:#b8f0d0 !important;}
+.meta-cell.editing-cell input{width:52px;border:1px solid var(--acc);border-radius:4px;padding:1px 4px;text-align:center;font-size:.76rem;}
+.meta-real-input{width:48px;border:1px solid #ccc;border-radius:4px;padding:1px 3px;font-size:.74rem;text-align:center;background:#fff;}
+.meta-real-cell.acima{background:#d5f5e3;color:#1e6b41;font-weight:700;}
+.meta-real-cell.abaixo{background:#fde8e8;color:#922b21;font-weight:700;}
+.ese-slider-wrap{padding:1rem 0;}
+.ese-slider{width:100%;-webkit-appearance:none;height:6px;background:#e0e0e0;border-radius:3px;outline:none;}
+.ese-slider::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;border-radius:50%;background:var(--acc);cursor:pointer;}
+.ese-unis{display:grid;grid-template-columns:repeat(auto-fill,minmax(155px,1fr));gap:.5rem;margin-top:.8rem;}
+.ese-uni{border-radius:9px;padding:.6rem .8rem;text-align:center;}
+.ese-uni.pass{background:#d5f5e3;border:1px solid #a9dfbf;}
+.ese-uni.fail{background:#fde8e8;border:1px solid #f5c6cb;}
+.ese-uni .un{font-weight:700;font-size:.85rem;}
+.ese-uni .uc{font-size:.72rem;color:var(--mut);}
+.hab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:.6rem;margin:.8rem 0;}
+.hab-item{border:2px solid #eee;border-radius:11px;padding:.8rem;text-align:center;cursor:pointer;transition:.2s;user-select:none;}
+.hab-item:hover{transform:translateY(-2px);box-shadow:0 3px 10px rgba(0,0,0,.08);}
+.hab-item.done{border-color:var(--ok);background:#d5f5e3;}
+.hab-icon{font-size:1.7rem;margin-bottom:.3rem;}
+.hab-label{font-size:.76rem;font-weight:700;}
+.hab-streak{font-size:.68rem;color:var(--mut);margin-top:.15rem;}
+.pom-fab{position:fixed;bottom:1.5rem;right:1.5rem;z-index:999;background:var(--bad);color:#fff;border:none;border-radius:50%;width:52px;height:52px;font-size:1.3rem;cursor:pointer;box-shadow:0 4px 15px rgba(0,0,0,.25);transition:.2s;}
+.pom-fab:hover{transform:scale(1.08);}
+.pom-widget{display:none;position:fixed;bottom:5rem;right:1.5rem;z-index:999;background:#fff;border-radius:16px;padding:1.2rem;box-shadow:0 6px 25px rgba(0,0,0,.2);text-align:center;min-width:175px;}
+.pom-widget.show{display:block;}
+.pom-time{font-size:2.4rem;font-weight:800;font-family:monospace;color:var(--pri);line-height:1;}
+.pom-label{font-size:.72rem;color:var(--mut);margin:.2rem 0 .6rem;}
+.pom-btn{border:none;border-radius:7px;padding:.3rem .85rem;font-size:.78rem;font-weight:600;cursor:pointer;margin:2px;}
+.pom-count{font-size:.7rem;color:var(--mut);margin-top:.4rem;}
+</style>
+</head>
+<body>
+<div class="hdr">
+  <h1>Plano Final Completo — Medicina 2026/2027</h1>
+  <p class="sub">Enzo Pozzobon | 3° Ano EM | UFSM + UFSC + ENEM/SiSU</p>
+  <div class="tags">
+    <span class="tag">UFSM Corte: 93/120</span><span class="tag">UFSC Corte: ~68 pts</span>
+    <span class="tag">ENEM Corte Medicina: ~770-820</span><span class="tag tag-a">~9 meses</span>
+  </div>
+</div>
+<div class="ctn">
+<div class="tabs">
+  <button class="tab active" onclick="sT('cad')">Cadastro</button>
+  <button class="tab" onclick="sT('diag')">Diagnóstico</button>
+  <button class="tab" onclick="sT('red')">Redação</button>
+  <button class="tab" onclick="sT('leit')">Leituras</button>
+  <button class="tab" onclick="sT('plano')">Plano Semanal</button>
+  <button class="tab" onclick="sT('sim')">Simulados Semanais</button>
+  <button class="tab" onclick="sT('metas')">Metas Mensais</button>
+  <button class="tab" onclick="sT('prob')">Probabilidades</button>
+  <button class="tab" onclick="sT('bem')">Bem-Estar</button>
+</div>
+
+<!-- ====== CADASTRO ====== -->
+<div class="tc active" id="cad">
+<div class="profile-card">
+  <div class="profile-photo" id="photoContainer" onclick="uploadFoto()" title="Clique para alterar foto">
+    <div class="avatar-placeholder" id="avatarPlaceholder">EP</div>
+    <span class="photo-hint">📷</span>
+  </div>
+  <input type="file" id="fotoInput" accept="image/*" style="display:none" onchange="processarFoto(event)">
+  <div class="profile-info">
+    <h2>Enzo Pozzobon</h2>
+    <p class="subtitle">Candidato a Medicina — Vestibular 2026/2027</p>
+    <div class="status-badges">
+      <span class="status-badge badge-curso" id="cursoLabel">Medicina</span>
+      <span class="status-badge badge-ano">3° Ano EM</span>
+      <span class="status-badge badge-idade">16 anos</span>
+      <span class="status-badge badge-meta" style="display:flex;align-items:center;gap:4px;">Meta: <input type="month" id="metaDate" value="2026-11" style="font-size:.74rem;font-weight:600;border:1px solid #f5b7b1;border-radius:4px;padding:1px 4px;background:transparent;color:#922b21;cursor:pointer;width:110px;" onchange="document.getElementById('metaLabel').textContent='Pronto até '+this.value"></span>
+    </div>
+    <div class="info-grid" style="margin-top:1rem;">
+      <div class="info-item"><span class="label">Nome</span><span class="value" onclick="makeEditable(this)" data-field="nome" title="Clique para editar">Enzo Pozzobon</span></div>
+      <div class="info-item"><span class="label">Nascimento</span><span class="value" onclick="makeEditable(this)" data-field="nascimento" title="Clique para editar">22/06/2009</span></div>
+      <div class="info-item"><span class="label">Cidade</span><span class="value" onclick="makeEditable(this)" data-field="cidade" title="Clique para editar">Palhoça</span></div>
+      <div class="info-item"><span class="label">Estado</span><span class="value" onclick="makeEditable(this)" data-field="estado" title="Clique para editar">Santa Catarina (SC)</span></div>
+      <div class="info-item"><span class="label">Escola</span><span class="value" onclick="makeEditable(this)" data-field="escola" title="Clique para editar">Bom Jesus — Pedra Branca</span></div>
+      <div class="info-item"><span class="label">Curso Alvo</span><span class="value"><select id="cursoSelect" style="font-size:.88rem;font-weight:700;color:var(--ok);border:1px solid #ccc;border-radius:6px;padding:2px 8px;background:#fff;cursor:pointer;" onchange="document.getElementById('cursoLabel').textContent=this.value">
+<option value="Medicina" selected>Medicina</option>
+<option value="Direito">Direito</option>
+<option value="Engenharia Civil">Engenharia Civil</option>
+<option value="Engenharia Mecânica">Engenharia Mecânica</option>
+<option value="Engenharia de Produção">Engenharia de Produção</option>
+<option value="Arquitetura e Urbanismo">Arquitetura e Urbanismo</option>
+<option value="Odontologia">Odontologia</option>
+<option value="Farmácia">Farmácia</option>
+<option value="Enfermagem">Enfermagem</option>
+<option value="Psicologia">Psicologia</option>
+<option value="Administração">Administração</option>
+<option value="Ciência da Computação">Ciência da Computação</option>
+<option value="Nutrição">Nutrição</option>
+<option value="Fisioterapia">Fisioterapia</option>
+<option value="Biomedicina">Biomedicina</option>
+<option value="Veterinária">Veterinária</option>
+</select></span></div>
+      <div class="info-item"><span class="label">Vestibulares</span><span class="value">UFSM, UFSC, ENEM/SiSU</span></div>
+      <div class="info-item"><span class="label">Ano Letivo</span><span class="value">2026 — 3° Ano Ensino Médio</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- HORÁRIOS DISPONÍVEIS -->
+<div class="pnl g1">
+  <h2>Horários Disponíveis para Estudo</h2>
+  <div style="overflow-x:auto;">
+  <table class="sch" style="width:100%;border-collapse:separate;border-spacing:0;">
+  <thead><tr><th>Dia</th><th>Horário Disponível</th><th>Duração</th><th>Tipo</th></tr></thead>
+  <tbody>
+  <tr><td class="tc2">Segunda</td><td style="background:#eaf2fb;">18:00 — 21:00</td><td><strong>3h</strong></td><td><span class="s s-mt">Exatas (Prioridade)</span></td></tr>
+  <tr><td class="tc2">Terça</td><td style="background:#d5f5e3;">15:00 — 21:00</td><td><strong style="color:var(--ok);">6h</strong></td><td><span class="s s-bi">Bloco Extenso</span></td></tr>
+  <tr><td class="tc2">Quarta</td><td style="background:#eaf2fb;">17:00 — 21:00</td><td><strong>4h</strong></td><td><span class="s s-qm">Natureza + Redação</span></td></tr>
+  <tr><td class="tc2">Quinta</td><td style="background:#eaf2fb;">18:00 — 21:00</td><td><strong>3h</strong></td><td><span class="s s-pt">Linguagens + Humanas</span></td></tr>
+  <tr><td class="tc2">Sexta</td><td style="background:#eaf2fb;">18:00 — 21:00</td><td><strong>3h</strong></td><td><span class="s s-rd">Redação + Revisão</span></td></tr>
+  <tr><td class="tc2">Sábado</td><td style="background:#fef9e7;">Livre (sem escola/extracurricular)</td><td><strong style="color:var(--ok);">~8h potencial</strong></td><td><span class="s s-sm">Simulado + Aprofundamento</span></td></tr>
+  <tr><td class="tc2">Domingo</td><td style="background:#fef9e7;">Livre (sem escola/extracurricular)</td><td><strong>~4-6h leve</strong></td><td><span class="s s-rv">Revisão + Descanso</span></td></tr>
+  </tbody>
+  </table>
+  </div>
+  <div class="co co-g" style="margin-top:.8rem;">
+    <h3>Total Semanal: ~31-35 horas disponíveis</h3>
+    <p>Seg-Sex: 19h de estudo dirigido | Sáb: ~8h (simulado + estudo) | Dom: ~4-6h (revisão leve + lazer)</p>
+  </div>
+</div>
+
+<!-- CIDADES E UNIVERSIDADES -->
+<div class="obj-section">
+  <h3>Cidades-Alvo e Universidades com Medicina</h3>
+  <div style="overflow-x:auto;">
+  <table class="sch" style="width:100%;border-collapse:separate;border-spacing:0;margin-bottom:1rem;">
+  <thead><tr><th>Cidade</th><th>Universidade</th><th>Tipo</th><th>Seleção</th><th>Corte / Mensalidade</th></tr></thead>
+  <tbody>
+  <tr><td class="tc2" rowspan="2">Florianópolis/SC</td><td><strong>UFSC</strong> — Univ. Federal de SC</td><td><span style="background:#d5f5e3;padding:2px 8px;border-radius:10px;font-size:.72rem;color:#1e8449;">Pública</span></td><td>Vestibular + SiSU</td><td style="font-weight:700;color:var(--bad);">SiSU ~827 pts | Vest. ~68 pts</td></tr>
+  <tr style="border-top:1px dashed #eee;"><td>Outras faculdades privadas da região</td><td><span style="background:#fef9e7;padding:2px 8px;border-radius:10px;font-size:.72rem;color:#7d6608;">Privada</span></td><td>Vestibular próprio</td><td>Consultar</td></tr>
+  <tr><td class="tc2" rowspan="3">Santa Maria/RS</td><td><strong>UFSM</strong> — Univ. Federal de SM</td><td><span style="background:#d5f5e3;padding:2px 8px;border-radius:10px;font-size:.72rem;color:#1e8449;">Pública</span></td><td>Vestibular + SiSU</td><td style="font-weight:700;color:var(--bad);">SiSU ~697-799 pts | Vest. 97/120</td></tr>
+  <tr style="border-top:1px dashed #eee;"><td><strong>UFN</strong> — Univ. Franciscana</td><td><span style="background:#fef9e7;padding:2px 8px;border-radius:10px;font-size:.72rem;color:#7d6608;">Privada</span></td><td>Vestibular + ProUni</td><td>ProUni até 100% bolsa</td></tr>
+  <tr style="border-top:1px dashed #eee;"><td><strong>ULBRA</strong> — Univ. Luterana do Brasil</td><td><span style="background:#fef9e7;padding:2px 8px;border-radius:10px;font-size:.72rem;color:#7d6608;">Privada</span></td><td>Vestibular + ENEM</td><td>6ª melhor privada Brasil (IGC)</td></tr>
+  <tr><td class="tc2">Palhoça/SC</td><td><strong>UNISUL</strong> — Univ. do Sul de SC</td><td><span style="background:#fef9e7;padding:2px 8px;border-radius:10px;font-size:.72rem;color:#7d6608;">Privada</span></td><td>Vestibular + ENEM</td><td>~R$ 6.070/mês | Melhor privada de SC</td></tr>
+  </tbody>
+  </table>
+  </div>
+  <div class="co co-b">
+    <h3>Estratégia de Inscrições</h3>
+    <p>Prioridade 1: <strong>UFSC</strong> (perto de casa) e <strong>UFSM</strong> (corte mais acessível pelo vestibular). Prioridade 2: SiSU com nota ENEM para qualquer federal do Brasil. Backup: <strong>ProUni na UFN</strong> (bolsa 100%) ou <strong>UNISUL</strong> (cidade natal, ~R$6k/mês).</p>
+  </div>
+</div>
+
+<!-- CURVA DE EVOLUÇÃO E PROBABILIDADES -->
+<div class="g2" style="margin-top:1.5rem;">
+  <div class="pnl">
+    <h2>Curva de Evolução Projetada — ENEM</h2>
+    <div style="height:280px"><canvas id="curvaEnem"></canvas></div>
+    <div style="margin-top:.5rem;font-size:.78rem;color:var(--mut);text-align:center;">Projeção mensal com dedicação ao plano | Meta: 770+ pts</div>
+  </div>
+  <div class="pnl">
+    <h2>Probabilidade de Aprovação</h2>
+    <div style="height:280px"><canvas id="probChart"></canvas></div>
+    <div style="margin-top:.5rem;font-size:.78rem;color:var(--mut);text-align:center;">Evolução da probabilidade mês a mês seguindo o plano</div>
+  </div>
+</div>
+
+<div class="co co-y g1">
+  <h3>Metas por Fase</h3>
+  <p><strong>Mar-Abr (Fundamentos):</strong> Subir ENEM estimado de ~580 para ~620. Dominar regra de 3, equações, cinemática básica.</p>
+  <p><strong>Mai-Jun (Aprofundamento):</strong> ENEM ~660. Funções, termodinâmica, estequiometria, genética.</p>
+  <p><strong>Jul-Ago (Intensivo):</strong> ENEM ~720. Simulados completos, redação acima de 800. Questões nível ENEM.</p>
+  <p><strong>Set-Out (Revisão):</strong> ENEM ~760. Resolver provas anteriores inteiras. Ajustar pontos fracos.</p>
+  <p><strong>Nov (Prova):</strong> Meta final: <strong>ENEM 770+</strong> | <strong>UFSM 97+/120</strong> | <strong>UFSC 68+ pts</strong></p>
+</div>
+
+<!-- DOCUMENTOS-FONTE -->
+<div class="pnl g1">
+  <h2>Documentos-Fonte da Análise</h2>
+  <p style="font-size:.84rem;color:var(--mut);margin-bottom:.7rem;">Toda a análise deste plano foi baseada nos seguintes documentos fornecidos:</p>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:.6rem;">
+    <div style="border:1px solid #e0e0e0;border-radius:8px;padding:.7rem;display:flex;gap:.6rem;align-items:center;">
+      <div style="font-size:1.4rem;">📄</div>
+      <div><div style="font-weight:700;font-size:.84rem;color:var(--pri);">Resultado UFSM</div><div style="font-size:.72rem;color:var(--mut);">Painel do Candidato — UFSM Vestibular</div><div style="font-size:.7rem;color:var(--acc);">49/120 objetivas (40.8%)</div></div>
+    </div>
+    <div style="border:1px solid #e0e0e0;border-radius:8px;padding:.7rem;display:flex;gap:.6rem;align-items:center;">
+      <div style="font-size:1.4rem;">📄</div>
+      <div><div style="font-weight:700;font-size:.84rem;color:var(--pri);">Resultado UFSC</div><div style="font-size:.72rem;color:var(--mut);">Vestibular UFSC/Coperve — Enzo</div><div style="font-size:.7rem;color:var(--acc);">40.54/80 objetivas (50.7%)</div></div>
+    </div>
+    <div style="border:1px solid #e0e0e0;border-radius:8px;padding:.7rem;display:flex;gap:.6rem;align-items:center;">
+      <div style="font-size:1.4rem;">📝</div>
+      <div><div style="font-weight:700;font-size:.84rem;color:var(--pri);">Redação UFSC</div><div style="font-size:.72rem;color:var(--mut);">Carta ao Eu do Futuro</div><div style="font-size:.7rem;color:var(--acc);">Nota: 6.25/10</div></div>
+    </div>
+    <div style="border:1px solid #e0e0e0;border-radius:8px;padding:.7rem;display:flex;gap:.6rem;align-items:center;">
+      <div style="font-size:1.4rem;">📝</div>
+      <div><div style="font-weight:700;font-size:.84rem;color:var(--pri);">Redação UFSM</div><div style="font-size:.72rem;color:var(--mut);">Empregados são seres humanos também</div><div style="font-size:.7rem;color:var(--acc);">Análise qualitativa</div></div>
+    </div>
+  </div>
+  <div style="margin-top:.7rem;font-size:.78rem;color:var(--mut);border-top:1px solid #eee;padding-top:.5rem;">Nota ENEM Redação informada: <strong>645/1000</strong> (texto da prova não fornecido — análise baseada na nota e padrões observados nas outras redações)</div>
+</div>
+
+<!-- LINHA DO TEMPO -->
+<div class="pnl g1">
+  <h2>Linha do Tempo — 2026</h2>
+  <div style="display:flex;gap:4px;flex-wrap:wrap;justify-content:center;">
+    <div style="text-align:center;padding:.5rem .7rem;border-radius:8px;background:#e8f8f0;flex:1;min-width:80px;"><div style="font-weight:700;font-size:.78rem;color:#1e8449;">MAR-ABR</div><div style="font-size:.7rem;color:#555;">Fase 1<br>Fundamentos</div></div>
+    <div style="text-align:center;padding:.5rem .7rem;border-radius:8px;background:#eaf2fb;flex:1;min-width:80px;"><div style="font-weight:700;font-size:.78rem;color:#1a5276;">MAI-JUN</div><div style="font-size:.7rem;color:#555;">Fase 2<br>Aprofundamento</div></div>
+    <div style="text-align:center;padding:.5rem .7rem;border-radius:8px;background:#fef9e7;flex:1;min-width:80px;"><div style="font-weight:700;font-size:.78rem;color:#7d6608;">JUL-AGO</div><div style="font-size:.7rem;color:#555;">Fase 3<br>Intensivo</div></div>
+    <div style="text-align:center;padding:.5rem .7rem;border-radius:8px;background:#fdedec;flex:1;min-width:80px;"><div style="font-weight:700;font-size:.78rem;color:#922b21;">SET-OUT</div><div style="font-size:.7rem;color:#555;">Fase 4<br>Revisão</div></div>
+    <div style="text-align:center;padding:.5rem .7rem;border-radius:8px;background:#f4ecf7;flex:1;min-width:80px;"><div style="font-weight:700;font-size:.78rem;color:#6c3483;">NOV</div><div style="font-size:.7rem;color:#555;">ENEM +<br>Vestibulares</div></div>
+  </div>
+</div>
+
+<!-- Gerenciamento de Dados -->
+<div class="pnl g1" style="text-align:center;">
+  <h2>Gerenciamento de Dados</h2>
+  <p style="font-size:.83rem;color:var(--mut);margin-bottom:.7rem;">Todos os dados editados são salvos automaticamente no seu navegador (localStorage).</p>
+  <button class="export-btn" style="background:var(--ok);" onclick="exportarJSON()">⬇ Exportar Dados (JSON)</button>
+  <button class="export-btn" style="background:#8e44ad;margin-left:.5rem;" onclick="importarJSON()">⬆ Importar Dados (JSON)</button>
+  <input type="file" id="importFile" accept=".json" style="display:none" onchange="lerArquivoImport(event)">
+</div>
+</div>
+
+<!-- ====== DIAGNÓSTICO ====== -->
+<div class="tc" id="diag">
+<h2 style="font-size:1.2rem;margin-bottom:.8rem;">Diagnóstico Geral — Objetivas + Redação</h2>
+<div class="g2">
+  <div class="pnl">
+    <div class="nota-input-box g1">
+  <h2>📊 Inserir Notas Reais — Gráficos atualizam automaticamente ao digitar</h2>
+  <div class="g2">
+    <div class="score-form">
+      <h3>UFSM — Acertos por Área (provas anteriores)</h3>
+      <div class="score-row"><label>Matemática</label><input type="number" min="0" max="100" value="33" id="ufsmMatN" oninput="recalcScore('ufsm',0,+this.value,100)"><div class="bar-mini"><div class="bar-fill" id="ufsmMatBar" style="width:33%;background:#e74c3c;"></div></div><span class="pct" id="ufsmMatPct">33%</span></div>
+      <div class="score-row"><label>Física</label><input type="number" min="0" max="100" value="17" id="ufsmFisN" oninput="recalcScore('ufsm',1,+this.value,100)"><div class="bar-mini"><div class="bar-fill" id="ufsmFisBar" style="width:17%;background:#e74c3c;"></div></div><span class="pct" id="ufsmFisPct">17%</span></div>
+      <div class="score-row"><label>Química</label><input type="number" min="0" max="100" value="23" id="ufsmQuiN" oninput="recalcScore('ufsm',2,+this.value,100)"><div class="bar-mini"><div class="bar-fill" id="ufsmQuiBar" style="width:23%;background:#e74c3c;"></div></div><span class="pct" id="ufsmQuiPct">23%</span></div>
+      <div class="score-row"><label>Biologia</label><input type="number" min="0" max="100" value="54" id="ufsmBioN" oninput="recalcScore('ufsm',3,+this.value,100)"><div class="bar-mini"><div class="bar-fill" id="ufsmBioBar" style="width:54%;background:#f39c12;"></div></div><span class="pct" id="ufsmBioPct">54%</span></div>
+      <div class="score-row"><label>Português</label><input type="number" min="0" max="100" value="27" id="ufsmPorN" oninput="recalcScore('ufsm',4,+this.value,100)"><div class="bar-mini"><div class="bar-fill" id="ufsmPorBar" style="width:27%;background:#e74c3c;"></div></div><span class="pct" id="ufsmPorPct">27%</span></div>
+      <div class="score-row"><label>Humanas</label><input type="number" min="0" max="100" value="55" id="ufsmHumN" oninput="recalcScore('ufsm',5,+this.value,100)"><div class="bar-mini"><div class="bar-fill" id="ufsmHumBar" style="width:55%;background:#f39c12;"></div></div><span class="pct" id="ufsmHumPct">55%</span></div>
+      <div class="score-row"><label>Inglês</label><input type="number" min="0" max="100" value="44" id="ufsmIngN" oninput="recalcScore('ufsm',6,+this.value,100)"><div class="bar-mini"><div class="bar-fill" id="ufsmIngBar" style="width:44%;background:#f39c12;"></div></div><span class="pct" id="ufsmIngPct">44%</span></div>
+      <div class="score-row"><label>Geografia</label><input type="number" min="0" max="100" value="67" id="ufsmGeoN" oninput="recalcScore('ufsm',7,+this.value,100)"><div class="bar-mini"><div class="bar-fill" id="ufsmGeoBar" style="width:67%;background:#27ae60;"></div></div><span class="pct" id="ufsmGeoPct">67%</span></div>
+    </div>
+    <div class="score-form">
+      <h3>UFSC — Acertos por Área (provas anteriores)</h3>
+      <div class="score-row"><label>Matemática</label><input type="number" min="0" max="100" value="19" id="ufscMatN" oninput="recalcScore('ufsc',0,+this.value,100)"><div class="bar-mini"><div class="bar-fill" id="ufscMatBar" style="width:19%;background:#e74c3c;"></div></div><span class="pct" id="ufscMatPct">19%</span></div>
+      <div class="score-row"><label>Física</label><input type="number" min="0" max="100" value="56" id="ufscFisN" oninput="recalcScore('ufsc',1,+this.value,100)"><div class="bar-mini"><div class="bar-fill" id="ufscFisBar" style="width:56%;background:#f39c12;"></div></div><span class="pct" id="ufscFisPct">56%</span></div>
+      <div class="score-row"><label>Química</label><input type="number" min="0" max="100" value="43" id="ufscQuiN" oninput="recalcScore('ufsc',2,+this.value,100)"><div class="bar-mini"><div class="bar-fill" id="ufscQuiBar" style="width:43%;background:#f39c12;"></div></div><span class="pct" id="ufscQuiPct">43%</span></div>
+      <div class="score-row"><label>Biologia</label><input type="number" min="0" max="100" value="55" id="ufscBioN" oninput="recalcScore('ufsc',3,+this.value,100)"><div class="bar-mini"><div class="bar-fill" id="ufscBioBar" style="width:55%;background:#f39c12;"></div></div><span class="pct" id="ufscBioPct">55%</span></div>
+      <div class="score-row"><label>Português</label><input type="number" min="0" max="100" value="49" id="ufscPorN" oninput="recalcScore('ufsc',4,+this.value,100)"><div class="bar-mini"><div class="bar-fill" id="ufscPorBar" style="width:49%;background:#f39c12;"></div></div><span class="pct" id="ufscPorPct">49%</span></div>
+      <div class="score-row"><label>Humanas</label><input type="number" min="0" max="100" value="56" id="ufscHumN" oninput="recalcScore('ufsc',5,+this.value,100)"><div class="bar-mini"><div class="bar-fill" id="ufscHumBar" style="width:56%;background:#f39c12;"></div></div><span class="pct" id="ufscHumPct">56%</span></div>
+      <div class="score-row"><label>2ª Língua</label><input type="number" min="0" max="100" value="77" id="ufscLngN" oninput="recalcScore('ufsc',6,+this.value,100)"><div class="bar-mini"><div class="bar-fill" id="ufscLngBar" style="width:77%;background:#27ae60;"></div></div><span class="pct" id="ufscLngPct">77%</span></div>
+    </div>
+  </div>
+</div>
+<h2>UFSM — Desempenho por Área</h2>
+    <div style="height:300px"><canvas id="ufsmBar"></canvas></div>
+  </div>
+  <div class="pnl">
+    <h2>UFSC — Desempenho por Área</h2>
+    <div style="height:300px"><canvas id="ufscBar"></canvas></div>
+  </div>
+</div>
+<div class="pnl g1">
+  <h2>Radar Comparativo — Todas as Competências (Objetivas + Redação)</h2>
+  <div style="height:380px"><canvas id="fullRadar"></canvas></div>
+</div>
+<div class="co co-b">
+  <h3>Resumo do Diagnóstico</h3>
+  <ul>
+    <li><strong>Matemática</strong> é a maior urgência: 33% UFSM / 19% UFSC — maior peso e maior gap</li>
+    <li><strong>Física</strong> muito inconsistente: 17% UFSM vs 56% UFSC — precisa consolidar fundamentos</li>
+    <li><strong>Química:</strong> 23% UFSM / 43% UFSC — abaixo do necessário em ambas</li>
+    <li><strong>Redação:</strong> UFSC 6.25/10 | ENEM 645/1000 — proposta de intervenção é o maior problema</li>
+    <li><strong>Pontos fortes:</strong> Geografia (67%), Segunda Língua (77%), Biologia (55%), repertório cultural</li>
+  </ul>
+</div>
+</div>
+
+<!-- ====== REDAÇÃO ====== -->
+<div class="tc" id="red">
+<h2 style="font-size:1.2rem;margin-bottom:.8rem;">Análise das Redações — UFSC + UFSM + ENEM</h2>
+
+<div class="g2">
+<div class="pnl">
+  <h2>UFSC (6.25/10) — Carta ao Eu do Futuro</h2>
+  <div class="criteria-row"><span class="criteria-name">A — Adequação ao Tema e Gênero</span><div class="criteria-bar"><div class="criteria-fill" style="width:60%;background:#e67e22;">60%</div></div><span class="criteria-score">1.50/2.50</span></div>
+  <div class="criteria-row"><span class="criteria-name">B — Argumentação e Informatividade</span><div class="criteria-bar"><div class="criteria-fill" style="width:70%;background:#f39c12;">70%</div></div><span class="criteria-score" style="color:var(--ok);">1.75/2.50</span></div>
+  <div class="criteria-row"><span class="criteria-name">C — Coesão e Coerência</span><div class="criteria-bar"><div class="criteria-fill" style="width:60%;background:#e67e22;">60%</div></div><span class="criteria-score">1.50/2.50</span></div>
+  <div class="criteria-row"><span class="criteria-name">D — Norma Culta e Expressão</span><div class="criteria-bar"><div class="criteria-fill" style="width:60%;background:#e67e22;">60%</div></div><span class="criteria-score">1.50/2.50</span></div>
+  <div class="co co-r" style="margin-top:.8rem;">
+    <h3>Principais Erros</h3>
+    <ul>
+      <li>Argumentação superficial — propostas vagas ("aumentar taxas")</li>
+      <li>Concordância: <em>"patrimônios maior"</em> → maiores</li>
+      <li>Texto curto (24/30 linhas) — espaço desperdiçado</li>
+      <li>Autor errado de "Xibom Bombom" (é do grupo As Meninas)</li>
+    </ul>
+  </div>
+</div>
+<div class="pnl">
+  <h2>UFSM — Empregados são seres humanos também</h2>
+  <div class="co co-g">
+    <h3>Pontos Positivos</h3>
+    <ul>
+      <li>Título criativo e impactante</li>
+      <li>Filme "Que Horas Ela Volta" — referência excelente</li>
+      <li>Mencionou Reforma Trabalhista de 2017</li>
+    </ul>
+  </div>
+  <div class="co co-r">
+    <h3>Erros Graves</h3>
+    <ul>
+      <li>Trecho incoerente: <em>"é de Cartão, infraestruturas..."</em></li>
+      <li>Dupla negação: <em>"impedindo que... não se torne"</em> = sentido invertido!</li>
+      <li>Concordância: <em>"segurança salariais"</em>, <em>"manutenções"</em></li>
+      <li>Proposta vaga sem AGENTE + AÇÃO + MEIO</li>
+    </ul>
+  </div>
+</div>
+</div>
+
+<div class="pnl g1">
+  <h2>ENEM (645/1000) — Mapa de Competências</h2>
+  <div style="height:260px"><canvas id="enemComp"></canvas></div>
+  <div class="co co-p" style="margin-top:.8rem;">
+    <h3>Fórmula para 200/200 na Competência 5 (Proposta de Intervenção)</h3>
+    <ul>
+      <li><strong>AGENTE</strong> — Quem faz? (Governo, MEC, Ministério do Trabalho...)</li>
+      <li><strong>AÇÃO</strong> — O que faz? (Criar lei, fiscalizar, implementar programa...)</li>
+      <li><strong>MEIO</strong> — Como? (Por meio de campanhas, investimento, parceria...)</li>
+      <li><strong>FINALIDADE</strong> — Para quê? (A fim de reduzir, visando garantir...)</li>
+      <li><strong>DETALHAMENTO</strong> — Aprofundar qualquer dos 4 acima</li>
+    </ul>
+  </div>
+  <div class="example-box">
+    <div class="label">Exemplo nota 1000:</div>
+    "Portanto, é necessário que o <strong>Ministério do Trabalho</strong> [AGENTE], em parceria com o MPT, <strong>intensifique a fiscalização de contratos terceirizados</strong> [AÇÃO], <strong>por meio da ampliação do quadro de auditores e canais de denúncia</strong> [MEIO], <strong>a fim de coibir práticas exploratórias</strong> [FINALIDADE]. <strong>Tal medida deve priorizar setores com maior informalidade, como trabalho doméstico</strong> [DETALHAMENTO]."
+  </div>
+  <div class="co co-b" style="margin-top:.6rem;">
+    <h3>Técnica AREA para Argumentação (C3)</h3>
+    <p><strong>A</strong>firmação → <strong>R</strong>azão → <strong>E</strong>vidência → <strong>A</strong>marração</p>
+    <p style="margin-top:.3rem;">"A desigualdade trabalhista é estrutural (A). Isso porque a legislação favorece o empregador (R). Segundo o IBGE, 40% estão na informalidade (E). Portanto, a precarização é regra, não exceção (A)."</p>
+  </div>
+</div>
+
+<div class="co co-y">
+  <h3>Erros Recorrentes nas 3 Redações (padrão a corrigir)</h3>
+  <ul>
+    <li><strong>Concordância nominal:</strong> "patrimônios maior", "segurança salariais" — aparece em TODAS</li>
+    <li><strong>Propostas vagas:</strong> Sempre diz "o governo precisa agir" mas nunca diz COMO — falta a fórmula dos 5 elementos</li>
+    <li><strong>Argumentação rasa:</strong> Afirma sem provar — faltam dados, estatísticas, exemplos concretos</li>
+    <li><strong>Conectivos pobres:</strong> "Sendo assim", "Nesse modo", "Portanto" — precisa variar</li>
+    <li><strong>Conclusão = repetição:</strong> Não acrescenta nada novo, apenas reafirma a tese</li>
+  </ul>
+</div>
+
+<div class="nota-input-box" style="margin-top:1.3rem;">
+  <h2>📝 Inserir Notas de Redação — Barras e gráfico atualizam automaticamente</h2>
+  <div class="g2">
+    <div class="score-form">
+      <h3>UFSC — Critérios A–D (0 a 2.5 cada)</h3>
+      <div class="score-row"><label>A — Tema/Gênero</label><input type="number" min="0" max="2.5" step="0.25" value="1.5" oninput="updateUfscRed(0,+this.value)"><div class="bar-mini"><div class="bar-fill" id="ufscRedBar0" style="width:60%;background:#e67e22;"></div></div><span class="pct" id="ufscRedPct0">60%</span></div>
+      <div class="score-row"><label>B — Argumentação</label><input type="number" min="0" max="2.5" step="0.25" value="1.75" oninput="updateUfscRed(1,+this.value)"><div class="bar-mini"><div class="bar-fill" id="ufscRedBar1" style="width:70%;background:#f39c12;"></div></div><span class="pct" id="ufscRedPct1">70%</span></div>
+      <div class="score-row"><label>C — Coesão</label><input type="number" min="0" max="2.5" step="0.25" value="1.5" oninput="updateUfscRed(2,+this.value)"><div class="bar-mini"><div class="bar-fill" id="ufscRedBar2" style="width:60%;background:#e67e22;"></div></div><span class="pct" id="ufscRedPct2">60%</span></div>
+      <div class="score-row"><label>D — Norma Culta</label><input type="number" min="0" max="2.5" step="0.25" value="1.5" oninput="updateUfscRed(3,+this.value)"><div class="bar-mini"><div class="bar-fill" id="ufscRedBar3" style="width:60%;background:#e67e22;"></div></div><span class="pct" id="ufscRedPct3">60%</span></div>
+      <div class="co co-g" style="margin-top:.5rem;padding:.5rem .8rem;"><strong>Total UFSC:</strong> <span id="ufscRedTotal">6.25</span>/10.00</div>
+    </div>
+    <div class="score-form">
+      <h3>ENEM — Competências C1–C5 (0 a 200 cada)</h3>
+      <div class="score-row"><label>C1 — Norma Culta</label><input type="number" min="0" max="200" step="40" value="120" oninput="updateEnemComp(0,+this.value)"><div class="bar-mini"><div class="bar-fill" id="enemCompBar0" style="width:60%;background:#e67e22;"></div></div><span class="pct" id="enemCompPct0">120</span></div>
+      <div class="score-row"><label>C2 — Compreensão</label><input type="number" min="0" max="200" step="40" value="140" oninput="updateEnemComp(1,+this.value)"><div class="bar-mini"><div class="bar-fill" id="enemCompBar1" style="width:70%;background:#f39c12;"></div></div><span class="pct" id="enemCompPct1">140</span></div>
+      <div class="score-row"><label>C3 — Argumentação</label><input type="number" min="0" max="200" step="40" value="120" oninput="updateEnemComp(2,+this.value)"><div class="bar-mini"><div class="bar-fill" id="enemCompBar2" style="width:60%;background:#e74c3c;"></div></div><span class="pct" id="enemCompPct2">120</span></div>
+      <div class="score-row"><label>C4 — Coesão</label><input type="number" min="0" max="200" step="40" value="120" oninput="updateEnemComp(3,+this.value)"><div class="bar-mini"><div class="bar-fill" id="enemCompBar3" style="width:60%;background:#e67e22;"></div></div><span class="pct" id="enemCompPct3">120</span></div>
+      <div class="score-row"><label>C5 — Proposta</label><input type="number" min="0" max="200" step="40" value="100" oninput="updateEnemComp(4,+this.value)"><div class="bar-mini"><div class="bar-fill" id="enemCompBar4" style="width:50%;background:#e74c3c;"></div></div><span class="pct" id="enemCompPct4">100</span></div>
+      <div class="co co-g" style="margin-top:.5rem;padding:.5rem .8rem;"><strong>Total ENEM:</strong> <span id="enemRedTotal">600</span>/1000</div>
+    </div>
+  </div>
+</div>
+
+<!-- Evolução de Redações e Nova Redação -->
+<div class="g2" style="margin-top:1.3rem;">
+  <div class="pnl">
+    <h2>📈 Evolução das Notas de Redação</h2>
+    <div style="height:230px"><canvas id="redEvolChart"></canvas></div>
+    <div id="redEvolEmpty" style="text-align:center;padding:2rem;color:var(--mut);font-size:.82rem;">Cadastre redações abaixo para ver a evolução.</div>
+  </div>
+  <div class="pnl">
+    <h2>📝 Redações Cadastradas</h2>
+    <button class="btn-primary" style="margin-bottom:.8rem;" onclick="abrirModalRedacao()">+ Cadastrar Nova Redação</button>
+    <div id="redacoesList"><p style="font-size:.82rem;color:var(--mut);">Nenhuma redação cadastrada ainda.</p></div>
+  </div>
+</div>
+<!-- Banco de Erros Recorrentes (3.4) -->
+<div class="pnl g1" id="bancoerrospnl">
+  <h2>⚠️ Banco de Erros Recorrentes</h2>
+  <p style="font-size:.82rem;color:var(--mut);margin-bottom:.6rem;">Erros identificados nas suas redações. Clique em "Corrigido" quando superar.</p>
+  <div id="errosRecList"></div>
+  <button class="btn-secondary" style="font-size:.78rem;margin-top:.5rem;" onclick="abrirModalErro()">+ Adicionar Erro</button>
+</div>
+<!-- Checklist Proposta de Intervenção (3.6) -->
+<div class="pnl g1">
+  <h2>✅ Checklist — Proposta de Intervenção (Competência 5)</h2>
+  <p style="font-size:.82rem;color:var(--mut);margin-bottom:.7rem;">Use ao escrever ou revisar sua redação. Verifique cada elemento:</p>
+  <div id="propostaChecklist"></div>
+</div>
+<!-- Modal Nova Redação -->
+<div class="modal-overlay" id="modalRedacao">
+  <div class="modal-box">
+    <h3>📝 Cadastrar Redação</h3>
+    <div class="form-row"><label>Vestibular</label><select id="redVest"><option>ENEM</option><option>UFSC</option><option>UFSM</option><option>Simulado</option></select></div>
+    <div class="form-row"><label>Tema</label><input type="text" id="redTema" placeholder="Ex: Desigualdade social no Brasil"></div>
+    <div class="form-row"><label>Data</label><input type="date" id="redData"></div>
+    <div class="form-row"><label>Nota Total (ENEM: 0-1000 | UFSC: 0-10)</label><input type="number" id="redNota" min="0" max="1000" step="0.25" placeholder="Ex: 680"></div>
+    <div class="form-row"><label>Observações</label><textarea id="redObs" placeholder="Pontos fortes, erros, o que melhorar..."></textarea></div>
+    <div style="display:flex;gap:.5rem;justify-content:flex-end;margin-top:1rem;">
+      <button class="btn-secondary" onclick="fecharModalRedacao()">Cancelar</button>
+      <button class="btn-primary" onclick="salvarRedacao()">Salvar</button>
+    </div>
+  </div>
+</div>
+<!-- Modal Erro Recorrente -->
+<div class="modal-overlay" id="modalErro">
+  <div class="modal-box">
+    <h3>⚠️ Adicionar Erro Recorrente</h3>
+    <div class="form-row"><label>Tipo de Erro</label><input type="text" id="erroTipo" placeholder="Ex: Concordância Nominal"></div>
+    <div class="form-row"><label>Exemplo</label><input type="text" id="erroExemplo" placeholder="Ex: patrimônios maior"></div>
+    <div class="form-row"><label>Correção</label><input type="text" id="erroCorrecao" placeholder="Ex: patrimônios maiores"></div>
+    <div style="display:flex;gap:.5rem;justify-content:flex-end;margin-top:1rem;">
+      <button class="btn-secondary" onclick="fecharModalErro()">Cancelar</button>
+      <button class="btn-primary" onclick="salvarErroRec()">Salvar</button>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<!-- ====== LEITURAS ====== -->
+<div class="tc" id="leit">
+<h2 style="font-size:1.2rem;margin-bottom:.8rem;">Leituras Obrigatórias e Repertório para Redação</h2>
+
+<div class="g2">
+<div class="pnl">
+  <h2>UFSC 2026 — Leituras Obrigatórias (Coperve)</h2>
+  <div style="margin-bottom:.5rem;font-size:.78rem;color:var(--bad);font-weight:600;">OBRIGATÓRIO — Cobrado diretamente na prova de Literatura</div>
+  <div class="book" style="border-color:var(--bad);border-width:2px;"><div class="icon">📕</div><div class="info"><div class="bt">Memórias Póstumas de Brás Cubas</div><div class="au">Machado de Assis — Romance</div><div class="ds">Realismo brasileiro. Narrador defunto-autor, ironia, crítica à elite carioca do séc. XIX.</div></div></div>
+  <div class="book" style="border-color:var(--bad);border-width:2px;"><div class="icon">📗</div><div class="info"><div class="bt">S. Bernardo</div><div class="au">Graciliano Ramos — Romance</div><div class="ds">2ª geração modernista. Paulo Honório: ambição, posse, solidão. Relação destrutiva com Madalena.</div></div></div>
+  <div class="book" style="border-color:var(--bad);border-width:2px;"><div class="icon">📘</div><div class="info"><div class="bt">Parque Industrial</div><div class="au">Patrícia Galvão (Pagu) — Romance</div><div class="ds">Modernismo, proletariado feminino em SP. Condições de trabalho, luta de classes, gênero.</div></div></div>
+  <div class="book" style="border-color:var(--bad);border-width:2px;"><div class="icon">📙</div><div class="info"><div class="bt">Solitária</div><div class="au">Eliana Alves Cruz — Romance</div><div class="ds">Literatura contemporânea. Narrativa sobre identidade, pertencimento e ancestralidade.</div></div></div>
+  <div class="book" style="border-color:var(--bad);border-width:2px;"><div class="icon">📕</div><div class="info"><div class="bt">Primeiro de Abril: Narrativas da Cadeia</div><div class="au">Salim Miguel — Autobiografia</div><div class="ds">Ditadura militar, prisão política, testemunho histórico. Relato autobiográfico.</div></div></div>
+  <div class="book" style="border-color:var(--bad);border-width:2px;"><div class="icon">📗</div><div class="info"><div class="bt">O Outro Lado da Bola</div><div class="au">Alê Braga, Á. Campos, J. Diaz — Graphic Novel</div><div class="ds">Novidade! HQ sobre futebol, sociedade e identidade. 2ª vez que Coperve inclui graphic novel.</div></div></div>
+</div>
+<div class="pnl">
+  <h2>ENEM + UFSM — Repertório Essencial (mais cobrados)</h2>
+  <div style="margin-bottom:.5rem;font-size:.78rem;color:var(--warn);font-weight:600;">RECOMENDADO — Autores/obras mais frequentes nas provas</div>
+  <div class="book"><div class="icon">📕</div><div class="info"><div class="bt">1984</div><div class="au">George Orwell</div><div class="ds">Temas: controle social, liberdade, manipulação da informação, autoritarismo. Serve para temas de tecnologia, privacidade, governo.</div></div></div>
+  <div class="book"><div class="icon">📗</div><div class="info"><div class="bt">Vidas Secas</div><div class="au">Graciliano Ramos</div><div class="ds">Temas: seca, miséria, desigualdade social, exclusão. Essencial para qualquer tema de desigualdade no Brasil.</div></div></div>
+  <div class="book"><div class="icon">📘</div><div class="info"><div class="bt">O Cortiço</div><div class="au">Aluísio Azevedo</div><div class="ds">Temas: habitação, exploração trabalhista, classes sociais, preconceito. Conecta-se a temas de urbanização e moradia.</div></div></div>
+  <div class="book"><div class="icon">📙</div><div class="info"><div class="bt">Quarto de Despejo</div><div class="au">Carolina Maria de Jesus</div><div class="ds">Temas: fome, pobreza, racismo, favela. Repertório poderoso e autêntico sobre desigualdade social.</div></div></div>
+  <div class="book"><div class="icon">📕</div><div class="info"><div class="bt">Modernidade Líquida</div><div class="au">Zygmunt Bauman</div><div class="ds">Temas: relações frágeis, consumismo, identidade, trabalho. Basta ler resumos — ótimo para citar em redações.</div></div></div>
+  <div class="book"><div class="icon">📗</div><div class="info"><div class="bt">A Banalidade do Mal</div><div class="au">Hannah Arendt</div><div class="ds">Temas: violência normalizada, obediência cega, direitos humanos. Conceito-chave para temas éticos.</div></div></div>
+  <div class="book"><div class="icon">📘</div><div class="info"><div class="bt">Pedagogia do Oprimido</div><div class="au">Paulo Freire</div><div class="ds">Temas: educação, emancipação, desigualdade. Autor brasileiro muito valorizado pelas bancas do ENEM.</div></div></div>
+  <div class="book"><div class="icon">📙</div><div class="info"><div class="bt">Constituição Federal de 1988</div><div class="au">Artigos 5° e 6°</div><div class="ds">Direitos fundamentais e sociais. Cite: "Conforme o Art. 6° da CF/88, são direitos sociais: educação, saúde, trabalho..."</div></div></div>
+  <div style="margin-top:.5rem;font-size:.78rem;color:var(--mut);border-top:1px solid #eee;padding-top:.4rem;">O ENEM não tem lista obrigatória, mas estes autores aparecem com frequência: <strong>Machado de Assis, Drummond, Clarice Lispector, Jorge Amado, Guimarães Rosa</strong>. A UFSM também não publica lista fixa de obras.</div>
+</div>
+<div>
+  <div class="pnl" style="margin-bottom:1rem;">
+    <h2>Filmes e Documentários (Repertório Visual)</h2>
+    <div class="book"><div class="icon">🎬</div><div class="info"><div class="bt">Que Horas Ela Volta (2015)</div><div class="au">Anna Muylaert</div><div class="ds">Desigualdade, trabalho doméstico, classes sociais. Enzo já usou — ótimo! Aprofundar a análise.</div></div></div>
+    <div class="book"><div class="icon">🎬</div><div class="info"><div class="bt">Parasita (2019)</div><div class="au">Bong Joon-ho</div><div class="ds">Desigualdade de classes, meritocracia, espaços sociais. Universal para temas socioeconômicos.</div></div></div>
+    <div class="book"><div class="icon">🎬</div><div class="info"><div class="bt">O Dilema das Redes (2020)</div><div class="au">Netflix</div><div class="ds">Tecnologia, manipulação, saúde mental, redes sociais. Perfeito para temas de internet/tecnologia.</div></div></div>
+    <div class="book"><div class="icon">🎬</div><div class="info"><div class="bt">Estrelas Além do Tempo (2016)</div><div class="au">Theodore Melfi</div><div class="ds">Racismo, machismo, superação, ciência. Ótimo para temas de igualdade e preconceito.</div></div></div>
+    <div class="book"><div class="icon">🎬</div><div class="info"><div class="bt">Ilha das Flores (1989)</div><div class="au">Jorge Furtado</div><div class="ds">Curta-metragem sobre consumo, lixo e fome. Impactante e ótimo para citar em redação.</div></div></div>
+  </div>
+  <div class="pnl">
+    <h2>Banco de Repertórios Universais</h2>
+    <div class="co co-p">
+      <h3>10 Citações para Decorar</h3>
+      <ul>
+        <li>"A educação é a arma mais poderosa para mudar o mundo" — <strong>Nelson Mandela</strong></li>
+        <li>"Onde não há lei, não há liberdade" — <strong>John Locke</strong></li>
+        <li>"A injustiça em qualquer lugar é uma ameaça à justiça em todos os lugares" — <strong>Martin Luther King Jr.</strong></li>
+        <li>"O que me preocupa não é o grito dos maus, mas o silêncio dos bons" — <strong>MLK Jr.</strong></li>
+        <li>"Ninguém nasce odiando outra pessoa pela cor de sua pele" — <strong>Mandela</strong></li>
+        <li>"A mudança não virá se esperarmos por outra pessoa" — <strong>Barack Obama</strong></li>
+        <li>"Art. 5° CF/88: Todos são iguais perante a lei, sem distinção de qualquer natureza"</li>
+        <li>"Art. 6° CF/88: São direitos sociais: educação, saúde, alimentação, trabalho, moradia..."</li>
+        <li>"Art. 196 CF/88: A saúde é direito de todos e dever do Estado"</li>
+        <li>"Modernidade Líquida: relações tornaram-se frágeis e descartáveis" — <strong>Bauman</strong></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="pnl g1">
+  <h2>Plano de Escrita — 1 Redação por Semana</h2>
+  <div class="co co-b">
+    <h3>Rotina Semanal de Redação</h3>
+    <ul>
+      <li><strong>Sexta (17h-18h30):</strong> Escrever 1 redação dissertativa-argumentativa em 1h. Reservar 30 min para autocorreção.</li>
+      <li><strong>Autocorreção:</strong> Releia 1x pelo conteúdo, depois 1x SÓ pela gramática. Verifique se tem os 5 elementos da proposta.</li>
+      <li><strong>Correção externa:</strong> Enviar para professor, usar plataformas (Imaginie, Redação Online, Descomplica) ou trocar com colega.</li>
+      <li><strong>Sábado:</strong> Ler a correção e reescrever os parágrafos que receberam nota baixa.</li>
+    </ul>
+  </div>
+  <div class="co co-y">
+    <h3>Temas Sugeridos (Março a Novembro)</h3>
+    <ul>
+      <li><strong>Mar:</strong> Desigualdade social no Brasil / Acesso à saúde pública</li>
+      <li><strong>Abr:</strong> Saúde mental dos jovens / Impacto das redes sociais</li>
+      <li><strong>Mai:</strong> Violência contra a mulher / Racismo estrutural</li>
+      <li><strong>Jun:</strong> Educação a distância / Evasão escolar</li>
+      <li><strong>Jul:</strong> Mobilidade urbana / Poluição ambiental</li>
+      <li><strong>Ago:</strong> Trabalho infantil / Reforma trabalhista e seus efeitos</li>
+      <li><strong>Set:</strong> Fake news e desinformação / Democracia e participação</li>
+      <li><strong>Out:</strong> Inteligência artificial e emprego / Ética na tecnologia</li>
+      <li><strong>Nov:</strong> Revisão: reescrever as 3 piores redações do ano com as melhorias aprendidas</li>
+    </ul>
+  </div>
+</div>
+</div>
+
+<!-- ====== PLANO SEMANAL ====== -->
+<div class="tc" id="plano">
+<h2 style="font-size:1.2rem;margin-bottom:.8rem;">Rotina Semanal — Baseada nos Horários do Enzo</h2>
+<div class="today-card" id="todayCard">
+  <h3>📅 Hoje — <span id="todayDia">Carregando...</span></h3>
+  <div class="today-slots" id="todaySlots"><span style="opacity:.7;">Sem sessões hoje.</span></div>
+</div>
+<div class="co co-b" style="margin-bottom:1rem;">
+  <h3>Horários reais: Seg 18-21h | Ter 15-21h | Qua 17-21h | Qui 18-21h | Sex 18-21h | Sáb/Dom livres</h3>
+  <p>Total disponível: ~31-35h/semana (19h dias úteis + 12-16h fim de semana)</p>
+</div>
+<div class="pnl" style="overflow-x:auto;margin-bottom:1.3rem;">
+<table class="sch" style="width:100%;border-collapse:separate;border-spacing:0;">
+<thead><tr><th>Horário</th><th>Segunda</th><th>Terça</th><th>Quarta</th><th>Quinta</th><th>Sexta</th><th>Sábado</th><th>Domingo</th></tr></thead>
+<tbody>
+<tr><td class="tc2">7h-12h</td><td colspan="5" style="background:#f0f4f8;font-weight:600;color:var(--pri);">Escola — Bom Jesus Pedra Branca</td><td rowspan="2" style="background:#fff8e1;vertical-align:middle;text-align:center;"><span class="s s-sm">SIMULADO</span><span class="s s-sm">4h cronometrado</span><br><span style="font-size:.68rem;color:#555;">8h-12h</span></td><td rowspan="3" style="background:#f0fff0;vertical-align:middle;text-align:center;"><span class="w w-d">DESCANSO</span><br><span class="w w-e">Exercício</span><br><span style="font-size:.68rem;color:#666;">Amigos, lazer!</span></td></tr>
+<tr><td class="tc2">12h-13h</td><td colspan="5" style="background:#fef9e7;"><span class="w w-f">Almoço + descanso</span></td></tr>
+<tr><td class="tc2">13h-15h</td><td style="background:#f0f4f8;color:var(--mut);font-size:.7rem;">Escola / Atividades</td><td style="background:#f0f4f8;color:var(--mut);font-size:.7rem;">Livre antes 15h</td><td style="background:#f0f4f8;color:var(--mut);font-size:.7rem;">Escola / Atividades</td><td style="background:#f0f4f8;color:var(--mut);font-size:.7rem;">Escola / Atividades</td><td style="background:#f0f4f8;color:var(--mut);font-size:.7rem;">Escola / Atividades</td><td><span class="s s-rv">Correção Simulado</span></td></tr>
+<tr><td class="tc2">15h-17h</td><td style="background:#eee;font-size:.7rem;color:#999;">—</td><td style="background:#d5f5e3;"><span class="s s-mt">Matemática</span><span style="font-size:.65rem;display:block;color:#555;">Teoria + Exercícios</span></td><td style="background:#eee;font-size:.7rem;color:#999;">—</td><td style="background:#eee;font-size:.7rem;color:#999;">—</td><td style="background:#eee;font-size:.7rem;color:#999;">—</td><td><span class="s s-hm">Humanas + Geo</span></td><td><span class="s s-rv">Revisão leve</span><span style="font-size:.65rem;display:block;color:#555;">Flashcards Anki</span></td></tr>
+<tr><td class="tc2">17h-18h</td><td style="background:#eee;font-size:.7rem;color:#999;">—</td><td><span class="s s-fs">Física</span><span style="font-size:.65rem;display:block;color:#555;">Teoria</span></td><td style="background:#d5f5e3;"><span class="s s-qm">Química</span><span style="font-size:.65rem;display:block;color:#555;">Teoria</span></td><td style="background:#eee;font-size:.7rem;color:#999;">—</td><td style="background:#eee;font-size:.7rem;color:#999;">—</td><td><span class="s s-bi">Biologia</span></td><td><span class="w w-d">Livre</span></td></tr>
+<tr><td class="tc2" style="background:#e8f8f0;font-weight:700;">18h-19h30</td><td style="background:#fde8e8;"><span class="s s-mt">MATEMÁTICA</span><span style="font-size:.65rem;display:block;color:#555;">Foco em Exatas</span></td><td><span class="s s-fs">Física</span><span style="font-size:.65rem;display:block;color:#555;">Exercícios + Listas</span></td><td><span class="s s-qm">Química</span><span style="font-size:.65rem;display:block;color:#555;">Exercícios</span></td><td><span class="s s-pt">Português</span><span style="font-size:.65rem;display:block;color:#555;">Gramática + Interp.</span></td><td><span class="s s-rd">REDAÇÃO</span><span style="font-size:.65rem;display:block;color:#555;">Escrever 1h</span></td><td><span class="s s-ig">Inglês + Leitura</span></td><td><span class="w w-d">Livre</span></td></tr>
+<tr><td class="tc2">19h30-20h</td><td colspan="5"><span class="w w-f">Pausa — Jantar leve + Água</span></td><td colspan="2"><span class="w w-f">Jantar</span></td></tr>
+<tr><td class="tc2" style="background:#e8f8f0;font-weight:700;">20h-21h</td><td><span class="s s-mt">Mat - Revisão</span><span style="font-size:.65rem;display:block;color:#555;">Erros + Anki</span></td><td><span class="s s-bi">Biologia</span><span style="font-size:.65rem;display:block;color:#555;">Genética/Ecologia</span></td><td><span class="s s-rd">Redação</span><span style="font-size:.65rem;display:block;color:#555;">Autocorreção</span></td><td><span class="s s-hm">Humanas</span><span style="font-size:.65rem;display:block;color:#555;">Hist/Geo/Filo/Socio</span></td><td><span class="s s-rv">Revisão Semana</span><span style="font-size:.65rem;display:block;color:#555;">Caderno de erros</span></td><td><span class="s s-rv">Erros da semana</span></td><td><span class="w w-s">Relaxar</span></td></tr>
+<tr><td class="tc2">21h+</td><td colspan="5"><span class="w w-s">Dormir até 22h30. Mín. 7-8h de sono!</span></td><td colspan="2"><span class="w w-s">Dormir cedo</span></td></tr>
+</tbody>
+</table>
+</div>
+<div class="g2">
+  <div class="co co-g">
+    <h3>Distribuição Semanal (~33h)</h3>
+    <p><strong>Matemática:</strong> 6h (prioridade máxima — maior gap)</p>
+    <p><strong>Física:</strong> 4h | <strong>Química:</strong> 4h | <strong>Biologia:</strong> 3h</p>
+    <p><strong>Português/Redação:</strong> 4h | <strong>Humanas:</strong> 3h | <strong>Inglês:</strong> 1h</p>
+    <p><strong>Simulado + Correção:</strong> 6h | <strong>Revisão:</strong> 2h</p>
+  </div>
+  <div class="co co-y">
+    <h3>Regras de Ouro</h3>
+    <p>Terça é o dia mais produtivo (6h!) — usar para matérias mais difíceis.</p>
+    <p>Sábado = simulado cronometrado + correção detalhada.</p>
+    <p>Domingo = descanso ativo: revisão leve + exercício + lazer OBRIGATÓRIO.</p>
+    <p>Sexta à noite é LIVRE — sem culpa!</p>
+  </div>
+</div>
+
+<div class="cumpr-section">
+  <h2>✅ Registro de Cumprimento — Semana Atual</h2>
+  <p style="font-size:.82rem;color:var(--mut);margin-bottom:.8rem;">Marque os blocos de estudo concluídos. Dados salvos automaticamente.</p>
+  <div id="cumprGrid" class="cumpr-grid"></div>
+  <div class="cumpr-bar"><div class="cumpr-bar-fill" id="cumprBarFill" style="width:0%"></div></div>
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-top:.3rem;">
+    <span class="cumpr-pct" id="cumprPct">0% cumprido esta semana</span>
+    <button onclick="resetCumprimento()" style="font-size:.73rem;background:#eee;border:1px solid #ccc;padding:.28rem .7rem;border-radius:5px;cursor:pointer;">Resetar Semana</button>
+  </div>
+</div>
+
+</div>
+
+<!-- ====== SIMULADOS ====== -->
+<div class="tc" id="sim">
+<h2 style="font-size:1.2rem;margin-bottom:.3rem;">Simulados Semanais — Março a Novembro 2026</h2>
+<div class="sim-controls">
+  <label>Filtrar por disciplina:</label>
+  <select id="simFilter" onchange="filtrarSimulados(this.value)">
+    <option value="all">Todas as Disciplinas</option>
+    <option value="mat">Matemática</option>
+    <option value="fis">Física</option>
+    <option value="qui">Química</option>
+    <option value="bio">Biologia</option>
+    <option value="por">Português</option>
+    <option value="hum">Humanas</option>
+    <option value="red">Redação</option>
+    <option value="ing">Inglês</option>
+  </select>
+  <button onclick="abrirSimuladoAleatorio()">🎲 Simulado Aleatório</button>
+</div>
+<div class="pnl g1" id="simEvoPnl" style="margin-bottom:1rem;display:none;">
+  <h2>📊 Evolução dos Simulados — % de Acerto por Semana</h2>
+  <div style="height:200px"><canvas id="simEvoChart"></canvas></div>
+</div>
+<!-- Simulado Aleatório Modal -->
+<div class="modal-overlay" id="modalSimRand">
+  <div class="modal-box" style="max-width:700px;">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;border-bottom:2px solid #eee;padding-bottom:.5rem;">
+      <h3 style="margin:0;">🎲 Simulado Aleatório — <span id="simRandTimer">00:00</span></h3>
+      <button class="btn-secondary" onclick="fecharSimRand()">✕ Fechar</button>
+    </div>
+    <div id="simRandContent"></div>
+    <div id="simRandScore"></div>
+  </div>
+</div>
+ — Março a Novembro 2026</h2>
+<p style="font-size:.85rem;color:var(--mut);margin-bottom:1rem;">Questões baseadas em provas reais do ENEM, UFSM e UFSC com fonte identificada. Organizadas por semana com dificuldade progressiva. Clique para revelar o gabarito.</p>
+
+<div id="simContainer"></div>
+
+<div class="pnl" style="margin-top:1.3rem;" id="cadernoErrosPnl">
+  <h2>📕 Caderno de Erros — Questões Respondidas Incorretamente</h2>
+  <p style="font-size:.82rem;color:var(--mut);margin-bottom:.7rem;">Questões erradas aparecem automaticamente aqui. Revise e refaça para fixar o conteúdo.</p>
+  <div id="cadernoErrosList"><p style="font-size:.82rem;color:var(--mut);">Nenhum erro registrado ainda. Responda os simulados acima.</p></div>
+</div>
+
+</div>
+
+<!-- ====== METAS MENSAIS ====== -->
+<div class="tc" id="metas">
+<h2 style="font-size:1.2rem;margin-bottom:.8rem;">Metas Mensais — Evolução ao Longo do Ano</h2>
+<div class="pnl g1">
+  <h2>Curva de Evolução Projetada — Nota ENEM</h2>
+  <div style="height:320px"><canvas id="metasChart"></canvas></div>
+</div>
+<div class="pnl g1">
+  <h2>Metas por Disciplina — Mês a Mês</h2>
+  <div style="overflow-x:auto;">
+  <table class="sch" style="width:100%;border-collapse:separate;border-spacing:0;">
+  <thead><tr><th>Disciplina</th><th>Mar</th><th>Abr</th><th>Mai</th><th>Jun</th><th>Jul</th><th>Ago</th><th>Set</th><th>Out</th><th>Nov</th></tr></thead>
+  <tbody>
+  <tr><td class="tc2">Matemática</td><td style="background:#fde8e8;">35%</td><td style="background:#fde8e8;">42%</td><td style="background:#fef3e2;">50%</td><td style="background:#fef3e2;">58%</td><td style="background:#fef9e7;">65%</td><td style="background:#d5f5e3;">70%</td><td style="background:#d5f5e3;">75%</td><td style="background:#d5f5e3;">78%</td><td style="background:#d5f5e3;font-weight:700;">80%</td></tr>
+  <tr><td class="tc2">Física</td><td style="background:#fde8e8;">38%</td><td style="background:#fef3e2;">45%</td><td style="background:#fef3e2;">52%</td><td style="background:#fef9e7;">58%</td><td style="background:#fef9e7;">65%</td><td style="background:#d5f5e3;">70%</td><td style="background:#d5f5e3;">75%</td><td style="background:#d5f5e3;">78%</td><td style="background:#d5f5e3;font-weight:700;">80%</td></tr>
+  <tr><td class="tc2">Química</td><td style="background:#fde8e8;">35%</td><td style="background:#fef3e2;">42%</td><td style="background:#fef3e2;">50%</td><td style="background:#fef9e7;">58%</td><td style="background:#fef9e7;">65%</td><td style="background:#d5f5e3;">70%</td><td style="background:#d5f5e3;">73%</td><td style="background:#d5f5e3;">76%</td><td style="background:#d5f5e3;font-weight:700;">78%</td></tr>
+  <tr><td class="tc2">Biologia</td><td style="background:#fef3e2;">55%</td><td style="background:#fef9e7;">60%</td><td style="background:#fef9e7;">65%</td><td style="background:#d5f5e3;">68%</td><td style="background:#d5f5e3;">72%</td><td style="background:#d5f5e3;">75%</td><td style="background:#d5f5e3;">78%</td><td style="background:#d5f5e3;">80%</td><td style="background:#d5f5e3;font-weight:700;">82%</td></tr>
+  <tr><td class="tc2">Português</td><td style="background:#fef3e2;">45%</td><td style="background:#fef3e2;">52%</td><td style="background:#fef9e7;">58%</td><td style="background:#fef9e7;">63%</td><td style="background:#d5f5e3;">68%</td><td style="background:#d5f5e3;">72%</td><td style="background:#d5f5e3;">75%</td><td style="background:#d5f5e3;">78%</td><td style="background:#d5f5e3;font-weight:700;">80%</td></tr>
+  <tr><td class="tc2">Humanas</td><td style="background:#fef9e7;">58%</td><td style="background:#fef9e7;">63%</td><td style="background:#fef9e7;">66%</td><td style="background:#d5f5e3;">70%</td><td style="background:#d5f5e3;">73%</td><td style="background:#d5f5e3;">76%</td><td style="background:#d5f5e3;">78%</td><td style="background:#d5f5e3;">80%</td><td style="background:#d5f5e3;font-weight:700;">82%</td></tr>
+  <tr><td class="tc2" style="background:#fadbd8;font-weight:700;">Redação ENEM</td><td>650</td><td>680</td><td>720</td><td>750</td><td>780</td><td>800</td><td>830</td><td>860</td><td style="font-weight:700;color:var(--ok);">880+</td></tr>
+  </tbody>
+  </table>
+  </div>
+</div>
+<div class="g2">
+  <div class="co co-g">
+    <h3>Fase 1: Fundamentos (Mar-Abr)</h3>
+    <ul>
+      <li>Dominar regra de 3, equações, porcentagem</li>
+      <li>Cinemática MRU/MRUV, Leis de Newton básicas</li>
+      <li>Tabela periódica, ligações químicas</li>
+      <li>Citologia, divisão celular</li>
+      <li>Redação: treinar estrutura dos 5 elementos</li>
+    </ul>
+  </div>
+  <div class="co co-b">
+    <h3>Fase 2: Aprofundamento (Mai-Jun)</h3>
+    <ul>
+      <li>Funções, PA/PG, geometria plana</li>
+      <li>Energia, termodinâmica, ondas</li>
+      <li>Estequiometria, soluções, pH</li>
+      <li>Genética, ecologia, evolução</li>
+      <li>Redação: 720+ no simulado</li>
+    </ul>
+  </div>
+</div>
+<div class="g2">
+  <div class="co co-y">
+    <h3>Fase 3: Intensivo (Jul-Ago)</h3>
+    <ul>
+      <li>Probabilidade, combinatória, logaritmos</li>
+      <li>Eletricidade, magnetismo, óptica</li>
+      <li>Química orgânica, equilíbrio químico</li>
+      <li>Fisiologia, bioquímica, biotecnologia</li>
+      <li>Redação: 800+ consistente</li>
+    </ul>
+  </div>
+  <div class="co co-r">
+    <h3>Fase 4: Revisão + Prova (Set-Nov)</h3>
+    <ul>
+      <li>Resolver provas anteriores completas (ENEM + UFSM + UFSC)</li>
+      <li>Revisar caderno de erros semanalmente</li>
+      <li>Simulados em condições reais de prova</li>
+      <li>Ajustar pontos fracos específicos</li>
+      <li>Redação: meta 880+ no ENEM</li>
+    </ul>
+  </div>
+</div>
+
+<div class="pnl g1" style="margin-top:1.3rem;">
+  <h2>📊 Comparativo Meta × Real — Registre sua nota real de cada mês</h2>
+  <div id="metaAlertaDesvio" style="display:none;background:#fde8e8;border:2px solid #e74c3c;border-radius:8px;padding:.6rem .9rem;font-size:.82rem;color:#922b21;margin-bottom:.7rem;"></div>
+  <div style="overflow-x:auto;">
+  <table class="sch" id="metaRealTable" style="width:100%;border-collapse:separate;border-spacing:0;">
+  <thead><tr><th>Disciplina</th><th>Mar</th><th>Abr</th><th>Mai</th><th>Jun</th><th>Jul</th><th>Ago</th><th>Set</th><th>Out</th><th>Nov</th></tr></thead>
+  <tbody id="metaRealBody"></tbody>
+  </table>
+  </div>
+  <p style="font-size:.73rem;color:var(--mut);margin-top:.5rem;">🟢 Acima da meta &nbsp;|&nbsp; 🔴 Abaixo da meta &nbsp;|&nbsp; Clique nas células "Real" para editar</p>
+</div>
+
+</div>
+
+<!-- ====== PROBABILIDADES E ALTERNATIVAS ====== -->
+<div class="tc" id="prob">
+<h2 style="font-size:1.2rem;margin-bottom:.8rem;">Probabilidades de Aprovação e Alternativas</h2>
+<div class="g2">
+  <div class="pnl">
+    <h2>Probabilidade Mensal de Aprovação</h2>
+    <div style="height:300px"><canvas id="probChartFull"></canvas></div>
+  </div>
+  <div class="pnl">
+    <h2>Comparativo de Cortes — SiSU Medicina</h2>
+    <div style="height:300px"><canvas id="cortesChart"></canvas></div>
+  </div>
+</div>
+
+<div class="pnl g1">
+  <h2>Universidades-Alvo — Detalhamento</h2>
+  <div style="overflow-x:auto;">
+  <table class="sch" style="width:100%;border-collapse:separate;border-spacing:0;">
+  <thead><tr><th>Universidade</th><th>Cidade</th><th>Tipo</th><th>Vagas Med.</th><th>Seleção</th><th>Corte Estimado</th><th>Prob. c/ Plano</th></tr></thead>
+  <tbody>
+  <tr><td><strong>UFSC</strong></td><td>Florianópolis/SC</td><td><span style="background:#d5f5e3;padding:2px 8px;border-radius:10px;font-size:.72rem;color:#1e8449;">Pública</span></td><td>~100</td><td>Vestibular + SiSU</td><td style="color:var(--bad);font-weight:700;">Vest. ~68 pts | SiSU ~827</td><td style="font-weight:700;">~45%</td></tr>
+  <tr><td><strong>UFSM</strong></td><td>Santa Maria/RS</td><td><span style="background:#d5f5e3;padding:2px 8px;border-radius:10px;font-size:.72rem;color:#1e8449;">Pública</span></td><td>~80</td><td>Vestibular + SiSU</td><td style="color:var(--bad);font-weight:700;">Vest. 97/120 | SiSU ~697-799</td><td style="font-weight:700;">~38%</td></tr>
+  <tr><td><strong>UFN</strong></td><td>Santa Maria/RS</td><td><span style="background:#fef9e7;padding:2px 8px;border-radius:10px;font-size:.72rem;color:#7d6608;">Privada</span></td><td>~60</td><td>Vestibular + ProUni</td><td>ProUni até 100% bolsa</td><td style="font-weight:700;color:var(--ok);">~55%</td></tr>
+  <tr><td><strong>ULBRA</strong></td><td>Santa Maria/RS</td><td><span style="background:#fef9e7;padding:2px 8px;border-radius:10px;font-size:.72rem;color:#7d6608;">Privada</span></td><td>~40</td><td>Vestibular + ENEM</td><td>6ª melhor privada BR</td><td style="font-weight:700;">~50%</td></tr>
+  <tr><td><strong>UNISUL</strong></td><td>Palhoça/SC</td><td><span style="background:#fef9e7;padding:2px 8px;border-radius:10px;font-size:.72rem;color:#7d6608;">Privada</span></td><td>~60</td><td>Vestibular + ENEM</td><td>~R$6.070/mês</td><td style="font-weight:700;color:var(--ok);">~60%</td></tr>
+  </tbody>
+  </table>
+  </div>
+</div>
+
+<div class="g2">
+  <div class="co co-b">
+    <h3>Estratégia de Inscrições Recomendada</h3>
+    <ul>
+      <li><strong>Nov:</strong> ENEM (obrigatório para SiSU e ProUni)</li>
+      <li><strong>Nov-Dez:</strong> Vestibular UFSC + UFSM</li>
+      <li><strong>Jan:</strong> SiSU — tentar qualquer federal com nota ENEM</li>
+      <li><strong>Jan:</strong> ProUni — UFN (bolsa integral)</li>
+      <li><strong>Backup:</strong> UNISUL (Palhoça) — perto de casa</li>
+    </ul>
+  </div>
+  <div class="co co-y">
+    <h3>Outras Federais via SiSU (cortes mais baixos)</h3>
+    <ul>
+      <li><strong>UFES</strong> (Vitória/ES): ~741 pts</li>
+      <li><strong>UEL</strong> (Londrina/PR): ~762 pts</li>
+      <li><strong>UFRN-Caicó</strong> (Caicó/RN): ~771 pts</li>
+      <li><strong>UFAL</strong> (Maceió/AL): ~743 pts</li>
+      <li><strong>UFPB</strong> (João Pessoa/PB): ~752 pts</li>
+      <li>Dica: monitorar cortes no dia da inscrição do SiSU!</li>
+    </ul>
+  </div>
+</div>
+
+<div class="co co-g">
+  <h3>Cenário Otimista vs. Realista</h3>
+  <p><strong>Otimista (cumprindo 100% do plano):</strong> ENEM ~775 pts, aprovação UFSM pelo vestibular (38%), aprovação UFSC (45%), SiSU em federal (52%).</p>
+  <p><strong>Realista (80% do plano):</strong> ENEM ~720 pts — aprovação em privada com ProUni (55%), possível SiSU em federal com corte menor (30%).</p>
+  <p><strong>Conservador:</strong> Se não passar em 2026, 1 ano de cursinho intensivo + 2ª tentativa sobe a probabilidade para 70-80%. Isso é <strong>completamente normal</strong> para Medicina.</p>
+</div>
+
+<!-- Simulador E se? (8.2) -->
+<div class="pnl g1" style="margin-top:1.3rem;">
+  <h2>🎯 Simulador "E se?" — Veja onde você passaria com cada nota ENEM</h2>
+  <div style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap;">
+    <div style="flex:1;min-width:200px;">
+      <div style="font-size:1.8rem;font-weight:800;color:var(--acc);text-align:center;" id="eseScore">700</div>
+      <input type="range" class="ese-slider" id="eseSlider" min="500" max="850" step="5" value="700" oninput="atualizarEse(this.value)" style="width:100%;margin:.5rem 0;">
+      <div style="display:flex;justify-content:space-between;font-size:.7rem;color:var(--mut);"><span>500</span><span>675</span><span>850</span></div>
+    </div>
+  </div>
+  <div class="ese-unis" id="eseUnis"></div>
+</div>
+
+</div>
+
+<!-- ====== BEM-ESTAR ====== -->
+<div class="tc" id="bem">
+<h2 style="font-size:1.2rem;margin-bottom:.8rem;">Saúde e Bem-Estar — Regras de Ouro</h2>
+<div class="g3">
+  <div class="pnl" style="text-align:center;"><div style="font-size:2.2rem;">💧</div><strong>Hidratação</strong><p style="font-size:.82rem;color:var(--mut);">2L/dia. Garrafa na mesa. Beber a cada pausa.</p></div>
+  <div class="pnl" style="text-align:center;"><div style="font-size:2.2rem;">🍎</div><strong>Alimentação</strong><p style="font-size:.82rem;color:var(--mut);">Café da manhã completo. Lanches saudáveis. Evitar fast food.</p></div>
+  <div class="pnl" style="text-align:center;"><div style="font-size:2.2rem;">🏃</div><strong>Exercício</strong><p style="font-size:.82rem;color:var(--mut);">30min/dia. Qualquer atividade. Domingo de manhã!</p></div>
+</div>
+<div class="g3">
+  <div class="pnl" style="text-align:center;"><div style="font-size:2.2rem;">😴</div><strong>Sono</strong><p style="font-size:.82rem;color:var(--mut);">7-8h/noite. Horário fixo. Sem celular na cama.</p></div>
+  <div class="pnl" style="text-align:center;"><div style="font-size:2.2rem;">🎮</div><strong>Diversão</strong><p style="font-size:.82rem;color:var(--mut);">Sexta noite + Domingo = SAGRADOS. Sem culpa!</p></div>
+  <div class="pnl" style="text-align:center;"><div style="font-size:2.2rem;">🧠</div><strong>Saúde Mental</strong><p style="font-size:.82rem;color:var(--mut);">Não se compare. Peça ajuda. Terapia é ferramenta.</p></div>
+</div>
+
+<!-- Registro Diário de Hábitos (9.1) -->
+<div class="pnl g1" style="margin-top:1.3rem;">
+  <h2>📋 Registro Diário de Hábitos — <span id="habDataHoje"></span></h2>
+  <p style="font-size:.82rem;color:var(--mut);margin-bottom:.6rem;">Marque os hábitos cumpridos hoje. Salvo automaticamente.</p>
+  <div class="hab-grid" id="habGrid"></div>
+  <div style="margin-top:.5rem;">
+    <strong style="font-size:.82rem;">Últimos 7 dias: </strong>
+    <div style="display:flex;gap:.3rem;margin-top:.3rem;flex-wrap:wrap;" id="habHistory"></div>
+  </div>
+</div>
+<div class="co co-g">
+  <h3>Lembre-se sempre</h3>
+  <ul>
+    <li>Nenhum vestibular vale sua saúde física ou mental</li>
+    <li>Quando bater desespero: parar, respirar, caminhar, falar com alguém</li>
+    <li>Se não passar agora, cursinho + 2ª tentativa é <strong>completamente normal</strong> para Medicina</li>
+    <li>Cada simulado que melhorar, cada matéria que avançar — é vitória!</li>
+  </ul>
+</div>
+</div>
+
+</div><!-- /ctn -->
+
+<script>
+function sT(id){document.querySelectorAll('.tc').forEach(t=>t.classList.remove('active'));document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));document.getElementById(id).classList.add('active');event.target.classList.add('active');}
+
+// Curva de Evolução ENEM
+window.curvaEnemChart=new Chart(document.getElementById('curvaEnem'),{type:'line',data:{labels:['Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov'],datasets:[{label:'Projeção Enzo (c/ plano)',data:[580,600,630,660,700,720,745,760,775],borderColor:'#2980b9',backgroundColor:'rgba(41,128,185,.1)',borderWidth:3,fill:true,tension:.3,pointRadius:5,pointBackgroundColor:'#2980b9'},{label:'Meta Medicina SiSU',data:[770,770,770,770,770,770,770,770,770],borderColor:'#e74c3c',borderWidth:2,borderDash:[8,4],pointRadius:0,fill:false},{label:'Meta UFSC SiSU',data:[827,827,827,827,827,827,827,827,827],borderColor:'#8e44ad',borderWidth:2,borderDash:[4,4],pointRadius:0,fill:false}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{font:{size:10}}}},scales:{y:{min:500,max:850,ticks:{stepSize:50}}}}});
+// Prob de Aprovação Mensal
+window.probChartCad=new Chart(document.getElementById('probChart'),{type:'line',data:{labels:['Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov'],datasets:[{label:'UFSM Vest.',data:[5,8,12,18,22,28,32,35,38],borderColor:'#e74c3c',backgroundColor:'rgba(231,76,60,.08)',borderWidth:2.5,fill:true,tension:.3,pointRadius:4},{label:'UFSC Vest.',data:[8,12,18,24,30,36,40,44,48],borderColor:'#2980b9',backgroundColor:'rgba(41,128,185,.08)',borderWidth:2.5,fill:true,tension:.3,pointRadius:4},{label:'ENEM/SiSU (federal)',data:[5,10,16,22,30,38,44,48,52],borderColor:'#27ae60',backgroundColor:'rgba(39,174,96,.08)',borderWidth:2.5,fill:true,tension:.3,pointRadius:4}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{font:{size:10}}}},scales:{y:{min:0,max:100,ticks:{callback:v=>v+'%'}}}}});
+
+// Charts
+window.ufsmChart=new Chart(document.getElementById('ufsmBar'),{type:'bar',data:{labels:['Mat','Fís','Quí','Bio','Port','Humanas','Inglês','Geo'],datasets:[{label:'UFSM %',data:[33,17,23,54,27,55,44,67],backgroundColor:['#e74c3c','#e74c3c','#e74c3c','#2ecc71','#e67e22','#f39c12','#f39c12','#27ae60'],borderRadius:5}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{y:{max:100,ticks:{callback:v=>v+'%'}}}}});
+window.ufscChart=new Chart(document.getElementById('ufscBar'),{type:'bar',data:{labels:['Mat','Fís','Quí','Bio','Port','Humanas','2ªLíngua'],datasets:[{label:'UFSC %',data:[19,56,43,55,49,56,77],backgroundColor:['#e74c3c','#2ecc71','#f39c12','#2ecc71','#f39c12','#2ecc71','#27ae60'],borderRadius:5}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{y:{max:100,ticks:{callback:v=>v+'%'}}}}});
+window.radarChart=new Chart(document.getElementById('fullRadar'),{type:'radar',data:{labels:['Matemática','Física','Química','Biologia','Português','Humanas','Inglês','Redação','Proposta Interv.'],datasets:[{label:'UFSM',data:[33,17,23,54,27,55,44,50,30],backgroundColor:'rgba(231,76,60,.12)',borderColor:'#e74c3c',borderWidth:2,pointRadius:3},{label:'UFSC',data:[19,56,43,55,49,56,77,63,40],backgroundColor:'rgba(41,128,185,.12)',borderColor:'#2980b9',borderWidth:2,pointRadius:3},{label:'Meta Medicina',data:[75,75,75,75,75,70,70,90,90],backgroundColor:'rgba(39,174,96,.06)',borderColor:'#27ae60',borderWidth:1.5,borderDash:[5,5],pointRadius:0}]},options:{responsive:true,maintainAspectRatio:false,scales:{r:{beginAtZero:true,max:100,ticks:{stepSize:25,callback:v=>v+'%',font:{size:9}},pointLabels:{font:{size:10}}}},plugins:{legend:{position:'bottom'}}}});
+window.enemCompChart=new Chart(document.getElementById('enemComp'),{type:'bar',data:{labels:['C1: Norma Culta','C2: Compreensão do Tema','C3: Argumentação','C4: Coesão Textual','C5: Proposta de Intervenção'],datasets:[{label:'Estimativa Atual',data:[120,140,120,120,100],backgroundColor:['#e67e22','#f39c12','#e74c3c','#e67e22','#e74c3c'],borderRadius:5},{label:'Meta (200)',data:[200,200,200,200,200],backgroundColor:'rgba(39,174,96,.18)',borderColor:'#27ae60',borderWidth:2,borderRadius:5}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'top'}},scales:{y:{max:200}}}});
+
+// Metas Chart
+window.metasChart=new Chart(document.getElementById('metasChart'),{type:'line',data:{labels:['Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov'],datasets:[{label:'ENEM Projetado',data:[580,600,630,660,700,720,745,760,775],borderColor:'#2980b9',backgroundColor:'rgba(41,128,185,.12)',borderWidth:3,fill:true,tension:.3,pointRadius:5},{label:'Meta Medicina SiSU (~770)',data:[770,770,770,770,770,770,770,770,770],borderColor:'#e74c3c',borderWidth:2,borderDash:[8,4],pointRadius:0},{label:'Redação ENEM',data:[650,680,720,750,780,800,830,860,880],borderColor:'#27ae60',backgroundColor:'rgba(39,174,96,.08)',borderWidth:2.5,fill:false,tension:.3,pointRadius:4}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom'}},scales:{y:{min:500,max:900,ticks:{stepSize:50}}}}});
+// Prob Full Chart
+window.probChartFull=new Chart(document.getElementById('probChartFull'),{type:'line',data:{labels:['Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov'],datasets:[{label:'UFSC Vest.',data:[8,12,18,24,30,36,40,44,48],borderColor:'#2980b9',backgroundColor:'rgba(41,128,185,.08)',borderWidth:2.5,fill:true,tension:.3,pointRadius:4},{label:'UFSM Vest.',data:[5,8,12,18,22,28,32,35,38],borderColor:'#e74c3c',backgroundColor:'rgba(231,76,60,.08)',borderWidth:2.5,fill:true,tension:.3,pointRadius:4},{label:'SiSU (federal)',data:[5,10,16,22,30,38,44,48,52],borderColor:'#27ae60',backgroundColor:'rgba(39,174,96,.08)',borderWidth:2.5,fill:true,tension:.3,pointRadius:4},{label:'ProUni/Privada',data:[20,28,35,40,45,50,52,55,58],borderColor:'#8e44ad',backgroundColor:'rgba(142,68,173,.08)',borderWidth:2,fill:true,tension:.3,pointRadius:3}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{font:{size:10}}}},scales:{y:{min:0,max:100,ticks:{callback:v=>v+'%'}}}}});
+// Cortes Chart
+window.cortesChart=new Chart(document.getElementById('cortesChart'),{type:'bar',data:{labels:['UFES','UFAL','UFPB','UEL','UFRN','UFSM SiSU','UFSC SiSU'],datasets:[{label:'Corte SiSU (pts)',data:[741,743,752,762,771,799,827],backgroundColor:['#27ae60','#27ae60','#2ecc71','#f39c12','#f39c12','#e67e22','#e74c3c'],borderRadius:5},{label:'Projeção Enzo Nov',data:[775,775,775,775,775,775,775],type:'line',borderColor:'#2980b9',borderWidth:2,borderDash:[5,5],pointRadius:0,fill:false}]},options:{responsive:true,maintainAspectRatio:false,indexAxis:'y',plugins:{legend:{position:'bottom'}},scales:{x:{min:700,max:850}}}});
+
+// === SIMULADOS SEMANAIS ===
+const weeks = [{"name": "Março — Semana 1", "focus": "Razão, Proporção e MRU", "color": "#e74c3c", "questions": [{"t": "Razão", "q": "Torneira enche 500L em 4h. Com dobro da vazão:", "opts": ["a) 1h", "b) 2h", "c) 3h", "d) 4h", "e) 8h"], "gab": "b) 2h", "src": "ENEM 2019 — Q.136 (adaptada)", "d": "mat", "disc": "Matemática"}, {"t": "Porcentagem", "q": "R$120 + 25% =", "opts": ["a) R$130", "b) R$140", "c) R$145", "d) R$150", "e) R$155"], "gab": "d) R$150", "src": "ENEM 2020 — Q.141 (adaptada)", "d": "mat", "disc": "Matemática"}, {"t": "MRU", "q": "Carro a 80km/h em 2h30min percorre:", "opts": ["a) 160km", "b) 180km", "c) 200km", "d) 240km", "e) 250km"], "gab": "c) 200km. d=80×2,5", "src": "UFSM 2022 — Prova 2, Q.8 (adaptada)", "d": "fis", "disc": "Física"}, {"t": "MRUV", "q": "Repouso, a=2m/s². Após 10s:", "opts": ["a) 5m/s", "b) 10m/s", "c) 15m/s", "d) 20m/s", "e) 25m/s"], "gab": "d) 20m/s. v=at", "src": "UFSM 2021 — Prova 2, Q.12 (adaptada)", "d": "fis", "disc": "Física"}, {"t": "Modelos Atômicos", "q": "Átomo como esfera maciça indivisível é modelo de:", "opts": ["a) Thomson", "b) Rutherford", "c) Bohr", "d) Dalton", "e) Schrödinger"], "gab": "d) Dalton (1803)", "src": "ENEM 2018 — Q.104 (adaptada)", "d": "qui", "disc": "Química"}, {"t": "Tab. Periódica", "q": "Grupo 1A são:", "opts": ["a) Halogênios", "b) Gases Nobres", "c) Metais Alcalinos", "d) Calcogênios", "e) Transição"], "gab": "c) Metais Alcalinos", "src": "UFSC 2022 — Vest. Q.31 (adaptada)", "d": "qui", "disc": "Química"}, {"t": "Água", "q": "Água é solvente universal por sua:", "opts": ["a) Apolaridade", "b) Polaridade", "c) Baixa tensão", "d) Baixo calor", "e) Acidez"], "gab": "b) Polaridade", "src": "UFSC 2023 — Vest. Q.27 (adaptada)", "d": "bio", "disc": "Biologia"}, {"t": "Concordância", "q": "Concordância CORRETA:", "opts": ["a) Fazem dois anos", "b) Houveram problemas", "c) Existem diversas soluções", "d) Os aluno chegou", "e) As menina saiu"], "gab": "c) Existem diversas soluções", "src": "ENEM 2017 — Linguagens Q.12 (adaptada)", "d": "por", "disc": "Português"}, {"t": "Proposta", "q": "Quantos elementos na proposta nota máxima?", "opts": ["a) 2", "b) 3", "c) 4", "d) 5", "e) 6"], "gab": "d) 5: Agente, Ação, Meio, Finalidade, Detalhamento", "src": "Cartilha ENEM 2023 — MEC/INEP", "d": "red", "disc": "Redação"}, {"t": "Colonização", "q": "Tratado de Tordesilhas dividiu entre:", "opts": ["a) Espanha/França", "b) Portugal/Inglaterra", "c) Portugal/Espanha", "d) Inglaterra/França", "e) Holanda/Portugal"], "gab": "c) Portugal e Espanha", "src": "ENEM 2019 — Humanas Q.67 (adaptada)", "d": "hum", "disc": "Humanas"}]}, {"name": "Março — Semana 2", "focus": "Porcentagem e MRUV", "color": "#e74c3c", "questions": [{"t": "Regra de 3", "q": "5 operários, 12 dias. 10 operários:", "opts": ["a) 3", "b) 6", "c) 8", "d) 10", "e) 24"], "gab": "b) 6 dias. Inversamente proporcional", "src": "ENEM 2018 — Q.158 (adaptada)", "d": "mat", "disc": "Matemática"}, {"t": "Média", "q": "Notas 6,8,5,9,7. Média:", "opts": ["a) 6", "b) 6,5", "c) 7", "d) 7,5", "e) 8"], "gab": "c) 7", "src": "ENEM 2021 — Q.145 (adaptada)", "d": "mat", "disc": "Matemática"}, {"t": "Newton", "q": "F=20N, m=5kg. a=", "opts": ["a) 2", "b) 4", "c) 5", "d) 10", "e) 100"], "gab": "b) 4 m/s²", "src": "UFSM 2023 — Prova 2 Q.15 (adaptada)", "d": "fis", "disc": "Física"}, {"t": "Queda Livre", "q": "Queda livre g=10, 3s. v=", "opts": ["a) 10", "b) 20", "c) 30", "d) 40", "e) 50"], "gab": "c) 30m/s", "src": "UFSC 2023 — Q.18 (adaptada)", "d": "fis", "disc": "Física"}, {"t": "Combustão", "q": "CH₄+2O₂ produz:", "opts": ["a) CO+H₂", "b) CO₂+H₂O", "c) C+H₂O", "d) CO₂+H₂", "e) CH₃OH"], "gab": "b) CO₂ e H₂O", "src": "ENEM 2019 — Q.96 (adaptada)", "d": "qui", "disc": "Química"}, {"t": "Estequiometria", "q": "2H₂+O₂→2H₂O. 4mol H₂:", "opts": ["a) 1", "b) 2", "c) 4", "d) 6", "e) 8"], "gab": "c) 4 mol H₂O", "src": "UFSC 2023 — Q.35 (adaptada)", "d": "qui", "disc": "Química"}, {"t": "Citologia", "q": "Respiração celular aeróbica ocorre na:", "opts": ["a) Ribossomo", "b) Lisossomo", "c) Mitocôndria", "d) Golgi", "e) RE"], "gab": "c) Mitocôndria", "src": "ENEM 2020 — Q.99 (adaptada)", "d": "bio", "disc": "Biologia"}, {"t": "Iluminismo", "q": "Direitos naturais - filósofo:", "opts": ["a) Maquiavel", "b) Hobbes", "c) Locke", "d) Rousseau", "e) Montesquieu"], "gab": "c) John Locke", "src": "UFSC 2021 — Vest. Q.42 (adaptada)", "d": "hum", "disc": "Humanas"}, {"t": "Conectivos", "q": "Inadequado p/ conclusão:", "opts": ["a) Diante do exposto", "b) Nessa perspectiva", "c) Tipo assim", "d) É imperativo", "e) Em síntese"], "gab": "c) Coloquial", "src": "Cartilha ENEM 2023", "d": "red", "disc": "Redação"}, {"t": "Vocabulário", "q": "Although significa:", "opts": ["a) Porque", "b) Portanto", "c) Embora", "d) Enquanto", "e) Desde que"], "gab": "c) Embora", "src": "ENEM 2019 — Linguagens Q.5 (adaptada)", "d": "ing", "disc": "Inglês"}]}, {"name": "Março — Semana 3", "focus": "Regra de 3 e Tab. Periódica", "color": "#e74c3c", "questions": [{"t": "Função 1° grau", "q": "Raiz de f(x)=3x-9:", "opts": ["a) -3", "b) 0", "c) 3", "d) 6", "e) 9"], "gab": "c) 3", "src": "ENEM 2017 — Q.151 (adaptada)", "d": "mat", "disc": "Matemática"}, {"t": "Função 2° grau", "q": "Vértice xv de y=x²-6x+8:", "opts": ["a) -3", "b) -1", "c) 2", "d) 3", "e) 6"], "gab": "d) 3", "src": "UFSM 2022 — Prova 1 Q.5 (adaptada)", "d": "mat", "disc": "Matemática"}, {"t": "Calorimetria", "q": "200g água 20→70°C. Q=", "opts": ["a) 1000", "b) 5000", "c) 10000", "d) 14000", "e) 20000"], "gab": "c) 10000cal", "src": "UFSC 2021 — Q.19 (adaptada)", "d": "fis", "disc": "Física"}, {"t": "Lei de Ohm", "q": "12V, 3A. R=", "opts": ["a) 0,25Ω", "b) 4Ω", "c) 9Ω", "d) 15Ω", "e) 36Ω"], "gab": "b) 4Ω", "src": "UFSM 2023 — Q.22 (adaptada)", "d": "fis", "disc": "Física"}, {"t": "Soluções", "q": "2mol/500mL. C=", "opts": ["a) 1", "b) 2", "c) 4", "d) 0,5", "e) 0,004"], "gab": "c) 4 mol/L", "src": "UFSC 2022 — Q.36 (adaptada)", "d": "qui", "disc": "Química"}, {"t": "Ligações", "q": "NaCl é iônica pois:", "opts": ["a) Cov. apolar", "b) Cov. polar", "c) Iônica", "d) Metálica", "e) VdW"], "gab": "c) Iônica — transferência de elétrons", "src": "UFSC 2022 — Q.33 (adaptada)", "d": "qui", "disc": "Química"}, {"t": "Mitose", "q": "Célula 2n=46, mitose:", "opts": ["a) 2c/23", "b) 2c/46", "c) 4c/23", "d) 4c/46", "e) 1c/92"], "gab": "b) 2 células com 46", "src": "ENEM 2018 — Q.112 (adaptada)", "d": "bio", "disc": "Biologia"}, {"t": "Figuras", "q": "'Mar de rosas' é:", "opts": ["a) Metonímia", "b) Metáfora", "c) Hipérbole", "d) Ironia", "e) Eufemismo"], "gab": "b) Metáfora", "src": "ENEM 2019 — Ling. Q.15 (adaptada)", "d": "por", "disc": "Português"}, {"t": "Comp. I", "q": "Comp. I avalia:", "opts": ["a) Argumentação", "b) Norma culta", "c) Tema", "d) Coesão", "e) Proposta"], "gab": "c) Compreensão do tema", "src": "INEP — Redação ENEM 2023", "d": "red", "disc": "Redação"}, {"t": "Rev. Industrial", "q": "1ª Rev. Ind. inovação:", "opts": ["a) Eletricidade", "b) Máq. vapor", "c) Petróleo", "d) Internet", "e) Robótica"], "gab": "b) Máquina a vapor", "src": "UFSM 2021 — Q.31 (adaptada)", "d": "hum", "disc": "Humanas"}]}, {"name": "Março — Semana 4", "focus": "Estatística e 2ª Lei Newton", "color": "#e74c3c", "questions": [{"t": "Pitágoras", "q": "Catetos 6 e 8. Hipotenusa:", "opts": ["a) 8", "b) 10", "c) 12", "d) 14", "e) 16"], "gab": "b) 10", "src": "ENEM 2019 — Q.163 (adaptada)", "d": "mat", "disc": "Matemática"}, {"t": "Área", "q": "Círculo r=7, π≈22/7. Área:", "opts": ["a) 44", "b) 77", "c) 154", "d) 308", "e) 616"], "gab": "c) 154 cm²", "src": "ENEM 2018 — Q.149 (adaptada)", "d": "mat", "disc": "Matemática"}, {"t": "Óptica", "q": "Lente convergente, imagem real:", "opts": ["a) No foco", "b) Entre foco/lente", "c) Além do foco", "d) Infinito", "e) Nunca"], "gab": "c) Além do foco", "src": "UFSC 2022 — Q.22 (adaptada)", "d": "fis", "disc": "Física"}, {"t": "Ondas", "q": "f=500Hz, λ=0,68m. v=", "opts": ["a) 170", "b) 340", "c) 500", "d) 680", "e) 735"], "gab": "b) 340m/s", "src": "UFSM 2022 — Q.20 (adaptada)", "d": "fis", "disc": "Física"}, {"t": "pH", "q": "pH=3 significa [H⁺]=", "opts": ["a) 3 mol/L", "b) 10⁻³ mol/L", "c) 10³ mol/L", "d) 0,3 mol/L", "e) 30 mol/L"], "gab": "b) 10⁻³ mol/L", "src": "ENEM 2020 — Q.101 (adaptada)", "d": "qui", "disc": "Química"}, {"t": "Oxidação", "q": "Oxidação é:", "opts": ["a) Ganho e⁻", "b) Perda e⁻", "c) Ganho p⁺", "d) Perda n⁰", "e) Nenhuma"], "gab": "b) Perda de elétrons", "src": "UFSC 2023 — Q.37 (adaptada)", "d": "qui", "disc": "Química"}, {"t": "Meiose", "q": "Meiose produz células:", "opts": ["a) 2n", "b) 4n", "c) n", "d) 3n", "e) 6n"], "gab": "c) Haploides (n)", "src": "UFSC 2022 — Q.28 (adaptada)", "d": "bio", "disc": "Biologia"}, {"t": "Biomas", "q": "Maior bioma BR:", "opts": ["a) Cerrado", "b) Mata Atl.", "c) Amazônia", "d) Caatinga", "e) Pampa"], "gab": "c) Amazônia ~49%", "src": "ENEM 2021 — Q.78 (adaptada)", "d": "hum", "disc": "Humanas"}, {"t": "Comp. II", "q": "Comp. II exige:", "opts": ["a) Gramática", "b) Tese clara", "c) Conectivos", "d) Proposta", "e) Título"], "gab": "b) Tese e repertório sociocultural", "src": "INEP — Redação ENEM 2023", "d": "red", "disc": "Redação"}, {"t": "Interpretação", "q": "'However' indica:", "opts": ["a) Adição", "b) Contraste", "c) Causa", "d) Tempo", "e) Conclusão"], "gab": "b) Contraste", "src": "ENEM 2020 — Linguagens Q.3 (adaptada)", "d": "ing", "disc": "Inglês"}]}, {"name": "Abril — Semana 1", "focus": "Funções e Queda Livre", "color": "#e67e22", "questions": [{"t": "PA", "q": "PA (2,5,8,11...). 20° termo:", "opts": ["a) 56", "b) 59", "c) 60", "d) 62", "e) 65"], "gab": "b) 59", "src": "ENEM 2019 — Q.169 (adaptada)", "d": "mat", "disc": "Matemática"}, {"t": "Trigonometria", "q": "sen30°, hip=10. Cateto oposto:", "opts": ["a) 3", "b) 5", "c) 5√3", "d) 10", "e) 10√3"], "gab": "b) 5", "src": "ENEM 2020 — Q.172 (adaptada)", "d": "mat", "disc": "Matemática"}, {"t": "Potência", "q": "Chuveiro 5500W, 15min/dia, 30d:", "opts": ["a) 27,5kWh", "b) 41,25kWh", "c) 55kWh", "d) 82,5kWh", "e) 165kWh"], "gab": "b) 41,25kWh", "src": "ENEM 2021 — Q.115 (adaptada)", "d": "fis", "disc": "Física"}, {"t": "Magnetismo", "q": "Campo de fio reto - regra:", "opts": ["a) Mão esquerda", "b) Mão direita", "c) Lenz", "d) Ampère", "e) Faraday"], "gab": "b) Mão direita", "src": "UFSC 2022 — Q.24 (adaptada)", "d": "fis", "disc": "Física"}, {"t": "Ácido-Base", "q": "HCl é ácido forte pois:", "opts": ["a) Fraca ionização", "b) Ionização total", "c) É orgânico", "d) Tem OH⁻", "e) É neutro"], "gab": "b) Ionização total em água", "src": "UFSM 2022 — Q.28 (adaptada)", "d": "qui", "disc": "Química"}, {"t": "Cinética", "q": "Catalisador:", "opts": ["a) Desloca equilíbrio", "b) Aumenta ΔH", "c) Diminui Ea", "d) Aumenta concentração", "e) Muda Keq"], "gab": "c) Diminui energia de ativação", "src": "ENEM 2021 — Q.103 (adaptada)", "d": "qui", "disc": "Química"}, {"t": "DNA", "q": "Bases complementares: A-T e", "opts": ["a) A-C", "b) C-G", "c) T-G", "d) A-G", "e) C-T"], "gab": "b) C-G", "src": "ENEM 2019 — Q.113 (adaptada)", "d": "bio", "disc": "Biologia"}, {"t": "Interpretação", "q": "Texto argumentativo visa:", "opts": ["a) Narrar", "b) Descrever", "c) Convencer", "d) Instruir", "e) Entreter"], "gab": "c) Convencer o leitor", "src": "ENEM 2020 — Ling. Q.8 (adaptada)", "d": "por", "disc": "Português"}, {"t": "Comp. III", "q": "Comp. III avalia:", "opts": ["a) Gramática", "b) Tema", "c) Argumentação", "d) Coesão", "e) Proposta"], "gab": "c) Seleção e organização dos argumentos", "src": "INEP — Redação ENEM 2023", "d": "red", "disc": "Redação"}, {"t": "Globalização", "q": "Globalização intensificou-se após:", "opts": ["a) 1ª Guerra", "b) 2ª Guerra", "c) Guerra Fria", "d) Queda Muro Berlim", "e) Rev. Francesa"], "gab": "d) Queda do Muro de Berlim (1989)", "src": "ENEM 2020 — Humanas Q.72 (adaptada)", "d": "hum", "disc": "Humanas"}]}, {"name": "Abril — Semana 2", "focus": "Ligações e Genética", "color": "#e67e22", "questions": [{"t": "Probabilidade", "q": "2 dados, soma 7:", "opts": ["a) 1/6", "b) 1/12", "c) 1/36", "d) 5/36", "e) 7/36"], "gab": "a) 1/6", "src": "ENEM 2018 — Q.161 (adaptada)", "d": "mat", "disc": "Matemática"}, {"t": "Permutação", "q": "4 pessoas em fila:", "opts": ["a) 4", "b) 8", "c) 12", "d) 24", "e) 48"], "gab": "d) 24", "src": "ENEM 2021 — Q.148 (adaptada)", "d": "mat", "disc": "Matemática"}, {"t": "Lançamento", "q": "Projétil 45° tem alcance max pois:", "opts": ["a) Menor atrito", "b) sen(90°)=1", "c) Maior altura", "d) Menor tempo", "e) Gravidade anula"], "gab": "b) sen(2×45°)=1", "src": "UFSM 2023 — Q.19 (adaptada)", "d": "fis", "disc": "Física"}, {"t": "Espelhos", "q": "Espelho côncavo, objeto no CC:", "opts": ["a) Virtual aum.", "b) Real aum.", "c) Real mesmo tam.", "d) Real reduzida", "e) Não forma"], "gab": "c) Real, mesmo tamanho", "src": "UFSM 2023 — Q.24 (adaptada)", "d": "fis", "disc": "Física"}, {"t": "Termoq.", "q": "Reação exotérmica tem ΔH:", "opts": ["a) > 0", "b) < 0", "c) = 0", "d) = 1", "e) Indefinido"], "gab": "b) Negativo (< 0)", "src": "UFSC 2022 — Q.34 (adaptada)", "d": "qui", "disc": "Química"}, {"t": "Orgânica", "q": "CH₃OH é:", "opts": ["a) Aldeído", "b) Cetona", "c) Álcool", "d) Ácido", "e) Éster"], "gab": "c) Álcool (metanol)", "src": "ENEM 2019 — Q.97 (adaptada)", "d": "qui", "disc": "Química"}, {"t": "Genética", "q": "Aa × Aa. Proporção fenótipo dominante:", "opts": ["a) 25%", "b) 50%", "c) 75%", "d) 100%", "e) 0%"], "gab": "c) 75%", "src": "UFSM 2023 — Q.35 (adaptada)", "d": "bio", "disc": "Biologia"}, {"t": "Urbanização", "q": "Êxodo rural é:", "opts": ["a) Rural→Rural", "b) Urbano→Rural", "c) Rural→Urbano", "d) Urbano→Urbano", "e) Internacional"], "gab": "c) Migração Rural→Urbano", "src": "ENEM 2019 — Humanas Q.74 (adaptada)", "d": "hum", "disc": "Humanas"}, {"t": "Comp. IV", "q": "Comp. IV é sobre:", "opts": ["a) Tema", "b) Repertório", "c) Argumentos", "d) Coesão textual", "e) Proposta"], "gab": "d) Mecanismos de coesão textual", "src": "INEP — Redação ENEM 2023", "d": "red", "disc": "Redação"}, {"t": "Gramática", "q": "Passado de 'go':", "opts": ["a) Goed", "b) Gone", "c) Went", "d) Goes", "e) Going"], "gab": "c) Went", "src": "ENEM 2018 — Linguagens Q.7 (adaptada)", "d": "ing", "disc": "Inglês"}]}, {"name": "Abril — Semana 3", "focus": "Calor e Combustão", "color": "#e67e22", "questions": [{"t": "Logaritmo", "q": "log₂(x)=5. x=", "opts": ["a) 10", "b) 16", "c) 25", "d) 32", "e) 64"], "gab": "d) 32", "src": "ENEM 2018 — Q.165 (adaptada)", "d": "mat", "disc": "Matemática"}, {"t": "Geom. Espacial", "q": "Cilindro r=3,h=10,π≈3:", "opts": ["a) 90", "b) 180", "c) 270", "d) 360", "e) 810"], "gab": "c) 270 cm³", "src": "ENEM 2020 — Q.176 (adaptada)", "d": "mat", "disc": "Matemática"}, {"t": "3ª Lei Newton", "q": "Ação/reação - sentidos:", "opts": ["a) Iguais", "b) Opostos", "c) Perpendiculares", "d) Paralelos", "e) Variáveis"], "gab": "b) Opostos", "src": "UFSM 2022 — Q.11 (adaptada)", "d": "fis", "disc": "Física"}, {"t": "Conservação", "q": "Ec+Ep sistema conservativo:", "opts": ["a) Variável", "b) Constante", "c) Zero", "d) Negativa", "e) Infinita"], "gab": "b) Constante", "src": "ENEM 2019 — Q.118 (adaptada)", "d": "fis", "disc": "Física"}, {"t": "Radioatividade", "q": "Emissão α reduz Z em:", "opts": ["a) 1", "b) 2", "c) 3", "d) 4", "e) 0"], "gab": "b) 2 unidades", "src": "UFSC 2023 — Q.38 (adaptada)", "d": "qui", "disc": "Química"}, {"t": "Gases", "q": "PV=nRT. Dobrando T a V cte, P:", "opts": ["a) Metade", "b) Igual", "c) Dobra", "d) Triplica", "e) Quadruplica"], "gab": "c) Dobra", "src": "UFSM 2023 — Q.30 (adaptada)", "d": "qui", "disc": "Química"}, {"t": "Ecologia", "q": "Produtor→Consumidor 1°→2°. É uma:", "opts": ["a) Teia", "b) Pirâmide", "c) Cadeia alimentar", "d) Nicho", "e) Bioma"], "gab": "c) Cadeia alimentar", "src": "ENEM 2021 — Q.107 (adaptada)", "d": "bio", "disc": "Biologia"}, {"t": "Variação", "q": "Linguagem coloquial é:", "opts": ["a) Errada", "b) Informal", "c) Escrita", "d) Técnica", "e) Arcaica"], "gab": "b) Informal (adequada ao contexto)", "src": "ENEM 2018 — Ling. Q.11 (adaptada)", "d": "por", "disc": "Português"}, {"t": "Comp. V", "q": "Comp. V requer proposta que:", "opts": ["a) Resuma texto", "b) Cite autores", "c) Respeite DH", "d) Use norma culta", "e) Tenha título"], "gab": "c) Respeite os direitos humanos", "src": "INEP — Redação ENEM 2023", "d": "red", "disc": "Redação"}, {"t": "Abolição", "q": "Lei Áurea:", "opts": ["a) 1822", "b) 1850", "c) 1871", "d) 1888", "e) 1891"], "gab": "d) 1888", "src": "UFSM 2022 — Q.35 (adaptada)", "d": "hum", "disc": "Humanas"}]}, {"name": "Abril — Semana 4", "focus": "Ecologia e Brasil Colônia", "color": "#e67e22", "questions": [{"t": "Matrizes", "q": "det[2,3;1,4]=", "opts": ["a) 2", "b) 5", "c) 8", "d) 11", "e) 14"], "gab": "b) 5", "src": "ENEM 2019 — Q.170 (adaptada)", "d": "mat", "disc": "Matemática"}, {"t": "Variância", "q": "Conjunto {2,4,4,4,6}. Variância:", "opts": ["a) 1", "b) 1,2", "c) 1,6", "d) 2", "e) 2,4"], "gab": "c) 1,6", "src": "ENEM 2021 — Q.152 (adaptada)", "d": "mat", "disc": "Matemática"}, {"t": "Termodinâmica", "q": "1ª Lei: ΔU=", "opts": ["a) Calor frio→quente", "b) Entropia cresce", "c) Q-W", "d) Máquina perfeita", "e) Zero K"], "gab": "c) Q-W", "src": "UFSC 2023 — Q.21 (adaptada)", "d": "fis", "disc": "Física"}, {"t": "Indução", "q": "Fem induzida depende de:", "opts": ["a) Corrente", "b) Variação fluxo", "c) Resistência", "d) Tensão", "e) Potência"], "gab": "b) Variação fluxo magnético", "src": "UFSC 2023 — Q.25 (adaptada)", "d": "fis", "disc": "Física"}, {"t": "Eletroquímica", "q": "Na pilha, ânodo é:", "opts": ["a) Polo +", "b) Polo -", "c) Neutro", "d) Catalisador", "e) Sal ponte"], "gab": "b) Polo negativo (oxidação)", "src": "ENEM 2020 — Q.105 (adaptada)", "d": "qui", "disc": "Química"}, {"t": "Isomeria", "q": "C₂H₆O tem isômeros:", "opts": ["a) Etanol e metoximetano", "b) Apenas etanol", "c) Apenas éter", "d) Propanol", "e) Nenhum"], "gab": "a) Etanol e éter dimetílico", "src": "UFSC 2022 — Q.35 (adaptada)", "d": "qui", "disc": "Química"}, {"t": "Fotossíntese", "q": "6CO₂+6H₂O→C₆H₁₂O₆+6O₂ ocorre no:", "opts": ["a) Mitocôndria", "b) Ribossomo", "c) Cloroplasto", "d) Núcleo", "e) Golgi"], "gab": "c) Cloroplasto", "src": "UFSC 2023 — Q.29 (adaptada)", "d": "bio", "disc": "Biologia"}, {"t": "Democracia", "q": "Democracia direta originou-se em:", "opts": ["a) Roma", "b) Atenas", "c) Esparta", "d) Pérsia", "e) Egito"], "gab": "b) Atenas", "src": "UFSC 2022 — Q.40 (adaptada)", "d": "hum", "disc": "Humanas"}, {"t": "Estrutura", "q": "Dissertação-argumentativa tem:", "opts": ["a) 2 partes", "b) 3 partes", "c) 4 partes", "d) 5 partes", "e) Livre"], "gab": "b) Introdução, Desenvolvimento, Conclusão", "src": "Cartilha ENEM 2023", "d": "red", "disc": "Redação"}, {"t": "Reading", "q": "Cognato verdadeiro: 'actual'=", "opts": ["a) Atual", "b) Real/Efetivo", "c) Ação", "d) Ato", "e) Atuação"], "gab": "b) Real/Efetivo (falso cognato com 'atual')", "src": "ENEM 2019 — Linguagens Q.9 (adaptada)", "d": "ing", "disc": "Inglês"}]}, {"name": "Maio — Semana 1", "focus": "PA/PG e Energia", "color": "#f39c12", "questions": [{"t": "Exponencial", "q": "2³×2⁴=", "opts": ["a) 2⁷", "b) 2¹²", "c) 4⁷", "d) 4¹²", "e) 2⁰"], "gab": "a) 2⁷=128", "src": "ENEM 2020 — Q.160 (adaptada)", "d": "mat", "disc": "Matemática"}, {"t": "Juros Compostos", "q": "R$1000, 10%/mês, 2 meses:", "opts": ["a) R$1100", "b) R$1200", "c) R$1210", "d) R$1220", "e) R$1250"], "gab": "c) R$1210", "src": "ENEM 2019 — Q.175 (adaptada)", "d": "mat", "disc": "Matemática"}, {"t": "Potência 2", "q": "1000J em 5s. P=", "opts": ["a) 100W", "b) 200W", "c) 500W", "d) 1000W", "e) 5000W"], "gab": "b) 200W", "src": "UFSM 2022 — Q.16 (adaptada)", "d": "fis", "disc": "Física"}, {"t": "Efeito Joule", "q": "Transforma elétrica em:", "opts": ["a) Mecânica", "b) Química", "c) Térmica", "d) Nuclear", "e) Luminosa"], "gab": "c) Térmica", "src": "UFSC 2023 — Q.24 (adaptada)", "d": "fis", "disc": "Física"}, {"t": "Coloides", "q": "Efeito Tyndall ocorre em:", "opts": ["a) Soluções", "b) Suspensões", "c) Coloides", "d) Gases puros", "e) Sólidos"], "gab": "c) Coloides", "src": "UFSM 2021 — Q.27 (adaptada)", "d": "qui", "disc": "Química"}, {"t": "Polímeros", "q": "PET é obtido por:", "opts": ["a) Adição", "b) Condensação", "c) Natural", "d) Copolímero", "e) Rearranjo"], "gab": "b) Condensação", "src": "ENEM 2021 — Q.98 (adaptada)", "d": "qui", "disc": "Química"}, {"t": "Evolução", "q": "Seleção natural é teoria de:", "opts": ["a) Lamarck", "b) Mendel", "c) Darwin", "d) Pasteur", "e) Lineu"], "gab": "c) Darwin", "src": "ENEM 2020 — Q.114 (adaptada)", "d": "bio", "disc": "Biologia"}, {"t": "Gêneros", "q": "Crônica é texto:", "opts": ["a) Científico", "b) Jornalístico-literário", "c) Jurídico", "d) Publicitário", "e) Técnico"], "gab": "b) Jornalístico-literário", "src": "ENEM 2019 — Ling. Q.18 (adaptada)", "d": "por", "disc": "Português"}, {"t": "Repertório", "q": "Repertório legitimado é:", "opts": ["a) Opinião pessoal", "b) Dado verificável", "c) Experiência", "d) Senso comum", "e) Achismo"], "gab": "b) Dado, citação ou referência verificável", "src": "INEP — Redação ENEM 2023", "d": "red", "disc": "Redação"}, {"t": "Revolução Francesa", "q": "Queda da Bastilha:", "opts": ["a) 1776", "b) 1789", "c) 1799", "d) 1804", "e) 1815"], "gab": "b) 1789", "src": "ENEM 2018 — Humanas Q.69 (adaptada)", "d": "hum", "disc": "Humanas"}]}, {"name": "Maio — Semana 2", "focus": "Áreas e Ondas", "color": "#f39c12", "questions": [{"t": "Distância", "q": "A(1,2) e B(4,6). d=", "opts": ["a) 3", "b) 4", "c) 5", "d) 6", "e) 7"], "gab": "c) 5", "src": "ENEM 2019 — Q.166 (adaptada)", "d": "mat", "disc": "Matemática"}, {"t": "Prob. Condicional", "q": "P(A)=0,6; P(B|A)=0,5. P(A∩B):", "opts": ["a) 0,1", "b) 0,2", "c) 0,3", "d) 0,5", "e) 1,1"], "gab": "c) 0,3", "src": "ENEM 2020 — Q.174 (adaptada)", "d": "mat", "disc": "Matemática"}, {"t": "Calor Latente", "q": "Derreter 100g gelo (L=80):", "opts": ["a) 4000", "b) 6000", "c) 8000", "d) 10000", "e) 12000"], "gab": "c) 8000cal", "src": "UFSC 2022 — Q.20 (adaptada)", "d": "fis", "disc": "Física"}, {"t": "Difração", "q": "Onda contorna obstáculos:", "opts": ["a) Reflexão", "b) Refração", "c) Difração", "d) Absorção", "e) Polarização"], "gab": "c) Difração", "src": "UFSC 2022 — Q.23 (adaptada)", "d": "fis", "disc": "Física"}, {"t": "Hidrocarboneto", "q": "C₂H₄ é um:", "opts": ["a) Alcano", "b) Alceno", "c) Alcino", "d) Aromático", "e) Cicloalcano"], "gab": "b) Alceno (etileno)", "src": "UFSC 2023 — Q.32 (adaptada)", "d": "qui", "disc": "Química"}, {"t": "Equil. Químico", "q": "Le Chatelier: aumentar [reagente]:", "opts": ["a) Desloca ←", "b) Desloca →", "c) Sem efeito", "d) Para reação", "e) Muda Keq"], "gab": "b) Desloca para produtos →", "src": "ENEM 2018 — Q.102 (adaptada)", "d": "qui", "disc": "Química"}, {"t": "Sistema Digestório", "q": "Digestão proteínas inicia no:", "opts": ["a) Boca", "b) Esôfago", "c) Estômago", "d) Intestino delgado", "e) Intestino grosso"], "gab": "c) Estômago (pepsina)", "src": "UFSM 2022 — Q.33 (adaptada)", "d": "bio", "disc": "Biologia"}, {"t": "Guerra Fria", "q": "Bipolaridade: EUA vs", "opts": ["a) China", "b) Japão", "c) URSS", "d) Alemanha", "e) Inglaterra"], "gab": "c) URSS", "src": "ENEM 2020 — Humanas Q.75 (adaptada)", "d": "hum", "disc": "Humanas"}, {"t": "Anulação", "q": "Redação é anulada se:", "opts": ["a) < 7 linhas", "b) Foge ao tema", "c) Cópia texto base", "d) Todas anteriores", "e) Nenhuma"], "gab": "d) Todas as anteriores", "src": "Edital ENEM 2023", "d": "red", "disc": "Redação"}, {"t": "Preposições", "q": "Interested ___ science:", "opts": ["a) at", "b) on", "c) in", "d) for", "e) to"], "gab": "c) in", "src": "ENEM 2021 — Linguagens Q.4 (adaptada)", "d": "ing", "disc": "Inglês"}]}, {"name": "Maio — Semana 3", "focus": "Probabilidade e Soluções", "color": "#f39c12", "questions": [{"t": "Combinação", "q": "C(5,2)=", "opts": ["a) 5", "b) 8", "c) 10", "d) 15", "e) 20"], "gab": "c) 10", "src": "ENEM 2021 — Q.167 (adaptada)", "d": "mat", "disc": "Matemática"}, {"t": "Arranjo", "q": "A(5,3)=", "opts": ["a) 10", "b) 20", "c) 30", "d) 60", "e) 120"], "gab": "d) 60", "src": "ENEM 2020 — Q.168 (adaptada)", "d": "mat", "disc": "Matemática"}, {"t": "Capacitor", "q": "Armazena:", "opts": ["a) Corrente", "b) Resistência", "c) Carga", "d) Campo mag.", "e) Luz"], "gab": "c) Carga elétrica", "src": "UFSC 2023 — Q.26 (adaptada)", "d": "fis", "disc": "Física"}, {"t": "Velocidade Luz", "q": "c=", "opts": ["a) 3×10⁶", "b) 3×10⁸", "c) 3×10¹⁰", "d) 3×10¹²", "e) 3×10¹⁵"], "gab": "b) 3×10⁸ m/s", "src": "UFSC 2023 — Q.23 (adaptada)", "d": "fis", "disc": "Física"}, {"t": "Modelos Atômicos", "q": "Átomo como esfera maciça indivisível é modelo de:", "opts": ["a) Thomson", "b) Rutherford", "c) Bohr", "d) Dalton", "e) Schrödinger"], "gab": "d) Dalton (1803)", "src": "ENEM 2018 — Q.104 (adaptada)", "d": "qui", "disc": "Química"}, {"t": "Tab. Periódica", "q": "Grupo 1A são:", "opts": ["a) Halogênios", "b) Gases Nobres", "c) Metais Alcalinos", "d) Calcogênios", "e) Transição"], "gab": "c) Metais Alcalinos", "src": "UFSC 2022 — Vest. Q.31 (adaptada)", "d": "qui", "disc": "Química"}, {"t": "Sistema Circulatório", "q": "Hemácias transportam:", "opts": ["a) Anticorpos", "b) O₂", "c) Hormônios", "d) Glicose", "e) Ureia"], "gab": "b) O₂ (hemoglobina)", "src": "UFSC 2022 — Q.30 (adaptada)", "d": "bio", "disc": "Biologia"}, {"t": "Regência", "q": "Regência CORRETA:", "opts": ["a) Assisti o filme", "b) Assisti ao filme", "c) Aspirei ao ar", "d) Prefiro mais café", "e) Obedeço ele"], "gab": "b) Assisti ao filme", "src": "UFSM 2022 — Ling. Q.6 (adaptada)", "d": "por", "disc": "Português"}, {"t": "Proposta", "q": "Quantos elementos na proposta nota máxima?", "opts": ["a) 2", "b) 3", "c) 4", "d) 5", "e) 6"], "gab": "d) 5: Agente, Ação, Meio, Finalidade, Detalhamento", "src": "Cartilha ENEM 2023 — MEC/INEP", "d": "red", "disc": "Redação"}, {"t": "Constituição", "q": "Constituição cidadã BR:", "opts": ["a) 1946", "b) 1967", "c) 1969", "d) 1988", "e) 2002"], "gab": "d) 1988", "src": "UFSM 2023 — Q.38 (adaptada)", "d": "hum", "disc": "Humanas"}]}, {"name": "Maio — Semana 4", "focus": "Trigonometria e pH", "color": "#f39c12", "questions": [{"t": "Ciclo Trig.", "q": "sen(150°)=", "opts": ["a) -1/2", "b) -√3/2", "c) 1/2", "d) √3/2", "e) 1"], "gab": "c) 1/2", "src": "ENEM 2020 — Q.173 (adaptada)", "d": "mat", "disc": "Matemática"}, {"t": "Desconto", "q": "20% off + R$10 cupom em R$200:", "opts": ["a) R$140", "b) R$148", "c) R$150", "d) R$160", "e) R$170"], "gab": "c) R$150", "src": "ENEM 2021 — Q.142 (adaptada)", "d": "mat", "disc": "Matemática"}, {"t": "Empuxo", "q": "Objeto flutua quando peso:", "opts": ["a) > empuxo", "b) < empuxo", "c) = empuxo", "d) = zero", "e) infinito"], "gab": "b) Peso < Empuxo", "src": "ENEM 2020 — Q.108 (adaptada)", "d": "fis", "disc": "Física"}, {"t": "Pressão", "q": "F=100N, A=0,5m². P=", "opts": ["a) 50Pa", "b) 100Pa", "c) 200Pa", "d) 500Pa", "e) 1000Pa"], "gab": "c) 200Pa", "src": "UFSM 2022 — Q.14 (adaptada)", "d": "fis", "disc": "Física"}, {"t": "Combustão", "q": "CH₄+2O₂ produz:", "opts": ["a) CO+H₂", "b) CO₂+H₂O", "c) C+H₂O", "d) CO₂+H₂", "e) CH₃OH"], "gab": "b) CO₂ e H₂O", "src": "ENEM 2019 — Q.96 (adaptada)", "d": "qui", "disc": "Química"}, {"t": "Estequiometria", "q": "2H₂+O₂→2H₂O. 4mol H₂:", "opts": ["a) 1", "b) 2", "c) 4", "d) 6", "e) 8"], "gab": "c) 4 mol H₂O", "src": "UFSC 2023 — Q.35 (adaptada)", "d": "qui", "disc": "Química"}, {"t": "Sistema Nervoso", "q": "Sinapse é:", "opts": ["a) Tipo celular", "b) Junção neurônios", "c) Parte do cérebro", "d) Hormônio", "e) Músculo"], "gab": "b) Junção entre neurônios", "src": "ENEM 2019 — Q.116 (adaptada)", "d": "bio", "disc": "Biologia"}, {"t": "Clima", "q": "Efeito estufa natural é:", "opts": ["a) Apenas prejudicial", "b) Essencial à vida", "c) Inexistente", "d) Recente", "e) Artificial"], "gab": "b) Essencial (mantém temperatura)", "src": "ENEM 2021 — Humanas Q.80 (adaptada)", "d": "hum", "disc": "Humanas"}, {"t": "Conectivos", "q": "Inadequado p/ conclusão:", "opts": ["a) Diante do exposto", "b) Nessa perspectiva", "c) Tipo assim", "d) É imperativo", "e) Em síntese"], "gab": "c) Coloquial", "src": "Cartilha ENEM 2023", "d": "red", "disc": "Redação"}, {"t": "Vocabulário", "q": "Although significa:", "opts": ["a) Porque", "b) Portanto", "c) Embora", "d) Enquanto", "e) Desde que"], "gab": "c) Embora", "src": "ENEM 2019 — Linguagens Q.5 (adaptada)", "d": "ing", "disc": "Inglês"}]}, {"name": "Junho — Semana 1", "focus": "Logaritmos e Eletricidade", "color": "#27ae60", "questions": [{"t": "Moda", "q": "Moda de {2,3,3,4,5,3,6}:", "opts": ["a) 2", "b) 3", "c) 4", "d) 5", "e) 6"], "gab": "b) 3", "src": "UFSC 2023 — Q.14 (adaptada)", "d": "mat", "disc": "Matemática"}, {"t": "Mediana", "q": "Mediana de {3,7,2,9,5}:", "opts": ["a) 2", "b) 3", "c) 5", "d) 7", "e) 5,2"], "gab": "c) 5", "src": "ENEM 2021 — Q.150 (adaptada)", "d": "mat", "disc": "Matemática"}, {"t": "Torque", "q": "F=10N, d=0,5m. Torque:", "opts": ["a) 2 N·m", "b) 5 N·m", "c) 10 N·m", "d) 15 N·m", "e) 20 N·m"], "gab": "b) 5 N·m", "src": "UFSM 2023 — Q.21 (adaptada)", "d": "fis", "disc": "Física"}, {"t": "Reflexão", "q": "Ângulo incidência = ângulo reflexão. Lei de:", "opts": ["a) Snell", "b) Reflexão", "c) Huygens", "d) Brewster", "e) Malus"], "gab": "b) Reflexão", "src": "UFSC 2021 — Q.22 (adaptada)", "d": "fis", "disc": "Física"}, {"t": "Soluções", "q": "2mol/500mL. C=", "opts": ["a) 1", "b) 2", "c) 4", "d) 0,5", "e) 0,004"], "gab": "c) 4 mol/L", "src": "UFSC 2022 — Q.36 (adaptada)", "d": "qui", "disc": "Química"}, {"t": "Ligações", "q": "NaCl é iônica pois:", "opts": ["a) Cov. apolar", "b) Cov. polar", "c) Iônica", "d) Metálica", "e) VdW"], "gab": "c) Iônica — transferência de elétrons", "src": "UFSC 2022 — Q.33 (adaptada)", "d": "qui", "disc": "Química"}, {"t": "Imunologia", "q": "Vacina contém:", "opts": ["a) Antibióticos", "b) Antígenos atenuados", "c) Anticorpos", "d) Soro", "e) Vitaminas"], "gab": "b) Antígenos atenuados/inativados", "src": "ENEM 2021 — Q.108 (adaptada)", "d": "bio", "disc": "Biologia"}, {"t": "Acentuação", "q": "Paroxítona terminada em -ão:", "opts": ["a) Sempre acentuada", "b) Nunca acentuada", "c) Acentuada se ditongo", "d) Acentuada (órgão)", "e) Depende"], "gab": "d) Acentuada (ex: órgão, bênção)", "src": "ENEM 2017 — Ling. Q.14 (adaptada)", "d": "por", "disc": "Português"}, {"t": "Comp. I", "q": "Comp. I avalia:", "opts": ["a) Argumentação", "b) Norma culta", "c) Tema", "d) Coesão", "e) Proposta"], "gab": "c) Compreensão do tema", "src": "INEP — Redação ENEM 2023", "d": "red", "disc": "Redação"}, {"t": "Feudalismo", "q": "Relação suserano-vassalo é:", "opts": ["a) Comercial", "b) Democrática", "c) Feudal", "d) Capitalista", "e) Socialista"], "gab": "c) Feudal (troca de terras por proteção)", "src": "UFSC 2021 — Q.41 (adaptada)", "d": "hum", "disc": "Humanas"}]}, {"name": "Junho — Semana 2", "focus": "Combinatória e Óptica", "color": "#27ae60", "questions": [{"t": "Log decimal", "q": "log(100)=", "opts": ["a) 1", "b) 2", "c) 10", "d) 100", "e) 1000"], "gab": "b) 2", "src": "ENEM 2020 — Q.164 (adaptada)", "d": "mat", "disc": "Matemática"}, {"t": "Trapézio", "q": "Bases 6,10; h=4. Área:", "opts": ["a) 24", "b) 28", "c) 32", "d) 40", "e) 60"], "gab": "c) 32", "src": "UFSM 2023 — Q.10 (adaptada)", "d": "mat", "disc": "Matemática"}, {"t": "Refração", "q": "Luz muda de meio. n₁ sen θ₁ = n₂ sen θ₂. Lei de:", "opts": ["a) Newton", "b) Ohm", "c) Snell", "d) Faraday", "e) Coulomb"], "gab": "c) Snell-Descartes", "src": "ENEM 2019 — Q.121 (adaptada)", "d": "fis", "disc": "Física"}, {"t": "Trabalho", "q": "F=50N, d=10m, θ=0°. W=", "opts": ["a) 5J", "b) 50J", "c) 100J", "d) 500J", "e) 5000J"], "gab": "d) 500J", "src": "UFSM 2022 — Q.17 (adaptada)", "d": "fis", "disc": "Física"}, {"t": "pH", "q": "pH=3 significa [H⁺]=", "opts": ["a) 3 mol/L", "b) 10⁻³ mol/L", "c) 10³ mol/L", "d) 0,3 mol/L", "e) 30 mol/L"], "gab": "b) 10⁻³ mol/L", "src": "ENEM 2020 — Q.101 (adaptada)", "d": "qui", "disc": "Química"}, {"t": "Oxidação", "q": "Oxidação é:", "opts": ["a) Ganho e⁻", "b) Perda e⁻", "c) Ganho p⁺", "d) Perda n⁰", "e) Nenhuma"], "gab": "b) Perda de elétrons", "src": "UFSC 2023 — Q.37 (adaptada)", "d": "qui", "disc": "Química"}, {"t": "Botânica", "q": "Xilema transporta:", "opts": ["a) Seiva elaborada", "b) Seiva bruta", "c) Hormônios", "d) Gametas", "e) Esporos"], "gab": "b) Seiva bruta (água e minerais)", "src": "UFSC 2023 — Q.31 (adaptada)", "d": "bio", "disc": "Biologia"}, {"t": "Independência BR", "q": "Independência do Brasil:", "opts": ["a) 1808", "b) 1815", "c) 1822", "d) 1889", "e) 1891"], "gab": "c) 1822", "src": "ENEM 2019 — Humanas Q.70 (adaptada)", "d": "hum", "disc": "Humanas"}, {"t": "Comp. II", "q": "Comp. II exige:", "opts": ["a) Gramática", "b) Tese clara", "c) Conectivos", "d) Proposta", "e) Título"], "gab": "b) Tese e repertório sociocultural", "src": "INEP — Redação ENEM 2023", "d": "red", "disc": "Redação"}, {"t": "Interpretação", "q": "'However' indica:", "opts": ["a) Adição", "b) Contraste", "c) Causa", "d) Tempo", "e) Conclusão"], "gab": "b) Contraste", "src": "ENEM 2020 — Linguagens Q.3 (adaptada)", "d": "ing", "disc": "Inglês"}]}, {"name": "Junho — Semana 3", "focus": "Matrizes e Equilíbrio", "color": "#27ae60", "questions": [{"t": "Diagonal", "q": "Quadrado lado 5. Diagonal:", "opts": ["a) 5", "b) 5√2", "c) 10", "d) 10√2", "e) 25"], "gab": "b) 5√2", "src": "UFSM 2022 — Q.8 (adaptada)", "d": "mat", "disc": "Matemática"}, {"t": "Exponencial 2", "q": "f(x)=2ˣ. f(3)=", "opts": ["a) 2", "b) 4", "c) 6", "d) 8", "e) 16"], "gab": "d) 8", "src": "ENEM 2020 — Q.171 (adaptada)", "d": "mat", "disc": "Matemática"}, {"t": "Movimento Circular", "q": "Centrípeta aponta para:", "opts": ["a) Tangente", "b) Centro", "c) Fora", "d) Cima", "e) Baixo"], "gab": "b) Centro da trajetória", "src": "UFSC 2022 — Q.19 (adaptada)", "d": "fis", "disc": "Física"}, {"t": "Dilatação", "q": "Barra 1m, α=12×10⁻⁶, ΔT=100°C. ΔL=", "opts": ["a) 0,12mm", "b) 0,6mm", "c) 1,2mm", "d) 12mm", "e) 120mm"], "gab": "c) 1,2mm", "src": "ENEM 2018 — Q.109 (adaptada)", "d": "fis", "disc": "Física"}, {"t": "Ácido-Base", "q": "HCl é ácido forte pois:", "opts": ["a) Fraca ionização", "b) Ionização total", "c) É orgânico", "d) Tem OH⁻", "e) É neutro"], "gab": "b) Ionização total em água", "src": "UFSM 2022 — Q.28 (adaptada)", "d": "qui", "disc": "Química"}, {"t": "Cinética", "q": "Catalisador:", "opts": ["a) Desloca equilíbrio", "b) Aumenta ΔH", "c) Diminui Ea", "d) Aumenta concentração", "e) Muda Keq"], "gab": "c) Diminui energia de ativação", "src": "ENEM 2021 — Q.103 (adaptada)", "d": "qui", "disc": "Química"}, {"t": "Biomas", "q": "Cerrado é caracterizado por:", "opts": ["a) Chuva abundante", "b) Árvores tortuosas", "c) Neve", "d) Mangue", "e) Areia"], "gab": "b) Vegetação com árvores tortuosas", "src": "ENEM 2020 — Q.111 (adaptada)", "d": "bio", "disc": "Biologia"}, {"t": "Conjunções", "q": "Embora indica:", "opts": ["a) Causa", "b) Consequência", "c) Concessão", "d) Condição", "e) Proporção"], "gab": "c) Concessão", "src": "ENEM 2020 — Ling. Q.10 (adaptada)", "d": "por", "disc": "Português"}, {"t": "Comp. III", "q": "Comp. III avalia:", "opts": ["a) Gramática", "b) Tema", "c) Argumentação", "d) Coesão", "e) Proposta"], "gab": "c) Seleção e organização dos argumentos", "src": "INEP — Redação ENEM 2023", "d": "red", "disc": "Redação"}, {"t": "Era Vargas", "q": "Estado Novo durou:", "opts": ["a) 1930-37", "b) 1937-45", "c) 1945-54", "d) 1954-64", "e) 1964-85"], "gab": "b) 1937-1945", "src": "UFSM 2023 — Q.36 (adaptada)", "d": "hum", "disc": "Humanas"}]}, {"name": "Junho — Semana 4", "focus": "Revisão Trimestral", "color": "#27ae60", "questions": [{"t": "Escada", "q": "Escada 5m, 3m do muro. Altura:", "opts": ["a) 2", "b) 3", "c) 4", "d) 5", "e) 8"], "gab": "c) 4m", "src": "ENEM 2018 — Q.156 (adaptada)", "d": "mat", "disc": "Matemática"}, {"t": "Juros Simples", "q": "R$2000, 5%/mês, 3 meses:", "opts": ["a) R$100", "b) R$200", "c) R$300", "d) R$400", "e) R$500"], "gab": "c) R$300", "src": "ENEM 2020 — Q.155 (adaptada)", "d": "mat", "disc": "Matemática"}, {"t": "MRU", "q": "Carro a 80km/h em 2h30min percorre:", "opts": ["a) 160km", "b) 180km", "c) 200km", "d) 240km", "e) 250km"], "gab": "c) 200km. d=80×2,5", "src": "UFSM 2022 — Prova 2, Q.8 (adaptada)", "d": "fis", "disc": "Física"}, {"t": "MRUV", "q": "Repouso, a=2m/s². Após 10s:", "opts": ["a) 5m/s", "b) 10m/s", "c) 15m/s", "d) 20m/s", "e) 25m/s"], "gab": "d) 20m/s. v=at", "src": "UFSM 2021 — Prova 2, Q.12 (adaptada)", "d": "fis", "disc": "Física"}, {"t": "Termoq.", "q": "Reação exotérmica tem ΔH:", "opts": ["a) > 0", "b) < 0", "c) = 0", "d) = 1", "e) Indefinido"], "gab": "b) Negativo (< 0)", "src": "UFSC 2022 — Q.34 (adaptada)", "d": "qui", "disc": "Química"}, {"t": "Orgânica", "q": "CH₃OH é:", "opts": ["a) Aldeído", "b) Cetona", "c) Álcool", "d) Ácido", "e) Éster"], "gab": "c) Álcool (metanol)", "src": "ENEM 2019 — Q.97 (adaptada)", "d": "qui", "disc": "Química"}, {"t": "Parasitologia", "q": "Dengue é transmitida por:", "opts": ["a) Barbeiro", "b) Aedes aegypti", "c) Anopheles", "d) Carrapato", "e) Pulga"], "gab": "b) Aedes aegypti", "src": "ENEM 2019 — Q.118 (adaptada)", "d": "bio", "disc": "Biologia"}, {"t": "Colonização", "q": "Tratado de Tordesilhas dividiu entre:", "opts": ["a) Espanha/França", "b) Portugal/Inglaterra", "c) Portugal/Espanha", "d) Inglaterra/França", "e) Holanda/Portugal"], "gab": "c) Portugal e Espanha", "src": "ENEM 2019 — Humanas Q.67 (adaptada)", "d": "hum", "disc": "Humanas"}, {"t": "Comp. IV", "q": "Comp. IV é sobre:", "opts": ["a) Tema", "b) Repertório", "c) Argumentos", "d) Coesão textual", "e) Proposta"], "gab": "d) Mecanismos de coesão textual", "src": "INEP — Redação ENEM 2023", "d": "red", "disc": "Redação"}, {"t": "Gramática", "q": "Passado de 'go':", "opts": ["a) Goed", "b) Gone", "c) Went", "d) Goes", "e) Going"], "gab": "c) Went", "src": "ENEM 2018 — Linguagens Q.7 (adaptada)", "d": "ing", "disc": "Inglês"}]}, {"name": "Julho — Semana 1", "focus": "Exponenciais e Termodinâmica", "color": "#2980b9", "questions": [{"t": "Gráficos", "q": "Temp 15°C→30°C. Variação:", "opts": ["a) 10", "b) 15", "c) 20", "d) 25", "e) 30"], "gab": "b) 15°C", "src": "ENEM 2021 — Q.137 (adaptada)", "d": "mat", "disc": "Matemática"}, {"t": "Função", "q": "f(x)=x²-1. f(3)=", "opts": ["a) 4", "b) 6", "c) 8", "d) 9", "e) 10"], "gab": "c) 8", "src": "ENEM 2021 — Q.140 (adaptada)", "d": "mat", "disc": "Matemática"}, {"t": "Newton", "q": "F=20N, m=5kg. a=", "opts": ["a) 2", "b) 4", "c) 5", "d) 10", "e) 100"], "gab": "b) 4 m/s²", "src": "UFSM 2023 — Prova 2 Q.15 (adaptada)", "d": "fis", "disc": "Física"}, {"t": "Queda Livre", "q": "Queda livre g=10, 3s. v=", "opts": ["a) 10", "b) 20", "c) 30", "d) 40", "e) 50"], "gab": "c) 30m/s", "src": "UFSC 2023 — Q.18 (adaptada)", "d": "fis", "disc": "Física"}, {"t": "Radioatividade", "q": "Emissão α reduz Z em:", "opts": ["a) 1", "b) 2", "c) 3", "d) 4", "e) 0"], "gab": "b) 2 unidades", "src": "UFSC 2023 — Q.38 (adaptada)", "d": "qui", "disc": "Química"}, {"t": "Gases", "q": "PV=nRT. Dobrando T a V cte, P:", "opts": ["a) Metade", "b) Igual", "c) Dobra", "d) Triplica", "e) Quadruplica"], "gab": "c) Dobra", "src": "UFSM 2023 — Q.30 (adaptada)", "d": "qui", "disc": "Química"}, {"t": "Hormônios", "q": "Insulina é produzida no:", "opts": ["a) Fígado", "b) Pâncreas", "c) Tireoide", "d) Hipófise", "e) Adrenal"], "gab": "b) Pâncreas (células β)", "src": "UFSM 2023 — Q.37 (adaptada)", "d": "bio", "disc": "Biologia"}, {"t": "Semântica", "q": "Antônimo de 'prolixo':", "opts": ["a) Extenso", "b) Conciso", "c) Verboso", "d) Redundante", "e) Difuso"], "gab": "b) Conciso", "src": "UFSC 2023 — Ling. Q.8 (adaptada)", "d": "por", "disc": "Português"}, {"t": "Comp. V", "q": "Comp. V requer proposta que:", "opts": ["a) Resuma texto", "b) Cite autores", "c) Respeite DH", "d) Use norma culta", "e) Tenha título"], "gab": "c) Respeite os direitos humanos", "src": "INEP — Redação ENEM 2023", "d": "red", "disc": "Redação"}, {"t": "Iluminismo", "q": "Direitos naturais - filósofo:", "opts": ["a) Maquiavel", "b) Hobbes", "c) Locke", "d) Rousseau", "e) Montesquieu"], "gab": "c) John Locke", "src": "UFSC 2021 — Vest. Q.42 (adaptada)", "d": "hum", "disc": "Humanas"}]}, {"name": "Julho — Semana 2", "focus": "Juros e DNA", "color": "#2980b9", "questions": [{"t": "PG", "q": "PG (3,6,12,...). 6° termo:", "opts": ["a) 48", "b) 96", "c) 192", "d) 384", "e) 768"], "gab": "b) 96", "src": "ENEM 2019 — Q.171 (adaptada)", "d": "mat", "disc": "Matemática"}, {"t": "Equação", "q": "2x+5=17. x=", "opts": ["a) 4", "b) 5", "c) 6", "d) 7", "e) 8"], "gab": "c) 6", "src": "ENEM 2017 — Q.138 (adaptada)", "d": "mat", "disc": "Matemática"}, {"t": "Calorimetria", "q": "200g água 20→70°C. Q=", "opts": ["a) 1000", "b) 5000", "c) 10000", "d) 14000", "e) 20000"], "gab": "c) 10000cal", "src": "UFSC 2021 — Q.19 (adaptada)", "d": "fis", "disc": "Física"}, {"t": "Lei de Ohm", "q": "12V, 3A. R=", "opts": ["a) 0,25Ω", "b) 4Ω", "c) 9Ω", "d) 15Ω", "e) 36Ω"], "gab": "b) 4Ω", "src": "UFSM 2023 — Q.22 (adaptada)", "d": "fis", "disc": "Física"}, {"t": "Eletroquímica", "q": "Na pilha, ânodo é:", "opts": ["a) Polo +", "b) Polo -", "c) Neutro", "d) Catalisador", "e) Sal ponte"], "gab": "b) Polo negativo (oxidação)", "src": "ENEM 2020 — Q.105 (adaptada)", "d": "qui", "disc": "Química"}, {"t": "Isomeria", "q": "C₂H₆O tem isômeros:", "opts": ["a) Etanol e metoximetano", "b) Apenas etanol", "c) Apenas éter", "d) Propanol", "e) Nenhum"], "gab": "a) Etanol e éter dimetílico", "src": "UFSC 2022 — Q.35 (adaptada)", "d": "qui", "disc": "Química"}, {"t": "Taxonomia", "q": "Ordem correta: Reino→...→Espécie:", "opts": ["a) R,F,C,O,G,E", "b) R,F,C,O,F,G,E", "c) R,F,C,O,Fm,G,E", "d) R,C,F,O,G,E", "e) R,O,C,F,G,E"], "gab": "c) Reino,Filo,Classe,Ordem,Família,Gênero,Espécie", "src": "UFSC 2021 — Q.26 (adaptada)", "d": "bio", "disc": "Biologia"}, {"t": "Rev. Industrial", "q": "1ª Rev. Ind. inovação:", "opts": ["a) Eletricidade", "b) Máq. vapor", "c) Petróleo", "d) Internet", "e) Robótica"], "gab": "b) Máquina a vapor", "src": "UFSM 2021 — Q.31 (adaptada)", "d": "hum", "disc": "Humanas"}, {"t": "Estrutura", "q": "Dissertação-argumentativa tem:", "opts": ["a) 2 partes", "b) 3 partes", "c) 4 partes", "d) 5 partes", "e) Livre"], "gab": "b) Introdução, Desenvolvimento, Conclusão", "src": "Cartilha ENEM 2023", "d": "red", "disc": "Redação"}, {"t": "Reading", "q": "Cognato verdadeiro: 'actual'=", "opts": ["a) Atual", "b) Real/Efetivo", "c) Ação", "d) Ato", "e) Atuação"], "gab": "b) Real/Efetivo (falso cognato com 'atual')", "src": "ENEM 2019 — Linguagens Q.9 (adaptada)", "d": "ing", "disc": "Inglês"}]}, {"name": "Julho — Semana 3", "focus": "Geom. Analítica e Magnetismo", "color": "#2980b9", "questions": [{"t": "Fração", "q": "3/4 + 1/6 =", "opts": ["a) 4/10", "b) 11/12", "c) 7/10", "d) 5/6", "e) 1"], "gab": "b) 11/12", "src": "ENEM 2018 — Q.140 (adaptada)", "d": "mat", "disc": "Matemática"}, {"t": "Volume", "q": "Cubo aresta 4cm. Volume:", "opts": ["a) 16", "b) 32", "c) 48", "d) 64", "e) 96"], "gab": "d) 64 cm³", "src": "UFSM 2022 — Q.12 (adaptada)", "d": "mat", "disc": "Matemática"}, {"t": "Óptica", "q": "Lente convergente, imagem real:", "opts": ["a) No foco", "b) Entre foco/lente", "c) Além do foco", "d) Infinito", "e) Nunca"], "gab": "c) Além do foco", "src": "UFSC 2022 — Q.22 (adaptada)", "d": "fis", "disc": "Física"}, {"t": "Ondas", "q": "f=500Hz, λ=0,68m. v=", "opts": ["a) 170", "b) 340", "c) 500", "d) 680", "e) 735"], "gab": "b) 340m/s", "src": "UFSM 2022 — Q.20 (adaptada)", "d": "fis", "disc": "Física"}, {"t": "Coloides", "q": "Efeito Tyndall ocorre em:", "opts": ["a) Soluções", "b) Suspensões", "c) Coloides", "d) Gases puros", "e) Sólidos"], "gab": "c) Coloides", "src": "UFSM 2021 — Q.27 (adaptada)", "d": "qui", "disc": "Química"}, {"t": "Polímeros", "q": "PET é obtido por:", "opts": ["a) Adição", "b) Condensação", "c) Natural", "d) Copolímero", "e) Rearranjo"], "gab": "b) Condensação", "src": "ENEM 2021 — Q.98 (adaptada)", "d": "qui", "disc": "Química"}, {"t": "Proteínas", "q": "Enzimas são:", "opts": ["a) Lipídeos", "b) Carboidratos", "c) Proteínas", "d) Ácidos nucleicos", "e) Vitaminas"], "gab": "c) Proteínas (catalisadores biológicos)", "src": "ENEM 2018 — Q.110 (adaptada)", "d": "bio", "disc": "Biologia"}, {"t": "Modernismo", "q": "Semana de Arte Moderna:", "opts": ["a) 1912", "b) 1922", "c) 1932", "d) 1942", "e) 1952"], "gab": "b) 1922", "src": "ENEM 2019 — Ling. Q.22 (adaptada)", "d": "por", "disc": "Português"}, {"t": "Repertório", "q": "Repertório legitimado é:", "opts": ["a) Opinião pessoal", "b) Dado verificável", "c) Experiência", "d) Senso comum", "e) Achismo"], "gab": "b) Dado, citação ou referência verificável", "src": "INEP — Redação ENEM 2023", "d": "red", "disc": "Redação"}, {"t": "Biomas", "q": "Maior bioma BR:", "opts": ["a) Cerrado", "b) Mata Atl.", "c) Amazônia", "d) Caatinga", "e) Pampa"], "gab": "c) Amazônia ~49%", "src": "ENEM 2021 — Q.78 (adaptada)", "d": "hum", "disc": "Humanas"}]}, {"name": "Julho — Semana 4", "focus": "Simulado Meio do Ano", "color": "#2980b9", "questions": [{"t": "Perímetro", "q": "Retângulo 8×5. Perímetro:", "opts": ["a) 13", "b) 26", "c) 40", "d) 52", "e) 80"], "gab": "b) 26", "src": "ENEM 2017 — Q.142 (adaptada)", "d": "mat", "disc": "Matemática"}, {"t": "Proporção", "q": "x/3 = 8/6. x=", "opts": ["a) 2", "b) 3", "c) 4", "d) 6", "e) 8"], "gab": "c) 4", "src": "ENEM 2018 — Q.144 (adaptada)", "d": "mat", "disc": "Matemática"}, {"t": "Potência", "q": "Chuveiro 5500W, 15min/dia, 30d:", "opts": ["a) 27,5kWh", "b) 41,25kWh", "c) 55kWh", "d) 82,5kWh", "e) 165kWh"], "gab": "b) 41,25kWh", "src": "ENEM 2021 — Q.115 (adaptada)", "d": "fis", "disc": "Física"}, {"t": "Magnetismo", "q": "Campo de fio reto - regra:", "opts": ["a) Mão esquerda", "b) Mão direita", "c) Lenz", "d) Ampère", "e) Faraday"], "gab": "b) Mão direita", "src": "UFSC 2022 — Q.24 (adaptada)", "d": "fis", "disc": "Física"}, {"t": "Hidrocarboneto", "q": "C₂H₄ é um:", "opts": ["a) Alcano", "b) Alceno", "c) Alcino", "d) Aromático", "e) Cicloalcano"], "gab": "b) Alceno (etileno)", "src": "UFSC 2023 — Q.32 (adaptada)", "d": "qui", "disc": "Química"}, {"t": "Equil. Químico", "q": "Le Chatelier: aumentar [reagente]:", "opts": ["a) Desloca ←", "b) Desloca →", "c) Sem efeito", "d) Para reação", "e) Muda Keq"], "gab": "b) Desloca para produtos →", "src": "ENEM 2018 — Q.102 (adaptada)", "d": "qui", "disc": "Química"}, {"t": "Embriologia", "q": "Gastrulação forma:", "opts": ["a) Blástula", "b) Mórula", "c) Folhetos germinativos", "d) Zigoto", "e) Gametas"], "gab": "c) Folhetos germinativos", "src": "UFSC 2022 — Q.29 (adaptada)", "d": "bio", "disc": "Biologia"}, {"t": "Globalização", "q": "Globalização intensificou-se após:", "opts": ["a) 1ª Guerra", "b) 2ª Guerra", "c) Guerra Fria", "d) Queda Muro Berlim", "e) Rev. Francesa"], "gab": "d) Queda do Muro de Berlim (1989)", "src": "ENEM 2020 — Humanas Q.72 (adaptada)", "d": "hum", "disc": "Humanas"}, {"t": "Anulação", "q": "Redação é anulada se:", "opts": ["a) < 7 linhas", "b) Foge ao tema", "c) Cópia texto base", "d) Todas anteriores", "e) Nenhuma"], "gab": "d) Todas as anteriores", "src": "Edital ENEM 2023", "d": "red", "disc": "Redação"}, {"t": "Preposições", "q": "Interested ___ science:", "opts": ["a) at", "b) on", "c) in", "d) for", "e) to"], "gab": "c) in", "src": "ENEM 2021 — Linguagens Q.4 (adaptada)", "d": "ing", "disc": "Inglês"}]}, {"name": "Agosto — Semana 1", "focus": "Geom. Espacial e Calorimetria", "color": "#8e44ad", "questions": [{"t": "MMC", "q": "MMC(12,18)=", "opts": ["a) 6", "b) 12", "c) 36", "d) 72", "e) 216"], "gab": "c) 36", "src": "UFSM 2021 — Q.3 (adaptada)", "d": "mat", "disc": "Matemática"}, {"t": "MDC", "q": "MDC(24,36)=", "opts": ["a) 4", "b) 6", "c) 8", "d) 12", "e) 24"], "gab": "d) 12", "src": "UFSM 2021 — Q.4 (adaptada)", "d": "mat", "disc": "Matemática"}, {"t": "Lançamento", "q": "Projétil 45° tem alcance max pois:", "opts": ["a) Menor atrito", "b) sen(90°)=1", "c) Maior altura", "d) Menor tempo", "e) Gravidade anula"], "gab": "b) sen(2×45°)=1", "src": "UFSM 2023 — Q.19 (adaptada)", "d": "fis", "disc": "Física"}, {"t": "Espelhos", "q": "Espelho côncavo, objeto no CC:", "opts": ["a) Virtual aum.", "b) Real aum.", "c) Real mesmo tam.", "d) Real reduzida", "e) Não forma"], "gab": "c) Real, mesmo tamanho", "src": "UFSM 2023 — Q.24 (adaptada)", "d": "fis", "disc": "Física"}, {"t": "Modelos Atômicos", "q": "Átomo como esfera maciça indivisível é modelo de:", "opts": ["a) Thomson", "b) Rutherford", "c) Bohr", "d) Dalton", "e) Schrödinger"], "gab": "d) Dalton (1803)", "src": "ENEM 2018 — Q.104 (adaptada)", "d": "qui", "disc": "Química"}, {"t": "Tab. Periódica", "q": "Grupo 1A são:", "opts": ["a) Halogênios", "b) Gases Nobres", "c) Metais Alcalinos", "d) Calcogênios", "e) Transição"], "gab": "c) Metais Alcalinos", "src": "UFSC 2022 — Vest. Q.31 (adaptada)", "d": "qui", "disc": "Química"}, {"t": "Água", "q": "Água é solvente universal por sua:", "opts": ["a) Apolaridade", "b) Polaridade", "c) Baixa tensão", "d) Baixo calor", "e) Acidez"], "gab": "b) Polaridade", "src": "UFSC 2023 — Vest. Q.27 (adaptada)", "d": "bio", "disc": "Biologia"}, {"t": "Concordância", "q": "Concordância CORRETA:", "opts": ["a) Fazem dois anos", "b) Houveram problemas", "c) Existem diversas soluções", "d) Os aluno chegou", "e) As menina saiu"], "gab": "c) Existem diversas soluções", "src": "ENEM 2017 — Linguagens Q.12 (adaptada)", "d": "por", "disc": "Português"}, {"t": "Proposta", "q": "Quantos elementos na proposta nota máxima?", "opts": ["a) 2", "b) 3", "c) 4", "d) 5", "e) 6"], "gab": "d) 5: Agente, Ação, Meio, Finalidade, Detalhamento", "src": "Cartilha ENEM 2023 — MEC/INEP", "d": "red", "disc": "Redação"}, {"t": "Urbanização", "q": "Êxodo rural é:", "opts": ["a) Rural→Rural", "b) Urbano→Rural", "c) Rural→Urbano", "d) Urbano→Urbano", "e) Internacional"], "gab": "c) Migração Rural→Urbano", "src": "ENEM 2019 — Humanas Q.74 (adaptada)", "d": "hum", "disc": "Humanas"}]}, {"name": "Agosto — Semana 2", "focus": "Orgânica e Fisiologia", "color": "#8e44ad", "questions": [{"t": "Inequação", "q": "3x-6>0. x>", "opts": ["a) -2", "b) 0", "c) 2", "d) 3", "e) 6"], "gab": "c) 2", "src": "ENEM 2019 — Q.143 (adaptada)", "d": "mat", "disc": "Matemática"}, {"t": "Cone", "q": "Cone r=3,h=4. Geratriz:", "opts": ["a) 3", "b) 4", "c) 5", "d) 7", "e) 12"], "gab": "c) 5", "src": "ENEM 2020 — Q.178 (adaptada)", "d": "mat", "disc": "Matemática"}, {"t": "3ª Lei Newton", "q": "Ação/reação - sentidos:", "opts": ["a) Iguais", "b) Opostos", "c) Perpendiculares", "d) Paralelos", "e) Variáveis"], "gab": "b) Opostos", "src": "UFSM 2022 — Q.11 (adaptada)", "d": "fis", "disc": "Física"}, {"t": "Conservação", "q": "Ec+Ep sistema conservativo:", "opts": ["a) Variável", "b) Constante", "c) Zero", "d) Negativa", "e) Infinita"], "gab": "b) Constante", "src": "ENEM 2019 — Q.118 (adaptada)", "d": "fis", "disc": "Física"}, {"t": "Combustão", "q": "CH₄+2O₂ produz:", "opts": ["a) CO+H₂", "b) CO₂+H₂O", "c) C+H₂O", "d) CO₂+H₂", "e) CH₃OH"], "gab": "b) CO₂ e H₂O", "src": "ENEM 2019 — Q.96 (adaptada)", "d": "qui", "disc": "Química"}, {"t": "Estequiometria", "q": "2H₂+O₂→2H₂O. 4mol H₂:", "opts": ["a) 1", "b) 2", "c) 4", "d) 6", "e) 8"], "gab": "c) 4 mol H₂O", "src": "UFSC 2023 — Q.35 (adaptada)", "d": "qui", "disc": "Química"}, {"t": "Citologia", "q": "Respiração celular aeróbica ocorre na:", "opts": ["a) Ribossomo", "b) Lisossomo", "c) Mitocôndria", "d) Golgi", "e) RE"], "gab": "c) Mitocôndria", "src": "ENEM 2020 — Q.99 (adaptada)", "d": "bio", "disc": "Biologia"}, {"t": "Abolição", "q": "Lei Áurea:", "opts": ["a) 1822", "b) 1850", "c) 1871", "d) 1888", "e) 1891"], "gab": "d) 1888", "src": "UFSM 2022 — Q.35 (adaptada)", "d": "hum", "disc": "Humanas"}, {"t": "Conectivos", "q": "Inadequado p/ conclusão:", "opts": ["a) Diante do exposto", "b) Nessa perspectiva", "c) Tipo assim", "d) É imperativo", "e) Em síntese"], "gab": "c) Coloquial", "src": "Cartilha ENEM 2023", "d": "red", "disc": "Redação"}, {"t": "Vocabulário", "q": "Although significa:", "opts": ["a) Porque", "b) Portanto", "c) Embora", "d) Enquanto", "e) Desde que"], "gab": "c) Embora", "src": "ENEM 2019 — Linguagens Q.5 (adaptada)", "d": "ing", "disc": "Inglês"}]}, {"name": "Agosto — Semana 3", "focus": "Prob. Condicional e Espelhos", "color": "#8e44ad", "questions": [{"t": "Ângulos", "q": "Soma ângulos internos triângulo:", "opts": ["a) 90°", "b) 120°", "c) 180°", "d) 270°", "e) 360°"], "gab": "c) 180°", "src": "ENEM 2017 — Q.155 (adaptada)", "d": "mat", "disc": "Matemática"}, {"t": "Esfera", "q": "Esfera r=3,π≈3. Volume:", "opts": ["a) 27", "b) 36", "c) 81", "d) 108", "e) 324"], "gab": "d) 108", "src": "UFSC 2023 — Q.16 (adaptada)", "d": "mat", "disc": "Matemática"}, {"t": "Termodinâmica", "q": "1ª Lei: ΔU=", "opts": ["a) Calor frio→quente", "b) Entropia cresce", "c) Q-W", "d) Máquina perfeita", "e) Zero K"], "gab": "c) Q-W", "src": "UFSC 2023 — Q.21 (adaptada)", "d": "fis", "disc": "Física"}, {"t": "Indução", "q": "Fem induzida depende de:", "opts": ["a) Corrente", "b) Variação fluxo", "c) Resistência", "d) Tensão", "e) Potência"], "gab": "b) Variação fluxo magnético", "src": "UFSC 2023 — Q.25 (adaptada)", "d": "fis", "disc": "Física"}, {"t": "Soluções", "q": "2mol/500mL. C=", "opts": ["a) 1", "b) 2", "c) 4", "d) 0,5", "e) 0,004"], "gab": "c) 4 mol/L", "src": "UFSC 2022 — Q.36 (adaptada)", "d": "qui", "disc": "Química"}, {"t": "Ligações", "q": "NaCl é iônica pois:", "opts": ["a) Cov. apolar", "b) Cov. polar", "c) Iônica", "d) Metálica", "e) VdW"], "gab": "c) Iônica — transferência de elétrons", "src": "UFSC 2022 — Q.33 (adaptada)", "d": "qui", "disc": "Química"}, {"t": "Mitose", "q": "Célula 2n=46, mitose:", "opts": ["a) 2c/23", "b) 2c/46", "c) 4c/23", "d) 4c/46", "e) 1c/92"], "gab": "b) 2 células com 46", "src": "ENEM 2018 — Q.112 (adaptada)", "d": "bio", "disc": "Biologia"}, {"t": "Figuras", "q": "'Mar de rosas' é:", "opts": ["a) Metonímia", "b) Metáfora", "c) Hipérbole", "d) Ironia", "e) Eufemismo"], "gab": "b) Metáfora", "src": "ENEM 2019 — Ling. Q.15 (adaptada)", "d": "por", "disc": "Português"}, {"t": "Comp. I", "q": "Comp. I avalia:", "opts": ["a) Argumentação", "b) Norma culta", "c) Tema", "d) Coesão", "e) Proposta"], "gab": "c) Compreensão do tema", "src": "INEP — Redação ENEM 2023", "d": "red", "disc": "Redação"}, {"t": "Democracia", "q": "Democracia direta originou-se em:", "opts": ["a) Roma", "b) Atenas", "c) Esparta", "d) Pérsia", "e) Egito"], "gab": "b) Atenas", "src": "UFSC 2022 — Q.40 (adaptada)", "d": "hum", "disc": "Humanas"}]}, {"name": "Agosto — Semana 4", "focus": "Simulado Nível ENEM", "color": "#8e44ad", "questions": [{"t": "Sistema", "q": "x+y=10, x-y=4. x=", "opts": ["a) 3", "b) 5", "c) 7", "d) 10", "e) 14"], "gab": "c) 7", "src": "ENEM 2018 — Q.152 (adaptada)", "d": "mat", "disc": "Matemática"}, {"t": "Binômio", "q": "(x+1)²=", "opts": ["a) x²+1", "b) x²+x+1", "c) x²+2x+1", "d) 2x²+1", "e) x²+2"], "gab": "c) x²+2x+1", "src": "UFSM 2022 — Q.7 (adaptada)", "d": "mat", "disc": "Matemática"}, {"t": "Potência 2", "q": "1000J em 5s. P=", "opts": ["a) 100W", "b) 200W", "c) 500W", "d) 1000W", "e) 5000W"], "gab": "b) 200W", "src": "UFSM 2022 — Q.16 (adaptada)", "d": "fis", "disc": "Física"}, {"t": "Efeito Joule", "q": "Transforma elétrica em:", "opts": ["a) Mecânica", "b) Química", "c) Térmica", "d) Nuclear", "e) Luminosa"], "gab": "c) Térmica", "src": "UFSC 2023 — Q.24 (adaptada)", "d": "fis", "disc": "Física"}, {"t": "pH", "q": "pH=3 significa [H⁺]=", "opts": ["a) 3 mol/L", "b) 10⁻³ mol/L", "c) 10³ mol/L", "d) 0,3 mol/L", "e) 30 mol/L"], "gab": "b) 10⁻³ mol/L", "src": "ENEM 2020 — Q.101 (adaptada)", "d": "qui", "disc": "Química"}, {"t": "Oxidação", "q": "Oxidação é:", "opts": ["a) Ganho e⁻", "b) Perda e⁻", "c) Ganho p⁺", "d) Perda n⁰", "e) Nenhuma"], "gab": "b) Perda de elétrons", "src": "UFSC 2023 — Q.37 (adaptada)", "d": "qui", "disc": "Química"}, {"t": "Meiose", "q": "Meiose produz células:", "opts": ["a) 2n", "b) 4n", "c) n", "d) 3n", "e) 6n"], "gab": "c) Haploides (n)", "src": "UFSC 2022 — Q.28 (adaptada)", "d": "bio", "disc": "Biologia"}, {"t": "Revolução Francesa", "q": "Queda da Bastilha:", "opts": ["a) 1776", "b) 1789", "c) 1799", "d) 1804", "e) 1815"], "gab": "b) 1789", "src": "ENEM 2018 — Humanas Q.69 (adaptada)", "d": "hum", "disc": "Humanas"}, {"t": "Comp. II", "q": "Comp. II exige:", "opts": ["a) Gramática", "b) Tese clara", "c) Conectivos", "d) Proposta", "e) Título"], "gab": "b) Tese e repertório sociocultural", "src": "INEP — Redação ENEM 2023", "d": "red", "disc": "Redação"}, {"t": "Interpretação", "q": "'However' indica:", "opts": ["a) Adição", "b) Contraste", "c) Causa", "d) Tempo", "e) Conclusão"], "gab": "b) Contraste", "src": "ENEM 2020 — Linguagens Q.3 (adaptada)", "d": "ing", "disc": "Inglês"}]}, {"name": "Setembro — Semana 1", "focus": "Combinatória e Eletromagnetismo", "color": "#16a085", "questions": [{"t": "Razão trigon.", "q": "cos60°=", "opts": ["a) 0", "b) 1/4", "c) 1/2", "d) √2/2", "e) √3/2"], "gab": "c) 1/2", "src": "ENEM 2019 — Q.174 (adaptada)", "d": "mat", "disc": "Matemática"}, {"t": "Semelhança", "q": "Triângulos semelhantes lados 3,4,5 e 6,8,x. x=", "opts": ["a) 7", "b) 8", "c) 9", "d) 10", "e) 12"], "gab": "d) 10", "src": "UFSC 2022 — Q.12 (adaptada)", "d": "mat", "disc": "Matemática"}, {"t": "Calor Latente", "q": "Derreter 100g gelo (L=80):", "opts": ["a) 4000", "b) 6000", "c) 8000", "d) 10000", "e) 12000"], "gab": "c) 8000cal", "src": "UFSC 2022 — Q.20 (adaptada)", "d": "fis", "disc": "Física"}, {"t": "Difração", "q": "Onda contorna obstáculos:", "opts": ["a) Reflexão", "b) Refração", "c) Difração", "d) Absorção", "e) Polarização"], "gab": "c) Difração", "src": "UFSC 2022 — Q.23 (adaptada)", "d": "fis", "disc": "Física"}, {"t": "Ácido-Base", "q": "HCl é ácido forte pois:", "opts": ["a) Fraca ionização", "b) Ionização total", "c) É orgânico", "d) Tem OH⁻", "e) É neutro"], "gab": "b) Ionização total em água", "src": "UFSM 2022 — Q.28 (adaptada)", "d": "qui", "disc": "Química"}, {"t": "Cinética", "q": "Catalisador:", "opts": ["a) Desloca equilíbrio", "b) Aumenta ΔH", "c) Diminui Ea", "d) Aumenta concentração", "e) Muda Keq"], "gab": "c) Diminui energia de ativação", "src": "ENEM 2021 — Q.103 (adaptada)", "d": "qui", "disc": "Química"}, {"t": "DNA", "q": "Bases complementares: A-T e", "opts": ["a) A-C", "b) C-G", "c) T-G", "d) A-G", "e) C-T"], "gab": "b) C-G", "src": "ENEM 2019 — Q.113 (adaptada)", "d": "bio", "disc": "Biologia"}, {"t": "Interpretação", "q": "Texto argumentativo visa:", "opts": ["a) Narrar", "b) Descrever", "c) Convencer", "d) Instruir", "e) Entreter"], "gab": "c) Convencer o leitor", "src": "ENEM 2020 — Ling. Q.8 (adaptada)", "d": "por", "disc": "Português"}, {"t": "Comp. III", "q": "Comp. III avalia:", "opts": ["a) Gramática", "b) Tema", "c) Argumentação", "d) Coesão", "e) Proposta"], "gab": "c) Seleção e organização dos argumentos", "src": "INEP — Redação ENEM 2023", "d": "red", "disc": "Redação"}, {"t": "Guerra Fria", "q": "Bipolaridade: EUA vs", "opts": ["a) China", "b) Japão", "c) URSS", "d) Alemanha", "e) Inglaterra"], "gab": "c) URSS", "src": "ENEM 2020 — Humanas Q.75 (adaptada)", "d": "hum", "disc": "Humanas"}]}, {"name": "Setembro — Semana 2", "focus": "Bioquímica e Atualidades", "color": "#16a085", "questions": [{"t": "Razão", "q": "Torneira enche 500L em 4h. Com dobro da vazão:", "opts": ["a) 1h", "b) 2h", "c) 3h", "d) 4h", "e) 8h"], "gab": "b) 2h", "src": "ENEM 2019 — Q.136 (adaptada)", "d": "mat", "disc": "Matemática"}, {"t": "Porcentagem", "q": "R$120 + 25% =", "opts": ["a) R$130", "b) R$140", "c) R$145", "d) R$150", "e) R$155"], "gab": "d) R$150", "src": "ENEM 2020 — Q.141 (adaptada)", "d": "mat", "disc": "Matemática"}, {"t": "Capacitor", "q": "Armazena:", "opts": ["a) Corrente", "b) Resistência", "c) Carga", "d) Campo mag.", "e) Luz"], "gab": "c) Carga elétrica", "src": "UFSC 2023 — Q.26 (adaptada)", "d": "fis", "disc": "Física"}, {"t": "Velocidade Luz", "q": "c=", "opts": ["a) 3×10⁶", "b) 3×10⁸", "c) 3×10¹⁰", "d) 3×10¹²", "e) 3×10¹⁵"], "gab": "b) 3×10⁸ m/s", "src": "UFSC 2023 — Q.23 (adaptada)", "d": "fis", "disc": "Física"}, {"t": "Termoq.", "q": "Reação exotérmica tem ΔH:", "opts": ["a) > 0", "b) < 0", "c) = 0", "d) = 1", "e) Indefinido"], "gab": "b) Negativo (< 0)", "src": "UFSC 2022 — Q.34 (adaptada)", "d": "qui", "disc": "Química"}, {"t": "Orgânica", "q": "CH₃OH é:", "opts": ["a) Aldeído", "b) Cetona", "c) Álcool", "d) Ácido", "e) Éster"], "gab": "c) Álcool (metanol)", "src": "ENEM 2019 — Q.97 (adaptada)", "d": "qui", "disc": "Química"}, {"t": "Genética", "q": "Aa × Aa. Proporção fenótipo dominante:", "opts": ["a) 25%", "b) 50%", "c) 75%", "d) 100%", "e) 0%"], "gab": "c) 75%", "src": "UFSM 2023 — Q.35 (adaptada)", "d": "bio", "disc": "Biologia"}, {"t": "Constituição", "q": "Constituição cidadã BR:", "opts": ["a) 1946", "b) 1967", "c) 1969", "d) 1988", "e) 2002"], "gab": "d) 1988", "src": "UFSM 2023 — Q.38 (adaptada)", "d": "hum", "disc": "Humanas"}, {"t": "Comp. IV", "q": "Comp. IV é sobre:", "opts": ["a) Tema", "b) Repertório", "c) Argumentos", "d) Coesão textual", "e) Proposta"], "gab": "d) Mecanismos de coesão textual", "src": "INEP — Redação ENEM 2023", "d": "red", "disc": "Redação"}, {"t": "Gramática", "q": "Passado de 'go':", "opts": ["a) Goed", "b) Gone", "c) Went", "d) Goes", "e) Going"], "gab": "c) Went", "src": "ENEM 2018 — Linguagens Q.7 (adaptada)", "d": "ing", "disc": "Inglês"}]}, {"name": "Setembro — Semana 3", "focus": "Trig. Avançada e Torque", "color": "#16a085", "questions": [{"t": "Regra de 3", "q": "5 operários, 12 dias. 10 operários:", "opts": ["a) 3", "b) 6", "c) 8", "d) 10", "e) 24"], "gab": "b) 6 dias. Inversamente proporcional", "src": "ENEM 2018 — Q.158 (adaptada)", "d": "mat", "disc": "Matemática"}, {"t": "Média", "q": "Notas 6,8,5,9,7. Média:", "opts": ["a) 6", "b) 6,5", "c) 7", "d) 7,5", "e) 8"], "gab": "c) 7", "src": "ENEM 2021 — Q.145 (adaptada)", "d": "mat", "disc": "Matemática"}, {"t": "Empuxo", "q": "Objeto flutua quando peso:", "opts": ["a) > empuxo", "b) < empuxo", "c) = empuxo", "d) = zero", "e) infinito"], "gab": "b) Peso < Empuxo", "src": "ENEM 2020 — Q.108 (adaptada)", "d": "fis", "disc": "Física"}, {"t": "Pressão", "q": "F=100N, A=0,5m². P=", "opts": ["a) 50Pa", "b) 100Pa", "c) 200Pa", "d) 500Pa", "e) 1000Pa"], "gab": "c) 200Pa", "src": "UFSM 2022 — Q.14 (adaptada)", "d": "fis", "disc": "Física"}, {"t": "Radioatividade", "q": "Emissão α reduz Z em:", "opts": ["a) 1", "b) 2", "c) 3", "d) 4", "e) 0"], "gab": "b) 2 unidades", "src": "UFSC 2023 — Q.38 (adaptada)", "d": "qui", "disc": "Química"}, {"t": "Gases", "q": "PV=nRT. Dobrando T a V cte, P:", "opts": ["a) Metade", "b) Igual", "c) Dobra", "d) Triplica", "e) Quadruplica"], "gab": "c) Dobra", "src": "UFSM 2023 — Q.30 (adaptada)", "d": "qui", "disc": "Química"}, {"t": "Ecologia", "q": "Produtor→Consumidor 1°→2°. É uma:", "opts": ["a) Teia", "b) Pirâmide", "c) Cadeia alimentar", "d) Nicho", "e) Bioma"], "gab": "c) Cadeia alimentar", "src": "ENEM 2021 — Q.107 (adaptada)", "d": "bio", "disc": "Biologia"}, {"t": "Variação", "q": "Linguagem coloquial é:", "opts": ["a) Errada", "b) Informal", "c) Escrita", "d) Técnica", "e) Arcaica"], "gab": "b) Informal (adequada ao contexto)", "src": "ENEM 2018 — Ling. Q.11 (adaptada)", "d": "por", "disc": "Português"}, {"t": "Comp. V", "q": "Comp. V requer proposta que:", "opts": ["a) Resuma texto", "b) Cite autores", "c) Respeite DH", "d) Use norma culta", "e) Tenha título"], "gab": "c) Respeite os direitos humanos", "src": "INEP — Redação ENEM 2023", "d": "red", "disc": "Redação"}, {"t": "Clima", "q": "Efeito estufa natural é:", "opts": ["a) Apenas prejudicial", "b) Essencial à vida", "c) Inexistente", "d) Recente", "e) Artificial"], "gab": "b) Essencial (mantém temperatura)", "src": "ENEM 2021 — Humanas Q.80 (adaptada)", "d": "hum", "disc": "Humanas"}]}, {"name": "Setembro — Semana 4", "focus": "Simulado Intensivo", "color": "#16a085", "questions": [{"t": "Função 1° grau", "q": "Raiz de f(x)=3x-9:", "opts": ["a) -3", "b) 0", "c) 3", "d) 6", "e) 9"], "gab": "c) 3", "src": "ENEM 2017 — Q.151 (adaptada)", "d": "mat", "disc": "Matemática"}, {"t": "Função 2° grau", "q": "Vértice xv de y=x²-6x+8:", "opts": ["a) -3", "b) -1", "c) 2", "d) 3", "e) 6"], "gab": "d) 3", "src": "UFSM 2022 — Prova 1 Q.5 (adaptada)", "d": "mat", "disc": "Matemática"}, {"t": "Torque", "q": "F=10N, d=0,5m. Torque:", "opts": ["a) 2 N·m", "b) 5 N·m", "c) 10 N·m", "d) 15 N·m", "e) 20 N·m"], "gab": "b) 5 N·m", "src": "UFSM 2023 — Q.21 (adaptada)", "d": "fis", "disc": "Física"}, {"t": "Reflexão", "q": "Ângulo incidência = ângulo reflexão. Lei de:", "opts": ["a) Snell", "b) Reflexão", "c) Huygens", "d) Brewster", "e) Malus"], "gab": "b) Reflexão", "src": "UFSC 2021 — Q.22 (adaptada)", "d": "fis", "disc": "Física"}, {"t": "Eletroquímica", "q": "Na pilha, ânodo é:", "opts": ["a) Polo +", "b) Polo -", "c) Neutro", "d) Catalisador", "e) Sal ponte"], "gab": "b) Polo negativo (oxidação)", "src": "ENEM 2020 — Q.105 (adaptada)", "d": "qui", "disc": "Química"}, {"t": "Isomeria", "q": "C₂H₆O tem isômeros:", "opts": ["a) Etanol e metoximetano", "b) Apenas etanol", "c) Apenas éter", "d) Propanol", "e) Nenhum"], "gab": "a) Etanol e éter dimetílico", "src": "UFSC 2022 — Q.35 (adaptada)", "d": "qui", "disc": "Química"}, {"t": "Fotossíntese", "q": "6CO₂+6H₂O→C₆H₁₂O₆+6O₂ ocorre no:", "opts": ["a) Mitocôndria", "b) Ribossomo", "c) Cloroplasto", "d) Núcleo", "e) Golgi"], "gab": "c) Cloroplasto", "src": "UFSC 2023 — Q.29 (adaptada)", "d": "bio", "disc": "Biologia"}, {"t": "Feudalismo", "q": "Relação suserano-vassalo é:", "opts": ["a) Comercial", "b) Democrática", "c) Feudal", "d) Capitalista", "e) Socialista"], "gab": "c) Feudal (troca de terras por proteção)", "src": "UFSC 2021 — Q.41 (adaptada)", "d": "hum", "disc": "Humanas"}, {"t": "Estrutura", "q": "Dissertação-argumentativa tem:", "opts": ["a) 2 partes", "b) 3 partes", "c) 4 partes", "d) 5 partes", "e) Livre"], "gab": "b) Introdução, Desenvolvimento, Conclusão", "src": "Cartilha ENEM 2023", "d": "red", "disc": "Redação"}, {"t": "Reading", "q": "Cognato verdadeiro: 'actual'=", "opts": ["a) Atual", "b) Real/Efetivo", "c) Ação", "d) Ato", "e) Atuação"], "gab": "b) Real/Efetivo (falso cognato com 'atual')", "src": "ENEM 2019 — Linguagens Q.9 (adaptada)", "d": "ing", "disc": "Inglês"}]}, {"name": "Outubro — Semana 1", "focus": "Revisão Matemática", "color": "#c0392b", "questions": [{"t": "Pitágoras", "q": "Catetos 6 e 8. Hipotenusa:", "opts": ["a) 8", "b) 10", "c) 12", "d) 14", "e) 16"], "gab": "b) 10", "src": "ENEM 2019 — Q.163 (adaptada)", "d": "mat", "disc": "Matemática"}, {"t": "Área", "q": "Círculo r=7, π≈22/7. Área:", "opts": ["a) 44", "b) 77", "c) 154", "d) 308", "e) 616"], "gab": "c) 154 cm²", "src": "ENEM 2018 — Q.149 (adaptada)", "d": "mat", "disc": "Matemática"}, {"t": "Refração", "q": "Luz muda de meio. n₁ sen θ₁ = n₂ sen θ₂. Lei de:", "opts": ["a) Newton", "b) Ohm", "c) Snell", "d) Faraday", "e) Coulomb"], "gab": "c) Snell-Descartes", "src": "ENEM 2019 — Q.121 (adaptada)", "d": "fis", "disc": "Física"}, {"t": "Trabalho", "q": "F=50N, d=10m, θ=0°. W=", "opts": ["a) 5J", "b) 50J", "c) 100J", "d) 500J", "e) 5000J"], "gab": "d) 500J", "src": "UFSM 2022 — Q.17 (adaptada)", "d": "fis", "disc": "Física"}, {"t": "Coloides", "q": "Efeito Tyndall ocorre em:", "opts": ["a) Soluções", "b) Suspensões", "c) Coloides", "d) Gases puros", "e) Sólidos"], "gab": "c) Coloides", "src": "UFSM 2021 — Q.27 (adaptada)", "d": "qui", "disc": "Química"}, {"t": "Polímeros", "q": "PET é obtido por:", "opts": ["a) Adição", "b) Condensação", "c) Natural", "d) Copolímero", "e) Rearranjo"], "gab": "b) Condensação", "src": "ENEM 2021 — Q.98 (adaptada)", "d": "qui", "disc": "Química"}, {"t": "Evolução", "q": "Seleção natural é teoria de:", "opts": ["a) Lamarck", "b) Mendel", "c) Darwin", "d) Pasteur", "e) Lineu"], "gab": "c) Darwin", "src": "ENEM 2020 — Q.114 (adaptada)", "d": "bio", "disc": "Biologia"}, {"t": "Gêneros", "q": "Crônica é texto:", "opts": ["a) Científico", "b) Jornalístico-literário", "c) Jurídico", "d) Publicitário", "e) Técnico"], "gab": "b) Jornalístico-literário", "src": "ENEM 2019 — Ling. Q.18 (adaptada)", "d": "por", "disc": "Português"}, {"t": "Repertório", "q": "Repertório legitimado é:", "opts": ["a) Opinião pessoal", "b) Dado verificável", "c) Experiência", "d) Senso comum", "e) Achismo"], "gab": "b) Dado, citação ou referência verificável", "src": "INEP — Redação ENEM 2023", "d": "red", "disc": "Redação"}, {"t": "Independência BR", "q": "Independência do Brasil:", "opts": ["a) 1808", "b) 1815", "c) 1822", "d) 1889", "e) 1891"], "gab": "c) 1822", "src": "ENEM 2019 — Humanas Q.70 (adaptada)", "d": "hum", "disc": "Humanas"}]}, {"name": "Outubro — Semana 2", "focus": "Revisão Natureza", "color": "#c0392b", "questions": [{"t": "PA", "q": "PA (2,5,8,11...). 20° termo:", "opts": ["a) 56", "b) 59", "c) 60", "d) 62", "e) 65"], "gab": "b) 59", "src": "ENEM 2019 — Q.169 (adaptada)", "d": "mat", "disc": "Matemática"}, {"t": "Trigonometria", "q": "sen30°, hip=10. Cateto oposto:", "opts": ["a) 3", "b) 5", "c) 5√3", "d) 10", "e) 10√3"], "gab": "b) 5", "src": "ENEM 2020 — Q.172 (adaptada)", "d": "mat", "disc": "Matemática"}, {"t": "Movimento Circular", "q": "Centrípeta aponta para:", "opts": ["a) Tangente", "b) Centro", "c) Fora", "d) Cima", "e) Baixo"], "gab": "b) Centro da trajetória", "src": "UFSC 2022 — Q.19 (adaptada)", "d": "fis", "disc": "Física"}, {"t": "Dilatação", "q": "Barra 1m, α=12×10⁻⁶, ΔT=100°C. ΔL=", "opts": ["a) 0,12mm", "b) 0,6mm", "c) 1,2mm", "d) 12mm", "e) 120mm"], "gab": "c) 1,2mm", "src": "ENEM 2018 — Q.109 (adaptada)", "d": "fis", "disc": "Física"}, {"t": "Hidrocarboneto", "q": "C₂H₄ é um:", "opts": ["a) Alcano", "b) Alceno", "c) Alcino", "d) Aromático", "e) Cicloalcano"], "gab": "b) Alceno (etileno)", "src": "UFSC 2023 — Q.32 (adaptada)", "d": "qui", "disc": "Química"}, {"t": "Equil. Químico", "q": "Le Chatelier: aumentar [reagente]:", "opts": ["a) Desloca ←", "b) Desloca →", "c) Sem efeito", "d) Para reação", "e) Muda Keq"], "gab": "b) Desloca para produtos →", "src": "ENEM 2018 — Q.102 (adaptada)", "d": "qui", "disc": "Química"}, {"t": "Sistema Digestório", "q": "Digestão proteínas inicia no:", "opts": ["a) Boca", "b) Esôfago", "c) Estômago", "d) Intestino delgado", "e) Intestino grosso"], "gab": "c) Estômago (pepsina)", "src": "UFSM 2022 — Q.33 (adaptada)", "d": "bio", "disc": "Biologia"}, {"t": "Era Vargas", "q": "Estado Novo durou:", "opts": ["a) 1930-37", "b) 1937-45", "c) 1945-54", "d) 1954-64", "e) 1964-85"], "gab": "b) 1937-1945", "src": "UFSM 2023 — Q.36 (adaptada)", "d": "hum", "disc": "Humanas"}, {"t": "Anulação", "q": "Redação é anulada se:", "opts": ["a) < 7 linhas", "b) Foge ao tema", "c) Cópia texto base", "d) Todas anteriores", "e) Nenhuma"], "gab": "d) Todas as anteriores", "src": "Edital ENEM 2023", "d": "red", "disc": "Redação"}, {"t": "Preposições", "q": "Interested ___ science:", "opts": ["a) at", "b) on", "c) in", "d) for", "e) to"], "gab": "c) in", "src": "ENEM 2021 — Linguagens Q.4 (adaptada)", "d": "ing", "disc": "Inglês"}]}, {"name": "Outubro — Semana 3", "focus": "Revisão Humanas/Linguagens", "color": "#c0392b", "questions": [{"t": "Probabilidade", "q": "2 dados, soma 7:", "opts": ["a) 1/6", "b) 1/12", "c) 1/36", "d) 5/36", "e) 7/36"], "gab": "a) 1/6", "src": "ENEM 2018 — Q.161 (adaptada)", "d": "mat", "disc": "Matemática"}, {"t": "Permutação", "q": "4 pessoas em fila:", "opts": ["a) 4", "b) 8", "c) 12", "d) 24", "e) 48"], "gab": "d) 24", "src": "ENEM 2021 — Q.148 (adaptada)", "d": "mat", "disc": "Matemática"}, {"t": "MRU", "q": "Carro a 80km/h em 2h30min percorre:", "opts": ["a) 160km", "b) 180km", "c) 200km", "d) 240km", "e) 250km"], "gab": "c) 200km. d=80×2,5", "src": "UFSM 2022 — Prova 2, Q.8 (adaptada)", "d": "fis", "disc": "Física"}, {"t": "MRUV", "q": "Repouso, a=2m/s². Após 10s:", "opts": ["a) 5m/s", "b) 10m/s", "c) 15m/s", "d) 20m/s", "e) 25m/s"], "gab": "d) 20m/s. v=at", "src": "UFSM 2021 — Prova 2, Q.12 (adaptada)", "d": "fis", "disc": "Física"}, {"t": "Modelos Atômicos", "q": "Átomo como esfera maciça indivisível é modelo de:", "opts": ["a) Thomson", "b) Rutherford", "c) Bohr", "d) Dalton", "e) Schrödinger"], "gab": "d) Dalton (1803)", "src": "ENEM 2018 — Q.104 (adaptada)", "d": "qui", "disc": "Química"}, {"t": "Tab. Periódica", "q": "Grupo 1A são:", "opts": ["a) Halogênios", "b) Gases Nobres", "c) Metais Alcalinos", "d) Calcogênios", "e) Transição"], "gab": "c) Metais Alcalinos", "src": "UFSC 2022 — Vest. Q.31 (adaptada)", "d": "qui", "disc": "Química"}, {"t": "Sistema Circulatório", "q": "Hemácias transportam:", "opts": ["a) Anticorpos", "b) O₂", "c) Hormônios", "d) Glicose", "e) Ureia"], "gab": "b) O₂ (hemoglobina)", "src": "UFSC 2022 — Q.30 (adaptada)", "d": "bio", "disc": "Biologia"}, {"t": "Regência", "q": "Regência CORRETA:", "opts": ["a) Assisti o filme", "b) Assisti ao filme", "c) Aspirei ao ar", "d) Prefiro mais café", "e) Obedeço ele"], "gab": "b) Assisti ao filme", "src": "UFSM 2022 — Ling. Q.6 (adaptada)", "d": "por", "disc": "Português"}, {"t": "Proposta", "q": "Quantos elementos na proposta nota máxima?", "opts": ["a) 2", "b) 3", "c) 4", "d) 5", "e) 6"], "gab": "d) 5: Agente, Ação, Meio, Finalidade, Detalhamento", "src": "Cartilha ENEM 2023 — MEC/INEP", "d": "red", "disc": "Redação"}, {"t": "Colonização", "q": "Tratado de Tordesilhas dividiu entre:", "opts": ["a) Espanha/França", "b) Portugal/Inglaterra", "c) Portugal/Espanha", "d) Inglaterra/França", "e) Holanda/Portugal"], "gab": "c) Portugal e Espanha", "src": "ENEM 2019 — Humanas Q.67 (adaptada)", "d": "hum", "disc": "Humanas"}]}, {"name": "Outubro — Semana 4", "focus": "Simulado Pré-ENEM", "color": "#c0392b", "questions": [{"t": "Logaritmo", "q": "log₂(x)=5. x=", "opts": ["a) 10", "b) 16", "c) 25", "d) 32", "e) 64"], "gab": "d) 32", "src": "ENEM 2018 — Q.165 (adaptada)", "d": "mat", "disc": "Matemática"}, {"t": "Geom. Espacial", "q": "Cilindro r=3,h=10,π≈3:", "opts": ["a) 90", "b) 180", "c) 270", "d) 360", "e) 810"], "gab": "c) 270 cm³", "src": "ENEM 2020 — Q.176 (adaptada)", "d": "mat", "disc": "Matemática"}, {"t": "Newton", "q": "F=20N, m=5kg. a=", "opts": ["a) 2", "b) 4", "c) 5", "d) 10", "e) 100"], "gab": "b) 4 m/s²", "src": "UFSM 2023 — Prova 2 Q.15 (adaptada)", "d": "fis", "disc": "Física"}, {"t": "Queda Livre", "q": "Queda livre g=10, 3s. v=", "opts": ["a) 10", "b) 20", "c) 30", "d) 40", "e) 50"], "gab": "c) 30m/s", "src": "UFSC 2023 — Q.18 (adaptada)", "d": "fis", "disc": "Física"}, {"t": "Combustão", "q": "CH₄+2O₂ produz:", "opts": ["a) CO+H₂", "b) CO₂+H₂O", "c) C+H₂O", "d) CO₂+H₂", "e) CH₃OH"], "gab": "b) CO₂ e H₂O", "src": "ENEM 2019 — Q.96 (adaptada)", "d": "qui", "disc": "Química"}, {"t": "Estequiometria", "q": "2H₂+O₂→2H₂O. 4mol H₂:", "opts": ["a) 1", "b) 2", "c) 4", "d) 6", "e) 8"], "gab": "c) 4 mol H₂O", "src": "UFSC 2023 — Q.35 (adaptada)", "d": "qui", "disc": "Química"}, {"t": "Sistema Nervoso", "q": "Sinapse é:", "opts": ["a) Tipo celular", "b) Junção neurônios", "c) Parte do cérebro", "d) Hormônio", "e) Músculo"], "gab": "b) Junção entre neurônios", "src": "ENEM 2019 — Q.116 (adaptada)", "d": "bio", "disc": "Biologia"}, {"t": "Iluminismo", "q": "Direitos naturais - filósofo:", "opts": ["a) Maquiavel", "b) Hobbes", "c) Locke", "d) Rousseau", "e) Montesquieu"], "gab": "c) John Locke", "src": "UFSC 2021 — Vest. Q.42 (adaptada)", "d": "hum", "disc": "Humanas"}, {"t": "Conectivos", "q": "Inadequado p/ conclusão:", "opts": ["a) Diante do exposto", "b) Nessa perspectiva", "c) Tipo assim", "d) É imperativo", "e) Em síntese"], "gab": "c) Coloquial", "src": "Cartilha ENEM 2023", "d": "red", "disc": "Redação"}, {"t": "Vocabulário", "q": "Although significa:", "opts": ["a) Porque", "b) Portanto", "c) Embora", "d) Enquanto", "e) Desde que"], "gab": "c) Embora", "src": "ENEM 2019 — Linguagens Q.5 (adaptada)", "d": "ing", "disc": "Inglês"}]}, {"name": "Novembro — Semana 1", "focus": "Simulado Final Exatas", "color": "#2c3e50", "questions": [{"t": "Matrizes", "q": "det[2,3;1,4]=", "opts": ["a) 2", "b) 5", "c) 8", "d) 11", "e) 14"], "gab": "b) 5", "src": "ENEM 2019 — Q.170 (adaptada)", "d": "mat", "disc": "Matemática"}, {"t": "Variância", "q": "Conjunto {2,4,4,4,6}. Variância:", "opts": ["a) 1", "b) 1,2", "c) 1,6", "d) 2", "e) 2,4"], "gab": "c) 1,6", "src": "ENEM 2021 — Q.152 (adaptada)", "d": "mat", "disc": "Matemática"}, {"t": "Calorimetria", "q": "200g água 20→70°C. Q=", "opts": ["a) 1000", "b) 5000", "c) 10000", "d) 14000", "e) 20000"], "gab": "c) 10000cal", "src": "UFSC 2021 — Q.19 (adaptada)", "d": "fis", "disc": "Física"}, {"t": "Lei de Ohm", "q": "12V, 3A. R=", "opts": ["a) 0,25Ω", "b) 4Ω", "c) 9Ω", "d) 15Ω", "e) 36Ω"], "gab": "b) 4Ω", "src": "UFSM 2023 — Q.22 (adaptada)", "d": "fis", "disc": "Física"}, {"t": "Soluções", "q": "2mol/500mL. C=", "opts": ["a) 1", "b) 2", "c) 4", "d) 0,5", "e) 0,004"], "gab": "c) 4 mol/L", "src": "UFSC 2022 — Q.36 (adaptada)", "d": "qui", "disc": "Química"}, {"t": "Ligações", "q": "NaCl é iônica pois:", "opts": ["a) Cov. apolar", "b) Cov. polar", "c) Iônica", "d) Metálica", "e) VdW"], "gab": "c) Iônica — transferência de elétrons", "src": "UFSC 2022 — Q.33 (adaptada)", "d": "qui", "disc": "Química"}, {"t": "Imunologia", "q": "Vacina contém:", "opts": ["a) Antibióticos", "b) Antígenos atenuados", "c) Anticorpos", "d) Soro", "e) Vitaminas"], "gab": "b) Antígenos atenuados/inativados", "src": "ENEM 2021 — Q.108 (adaptada)", "d": "bio", "disc": "Biologia"}, {"t": "Acentuação", "q": "Paroxítona terminada em -ão:", "opts": ["a) Sempre acentuada", "b) Nunca acentuada", "c) Acentuada se ditongo", "d) Acentuada (órgão)", "e) Depende"], "gab": "d) Acentuada (ex: órgão, bênção)", "src": "ENEM 2017 — Ling. Q.14 (adaptada)", "d": "por", "disc": "Português"}, {"t": "Comp. I", "q": "Comp. I avalia:", "opts": ["a) Argumentação", "b) Norma culta", "c) Tema", "d) Coesão", "e) Proposta"], "gab": "c) Compreensão do tema", "src": "INEP — Redação ENEM 2023", "d": "red", "disc": "Redação"}, {"t": "Rev. Industrial", "q": "1ª Rev. Ind. inovação:", "opts": ["a) Eletricidade", "b) Máq. vapor", "c) Petróleo", "d) Internet", "e) Robótica"], "gab": "b) Máquina a vapor", "src": "UFSM 2021 — Q.31 (adaptada)", "d": "hum", "disc": "Humanas"}]}, {"name": "Novembro — Semana 2", "focus": "Simulado Final Natureza", "color": "#2c3e50", "questions": [{"t": "Exponencial", "q": "2³×2⁴=", "opts": ["a) 2⁷", "b) 2¹²", "c) 4⁷", "d) 4¹²", "e) 2⁰"], "gab": "a) 2⁷=128", "src": "ENEM 2020 — Q.160 (adaptada)", "d": "mat", "disc": "Matemática"}, {"t": "Juros Compostos", "q": "R$1000, 10%/mês, 2 meses:", "opts": ["a) R$1100", "b) R$1200", "c) R$1210", "d) R$1220", "e) R$1250"], "gab": "c) R$1210", "src": "ENEM 2019 — Q.175 (adaptada)", "d": "mat", "disc": "Matemática"}, {"t": "Óptica", "q": "Lente convergente, imagem real:", "opts": ["a) No foco", "b) Entre foco/lente", "c) Além do foco", "d) Infinito", "e) Nunca"], "gab": "c) Além do foco", "src": "UFSC 2022 — Q.22 (adaptada)", "d": "fis", "disc": "Física"}, {"t": "Ondas", "q": "f=500Hz, λ=0,68m. v=", "opts": ["a) 170", "b) 340", "c) 500", "d) 680", "e) 735"], "gab": "b) 340m/s", "src": "UFSM 2022 — Q.20 (adaptada)", "d": "fis", "disc": "Física"}, {"t": "pH", "q": "pH=3 significa [H⁺]=", "opts": ["a) 3 mol/L", "b) 10⁻³ mol/L", "c) 10³ mol/L", "d) 0,3 mol/L", "e) 30 mol/L"], "gab": "b) 10⁻³ mol/L", "src": "ENEM 2020 — Q.101 (adaptada)", "d": "qui", "disc": "Química"}, {"t": "Oxidação", "q": "Oxidação é:", "opts": ["a) Ganho e⁻", "b) Perda e⁻", "c) Ganho p⁺", "d) Perda n⁰", "e) Nenhuma"], "gab": "b) Perda de elétrons", "src": "UFSC 2023 — Q.37 (adaptada)", "d": "qui", "disc": "Química"}, {"t": "Botânica", "q": "Xilema transporta:", "opts": ["a) Seiva elaborada", "b) Seiva bruta", "c) Hormônios", "d) Gametas", "e) Esporos"], "gab": "b) Seiva bruta (água e minerais)", "src": "UFSC 2023 — Q.31 (adaptada)", "d": "bio", "disc": "Biologia"}, {"t": "Biomas", "q": "Maior bioma BR:", "opts": ["a) Cerrado", "b) Mata Atl.", "c) Amazônia", "d) Caatinga", "e) Pampa"], "gab": "c) Amazônia ~49%", "src": "ENEM 2021 — Q.78 (adaptada)", "d": "hum", "disc": "Humanas"}, {"t": "Comp. II", "q": "Comp. II exige:", "opts": ["a) Gramática", "b) Tese clara", "c) Conectivos", "d) Proposta", "e) Título"], "gab": "b) Tese e repertório sociocultural", "src": "INEP — Redação ENEM 2023", "d": "red", "disc": "Redação"}, {"t": "Interpretação", "q": "'However' indica:", "opts": ["a) Adição", "b) Contraste", "c) Causa", "d) Tempo", "e) Conclusão"], "gab": "b) Contraste", "src": "ENEM 2020 — Linguagens Q.3 (adaptada)", "d": "ing", "disc": "Inglês"}]}, {"name": "Novembro — Semana 3", "focus": "Simulado Final Humanas", "color": "#2c3e50", "questions": [{"t": "Distância", "q": "A(1,2) e B(4,6). d=", "opts": ["a) 3", "b) 4", "c) 5", "d) 6", "e) 7"], "gab": "c) 5", "src": "ENEM 2019 — Q.166 (adaptada)", "d": "mat", "disc": "Matemática"}, {"t": "Prob. Condicional", "q": "P(A)=0,6; P(B|A)=0,5. P(A∩B):", "opts": ["a) 0,1", "b) 0,2", "c) 0,3", "d) 0,5", "e) 1,1"], "gab": "c) 0,3", "src": "ENEM 2020 — Q.174 (adaptada)", "d": "mat", "disc": "Matemática"}, {"t": "Potência", "q": "Chuveiro 5500W, 15min/dia, 30d:", "opts": ["a) 27,5kWh", "b) 41,25kWh", "c) 55kWh", "d) 82,5kWh", "e) 165kWh"], "gab": "b) 41,25kWh", "src": "ENEM 2021 — Q.115 (adaptada)", "d": "fis", "disc": "Física"}, {"t": "Magnetismo", "q": "Campo de fio reto - regra:", "opts": ["a) Mão esquerda", "b) Mão direita", "c) Lenz", "d) Ampère", "e) Faraday"], "gab": "b) Mão direita", "src": "UFSC 2022 — Q.24 (adaptada)", "d": "fis", "disc": "Física"}, {"t": "Ácido-Base", "q": "HCl é ácido forte pois:", "opts": ["a) Fraca ionização", "b) Ionização total", "c) É orgânico", "d) Tem OH⁻", "e) É neutro"], "gab": "b) Ionização total em água", "src": "UFSM 2022 — Q.28 (adaptada)", "d": "qui", "disc": "Química"}, {"t": "Cinética", "q": "Catalisador:", "opts": ["a) Desloca equilíbrio", "b) Aumenta ΔH", "c) Diminui Ea", "d) Aumenta concentração", "e) Muda Keq"], "gab": "c) Diminui energia de ativação", "src": "ENEM 2021 — Q.103 (adaptada)", "d": "qui", "disc": "Química"}, {"t": "Biomas", "q": "Cerrado é caracterizado por:", "opts": ["a) Chuva abundante", "b) Árvores tortuosas", "c) Neve", "d) Mangue", "e) Areia"], "gab": "b) Vegetação com árvores tortuosas", "src": "ENEM 2020 — Q.111 (adaptada)", "d": "bio", "disc": "Biologia"}, {"t": "Conjunções", "q": "Embora indica:", "opts": ["a) Causa", "b) Consequência", "c) Concessão", "d) Condição", "e) Proporção"], "gab": "c) Concessão", "src": "ENEM 2020 — Ling. Q.10 (adaptada)", "d": "por", "disc": "Português"}, {"t": "Comp. III", "q": "Comp. III avalia:", "opts": ["a) Gramática", "b) Tema", "c) Argumentação", "d) Coesão", "e) Proposta"], "gab": "c) Seleção e organização dos argumentos", "src": "INEP — Redação ENEM 2023", "d": "red", "disc": "Redação"}, {"t": "Globalização", "q": "Globalização intensificou-se após:", "opts": ["a) 1ª Guerra", "b) 2ª Guerra", "c) Guerra Fria", "d) Queda Muro Berlim", "e) Rev. Francesa"], "gab": "d) Queda do Muro de Berlim (1989)", "src": "ENEM 2020 — Humanas Q.72 (adaptada)", "d": "hum", "disc": "Humanas"}]}, {"name": "Novembro — Semana 4", "focus": "Aquecimento Pré-Prova", "color": "#2c3e50", "questions": [{"t": "Combinação", "q": "C(5,2)=", "opts": ["a) 5", "b) 8", "c) 10", "d) 15", "e) 20"], "gab": "c) 10", "src": "ENEM 2021 — Q.167 (adaptada)", "d": "mat", "disc": "Matemática"}, {"t": "Arranjo", "q": "A(5,3)=", "opts": ["a) 10", "b) 20", "c) 30", "d) 60", "e) 120"], "gab": "d) 60", "src": "ENEM 2020 — Q.168 (adaptada)", "d": "mat", "disc": "Matemática"}, {"t": "Lançamento", "q": "Projétil 45° tem alcance max pois:", "opts": ["a) Menor atrito", "b) sen(90°)=1", "c) Maior altura", "d) Menor tempo", "e) Gravidade anula"], "gab": "b) sen(2×45°)=1", "src": "UFSM 2023 — Q.19 (adaptada)", "d": "fis", "disc": "Física"}, {"t": "Espelhos", "q": "Espelho côncavo, objeto no CC:", "opts": ["a) Virtual aum.", "b) Real aum.", "c) Real mesmo tam.", "d) Real reduzida", "e) Não forma"], "gab": "c) Real, mesmo tamanho", "src": "UFSM 2023 — Q.24 (adaptada)", "d": "fis", "disc": "Física"}, {"t": "Termoq.", "q": "Reação exotérmica tem ΔH:", "opts": ["a) > 0", "b) < 0", "c) = 0", "d) = 1", "e) Indefinido"], "gab": "b) Negativo (< 0)", "src": "UFSC 2022 — Q.34 (adaptada)", "d": "qui", "disc": "Química"}, {"t": "Orgânica", "q": "CH₃OH é:", "opts": ["a) Aldeído", "b) Cetona", "c) Álcool", "d) Ácido", "e) Éster"], "gab": "c) Álcool (metanol)", "src": "ENEM 2019 — Q.97 (adaptada)", "d": "qui", "disc": "Química"}, {"t": "Parasitologia", "q": "Dengue é transmitida por:", "opts": ["a) Barbeiro", "b) Aedes aegypti", "c) Anopheles", "d) Carrapato", "e) Pulga"], "gab": "b) Aedes aegypti", "src": "ENEM 2019 — Q.118 (adaptada)", "d": "bio", "disc": "Biologia"}, {"t": "Urbanização", "q": "Êxodo rural é:", "opts": ["a) Rural→Rural", "b) Urbano→Rural", "c) Rural→Urbano", "d) Urbano→Urbano", "e) Internacional"], "gab": "c) Migração Rural→Urbano", "src": "ENEM 2019 — Humanas Q.74 (adaptada)", "d": "hum", "disc": "Humanas"}, {"t": "Comp. IV", "q": "Comp. IV é sobre:", "opts": ["a) Tema", "b) Repertório", "c) Argumentos", "d) Coesão textual", "e) Proposta"], "gab": "d) Mecanismos de coesão textual", "src": "INEP — Redação ENEM 2023", "d": "red", "disc": "Redação"}, {"t": "Gramática", "q": "Passado de 'go':", "opts": ["a) Goed", "b) Gone", "c) Went", "d) Goes", "e) Going"], "gab": "c) Went", "src": "ENEM 2018 — Linguagens Q.7 (adaptada)", "d": "ing", "disc": "Inglês"}]}];
+
+// ===== SPRINT 1: Simulados Interativos (6.1 + 6.2) =====
+window.simState={};
+window.simTimers={};
+
+function scoreColor(v){return v<50?'#e74c3c':v<70?'#f39c12':'#27ae60';}
+
+function toggleSim(el){
+  const body=el.nextElementSibling;
+  const arrow=el.querySelector('.arrow-icon');
+  body.classList.toggle('open');
+  arrow.classList.toggle('open');
+  const wi=parseInt(el.dataset.wi);
+  if(body.classList.contains('open')){
+    if(!window.simState[wi]) window.simState[wi]={respostas:{},acertos:0,concluido:false,startTime:Date.now()};
+    if(!window.simState[wi].concluido) startSimTimer(wi);
+  } else {
+    stopSimTimer(wi);
+  }
+}
+
+function startSimTimer(wi){
+  if(window.simTimers[wi]) return;
+  const ss=window.simState[wi]; if(!ss||ss.concluido) return;
+  window.simTimers[wi]=setInterval(()=>{
+    const el=document.getElementById('timer_'+wi); if(!el) return;
+    const e=Math.floor((Date.now()-ss.startTime)/1000);
+    el.textContent=Math.floor(e/60).toString().padStart(2,'0')+':'+( e%60).toString().padStart(2,'0');
+  },1000);
+}
+
+function stopSimTimer(wi){
+  if(window.simTimers[wi]){clearInterval(window.simTimers[wi]);window.simTimers[wi]=null;}
+}
+
+function responder(wi,qi,oi){
+  if(!window.simState[wi]) window.simState[wi]={respostas:{},acertos:0,concluido:false,startTime:Date.now()};
+  const ss=window.simState[wi];
+  if(ss.concluido||ss.respostas[qi]!==undefined) return;
+  ss.respostas[qi]=oi;
+  const q=weeks[wi].questions[qi];
+  const corretaIdx=q.opts.findIndex(o=>o.trim()[0].toLowerCase()===q.gab.trim()[0].toLowerCase());
+  const acertou=(oi===corretaIdx);
+  if(acertou) ss.acertos++;
+  q.opts.forEach((_,i)=>{
+    const el=document.getElementById('opt_'+wi+'_'+qi+'_'+i); if(!el) return;
+    if(i===oi && !acertou) el.classList.add('wrong');
+    if(i===corretaIdx) el.classList.add('correct');
+    el.classList.add('locked');
+    const rb=el.querySelector('input'); if(rb) rb.disabled=true;
+  });
+  const gabEl=document.getElementById('gab_'+wi+'_'+qi);
+  if(gabEl) gabEl.style.display='block';
+  const totalR=Object.keys(ss.respostas).length;
+  if(totalR===weeks[wi].questions.length && !ss.concluido){
+    ss.concluido=true; stopSimTimer(wi);
+    const e=Math.floor((Date.now()-ss.startTime)/1000);
+    const tempo=Math.floor(e/60).toString().padStart(2,'0')+':'+(e%60).toString().padStart(2,'0');
+    showSimScore(wi,ss.acertos,totalR,tempo);
+    salvarSimulado(wi,ss);
+  }
+}
+
+function showSimScore(wi,acertos,total,tempo){
+  const el=document.getElementById('scoreCard_'+wi); if(!el) return;
+  const pct=Math.round(acertos/total*100);
+  const cor=scoreColor(pct);
+  const msg=pct>=70?'✅ Ótimo! Meta atingida.':pct>=50?'⚠️ Em progresso. Continue!':'❌ Abaixo da meta. Revise os erros.';
+  const discStats={}; weeks[wi].questions.forEach((q,qi)=>{
+    const ss=window.simState[wi];
+    if(!discStats[q.disc]) discStats[q.disc]={c:0,t:0};
+    discStats[q.disc].t++;
+    const corretaIdx=q.opts.findIndex(o=>o.trim()[0].toLowerCase()===q.gab.trim()[0].toLowerCase());
+    if(ss.respostas[qi]===corretaIdx) discStats[q.disc].c++;
+  });
+  const discHtml=Object.entries(discStats).map(([d,v])=>`<span style="font-size:.72rem;background:#fff;padding:1px 6px;border-radius:8px;margin:1px;">${d}: ${v.c}/${v.t}</span>`).join('');
+  el.innerHTML=`<div class="sim-score-card"><div class="sim-score-num" style="color:${cor};">${acertos}/${total}</div><div class="sim-score-sub">${pct}% de acerto &nbsp;·&nbsp; Tempo: ${tempo}</div><div style="margin-top:.4rem;">${msg}</div><div style="margin-top:.5rem;flex-wrap:wrap;display:flex;justify-content:center;gap:2px;">${discHtml}</div></div>`;
+}
+
+function salvarSimulado(wi,ss){
+  try{const d=JSON.parse(localStorage.getItem('enzo_plano')||'{}');d.simulados=d.simulados||{};d.simulados[wi]=ss;localStorage.setItem('enzo_plano',JSON.stringify(d));}catch(e){}
+}
+
+const simC=document.getElementById('simContainer');
+weeks.forEach((w,wi)=>{
+  let h=`<div class="sim-month"><div class="sim-header" onclick="toggleSim(this)" data-wi="${wi}" style="background:${w.color}"><h3>${w.name} — ${w.focus}</h3><span class="sim-timer" id="timer_${wi}">00:00</span><span class="arrow-icon">▼</span></div><div class="sim-body">`;
+  h+=`<div id="scoreCard_${wi}"></div>`;
+  w.questions.forEach((q,qi)=>{
+    h+=`<div class="q-block ${q.d}"><span class="q-num">Questão ${qi+1}</span><span class="q-disc ${q.d}">${q.disc}</span><span class="week-tag">${q.t}</span><div class="q-text">${q.q}</div><div class="q-opts">`;
+    q.opts.forEach((o,oi)=>{
+      h+=`<div class="q-radio-opt" id="opt_${wi}_${qi}_${oi}" onclick="responder(${wi},${qi},${oi})"><input type="radio" name="q_${wi}_${qi}" value="${oi}" onclick="event.stopPropagation();responder(${wi},${qi},${oi})">${o}</div>`;
+    });
+    h+=`</div><div class="gab-box-v2" id="gab_${wi}_${qi}" style="display:none;">${q.gab}<br><em style="font-size:.75rem;color:#555;font-weight:400;">Fonte: ${q.src}</em></div></div>`;
+  });
+  h+=`</div></div>`;
+  simC.innerHTML+=h;
+});
+
+// ===== SPRINT 1: localStorage + Cadastro + Diagnóstico + Redação + Cumprimento =====
+
+// 1.9 — localStorage helpers
+function saveData(key,val){try{const d=JSON.parse(localStorage.getItem('enzo_plano')||'{}');d[key]=val;localStorage.setItem('enzo_plano',JSON.stringify(d));}catch(e){}}
+function loadData(key,def){try{const d=JSON.parse(localStorage.getItem('enzo_plano')||'{}');return d[key]!==undefined?d[key]:def;}catch(e){return def;}}
+
+function exportarJSON(){
+  const data=localStorage.getItem('enzo_plano')||'{}';
+  const a=document.createElement('a');
+  a.href='data:application/json;charset=utf-8,'+encodeURIComponent(data);
+  a.download='plano_enzo_'+new Date().toISOString().slice(0,10)+'.json';
+  a.click();
+}
+function importarJSON(){document.getElementById('importFile').click();}
+function lerArquivoImport(e){
+  const f=e.target.files[0]; if(!f) return;
+  const r=new FileReader();
+  r.onload=ev=>{try{JSON.parse(ev.target.result);localStorage.setItem('enzo_plano',ev.target.result);alert('Importado! Recarregando...');location.reload();}catch(err){alert('JSON inválido.');}};
+  r.readAsText(f);
+}
+
+// 1.2 — Campos editáveis inline
+function makeEditable(el){
+  if(el.querySelector('input')) return;
+  const orig=el.textContent, field=el.dataset.field;
+  const inp=document.createElement('input');
+  inp.type='text'; inp.value=orig;
+  inp.style.cssText='font-size:.9rem;font-weight:500;border:1px solid var(--acc);border-radius:4px;padding:2px 6px;width:100%;background:#fff;';
+  el.textContent=''; el.appendChild(inp); inp.focus(); inp.select();
+  const save=()=>{
+    const v=inp.value.trim()||orig;
+    el.textContent=v;
+    if(field){const p=loadData('perfil',{});p[field]=v;saveData('perfil',p);}
+    if(field==='nome'){const h2=document.querySelector('.profile-info h2');if(h2)h2.textContent=v;}
+  };
+  inp.onblur=save;
+  inp.onkeydown=e=>{if(e.key==='Enter')save();if(e.key==='Escape'){el.textContent=orig;}};
+}
+
+// 1.3 — Dropdown de curso dinâmico
+const cortesPorCurso={
+  'Medicina':{ufsm:'97/120',ufsc:'~68 pts',sisu:'~770-820'},
+  'Direito':{ufsm:'72/120',ufsc:'~45 pts',sisu:'~680-720'},
+  'Engenharia Civil':{ufsm:'65/120',ufsc:'~40 pts',sisu:'~640-680'},
+  'Engenharia Mecânica':{ufsm:'68/120',ufsc:'~42 pts',sisu:'~650-690'},
+  'Engenharia de Produção':{ufsm:'63/120',ufsc:'~38 pts',sisu:'~630-670'},
+  'Arquitetura e Urbanismo':{ufsm:'70/120',ufsc:'~44 pts',sisu:'~660-700'},
+  'Odontologia':{ufsm:'85/120',ufsc:'~55 pts',sisu:'~740-780'},
+  'Farmácia':{ufsm:'60/120',ufsc:'~35 pts',sisu:'~620-660'},
+  'Enfermagem':{ufsm:'55/120',ufsc:'~30 pts',sisu:'~600-640'},
+  'Psicologia':{ufsm:'68/120',ufsc:'~42 pts',sisu:'~650-700'},
+  'Administração':{ufsm:'58/120',ufsc:'~33 pts',sisu:'~610-650'},
+  'Ciência da Computação':{ufsm:'62/120',ufsc:'~37 pts',sisu:'~630-670'},
+  'Nutrição':{ufsm:'60/120',ufsc:'~35 pts',sisu:'~620-660'},
+  'Fisioterapia':{ufsm:'65/120',ufsc:'~40 pts',sisu:'~640-680'},
+  'Biomedicina':{ufsm:'70/120',ufsc:'~43 pts',sisu:'~660-700'},
+  'Veterinária':{ufsm:'75/120',ufsc:'~48 pts',sisu:'~700-740'},
+};
+(function(){
+  const sel=document.getElementById('cursoSelect');
+  if(!sel) return;
+  sel.addEventListener('change',function(){
+    const c=cortesPorCurso[this.value]||cortesPorCurso['Medicina'];
+    document.getElementById('cursoLabel').textContent=this.value;
+    const tags=document.querySelectorAll('.hdr .tag');
+    if(tags[0]) tags[0].textContent='UFSM Corte: '+c.ufsm;
+    if(tags[1]) tags[1].textContent='UFSC Corte: '+c.ufsc;
+    if(tags[2]) tags[2].textContent='ENEM Corte '+this.value+': '+c.sisu;
+    saveData('curso',this.value);
+  });
+})();
+
+// 2.1/2.2 — Notas e gráficos dinâmicos
+window.notasState={ufsm:[33,17,23,54,27,55,44,67],ufsc:[19,56,43,55,49,56,77]};
+const ufsmKeys=['Mat','Fis','Qui','Bio','Por','Hum','Ing','Geo'];
+const ufscKeys=['Mat','Fis','Qui','Bio','Por','Hum','Lng'];
+
+function recalcScore(vest,idx,raw,_max){
+  const pct=Math.min(100,Math.max(0,Math.round(raw)));
+  window.notasState[vest][idx]=pct;
+  const keys=vest==='ufsm'?ufsmKeys:ufscKeys;
+  const prefix=vest==='ufsm'?'ufsm':'ufsc';
+  const bar=document.getElementById(prefix+keys[idx]+'Bar');
+  const pctEl=document.getElementById(prefix+keys[idx]+'Pct');
+  if(bar){bar.style.width=pct+'%';bar.style.background=scoreColor(pct);}
+  if(pctEl) pctEl.textContent=pct+'%';
+  updateDiagCharts();
+  saveData('notas',window.notasState);
+}
+
+function updateDiagCharts(){
+  if(window.ufsmChart){
+    window.ufsmChart.data.datasets[0].data=[...window.notasState.ufsm];
+    window.ufsmChart.data.datasets[0].backgroundColor=window.notasState.ufsm.map(v=>scoreColor(v));
+    window.ufsmChart.update();
+  }
+  if(window.ufscChart){
+    window.ufscChart.data.datasets[0].data=[...window.notasState.ufsc];
+    window.ufscChart.data.datasets[0].backgroundColor=window.notasState.ufsc.map(v=>scoreColor(v));
+    window.ufscChart.update();
+  }
+  if(window.radarChart){
+    const um=window.notasState.ufsm; const uc=window.notasState.ufsc;
+    const urData=[um[0],um[1],um[2],um[3],um[4],um[5],um[6],50,35];
+    const ucData=[uc[0],uc[1],uc[2],uc[3],uc[4],uc[5],uc[6],63,40];
+    window.radarChart.data.datasets[0].data=urData;
+    window.radarChart.data.datasets[1].data=ucData;
+    window.radarChart.update();
+  }
+}
+
+// 3.1 — Notas de redação
+window.ufscRedData=[1.5,1.75,1.5,1.5];
+window.enemCompData=[120,140,120,120,100];
+
+function updateUfscRed(idx,v){
+  v=Math.min(2.5,Math.max(0,v));
+  window.ufscRedData[idx]=v;
+  const pct=Math.round(v/2.5*100);
+  const bar=document.getElementById('ufscRedBar'+idx);
+  const pctEl=document.getElementById('ufscRedPct'+idx);
+  if(bar){bar.style.width=pct+'%';bar.style.background=scoreColor(pct);}
+  if(pctEl) pctEl.textContent=pct+'%';
+  const tot=window.ufscRedData.reduce((a,b)=>a+b,0);
+  const tEl=document.getElementById('ufscRedTotal');
+  if(tEl) tEl.textContent=tot.toFixed(2);
+  saveData('ufscRed',window.ufscRedData);
+}
+
+function updateEnemComp(idx,v){
+  v=Math.min(200,Math.max(0,Math.round(v/40)*40));
+  window.enemCompData[idx]=v;
+  const pct=Math.round(v/200*100);
+  const bar=document.getElementById('enemCompBar'+idx);
+  const pctEl=document.getElementById('enemCompPct'+idx);
+  if(bar){bar.style.width=pct+'%';bar.style.background=scoreColor(pct);}
+  if(pctEl) pctEl.textContent=v;
+  const tot=window.enemCompData.reduce((a,b)=>a+b,0);
+  const tEl=document.getElementById('enemRedTotal');
+  if(tEl) tEl.textContent=tot;
+  if(window.enemCompChart){
+    window.enemCompChart.data.datasets[0].data=[...window.enemCompData];
+    window.enemCompChart.update();
+  }
+  saveData('enemComp',window.enemCompData);
+}
+
+// 5.6 — Cumprimento semanal
+const cumprBlocos=[
+  {dia:'Segunda',hora:'18h-19h30',disc:'Matemática',key:'seg1'},
+  {dia:'Segunda',hora:'19h30-21h',disc:'Revisão Exatas',key:'seg2'},
+  {dia:'Terça',hora:'15h-17h',disc:'Matemática',key:'ter1'},
+  {dia:'Terça',hora:'17h-18h',disc:'Física',key:'ter2'},
+  {dia:'Terça',hora:'18h-19h30',disc:'Física (Exerc.)',key:'ter3'},
+  {dia:'Terça',hora:'19h30-21h',disc:'Bio/Qui',key:'ter4'},
+  {dia:'Quarta',hora:'17h-18h',disc:'Química',key:'qua1'},
+  {dia:'Quarta',hora:'18h-19h30',disc:'Química (Exerc.)',key:'qua2'},
+  {dia:'Quarta',hora:'19h30-21h',disc:'Bio/Revis.',key:'qua3'},
+  {dia:'Quinta',hora:'18h-19h30',disc:'Português',key:'qui1'},
+  {dia:'Quinta',hora:'19h30-21h',disc:'Humanas',key:'qui2'},
+  {dia:'Sexta',hora:'18h-19h30',disc:'Redação',key:'sex1'},
+  {dia:'Sexta',hora:'19h30-21h',disc:'Revisão Geral',key:'sex2'},
+  {dia:'Sábado',hora:'8h-12h',disc:'Simulado',key:'sab1'},
+  {dia:'Sábado',hora:'13h-15h',disc:'Correção Simul.',key:'sab2'},
+];
+
+function initCumprimento(){
+  const grid=document.getElementById('cumprGrid'); if(!grid) return;
+  const saved=loadData('cumprimento',{});
+  grid.innerHTML=cumprBlocos.map(b=>{
+    const done=!!saved[b.key];
+    return `<div class="cumpr-item${done?' done':''}" id="ci_${b.key}" onclick="toggleCumpr('${b.key}')"><input type="checkbox"${done?' checked':''} onclick="event.stopPropagation();toggleCumpr('${b.key}')"><div><div style="font-weight:600;">${b.dia} ${b.hora}</div><div style="color:var(--mut)">${b.disc}</div></div></div>`;
+  }).join('');
+  updateCumprBar();
+}
+
+function toggleCumpr(key){
+  const saved=loadData('cumprimento',{});
+  saved[key]=!saved[key];
+  saveData('cumprimento',saved);
+  const item=document.getElementById('ci_'+key);
+  if(item){item.classList.toggle('done',!!saved[key]);const cb=item.querySelector('input');if(cb)cb.checked=!!saved[key];}
+  updateCumprBar();
+}
+
+function resetCumprimento(){
+  if(!confirm('Resetar o cumprimento desta semana?')) return;
+  saveData('cumprimento',{});
+  initCumprimento();
+}
+
+function updateCumprBar(){
+  const saved=loadData('cumprimento',{});
+  const done=cumprBlocos.filter(b=>saved[b.key]).length;
+  const pct=Math.round(done/cumprBlocos.length*100);
+  const bar=document.getElementById('cumprBarFill');
+  const pctEl=document.getElementById('cumprPct');
+  if(bar) bar.style.width=pct+'%';
+  if(pctEl) pctEl.textContent=pct+'% cumprido ('+done+'/'+cumprBlocos.length+' blocos)';
+}
+
+// ===== INIT: Restaurar estado do localStorage =====
+(function initSprint1(){
+  // Perfil
+  const perfil=loadData('perfil',{});
+  if(perfil.nome){const h2=document.querySelector('.profile-info h2');if(h2)h2.textContent=perfil.nome;}
+
+  // Curso
+  const curso=loadData('curso',null);
+  if(curso){
+    const sel=document.getElementById('cursoSelect');
+    if(sel){sel.value=curso;document.getElementById('cursoLabel').textContent=curso;}
+    const c=cortesPorCurso[curso];
+    if(c){const tags=document.querySelectorAll('.hdr .tag');if(tags[0])tags[0].textContent='UFSM Corte: '+c.ufsm;if(tags[1])tags[1].textContent='UFSC Corte: '+c.ufsc;if(tags[2])tags[2].textContent='ENEM Corte '+curso+': '+c.sisu;}
+  }
+
+  // Notas diagnóstico
+  const notas=loadData('notas',null);
+  if(notas){
+    window.notasState=notas;
+    notas.ufsm.forEach((v,i)=>{
+      const bar=document.getElementById('ufsm'+ufsmKeys[i]+'Bar');
+      const pct=document.getElementById('ufsm'+ufsmKeys[i]+'Pct');
+      if(bar){bar.style.width=v+'%';bar.style.background=scoreColor(v);}
+      if(pct) pct.textContent=v+'%';
+      const inp=document.getElementById('ufsm'+ufsmKeys[i]+'N'); if(inp) inp.value=v;
+    });
+    notas.ufsc.forEach((v,i)=>{
+      const bar=document.getElementById('ufsc'+ufscKeys[i]+'Bar');
+      const pct=document.getElementById('ufsc'+ufscKeys[i]+'Pct');
+      if(bar){bar.style.width=v+'%';bar.style.background=scoreColor(v);}
+      if(pct) pct.textContent=v+'%';
+    });
+  }
+
+  // Notas redação UFSC
+  const ufscRed=loadData('ufscRed',null);
+  if(ufscRed){
+    window.ufscRedData=ufscRed;
+    ufscRed.forEach((v,i)=>{
+      const pct=Math.round(v/2.5*100);
+      const bar=document.getElementById('ufscRedBar'+i);
+      const pctEl=document.getElementById('ufscRedPct'+i);
+      if(bar){bar.style.width=pct+'%';bar.style.background=scoreColor(pct);}
+      if(pctEl) pctEl.textContent=pct+'%';
+    });
+    const tEl=document.getElementById('ufscRedTotal');
+    if(tEl) tEl.textContent=ufscRed.reduce((a,b)=>a+b,0).toFixed(2);
+  }
+
+  // Notas ENEM competências
+  const enemComp=loadData('enemComp',null);
+  if(enemComp){
+    window.enemCompData=enemComp;
+    enemComp.forEach((v,i)=>{
+      const pct=Math.round(v/200*100);
+      const bar=document.getElementById('enemCompBar'+i);
+      const pctEl=document.getElementById('enemCompPct'+i);
+      if(bar){bar.style.width=pct+'%';bar.style.background=scoreColor(pct);}
+      if(pctEl) pctEl.textContent=v;
+    });
+    const tEl=document.getElementById('enemRedTotal');
+    if(tEl) tEl.textContent=enemComp.reduce((a,b)=>a+b,0);
+  }
+
+  // Cumprimento
+  initCumprimento();
+})();
+
+</script>
+<button class="pom-fab" onclick="togglePomodoro()" title="Timer Pomodoro">🍅</button>
+<div class="pom-widget" id="pomWidget">
+  <div class="pom-time" id="pomTime">25:00</div>
+  <div class="pom-label" id="pomLabel">Foco 🎯</div>
+  <div>
+    <button class="pom-btn" style="background:var(--ok);color:#fff;" onclick="iniciarPomodoro()">▶</button>
+    <button class="pom-btn" style="background:var(--warn);color:#fff;" onclick="pausarPomodoro()">⏸</button>
+    <button class="pom-btn" style="background:#eee;" onclick="resetPomodoro()">↺</button>
+  </div>
+  <div class="pom-count" id="pomCount">🍅 0 pomodoros hoje</div>
+</div>
+</body>
+</html>
