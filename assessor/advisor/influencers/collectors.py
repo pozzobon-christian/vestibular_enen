@@ -107,32 +107,64 @@ def x_recent_search(query: str, max_results: int = 50) -> list[Post]:
 
 _YT_CANON = re.compile(r'<link rel="canonical" href="https://www\.youtube\.com/channel/(UC[\w-]+)"')
 _YT_EXTERNAL = re.compile(r'"externalId":"(UC[\w-]+)"')
-_YT_SEARCH = re.compile(r'"channelRenderer":\{"channelId":"(UC[\w-]+)".*?"canonicalBaseUrl":"/(@[^"]+)"', re.S)
+_YT_ANY = re.compile(r'"channelId":"(UC[\w-]+)"')
+_YT_SEARCH = re.compile(r'"channelRenderer":\{"channelId":"(UC[\w-]+)"')
+_YT_HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) " + UA,
+               "Accept-Language": "pt-BR,pt;q=0.9,en;q=0.8", "Cookie": "CONSENT=YES+1; SOCS=CAI"}
 
 
-def resolve_youtube_channel(handle_or_name: str) -> tuple[str, str] | None:
-    """Devolve (channel_id, @handle). Tenta a página do @handle (canonical /
-    externalId, que são do próprio canal); se falhar, busca pelo nome e pega o
-    primeiro resultado de canal."""
-    h = {"User-Agent": "Mozilla/5.0 " + UA, "Accept-Language": "pt-BR,pt;q=0.9,en;q=0.8"}
+def youtube_feed_ok(channel_id: str) -> bool:
+    r = _req().get(f"https://www.youtube.com/feeds/videos.xml?channel_id={channel_id}",
+                   headers=_YT_HEADERS, timeout=20)
+    return r.status_code == 200 and "<entry>" in r.text
+
+
+def youtube_candidates(handle_or_name: str) -> list[str]:
+    """IDs candidatos em ordem de confiança: página do @handle (externalId,
+    canonical, demais channelId) e depois busca por nome (canais)."""
+    cands: list[str] = []
+    def add(ids):
+        for c in ids:
+            if c not in cands:
+                cands.append(c)
     if handle_or_name.startswith("@"):
-        r = _req().get(f"https://www.youtube.com/{handle_or_name}", headers=h, timeout=20)
+        try:
+            r = _req().get(f"https://www.youtube.com/{handle_or_name}", headers=_YT_HEADERS, timeout=20)
+            if r.status_code == 200:
+                add(_YT_EXTERNAL.findall(r.text)); add(_YT_CANON.findall(r.text)); add(_YT_ANY.findall(r.text)[:5])
+        except Exception:  # noqa: BLE001
+            pass
+    try:
+        r = _req().get("https://www.youtube.com/results",
+                       params={"search_query": handle_or_name.lstrip("@"), "sp": "EgIQAg%3D%3D"},
+                       headers=_YT_HEADERS, timeout=20)
         if r.status_code == 200:
-            m = _YT_CANON.search(r.text) or _YT_EXTERNAL.search(r.text)
-            if m:
-                return m.group(1), handle_or_name
-    q = handle_or_name.lstrip("@")
-    r = _req().get("https://www.youtube.com/results", params={"search_query": q, "sp": "EgIQAg%3D%3D"},
-                   headers=h, timeout=20)
-    r.raise_for_status()
-    m = _YT_SEARCH.search(r.text)
-    return (m.group(1), m.group(2)) if m else None
+            add(_YT_SEARCH.findall(r.text)[:3])
+    except Exception:  # noqa: BLE001
+        pass
+    return cands
+
+
+def resolve_youtube_channel(*queries: str) -> str | None:
+    """Primeiro candidato cujo feed RSS responde com vídeos. Nunca devolve um
+    ID não verificado."""
+    seen: set[str] = set()
+    for q in queries:
+        if not q:
+            continue
+        for cid in youtube_candidates(q):
+            if cid in seen:
+                continue
+            seen.add(cid)
+            if youtube_feed_ok(cid):
+                return cid
+    return None
 
 
 def youtube_channel_uploads(channel_id: str) -> list[Post]:
     from ..data.market import parse_rss
     r = _req().get(f"https://www.youtube.com/feeds/videos.xml?channel_id={channel_id}",
-                   headers={"User-Agent": UA}, timeout=20)
+                   headers=_YT_HEADERS, timeout=20)
     r.raise_for_status()
     out = []
     for it in parse_rss(r.text, limit=30):

@@ -31,12 +31,13 @@ def resolve_youtube_feed(inf, feed: str) -> str:
     cid = feed.split(":", 1)[1]
     if cid.startswith("UC"):
         return cid
-    res = collectors.resolve_youtube_channel(cid) or collectors.resolve_youtube_channel(inf.name.split("(")[0].strip())
-    if not res:
+    name = inf.name.split("(")[0].strip()
+    alt = inf.name[inf.name.find("(") + 1:inf.name.find(")")] if "(" in inf.name else ""
+    channel_id = collectors.resolve_youtube_channel(cid, alt, name)
+    if not channel_id:
         raise ValueError(f"canal não encontrado para {cid} / {inf.name}")
-    channel_id, handle = res
     inf.feeds = [f"youtube:{channel_id}" if f == feed else f for f in inf.feeds]
-    inf.notes = (inf.notes + f" | resolvido: {handle} -> {channel_id}").strip(" |")
+    inf.notes = (inf.notes + f" | resolvido: {cid} -> {channel_id}").strip(" |")
     return channel_id
 
 

@@ -105,6 +105,5 @@ def test_yahoo_parser_and_youtube_regex():
     html = '<link rel="canonical" href="https://www.youtube.com/channel/UCabc_123-x">'
     assert _YT_CANON.search(html).group(1) == "UCabc_123-x"
     assert _YT_EXTERNAL.search('{"externalId":"UCzzz"}').group(1) == "UCzzz"
-    page = '{"channelRenderer":{"channelId":"UC111","title":{},"navigationEndpoint":{"browseEndpoint":{"canonicalBaseUrl":"/@canal"}}}}'
-    m = _YT_SEARCH.search(page)
-    assert m.group(1) == "UC111" and m.group(2) == "@canal"
+    page = '{"channelRenderer":{"channelId":"UC111"}} {"channelRenderer":{"channelId":"UC222"}}'
+    assert _YT_SEARCH.findall(page) == ["UC111", "UC222"]
