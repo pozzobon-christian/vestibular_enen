@@ -36,7 +36,8 @@
       "ganho_possivel_brl": 15.8,
       "ganho_possivel_pct": 0.1551,
       "risco_pct": -0.0775,
-      "razao_ganho_risco": 2.0
+      "razao_ganho_risco": 2.0,
+      "prazo_esperado": "2 a 6 semanas para o alvo de R$ 58,85; se a tendência seguir, a posição fica aberta com stop móvel"
     },
     {
       "data": "2026-11-12",
@@ -63,7 +64,8 @@
       "ganho_possivel_brl": 10.0,
       "ganho_possivel_pct": 0.2,
       "risco_pct": -0.1,
-      "razao_ganho_risco": 2.0
+      "razao_ganho_risco": 2.0,
+      "prazo_esperado": "4 a 12 semanas para +20% sobre o preço médio da grade; a grade completa leva 1 a 3 semanas"
     },
     {
       "data": "2026-11-13",
@@ -91,7 +93,8 @@
       "ganho_possivel_brl": 8.25,
       "ganho_possivel_pct": 0.0857,
       "risco_pct": -0.0514,
-      "razao_ganho_risco": 1.67
+      "razao_ganho_risco": 1.67,
+      "prazo_esperado": "4 a 10 semanas para R$ 9,50; rendimento mensal começa no mês seguinte à compra"
     },
     {
       "data": "2026-11-18",
@@ -111,7 +114,8 @@
       "ganho_possivel_brl": 10.0,
       "ganho_possivel_pct": 0.2,
       "risco_pct": -0.1,
-      "razao_ganho_risco": 2.0
+      "razao_ganho_risco": 2.0,
+      "prazo_esperado": "mesmo horizonte da grade: 4 a 12 semanas"
     }
   ]
 }

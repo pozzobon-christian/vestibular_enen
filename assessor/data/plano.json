@@ -69,5 +69,12 @@
       "ordem": "R$ 151 em caixa: boiada em fase início ou Ibovespa acima da MM50",
       "valor_brl": 151
     }
-  ]
+  ],
+  "retorno_semanal_alvo": 0.02,
+  "cenarios_ate_meta": {
+    "1% por semana": "232 semanas (4,5 anos)",
+    "2% por semana (alvo)": "117 semanas (2,2 anos)",
+    "3% por semana": "78 semanas (1,5 ano)",
+    "5% por semana": "48 semanas (11 meses)"
+  }
 }

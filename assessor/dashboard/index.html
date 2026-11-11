@@ -113,6 +113,7 @@ function render(d) {
     <div class="meta">${o.preco_ref ? `<span>preço de referência R$ ${fmt(o.preco_ref)}</span>` : ''}${o.limite_max_abertura ? `<span>só se a abertura ≤ R$ ${fmt(o.limite_max_abertura)}</span>` : ''}${o.condicao ? `<span>condição: ${esc(o.condicao)}</span>` : ''}${o.stop ? `<span>stop R$ ${fmt(o.stop)}</span>` : ''}${o.stop_pct ? `<span>stop ${(o.stop_pct * 100).toFixed(0)}%</span>` : ''}</div>
     <div class="meta" style="font-size:13px;color:var(--ink)">${o.alvo_preco ? `<span>🎯 alvo R$ ${fmt(o.alvo_preco)}</span>` : ''}${o.ganho_possivel_brl != null ? `<span class="up">ganho possível R$ ${fmt(o.ganho_possivel_brl)} (${(o.ganho_possivel_pct * 100).toFixed(1).replace('.', ',')}%)</span>` : ''}${o.risco_brl != null ? `<span class="dn">risco R$ ${fmt(o.risco_brl)} (${((o.risco_pct || 0) * 100).toFixed(1).replace('.', ',')}%)</span>` : ''}${o.razao_ganho_risco ? `<span>ganho/risco ${fmt(o.razao_ganho_risco, 1)}x</span>` : ''}</div>
     ${o.alvo_regra ? `<p class="mut" style="font-size:12px;margin:0 0 6px"><b>Como o alvo foi definido:</b> ${esc(o.alvo_regra)}</p>` : ''}
+    ${o.prazo_esperado ? `<p style="font-size:13px;margin:0 0 6px"><b>⏱ Prazo esperado:</b> ${esc(o.prazo_esperado)}</p>` : ''}
     <p><b>Por quê:</b> ${esc(o.porque || '')}</p>
     <details open><summary>Passo a passo</summary><ol>${(o.passo_a_passo || []).map(p => `<li>${esc(p)}</li>`).join('')}</ol></details>
     <p><b>Próximo movimento:</b> ${esc(o.proximo_movimento || '')}</p></div>`).join('') || '<p class="mut">Nenhuma ordem planejada.</p>';
@@ -123,7 +124,10 @@ function render(d) {
   ].map(([k, v]) => `<div class="kpi"><b>${v}</b><span>${k}</span></div>`).join('');
   const prog = Math.min(1, c.progresso_meta_pct || 0);
   $('#meta').style.width = (prog * 100).toFixed(1) + '%';
-  $('#metatxt').textContent = `Meta R$ ${fmt(c.meta_brl, 0)} · ${(prog * 100).toFixed(1).replace('.', ',')}% atingido`;
+  const tm = c.tempo_ate_meta || {};
+  const semanasTxt = tm.semanas_pelo_alvo != null ? ` · tempo estimado até a meta: ${tm.semanas_pelo_alvo} semanas (${(tm.semanas_pelo_alvo / 52).toFixed(1).replace('.', ',')} anos) a ${(tm.retorno_semanal_alvo * 100).toFixed(0)}% por semana, chegada em ${tm.data_estimada_pelo_alvo || '–'}` : '';
+  const ritmoTxt = tm.retorno_semanal_realizado != null ? ` · ritmo real: ${(tm.retorno_semanal_realizado * 100).toFixed(2).replace('.', ',')}%/semana${tm.semanas_pelo_ritmo_atual ? ` (${tm.semanas_pelo_ritmo_atual} semanas)` : ' (sem crescimento ainda)'}` : ' · ritmo real: calculado após 4 semanas';
+  $('#metatxt').textContent = `Meta R$ ${fmt(c.meta_brl, 0)} · ${(prog * 100).toFixed(1).replace('.', ',')}% atingido${semanasTxt}${ritmoTxt}`;
   $('#pos tbody').innerHTML = (c.posicoes || []).map(p => `<tr><td>${tickerLink(p.ticker, p.mercado)} <span class="mut">${MERC[p.mercado] || esc(p.mercado)}</span></td><td>${fmt(p.quantidade, 4)}</td><td>${fmt(p.preco_medio, 4)}</td><td>${fmt(p.ultimo, 4)} <span class="mut">${esc(p.data_preco || '')}</span></td><td>${fmt(p.valor_brl)}</td><td>${pct(p.pnl_pct)} <span class="mut">R$ ${fmt(p.pnl_brl)}</span></td></tr>`).join('') || '<tr><td colspan="6" class="mut">Nenhuma posição registrada ainda. As contas liberam amanhã; as ordens planejadas estão no topo.</td></tr>';
   const pl = c.plano || {};
   $('#planobox').innerHTML = `<p><b>Capital inicial:</b> R$ ${fmt(pl.capital_inicial_brl, 0)} · <b>Meta:</b> R$ ${fmt(pl.meta_brl, 0)}</p>
@@ -131,6 +135,7 @@ function render(d) {
     <p><b>Alocação:</b> ${Object.entries(pl.alocacao || {}).map(([k, v]) => `${LABEL[k] || esc(k)} ${(v * 100).toFixed(0)}%`).join(' · ')}</p>
     <p><b>Limites de risco:</b> ${Object.entries(pl.risco || {}).map(([k, v]) => `${LABEL[k] || esc(k)} ${(v * 100).toFixed(0)}%`).join(' · ')}</p>
     <p><b>Opções:</b> liberadas a partir de R$ ${fmt(pl.opcoes_liberadas_a_partir_de_brl, 0)}</p>
+    <p><b>Cenários até a meta (reinvestindo tudo):</b> ${Object.entries(pl.cenarios_ate_meta || {}).map(([k, v]) => `${esc(k)}: ${esc(v)}`).join(' · ')}</p>
     <p><b>Contas:</b> ${Object.entries(pl.contas || {}).map(([k, v]) => `${esc(k)} (R$ ${fmt(v.deposito_inicial_brl, 0)}: ${esc(v.uso)})`).join(' · ')}</p>`;
   const b6 = d.briefing_6h || {};
   $('#over tbody').innerHTML = (b6.overnight || []).map(o => `<tr><td><b>${esc(o.nome)}</b> <span class="mut">${esc(o.simbolo)}</span></td><td>${fmt(o.ultimo)} <span class="mut">${esc(o.data)}</span></td><td>${pct(o.var_1d)}</td><td>${pct(o.var_5d)}</td><td class="leitura">${esc(LEITURA[o.simbolo] || '')}</td></tr>`).join('') || '<tr><td colspan="5" class="mut">Sem dados globais ainda.</td></tr>';
