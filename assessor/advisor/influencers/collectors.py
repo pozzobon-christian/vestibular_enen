@@ -155,7 +155,9 @@ def _parse_lockups(body: str, limit: int) -> list[tuple[str, str, str, str]]:
         vid = chunk[:11]
         if not re.fullmatch(r"[\w-]{11}", vid) or '"contentType":"LOCKUP_CONTENT_TYPE_VIDEO"' not in chunk[:200]:
             continue
-        title = re.search(r'"lockupMetadataViewModel":\{"title":\{"content":"((?:[^"\\]|\\.)*)"', chunk)
+        title = (re.search(r'"lockupMetadataViewModel":\{"title":\{"content":"((?:[^"\\]|\\.)*)"', chunk)
+                 or re.search(r'"title":\{"content":"((?:[^"\\]|\\.)*)"', chunk)
+                 or re.search(r'"accessibilityText":"((?:[^"\\]|\\.)*)"', chunk))
         if not title:
             continue
         parts = re.findall(r'"text":\{"content":"([^"]*)"', chunk.split('"metadataParts"', 1)[-1][:1500])

@@ -181,10 +181,12 @@ def diag(query: str) -> int:
         keys = ["videoRenderer", "richItemRenderer", "lockupViewModel", "contentId", "videoId", "shortsLockupViewModel",
                 "publishedTimeText", "metadataParts", "lockupMetadataViewModel", "ytInitialData", "richGridRenderer"]
         print(f"/videos {cid} -> {r.status_code} len={len(body)} ", {k: body.count(k) for k in keys})
-        for key in ("\"contentId\"", "\"videoRenderer\""):
+        for key in ("\"lockupMetadataViewModel\"", "\"metadataParts\"", "\"videoRenderer\""):
             i = body.find(key)
             if i >= 0:
-                print(f"   contexto {key}:", body[i:i + 900].replace("\n", " "))
+                print(f"   contexto {key}:", body[i:i + 700].replace("\n", " "))
+        from .influencers.collectors import _parse_lockups
+        print("   lockups parseados:", _parse_lockups(body, 5))
     return 0
 
 
