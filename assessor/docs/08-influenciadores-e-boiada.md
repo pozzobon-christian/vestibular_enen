@@ -53,3 +53,11 @@ python -m advisor.cli herd --posts posts.jsonl --window 24 --min-authors 3 --sta
 1. Cadastrar os 30 a 50 perfis mais influentes do Brasil e os 20 globais que você já acompanha, com grupos declarados.
 2. Rodar a coleta por 4 semanas antes de operar: a rede e o histórico só valem com dados.
 3. Confrontar os clusters descobertos com os grupos declarados: a diferença entre os dois é a informação mais valiosa.
+
+## Monitoramento contínuo e armazenamento
+
+- **Cadastro inicial:** `data/influencers.json` com 37 entradas (22 BR, 15 globais) vindas dos rankings de 2026 (iBest, Usepora, Anbima Finfluence, HiveInfluence, Coinbound, Favikon, Bullish Bears). Handles de YouTube são resolvidos para channel_id em tempo de coleta; os marcados "a confirmar" devem ser conferidos na plataforma.
+- **Watchlist de preços:** `data/watchlist.json` (BR, US, cripto) alimenta o cruzamento chamada × retorno.
+- **Banco:** `data/monitor.db` (SQLite) com tabelas posts, prices, campaigns, herd_signals, influencer_stats e runs. Exportações em `data/exports/*.jsonl` e relatório em `data/relatorio.json`, todos versionados no git a cada execução.
+- **Agendamento:** workflow `monitor.yml` roda a cada 6 horas. O cron do GitHub só dispara na branch padrão; até o merge, rodar à mão por `workflow_dispatch`.
+- **X/Twitter:** exige o segredo `X_BEARER_TOKEN` no repositório; sem ele, as contas do X ficam sem coleta e os demais seguem.

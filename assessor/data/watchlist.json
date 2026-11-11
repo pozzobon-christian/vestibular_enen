@@ -1,0 +1,35 @@
+{
+  "BR": [
+    "PETR4",
+    "VALE3",
+    "BBAS3",
+    "ITUB4",
+    "BOVA11",
+    "MGLU3",
+    "WEGE3",
+    "PRIO3",
+    "HGLG11",
+    "KNRI11",
+    "MXRF11",
+    "XPML11"
+  ],
+  "US": [
+    "AAPL",
+    "TSLA",
+    "NVDA",
+    "MSFT",
+    "AMZN",
+    "SPY",
+    "QQQ",
+    "GME",
+    "AMC",
+    "PLTR",
+    "COIN",
+    "MSTR"
+  ],
+  "cripto": [
+    "bitcoin",
+    "ethereum",
+    "solana"
+  ]
+}

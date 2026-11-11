@@ -15,6 +15,7 @@ Nenhuma ordem chega à corretora sem passar pelo porteiro de risco (`RiskGate`).
 | `advisor.data` | Catálogo de 28 fontes (oficiais e alternativas) e conectores: Stooq (cotações), CoinGecko, RSS |
 | `advisor.signals` | Sentimento por léxico PT/EN ponderado por fonte e tempo, detector de pico de menções, indicadores técnicos |
 | `advisor.influencers` | Registro de influenciadores (BR e globais), extração de ativo/direção de posts públicos, campanhas coordenadas com líder e seguidores, grafo de co-menção e clusters (quem aposta junto), histórico de acerto e assinatura de pump-and-dump, sinal de boiada por fase (início, lotada, reversão) |
+| `advisor.storage` + `advisor.monitor` | SQLite (`data/monitor.db`) com posts, preços, campanhas, sinais e estatísticas; ciclo coleta → análise → exportação JSONL versionada; roda no GitHub Actions a cada 6h (`.github/workflows/monitor.yml`) |
 | `advisor.portfolio` | Livro-razão auditável (JSONL), ciclo semanal com retirada de lucro, corretora simulada (paper) |
 | `docs/` | Material de estudo: fundamentos, manual de opções, FIIs, cripto, risco, fontes, roadmap, influenciadores e boiada |
 
@@ -31,6 +32,8 @@ python -m advisor.cli strategy --name bull_call_spread --args 30,1.5,33,0.5
 python -m advisor.cli sources --kind oficial --market BR
 python -m advisor.cli week --start 100000 --end 103500
 python -m advisor.cli herd --posts posts.jsonl --stats stats.json
+python -m advisor.monitor run      # coleta + análise + exportação (precisa de internet)
+python -m advisor.monitor status
 ```
 
 ## Princípios (não negociáveis)

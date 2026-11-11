@@ -1,0 +1,674 @@
+[
+  {
+    "handle": "@oprimorico",
+    "platform": "youtube",
+    "country": "BR",
+    "name": "Thiago Nigro (O Primo Rico)",
+    "followers": 10900000,
+    "focus": [
+      "acoes_br",
+      "acoes_us"
+    ],
+    "groups": [
+      "Grupo Primo"
+    ],
+    "disclosed_affiliations": [
+      "Grupo Primo (empresa própria)"
+    ],
+    "is_registered_analyst": false,
+    "feeds": [
+      "youtube:@oprimorico"
+    ],
+    "notes": "1º em seguidores (Usepora out/2026); handle/feed a confirmar na plataforma antes da 1ª coleta"
+  },
+  {
+    "handle": "@mepoupe",
+    "platform": "youtube",
+    "country": "BR",
+    "name": "Nathalia Arcuri (Me Poupe!)",
+    "followers": 3600000,
+    "focus": [
+      "financas_pessoais",
+      "acoes_br"
+    ],
+    "groups": [],
+    "disclosed_affiliations": [],
+    "is_registered_analyst": false,
+    "feeds": [
+      "youtube:@mepoupe"
+    ],
+    "notes": "iBest 2026; handle/feed a confirmar na plataforma antes da 1ª coleta"
+  },
+  {
+    "handle": "@primopobre",
+    "platform": "youtube",
+    "country": "BR",
+    "name": "Eduardo Feldberg (Primo Pobre)",
+    "followers": 3600000,
+    "focus": [
+      "financas_pessoais",
+      "cripto",
+      "acoes_br"
+    ],
+    "groups": [],
+    "disclosed_affiliations": [],
+    "is_registered_analyst": false,
+    "feeds": [
+      "youtube:@primopobre"
+    ],
+    "notes": "1º em cripto YouTube BR (HiveInfluence out/2026); handle/feed a confirmar na plataforma antes da 1ª coleta"
+  },
+  {
+    "handle": "@brunoperini",
+    "platform": "youtube",
+    "country": "BR",
+    "name": "Bruno Perini",
+    "followers": 3300000,
+    "focus": [
+      "acoes_br",
+      "acoes_us"
+    ],
+    "groups": [
+      "Grupo Primo"
+    ],
+    "disclosed_affiliations": [
+      "Grupo Primo (sócio)"
+    ],
+    "is_registered_analyst": false,
+    "feeds": [
+      "youtube:@brunoperini"
+    ],
+    "notes": "1º ranking Anbima anterior; handle/feed a confirmar na plataforma antes da 1ª coleta"
+  },
+  {
+    "handle": "@investidorsardinha",
+    "platform": "youtube",
+    "country": "BR",
+    "name": "Raul Sena (Investidor Sardinha)",
+    "followers": 0,
+    "focus": [
+      "acoes_br",
+      "fiis",
+      "cripto"
+    ],
+    "groups": [],
+    "disclosed_affiliations": [],
+    "is_registered_analyst": false,
+    "feeds": [
+      "youtube:@investidorsardinha"
+    ],
+    "notes": "iBest 2026; handle/feed a confirmar na plataforma antes da 1ª coleta"
+  },
+  {
+    "handle": "@pablospyer",
+    "platform": "x",
+    "country": "BR",
+    "name": "Pablo Spyer",
+    "followers": 0,
+    "focus": [
+      "acoes_br",
+      "day_trade"
+    ],
+    "groups": [],
+    "disclosed_affiliations": [],
+    "is_registered_analyst": false,
+    "feeds": [
+      "x:@pablospyer"
+    ],
+    "notes": "iBest 2026; X exige token; handle/feed a confirmar na plataforma antes da 1ª coleta"
+  },
+  {
+    "handle": "@economistasincero",
+    "platform": "youtube",
+    "country": "BR",
+    "name": "Charles Mendlowicz (Economista Sincero)",
+    "followers": 0,
+    "focus": [
+      "fiis",
+      "acoes_br",
+      "fundos"
+    ],
+    "groups": [],
+    "disclosed_affiliations": [],
+    "is_registered_analyst": false,
+    "feeds": [
+      "youtube:@economistasincero"
+    ],
+    "notes": "top menções a fundos/FIIs (Anbima 2S2025); handle/feed a confirmar na plataforma antes da 1ª coleta"
+  },
+  {
+    "handle": "@gustavocerbasi",
+    "platform": "youtube",
+    "country": "BR",
+    "name": "Gustavo Cerbasi",
+    "followers": 1800000,
+    "focus": [
+      "financas_pessoais"
+    ],
+    "groups": [],
+    "disclosed_affiliations": [],
+    "is_registered_analyst": false,
+    "feeds": [
+      "youtube:@gustavocerbasi"
+    ],
+    "notes": "iBest 2026; handle/feed a confirmar na plataforma antes da 1ª coleta"
+  },
+  {
+    "handle": "@nathfinancas",
+    "platform": "youtube",
+    "country": "BR",
+    "name": "Nathália Rodrigues (Nath Finanças)",
+    "followers": 0,
+    "focus": [
+      "financas_pessoais"
+    ],
+    "groups": [],
+    "disclosed_affiliations": [],
+    "is_registered_analyst": false,
+    "feeds": [
+      "youtube:@nathfinancas"
+    ],
+    "notes": "iBest 2026; handle/feed a confirmar na plataforma antes da 1ª coleta"
+  },
+  {
+    "handle": "@alexandrewinkler",
+    "platform": "youtube",
+    "country": "BR",
+    "name": "Alexandre Winkler",
+    "followers": 0,
+    "focus": [
+      "acoes_br",
+      "trading"
+    ],
+    "groups": [],
+    "disclosed_affiliations": [],
+    "is_registered_analyst": false,
+    "feeds": [
+      "youtube:@alexandrewinkler"
+    ],
+    "notes": "iBest 2026; handle/feed a confirmar na plataforma antes da 1ª coleta"
+  },
+  {
+    "handle": "@renatobreia",
+    "platform": "instagram",
+    "country": "BR",
+    "name": "Renato Breia",
+    "followers": 0,
+    "focus": [
+      "planejamento",
+      "fundos"
+    ],
+    "groups": [],
+    "disclosed_affiliations": [],
+    "is_registered_analyst": false,
+    "feeds": [],
+    "notes": "1º Finfluence Anbima entre CFP; Instagram sem API pública"
+  },
+  {
+    "handle": "@professorbaroni",
+    "platform": "youtube",
+    "country": "BR",
+    "name": "Professor Baroni",
+    "followers": 0,
+    "focus": [
+      "fiis"
+    ],
+    "groups": [],
+    "disclosed_affiliations": [],
+    "is_registered_analyst": false,
+    "feeds": [
+      "youtube:@professorbaroni"
+    ],
+    "notes": "destaque FIIs Anbima 2S2025; handle/feed a confirmar na plataforma antes da 1ª coleta"
+  },
+  {
+    "handle": "@tiofiis",
+    "platform": "youtube",
+    "country": "BR",
+    "name": "Tio Fiis",
+    "followers": 0,
+    "focus": [
+      "fiis"
+    ],
+    "groups": [],
+    "disclosed_affiliations": [],
+    "is_registered_analyst": false,
+    "feeds": [
+      "youtube:@tiofiis"
+    ],
+    "notes": "Anbima 2S2025; handle/feed a confirmar na plataforma antes da 1ª coleta"
+  },
+  {
+    "handle": "@vinirich",
+    "platform": "youtube",
+    "country": "BR",
+    "name": "Vini Rich",
+    "followers": 0,
+    "focus": [
+      "fundos",
+      "fiis"
+    ],
+    "groups": [],
+    "disclosed_affiliations": [],
+    "is_registered_analyst": false,
+    "feeds": [
+      "youtube:@vinirich"
+    ],
+    "notes": "Anbima 2S2025; handle/feed a confirmar na plataforma antes da 1ª coleta"
+  },
+  {
+    "handle": "@danilobastos",
+    "platform": "youtube",
+    "country": "BR",
+    "name": "Danilo Bastos",
+    "followers": 0,
+    "focus": [
+      "fundos",
+      "fiis"
+    ],
+    "groups": [],
+    "disclosed_affiliations": [],
+    "is_registered_analyst": false,
+    "feeds": [
+      "youtube:@danilobastos"
+    ],
+    "notes": "Anbima 2S2025; handle/feed a confirmar na plataforma antes da 1ª coleta"
+  },
+  {
+    "handle": "@portstrader",
+    "platform": "youtube",
+    "country": "BR",
+    "name": "Ports Trader",
+    "followers": 0,
+    "focus": [
+      "cripto",
+      "trading"
+    ],
+    "groups": [],
+    "disclosed_affiliations": [],
+    "is_registered_analyst": false,
+    "feeds": [
+      "youtube:@portstrader"
+    ],
+    "notes": "HiveInfluence out/2026; handle/feed a confirmar na plataforma antes da 1ª coleta"
+  },
+  {
+    "handle": "@curingaeconomico",
+    "platform": "youtube",
+    "country": "BR",
+    "name": "Curinga Econômico",
+    "followers": 0,
+    "focus": [
+      "cripto",
+      "macro"
+    ],
+    "groups": [],
+    "disclosed_affiliations": [],
+    "is_registered_analyst": false,
+    "feeds": [
+      "youtube:@curingaeconomico"
+    ],
+    "notes": "HiveInfluence out/2026; handle/feed a confirmar na plataforma antes da 1ª coleta"
+  },
+  {
+    "handle": "@criptomaniacos",
+    "platform": "youtube",
+    "country": "BR",
+    "name": "Criptomaníacos",
+    "followers": 0,
+    "focus": [
+      "cripto"
+    ],
+    "groups": [],
+    "disclosed_affiliations": [],
+    "is_registered_analyst": false,
+    "feeds": [
+      "youtube:@criptomaniacos"
+    ],
+    "notes": "HiveInfluence out/2026; handle/feed a confirmar na plataforma antes da 1ª coleta"
+  },
+  {
+    "handle": "@faveladoinvestidor",
+    "platform": "youtube",
+    "country": "BR",
+    "name": "Favelado Investidor",
+    "followers": 0,
+    "focus": [
+      "cripto",
+      "acoes_br"
+    ],
+    "groups": [],
+    "disclosed_affiliations": [],
+    "is_registered_analyst": false,
+    "feeds": [
+      "youtube:@faveladoinvestidor"
+    ],
+    "notes": "HiveInfluence out/2026; handle/feed a confirmar na plataforma antes da 1ª coleta"
+  },
+  {
+    "handle": "@guilhermeraya",
+    "platform": "instagram",
+    "country": "BR",
+    "name": "Guilherme Raya",
+    "followers": 0,
+    "focus": [
+      "cripto"
+    ],
+    "groups": [],
+    "disclosed_affiliations": [],
+    "is_registered_analyst": false,
+    "feeds": [],
+    "notes": "HIIP Instagram cripto BR; sem API pública"
+  },
+  {
+    "handle": "farialimabets",
+    "platform": "reddit",
+    "country": "BR",
+    "name": "r/farialimabets",
+    "followers": 0,
+    "focus": [
+      "acoes_br",
+      "memes"
+    ],
+    "groups": [],
+    "disclosed_affiliations": [],
+    "is_registered_analyst": false,
+    "feeds": [
+      "reddit:farialimabets"
+    ],
+    "notes": "comunidade; termômetro de varejo BR"
+  },
+  {
+    "handle": "investimentos",
+    "platform": "reddit",
+    "country": "BR",
+    "name": "r/investimentos",
+    "followers": 0,
+    "focus": [
+      "acoes_br",
+      "fiis"
+    ],
+    "groups": [],
+    "disclosed_affiliations": [],
+    "is_registered_analyst": false,
+    "feeds": [
+      "reddit:investimentos"
+    ],
+    "notes": "comunidade"
+  },
+  {
+    "handle": "@VitalikButerin",
+    "platform": "x",
+    "country": "global",
+    "name": "Vitalik Buterin",
+    "followers": 5800000,
+    "focus": [
+      "cripto"
+    ],
+    "groups": [],
+    "disclosed_affiliations": [
+      "Ethereum Foundation"
+    ],
+    "is_registered_analyst": false,
+    "feeds": [
+      "x:@VitalikButerin"
+    ],
+    "notes": ""
+  },
+  {
+    "handle": "@cz_binance",
+    "platform": "x",
+    "country": "global",
+    "name": "Changpeng Zhao (CZ)",
+    "followers": 0,
+    "focus": [
+      "cripto"
+    ],
+    "groups": [],
+    "disclosed_affiliations": [
+      "Binance (ex-CEO)"
+    ],
+    "is_registered_analyst": false,
+    "feeds": [
+      "x:@cz_binance"
+    ],
+    "notes": ""
+  },
+  {
+    "handle": "@APompliano",
+    "platform": "x",
+    "country": "global",
+    "name": "Anthony Pompliano",
+    "followers": 1200000,
+    "focus": [
+      "cripto",
+      "macro"
+    ],
+    "groups": [],
+    "disclosed_affiliations": [
+      "Pomp Investments"
+    ],
+    "is_registered_analyst": false,
+    "feeds": [
+      "x:@APompliano"
+    ],
+    "notes": ""
+  },
+  {
+    "handle": "@balajis",
+    "platform": "x",
+    "country": "global",
+    "name": "Balaji Srinivasan",
+    "followers": 0,
+    "focus": [
+      "cripto",
+      "macro"
+    ],
+    "groups": [],
+    "disclosed_affiliations": [],
+    "is_registered_analyst": false,
+    "feeds": [
+      "x:@balajis"
+    ],
+    "notes": ""
+  },
+  {
+    "handle": "@justinsuntron",
+    "platform": "x",
+    "country": "global",
+    "name": "Justin Sun",
+    "followers": 0,
+    "focus": [
+      "cripto"
+    ],
+    "groups": [],
+    "disclosed_affiliations": [
+      "Tron"
+    ],
+    "is_registered_analyst": false,
+    "feeds": [
+      "x:@justinsuntron"
+    ],
+    "notes": "conta promocional (Coinbound); peso baixo"
+  },
+  {
+    "handle": "@tyler",
+    "platform": "x",
+    "country": "global",
+    "name": "Tyler Winklevoss",
+    "followers": 0,
+    "focus": [
+      "cripto"
+    ],
+    "groups": [],
+    "disclosed_affiliations": [
+      "Gemini"
+    ],
+    "is_registered_analyst": false,
+    "feeds": [
+      "x:@tyler"
+    ],
+    "notes": ""
+  },
+  {
+    "handle": "@HaileyLennonBTC",
+    "platform": "x",
+    "country": "global",
+    "name": "Hailey Lennon",
+    "followers": 0,
+    "focus": [
+      "cripto",
+      "regulacao"
+    ],
+    "groups": [],
+    "disclosed_affiliations": [],
+    "is_registered_analyst": false,
+    "feeds": [
+      "x:@HaileyLennonBTC"
+    ],
+    "notes": "handle/feed a confirmar na plataforma antes da 1ª coleta"
+  },
+  {
+    "handle": "CryptoCurrency",
+    "platform": "reddit",
+    "country": "global",
+    "name": "r/CryptoCurrency",
+    "followers": 0,
+    "focus": [
+      "cripto"
+    ],
+    "groups": [],
+    "disclosed_affiliations": [],
+    "is_registered_analyst": false,
+    "feeds": [
+      "reddit:CryptoCurrency"
+    ],
+    "notes": "comunidade"
+  },
+  {
+    "handle": "@alphatrends",
+    "platform": "x",
+    "country": "global",
+    "name": "Brian Shannon",
+    "followers": 167000,
+    "focus": [
+      "acoes_us",
+      "trading"
+    ],
+    "groups": [],
+    "disclosed_affiliations": [],
+    "is_registered_analyst": false,
+    "feeds": [
+      "x:@alphatrends"
+    ],
+    "notes": "Bullish Bears 2026"
+  },
+  {
+    "handle": "@humphreytalks",
+    "platform": "youtube",
+    "country": "global",
+    "name": "Humphrey Yang",
+    "followers": 54300000,
+    "focus": [
+      "financas_pessoais",
+      "acoes_us"
+    ],
+    "groups": [],
+    "disclosed_affiliations": [],
+    "is_registered_analyst": false,
+    "feeds": [
+      "youtube:@humphreytalks"
+    ],
+    "notes": "maior finfluencer cross-platform; handle/feed a confirmar na plataforma antes da 1ª coleta"
+  },
+  {
+    "handle": "@herfirst100k",
+    "platform": "youtube",
+    "country": "global",
+    "name": "Tori Dunlap",
+    "followers": 0,
+    "focus": [
+      "financas_pessoais"
+    ],
+    "groups": [],
+    "disclosed_affiliations": [],
+    "is_registered_analyst": false,
+    "feeds": [
+      "youtube:@herfirst100k"
+    ],
+    "notes": "handle/feed a confirmar na plataforma antes da 1ª coleta"
+  },
+  {
+    "handle": "wallstreetbets",
+    "platform": "reddit",
+    "country": "global",
+    "name": "r/wallstreetbets",
+    "followers": 0,
+    "focus": [
+      "acoes_us",
+      "opcoes",
+      "memes"
+    ],
+    "groups": [],
+    "disclosed_affiliations": [],
+    "is_registered_analyst": false,
+    "feeds": [
+      "reddit:wallstreetbets"
+    ],
+    "notes": "comunidade; squeezes"
+  },
+  {
+    "handle": "stocks",
+    "platform": "reddit",
+    "country": "global",
+    "name": "r/stocks",
+    "followers": 0,
+    "focus": [
+      "acoes_us"
+    ],
+    "groups": [],
+    "disclosed_affiliations": [],
+    "is_registered_analyst": false,
+    "feeds": [
+      "reddit:stocks"
+    ],
+    "notes": "comunidade"
+  },
+  {
+    "handle": "options",
+    "platform": "reddit",
+    "country": "global",
+    "name": "r/options",
+    "followers": 0,
+    "focus": [
+      "opcoes"
+    ],
+    "groups": [],
+    "disclosed_affiliations": [],
+    "is_registered_analyst": false,
+    "feeds": [
+      "reddit:options"
+    ],
+    "notes": "comunidade"
+  },
+  {
+    "handle": "stocktwits-watch",
+    "platform": "stocktwits",
+    "country": "global",
+    "name": "StockTwits (tickers da watchlist)",
+    "followers": 0,
+    "focus": [
+      "acoes_us"
+    ],
+    "groups": [],
+    "disclosed_affiliations": [],
+    "is_registered_analyst": false,
+    "feeds": [
+      "stocktwits:AAPL",
+      "stocktwits:TSLA",
+      "stocktwits:NVDA",
+      "stocktwits:BTC.X"
+    ],
+    "notes": "comunidade por ticker"
+  }
+]
