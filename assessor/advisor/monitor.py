@@ -174,6 +174,17 @@ def diag(query: str) -> int:
                 print("   trecho:", body[:300].replace("\n", " "))
             except Exception as e:  # noqa: BLE001
                 print(f"{url} [{hdr_name}] ERRO {type(e).__name__}: {e}")
+    # estrutura da página /videos (layout muda; medir as chaves presentes)
+    for cid in ("UCtbxlqGhUONVl9LI0cJKlgQ", "UCCE-jo1GvBJqyj1b287h7jA"):
+        r = requests.get(f"https://www.youtube.com/channel/{cid}/videos", headers=_YT_HEADERS, timeout=20)
+        body = r.text
+        keys = ["videoRenderer", "richItemRenderer", "lockupViewModel", "contentId", "videoId", "shortsLockupViewModel",
+                "publishedTimeText", "metadataParts", "lockupMetadataViewModel", "ytInitialData", "richGridRenderer"]
+        print(f"/videos {cid} -> {r.status_code} len={len(body)} ", {k: body.count(k) for k in keys})
+        for key in ("\"contentId\"", "\"videoRenderer\""):
+            i = body.find(key)
+            if i >= 0:
+                print(f"   contexto {key}:", body[i:i + 900].replace("\n", " "))
     return 0
 
 
