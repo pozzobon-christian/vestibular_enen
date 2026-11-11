@@ -155,9 +155,6 @@ def main(argv: list[str] | None = None) -> int:
     return 0
 
 
-if __name__ == "__main__":
-    raise SystemExit(main())
-
 
 def diag(query: str) -> int:
     """Mostra o que o YouTube devolve ao runner para um handle/nome."""
@@ -178,3 +175,7 @@ def diag(query: str) -> int:
             except Exception as e:  # noqa: BLE001
                 print(f"{url} [{hdr_name}] ERRO {type(e).__name__}: {e}")
     return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
