@@ -1,53 +1,54 @@
 # Monitor de influenciadores
 
-Atualizado em 2026-11-11 11:27 UTC
+Atualizado em 2026-11-11 13:11 UTC
 
 | Posts | Autores | Campanhas | Sinais | Preços |
 |---|---|---|---|---|
-| 837 | 230 | 20 | 188 | 11107 |
+| 933 | 293 | 21 | 209 | 19907 |
 
 ## Campanhas nos últimos 30 dias
 
 | Ativo | Direção | Autores | Líder | Fase | Ação | Confiança |
 |---|---|---|---|---|---|---|
-| BTC | compra | 25 | stocktwits:nedflandersiii | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
-| NVDA | compra | 56 | stocktwits:nedflandersiii | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
-| AAPL | compra | 12 | stocktwits:nedflandersiii | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
-| SPY | compra | 9 | stocktwits:nedflandersiii | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
-| AAPL | venda | 8 | stocktwits:donjuancapistran | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
-| CRWV | compra | 4 | stocktwits:wyoming2020 | inicio | entrar a favor (compra) com tamanho pelo RiskBudget | 0.40 |
-| AMD | compra | 4 | stocktwits:corderooptions | inicio | entrar a favor (compra) com tamanho pelo RiskBudget | 0.40 |
+| BTC | compra | 34 | stocktwits:nedflandersiii | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
+| NVDA | compra | 70 | stocktwits:nedflandersiii | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
+| AAPL | compra | 13 | stocktwits:nedflandersiii | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
+| SPY | compra | 13 | stocktwits:nedflandersiii | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
+| AAPL | venda | 9 | stocktwits:donjuancapistran | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
+| CRWV | compra | 6 | stocktwits:wyoming2020 | ignorar | observar; sem ordem | 0.30 |
+| AMD | compra | 7 | stocktwits:corderooptions | ignorar | observar; sem ordem | 0.30 |
 | AMZN | compra | 3 | stocktwits:corderooptions | inicio | entrar a favor (compra) com tamanho pelo RiskBudget | 0.40 |
-| TSLA | compra | 18 | stocktwits:corderooptions | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
-| TSLA | venda | 8 | stocktwits:ghbhhjc | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
-| SPY | venda | 5 | stocktwits:marcusmccord | ignorar | observar; sem ordem | 0.30 |
-| MSTR | compra | 5 | stocktwits:honeybadgerdgaf | ignorar | observar; sem ordem | 0.30 |
-| BTC | venda | 7 | stocktwits:fawl3r | ignorar | observar; sem ordem | 0.30 |
-| SPCX | compra | 5 | stocktwits:alphabull_10m | ignorar | observar; sem ordem | 0.30 |
-| ETH | compra | 3 | stocktwits:jaredsotken | inicio | entrar a favor (compra) com tamanho pelo RiskBudget | 0.40 |
+| TSLA | compra | 25 | stocktwits:corderooptions | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
+| TSLA | venda | 13 | stocktwits:ghbhhjc | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
+| SPY | venda | 7 | stocktwits:marcusmccord | ignorar | observar; sem ordem | 0.30 |
+| MSTR | compra | 6 | stocktwits:honeybadgerdgaf | ignorar | observar; sem ordem | 0.30 |
+| BTC | venda | 12 | stocktwits:fawl3r | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
+| SPCX | compra | 7 | stocktwits:alphabull_10m | ignorar | observar; sem ordem | 0.30 |
+| ETH | compra | 4 | stocktwits:jaredsotken | inicio | entrar a favor (compra) com tamanho pelo RiskBudget | 0.40 |
 | SOL | compra | 3 | stocktwits:jaredsotken | inicio | entrar a favor (compra) com tamanho pelo RiskBudget | 0.40 |
-| QQQ | venda | 4 | stocktwits:transcendasset | inicio | entrar a favor (venda) com tamanho pelo RiskBudget | 0.40 |
-| MU | compra | 3 | stocktwits:maribor | inicio | entrar a favor (compra) com tamanho pelo RiskBudget | 0.40 |
-| QQQ | compra | 3 | stocktwits:maribor | inicio | entrar a favor (compra) com tamanho pelo RiskBudget | 0.40 |
-| NVDA | venda | 9 | stocktwits:peanutloverdrool | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
+| QQQ | venda | 7 | stocktwits:transcendasset | ignorar | observar; sem ordem | 0.30 |
+| MU | compra | 4 | stocktwits:maribor | inicio | entrar a favor (compra) com tamanho pelo RiskBudget | 0.40 |
+| QQQ | compra | 6 | stocktwits:maribor | ignorar | observar; sem ordem | 0.30 |
+| NVDA | venda | 17 | stocktwits:peanutloverdrool | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
+| ETH | venda | 4 | stocktwits:btcc_exchange | inicio | entrar a favor (venda) com tamanho pelo RiskBudget | 0.40 |
 
 ## Grupos descobertos (postam juntos em 2+ campanhas)
 
-- stocktwits:15fingers, stocktwits:alphabull_10m, stocktwits:august_west, stocktwits:blatter, stocktwits:blueblood12, stocktwits:bullseyegains, stocktwits:corderooptions, stocktwits:deer_admin, stocktwits:goodmeyer83, stocktwits:holymofgod, stocktwits:hyde1634, stocktwits:intutivetrader, stocktwits:iplaysmart, stocktwits:jrh34, stocktwits:keepcalmcarryon, stocktwits:marcusmccord, stocktwits:maribor, stocktwits:meatballtrades, stocktwits:milkingalgoseverymonday, stocktwits:nedflandersiii, stocktwits:paidguruworstnightmare, stocktwits:pullbackalerts, stocktwits:sovihabi, stocktwits:starrbarr, stocktwits:stockhold_syndrome, stocktwits:topoptionsaierts, stocktwits:transcendasset, stocktwits:unmaker, stocktwits:us_stock_bubble2026, stocktwits:ver13
-- stocktwits:honeybadgerdgaf, stocktwits:jaredsotken, stocktwits:jdrebel, stocktwits:meandu2, stocktwits:sol_meek
+- stocktwits:15fingers, stocktwits:alphabull_10m, stocktwits:august_west, stocktwits:billionaire2025, stocktwits:blatter, stocktwits:blueblood12, stocktwits:bullseyegains, stocktwits:coffeerocks, stocktwits:corderooptions, stocktwits:deer_admin, stocktwits:flickted, stocktwits:goodmeyer83, stocktwits:hal9000x, stocktwits:holymofgod, stocktwits:honeybadgerdgaf, stocktwits:hyde1634, stocktwits:intutivetrader, stocktwits:iplaysmart, stocktwits:iseeshit, stocktwits:jaredsotken, stocktwits:jdrebel, stocktwits:jesushatespedos, stocktwits:jrh34, stocktwits:keepcalmcarryon, stocktwits:kyzw, stocktwits:leonardobonacci, stocktwits:lighthouseprofit, stocktwits:luvtoretire, stocktwits:marcusmccord, stocktwits:maribor, stocktwits:meandu2, stocktwits:meatballtrades, stocktwits:milkingalgoseverymonday, stocktwits:nedflandersiii, stocktwits:paidguruworstnightmare, stocktwits:pullbackalerts, stocktwits:puzzles32, stocktwits:reaperblade2233, stocktwits:sa449, stocktwits:sol_meek, stocktwits:sovihabi, stocktwits:starrbarr, stocktwits:stockhold_syndrome, stocktwits:topoptionsaierts, stocktwits:transcendasset, stocktwits:unmaker, stocktwits:updownsidways, stocktwits:us_stock_bubble2026, stocktwits:ver13
+- stocktwits:bruh5, stocktwits:btcc_exchange, stocktwits:jbtradez254, stocktwits:ljmoney
 
 ## Quem posta primeiro
 
-- stocktwits:nedflandersiii: +98
-- stocktwits:sovihabi: +60
-- stocktwits:starrbarr: +52
-- stocktwits:maribor: +50
-- stocktwits:august_west: +48
-- stocktwits:jesterp88: +45
-- stocktwits:hyde1634: +44
-- stocktwits:mokena1234: +43
-- stocktwits:iplaysmart: +39
-- stocktwits:franking71: +37
+- stocktwits:nedflandersiii: +126
+- stocktwits:sovihabi: +75
+- stocktwits:maribor: +75
+- stocktwits:starrbarr: +67
+- stocktwits:august_west: +63
+- stocktwits:hyde1634: +59
+- stocktwits:jesterp88: +59
+- stocktwits:mokena1234: +57
+- stocktwits:iplaysmart: +57
+- stocktwits:franking71: +51
 
 ## Autores mais ativos (total coletado)
 
@@ -65,27 +66,27 @@ Atualizado em 2026-11-11 11:27 UTC
 - youtube:criptomaniacos: 30 posts
 - youtube:investidorsardinha: 30 posts
 - youtube:portstrader: 30 posts
-- stocktwits:topoptionsaierts: 10 posts
+- stocktwits:topoptionsaierts: 12 posts
 
 ## Ativos mais mencionados
 
-- NVDA: 139
-- BTC: 113
-- TSLA: 68
-- AAPL: 45
-- SPY: 41
-- QQQ: 23
-- AMD: 14
-- ETH: 12
-- MSTR: 11
-- MU: 10
-- CRWV: 9
-- AMZN: 9
-- TRXF11: 8
-- SPCX: 8
-- SOL: 7
+- NVDA: 176
+- BTC: 143
+- TSLA: 97
+- SPY: 61
+- AAPL: 53
+- QQQ: 34
+- AMD: 18
+- ETH: 16
+- SPCX: 15
+- MSTR: 13
+- CRWV: 13
+- MU: 12
+- AMZN: 10
+- GLD: 9
+- ZEC: 8
 
-## Última execução: 2026-11-11T11:27:08.063434+00:00 (228 posts novos, 17 erros)
+## Última execução: 2026-11-11T13:11:35.113681+00:00 (392 posts novos, 17 erros)
 
 - x:pablospyer x:@pablospyer: RuntimeError: defina X_BEARER_TOKEN (API v2 do X)
 - reddit:farialimabets reddit:farialimabets: HTTPError: 403 Client Error: Blocked for url: https://www.reddit.com/r/farialimabets/new.json?limit=50
