@@ -1,17 +1,17 @@
 {
-  "gerado_em": "2026-11-11T04:43:44.319946+00:00",
+  "gerado_em": "2026-11-11T04:45:28.444888+00:00",
   "janela_dias": 30,
-  "posts_na_janela": 134,
+  "posts_na_janela": 140,
   "campanhas": [
     {
       "ativo": "NVDA",
       "direcao": "compra",
       "inicio": "2026-11-10T22:18:22+00:00",
-      "autores": 20,
+      "autores": 23,
       "lider": "stocktwits:nedflandersiii",
-      "duracao_h": 6.39,
-      "alcance": 50,
-      "posts": 23,
+      "duracao_h": 6.44,
+      "alcance": 52,
+      "posts": 27,
       "seguidores_em_ordem": [
         "stocktwits:sovihabi",
         "stocktwits:starrbarr",
@@ -31,7 +31,10 @@
         "stocktwits:bullseyegains",
         "stocktwits:marsh_",
         "stocktwits:ejezra",
-        "stocktwits:traidn"
+        "stocktwits:traidn",
+        "stocktwits:jacobbuntman",
+        "stocktwits:yeaabuddy",
+        "stocktwits:xxxfactor"
       ],
       "fase": "lotada",
       "acao": "não entrar; se posicionado, realizar 50% e subir o stop para o custo",
@@ -41,11 +44,11 @@
       "ativo": "AAPL",
       "direcao": "compra",
       "inicio": "2026-11-10T22:18:22+00:00",
-      "autores": 8,
+      "autores": 9,
       "lider": "stocktwits:nedflandersiii",
-      "duracao_h": 2.29,
-      "alcance": 23,
-      "posts": 8,
+      "duracao_h": 6.43,
+      "alcance": 24,
+      "posts": 9,
       "seguidores_em_ordem": [
         "stocktwits:billycashisking",
         "stocktwits:sovihabi",
@@ -53,7 +56,8 @@
         "stocktwits:corderooptions",
         "stocktwits:starrbarr",
         "stocktwits:august_west",
-        "stocktwits:hyde1634"
+        "stocktwits:hyde1634",
+        "stocktwits:stocks_brannigan"
       ],
       "fase": "lotada",
       "acao": "não entrar; se posicionado, realizar 50% e subir o stop para o custo",
@@ -83,9 +87,9 @@
       "inicio": "2026-11-10T22:18:22+00:00",
       "autores": 11,
       "lider": "stocktwits:nedflandersiii",
-      "duracao_h": 6.34,
+      "duracao_h": 6.42,
       "alcance": 25,
-      "posts": 22,
+      "posts": 23,
       "seguidores_em_ordem": [
         "stocktwits:honeybadgerdgaf",
         "stocktwits:jaredsotken",
@@ -279,43 +283,55 @@
   "lideres": [
     [
       "stocktwits:nedflandersiii",
-      39
+      43
     ],
     [
       "stocktwits:sovihabi",
-      20
+      24
     ],
     [
       "stocktwits:starrbarr",
+      16
+    ],
+    [
+      "stocktwits:august_west",
+      12
+    ],
+    [
+      "stocktwits:jesterp88",
       12
     ],
     [
       "stocktwits:corderooptions",
-      11
+      12
+    ],
+    [
+      "stocktwits:mokena1234",
+      10
+    ],
+    [
+      "stocktwits:maribor",
+      10
     ],
     [
       "stocktwits:honeybadgerdgaf",
       10
     ],
     [
-      "stocktwits:jesterp88",
-      9
-    ],
-    [
-      "stocktwits:august_west",
+      "stocktwits:hyde1634",
       8
-    ],
-    [
-      "stocktwits:mokena1234",
-      7
-    ],
-    [
-      "stocktwits:maribor",
-      7
     ],
     [
       "stocktwits:_thumper_",
       7
+    ],
+    [
+      "stocktwits:iplaysmart",
+      6
+    ],
+    [
+      "stocktwits:billycashisking",
+      6
     ],
     [
       "stocktwits:jaredsotken",
@@ -324,27 +340,15 @@
     [
       "stocktwits:donjuancapistran",
       6
-    ],
-    [
-      "stocktwits:billycashisking",
-      5
-    ],
-    [
-      "stocktwits:paidguruworstnightmare",
-      5
-    ],
-    [
-      "stocktwits:bullishaaff",
-      5
     ]
   ],
-  "autores_com_historico": 0,
+  "autores_com_historico": 60,
   "resumo_db": {
-    "posts": 134,
-    "autores": 90,
+    "posts": 140,
+    "autores": 94,
     "campanhas": 12,
-    "sinais": 23,
-    "precos": 0,
-    "ultima_execucao": "2026-11-11T04:43:44.303149+00:00"
+    "sinais": 35,
+    "precos": 10695,
+    "ultima_execucao": "2026-11-11T04:45:28.397226+00:00"
   }
 }
