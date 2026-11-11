@@ -1,0 +1,18 @@
+name: Assessor tests
+
+on:
+  push:
+    paths: ["assessor/**", ".github/workflows/assessor-tests.yml"]
+  pull_request:
+    paths: ["assessor/**", ".github/workflows/assessor-tests.yml"]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -e "assessor[dev]"
+      - run: cd assessor && python -m pytest -q
