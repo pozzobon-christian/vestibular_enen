@@ -129,9 +129,12 @@ def analyze(db: MonitorDB, days: int = 30) -> dict:
 
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(prog="advisor.monitor")
-    ap.add_argument("cmd", choices=["run", "collect", "analyze", "status"])
+    ap.add_argument("cmd", choices=["run", "collect", "analyze", "status", "diag"])
     ap.add_argument("--days", type=int, default=30)
+    ap.add_argument("--query", default="@gustavocerbasi")
     a = ap.parse_args(argv)
+    if a.cmd == "diag":
+        return diag(a.query)
     db = MonitorDB(DB)
     if a.cmd == "status":
         print(json.dumps(db.summary(), indent=2, ensure_ascii=False)); return 0
@@ -154,3 +157,24 @@ def main(argv: list[str] | None = None) -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
+
+
+def diag(query: str) -> int:
+    """Mostra o que o YouTube devolve ao runner para um handle/nome."""
+    import requests
+    from .influencers.collectors import _YT_HEADERS, _YT_EXTERNAL, _YT_CANON, _YT_ANY, _YT_SEARCH
+    for url, params in ((f"https://www.youtube.com/{query}", None),
+                        ("https://www.youtube.com/results", {"search_query": query.lstrip("@"), "sp": "EgIQAg%3D%3D"}),
+                        ("https://www.youtube.com/feeds/videos.xml", {"channel_id": "UCtbxlqGhUONVl9LI0cJKlgQ"})):
+        for hdr_name, hdr in (("yt_headers", _YT_HEADERS), ("simples", {"User-Agent": "Mozilla/5.0"})):
+            try:
+                r = requests.get(url, params=params, headers=hdr, timeout=20, allow_redirects=True)
+                body = r.text
+                print(f"{url} [{hdr_name}] -> {r.status_code} final={r.url} len={len(body)}")
+                print("   externalId:", _YT_EXTERNAL.findall(body)[:3], "canonical:", _YT_CANON.findall(body)[:2],
+                      "any:", _YT_ANY.findall(body)[:3], "search:", _YT_SEARCH.findall(body)[:3],
+                      "entry:", "<entry>" in body, "consent:", "consent.youtube.com" in r.url or "consent" in body[:3000].lower())
+                print("   trecho:", body[:300].replace("\n", " "))
+            except Exception as e:  # noqa: BLE001
+                print(f"{url} [{hdr_name}] ERRO {type(e).__name__}: {e}")
+    return 0
