@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mesa de Operações</title>
+<meta name="description" content="Painel do assessor: carteira, cotações, boiada de influenciadores, notícias e plano.">
+<style>
+:root{--bg:#f6f7f9;--card:#fff;--ink:#17202a;--mut:#67727e;--line:#e3e7ec;--up:#1a9d5a;--dn:#d43c3c;--acc:#2457d6;--warn:#c98a00}
+:root:not([data-theme="light"]){color-scheme:light dark}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1318;--card:#171c23;--ink:#e8ecf1;--mut:#97a1ad;--line:#273039;--up:#3ccf7d;--dn:#ff6b6b;--acc:#6b93ff;--warn:#f0b443}}
+:root[data-theme="dark"]{--bg:#0f1318;--card:#171c23;--ink:#e8ecf1;--mut:#97a1ad;--line:#273039;--up:#3ccf7d;--dn:#ff6b6b;--acc:#6b93ff;--warn:#f0b443}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.45 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+header{padding:16px;border-bottom:1px solid var(--line);display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+h1{font-size:18px;margin:0}header small{color:var(--mut)}
+main{padding:16px;max-width:1400px;margin:0 auto;display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(340px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px;min-width:0}
+.card.wide{grid-column:1/-1}h2{font-size:14px;margin:0 0 10px;color:var(--mut);text-transform:uppercase;letter-spacing:.04em}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}.kpi{padding:10px;border:1px solid var(--line);border-radius:8px}
+.kpi b{display:block;font-size:20px}.kpi span{color:var(--mut);font-size:12px}
+table{width:100%;border-collapse:collapse;font-size:13px}th,td{padding:6px 6px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}th{color:var(--mut);font-weight:600}
+.up{color:var(--up)}.dn{color:var(--dn)}.mut{color:var(--mut)}.tag{display:inline-block;padding:1px 7px;border-radius:999px;font-size:11px;border:1px solid var(--line);margin-right:4px}
+.inicio{border-color:var(--up);color:var(--up)}.lotada{border-color:var(--warn);color:var(--warn)}.reversao{border-color:var(--dn);color:var(--dn)}
+.bar{height:8px;background:var(--line);border-radius:4px;overflow:hidden}.bar i{display:block;height:100%;background:var(--acc)}
+.scroll{max-height:420px;overflow:auto}a{color:var(--acc);text-decoration:none}a:hover{text-decoration:underline}
+.filters{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}.filters button{border:1px solid var(--line);background:transparent;color:var(--ink);padding:4px 10px;border-radius:999px;cursor:pointer}
+.filters button.on{background:var(--acc);color:#fff;border-color:var(--acc)}svg.spark{width:90px;height:24px}
+.err{font-size:12px;color:var(--mut)}input#src{flex:1;min-width:260px;padding:6px 8px;border:1px solid var(--line);border-radius:6px;background:var(--card);color:var(--ink)}
+@media (max-width:600px){main{padding:16px}th,td{padding:5px 4px}}
+</style>
+</head>
+<body>
+<header>
+  <h1>Mesa de Operações</h1>
+  <small id="when">carregando…</small>
+  <input id="src" placeholder="URL do dashboard-data.json" title="Fonte dos dados">
+  <button id="reload">Atualizar</button>
+</header>
+<main>
+  <section class="card wide"><h2>Carteira e meta</h2><div class="kpis" id="kpis"></div>
+    <div style="margin-top:10px"><div class="bar"><i id="meta" style="width:0"></i></div><small class="mut" id="metatxt"></small></div>
+    <div class="scroll" style="margin-top:10px"><table id="pos"><thead><tr><th>Ativo</th><th>Qtd</th><th>Preço médio</th><th>Último</th><th>Valor (R$)</th><th>P&amp;L</th></tr></thead><tbody></tbody></table></div>
+    <p class="mut" style="font-size:12px;margin:8px 0 0">Para registrar uma operação, adicione uma linha em <code>assessor/data/carteira.json</code> (data, ticker, mercado, lado, quantidade, preco, taxas, tese, stop). A próxima execução do monitor recalcula tudo.</p>
+  </section>
+  <section class="card"><h2>Plano e regras</h2><div id="plano"></div></section>
+  <section class="card"><h2>Boiada: campanhas detectadas</h2><div class="scroll"><table id="camp"><thead><tr><th>Ativo</th><th>Dir.</th><th>Autores</th><th>Líder</th><th>Fase</th><th>Conf.</th></tr></thead><tbody></tbody></table></div></section>
+  <section class="card wide"><h2>Cotações da lista de observação</h2><div class="scroll"><table id="quotes"><thead><tr><th>Ativo</th><th>Mercado</th><th>Último</th><th>1d</th><th>5d</th><th>20d</th><th>30 dias</th></tr></thead><tbody></tbody></table></div></section>
+  <section class="card wide"><h2>Notícias</h2><div class="filters" id="nf"></div><div class="scroll"><table id="news"><thead><tr><th>Quando</th><th>Fonte</th><th>Título</th><th>Ativos</th><th>Sent.</th></tr></thead><tbody></tbody></table></div></section>
+  <section class="card"><h2>Influenciadores: mais ativos</h2><div class="scroll"><table id="auth"><thead><tr><th>Autor</th><th>Posts</th><th>Acerto 5d</th><th>Pump</th></tr></thead><tbody></tbody></table></div></section>
+  <section class="card"><h2>Quem posta primeiro e grupos</h2><div id="lead"></div></section>
+  <section class="card"><h2>Ativos mais citados (7 dias)</h2><div id="tick"></div></section>
+  <section class="card wide"><h2>Posts recentes</h2><div class="scroll"><table id="posts"><thead><tr><th>Quando</th><th>Autor</th><th>Texto</th><th>Ativos</th><th>Dir.</th></tr></thead><tbody></tbody></table></div></section>
+  <section class="card wide"><h2>Saúde da coleta</h2><div id="health" class="err"></div></section>
+</main>
+<script>
+const DEFAULT_SRC = location.protocol === 'file:' || location.hostname.endsWith('github.io')
+  ? 'https://raw.githubusercontent.com/pozzobon-christian/vestibular_enen/claude/investment-advisor-stocks-crypto-ld7ink/assessor/data/dashboard-data.json'
+  : '../data/dashboard-data.json';
+const $ = s => document.querySelector(s);
+const fmt = (n, d = 2) => n == null ? '–' : Number(n).toLocaleString('pt-BR', {minimumFractionDigits: d, maximumFractionDigits: d});
+const pct = n => n == null ? '–' : `<span class="${n >= 0 ? 'up' : 'dn'}">${(n * 100).toFixed(2)}%</span>`;
+const when = s => { if (!s) return '–'; const d = new Date(s); return isNaN(d) ? s : d.toLocaleString('pt-BR', {day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit'}); };
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]));
+function spark(arr) {
+  if (!arr || arr.length < 2) return '';
+  const mn = Math.min(...arr), mx = Math.max(...arr), w = 90, h = 24;
+  const pts = arr.map((v, i) => `${(i / (arr.length - 1) * w).toFixed(1)},${(h - (mx === mn ? h / 2 : (v - mn) / (mx - mn) * h)).toFixed(1)}`).join(' ');
+  const col = arr[arr.length - 1] >= arr[0] ? 'var(--up)' : 'var(--dn)';
+  return `<svg class="spark" viewBox="0 0 ${w} ${h}"><polyline fill="none" stroke="${col}" stroke-width="1.5" points="${pts}"/></svg>`;
+}
+let NEWS = [], FILTER = 'todos';
+function render(d) {
+  $('#when').textContent = 'atualizado ' + when(d.gerado_em) + (d.usdbrl ? ` · USD/BRL ${fmt(d.usdbrl, 3)}` : '');
+  const c = d.carteira || {};
+  $('#kpis').innerHTML = [
+    ['Patrimônio', 'R$ ' + fmt(c.patrimonio_brl)], ['Aportes', 'R$ ' + fmt(c.aportes_brl)], ['Caixa', 'R$ ' + fmt(c.caixa_brl)],
+    ['Investido', 'R$ ' + fmt(c.investido_brl)], ['P&L total', `<span class="${(c.pnl_total_brl || 0) >= 0 ? 'up' : 'dn'}">R$ ${fmt(c.pnl_total_brl)}</span>`],
+    ['Retorno', pct(c.retorno_pct)], ['Posts', d.resumo?.posts ?? '–'], ['Campanhas', d.resumo?.campanhas ?? '–'],
+  ].map(([k, v]) => `<div class="kpi"><b>${v}</b><span>${k}</span></div>`).join('');
+  const prog = Math.min(1, c.progresso_meta_pct || 0);
+  $('#meta').style.width = (prog * 100).toFixed(1) + '%';
+  $('#metatxt').textContent = `Meta R$ ${fmt(c.meta_brl, 0)} · ${(prog * 100).toFixed(1)}% atingido`;
+  $('#pos tbody').innerHTML = (c.posicoes || []).map(p => `<tr><td><b>${esc(p.ticker)}</b> <span class="mut">${esc(p.mercado)}</span></td><td>${fmt(p.quantidade, 4)}</td><td>${fmt(p.preco_medio, 4)}</td><td>${fmt(p.ultimo, 4)} <span class="mut">${esc(p.data_preco || '')}</span></td><td>${fmt(p.valor_brl)}</td><td>${pct(p.pnl_pct)} <span class="mut">R$ ${fmt(p.pnl_brl)}</span></td></tr>`).join('') || '<tr><td colspan="6" class="mut">Nenhuma posição registrada ainda.</td></tr>';
+  const pl = c.plano || {};
+  $('#plano').innerHTML = `<p><b>Capital inicial:</b> R$ ${fmt(pl.capital_inicial_brl, 0)} · <b>Meta:</b> R$ ${fmt(pl.meta_brl, 0)}</p>
+    <p><b>Retirada:</b> ${esc(pl.regra_retirada || '')}</p>
+    <p><b>Alocação:</b> ${Object.entries(pl.alocacao || {}).map(([k, v]) => `${esc(k)} ${(v * 100).toFixed(0)}%`).join(' · ')}</p>
+    <p><b>Risco:</b> ${Object.entries(pl.risco || {}).map(([k, v]) => `${esc(k)} ${(v * 100).toFixed(0)}%`).join(' · ')}</p>
+    <p><b>Opções:</b> liberadas a partir de R$ ${fmt(pl.opcoes_liberadas_a_partir_de_brl, 0)}</p>`;
+  $('#camp tbody').innerHTML = (d.campanhas || []).map(k => `<tr><td><b>${esc(k.ativo)}</b></td><td>${esc(k.direcao)}</td><td>${k.autores}</td><td class="mut">${esc(k.lider)}</td><td><span class="tag ${esc(k.fase)}">${esc(k.fase)}</span><div class="mut" style="font-size:11px">${esc(k.acao)}</div></td><td>${fmt(k.confianca, 2)}</td></tr>`).join('') || '<tr><td colspan="6" class="mut">Nenhuma campanha nos últimos 30 dias.</td></tr>';
+  $('#quotes tbody').innerHTML = (d.cotacoes || []).map(q => `<tr><td><b>${esc(q.ticker)}</b></td><td class="mut">${esc(q.mercado)}</td><td>${fmt(q.ultimo, q.mercado === 'cripto' ? 2 : 2)} <span class="mut">${esc(q.data)}</span></td><td>${pct(q.var_1d)}</td><td>${pct(q.var_5d)}</td><td>${pct(q.var_20d)}</td><td>${spark(q.serie)}</td></tr>`).join('');
+  NEWS = d.noticias || [];
+  const mk = [...new Set(NEWS.map(n => n.mercado).filter(Boolean))];
+  $('#nf').innerHTML = ['todos', ...mk, 'oficial'].map(f => `<button class="${f === FILTER ? 'on' : ''}" data-f="${f}">${f}</button>`).join('');
+  renderNews();
+  const st = d.estatisticas_autores || {};
+  $('#auth tbody').innerHTML = (d.autores_mais_ativos || []).map(a => { const s = st[a.autor] || {}; return `<tr><td>${esc(a.autor)}</td><td>${a.posts}</td><td>${s.acerto_5d != null ? (s.acerto_5d * 100).toFixed(0) + '%' : '–'}</td><td>${s.assinatura_pump != null ? (s.assinatura_pump * 100).toFixed(0) + '%' : '–'}</td></tr>`; }).join('');
+  $('#lead').innerHTML = `<p><b>Líderes:</b> ${(d.lideres || []).slice(0, 8).map(([a, n]) => `${esc(a)} <span class="mut">(${n > 0 ? '+' : ''}${n})</span>`).join(', ') || '–'}</p>
+    <p><b>Grupos descobertos:</b></p>${(d.grupos || []).map(g => `<p class="mut" style="font-size:12px">${g.map(esc).join(', ')}</p>`).join('') || '<p class="mut">ainda nenhum (precisa de campanhas repetidas)</p>'}`;
+  const mx = Math.max(1, ...(d.ativos_mais_citados_7d || []).map(t => t.mencoes));
+  $('#tick').innerHTML = (d.ativos_mais_citados_7d || []).map(t => `<div style="display:flex;gap:8px;align-items:center;margin:3px 0"><b style="width:60px">${esc(t.ticker)}</b><div class="bar" style="flex:1"><i style="width:${(t.mencoes / mx * 100).toFixed(0)}%"></i></div><span class="mut" style="width:30px;text-align:right">${t.mencoes}</span></div>`).join('') || '<p class="mut">sem dados</p>';
+  $('#posts tbody').innerHTML = (d.posts_recentes || []).map(p => `<tr><td class="mut">${when(p.ts)}</td><td>${esc(p.autor)}</td><td>${p.url ? `<a href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.texto)}</a>` : esc(p.texto)}</td><td>${(p.tickers || []).map(t => `<span class="tag">${esc(t)}</span>`).join('')}</td><td>${esc(p.direcao)}</td></tr>`).join('');
+  const errs = d.erros_ultima_execucao || [];
+  $('#health').innerHTML = `${errs.length} fonte(s) com erro na última execução.` + (errs.length ? '<ul>' + errs.map(e => `<li>${esc(e)}</li>`).join('') + '</ul>' : '');
+}
+function renderNews() {
+  const rows = NEWS.filter(n => FILTER === 'todos' || n.mercado === FILTER || (FILTER === 'oficial' && n.tipo === 'oficial'));
+  $('#news tbody').innerHTML = rows.map(n => `<tr><td class="mut">${when(n.publicado)}</td><td>${esc(n.fonte)}</td><td><a href="${esc(n.url)}" target="_blank" rel="noopener">${esc(n.titulo)}</a></td><td>${(n.tickers || []).map(t => `<span class="tag">${esc(t)}</span>`).join('')}</td><td class="${n.sentimento > 0.1 ? 'up' : n.sentimento < -0.1 ? 'dn' : 'mut'}">${fmt(n.sentimento, 2)}</td></tr>`).join('') || '<tr><td colspan="5" class="mut">Sem notícias coletadas ainda.</td></tr>';
+}
+$('#nf').addEventListener('click', e => { if (e.target.dataset.f) { FILTER = e.target.dataset.f; [...$('#nf').children].forEach(b => b.classList.toggle('on', b.dataset.f === FILTER)); renderNews(); } });
+async function load() {
+  const src = $('#src').value || DEFAULT_SRC;
+  try { localStorage.setItem('src', src); } catch (e) {}
+  $('#when').textContent = 'carregando…';
+  try { const r = await fetch(src + (src.includes('?') ? '&' : '?') + 't=' + Date.now(), {cache: 'no-store'}); if (!r.ok) throw new Error(r.status); render(await r.json()); }
+  catch (e) { $('#when').textContent = 'falha ao carregar: ' + e.message; }
+}
+try { $('#src').value = localStorage.getItem('src') || DEFAULT_SRC; } catch (e) { $('#src').value = DEFAULT_SRC; }
+$('#reload').onclick = load; load(); setInterval(load, 10 * 60 * 1000);
+</script>
+</body>
+</html>

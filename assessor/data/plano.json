@@ -1,0 +1,18 @@
+{
+  "capital_inicial_brl": 500,
+  "meta_brl": 5000,
+  "inicio": "2026-11-11",
+  "regra_retirada": "0% até a meta: reinveste tudo; após R$ 5.000 volta a retirar 70% do lucro semanal",
+  "alocacao": {
+    "acoes_fiis_br_fracionario": 0.6,
+    "cripto_btc_eth": 0.3,
+    "caixa": 0.1
+  },
+  "risco": {
+    "por_operacao": 0.02,
+    "por_dia": 0.04,
+    "por_semana": 0.08,
+    "posicao_max": 0.25
+  },
+  "opcoes_liberadas_a_partir_de_brl": 3000
+}

@@ -19,6 +19,8 @@ from .influencers import (InfluencerRegistry, detect_campaigns, CoMentionGraph, 
                           evaluate_calls, influencer_stats, herd_signal)
 from .influencers import collectors
 from .storage import MonitorDB
+from .news import collect_news, latest_news
+from .portfolio.tracker import load_portfolio
 
 REGISTRY = Path("data/influencers.json")
 DB = Path("data/monitor.db")
@@ -77,6 +79,11 @@ def update_prices(db: MonitorDB, errors: list[str]) -> None:
     if not WATCHLIST.exists():
         return
     wl = json.loads(WATCHLIST.read_text(encoding="utf-8"))
+    try:   # câmbio para marcar posições em dólar
+        bars = fetch_daily_bars("BRL=X", "US")
+        db.upsert_prices("USDBRL", "fx", bars[-400:])
+    except Exception as e:  # noqa: BLE001
+        errors.append(f"cambio USDBRL: {type(e).__name__}: {str(e)[:120]}")
     for coin in wl.get("cripto", []):
         try:
             bars = fetch_crypto_daily(coin)
@@ -142,6 +149,8 @@ def main(argv: list[str] | None = None) -> int:
         reg = InfluencerRegistry(REGISTRY)
         started = datetime.now(timezone.utc).isoformat()
         n, errors = collect(reg, db)
+        wl = json.loads(WATCHLIST.read_text(encoding="utf-8")) if WATCHLIST.exists() else {}
+        n += collect_news(db, wl.get("noticias", []), errors)
         update_prices(db, errors)
         db.log_run(started, "all", n, errors)
         print(f"coleta: {n} posts novos, {len(errors)} erros")
@@ -152,7 +161,53 @@ def main(argv: list[str] | None = None) -> int:
     db.export_jsonl()
     from .report import build
     build(str(DB))
+    build_dashboard_data(db)
     return 0
+
+
+def build_dashboard_data(db: MonitorDB, out: Path = Path("data/dashboard-data.json")) -> dict:
+    """Um único JSON com tudo que a interface mostra."""
+    rep = json.loads(Path("data/relatorio.json").read_text(encoding="utf-8")) if Path("data/relatorio.json").exists() else {}
+    fx_row = db.conn.execute("SELECT close FROM prices WHERE ticker='USDBRL' ORDER BY day DESC LIMIT 1").fetchone()
+    usdbrl = fx_row[0] if fx_row else None
+    wl = json.loads(WATCHLIST.read_text(encoding="utf-8")) if WATCHLIST.exists() else {}
+    quotes = []
+    for market, tickers in wl.items():
+        if market not in ("BR", "US", "cripto"):
+            continue
+        for t in tickers:
+            sym = {"bitcoin": "BTC", "ethereum": "ETH", "solana": "SOL"}.get(t, t)
+            rows = db.conn.execute("SELECT day, close FROM prices WHERE ticker=? ORDER BY day DESC LIMIT 30", (sym,)).fetchall()
+            if not rows:
+                continue
+            closes = [r[1] for r in rows]
+            quotes.append({"ticker": sym, "mercado": market, "ultimo": round(closes[0], 4), "data": rows[0][0],
+                           "var_1d": round(closes[0] / closes[1] - 1, 4) if len(closes) > 1 else None,
+                           "var_5d": round(closes[0] / closes[5] - 1, 4) if len(closes) > 5 else None,
+                           "var_20d": round(closes[0] / closes[20] - 1, 4) if len(closes) > 20 else None,
+                           "serie": list(reversed(closes))})
+    top_authors = db.conn.execute("SELECT author_key, COUNT(*) n FROM posts GROUP BY author_key ORDER BY n DESC LIMIT 20").fetchall()
+    top_tickers = db.conn.execute("SELECT t.value, COUNT(*) n FROM posts, json_each(posts.tickers) t "
+                                  "WHERE posts.ts >= datetime('now','-7 days') GROUP BY t.value ORDER BY n DESC LIMIT 15").fetchall()
+    recent_posts = db.conn.execute("SELECT author_key, platform, ts, text, url, engagement, tickers, stance FROM posts "
+                                   "ORDER BY ts DESC LIMIT 40").fetchall()
+    data = {
+        "gerado_em": datetime.now(timezone.utc).isoformat(),
+        "usdbrl": usdbrl,
+        "resumo": db.summary(),
+        "carteira": load_portfolio(db, usdbrl=usdbrl),
+        "cotacoes": quotes,
+        "campanhas": rep.get("campanhas", []), "grupos": rep.get("grupos_descobertos", []), "lideres": rep.get("lideres", []),
+        "autores_mais_ativos": [{"autor": a, "posts": n} for a, n in top_authors],
+        "ativos_mais_citados_7d": [{"ticker": t, "mencoes": n} for t, n in top_tickers],
+        "posts_recentes": [{"autor": a, "plataforma": pl, "ts": ts, "texto": tx[:200], "url": u, "engajamento": e,
+                            "tickers": json.loads(tk or "[]"), "direcao": st} for a, pl, ts, tx, u, e, tk, st in recent_posts],
+        "noticias": latest_news(db, 60),
+        "estatisticas_autores": db.latest_stats(),
+        "erros_ultima_execucao": json.loads((db.conn.execute("SELECT errors FROM runs ORDER BY finished_at DESC LIMIT 1").fetchone() or ["[]"])[0]),
+    }
+    out.write_text(json.dumps(data, ensure_ascii=False, default=str), encoding="utf-8")
+    return data
 
 
 

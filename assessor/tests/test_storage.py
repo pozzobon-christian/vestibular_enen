@@ -50,3 +50,29 @@ def test_report_markdown(tmp_path, monkeypatch):
     monitor.analyze(db, 30)
     text = report.build("data/monitor.db")
     assert "PETR4" in text and "1 erros" in text and (tmp_path / "data/RELATORIO.md").exists()
+
+
+def test_news_and_dashboard(tmp_path, monkeypatch):
+    import json
+    from advisor import monitor, news
+    monkeypatch.chdir(tmp_path)
+    (tmp_path / "data").mkdir()
+    (tmp_path / "data/watchlist.json").write_text(json.dumps({"BR": ["PETR4"], "US": [], "cripto": []}), encoding="utf-8")
+    (tmp_path / "data/plano.json").write_text(json.dumps({"meta_brl": 5000}), encoding="utf-8")
+    (tmp_path / "data/carteira.json").write_text(json.dumps({"aportes": [{"data": "2026-11-11", "valor_brl": 500}],
+        "trades": [{"data": "2026-11-12", "ticker": "PETR4", "mercado": "BR", "lado": "buy", "quantidade": 5, "preco": 30, "tese": "t"}]}), encoding="utf-8")
+    db = MonitorDB("data/monitor.db")
+    db.upsert_prices("PETR4", "BR", [PriceBar(date(2026, 11, 12), 30, 31, 29, 33, 100)])
+    db.conn.executescript(news.SCHEMA)
+    db.conn.execute("INSERT INTO news VALUES (?,?,?,?,?,?,?,?,?,?)", ("http://n/1", "InfoMoney", "imprensa", "BR",
+                    "PETR4 sobe com recorde", "", "2026-11-12T10:00:00+00:00", '["PETR4"]', 0.5, "x"))
+    db.conn.commit()
+    now = datetime.now(timezone.utc)
+    db.upsert_posts([Post(f"@u{i}", "x", now - timedelta(hours=i), "PETR4 compra", url=f"p{i}") for i in range(3)])
+    monitor.analyze(db, 30)
+    data = monitor.build_dashboard_data(db, tmp_path / "data/dashboard-data.json")
+    cart = data["carteira"]
+    assert cart["aportes_brl"] == 500 and cart["caixa_brl"] == 350 and cart["investido_brl"] == 165
+    assert cart["patrimonio_brl"] == 515 and cart["posicoes"][0]["pnl_brl"] == 15
+    assert data["noticias"][0]["titulo"].startswith("PETR4") and data["cotacoes"][0]["ticker"] == "PETR4"
+    assert len(data["campanhas"]) == 1

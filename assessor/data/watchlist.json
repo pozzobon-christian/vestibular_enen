@@ -31,5 +31,79 @@
     "bitcoin",
     "ethereum",
     "solana"
+  ],
+  "noticias": [
+    {
+      "nome": "InfoMoney",
+      "url": "https://www.infomoney.com.br/feed/",
+      "fonte": "imprensa",
+      "mercado": "BR"
+    },
+    {
+      "nome": "Valor Investe",
+      "url": "https://valorinveste.globo.com/rss/valorinveste/",
+      "fonte": "imprensa",
+      "mercado": "BR"
+    },
+    {
+      "nome": "Money Times",
+      "url": "https://www.moneytimes.com.br/feed/",
+      "fonte": "imprensa",
+      "mercado": "BR"
+    },
+    {
+      "nome": "CVM Notícias",
+      "url": "https://www.gov.br/cvm/pt-br/assuntos/noticias/RSS",
+      "fonte": "oficial",
+      "mercado": "BR"
+    },
+    {
+      "nome": "Banco Central Notícias",
+      "url": "https://www.bcb.gov.br/api/feed/sitefeeds/noticias",
+      "fonte": "oficial",
+      "mercado": "BR"
+    },
+    {
+      "nome": "CoinDesk",
+      "url": "https://www.coindesk.com/arc/outboundfeeds/rss/",
+      "fonte": "imprensa",
+      "mercado": "cripto"
+    },
+    {
+      "nome": "Cointelegraph",
+      "url": "https://cointelegraph.com/rss",
+      "fonte": "imprensa",
+      "mercado": "cripto"
+    },
+    {
+      "nome": "Livecoins",
+      "url": "https://livecoins.com.br/feed/",
+      "fonte": "imprensa",
+      "mercado": "cripto"
+    },
+    {
+      "nome": "CNBC Markets",
+      "url": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
+      "fonte": "imprensa",
+      "mercado": "US"
+    },
+    {
+      "nome": "MarketWatch",
+      "url": "https://feeds.content.dowjones.io/public/rss/mw_topstories",
+      "fonte": "imprensa",
+      "mercado": "US"
+    },
+    {
+      "nome": "SEC Press",
+      "url": "https://www.sec.gov/news/pressreleases.rss",
+      "fonte": "oficial",
+      "mercado": "US"
+    },
+    {
+      "nome": "Federal Reserve Press",
+      "url": "https://www.federalreserve.gov/feeds/press_all.xml",
+      "fonte": "oficial",
+      "mercado": "US"
+    }
   ]
 }
