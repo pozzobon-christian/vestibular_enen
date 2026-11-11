@@ -1,16 +1,16 @@
 # Monitor de influenciadores
 
-Atualizado em 2026-11-11 04:57 UTC
+Atualizado em 2026-11-11 05:01 UTC
 
 | Posts | Autores | Campanhas | Sinais | Preços |
 |---|---|---|---|---|
-| 179 | 113 | 15 | 90 | 10695 |
+| 200 | 117 | 15 | 105 | 10695 |
 
 ## Campanhas nos últimos 30 dias
 
 | Ativo | Direção | Autores | Líder | Fase | Ação | Confiança |
 |---|---|---|---|---|---|---|
-| NVDA | compra | 31 | stocktwits:nedflandersiii | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
+| NVDA | compra | 34 | stocktwits:nedflandersiii | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
 | AAPL | compra | 9 | stocktwits:nedflandersiii | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
 | SPY | compra | 5 | stocktwits:nedflandersiii | ignorar | observar; sem ordem | 0.30 |
 | BTC | compra | 12 | stocktwits:nedflandersiii | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
@@ -34,54 +34,54 @@ Atualizado em 2026-11-11 04:57 UTC
 
 ## Quem posta primeiro
 
-- stocktwits:nedflandersiii: +53
-- stocktwits:sovihabi: +32
-- stocktwits:starrbarr: +24
-- stocktwits:august_west: +20
-- stocktwits:jesterp88: +20
-- stocktwits:maribor: +19
-- stocktwits:mokena1234: +18
-- stocktwits:hyde1634: +16
-- stocktwits:iplaysmart: +14
-- stocktwits:corderooptions: +13
+- stocktwits:nedflandersiii: +56
+- stocktwits:sovihabi: +35
+- stocktwits:starrbarr: +27
+- stocktwits:august_west: +23
+- stocktwits:jesterp88: +23
+- stocktwits:maribor: +22
+- stocktwits:mokena1234: +21
+- stocktwits:hyde1634: +19
+- stocktwits:iplaysmart: +17
+- stocktwits:franking71: +15
 
 ## Autores mais ativos (total coletado)
 
 - youtube:brunoperini: 15 posts
 - youtube:curingaeconomico: 15 posts
+- youtube:portstrader: 15 posts
 - stocktwits:jaredsotken: 9 posts
 - stocktwits:marcusmccord: 5 posts
 - stocktwits:topoptionsaierts: 5 posts
+- stocktwits:maribor: 4 posts
 - stocktwits:alphatrader30000: 3 posts
 - stocktwits:blancobull: 3 posts
-- stocktwits:maribor: 3 posts
+- stocktwits:paidguruworstnightmare: 3 posts
 - stocktwits:tommojg: 3 posts
 - stocktwits:web30: 3 posts
 - stocktwits:40mikemike: 2 posts
 - stocktwits:_thumper_: 2 posts
 - stocktwits:doubleupwithchuck: 2 posts
-- stocktwits:economyengine: 2 posts
-- stocktwits:goldaltcoins: 2 posts
 
 ## Ativos mais mencionados
 
-- NVDA: 63
-- BTC: 38
+- NVDA: 67
+- BTC: 40
 - TSLA: 33
 - AAPL: 30
-- SPY: 23
-- QQQ: 12
+- SPY: 24
+- QQQ: 13
 - MSTR: 9
 - AMD: 9
 - MU: 6
 - AMZN: 5
 - ETH: 4
+- CRWV: 4
 - SPCX: 3
 - SOL: 3
-- CRWV: 3
-- XRP: 2
+- GLD: 3
 
-## Última execução: 2026-11-11T04:57:55.826036+00:00 (22 posts novos, 15 erros)
+## Última execução: 2026-11-11T05:01:50.881143+00:00 (21 posts novos, 15 erros)
 
 - x:pablospyer x:@pablospyer: RuntimeError: defina X_BEARER_TOKEN (API v2 do X)
 - reddit:farialimabets reddit:farialimabets: HTTPError: 403 Client Error: Blocked for url: https://www.reddit.com/r/farialimabets/new.json?limit=50
