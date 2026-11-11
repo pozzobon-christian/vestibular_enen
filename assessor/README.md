@@ -18,7 +18,7 @@ Nenhuma ordem chega à corretora sem passar pelo porteiro de risco (`RiskGate`).
 | `advisor.storage` + `advisor.monitor` | SQLite (`data/monitor.db`) com posts, preços, campanhas, sinais e estatísticas; ciclo coleta → análise → exportação JSONL versionada; roda no GitHub Actions a cada 6h (`.github/workflows/monitor.yml`) |
 | `advisor.portfolio` | Livro-razão auditável (JSONL), ciclo semanal com retirada de lucro, corretora simulada (paper) |
 | `dashboard/index.html` | Interface única: carteira e meta, cotações, campanhas de boiada, influenciadores, notícias, posts, saúde da coleta. Lê `data/dashboard-data.json` |
-| `docs/` | Material de estudo: fundamentos, manual de opções, FIIs, cripto, risco, fontes, roadmap, influenciadores e boiada, plano R$ 500→5k, corretoras e setup, biblioteca |
+| `docs/` | Material de estudo: fundamentos, manual de opções, FIIs, cripto, risco, fontes, roadmap, influenciadores e boiada, plano R$ 500→5k, corretoras e setup, biblioteca, cruzamento de sinais, ganhar na alta e na baixa, o motor de decisão |
 
 ## Rodar
 
