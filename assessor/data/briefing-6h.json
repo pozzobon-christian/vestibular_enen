@@ -1,15 +1,15 @@
 {
-  "gerado_em": "2026-11-11T13:42:05.202997+00:00",
+  "gerado_em": "2026-11-11T13:46:11.541523+00:00",
   "janela_horas": 14.0,
   "regime": {
     "BOVA11": {
       "regime": "baixa",
       "modo": "defensivo",
-      "preco_vs_mm50": -0.0789,
-      "preco_vs_mm200": -0.0461,
-      "drawdown_120d": -0.1724,
-      "tstat_60d": 1.35,
-      "vix": 18.350000381469727,
+      "preco_vs_mm50": -0.0815,
+      "preco_vs_mm200": -0.0487,
+      "drawdown_120d": -0.1747,
+      "tstat_60d": 1.34,
+      "vix": 18.399999618530273,
       "regras": "sem compras novas em ações; caixa 50%+; proteção (dólar, ouro, puts quando liberadas); vendas a favor da tendência com risco definido"
     },
     "SPY": {
@@ -19,7 +19,7 @@
       "preco_vs_mm200": 0.0259,
       "drawdown_120d": -0.0374,
       "tstat_60d": -2.09,
-      "vix": 18.350000381469727,
+      "vix": 18.399999618530273,
       "regras": "metade do tamanho; preferir operações curtas e FIIs de papel; caixa 30%+"
     }
   },
@@ -27,26 +27,26 @@
     {
       "simbolo": "ES=F",
       "nome": "S&P 500 futuro",
-      "ultimo": 7616.25,
+      "ultimo": 7612.75,
       "data": "2026-11-11",
-      "var_1d": 0.0095,
-      "var_5d": -0.0135
+      "var_1d": 0.0091,
+      "var_5d": -0.014
     },
     {
       "simbolo": "NQ=F",
       "nome": "Nasdaq futuro",
-      "ultimo": 28381.25,
+      "ultimo": 28365.25,
       "data": "2026-11-11",
-      "var_1d": 0.0196,
-      "var_5d": -0.0065
+      "var_1d": 0.019,
+      "var_5d": -0.0071
     },
     {
       "simbolo": "YM=F",
       "nome": "Dow futuro",
-      "ultimo": 52455.0,
+      "ultimo": 52442.0,
       "data": "2026-11-11",
-      "var_1d": 0.0027,
-      "var_5d": -0.0196
+      "var_1d": 0.0024,
+      "var_5d": -0.0198
     },
     {
       "simbolo": "^N225",
@@ -75,50 +75,50 @@
     {
       "simbolo": "^STOXX50E",
       "nome": "Euro Stoxx 50",
-      "ultimo": 6368.51,
+      "ultimo": 6368.09,
       "data": "2026-11-11",
       "var_1d": 0.0064,
-      "var_5d": 0.0164
+      "var_5d": 0.0163
     },
     {
       "simbolo": "^FTSE",
       "nome": "FTSE 100",
-      "ultimo": 10797.22,
+      "ultimo": 10799.01,
       "data": "2026-11-11",
-      "var_1d": 0.0042,
-      "var_5d": -0.003
+      "var_1d": 0.0044,
+      "var_5d": -0.0028
     },
     {
       "simbolo": "CL=F",
       "nome": "WTI",
-      "ultimo": 87.37,
+      "ultimo": 87.27,
       "data": "2026-11-11",
-      "var_1d": 0.0155,
-      "var_5d": -0.0085
+      "var_1d": 0.0143,
+      "var_5d": -0.0096
     },
     {
       "simbolo": "BZ=F",
       "nome": "Brent",
-      "ultimo": 92.95,
+      "ultimo": 92.77,
       "data": "2026-11-11",
-      "var_1d": 0.016,
-      "var_5d": -0.0176
+      "var_1d": 0.014,
+      "var_5d": -0.0196
     },
     {
       "simbolo": "GC=F",
       "nome": "Ouro",
-      "ultimo": 4046.5,
+      "ultimo": 4045.5,
       "data": "2026-11-11",
-      "var_1d": 0.004,
-      "var_5d": -0.0065
+      "var_1d": 0.0038,
+      "var_5d": -0.0068
     },
     {
       "simbolo": "HG=F",
       "nome": "Cobre",
-      "ultimo": 6.29,
+      "ultimo": 6.28,
       "data": "2026-11-11",
-      "var_1d": 0.0109,
-      "var_5d": -0.0181
+      "var_1d": 0.0103,
+      "var_5d": -0.0187
     },
     {
       "simbolo": "TIO=F",
@@ -131,10 +131,10 @@
     {
       "simbolo": "DX-Y.NYB",
       "nome": "Índice dólar",
-      "ultimo": 102.69,
+      "ultimo": 102.67,
       "data": "2026-11-11",
-      "var_1d": 0.0045,
-      "var_5d": 0.0116
+      "var_1d": 0.0043,
+      "var_5d": 0.0115
     },
     {
       "simbolo": "^TNX",
@@ -147,10 +147,10 @@
     {
       "simbolo": "^VIX",
       "nome": "VIX",
-      "ultimo": 18.35,
+      "ultimo": 18.4,
       "data": "2026-11-11",
-      "var_1d": -0.057,
-      "var_5d": 0.1048
+      "var_1d": -0.0545,
+      "var_5d": 0.1078
     },
     {
       "simbolo": "EWZ",
@@ -291,25 +291,25 @@
       "mercado": "BR",
       "direction": "baixa",
       "score": 85,
-      "slope_annual_pct": -13.0,
-      "tstat": -3.23,
+      "slope_annual_pct": -13.2,
+      "tstat": -3.27,
       "adx": 38.4,
       "above_sma50": false,
       "above_sma200": false,
       "breakout": "nenhum",
       "momentum": {
         "m_12_1": -0.0136,
-        "m_3": -0.0524,
-        "m_1": -0.0624,
-        "m_1w": 0.056
+        "m_3": -0.0567,
+        "m_1": -0.0667,
+        "m_1w": 0.0513
       },
       "vol": {
-        "vol_20d": 0.2715,
-        "vol_100d": 0.1507,
-        "razao": 1.802
+        "vol_20d": 0.2686,
+        "vol_100d": 0.1498,
+        "razao": 1.7929
       },
       "notes": [
-        "inclinação 60d significativa (t=-3.2)",
+        "inclinação 60d significativa (t=-3.3)",
         "ADX 38: tendência com força",
         "vol em expansão: reduzir tamanho"
       ]
@@ -327,14 +327,14 @@
       "breakout": "rompimento_baixa_20d",
       "momentum": {
         "m_12_1": 0.0168,
-        "m_3": -0.1177,
-        "m_1": -0.1542,
-        "m_1w": -0.0342
+        "m_3": -0.1176,
+        "m_1": -0.154,
+        "m_1w": -0.034
       },
       "vol": {
-        "vol_20d": 0.269,
+        "vol_20d": 0.2691,
         "vol_100d": 0.1848,
-        "razao": 1.4556
+        "razao": 1.456
       },
       "notes": [
         "ADX 36: tendência com força",
@@ -400,22 +400,22 @@
       "mercado": "BR",
       "direction": "alta",
       "score": 70,
-      "slope_annual_pct": 127.3,
-      "tstat": 5.22,
+      "slope_annual_pct": 127.0,
+      "tstat": 5.2,
       "adx": 38.9,
       "above_sma50": false,
       "above_sma200": false,
       "breakout": "rompimento_baixa_20d",
       "momentum": {
         "m_12_1": 0.8512,
-        "m_3": 0.0526,
-        "m_1": -0.217,
-        "m_1w": -0.0694
+        "m_3": 0.0485,
+        "m_1": -0.22,
+        "m_1w": -0.073
       },
       "vol": {
-        "vol_20d": 0.4521,
-        "vol_100d": 0.3609,
-        "razao": 1.2529
+        "vol_20d": 0.4537,
+        "vol_100d": 0.3616,
+        "razao": 1.2545
       },
       "notes": [
         "inclinação 60d significativa (t=5.2)",
@@ -428,7 +428,7 @@
       "mercado": "BR",
       "direction": "baixa",
       "score": 70,
-      "slope_annual_pct": -26.9,
+      "slope_annual_pct": -27.0,
       "tstat": -1.2,
       "adx": 36.0,
       "above_sma50": false,
@@ -436,14 +436,14 @@
       "breakout": "nenhum",
       "momentum": {
         "m_12_1": 0.1064,
-        "m_3": -0.1037,
-        "m_1": -0.2987,
-        "m_1w": 0.0479
+        "m_3": -0.1068,
+        "m_1": -0.3011,
+        "m_1w": 0.0443
       },
       "vol": {
-        "vol_20d": 1.0788,
-        "vol_100d": 0.5919,
-        "razao": 1.8227
+        "vol_20d": 1.0778,
+        "vol_100d": 0.5917,
+        "razao": 1.8214
       },
       "notes": [
         "ADX 36: tendência com força",
@@ -455,22 +455,22 @@
       "mercado": "BR",
       "direction": "alta",
       "score": 70,
-      "slope_annual_pct": 50.4,
-      "tstat": 4.02,
-      "adx": 28.4,
+      "slope_annual_pct": 50.6,
+      "tstat": 4.04,
+      "adx": 28.3,
       "above_sma50": false,
       "above_sma200": true,
       "breakout": "nenhum",
       "momentum": {
         "m_12_1": 0.7537,
-        "m_3": 0.0331,
-        "m_1": -0.0503,
-        "m_1w": -0.015
+        "m_3": 0.0359,
+        "m_1": -0.0476,
+        "m_1w": -0.0122
       },
       "vol": {
-        "vol_20d": 0.4458,
-        "vol_100d": 0.3769,
-        "razao": 1.1827
+        "vol_20d": 0.4479,
+        "vol_100d": 0.3773,
+        "razao": 1.1871
       },
       "notes": [
         "inclinação 60d significativa (t=4.0)",
@@ -482,22 +482,22 @@
       "mercado": "BR",
       "direction": "baixa",
       "score": 70,
-      "slope_annual_pct": -7.7,
-      "tstat": -1.24,
+      "slope_annual_pct": -7.6,
+      "tstat": -1.23,
       "adx": 34.4,
       "above_sma50": false,
       "above_sma200": false,
       "breakout": "nenhum",
       "momentum": {
         "m_12_1": 0.1347,
-        "m_3": -0.0346,
-        "m_1": -0.1148,
-        "m_1w": 0.0062
+        "m_3": -0.0328,
+        "m_1": -0.1132,
+        "m_1w": 0.008
       },
       "vol": {
-        "vol_20d": 0.2595,
-        "vol_100d": 0.1912,
-        "razao": 1.3571
+        "vol_20d": 0.2603,
+        "vol_100d": 0.1913,
+        "razao": 1.3606
       },
       "notes": [
         "ADX 34: tendência com força"
@@ -508,22 +508,22 @@
       "mercado": "BR",
       "direction": "baixa",
       "score": 65,
-      "slope_annual_pct": -66.0,
-      "tstat": -14.29,
+      "slope_annual_pct": -66.1,
+      "tstat": -14.32,
       "adx": 17.5,
       "above_sma50": false,
       "above_sma200": false,
       "breakout": "nenhum",
       "momentum": {
         "m_12_1": 0.0508,
-        "m_3": -0.1227,
-        "m_1": -0.0387,
-        "m_1w": 0.0468
+        "m_3": -0.1249,
+        "m_1": -0.0411,
+        "m_1w": 0.0443
       },
       "vol": {
-        "vol_20d": 0.3753,
-        "vol_100d": 0.2751,
-        "razao": 1.3641
+        "vol_20d": 0.3747,
+        "vol_100d": 0.275,
+        "razao": 1.3627
       },
       "notes": [
         "inclinação 60d significativa (t=-14.3)",
@@ -697,22 +697,22 @@
       "mercado": "BR",
       "direction": "alta",
       "score": 55,
-      "slope_annual_pct": 61.9,
-      "tstat": 3.22,
+      "slope_annual_pct": 61.6,
+      "tstat": 3.2,
       "adx": 31.3,
       "above_sma50": false,
       "above_sma200": false,
       "breakout": "nenhum",
       "momentum": {
         "m_12_1": 0.3009,
-        "m_3": 0.0738,
-        "m_1": -0.1702,
-        "m_1w": 0.0546
+        "m_3": 0.0697,
+        "m_1": -0.1734,
+        "m_1w": 0.0506
       },
       "vol": {
-        "vol_20d": 0.5517,
-        "vol_100d": 0.3729,
-        "razao": 1.4797
+        "vol_20d": 0.5496,
+        "vol_100d": 0.3725,
+        "razao": 1.4755
       },
       "notes": [
         "inclinação 60d significativa (t=3.2)",
@@ -724,22 +724,22 @@
       "mercado": "BR",
       "direction": "alta",
       "score": 55,
-      "slope_annual_pct": 1281.8,
-      "tstat": 4.76,
+      "slope_annual_pct": 1287.5,
+      "tstat": 4.77,
       "adx": 38.0,
       "above_sma50": false,
       "above_sma200": false,
       "breakout": "nenhum",
       "momentum": {
         "m_12_1": 0.5311,
-        "m_3": 0.6526,
-        "m_1": -0.4239,
-        "m_1w": 0.28
+        "m_3": 0.669,
+        "m_1": -0.4182,
+        "m_1w": 0.2927
       },
       "vol": {
-        "vol_20d": 2.3723,
-        "vol_100d": 1.3065,
-        "razao": 1.8158
+        "vol_20d": 2.3779,
+        "vol_100d": 1.3081,
+        "razao": 1.8178
       },
       "notes": [
         "inclinação 60d significativa (t=4.8)",
@@ -753,21 +753,21 @@
       "direction": "alta",
       "score": 55,
       "slope_annual_pct": 13.9,
-      "tstat": 2.72,
+      "tstat": 2.71,
       "adx": 25.1,
       "above_sma50": false,
       "above_sma200": false,
       "breakout": "nenhum",
       "momentum": {
         "m_12_1": 0.0099,
-        "m_3": 0.0021,
-        "m_1": -0.0744,
-        "m_1w": 0.0056
+        "m_3": 0.0017,
+        "m_1": -0.0748,
+        "m_1w": 0.0052
       },
       "vol": {
-        "vol_20d": 0.2483,
+        "vol_20d": 0.2482,
         "vol_100d": 0.1419,
-        "razao": 1.7497
+        "razao": 1.749
       },
       "notes": [
         "inclinação 60d significativa (t=2.7)",
@@ -863,22 +863,22 @@
       "mercado": "BR",
       "direction": "alta",
       "score": 40,
-      "slope_annual_pct": 20.5,
-      "tstat": 1.35,
+      "slope_annual_pct": 20.4,
+      "tstat": 1.34,
       "adx": 51.4,
       "above_sma50": false,
       "above_sma200": false,
       "breakout": "nenhum",
       "momentum": {
         "m_12_1": 0.3933,
-        "m_3": 0.0307,
-        "m_1": -0.1724,
-        "m_1w": 0.0322
+        "m_3": 0.0278,
+        "m_1": -0.1747,
+        "m_1w": 0.0292
       },
       "vol": {
-        "vol_20d": 0.5455,
-        "vol_100d": 0.3168,
-        "razao": 1.722
+        "vol_20d": 0.5445,
+        "vol_100d": 0.3166,
+        "razao": 1.7195
       },
       "notes": [
         "ADX 51: tendência com força",
@@ -898,14 +898,14 @@
       "breakout": "nenhum",
       "momentum": {
         "m_12_1": 0.204,
-        "m_3": 0.0809,
-        "m_1": -0.0054,
-        "m_1w": 0.0228
+        "m_3": 0.08,
+        "m_1": -0.0062,
+        "m_1w": 0.022
       },
       "vol": {
         "vol_20d": 0.5068,
-        "vol_100d": 0.332,
-        "razao": 1.5267
+        "vol_100d": 0.3319,
+        "razao": 1.5266
       },
       "notes": [
         "inclinação 60d significativa (t=-2.5)",
@@ -1295,7 +1295,7 @@
         "ticker": "PETR4",
         "n_pos": 1,
         "n_neg": 0,
-        "ret1_after_pos": -0.0245,
+        "ret1_after_pos": -0.0283,
         "ret5_after_pos": null,
         "ret1_after_neg": null,
         "ret5_after_neg": null
@@ -1487,11 +1487,12 @@
     },
     {
       "ticker": "BHIA3",
-      "score": -0.05,
-      "n_items": 1,
-      "n_sources": 1,
+      "score": -0.025,
+      "n_items": 2,
+      "n_sources": 2,
       "headlines": [
-        "Casas Bahia (BHIA3) nega decisão sobre fechamento de lojas"
+        "Casas Bahia (BHIA3) nega decisão sobre fechamento de lojas",
+        "Em recuperação judicial, Casas Bahia (BHIA3) acumula prejuízo de R$ 13,7 bilhões em oito meses"
       ],
       "evidence": {
         "ticker": "BHIA3",
@@ -1504,7 +1505,7 @@
       },
       "action": "ignorar",
       "reasons": [
-        "uma única fonte"
+        "sentimento fraco"
       ]
     },
     {
