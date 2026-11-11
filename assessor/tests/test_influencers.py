@@ -113,3 +113,11 @@ def test_youtube_videos_page_parser(monkeypatch):
     assert len(posts) == 2 and posts[0].tickers == ["PETR4"] and posts[0].engagement == 12345
     assert posts[0].url.endswith("abcdefghijk") and posts[0].stance == "compra"
     assert (datetime.now(timezone.utc) - posts[0].ts).days == 2
+    lock = ('{"lockupViewModel":{"contentId":"abcdefghijk","contentType":"LOCKUP_CONTENT_TYPE_VIDEO","metadata":{'
+            '"lockupMetadataViewModel":{"title":{"content":"VALE3 vendi tudo, topo"},"metadata":{"contentMetadataViewModel":{'
+            '"metadataRows":[{"metadataParts":[{"text":{"content":"1,2 mi visualizações"}},{"text":{"content":"há 3 dias"}}]}]}}}}}}'
+            '{"lockupViewModel":{"contentId":"FLplaylist00","contentType":"LOCKUP_CONTENT_TYPE_PLAYLIST"}}')
+    R.text = lock
+    posts = collectors.youtube_channel_videos_page("UCx")
+    assert len(posts) == 1 and posts[0].tickers == ["VALE3"] and posts[0].stance == "venda"
+    assert posts[0].engagement == 1_200_000 and (datetime.now(timezone.utc) - posts[0].ts).days == 3

@@ -111,14 +111,15 @@ _YT_ANY = re.compile(r'"channelId":"(UC[\w-]+)"')
 _YT_SEARCH = re.compile(r'"channelRenderer":\{"channelId":"(UC[\w-]+)"')
 _YT_HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) " + UA,
                "Accept-Language": "pt-BR,pt;q=0.9,en;q=0.8", "Cookie": "CONSENT=YES+1; SOCS=CAI"}
+_YT_RSS_HEADERS = {"User-Agent": "Mozilla/5.0"}   # o feed responde 404 quando recebe o cookie de consentimento
 
 
 def youtube_feed_ok(channel_id: str) -> bool:
     """Aceita o ID se o RSS responder OU se a página /videos do canal existir
     (o RSS falha de forma intermitente em IPs de nuvem)."""
     r = _req().get(f"https://www.youtube.com/feeds/videos.xml?channel_id={channel_id}",
-                   headers=_YT_HEADERS, timeout=20)
-    if r.status_code == 200 and "<entry>" in r.text:
+                   headers=_YT_RSS_HEADERS, timeout=20)
+    if r.status_code == 200 and "<feed" in r.text:
         return True
     r = _req().get(f"https://www.youtube.com/channel/{channel_id}/videos", headers=_YT_HEADERS, timeout=20)
     return r.status_code == 200 and '"videoId"' in r.text
@@ -147,71 +148,64 @@ def _relative_to_dt(text: str) -> datetime:
     return now
 
 
-def youtube_channel_videos_page(channel_id: str, limit: int = 30) -> list[Post]:
-    """Vídeos recentes lidos da página /videos (ytInitialData). Data aproximada."""
-    r = _req().get(f"https://www.youtube.com/channel/{channel_id}/videos", headers=_YT_HEADERS, timeout=20)
-    r.raise_for_status()
+def _parse_lockups(body: str, limit: int) -> list[tuple[str, str, str, str]]:
+    """(videoId, titulo, texto_publicacao, texto_views) do layout lockupViewModel."""
     out = []
-    for chunk in r.text.split('"videoRenderer":')[1:limit + 1]:
+    for chunk in body.split('"lockupViewModel":{"contentId":"')[1:]:
+        vid = chunk[:11]
+        if not re.fullmatch(r"[\w-]{11}", vid) or '"contentType":"LOCKUP_CONTENT_TYPE_VIDEO"' not in chunk[:200]:
+            continue
+        title = re.search(r'"lockupMetadataViewModel":\{"title":\{"content":"((?:[^"\\]|\\.)*)"', chunk)
+        if not title:
+            continue
+        parts = re.findall(r'"text":\{"content":"([^"]*)"', chunk.split('"metadataParts"', 1)[-1][:1500])
+        pub = next((t for t in parts if re.search(r"\bhá\b|ago|atrás", t)), "")
+        views = next((t for t in parts if re.search(r"visualiza|views|mil|mi\b", t)), "")
+        out.append((vid, title.group(1), pub, views))
+        if len(out) >= limit:
+            break
+    return out
+
+
+def _parse_video_renderers(body: str, limit: int) -> list[tuple[str, str, str, str]]:
+    out = []
+    for chunk in body.split('"videoRenderer":')[1:limit + 1]:
         vid = re.search(r'"videoId":"([\w-]{11})"', chunk)
         title = re.search(r'"title":\{"runs":\[\{"text":"((?:[^"\\]|\\.)*)"', chunk)
         pub = re.search(r'"publishedTimeText":\{"simpleText":"([^"]*)"', chunk)
         views = re.search(r'"viewCountText":\{"simpleText":"([^"]*)"', chunk)
-        if not vid or not title:
-            continue
-        v = int(re.sub(r"\D", "", views.group(1)) or 0) if views else 0
-        out.append(Post(author=channel_id, platform="youtube", ts=_relative_to_dt(pub.group(1) if pub else ""),
-                        text=title.group(1).encode().decode("unicode_escape", errors="ignore"),
-                        url=f"https://www.youtube.com/watch?v={vid.group(1)}", engagement=v))
+        if vid and title:
+            out.append((vid.group(1), title.group(1), pub.group(1) if pub else "", views.group(1) if views else ""))
     return out
 
 
-def youtube_candidates(handle_or_name: str) -> list[str]:
-    """IDs candidatos em ordem de confiança: página do @handle (externalId,
-    canonical, demais channelId) e depois busca por nome (canais)."""
-    cands: list[str] = []
-    def add(ids):
-        for c in ids:
-            if c not in cands:
-                cands.append(c)
-    if handle_or_name.startswith("@"):
-        try:
-            r = _req().get(f"https://www.youtube.com/{handle_or_name}", headers=_YT_HEADERS, timeout=20)
-            if r.status_code == 200:
-                add(_YT_EXTERNAL.findall(r.text)); add(_YT_CANON.findall(r.text)); add(_YT_ANY.findall(r.text)[:5])
-        except Exception:  # noqa: BLE001
-            pass
-    try:
-        r = _req().get("https://www.youtube.com/results",
-                       params={"search_query": handle_or_name.lstrip("@"), "sp": "EgIQAg%3D%3D"},
-                       headers=_YT_HEADERS, timeout=20)
-        if r.status_code == 200:
-            add(_YT_SEARCH.findall(r.text)[:3])
-    except Exception:  # noqa: BLE001
-        pass
-    return cands
+def _views_to_int(text: str) -> int:
+    m = re.search(r"([\d.,]+)\s*(mil|mi|k|m|b)?", text.lower())
+    if not m:
+        return 0
+    num = float(m.group(1).replace(".", "").replace(",", ".")) if m.group(2) else float(re.sub(r"\D", "", m.group(1)) or 0)
+    mult = {"mil": 1e3, "k": 1e3, "mi": 1e6, "m": 1e6, "b": 1e9}.get(m.group(2) or "", 1)
+    return int(num * mult)
 
 
-def resolve_youtube_channel(*queries: str) -> str | None:
-    """Primeiro candidato cujo feed RSS responde com vídeos. Nunca devolve um
-    ID não verificado."""
-    seen: set[str] = set()
-    for q in queries:
-        if not q:
-            continue
-        for cid in youtube_candidates(q):
-            if cid in seen:
-                continue
-            seen.add(cid)
-            if youtube_feed_ok(cid):
-                return cid
-    return None
+def youtube_channel_videos_page(channel_id: str, limit: int = 30) -> list[Post]:
+    """Vídeos recentes lidos da página /videos (ytInitialData). Data aproximada
+    a partir do texto relativo ("há 2 dias")."""
+    r = _req().get(f"https://www.youtube.com/channel/{channel_id}/videos", headers=_YT_HEADERS, timeout=20)
+    r.raise_for_status()
+    items = _parse_lockups(r.text, limit) or _parse_video_renderers(r.text, limit)
+    out = []
+    for vid, title, pub, views in items:
+        out.append(Post(author=channel_id, platform="youtube", ts=_relative_to_dt(pub),
+                        text=title.encode().decode("unicode_escape", errors="ignore"),
+                        url=f"https://www.youtube.com/watch?v={vid}", engagement=_views_to_int(views)))
+    return out
 
 
 def youtube_channel_uploads(channel_id: str) -> list[Post]:
     from ..data.market import parse_rss
     r = _req().get(f"https://www.youtube.com/feeds/videos.xml?channel_id={channel_id}",
-                   headers=_YT_HEADERS, timeout=20)
+                   headers=_YT_RSS_HEADERS, timeout=20)
     if r.status_code != 200 or "<entry>" not in r.text:
         return youtube_channel_videos_page(channel_id)
     out = []
