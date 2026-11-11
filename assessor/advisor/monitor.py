@@ -136,6 +136,8 @@ def main(argv: list[str] | None = None) -> int:
         print(json.dumps({k: rep[k] for k in ("posts_na_janela", "campanhas", "grupos_descobertos", "lideres")},
                          ensure_ascii=False, indent=2, default=str)[:4000])
     db.export_jsonl()
+    from .report import build
+    build(str(DB))
     return 0
 
 

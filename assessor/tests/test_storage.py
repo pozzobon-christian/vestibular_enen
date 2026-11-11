@@ -38,3 +38,15 @@ def test_monitor_analyze_offline(tmp_path, monkeypatch):
     rep = monitor.analyze(db, days=30)
     assert rep["posts_na_janela"] == 4 and len(rep["campanhas"]) == 1
     assert (tmp_path / "data/relatorio.json").exists()
+
+
+def test_report_markdown(tmp_path, monkeypatch):
+    from advisor import monitor, report
+    monkeypatch.chdir(tmp_path)
+    db = MonitorDB("data/monitor.db")
+    now = datetime.now(timezone.utc)
+    db.upsert_posts([Post(f"@u{i}", "x", now - timedelta(hours=i), "PETR4 compra", url=f"p{i}") for i in range(3)])
+    db.log_run(now.isoformat(), "t", 3, ["x: erro"])
+    monitor.analyze(db, 30)
+    text = report.build("data/monitor.db")
+    assert "PETR4" in text and "1 erros" in text and (tmp_path / "data/RELATORIO.md").exists()
