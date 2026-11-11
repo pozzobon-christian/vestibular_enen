@@ -104,6 +104,72 @@
       "url": "https://www.federalreserve.gov/feeds/press_all.xml",
       "fonte": "oficial",
       "mercado": "US"
+    },
+    {
+      "nome": "Reuters Business (via Google News)",
+      "url": "https://news.google.com/rss/search?q=site:reuters.com+markets&hl=en-US&gl=US&ceid=US:en",
+      "fonte": "imprensa",
+      "mercado": "global"
+    },
+    {
+      "nome": "Bloomberg (via Google News)",
+      "url": "https://news.google.com/rss/search?q=site:bloomberg.com+markets&hl=en-US&gl=US&ceid=US:en",
+      "fonte": "imprensa",
+      "mercado": "global"
+    },
+    {
+      "nome": "Financial Times (via Google News)",
+      "url": "https://news.google.com/rss/search?q=site:ft.com+markets&hl=en-US&gl=US&ceid=US:en",
+      "fonte": "imprensa",
+      "mercado": "global"
+    },
+    {
+      "nome": "Nikkei Asia (via Google News)",
+      "url": "https://news.google.com/rss/search?q=site:asia.nikkei.com+markets&hl=en-US&gl=US&ceid=US:en",
+      "fonte": "imprensa",
+      "mercado": "asia"
+    },
+    {
+      "nome": "Google News Brasil: mercado",
+      "url": "https://news.google.com/rss/search?q=ibovespa+OR+d%C3%B3lar+OR+selic&hl=pt-BR&gl=BR&ceid=BR:pt-419",
+      "fonte": "imprensa",
+      "mercado": "BR"
+    },
+    {
+      "nome": "Google News: petróleo e minério",
+      "url": "https://news.google.com/rss/search?q=brent+OR+%22iron+ore%22+OR+OPEC&hl=en-US&gl=US&ceid=US:en",
+      "fonte": "imprensa",
+      "mercado": "commodities"
+    },
+    {
+      "nome": "Trading Economics calendário (via Google News)",
+      "url": "https://news.google.com/rss/search?q=%22economic+calendar%22+today&hl=en-US&gl=US&ceid=US:en",
+      "fonte": "imprensa",
+      "mercado": "global"
     }
-  ]
+  ],
+  "global": {
+    "ES=F": "S&P 500 futuro",
+    "NQ=F": "Nasdaq futuro",
+    "YM=F": "Dow futuro",
+    "^N225": "Nikkei",
+    "^HSI": "Hang Seng",
+    "000001.SS": "Xangai",
+    "^STOXX50E": "Euro Stoxx 50",
+    "^FTSE": "FTSE 100",
+    "CL=F": "WTI",
+    "BZ=F": "Brent",
+    "GC=F": "Ouro",
+    "HG=F": "Cobre",
+    "TIO=F": "Minério de ferro",
+    "DX-Y.NYB": "Índice dólar",
+    "^TNX": "Treasury 10 anos",
+    "^VIX": "VIX",
+    "EWZ": "ETF Brasil (NY)",
+    "PBR": "Petrobras ADR",
+    "VALE": "Vale ADR",
+    "ITUB": "Itaú ADR",
+    "BBD": "Bradesco ADR",
+    "IBIT": "ETF Bitcoin iShares"
+  }
 }

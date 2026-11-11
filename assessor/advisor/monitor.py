@@ -92,6 +92,13 @@ def update_prices(db: MonitorDB, errors: list[str]) -> None:
             time.sleep(2)
         except Exception as e:  # noqa: BLE001
             errors.append(f"preco {coin}: {type(e).__name__}: {str(e)[:120]}")
+    for sym in wl.get("global", {}):
+        try:
+            bars = fetch_daily_bars(sym, "US")
+            db.upsert_prices(sym, "global", bars[-400:])
+            time.sleep(0.4)
+        except Exception as e:  # noqa: BLE001
+            errors.append(f"preco {sym}: {type(e).__name__}: {str(e)[:120]}")
     for market, tickers in wl.items():
         if market not in ("BR", "US"):
             continue
@@ -136,13 +143,15 @@ def analyze(db: MonitorDB, days: int = 30) -> dict:
 
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(prog="advisor.monitor")
-    ap.add_argument("cmd", choices=["run", "collect", "analyze", "status", "diag"])
+    ap.add_argument("cmd", choices=["run", "collect", "analyze", "status", "diag", "morning"])
     ap.add_argument("--days", type=int, default=30)
     ap.add_argument("--query", default="@gustavocerbasi")
     a = ap.parse_args(argv)
     if a.cmd == "diag":
         return diag(a.query)
     db = MonitorDB(DB)
+    if a.cmd == "morning":
+        print(json.dumps(morning_brief(db), ensure_ascii=False, indent=2, default=str)); return 0
     if a.cmd == "status":
         print(json.dumps(db.summary(), indent=2, ensure_ascii=False)); return 0
     if a.cmd in ("run", "collect"):
@@ -163,6 +172,41 @@ def main(argv: list[str] | None = None) -> int:
     build(str(DB))
     build_dashboard_data(db)
     return 0
+
+
+def morning_brief(db: MonitorDB, hours: float = 14.0) -> dict:
+    """Briefing global das 6h: o que aconteceu enquanto o Brasil dormia, em números."""
+    from .signals import trend_report, news_signals
+    wl = json.loads(WATCHLIST.read_text(encoding="utf-8")) if WATCHLIST.exists() else {}
+    overnight = []
+    for sym, name in wl.get("global", {}).items():
+        rows = db.conn.execute("SELECT day, close FROM prices WHERE ticker=? ORDER BY day DESC LIMIT 6", (sym,)).fetchall()
+        if len(rows) >= 2:
+            overnight.append({"simbolo": sym, "nome": name, "ultimo": round(rows[0][1], 2), "data": rows[0][0],
+                              "var_1d": round(rows[0][1] / rows[1][1] - 1, 4),
+                              "var_5d": round(rows[0][1] / rows[-1][1] - 1, 4) if len(rows) >= 6 else None})
+    trends = []
+    for market in ("BR", "US", "cripto"):
+        for t in wl.get(market, []):
+            sym = {"bitcoin": "BTC", "ethereum": "ETH", "solana": "SOL"}.get(t, t)
+            rows = db.conn.execute("SELECT high, low, close FROM prices WHERE ticker=? ORDER BY day", (sym,)).fetchall()
+            if len(rows) < 60:
+                continue
+            tr = trend_report(sym, [r[0] for r in rows], [r[1] for r in rows], [r[2] for r in rows])
+            trends.append({"ticker": sym, "mercado": market, **tr.__dict__})
+    trends.sort(key=lambda x: -x["score"])
+    signals = [s.__dict__ | {"evidence": s.evidence.__dict__} for s in news_signals(db, hours)]
+    since = (datetime.now(timezone.utc) - timedelta(hours=hours)).isoformat()
+    headlines = db.conn.execute("SELECT published, source, market, title, sentiment, tickers FROM news WHERE published >= ? "
+                                "ORDER BY ABS(sentiment) DESC, published DESC LIMIT 25", (since,)).fetchall()
+    brief = {
+        "gerado_em": datetime.now(timezone.utc).isoformat(), "janela_horas": hours,
+        "overnight": overnight, "tendencias": trends, "sinais_de_noticia": signals,
+        "manchetes": [{"quando": p, "fonte": s, "mercado": m, "titulo": t, "sentimento": round(sn or 0, 2), "tickers": json.loads(tk or "[]")}
+                      for p, s, m, t, sn, tk in headlines],
+    }
+    Path("data/briefing-6h.json").write_text(json.dumps(brief, ensure_ascii=False, indent=2, default=str), encoding="utf-8")
+    return brief
 
 
 def build_dashboard_data(db: MonitorDB, out: Path = Path("data/dashboard-data.json")) -> dict:
@@ -203,6 +247,7 @@ def build_dashboard_data(db: MonitorDB, out: Path = Path("data/dashboard-data.js
         "posts_recentes": [{"autor": a, "plataforma": pl, "ts": ts, "texto": tx[:200], "url": u, "engajamento": e,
                             "tickers": json.loads(tk or "[]"), "direcao": st} for a, pl, ts, tx, u, e, tk, st in recent_posts],
         "noticias": latest_news(db, 60),
+        "briefing_6h": {k: v for k, v in morning_brief(db).items() if k in ("overnight", "tendencias", "sinais_de_noticia")},
         "estatisticas_autores": db.latest_stats(),
         "erros_ultima_execucao": json.loads((db.conn.execute("SELECT errors FROM runs ORDER BY finished_at DESC LIMIT 1").fetchone() or ["[]"])[0]),
     }
