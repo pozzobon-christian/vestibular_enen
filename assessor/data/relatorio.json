@@ -1,17 +1,17 @@
 {
-  "gerado_em": "2026-11-11T04:45:28.444888+00:00",
+  "gerado_em": "2026-11-11T04:47:02.237782+00:00",
   "janela_dias": 30,
-  "posts_na_janela": 140,
+  "posts_na_janela": 145,
   "campanhas": [
     {
       "ativo": "NVDA",
       "direcao": "compra",
       "inicio": "2026-11-10T22:18:22+00:00",
-      "autores": 23,
+      "autores": 25,
       "lider": "stocktwits:nedflandersiii",
-      "duracao_h": 6.44,
-      "alcance": 52,
-      "posts": 27,
+      "duracao_h": 6.46,
+      "alcance": 53,
+      "posts": 29,
       "seguidores_em_ordem": [
         "stocktwits:sovihabi",
         "stocktwits:starrbarr",
@@ -34,7 +34,9 @@
         "stocktwits:traidn",
         "stocktwits:jacobbuntman",
         "stocktwits:yeaabuddy",
-        "stocktwits:xxxfactor"
+        "stocktwits:xxxfactor",
+        "stocktwits:ariter2756",
+        "stocktwits:pompus"
       ],
       "fase": "lotada",
       "acao": "não entrar; se posicionado, realizar 50% e subir o stop para o custo",
@@ -270,35 +272,43 @@
       "stocktwits:starrbarr"
     ],
     [
-      "stocktwits:honeybadgerdgaf",
-      "stocktwits:jaredsotken",
-      "stocktwits:meandu2"
-    ],
-    [
       "stocktwits:15fingers",
       "stocktwits:alphabull_10m",
       "stocktwits:intutivetrader"
+    ],
+    [
+      "stocktwits:honeybadgerdgaf",
+      "stocktwits:jaredsotken",
+      "stocktwits:meandu2"
     ]
   ],
   "lideres": [
     [
       "stocktwits:nedflandersiii",
-      43
+      45
     ],
     [
       "stocktwits:sovihabi",
-      24
+      26
     ],
     [
       "stocktwits:starrbarr",
-      16
+      18
     ],
     [
       "stocktwits:august_west",
-      12
+      14
     ],
     [
       "stocktwits:jesterp88",
+      14
+    ],
+    [
+      "stocktwits:mokena1234",
+      12
+    ],
+    [
+      "stocktwits:maribor",
       12
     ],
     [
@@ -306,11 +316,7 @@
       12
     ],
     [
-      "stocktwits:mokena1234",
-      10
-    ],
-    [
-      "stocktwits:maribor",
+      "stocktwits:hyde1634",
       10
     ],
     [
@@ -318,7 +324,7 @@
       10
     ],
     [
-      "stocktwits:hyde1634",
+      "stocktwits:iplaysmart",
       8
     ],
     [
@@ -326,7 +332,7 @@
       7
     ],
     [
-      "stocktwits:iplaysmart",
+      "stocktwits:franking71",
       6
     ],
     [
@@ -336,19 +342,15 @@
     [
       "stocktwits:jaredsotken",
       6
-    ],
-    [
-      "stocktwits:donjuancapistran",
-      6
     ]
   ],
-  "autores_com_historico": 60,
+  "autores_com_historico": 62,
   "resumo_db": {
-    "posts": 140,
-    "autores": 94,
+    "posts": 145,
+    "autores": 99,
     "campanhas": 12,
-    "sinais": 35,
+    "sinais": 47,
     "precos": 10695,
-    "ultima_execucao": "2026-11-11T04:45:28.397226+00:00"
+    "ultima_execucao": "2026-11-11T04:47:02.216413+00:00"
   }
 }
