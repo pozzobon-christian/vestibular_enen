@@ -44,12 +44,13 @@ details summary{cursor:pointer;color:var(--acc);font-size:13px;list-style:none}d
   <input id="src" placeholder="URL do dashboard-data.json" title="Fonte dos dados">
   <button id="reload">Atualizar</button>
 </header>
+<div id="stamp" style="padding:8px 16px;font-size:13px;border-bottom:1px solid var(--line);background:var(--soft)"></div>
 <main>
-  <section class="card wide" id="ordens"><h2>Operações: o que fazer, por quê e o próximo movimento</h2><div id="ordensbox"></div></section>
+  <section class="card wide" id="ordens"><h2>Operações: o que fazer, por quê e o próximo movimento <span class="stampsec mut" style="float:right;text-transform:none;letter-spacing:0;font-weight:400"></span></h2><div id="ordensbox"></div></section>
 
   <section class="card wide" id="regime"><h2>Regime de mercado: como a carteira deve se posicionar</h2><div id="regimebox" class="kpis"></div></section>
-  <section class="card wide" id="curtas"><h2>Operações curtas (1 a 5 pregões): cruzamento de balanço, análogos, notícias, tendência e intradia</h2><div class="scroll"><table id="curtastab"><thead><tr><th>Ativo</th><th>Operação</th><th>Balanço</th><th>Análogos (20d)</th><th>Notícias</th><th>Tendência</th><th>Intradia</th><th>Alvo / stop</th><th>Ganho / risco</th><th>Prazo</th></tr></thead><tbody></tbody></table></div><p class="mut" style="font-size:12px">Regra: só vira operação com 2 ou mais camadas a favor e nenhuma contra. Clique no ativo para a cotação; passe o mouse nas células para o detalhe.</p></section>
-  <section class="card wide" id="calendario"><h2>Calendário de divulgações (próximos 35 dias): o que esperar e como se preparar</h2><div class="filters" id="cf"></div><div class="scroll"><table id="caltab"><thead><tr><th>Data</th><th>Hora (BRT)</th><th>Evento</th><th>Impacto</th><th>Ativos</th><th>O que esperar</th><th>Preparação</th></tr></thead><tbody></tbody></table></div></section>
+  <section class="card wide" id="curtas"><h2>Operações curtas (1 a 5 pregões): cruzamento de balanço, análogos, notícias, tendência e intradia <span id="stampcurtas" class="mut" style="float:right;text-transform:none;letter-spacing:0;font-weight:400"></span></h2><div class="scroll"><table id="curtastab"><thead><tr><th>Ativo</th><th>Operação</th><th>Balanço</th><th>Análogos (20d)</th><th>Notícias</th><th>Tendência</th><th>Intradia</th><th>Alvo / stop</th><th>Ganho / risco</th><th>Prazo</th></tr></thead><tbody></tbody></table></div><p class="mut" style="font-size:12px">Regra: só vira operação com 2 ou mais camadas a favor e nenhuma contra. Clique no ativo para a cotação; passe o mouse nas células para o detalhe.</p></section>
+  <section class="card wide" id="calendario"><h2>Calendário de divulgações (próximos 35 dias): o que esperar e como se preparar <span class="stampsec mut" style="float:right;text-transform:none;letter-spacing:0;font-weight:400"></span></h2><div class="filters" id="cf"></div><div class="scroll"><table id="caltab"><thead><tr><th>Data</th><th>Hora (BRT)</th><th>Evento</th><th>Impacto</th><th>Ativos</th><th>O que esperar</th><th>Preparação</th></tr></thead><tbody></tbody></table></div></section>
   <section class="card wide" id="carteira"><h2>Carteira e meta</h2><div class="kpis" id="kpis"></div>
     <div style="margin-top:10px"><div class="bar"><i id="meta" style="width:0"></i></div><small class="mut" id="metatxt"></small></div>
     <div class="scroll" style="margin-top:10px"><table id="pos"><thead><tr><th>Ativo</th><th>Quantidade</th><th>Preço médio</th><th>Último</th><th>Valor (R$)</th><th>Resultado</th></tr></thead><tbody></tbody></table></div>
@@ -57,9 +58,9 @@ details summary{cursor:pointer;color:var(--acc);font-size:13px;list-style:none}d
   </section>
 
   <section class="card" id="plano"><h2>Plano e regras</h2><div id="planobox"></div></section>
-  <section class="card two" id="madrugada"><h2>Madrugada global: o que aconteceu enquanto a B3 dormia</h2><div class="scroll"><table id="over"><thead><tr><th>Mercado</th><th>Último</th><th>1 dia</th><th>5 dias</th><th>Leitura para a B3</th></tr></thead><tbody></tbody></table></div></section>
+  <section class="card two" id="madrugada"><h2>Madrugada global: o que aconteceu enquanto a B3 dormia <span class="stampsec mut" style="float:right;text-transform:none;letter-spacing:0;font-weight:400"></span></h2><div class="scroll"><table id="over"><thead><tr><th>Mercado</th><th>Último</th><th>1 dia</th><th>5 dias</th><th>Leitura para a B3</th></tr></thead><tbody></tbody></table></div></section>
 
-  <section class="card two"><h2>Tendência por cálculo (score 0-100)</h2><div class="scroll"><table id="trend"><thead><tr><th>Ativo</th><th>Direção</th><th>Score</th><th>Inclinação 60d (t)</th><th>ADX</th><th>Rompimento</th><th>Observações</th></tr></thead><tbody></tbody></table></div></section>
+  <section class="card two"><h2>Tendência por cálculo (score 0-100) <span class="stampsec mut" style="float:right;text-transform:none;letter-spacing:0;font-weight:400"></span></h2><div class="scroll"><table id="trend"><thead><tr><th>Ativo</th><th>Direção</th><th>Score</th><th>Inclinação 60d (t)</th><th>ADX</th><th>Rompimento</th><th>Observações</th></tr></thead><tbody></tbody></table></div></section>
   <section class="card"><h2>Sinais de notícia com evidência</h2><div class="scroll" id="sinais"></div></section>
 
   <section class="card wide"><h2>Cotações da lista de observação</h2><div class="scroll"><table id="quotes"><thead><tr><th>Ativo</th><th>Mercado</th><th>Último</th><th>1 dia</th><th>5 dias</th><th>20 dias</th><th>30 dias</th></tr></thead><tbody></tbody></table></div></section>
@@ -81,7 +82,10 @@ const DEFAULT_SRC = location.protocol === 'file:' || location.hostname.endsWith(
 const $ = s => document.querySelector(s);
 const fmt = (n, d = 2) => n == null ? '–' : Number(n).toLocaleString('pt-BR', {minimumFractionDigits: d, maximumFractionDigits: d});
 const pct = n => n == null ? '–' : `<span class="${n >= 0 ? 'up' : 'dn'}">${(n * 100).toFixed(2).replace('.', ',')}%</span>`;
-const when = s => { if (!s) return '–'; const d = new Date(s); return isNaN(d) ? s : d.toLocaleString('pt-BR', {day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit'}); };
+const TZ = 'America/Sao_Paulo';
+const when = s => { if (!s) return '–'; const d = new Date(s); return isNaN(d) ? s : d.toLocaleString('pt-BR', {timeZone: TZ, day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit'}); };
+const whenFull = s => { if (!s) return '–'; const d = new Date(s); return isNaN(d) ? s : d.toLocaleString('pt-BR', {timeZone: TZ, weekday: 'short', day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit'}) + ' (Brasília)'; };
+const dateBR = s => { if (!s) return '–'; const [y, m, dd] = String(s).slice(0, 10).split('-'); return dd && m && y ? `${dd}/${m}/${y}` : s; };
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]));
 const LADO = {buy: 'compra', sell: 'venda', compra: 'compra', venda: 'venda', neutro: 'neutro', '': '–'};
 const LABEL = {acoes_fiis_br_fracionario: 'ações e FIIs (B3, fracionário)', cripto_btc_eth: 'cripto (BTC/ETH)', caixa: 'caixa',
@@ -115,7 +119,12 @@ function renderCal() {
 const authorLink = a => { const l = AUTH[a]; return l && l.url ? `<a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.nome || a)}</a>` : esc(a); };
 function render(d) {
   AUTH = d.autores_links || {};
-  $('#when').textContent = 'atualizado ' + when(d.gerado_em) + (d.usdbrl ? ` · dólar R$ ${fmt(d.usdbrl, 3)}` : '');
+  $('#when').textContent = 'atualizado em ' + whenFull(d.gerado_em);
+  const lastPx = (d.cotacoes || []).map(q => q.data).sort().pop();
+  const lastNews = (d.noticias || []).map(n => n.publicado).sort().pop();
+  const lastPost = (d.posts_recentes || []).map(p => p.ts).sort().pop();
+  const lastRun = (d.resumo || {}).ultima_execucao;
+  $('#stamp').innerHTML = `<b>Dados atualizados em ${whenFull(d.gerado_em)}</b> · última coleta ${whenFull(lastRun)} · preços de fechamento até ${dateBR(lastPx)}${d.usdbrl ? ` · dólar R$ ${fmt(d.usdbrl, 3)}` : ''} · notícia mais recente ${when(lastNews)} · post mais recente ${when(lastPost)} · a página mostra a hora de Brasília`;
   const c = d.carteira || {};
   const ordens = c.ordens_planejadas || [];
   $('#ordensbox').innerHTML = ordens.map(o => `<div class="ordem"><h3>${esc(o.data)} · ${esc(o.conta)} · ${LADO[o.lado] || esc(o.lado)} de ${tickerLink(o.ticker, o.mercado)} ${o.quantidade ? `· ${o.quantidade} ${o.mercado === 'BR' && /\d$/.test(o.ticker) && o.ticker.endsWith('11') ? 'cotas' : 'ações'}` : ''}${o.valor_brl ? ` · R$ ${fmt(o.valor_brl, 0)}` : ''}</h3>
@@ -179,6 +188,8 @@ function render(d) {
   const mx = Math.max(1, ...(d.ativos_mais_citados_7d || []).map(t => t.mencoes));
   $('#tick').innerHTML = (d.ativos_mais_citados_7d || []).map(t => `<div style="display:flex;gap:8px;align-items:center;margin:3px 0"><span style="width:64px">${tickerLink(t.ticker)}</span><div class="bar" style="flex:1"><i style="width:${(t.mencoes / mx * 100).toFixed(0)}%"></i></div><span class="mut" style="width:30px;text-align:right">${t.mencoes}</span></div>`).join('') || '<p class="mut">sem dados</p>';
   $('#posts tbody').innerHTML = (d.posts_recentes || []).map(p => `<tr><td class="mut">${when(p.ts)}</td><td>${authorLink(p.autor)}</td><td>${p.url ? `<a href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.texto)}</a>` : esc(p.texto)}</td><td>${(p.tickers || []).map(t => tickerLink(t)).join(' ')}</td><td>${LADO[p.direcao] || esc(p.direcao)}</td></tr>`).join('');
+  document.querySelectorAll('.stampsec').forEach(el => el.textContent = 'atualizado ' + whenFull(d.gerado_em));
+  $('#stampcurtas').textContent = 'atualizado ' + whenFull((d.operacoes_curtas || {}).gerado_em || d.gerado_em);
   const errs = d.erros_ultima_execucao || [];
   $('#health').innerHTML = `${errs.length} fonte(s) com erro na última coleta.` + (errs.length ? `<details><summary>ver</summary><ul>${errs.map(e => `<li>${esc(e)}</li>`).join('')}</ul></details>` : '');
 }

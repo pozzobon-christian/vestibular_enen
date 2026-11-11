@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-11-11T14:35:03.427330+00:00",
+  "gerado_em": "2026-11-11T16:59:44.392970+00:00",
   "janela_horas": 14.0,
   "regime": {
     "BOVA11": {
@@ -1512,13 +1512,13 @@
     {
       "ticker": "BTC",
       "score": 0.008,
-      "n_items": 13,
+      "n_items": 12,
       "n_sources": 3,
       "headlines": [
-        "LNbits rushes emergency patch after reported Bitcoin wallet thefts",
         "Across Protocol restores website after hackers hijack domain",
         "Here’s what happened in crypto today",
-        "SEC enforcement actions fall 24%, crypto cases in spotlight"
+        "SEC enforcement actions fall 24%, crypto cases in spotlight",
+        "Stock ETF buyers pounce on dip as Bitcoin funds bleed $1.6 billion"
       ],
       "evidence": {
         "ticker": "BTC",
