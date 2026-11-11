@@ -1,50 +1,50 @@
 # Monitor de influenciadores
 
-Atualizado em 2026-11-11 05:14 UTC
+Atualizado em 2026-11-11 05:16 UTC
 
 | Posts | Autores | Campanhas | Sinais | Preços |
 |---|---|---|---|---|
-| 645 | 152 | 16 | 152 | 11095 |
+| 652 | 155 | 16 | 168 | 11095 |
 
 ## Campanhas nos últimos 30 dias
 
 | Ativo | Direção | Autores | Líder | Fase | Ação | Confiança |
 |---|---|---|---|---|---|---|
 | BTC | compra | 14 | stocktwits:nedflandersiii | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
-| NVDA | compra | 41 | stocktwits:nedflandersiii | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
+| NVDA | compra | 42 | stocktwits:nedflandersiii | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
 | AAPL | compra | 9 | stocktwits:nedflandersiii | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
 | SPY | compra | 5 | stocktwits:nedflandersiii | ignorar | observar; sem ordem | 0.30 |
 | AAPL | venda | 7 | stocktwits:donjuancapistran | ignorar | observar; sem ordem | 0.30 |
 | CRWV | compra | 3 | stocktwits:wyoming2020 | inicio | entrar a favor (compra) com tamanho pelo RiskBudget | 0.40 |
 | AMD | compra | 4 | stocktwits:corderooptions | inicio | entrar a favor (compra) com tamanho pelo RiskBudget | 0.40 |
 | TSLA | compra | 12 | stocktwits:corderooptions | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
-| TSLA | venda | 4 | stocktwits:ghbhhjc | inicio | entrar a favor (venda) com tamanho pelo RiskBudget | 0.40 |
-| SPY | venda | 4 | stocktwits:marcusmccord | inicio | entrar a favor (venda) com tamanho pelo RiskBudget | 0.40 |
+| TSLA | venda | 5 | stocktwits:ghbhhjc | ignorar | observar; sem ordem | 0.30 |
+| SPY | venda | 5 | stocktwits:marcusmccord | ignorar | observar; sem ordem | 0.30 |
 | MSTR | compra | 4 | stocktwits:honeybadgerdgaf | inicio | entrar a favor (compra) com tamanho pelo RiskBudget | 0.40 |
 | BTC | venda | 3 | stocktwits:fawl3r | inicio | entrar a favor (venda) com tamanho pelo RiskBudget | 0.40 |
 | SPCX | compra | 4 | stocktwits:alphabull_10m | inicio | entrar a favor (compra) com tamanho pelo RiskBudget | 0.40 |
-| QQQ | venda | 3 | stocktwits:transcendasset | inicio | entrar a favor (venda) com tamanho pelo RiskBudget | 0.40 |
+| QQQ | venda | 4 | stocktwits:transcendasset | inicio | entrar a favor (venda) com tamanho pelo RiskBudget | 0.40 |
 | QQQ | compra | 3 | stocktwits:maribor | inicio | entrar a favor (compra) com tamanho pelo RiskBudget | 0.40 |
-| NVDA | venda | 5 | stocktwits:peanutloverdrool | ignorar | observar; sem ordem | 0.30 |
+| NVDA | venda | 7 | stocktwits:peanutloverdrool | ignorar | observar; sem ordem | 0.30 |
 
 ## Grupos descobertos (postam juntos em 2+ campanhas)
 
-- stocktwits:august_west, stocktwits:bullseyegains, stocktwits:goodmeyer83, stocktwits:holymofgod, stocktwits:hyde1634, stocktwits:iplaysmart, stocktwits:jrh34, stocktwits:keepcalmcarryon, stocktwits:maribor, stocktwits:nedflandersiii, stocktwits:paidguruworstnightmare, stocktwits:pullbackalerts, stocktwits:sovihabi, stocktwits:starrbarr, stocktwits:transcendasset, stocktwits:ver13
-- stocktwits:honeybadgerdgaf, stocktwits:jaredsotken, stocktwits:meandu2, stocktwits:sol_meek
+- stocktwits:august_west, stocktwits:bullseyegains, stocktwits:goodmeyer83, stocktwits:holymofgod, stocktwits:hyde1634, stocktwits:iplaysmart, stocktwits:jrh34, stocktwits:keepcalmcarryon, stocktwits:marcusmccord, stocktwits:maribor, stocktwits:nedflandersiii, stocktwits:paidguruworstnightmare, stocktwits:pullbackalerts, stocktwits:sovihabi, stocktwits:starrbarr, stocktwits:transcendasset, stocktwits:unmaker, stocktwits:ver13
 - stocktwits:15fingers, stocktwits:alphabull_10m, stocktwits:intutivetrader, stocktwits:stockhold_syndrome
+- stocktwits:honeybadgerdgaf, stocktwits:jaredsotken, stocktwits:meandu2, stocktwits:sol_meek
 
 ## Quem posta primeiro
 
-- stocktwits:nedflandersiii: +65
-- stocktwits:sovihabi: +42
-- stocktwits:starrbarr: +34
-- stocktwits:august_west: +30
-- stocktwits:jesterp88: +30
-- stocktwits:maribor: +29
-- stocktwits:mokena1234: +28
-- stocktwits:hyde1634: +26
-- stocktwits:iplaysmart: +24
-- stocktwits:franking71: +22
+- stocktwits:nedflandersiii: +66
+- stocktwits:sovihabi: +43
+- stocktwits:starrbarr: +35
+- stocktwits:august_west: +31
+- stocktwits:jesterp88: +31
+- stocktwits:maribor: +30
+- stocktwits:mokena1234: +29
+- stocktwits:hyde1634: +27
+- stocktwits:iplaysmart: +25
+- stocktwits:franking71: +23
 
 ## Autores mais ativos (total coletado)
 
@@ -66,23 +66,23 @@ Atualizado em 2026-11-11 05:14 UTC
 
 ## Ativos mais mencionados
 
-- NVDA: 89
+- NVDA: 95
 - BTC: 83
-- TSLA: 36
+- TSLA: 37
 - AAPL: 30
-- SPY: 26
-- QQQ: 15
+- SPY: 28
+- QQQ: 17
 - AMD: 12
 - MSTR: 10
 - TRXF11: 8
 - MU: 8
+- SPCX: 6
 - XPML11: 5
-- SPCX: 5
 - ETH: 5
 - CRWV: 5
 - AMZN: 5
 
-## Última execução: 2026-11-11T05:14:23.823721+00:00 (20 posts novos, 17 erros)
+## Última execução: 2026-11-11T05:16:56.512427+00:00 (7 posts novos, 17 erros)
 
 - x:pablospyer x:@pablospyer: RuntimeError: defina X_BEARER_TOKEN (API v2 do X)
 - reddit:farialimabets reddit:farialimabets: HTTPError: 403 Client Error: Blocked for url: https://www.reddit.com/r/farialimabets/new.json?limit=50
