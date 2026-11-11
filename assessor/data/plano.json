@@ -14,5 +14,60 @@
     "por_semana": 0.08,
     "posicao_max": 0.25
   },
-  "opcoes_liberadas_a_partir_de_brl": 3000
+  "opcoes_liberadas_a_partir_de_brl": 3000,
+  "contas": {
+    "BTG Pactual Digital": {
+      "mercado": "B3 ações, FIIs, opções (futuro)",
+      "deposito_inicial_brl": 350,
+      "uso": "ações fracionário + FIIs + caixa de oportunidade"
+    },
+    "Foxbit": {
+      "mercado": "cripto em reais",
+      "deposito_inicial_brl": 150,
+      "uso": "BTC/ETH à vista, compra escalonada"
+    },
+    "Bybit": {
+      "mercado": "cripto global, perpétuos e opções",
+      "deposito_inicial_brl": 0,
+      "uso": "só com lucro retido após R$ 5.000; até lá, conta parada e 2FA ativo"
+    }
+  },
+  "ordem_de_entrada_semana_1": [
+    {
+      "dia": 1,
+      "conta": "BTG",
+      "ordem": "WEGE3F compra 2 @ limite último negócio, stop 47,00",
+      "valor_brl": 101
+    },
+    {
+      "dia": 1,
+      "conta": "Foxbit",
+      "ordem": "BTC compra R$ 50 limitada, alerta -10%",
+      "valor_brl": 50
+    },
+    {
+      "dia": 3,
+      "conta": "BTG",
+      "ordem": "MXRF11 compra 11 cotas se segurar a mínima, stop -6%",
+      "valor_brl": 98
+    },
+    {
+      "dia": 8,
+      "conta": "Foxbit",
+      "ordem": "BTC 2ª parcela R$ 50",
+      "valor_brl": 50
+    },
+    {
+      "dia": "gatilho",
+      "conta": "Foxbit",
+      "ordem": "BTC 3ª parcela R$ 50 se cair 10% da 1ª compra",
+      "valor_brl": 50
+    },
+    {
+      "dia": "gatilho",
+      "conta": "BTG",
+      "ordem": "R$ 151 em caixa: boiada em fase início ou Ibovespa acima da MM50",
+      "valor_brl": 151
+    }
+  ]
 }
