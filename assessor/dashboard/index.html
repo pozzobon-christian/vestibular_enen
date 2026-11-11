@@ -30,7 +30,7 @@ table{width:100%;border-collapse:collapse;font-size:13px}th,td{padding:6px;borde
 .ordem{border:1px solid var(--line);border-radius:10px;padding:12px;margin-bottom:12px;background:var(--soft)}
 .ordem h3{margin:0 0 6px;font-size:15px}.ordem ol{margin:6px 0 6px 18px;padding:0}.ordem li{margin:3px 0}
 .ordem .meta{display:flex;gap:10px;flex-wrap:wrap;font-size:12px;color:var(--mut);margin-bottom:6px}
-details summary{cursor:pointer;color:var(--acc);font-size:13px}
+details summary{cursor:pointer;color:var(--acc);font-size:13px;list-style:none}details summary::-webkit-details-marker{display:none}details[open] summary{margin-bottom:4px}
 .leitura{font-size:12px;color:var(--mut)}
 @media (max-width:760px){.card.two{grid-column:auto}}
 @media (max-width:600px){th,td{padding:5px 4px}}
@@ -124,7 +124,7 @@ function render(d) {
     ${o.alvo_regra ? `<p class="mut" style="font-size:12px;margin:0 0 6px"><b>Como o alvo foi definido:</b> ${esc(o.alvo_regra)}</p>` : ''}
     ${o.prazo_esperado ? `<p style="font-size:13px;margin:0 0 6px"><b>⏱ Prazo esperado:</b> ${esc(o.prazo_esperado)}</p>` : ''}
     <p><b>Por quê:</b> ${esc(o.porque || '')}</p>
-    <details open><summary>Passo a passo</summary><ol>${(o.passo_a_passo || []).map(p => `<li>${esc(p)}</li>`).join('')}</ol></details>
+    <details><summary>▸ Como fazer (${(o.passo_a_passo || []).length} passos, clique para abrir)</summary><ol>${(o.passo_a_passo || []).map(p => `<li>${esc(p)}</li>`).join('')}</ol></details>
     <p><b>Próximo movimento:</b> ${esc(o.proximo_movimento || '')}</p></div>`).join('') || '<p class="mut">Nenhuma ordem planejada.</p>';
   $('#kpis').innerHTML = [
     ['Patrimônio', 'R$ ' + fmt(c.patrimonio_brl)], ['Aportes', 'R$ ' + fmt(c.aportes_brl)], ['Caixa', 'R$ ' + fmt(c.caixa_brl)],
