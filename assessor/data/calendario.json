@@ -1,6 +1,20 @@
 [
   {
     "data": "2026-11-11",
+    "hora_brt": "",
+    "evento": "Resultado trimestral: BBAS3",
+    "fonte": "RI / CVM / SEC",
+    "categoria": "empresas",
+    "ativos": [
+      "BBAS3"
+    ],
+    "impacto": "alto",
+    "o_que_esperar": "Maior movimento do trimestre no ativo; vol implícita alta antes, crush depois.",
+    "preparacao": "Nunca atravessar resultado alavancado; posição normal só com stop; ler release e call.",
+    "confirmar": true
+  },
+  {
+    "data": "2026-11-11",
     "hora_brt": "09:00",
     "evento": "Levantamento de safra (Conab)",
     "fonte": "Conab",
@@ -111,6 +125,20 @@
     "o_que_esperar": "Revisões de Selic e inflação ajustam juros futuros na abertura.",
     "preparacao": "Ler antes das 10h; muda a leitura de bancos e FIIs.",
     "confirmar": false
+  },
+  {
+    "data": "2026-11-17",
+    "hora_brt": "",
+    "evento": "Resultado trimestral: NVDA",
+    "fonte": "RI / CVM / SEC",
+    "categoria": "empresas",
+    "ativos": [
+      "NVDA"
+    ],
+    "impacto": "alto",
+    "o_que_esperar": "Maior movimento do trimestre no ativo; vol implícita alta antes, crush depois.",
+    "preparacao": "Nunca atravessar resultado alavancado; posição normal só com stop; ler release e call.",
+    "confirmar": true
   },
   {
     "data": "2026-11-18",
@@ -349,6 +377,20 @@
     "o_que_esperar": "Revisões de Selic e inflação ajustam juros futuros na abertura.",
     "preparacao": "Ler antes das 10h; muda a leitura de bancos e FIIs.",
     "confirmar": false
+  },
+  {
+    "data": "2026-12-08",
+    "hora_brt": "",
+    "evento": "Resultado trimestral: GME",
+    "fonte": "RI / CVM / SEC",
+    "categoria": "empresas",
+    "ativos": [
+      "GME"
+    ],
+    "impacto": "alto",
+    "o_que_esperar": "Maior movimento do trimestre no ativo; vol implícita alta antes, crush depois.",
+    "preparacao": "Nunca atravessar resultado alavancado; posição normal só com stop; ler release e call.",
+    "confirmar": true
   },
   {
     "data": "2026-12-09",
