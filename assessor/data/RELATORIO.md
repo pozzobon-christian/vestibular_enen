@@ -1,17 +1,17 @@
 # Monitor de influenciadores
 
-Atualizado em 2026-11-11 13:38 UTC
+Atualizado em 2026-11-11 13:42 UTC
 
 | Posts | Autores | Campanhas | Sinais | Preços |
 |---|---|---|---|---|
-| 1013 | 347 | 23 | 253 | 19920 |
+| 1036 | 358 | 24 | 277 | 19920 |
 
 ## Campanhas nos últimos 30 dias
 
 | Ativo | Direção | Autores | Líder | Fase | Ação | Confiança |
 |---|---|---|---|---|---|---|
 | BTC | compra | 37 | stocktwits:nedflandersiii | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
-| NVDA | compra | 86 | stocktwits:nedflandersiii | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
+| NVDA | compra | 89 | stocktwits:nedflandersiii | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
 | AAPL | compra | 15 | stocktwits:nedflandersiii | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
 | SPY | compra | 13 | stocktwits:nedflandersiii | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
 | AAPL | venda | 9 | stocktwits:donjuancapistran | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
@@ -22,14 +22,15 @@ Atualizado em 2026-11-11 13:38 UTC
 | TSLA | venda | 15 | stocktwits:ghbhhjc | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
 | SPY | venda | 9 | stocktwits:marcusmccord | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
 | MSTR | compra | 6 | stocktwits:honeybadgerdgaf | ignorar | observar; sem ordem | 0.30 |
-| BTC | venda | 13 | stocktwits:fawl3r | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
+| BTC | venda | 14 | stocktwits:fawl3r | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
+| MSTR | venda | 3 | stocktwits:fawl3r | inicio | entrar a favor (venda) com tamanho pelo RiskBudget | 0.40 |
 | SPCX | compra | 8 | stocktwits:alphabull_10m | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
 | ETH | compra | 4 | stocktwits:jaredsotken | inicio | entrar a favor (compra) com tamanho pelo RiskBudget | 0.40 |
 | SOL | compra | 3 | stocktwits:jaredsotken | inicio | entrar a favor (compra) com tamanho pelo RiskBudget | 0.40 |
 | QQQ | venda | 9 | stocktwits:transcendasset | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
 | MU | compra | 4 | stocktwits:maribor | inicio | entrar a favor (compra) com tamanho pelo RiskBudget | 0.40 |
 | QQQ | compra | 8 | stocktwits:maribor | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
-| NVDA | venda | 27 | stocktwits:peanutloverdrool | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
+| NVDA | venda | 32 | stocktwits:peanutloverdrool | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
 | SPCX | venda | 3 | stocktwits:unmaker | inicio | entrar a favor (venda) com tamanho pelo RiskBudget | 0.40 |
 | ETH | venda | 4 | stocktwits:btcc_exchange | inicio | entrar a favor (venda) com tamanho pelo RiskBudget | 0.40 |
 | ZEC | compra | 3 | stocktwits:thegreekwizard | inicio | entrar a favor (compra) com tamanho pelo RiskBudget | 0.40 |
@@ -38,19 +39,20 @@ Atualizado em 2026-11-11 13:38 UTC
 
 - stocktwits:15fingers, stocktwits:_thumper_, stocktwits:alphabull_10m, stocktwits:analystnick, stocktwits:august_west, stocktwits:billionaire2025, stocktwits:billybobcleetus, stocktwits:blatter, stocktwits:blueblood12, stocktwits:bullseyegains, stocktwits:coffeerocks, stocktwits:corderooptions, stocktwits:deer_admin, stocktwits:flickted, stocktwits:goodmeyer83, stocktwits:hal9000x, stocktwits:holymofgod, stocktwits:honeybadgerdgaf, stocktwits:hyde1634, stocktwits:intutivetrader, stocktwits:iplaysmart, stocktwits:iseeshit, stocktwits:jaredsotken, stocktwits:jdrebel, stocktwits:jesushatespedos, stocktwits:jrh34, stocktwits:keepcalmcarryon, stocktwits:kyzw, stocktwits:leonardobonacci, stocktwits:lighthouseprofit, stocktwits:littlecat, stocktwits:luvtoretire, stocktwits:marcusmccord, stocktwits:maribor, stocktwits:meandu2, stocktwits:meatballtrades, stocktwits:michaelm2136, stocktwits:milkingalgoseverymonday, stocktwits:nedflandersiii, stocktwits:paidguruworstnightmare, stocktwits:pullbackalerts, stocktwits:puzzles32, stocktwits:reaperblade2233, stocktwits:sa449, stocktwits:sol_meek, stocktwits:sovihabi, stocktwits:starrbarr, stocktwits:stay_woke, stocktwits:stockhold_syndrome, stocktwits:tapereader007, stocktwits:thegreekwizard, stocktwits:ticklemymacd, stocktwits:topoptionsaierts, stocktwits:transcendasset, stocktwits:unmaker, stocktwits:updownsidways, stocktwits:us_stock_bubble2026, stocktwits:ver13
 - stocktwits:bruh5, stocktwits:btcc_exchange, stocktwits:jbtradez254, stocktwits:ljmoney
+- stocktwits:fawl3r, stocktwits:notfinancialadvicedummy
 
 ## Quem posta primeiro
 
-- stocktwits:nedflandersiii: +147
-- stocktwits:maribor: +94
-- stocktwits:sovihabi: +93
-- stocktwits:starrbarr: +85
-- stocktwits:august_west: +81
-- stocktwits:hyde1634: +77
-- stocktwits:jesterp88: +75
-- stocktwits:iplaysmart: +75
-- stocktwits:mokena1234: +73
-- stocktwits:franking71: +67
+- stocktwits:nedflandersiii: +150
+- stocktwits:maribor: +97
+- stocktwits:sovihabi: +96
+- stocktwits:starrbarr: +88
+- stocktwits:august_west: +84
+- stocktwits:hyde1634: +80
+- stocktwits:jesterp88: +78
+- stocktwits:iplaysmart: +78
+- stocktwits:mokena1234: +76
+- stocktwits:franking71: +70
 
 ## Autores mais ativos (total coletado)
 
@@ -72,23 +74,23 @@ Atualizado em 2026-11-11 13:38 UTC
 
 ## Ativos mais mencionados
 
-- NVDA: 223
-- BTC: 159
-- TSLA: 110
-- SPY: 69
+- NVDA: 243
+- BTC: 161
+- TSLA: 111
+- SPY: 71
 - AAPL: 58
-- QQQ: 44
+- QQQ: 47
+- SPCX: 22
 - AMD: 22
-- SPCX: 21
+- CRWV: 19
 - MU: 16
+- MSTR: 16
 - ETH: 16
-- CRWV: 16
-- MSTR: 15
 - AMZN: 11
 - ZEC: 10
 - GLD: 10
 
-## Última execução: 2026-11-11T13:38:57.709524+00:00 (100 posts novos, 60 erros)
+## Última execução: 2026-11-11T13:42:05.035122+00:00 (26 posts novos, 60 erros)
 
 - x:pablospyer x:@pablospyer: RuntimeError: defina X_BEARER_TOKEN (API v2 do X)
 - reddit:farialimabets reddit:farialimabets: HTTPError: 403 Client Error: Blocked for url: https://www.reddit.com/r/farialimabets/new.json?limit=50
