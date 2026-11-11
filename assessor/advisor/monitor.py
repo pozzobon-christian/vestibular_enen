@@ -207,7 +207,21 @@ def build_dashboard_data(db: MonitorDB, out: Path = Path("data/dashboard-data.js
         "erros_ultima_execucao": json.loads((db.conn.execute("SELECT errors FROM runs ORDER BY finished_at DESC LIMIT 1").fetchone() or ["[]"])[0]),
     }
     out.write_text(json.dumps(data, ensure_ascii=False, default=str), encoding="utf-8")
+    build_embedded_dashboard(out)
     return data
+
+
+def build_embedded_dashboard(data_path: Path = Path("data/dashboard-data.json"),
+                             template: Path = Path("dashboard/index.html"),
+                             out: Path = Path("dashboard/painel.html")) -> Path:
+    """Página autossuficiente: dados embutidos, abre em qualquer lugar sem rede."""
+    if not template.exists() or not data_path.exists():
+        return out
+    payload = data_path.read_text(encoding="utf-8").replace("</script", "<\\/script")
+    html = template.read_text(encoding="utf-8").replace(
+        "</head>", f'<script id="data" type="application/json">{payload}</script>\n</head>', 1)
+    out.write_text(html, encoding="utf-8")
+    return out
 
 
 

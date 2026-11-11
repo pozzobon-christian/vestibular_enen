@@ -110,6 +110,8 @@ function renderNews() {
 }
 $('#nf').addEventListener('click', e => { if (e.target.dataset.f) { FILTER = e.target.dataset.f; [...$('#nf').children].forEach(b => b.classList.toggle('on', b.dataset.f === FILTER)); renderNews(); } });
 async function load() {
+  const emb = document.getElementById('data');
+  if (emb && emb.textContent.trim()) { try { render(JSON.parse(emb.textContent)); $('#src').style.display = 'none'; $('#reload').style.display = 'none'; return; } catch (e) {} }
   const src = $('#src').value || DEFAULT_SRC;
   try { localStorage.setItem('src', src); } catch (e) {}
   $('#when').textContent = 'carregando…';
