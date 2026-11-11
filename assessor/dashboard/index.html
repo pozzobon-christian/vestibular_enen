@@ -4,53 +4,71 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Mesa de Operações</title>
-<meta name="description" content="Painel do assessor: carteira, cotações, boiada de influenciadores, notícias e plano.">
+<meta name="description" content="Painel do assessor: carteira, ordens passo a passo, madrugada global, boiada de influenciadores, notícias e plano.">
 <style>
-:root{--bg:#f6f7f9;--card:#fff;--ink:#17202a;--mut:#67727e;--line:#e3e7ec;--up:#1a9d5a;--dn:#d43c3c;--acc:#2457d6;--warn:#c98a00}
+:root{--bg:#f6f7f9;--card:#fff;--ink:#17202a;--mut:#67727e;--line:#e3e7ec;--up:#1a9d5a;--dn:#d43c3c;--acc:#2457d6;--warn:#c98a00;--soft:#eef2ff}
 :root:not([data-theme="light"]){color-scheme:light dark}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1318;--card:#171c23;--ink:#e8ecf1;--mut:#97a1ad;--line:#273039;--up:#3ccf7d;--dn:#ff6b6b;--acc:#6b93ff;--warn:#f0b443}}
-:root[data-theme="dark"]{--bg:#0f1318;--card:#171c23;--ink:#e8ecf1;--mut:#97a1ad;--line:#273039;--up:#3ccf7d;--dn:#ff6b6b;--acc:#6b93ff;--warn:#f0b443}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1318;--card:#171c23;--ink:#e8ecf1;--mut:#97a1ad;--line:#273039;--up:#3ccf7d;--dn:#ff6b6b;--acc:#6b93ff;--warn:#f0b443;--soft:#1d2533}}
+:root[data-theme="dark"]{--bg:#0f1318;--card:#171c23;--ink:#e8ecf1;--mut:#97a1ad;--line:#273039;--up:#3ccf7d;--dn:#ff6b6b;--acc:#6b93ff;--warn:#f0b443;--soft:#1d2533}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.45 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
-header{padding:16px;border-bottom:1px solid var(--line);display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+header{padding:14px 16px;border-bottom:1px solid var(--line);display:flex;gap:12px;align-items:center;flex-wrap:wrap;position:sticky;top:0;background:var(--bg);z-index:2}
 h1{font-size:18px;margin:0}header small{color:var(--mut)}
+nav{display:flex;gap:6px;flex-wrap:wrap;margin-left:auto}nav a{font-size:12px;padding:4px 9px;border:1px solid var(--line);border-radius:999px;color:var(--ink)}
 main{padding:16px;max-width:1400px;margin:0 auto;display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(340px,1fr))}
 .card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px;min-width:0}
 .card.wide{grid-column:1/-1}.card.two{grid-column:span 2}h2{font-size:14px;margin:0 0 10px;color:var(--mut);text-transform:uppercase;letter-spacing:.04em}
 .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}.kpi{padding:10px;border:1px solid var(--line);border-radius:8px}
 .kpi b{display:block;font-size:20px}.kpi span{color:var(--mut);font-size:12px}
-table{width:100%;border-collapse:collapse;font-size:13px}th,td{padding:6px 6px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}th{color:var(--mut);font-weight:600}
-.up{color:var(--up)}.dn{color:var(--dn)}.mut{color:var(--mut)}.tag{display:inline-block;padding:1px 7px;border-radius:999px;font-size:11px;border:1px solid var(--line);margin-right:4px}
+table{width:100%;border-collapse:collapse;font-size:13px}th,td{padding:6px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}th{color:var(--mut);font-weight:600}
+.up{color:var(--up)}.dn{color:var(--dn)}.mut{color:var(--mut)}.tag{display:inline-block;padding:1px 7px;border-radius:999px;font-size:11px;border:1px solid var(--line);margin-right:4px;color:inherit}
 .inicio{border-color:var(--up);color:var(--up)}.lotada{border-color:var(--warn);color:var(--warn)}.reversao{border-color:var(--dn);color:var(--dn)}
 .bar{height:8px;background:var(--line);border-radius:4px;overflow:hidden}.bar i{display:block;height:100%;background:var(--acc)}
-.scroll{max-height:420px;overflow:auto}a{color:var(--acc);text-decoration:none}a:hover{text-decoration:underline}
+.scroll{max-height:440px;overflow:auto}a{color:var(--acc);text-decoration:none}a:hover{text-decoration:underline}
 .filters{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}.filters button{border:1px solid var(--line);background:transparent;color:var(--ink);padding:4px 10px;border-radius:999px;cursor:pointer}
 .filters button.on{background:var(--acc);color:#fff;border-color:var(--acc)}svg.spark{width:90px;height:24px}
-.err{font-size:12px;color:var(--mut)}input#src{flex:1;min-width:260px;padding:6px 8px;border:1px solid var(--line);border-radius:6px;background:var(--card);color:var(--ink)}
+.err{font-size:12px;color:var(--mut)}input#src{flex:1;min-width:240px;padding:6px 8px;border:1px solid var(--line);border-radius:6px;background:var(--card);color:var(--ink)}
+.ordem{border:1px solid var(--line);border-radius:10px;padding:12px;margin-bottom:12px;background:var(--soft)}
+.ordem h3{margin:0 0 6px;font-size:15px}.ordem ol{margin:6px 0 6px 18px;padding:0}.ordem li{margin:3px 0}
+.ordem .meta{display:flex;gap:10px;flex-wrap:wrap;font-size:12px;color:var(--mut);margin-bottom:6px}
+details summary{cursor:pointer;color:var(--acc);font-size:13px}
+.leitura{font-size:12px;color:var(--mut)}
 @media (max-width:760px){.card.two{grid-column:auto}}
-@media (max-width:600px){main{padding:16px}th,td{padding:5px 4px}}
+@media (max-width:600px){th,td{padding:5px 4px}}
 </style>
 </head>
 <body>
 <header>
   <h1>Mesa de Operações</h1>
   <small id="when">carregando…</small>
+  <nav><a href="#ordens">Ordens</a><a href="#carteira">Carteira</a><a href="#madrugada">Madrugada</a><a href="#noticias">Notícias</a><a href="#boiada">Boiada</a><a href="#influ">Influenciadores</a></nav>
   <input id="src" placeholder="URL do dashboard-data.json" title="Fonte dos dados">
   <button id="reload">Atualizar</button>
 </header>
 <main>
-  <section class="card wide"><h2>Carteira e meta</h2><div class="kpis" id="kpis"></div>
+  <section class="card wide" id="ordens"><h2>Operações: o que fazer, por quê e o próximo movimento</h2><div id="ordensbox"></div></section>
+
+  <section class="card wide" id="carteira"><h2>Carteira e meta</h2><div class="kpis" id="kpis"></div>
     <div style="margin-top:10px"><div class="bar"><i id="meta" style="width:0"></i></div><small class="mut" id="metatxt"></small></div>
-    <div class="scroll" style="margin-top:10px"><table id="pos"><thead><tr><th>Ativo</th><th>Qtd</th><th>Preço médio</th><th>Último</th><th>Valor (R$)</th><th>P&amp;L</th></tr></thead><tbody></tbody></table></div>
-    <p class="mut" style="font-size:12px;margin:8px 0 0">Para registrar uma operação, adicione uma linha em <code>assessor/data/carteira.json</code> (data, ticker, mercado, lado, quantidade, preco, taxas, tese, stop). A próxima execução do monitor recalcula tudo.</p>
+    <div class="scroll" style="margin-top:10px"><table id="pos"><thead><tr><th>Ativo</th><th>Quantidade</th><th>Preço médio</th><th>Último</th><th>Valor (R$)</th><th>Resultado</th></tr></thead><tbody></tbody></table></div>
+    <p class="mut" style="font-size:12px;margin:8px 0 0">Para registrar uma operação executada, envie ao assessor o ativo, a quantidade, o preço pago e a taxa. Ele grava em <code>carteira.json</code> e o painel recalcula na próxima coleta.</p>
   </section>
-  <section class="card"><h2>Plano e regras</h2><div id="plano"></div></section>
-  <section class="card two"><h2>Boiada: campanhas detectadas</h2><div class="scroll"><table id="camp"><thead><tr><th>Ativo</th><th>Dir.</th><th>Autores</th><th>Líder</th><th style="min-width:180px">Fase</th><th>Conf.</th></tr></thead><tbody></tbody></table></div></section>
-  <section class="card wide"><h2>Cotações da lista de observação</h2><div class="scroll"><table id="quotes"><thead><tr><th>Ativo</th><th>Mercado</th><th>Último</th><th>1d</th><th>5d</th><th>20d</th><th>30 dias</th></tr></thead><tbody></tbody></table></div></section>
-  <section class="card wide"><h2>Notícias</h2><div class="filters" id="nf"></div><div class="scroll"><table id="news"><thead><tr><th>Quando</th><th>Fonte</th><th>Título</th><th>Ativos</th><th>Sent.</th></tr></thead><tbody></tbody></table></div></section>
-  <section class="card"><h2>Influenciadores: mais ativos</h2><div class="scroll"><table id="auth"><thead><tr><th>Autor</th><th>Posts</th><th>Acerto 5d</th><th>Pump</th></tr></thead><tbody></tbody></table></div></section>
-  <section class="card"><h2>Quem posta primeiro e grupos</h2><div id="lead"></div></section>
+
+  <section class="card" id="plano"><h2>Plano e regras</h2><div id="planobox"></div></section>
+  <section class="card two" id="madrugada"><h2>Madrugada global: o que aconteceu enquanto a B3 dormia</h2><div class="scroll"><table id="over"><thead><tr><th>Mercado</th><th>Último</th><th>1 dia</th><th>5 dias</th><th>Leitura para a B3</th></tr></thead><tbody></tbody></table></div></section>
+
+  <section class="card two"><h2>Tendência por cálculo (score 0-100)</h2><div class="scroll"><table id="trend"><thead><tr><th>Ativo</th><th>Direção</th><th>Score</th><th>Inclinação 60d (t)</th><th>ADX</th><th>Rompimento</th><th>Observações</th></tr></thead><tbody></tbody></table></div></section>
+  <section class="card"><h2>Sinais de notícia com evidência</h2><div class="scroll" id="sinais"></div></section>
+
+  <section class="card wide"><h2>Cotações da lista de observação</h2><div class="scroll"><table id="quotes"><thead><tr><th>Ativo</th><th>Mercado</th><th>Último</th><th>1 dia</th><th>5 dias</th><th>20 dias</th><th>30 dias</th></tr></thead><tbody></tbody></table></div></section>
+
+  <section class="card wide" id="noticias"><h2>Notícias (clique no título para ler a reportagem)</h2><div class="filters" id="nf"></div><div class="scroll"><table id="news"><thead><tr><th>Quando</th><th>Fonte</th><th>Título</th><th>Ativos</th><th>Sentimento</th></tr></thead><tbody></tbody></table></div></section>
+
+  <section class="card two" id="boiada"><h2>Boiada: campanhas coordenadas detectadas</h2><div class="scroll"><table id="camp"><thead><tr><th>Ativo</th><th>Direção</th><th>Autores</th><th>Quem começou</th><th style="min-width:180px">Fase e ação</th><th>Confiança</th></tr></thead><tbody></tbody></table></div></section>
   <section class="card"><h2>Ativos mais citados (7 dias)</h2><div id="tick"></div></section>
-  <section class="card wide"><h2>Posts recentes</h2><div class="scroll"><table id="posts"><thead><tr><th>Quando</th><th>Autor</th><th>Texto</th><th>Ativos</th><th>Dir.</th></tr></thead><tbody></tbody></table></div></section>
+
+  <section class="card" id="influ"><h2>Influenciadores mais ativos (clique para abrir o canal)</h2><div class="scroll"><table id="auth"><thead><tr><th>Autor</th><th>Posts</th><th>Acerto 5d</th><th>Pump</th></tr></thead><tbody></tbody></table></div></section>
+  <section class="card"><h2>Quem posta primeiro e grupos que apostam juntos</h2><div id="lead"></div></section>
+  <section class="card wide"><h2>Posts recentes (clique para abrir)</h2><div class="scroll"><table id="posts"><thead><tr><th>Quando</th><th>Autor</th><th>Texto</th><th>Ativos</th><th>Direção</th></tr></thead><tbody></tbody></table></div></section>
   <section class="card wide"><h2>Saúde da coleta</h2><div id="health" class="err"></div></section>
 </main>
 <script>
@@ -59,54 +77,82 @@ const DEFAULT_SRC = location.protocol === 'file:' || location.hostname.endsWith(
   : '../data/dashboard-data.json';
 const $ = s => document.querySelector(s);
 const fmt = (n, d = 2) => n == null ? '–' : Number(n).toLocaleString('pt-BR', {minimumFractionDigits: d, maximumFractionDigits: d});
-const pct = n => n == null ? '–' : `<span class="${n >= 0 ? 'up' : 'dn'}">${(n * 100).toFixed(2)}%</span>`;
+const pct = n => n == null ? '–' : `<span class="${n >= 0 ? 'up' : 'dn'}">${(n * 100).toFixed(2).replace('.', ',')}%</span>`;
 const when = s => { if (!s) return '–'; const d = new Date(s); return isNaN(d) ? s : d.toLocaleString('pt-BR', {day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit'}); };
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]));
+const LADO = {buy: 'compra', sell: 'venda', compra: 'compra', venda: 'venda', neutro: 'neutro', '': '–'};
+const LABEL = {acoes_fiis_br_fracionario: 'ações e FIIs (B3, fracionário)', cripto_btc_eth: 'cripto (BTC/ETH)', caixa: 'caixa',
+  por_operacao: 'por operação', por_dia: 'por dia', por_semana: 'por semana', posicao_max: 'posição máxima'};
+const MERC = {BR: 'Brasil', US: 'EUA', cripto: 'cripto', global: 'global', asia: 'Ásia', commodities: 'commodities', fx: 'câmbio'};
+const LEITURA = {'ES=F': 'Sobe: abre bem para BOVA11 e ADRs. Cai: pressão na B3.', 'NQ=F': 'Tecnologia dos EUA; guia NVDA, QQQ e apetite a risco.', 'YM=F': 'Industriais dos EUA.',
+  '^N225': 'Ásia fechando forte sustenta risco global.', '^HSI': 'China/HK: afeta VALE3 e minério.', '000001.SS': 'China: demanda por minério e commodities.',
+  '^STOXX50E': 'Europa abrindo; tom para a abertura da B3.', '^FTSE': 'Mineradoras e petróleo em Londres.', 'CL=F': 'Petróleo WTI: PETR4, PRIO3.', 'BZ=F': 'Brent: PETR4, PRIO3 seguem.',
+  'GC=F': 'Ouro sobe em medo ou dólar fraco.', 'HG=F': 'Cobre: termômetro de indústria global.', 'TIO=F': 'Minério: VALE3 e CSN.', 'DX-Y.NYB': 'Dólar forte pressiona emergentes e BOVA11.',
+  '^TNX': 'Juro dos EUA subindo tira dinheiro de emergentes e cripto.', '^VIX': 'Medo: acima de 25 reduzir tamanho.', 'EWZ': 'Brasil em NY: prévia do Ibovespa.', 'PBR': 'Petrobras em NY: prévia de PETR4.',
+  'VALE': 'Vale em NY: prévia de VALE3.', 'ITUB': 'Itaú em NY: prévia dos bancos.', 'BBD': 'Bradesco em NY.', 'IBIT': 'Fluxo institucional em bitcoin.'};
+function tickerLink(t, m) {
+  if (!t) return '';
+  const url = m === 'cripto' || ['BTC', 'ETH', 'SOL'].includes(t) ? `https://www.coingecko.com/pt-br/search?query=${t}`
+    : /\d$/.test(t) ? `https://www.google.com/finance/quote/${t}:BVMF` : `https://www.google.com/finance/quote/${t}:NASDAQ`;
+  return `<a href="${url}" target="_blank" rel="noopener"><b>${esc(t)}</b></a>`;
+}
 function spark(arr) {
   if (!arr || arr.length < 2) return '';
   const mn = Math.min(...arr), mx = Math.max(...arr), w = 90, h = 24;
   const pts = arr.map((v, i) => `${(i / (arr.length - 1) * w).toFixed(1)},${(h - (mx === mn ? h / 2 : (v - mn) / (mx - mn) * h)).toFixed(1)}`).join(' ');
-  const col = arr[arr.length - 1] >= arr[0] ? 'var(--up)' : 'var(--dn)';
-  return `<svg class="spark" viewBox="0 0 ${w} ${h}"><polyline fill="none" stroke="${col}" stroke-width="1.5" points="${pts}"/></svg>`;
+  return `<svg class="spark" viewBox="0 0 ${w} ${h}"><polyline fill="none" stroke="${arr[arr.length - 1] >= arr[0] ? 'var(--up)' : 'var(--dn)'}" stroke-width="1.5" points="${pts}"/></svg>`;
 }
-let NEWS = [], FILTER = 'todos';
+let NEWS = [], FILTER = 'todos', AUTH = {};
+const authorLink = a => { const l = AUTH[a]; return l && l.url ? `<a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.nome || a)}</a>` : esc(a); };
 function render(d) {
-  $('#when').textContent = 'atualizado ' + when(d.gerado_em) + (d.usdbrl ? ` · USD/BRL ${fmt(d.usdbrl, 3)}` : '');
+  AUTH = d.autores_links || {};
+  $('#when').textContent = 'atualizado ' + when(d.gerado_em) + (d.usdbrl ? ` · dólar R$ ${fmt(d.usdbrl, 3)}` : '');
   const c = d.carteira || {};
+  const ordens = c.ordens_planejadas || [];
+  $('#ordensbox').innerHTML = ordens.map(o => `<div class="ordem"><h3>${esc(o.data)} · ${esc(o.conta)} · ${LADO[o.lado] || esc(o.lado)} de ${tickerLink(o.ticker, o.mercado)} ${o.quantidade ? `· ${o.quantidade} ${o.mercado === 'BR' && /\d$/.test(o.ticker) && o.ticker.endsWith('11') ? 'cotas' : 'ações'}` : ''}${o.valor_brl ? ` · R$ ${fmt(o.valor_brl, 0)}` : ''}</h3>
+    <div class="meta">${o.preco_ref ? `<span>preço de referência R$ ${fmt(o.preco_ref)}</span>` : ''}${o.limite_max_abertura ? `<span>só se a abertura ≤ R$ ${fmt(o.limite_max_abertura)}</span>` : ''}${o.condicao ? `<span>condição: ${esc(o.condicao)}</span>` : ''}${o.stop ? `<span>stop R$ ${fmt(o.stop)}</span>` : ''}${o.stop_pct ? `<span>stop ${(o.stop_pct * 100).toFixed(0)}%</span>` : ''}${o.risco_brl ? `<span>risco máximo R$ ${fmt(o.risco_brl, 0)}</span>` : ''}</div>
+    <p><b>Por quê:</b> ${esc(o.porque || '')}</p>
+    <details open><summary>Passo a passo</summary><ol>${(o.passo_a_passo || []).map(p => `<li>${esc(p)}</li>`).join('')}</ol></details>
+    <p><b>Próximo movimento:</b> ${esc(o.proximo_movimento || '')}</p></div>`).join('') || '<p class="mut">Nenhuma ordem planejada.</p>';
   $('#kpis').innerHTML = [
     ['Patrimônio', 'R$ ' + fmt(c.patrimonio_brl)], ['Aportes', 'R$ ' + fmt(c.aportes_brl)], ['Caixa', 'R$ ' + fmt(c.caixa_brl)],
-    ['Investido', 'R$ ' + fmt(c.investido_brl)], ['P&L total', `<span class="${(c.pnl_total_brl || 0) >= 0 ? 'up' : 'dn'}">R$ ${fmt(c.pnl_total_brl)}</span>`],
-    ['Retorno', pct(c.retorno_pct)], ['Posts', d.resumo?.posts ?? '–'], ['Campanhas', d.resumo?.campanhas ?? '–'],
+    ['Investido', 'R$ ' + fmt(c.investido_brl)], ['Resultado total', `<span class="${(c.pnl_total_brl || 0) >= 0 ? 'up' : 'dn'}">R$ ${fmt(c.pnl_total_brl)}</span>`],
+    ['Retorno', pct(c.retorno_pct)], ['Posts coletados', d.resumo?.posts ?? '–'], ['Campanhas', d.resumo?.campanhas ?? '–'],
   ].map(([k, v]) => `<div class="kpi"><b>${v}</b><span>${k}</span></div>`).join('');
   const prog = Math.min(1, c.progresso_meta_pct || 0);
   $('#meta').style.width = (prog * 100).toFixed(1) + '%';
-  $('#metatxt').textContent = `Meta R$ ${fmt(c.meta_brl, 0)} · ${(prog * 100).toFixed(1)}% atingido`;
-  $('#pos tbody').innerHTML = (c.posicoes || []).map(p => `<tr><td><b>${esc(p.ticker)}</b> <span class="mut">${esc(p.mercado)}</span></td><td>${fmt(p.quantidade, 4)}</td><td>${fmt(p.preco_medio, 4)}</td><td>${fmt(p.ultimo, 4)} <span class="mut">${esc(p.data_preco || '')}</span></td><td>${fmt(p.valor_brl)}</td><td>${pct(p.pnl_pct)} <span class="mut">R$ ${fmt(p.pnl_brl)}</span></td></tr>`).join('') || '<tr><td colspan="6" class="mut">Nenhuma posição registrada ainda.</td></tr>';
+  $('#metatxt').textContent = `Meta R$ ${fmt(c.meta_brl, 0)} · ${(prog * 100).toFixed(1).replace('.', ',')}% atingido`;
+  $('#pos tbody').innerHTML = (c.posicoes || []).map(p => `<tr><td>${tickerLink(p.ticker, p.mercado)} <span class="mut">${MERC[p.mercado] || esc(p.mercado)}</span></td><td>${fmt(p.quantidade, 4)}</td><td>${fmt(p.preco_medio, 4)}</td><td>${fmt(p.ultimo, 4)} <span class="mut">${esc(p.data_preco || '')}</span></td><td>${fmt(p.valor_brl)}</td><td>${pct(p.pnl_pct)} <span class="mut">R$ ${fmt(p.pnl_brl)}</span></td></tr>`).join('') || '<tr><td colspan="6" class="mut">Nenhuma posição registrada ainda. As contas liberam amanhã; as ordens planejadas estão no topo.</td></tr>';
   const pl = c.plano || {};
-  $('#plano').innerHTML = `<p><b>Capital inicial:</b> R$ ${fmt(pl.capital_inicial_brl, 0)} · <b>Meta:</b> R$ ${fmt(pl.meta_brl, 0)}</p>
+  $('#planobox').innerHTML = `<p><b>Capital inicial:</b> R$ ${fmt(pl.capital_inicial_brl, 0)} · <b>Meta:</b> R$ ${fmt(pl.meta_brl, 0)}</p>
     <p><b>Retirada:</b> ${esc(pl.regra_retirada || '')}</p>
-    <p><b>Alocação:</b> ${Object.entries(pl.alocacao || {}).map(([k, v]) => `${esc(k)} ${(v * 100).toFixed(0)}%`).join(' · ')}</p>
-    <p><b>Risco:</b> ${Object.entries(pl.risco || {}).map(([k, v]) => `${esc(k)} ${(v * 100).toFixed(0)}%`).join(' · ')}</p>
-    <p><b>Opções:</b> liberadas a partir de R$ ${fmt(pl.opcoes_liberadas_a_partir_de_brl, 0)}</p>`;
-  $('#camp tbody').innerHTML = (d.campanhas || []).map(k => `<tr><td><b>${esc(k.ativo)}</b></td><td>${esc(k.direcao)}</td><td>${k.autores}</td><td class="mut">${esc(k.lider)}</td><td><span class="tag ${esc(k.fase)}">${esc(k.fase)}</span><div class="mut" style="font-size:11px">${esc(k.acao)}</div></td><td>${fmt(k.confianca, 2)}</td></tr>`).join('') || '<tr><td colspan="6" class="mut">Nenhuma campanha nos últimos 30 dias.</td></tr>';
-  $('#quotes tbody').innerHTML = (d.cotacoes || []).map(q => `<tr><td><b>${esc(q.ticker)}</b></td><td class="mut">${esc(q.mercado)}</td><td>${fmt(q.ultimo, q.mercado === 'cripto' ? 2 : 2)} <span class="mut">${esc(q.data)}</span></td><td>${pct(q.var_1d)}</td><td>${pct(q.var_5d)}</td><td>${pct(q.var_20d)}</td><td>${spark(q.serie)}</td></tr>`).join('');
+    <p><b>Alocação:</b> ${Object.entries(pl.alocacao || {}).map(([k, v]) => `${LABEL[k] || esc(k)} ${(v * 100).toFixed(0)}%`).join(' · ')}</p>
+    <p><b>Limites de risco:</b> ${Object.entries(pl.risco || {}).map(([k, v]) => `${LABEL[k] || esc(k)} ${(v * 100).toFixed(0)}%`).join(' · ')}</p>
+    <p><b>Opções:</b> liberadas a partir de R$ ${fmt(pl.opcoes_liberadas_a_partir_de_brl, 0)}</p>
+    <p><b>Contas:</b> ${Object.entries(pl.contas || {}).map(([k, v]) => `${esc(k)} (R$ ${fmt(v.deposito_inicial_brl, 0)}: ${esc(v.uso)})`).join(' · ')}</p>`;
+  const b6 = d.briefing_6h || {};
+  $('#over tbody').innerHTML = (b6.overnight || []).map(o => `<tr><td><b>${esc(o.nome)}</b> <span class="mut">${esc(o.simbolo)}</span></td><td>${fmt(o.ultimo)} <span class="mut">${esc(o.data)}</span></td><td>${pct(o.var_1d)}</td><td>${pct(o.var_5d)}</td><td class="leitura">${esc(LEITURA[o.simbolo] || '')}</td></tr>`).join('') || '<tr><td colspan="5" class="mut">Sem dados globais ainda.</td></tr>';
+  $('#trend tbody').innerHTML = (b6.tendencias || []).slice(0, 20).map(t => `<tr><td>${tickerLink(t.ticker, t.mercado)}</td><td class="${t.direction === 'alta' ? 'up' : t.direction === 'baixa' ? 'dn' : 'mut'}">${esc(t.direction)}</td><td><b>${t.score}</b></td><td>${fmt(t.slope_annual_pct, 0)}% a.a. (t=${fmt(t.tstat, 1)})</td><td>${t.adx ?? '–'}</td><td>${t.breakout === 'nenhum' ? '–' : esc(t.breakout).replace(/_/g, ' ')}</td><td class="mut" style="font-size:12px">${(t.notes || []).map(esc).join('; ')}</td></tr>`).join('');
+  $('#sinais').innerHTML = (b6.sinais_de_noticia || []).filter(s => s.action !== 'ignorar').slice(0, 12).map(s => `<div style="padding:8px 0;border-bottom:1px solid var(--line)"><b>${tickerLink(s.ticker)}</b> <span class="tag">${esc(s.action)}</span> sentimento ${fmt(s.score, 2)} · ${s.n_sources} fonte(s)<div class="mut" style="font-size:12px">${(s.reasons || []).map(esc).join('; ')}</div><div style="font-size:12px">${(s.headlines || []).slice(0, 2).map(esc).join(' · ')}</div></div>`).join('') || '<p class="mut">Nenhum sinal com evidência suficiente. Isso é esperado no início: o estudo de evento precisa de 8+ notícias por ativo com preço posterior.</p>';
+  $('#quotes tbody').innerHTML = (d.cotacoes || []).map(q => `<tr><td>${tickerLink(q.ticker, q.mercado)}</td><td class="mut">${MERC[q.mercado] || esc(q.mercado)}</td><td>${fmt(q.ultimo)} <span class="mut">${esc(q.data)}</span></td><td>${pct(q.var_1d)}</td><td>${pct(q.var_5d)}</td><td>${pct(q.var_20d)}</td><td>${spark(q.serie)}</td></tr>`).join('');
   NEWS = d.noticias || [];
   const mk = [...new Set(NEWS.map(n => n.mercado).filter(Boolean))];
-  $('#nf').innerHTML = ['todos', ...mk, 'oficial'].map(f => `<button class="${f === FILTER ? 'on' : ''}" data-f="${f}">${f}</button>`).join('');
+  $('#nf').innerHTML = ['todos', ...mk, 'oficial'].map(f => `<button class="${f === FILTER ? 'on' : ''}" data-f="${f}">${MERC[f] || f}</button>`).join('');
   renderNews();
+  $('#camp tbody').innerHTML = (d.campanhas || []).map(k => `<tr><td>${tickerLink(k.ativo)}</td><td>${LADO[k.direcao] || esc(k.direcao)}</td><td>${k.autores}</td><td class="mut">${authorLink(k.lider)}</td><td><span class="tag ${esc(k.fase)}">${esc(k.fase)}</span><div class="mut" style="font-size:11px">${esc(k.acao)}</div></td><td>${fmt(k.confianca, 2)}</td></tr>`).join('') || '<tr><td colspan="6" class="mut">Nenhuma campanha nos últimos 30 dias.</td></tr>';
   const st = d.estatisticas_autores || {};
-  $('#auth tbody').innerHTML = (d.autores_mais_ativos || []).map(a => { const s = st[a.autor] || {}; return `<tr><td>${esc(a.autor)}</td><td>${a.posts}</td><td>${s.acerto_5d != null ? (s.acerto_5d * 100).toFixed(0) + '%' : '–'}</td><td>${s.assinatura_pump != null ? (s.assinatura_pump * 100).toFixed(0) + '%' : '–'}</td></tr>`; }).join('');
-  $('#lead').innerHTML = `<p><b>Líderes:</b> ${(d.lideres || []).slice(0, 8).map(([a, n]) => `${esc(a)} <span class="mut">(${n > 0 ? '+' : ''}${n})</span>`).join(', ') || '–'}</p>
-    <p><b>Grupos descobertos:</b></p>${(d.grupos || []).map(g => `<p class="mut" style="font-size:12px">${g.map(esc).join(', ')}</p>`).join('') || '<p class="mut">ainda nenhum (precisa de campanhas repetidas)</p>'}`;
+  $('#auth tbody').innerHTML = (d.autores_mais_ativos || []).map(a => { const s = st[a.autor] || {}; return `<tr><td>${authorLink(a.autor)} <span class="mut" style="font-size:11px">${esc(a.autor.split(':')[0])}</span></td><td>${a.posts}</td><td>${s.acerto_5d != null ? (s.acerto_5d * 100).toFixed(0) + '%' : '–'}</td><td>${s.assinatura_pump != null ? (s.assinatura_pump * 100).toFixed(0) + '%' : '–'}</td></tr>`; }).join('');
+  $('#lead').innerHTML = `<p><b>Quem costuma postar antes dos outros:</b> ${(d.lideres || []).slice(0, 8).map(([a, n]) => `${authorLink(a)} <span class="mut">(${n > 0 ? '+' : ''}${n})</span>`).join(', ') || '–'}</p>
+    <p><b>Grupos descobertos (postam juntos em 2+ campanhas):</b></p>${(d.grupos || []).map(g => `<p class="mut" style="font-size:12px">${g.map(authorLink).join(', ')}</p>`).join('') || '<p class="mut">ainda nenhum</p>'}`;
   const mx = Math.max(1, ...(d.ativos_mais_citados_7d || []).map(t => t.mencoes));
-  $('#tick').innerHTML = (d.ativos_mais_citados_7d || []).map(t => `<div style="display:flex;gap:8px;align-items:center;margin:3px 0"><b style="width:60px">${esc(t.ticker)}</b><div class="bar" style="flex:1"><i style="width:${(t.mencoes / mx * 100).toFixed(0)}%"></i></div><span class="mut" style="width:30px;text-align:right">${t.mencoes}</span></div>`).join('') || '<p class="mut">sem dados</p>';
-  $('#posts tbody').innerHTML = (d.posts_recentes || []).map(p => `<tr><td class="mut">${when(p.ts)}</td><td>${esc(p.autor)}</td><td>${p.url ? `<a href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.texto)}</a>` : esc(p.texto)}</td><td>${(p.tickers || []).map(t => `<span class="tag">${esc(t)}</span>`).join('')}</td><td>${esc(p.direcao)}</td></tr>`).join('');
+  $('#tick').innerHTML = (d.ativos_mais_citados_7d || []).map(t => `<div style="display:flex;gap:8px;align-items:center;margin:3px 0"><span style="width:64px">${tickerLink(t.ticker)}</span><div class="bar" style="flex:1"><i style="width:${(t.mencoes / mx * 100).toFixed(0)}%"></i></div><span class="mut" style="width:30px;text-align:right">${t.mencoes}</span></div>`).join('') || '<p class="mut">sem dados</p>';
+  $('#posts tbody').innerHTML = (d.posts_recentes || []).map(p => `<tr><td class="mut">${when(p.ts)}</td><td>${authorLink(p.autor)}</td><td>${p.url ? `<a href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.texto)}</a>` : esc(p.texto)}</td><td>${(p.tickers || []).map(t => tickerLink(t)).join(' ')}</td><td>${LADO[p.direcao] || esc(p.direcao)}</td></tr>`).join('');
   const errs = d.erros_ultima_execucao || [];
-  $('#health').innerHTML = `${errs.length} fonte(s) com erro na última execução.` + (errs.length ? '<ul>' + errs.map(e => `<li>${esc(e)}</li>`).join('') + '</ul>' : '');
+  $('#health').innerHTML = `${errs.length} fonte(s) com erro na última coleta.` + (errs.length ? `<details><summary>ver</summary><ul>${errs.map(e => `<li>${esc(e)}</li>`).join('')}</ul></details>` : '');
 }
 function renderNews() {
   const rows = NEWS.filter(n => FILTER === 'todos' || n.mercado === FILTER || (FILTER === 'oficial' && n.tipo === 'oficial'));
-  $('#news tbody').innerHTML = rows.map(n => `<tr><td class="mut">${when(n.publicado)}</td><td>${esc(n.fonte)}</td><td><a href="${esc(n.url)}" target="_blank" rel="noopener">${esc(n.titulo)}</a></td><td>${(n.tickers || []).map(t => `<span class="tag">${esc(t)}</span>`).join('')}</td><td class="${n.sentimento > 0.1 ? 'up' : n.sentimento < -0.1 ? 'dn' : 'mut'}">${fmt(n.sentimento, 2)}</td></tr>`).join('') || '<tr><td colspan="5" class="mut">Sem notícias coletadas ainda.</td></tr>';
+  $('#news tbody').innerHTML = rows.map(n => `<tr><td class="mut">${when(n.publicado)}</td><td>${esc(n.fonte)}</td><td><a href="${esc(n.url)}" target="_blank" rel="noopener">${esc(n.titulo)}</a></td><td>${(n.tickers || []).map(t => tickerLink(t)).join(' ')}</td><td class="${n.sentimento > 0.1 ? 'up' : n.sentimento < -0.1 ? 'dn' : 'mut'}">${n.sentimento > 0.1 ? 'positivo' : n.sentimento < -0.1 ? 'negativo' : 'neutro'} (${fmt(n.sentimento, 2)})</td></tr>`).join('') || '<tr><td colspan="5" class="mut">Sem notícias coletadas ainda.</td></tr>';
 }
 $('#nf').addEventListener('click', e => { if (e.target.dataset.f) { FILTER = e.target.dataset.f; [...$('#nf').children].forEach(b => b.classList.toggle('on', b.dataset.f === FILTER)); renderNews(); } });
 async function load() {

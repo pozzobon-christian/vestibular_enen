@@ -235,9 +235,18 @@ def build_dashboard_data(db: MonitorDB, out: Path = Path("data/dashboard-data.js
                                   "WHERE posts.ts >= datetime('now','-7 days') GROUP BY t.value ORDER BY n DESC LIMIT 15").fetchall()
     recent_posts = db.conn.execute("SELECT author_key, platform, ts, text, url, engagement, tickers, stance FROM posts "
                                    "ORDER BY ts DESC LIMIT 40").fetchall()
+    reg = InfluencerRegistry(REGISTRY)
+    author_links = {}
+    for inf in reg.all():
+        h = inf.handle.lstrip("@")
+        url = {"youtube": f"https://www.youtube.com/{inf.handle if inf.handle.startswith('@') else '@' + h}",
+               "x": f"https://x.com/{h}", "reddit": f"https://www.reddit.com/r/{h}", "telegram": f"https://t.me/{h}",
+               "instagram": f"https://www.instagram.com/{h}", "stocktwits": "https://stocktwits.com"}.get(inf.platform, "")
+        author_links[inf.key] = {"nome": inf.name or inf.handle, "url": url}
     data = {
         "gerado_em": datetime.now(timezone.utc).isoformat(),
         "usdbrl": usdbrl,
+        "autores_links": author_links,
         "resumo": db.summary(),
         "carteira": load_portfolio(db, usdbrl=usdbrl),
         "cotacoes": quotes,

@@ -46,4 +46,5 @@ def load_portfolio(db, carteira: Path | str = "data/carteira.json", plano: Path 
         "pnl_total_brl": round(equity - aportes, 2), "retorno_pct": round((equity / aportes - 1) if aportes else 0, 4),
         "meta_brl": meta, "progresso_meta_pct": round(equity / meta, 4) if meta else None,
         "posicoes": positions, "n_trades": len(led.trades), "plano": p, "atualizado": date.today().isoformat(),
+        "ordens_planejadas": c.get("ordens_planejadas", []),
     }

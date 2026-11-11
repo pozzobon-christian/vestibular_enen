@@ -18,7 +18,19 @@
       "preco_ref": 50.95,
       "limite_max_abertura": 52.5,
       "stop": 47.0,
-      "tese": "docs/notas/teses-2026-11-12.md #1"
+      "risco_brl": 8,
+      "valor_brl": 102,
+      "porque": "Única ação da lista em tendência de alta num mercado em queda: preço acima das médias de 50 e 200 dias, subiu 24% em 20 dias enquanto o Ibovespa caiu 16%. Empresa global, de motores e automação, com histórico de retorno alto e dívida baixa. Compramos força relativa, não barganha.",
+      "passo_a_passo": [
+        "Abra o app do BTG e entre em Investimentos > Renda variável > Home broker.",
+        "Na busca, digite WEGE3F (o F é o mercado fracionário, que permite comprar 1 ação por vez).",
+        "Veja o 'último negócio'. Se estiver acima de R$ 52,50, não compre hoje; a ordem volta amanhã.",
+        "Clique em Comprar. Tipo de ordem: Limitada. Quantidade: 2. Preço: o último negócio (ex.: 50,95). Validade: hoje.",
+        "Confirme com a senha de negociação. A ordem fica 'aberta' até executar; se executar, aparece em 'Ordens executadas'.",
+        "Depois de executada, abra Vender > Ordem Stop (stop loss): quantidade 2, preço de disparo 47,05, preço limite 47,00, validade 30 dias.",
+        "Anote preço pago e taxa (deve ser zero de corretagem; emolumentos de centavos) e me envie para registro."
+      ],
+      "proximo_movimento": "Se o preço fechar acima de R$ 55, subo o stop para R$ 51 (custo). Se fechar abaixo de R$ 47, o stop vende sozinho e a tese termina; não recomprar por 10 dias. Sem alvo fixo: seguimos a tendência enquanto ela durar."
     },
     {
       "data": "2026-11-12",
@@ -28,7 +40,18 @@
       "lado": "buy",
       "valor_brl": 50,
       "stop_pct": -0.1,
-      "tese": "docs/notas/teses-2026-11-12.md #2"
+      "risco_brl": 5,
+      "porque": "Bitcoin na mínima de 20 dias (queda de 9% desde US$ 81 mil), RSI 34, detentores de curto prazo vendendo no prejuízo e saída de US$ 1,6 bi dos ETFs. Momentos de capitulação costumam ser boas entradas em grade, mas o fundo não é conhecido: por isso só a primeira de três parcelas.",
+      "passo_a_passo": [
+        "Abra o app da Foxbit, confirme que o Pix de R$ 150 entrou em 'Saldo em reais'.",
+        "Vá em Negociar (ou Comprar) e escolha BTC/BRL.",
+        "Escolha Ordem limitada (se a tela só mostrar 'compra rápida', use-a: a diferença em R$ 50 é de centavos).",
+        "Valor: R$ 50,00. Preço: o mesmo que aparece como 'último' ou 'melhor venda'. Confirme.",
+        "Anote o preço pago (ex.: R$ 411.000) e a taxa cobrada.",
+        "Crie um alerta de preço em 10% abaixo do preço pago (ex.: R$ 370.000). Se tocar, vende-se manualmente esta parcela.",
+        "Nada de alavancagem, nada de 'futuros' na Foxbit ou na Bybit."
+      ],
+      "proximo_movimento": "2ª parcela de R$ 50 em 18/11 independentemente do preço. 3ª parcela de R$ 50 só se o BTC cair 10% abaixo do preço da 1ª. Se fechar a semana abaixo de US$ 65 mil, cancelo a 3ª parcela e reavalio."
     },
     {
       "data": "2026-11-13",
@@ -38,9 +61,19 @@
       "lado": "buy",
       "quantidade": 11,
       "preco_ref": 8.75,
-      "condicao": "fechamento >= 8.33",
+      "condicao": "fechamento de quarta >= 8,33",
       "stop": 8.3,
-      "tese": "docs/notas/teses-2026-11-12.md #3"
+      "risco_brl": 5,
+      "valor_brl": 96,
+      "porque": "FII de papel (recebíveis imobiliários indexados a CDI e IPCA): com a ata do Copom indicando juros altos por mais tempo, o rendimento mensal dele sobe junto. Caiu menos que os FIIs de tijolo. Entrada só se segurar a mínima recente, porque a tendência de 60 dias ainda é de baixa (t-stat -3,1).",
+      "passo_a_passo": [
+        "Na quarta à noite, confira no painel se MXRF11 fechou acima de R$ 8,33. Se não, a ordem é cancelada e reavaliada na semana seguinte.",
+        "Quinta, após as 10h: home broker do BTG, busque MXRF11 (FIIs não têm mercado fracionário, cota inteira).",
+        "Comprar > Limitada > quantidade 11 > preço igual ao último negócio (ref. 8,75) > validade hoje.",
+        "Após executar: Vender > Stop: disparo 8,32, limite 8,30, validade 30 dias.",
+        "No app, ative 'reinvestir rendimentos' se existir; senão, os rendimentos mensais ficam em caixa para a próxima compra."
+      ],
+      "proximo_movimento": "Receber o primeiro rendimento (dia 15 do mês seguinte) e reinvestir. Se a cota voltar acima da média de 50 dias (R$ 8,96), dobro a posição para 22 cotas."
     },
     {
       "data": "2026-11-18",
@@ -49,7 +82,12 @@
       "mercado": "cripto",
       "lado": "buy",
       "valor_brl": 50,
-      "tese": "2ª parcela"
+      "risco_brl": 5,
+      "porque": "2ª parcela da grade. Compra programada, sem olhar o preço: a grade existe para não precisar acertar o fundo.",
+      "passo_a_passo": [
+        "Mesmos passos da 1ª parcela: Negociar > BTC/BRL > R$ 50 > confirmar > anotar preço e taxa > alerta 10% abaixo."
+      ],
+      "proximo_movimento": "3ª parcela só com queda de 10% desde a 1ª compra. Depois da 3ª, posição completa em BTC (R$ 150) até a meta."
     }
   ]
 }
