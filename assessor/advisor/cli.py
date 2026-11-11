@@ -7,6 +7,8 @@ Comandos:
   strategy   --name bull_call --args 30,1.5,33,0.5  (ver strategies.py p/ ordem dos args)
   sources    [--kind oficial|alternativa] [--market BR|US|cripto]
   week       --start 100000 --end 103500 [--withdraw 0.7]
+  herd       --posts posts.jsonl [--window 24] [--min-authors 3] [--stats stats.json]
+             (posts.jsonl: uma linha por post com author, platform, ts, text, engagement)
 """
 from __future__ import annotations
 
@@ -45,6 +47,10 @@ def main(argv: list[str] | None = None) -> int:
     w.add_argument("--end", type=float, required=True); w.add_argument("--withdraw", type=float, default=0.7)
     w.add_argument("--capital", type=float)
 
+    h = sub.add_parser("herd"); h.add_argument("--posts", required=True)
+    h.add_argument("--window", type=float, default=24.0); h.add_argument("--min-authors", type=int, default=3)
+    h.add_argument("--stats")
+
     a = p.parse_args(argv)
     if a.cmd == "size":
         b = risk.RiskBudget(a.capital, max_risk_per_trade=a.risk)
@@ -68,6 +74,18 @@ def main(argv: list[str] | None = None) -> int:
         b = risk.RiskBudget(a.capital or a.start)
         rep = WeeklyCycle(b, a.withdraw).close_week(date.today(), a.start, a.end)
         print(json.dumps(rep.__dict__, indent=2, ensure_ascii=False, default=str))
+    elif a.cmd == "herd":
+        from .influencers import parse_posts_jsonl, detect_campaigns, CoMentionGraph, clusters, herd_signal
+        posts = parse_posts_jsonl(a.posts)
+        stats = json.loads(open(a.stats, encoding="utf-8").read()) if a.stats else {}
+        camps = detect_campaigns(posts, a.window, a.min_authors)
+        g = CoMentionGraph.from_campaigns(camps)
+        out = {
+            "campanhas": [{**c.summary(), "sinal": herd_signal(c, stats).__dict__} for c in camps],
+            "grupos_descobertos": clusters(g),
+            "lideres": g.leaders()[:10],
+        }
+        print(json.dumps(out, indent=2, ensure_ascii=False, default=str))
     return 0
 
 
