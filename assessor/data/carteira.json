@@ -6,5 +6,50 @@
       "nota": "capital inicial"
     }
   ],
-  "trades": []
+  "trades": [],
+  "ordens_planejadas": [
+    {
+      "data": "2026-11-12",
+      "conta": "BTG",
+      "ticker": "WEGE3",
+      "mercado": "BR",
+      "lado": "buy",
+      "quantidade": 2,
+      "preco_ref": 50.95,
+      "limite_max_abertura": 52.5,
+      "stop": 47.0,
+      "tese": "docs/notas/teses-2026-11-12.md #1"
+    },
+    {
+      "data": "2026-11-12",
+      "conta": "Foxbit",
+      "ticker": "BTC",
+      "mercado": "cripto",
+      "lado": "buy",
+      "valor_brl": 50,
+      "stop_pct": -0.1,
+      "tese": "docs/notas/teses-2026-11-12.md #2"
+    },
+    {
+      "data": "2026-11-13",
+      "conta": "BTG",
+      "ticker": "MXRF11",
+      "mercado": "BR",
+      "lado": "buy",
+      "quantidade": 11,
+      "preco_ref": 8.75,
+      "condicao": "fechamento >= 8.33",
+      "stop": 8.3,
+      "tese": "docs/notas/teses-2026-11-12.md #3"
+    },
+    {
+      "data": "2026-11-18",
+      "conta": "Foxbit",
+      "ticker": "BTC",
+      "mercado": "cripto",
+      "lado": "buy",
+      "valor_brl": 50,
+      "tese": "2ª parcela"
+    }
+  ]
 }
