@@ -151,10 +151,12 @@ def _relative_to_dt(text: str) -> datetime:
 def _parse_lockups(body: str, limit: int) -> list[tuple[str, str, str, str]]:
     """(videoId, titulo, texto_publicacao, texto_views) do layout lockupViewModel."""
     out = []
-    for chunk in body.split('"lockupViewModel":{"contentId":"')[1:]:
-        vid = chunk[:11]
-        if not re.fullmatch(r"[\w-]{11}", vid) or '"contentType":"LOCKUP_CONTENT_TYPE_VIDEO"' not in chunk[:200]:
+    for chunk in body.split('"lockupViewModel":{')[1:]:
+        # no layout real a ordem é contentImage, metadata, contentId, contentType
+        m = re.search(r'"contentId":"([\w-]{11})","contentType":"LOCKUP_CONTENT_TYPE_VIDEO"', chunk)
+        if not m:
             continue
+        vid = m.group(1)
         title = (re.search(r'"lockupMetadataViewModel":\{"title":\{"content":"((?:[^"\\]|\\.)*)"', chunk)
                  or re.search(r'"title":\{"content":"((?:[^"\\]|\\.)*)"', chunk)
                  or re.search(r'"accessibilityText":"((?:[^"\\]|\\.)*)"', chunk))
