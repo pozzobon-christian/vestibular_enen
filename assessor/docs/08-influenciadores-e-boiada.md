@@ -60,4 +60,9 @@ python -m advisor.cli herd --posts posts.jsonl --window 24 --min-authors 3 --sta
 - **Watchlist de preços:** `data/watchlist.json` (BR, US, cripto) alimenta o cruzamento chamada × retorno.
 - **Banco:** `data/monitor.db` (SQLite) com tabelas posts, prices, campaigns, herd_signals, influencer_stats e runs. Exportações em `data/exports/*.jsonl` e relatório em `data/relatorio.json`, todos versionados no git a cada execução.
 - **Agendamento:** workflow `monitor.yml` roda a cada 6 horas. O cron do GitHub só dispara na branch padrão; até o merge, rodar à mão por `workflow_dispatch`.
-- **X/Twitter:** exige o segredo `X_BEARER_TOKEN` no repositório; sem ele, as contas do X ficam sem coleta e os demais seguem.
+- **Fontes ativas hoje (sem chave):** YouTube (17 de 19 canais; RSS com reserva pela página de vídeos), StockTwits, preços Yahoo Finance e CoinGecko.
+- **Fontes que precisam de segredo no repositório (Settings > Secrets and variables > Actions):**
+  - `X_BEARER_TOKEN`: app em developer.x.com (plano Basic ou superior para busca recente). Libera as 9 contas do X.
+  - `REDDIT_CLIENT_ID` e `REDDIT_CLIENT_SECRET`: app tipo "script" em reddit.com/prefs/apps. Libera as 7 comunidades (o endpoint público bloqueia IPs de nuvem).
+- **Diagnóstico:** rodar o workflow à mão com o campo `diag` preenchido (ex.: `@brunoperini`) imprime o que o YouTube devolve ao runner, sem gravar dados.
+- **Para ativar o cron de 6 em 6 horas:** fazer o merge desta branch em `main`. Até lá, cada execução é manual (botão "Run workflow").
