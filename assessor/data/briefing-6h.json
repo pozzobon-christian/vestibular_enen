@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-11-11T13:17:10.513878+00:00",
+  "gerado_em": "2026-11-11T13:26:31.237081+00:00",
   "janela_horas": 14.0,
   "overnight": [
     {
@@ -1258,14 +1258,14 @@
     },
     {
       "ticker": "PETR4",
-      "score": 0.195,
-      "n_items": 10,
+      "score": 0.154,
+      "n_items": 8,
       "n_sources": 3,
       "headlines": [
-        "Petrobras (PETR4) tem lucro de R$ 39,7 bilhões no 3º trimestre, alta de 21,5%",
-        "Petrobras (PETR4) vê lucro cair 24% no trimestre e anuncia R$ 15,3 bilhões em dividendos; veja detalhes do resultado",
         "Petrobras (PETR4) lucra R$ 39,8 bi no 3º tri; veja destaques",
-        "Petrobras (PETR3, PETR4) eleva projeções de produção, investimentos e geração de caixa para 2026"
+        "Petrobras (PETR3, PETR4) eleva projeções de produção, investimentos e geração de caixa para 2026",
+        "Petrobras (PETR4) nega ter pedido para ANP adiar revisão tarifária do gás, em resposta a diretor da agência",
+        "Balanço da Petrobras (PETR4) mexe com dia de liquidez reduzida com feriado nos EUA; Ibovespa em dólar cai nesta quarta-feira (11)"
       ],
       "evidence": {
         "ticker": "PETR4",
@@ -1283,11 +1283,10 @@
     },
     {
       "ticker": "PETR3",
-      "score": 0.286,
-      "n_items": 4,
+      "score": 0.221,
+      "n_items": 3,
       "n_sources": 1,
       "headlines": [
-        "Petrobras (PETR4) tem lucro de R$ 39,7 bilhões no 3º trimestre, alta de 21,5%",
         "Petrobras (PETR3, PETR4) eleva projeções de produção, investimentos e geração de caixa para 2026",
         "Pacote fiscal de até R$ 80 bi e crise na Nvidia ditam o ritmo do mercado",
         "Petrobras (PETR4), Telefônica (VIVT3), Cury (CURY3) e mais: veja os destaques das empresas"
@@ -1700,17 +1699,6 @@
       "tickers": []
     },
     {
-      "quando": "2026-11-10T23:21:23+00:00",
-      "fonte": "Valor Investe",
-      "mercado": "BR",
-      "titulo": "Petrobras (PETR4) tem lucro de R$ 39,7 bilhões no 3º trimestre, alta de 21,5%",
-      "sentimento": 0.48,
-      "tickers": [
-        "PETR4",
-        "PETR3"
-      ]
-    },
-    {
       "quando": "2026-11-11T08:29:31+00:00",
       "fonte": "Bloomberg (via Google News)",
       "mercado": "global",
@@ -1799,14 +1787,6 @@
       "tickers": []
     },
     {
-      "quando": "2026-11-10T23:25:00+00:00",
-      "fonte": "Google News Brasil: mercado",
-      "mercado": "BR",
-      "titulo": "Dólar sobe 1,46% e fecha no maior valor em 15 meses - Agência Brasil",
-      "sentimento": 0.25,
-      "tickers": []
-    },
-    {
       "quando": "2026-11-11T11:35:28+00:00",
       "fonte": "Money Times",
       "mercado": "BR",
@@ -1845,16 +1825,6 @@
       "titulo": "China Gauges Bond Interest Tax, With Yields Near Record Low - Bloomberg.com",
       "sentimento": 0.24,
       "tickers": []
-    },
-    {
-      "quando": "2026-11-10T23:23:31+00:00",
-      "fonte": "Money Times",
-      "mercado": "BR",
-      "titulo": "Petrobras (PETR4) vê lucro cair 24% no trimestre e anuncia R$ 15,3 bilhões em dividendos; veja detalhes do resultado",
-      "sentimento": 0.24,
-      "tickers": [
-        "PETR4"
-      ]
     },
     {
       "quando": "2026-11-11T08:04:24+00:00",
@@ -1896,6 +1866,30 @@
       "mercado": "BR",
       "titulo": "Dólar abre em queda com plano de ajuste fiscal do governo Lula no radar - Folha de S.Paulo",
       "sentimento": -0.21,
+      "tickers": []
+    },
+    {
+      "quando": "2026-11-11T12:00:00+00:00",
+      "fonte": "Google News Brasil: mercado",
+      "mercado": "BR",
+      "titulo": "Dólar abre de olho no lucro da Petrobras e nas negociações sobre o ajuste fiscal - G1",
+      "sentimento": -0.21,
+      "tickers": []
+    },
+    {
+      "quando": "2026-11-11T08:00:00+00:00",
+      "fonte": "Google News Brasil: mercado",
+      "mercado": "BR",
+      "titulo": "Dólar em alta estreita margem de manobra do BC - Valor Econômico",
+      "sentimento": 0.21,
+      "tickers": []
+    },
+    {
+      "quando": "2026-11-11T08:00:00+00:00",
+      "fonte": "Google News Brasil: mercado",
+      "mercado": "BR",
+      "titulo": "Dólar sobe para R$ 5,586 com ata do Copom e inflação nos EUA - Valor Econômico",
+      "sentimento": 0.21,
       "tickers": []
     }
   ]

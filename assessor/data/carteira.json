@@ -18,7 +18,7 @@
       "preco_ref": 50.95,
       "limite_max_abertura": 52.5,
       "stop": 47.0,
-      "risco_brl": 8,
+      "risco_brl": 7.9,
       "valor_brl": 102,
       "porque": "Única ação da lista em tendência de alta num mercado em queda: preço acima das médias de 50 e 200 dias, subiu 24% em 20 dias enquanto o Ibovespa caiu 16%. Empresa global, de motores e automação, com histórico de retorno alto e dívida baixa. Compramos força relativa, não barganha.",
       "passo_a_passo": [
@@ -30,7 +30,13 @@
         "Depois de executada, abra Vender > Ordem Stop (stop loss): quantidade 2, preço de disparo 47,05, preço limite 47,00, validade 30 dias.",
         "Anote preço pago e taxa (deve ser zero de corretagem; emolumentos de centavos) e me envie para registro."
       ],
-      "proximo_movimento": "Se o preço fechar acima de R$ 55, subo o stop para R$ 51 (custo). Se fechar abaixo de R$ 47, o stop vende sozinho e a tese termina; não recomprar por 10 dias. Sem alvo fixo: seguimos a tendência enquanto ela durar."
+      "proximo_movimento": "Se o preço fechar acima de R$ 55, subo o stop para R$ 51 (custo). Se fechar abaixo de R$ 47, o stop vende sozinho e a tese termina; não recomprar por 10 dias. Sem alvo fixo: seguimos a tendência enquanto ela durar.",
+      "alvo_preco": 58.85,
+      "alvo_regra": "2x o risco (R$ 3,95 por ação) acima da entrada; depois stop móvel",
+      "ganho_possivel_brl": 15.8,
+      "ganho_possivel_pct": 0.1551,
+      "risco_pct": -0.0775,
+      "razao_ganho_risco": 2.0
     },
     {
       "data": "2026-11-12",
@@ -40,7 +46,7 @@
       "lado": "buy",
       "valor_brl": 50,
       "stop_pct": -0.1,
-      "risco_brl": 5,
+      "risco_brl": 5.0,
       "porque": "Bitcoin na mínima de 20 dias (queda de 9% desde US$ 81 mil), RSI 34, detentores de curto prazo vendendo no prejuízo e saída de US$ 1,6 bi dos ETFs. Momentos de capitulação costumam ser boas entradas em grade, mas o fundo não é conhecido: por isso só a primeira de três parcelas.",
       "passo_a_passo": [
         "Abra o app da Foxbit, confirme que o Pix de R$ 150 entrou em 'Saldo em reais'.",
@@ -51,7 +57,13 @@
         "Crie um alerta de preço em 10% abaixo do preço pago (ex.: R$ 370.000). Se tocar, vende-se manualmente esta parcela.",
         "Nada de alavancagem, nada de 'futuros' na Foxbit ou na Bybit."
       ],
-      "proximo_movimento": "2ª parcela de R$ 50 em 18/11 independentemente do preço. 3ª parcela de R$ 50 só se o BTC cair 10% abaixo do preço da 1ª. Se fechar a semana abaixo de US$ 65 mil, cancelo a 3ª parcela e reavalio."
+      "proximo_movimento": "2ª parcela de R$ 50 em 18/11 independentemente do preço. 3ª parcela de R$ 50 só se o BTC cair 10% abaixo do preço da 1ª. Se fechar a semana abaixo de US$ 65 mil, cancelo a 3ª parcela e reavalio.",
+      "alvo_pct": 0.2,
+      "alvo_regra": "retorno à máxima de 20 dias (US$ 81 mil, +10%) e, depois, +20% para a grade completa",
+      "ganho_possivel_brl": 10.0,
+      "ganho_possivel_pct": 0.2,
+      "risco_pct": -0.1,
+      "razao_ganho_risco": 2.0
     },
     {
       "data": "2026-11-13",
@@ -63,7 +75,7 @@
       "preco_ref": 8.75,
       "condicao": "fechamento de quarta >= 8,33",
       "stop": 8.3,
-      "risco_brl": 5,
+      "risco_brl": 4.95,
       "valor_brl": 96,
       "porque": "FII de papel (recebíveis imobiliários indexados a CDI e IPCA): com a ata do Copom indicando juros altos por mais tempo, o rendimento mensal dele sobe junto. Caiu menos que os FIIs de tijolo. Entrada só se segurar a mínima recente, porque a tendência de 60 dias ainda é de baixa (t-stat -3,1).",
       "passo_a_passo": [
@@ -73,7 +85,13 @@
         "Após executar: Vender > Stop: disparo 8,32, limite 8,30, validade 30 dias.",
         "No app, ative 'reinvestir rendimentos' se existir; senão, os rendimentos mensais ficam em caixa para a próxima compra."
       ],
-      "proximo_movimento": "Receber o primeiro rendimento (dia 15 do mês seguinte) e reinvestir. Se a cota voltar acima da média de 50 dias (R$ 8,96), dobro a posição para 22 cotas."
+      "proximo_movimento": "Receber o primeiro rendimento (dia 15 do mês seguinte) e reinvestir. Se a cota voltar acima da média de 50 dias (R$ 8,96), dobro a posição para 22 cotas.",
+      "alvo_preco": 9.5,
+      "alvo_regra": "máxima de 20 dias (R$ 9,50), passando pela média de 50 dias (R$ 8,96); mais cerca de 1% ao mês de rendimento",
+      "ganho_possivel_brl": 8.25,
+      "ganho_possivel_pct": 0.0857,
+      "risco_pct": -0.0514,
+      "razao_ganho_risco": 1.67
     },
     {
       "data": "2026-11-18",
@@ -82,12 +100,18 @@
       "mercado": "cripto",
       "lado": "buy",
       "valor_brl": 50,
-      "risco_brl": 5,
+      "risco_brl": 5.0,
       "porque": "2ª parcela da grade. Compra programada, sem olhar o preço: a grade existe para não precisar acertar o fundo.",
       "passo_a_passo": [
         "Mesmos passos da 1ª parcela: Negociar > BTC/BRL > R$ 50 > confirmar > anotar preço e taxa > alerta 10% abaixo."
       ],
-      "proximo_movimento": "3ª parcela só com queda de 10% desde a 1ª compra. Depois da 3ª, posição completa em BTC (R$ 150) até a meta."
+      "proximo_movimento": "3ª parcela só com queda de 10% desde a 1ª compra. Depois da 3ª, posição completa em BTC (R$ 150) até a meta.",
+      "alvo_pct": 0.2,
+      "alvo_regra": "mesmo alvo da grade: +20% sobre o preço médio",
+      "ganho_possivel_brl": 10.0,
+      "ganho_possivel_pct": 0.2,
+      "risco_pct": -0.1,
+      "razao_ganho_risco": 2.0
     }
   ]
 }

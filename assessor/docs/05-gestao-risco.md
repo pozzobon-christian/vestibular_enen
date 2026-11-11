@@ -41,3 +41,6 @@ Drawdown máximo, Sharpe, Sortino, VaR e CVaR históricos (`advisor.risk.metrics
 - Vender opção descoberta.
 - Operar resultado com alavancagem.
 - "Recuperar" perda do dia aumentando tamanho.
+
+## Formato obrigatório de toda aposta
+Toda ordem apresentada traz, lado a lado: valor investido, **alvo em preço**, **ganho possível em R$ e em %**, **risco em R$ e em %** (distância do stop) e a **razão ganho/risco**. Sem alvo e sem razão, a aposta não é apresentada. Razão mínima para entrar: 1,5x; abaixo disso, só com evidência de estudo de evento.
