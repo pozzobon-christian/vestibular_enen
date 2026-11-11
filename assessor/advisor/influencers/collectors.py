@@ -183,6 +183,15 @@ def _parse_video_renderers(body: str, limit: int) -> list[tuple[str, str, str, s
     return out
 
 
+def _json_unescape(text: str) -> str:
+    """Título vem de JSON embutido (\\u00e1, \\"): decodifica sem corromper UTF-8."""
+    import json as _json
+    try:
+        return _json.loads(f'"{text}"')
+    except Exception:  # noqa: BLE001
+        return text
+
+
 def _views_to_int(text: str) -> int:
     m = re.search(r"([\d.,]+)\s*(mil|mi|k|m|b)?", text.lower())
     if not m:
@@ -201,7 +210,7 @@ def youtube_channel_videos_page(channel_id: str, limit: int = 30) -> list[Post]:
     out = []
     for vid, title, pub, views in items:
         out.append(Post(author=channel_id, platform="youtube", ts=_relative_to_dt(pub),
-                        text=title.encode().decode("unicode_escape", errors="ignore"),
+                        text=_json_unescape(title),
                         url=f"https://www.youtube.com/watch?v={vid}", engagement=_views_to_int(views)))
     return out
 

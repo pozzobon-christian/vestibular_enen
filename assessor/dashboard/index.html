@@ -15,7 +15,7 @@ header{padding:16px;border-bottom:1px solid var(--line);display:flex;gap:12px;al
 h1{font-size:18px;margin:0}header small{color:var(--mut)}
 main{padding:16px;max-width:1400px;margin:0 auto;display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(340px,1fr))}
 .card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px;min-width:0}
-.card.wide{grid-column:1/-1}h2{font-size:14px;margin:0 0 10px;color:var(--mut);text-transform:uppercase;letter-spacing:.04em}
+.card.wide{grid-column:1/-1}.card.two{grid-column:span 2}h2{font-size:14px;margin:0 0 10px;color:var(--mut);text-transform:uppercase;letter-spacing:.04em}
 .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}.kpi{padding:10px;border:1px solid var(--line);border-radius:8px}
 .kpi b{display:block;font-size:20px}.kpi span{color:var(--mut);font-size:12px}
 table{width:100%;border-collapse:collapse;font-size:13px}th,td{padding:6px 6px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}th{color:var(--mut);font-weight:600}
@@ -26,6 +26,7 @@ table{width:100%;border-collapse:collapse;font-size:13px}th,td{padding:6px 6px;b
 .filters{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}.filters button{border:1px solid var(--line);background:transparent;color:var(--ink);padding:4px 10px;border-radius:999px;cursor:pointer}
 .filters button.on{background:var(--acc);color:#fff;border-color:var(--acc)}svg.spark{width:90px;height:24px}
 .err{font-size:12px;color:var(--mut)}input#src{flex:1;min-width:260px;padding:6px 8px;border:1px solid var(--line);border-radius:6px;background:var(--card);color:var(--ink)}
+@media (max-width:760px){.card.two{grid-column:auto}}
 @media (max-width:600px){main{padding:16px}th,td{padding:5px 4px}}
 </style>
 </head>
@@ -43,7 +44,7 @@ table{width:100%;border-collapse:collapse;font-size:13px}th,td{padding:6px 6px;b
     <p class="mut" style="font-size:12px;margin:8px 0 0">Para registrar uma operação, adicione uma linha em <code>assessor/data/carteira.json</code> (data, ticker, mercado, lado, quantidade, preco, taxas, tese, stop). A próxima execução do monitor recalcula tudo.</p>
   </section>
   <section class="card"><h2>Plano e regras</h2><div id="plano"></div></section>
-  <section class="card"><h2>Boiada: campanhas detectadas</h2><div class="scroll"><table id="camp"><thead><tr><th>Ativo</th><th>Dir.</th><th>Autores</th><th>Líder</th><th>Fase</th><th>Conf.</th></tr></thead><tbody></tbody></table></div></section>
+  <section class="card two"><h2>Boiada: campanhas detectadas</h2><div class="scroll"><table id="camp"><thead><tr><th>Ativo</th><th>Dir.</th><th>Autores</th><th>Líder</th><th style="min-width:180px">Fase</th><th>Conf.</th></tr></thead><tbody></tbody></table></div></section>
   <section class="card wide"><h2>Cotações da lista de observação</h2><div class="scroll"><table id="quotes"><thead><tr><th>Ativo</th><th>Mercado</th><th>Último</th><th>1d</th><th>5d</th><th>20d</th><th>30 dias</th></tr></thead><tbody></tbody></table></div></section>
   <section class="card wide"><h2>Notícias</h2><div class="filters" id="nf"></div><div class="scroll"><table id="news"><thead><tr><th>Quando</th><th>Fonte</th><th>Título</th><th>Ativos</th><th>Sent.</th></tr></thead><tbody></tbody></table></div></section>
   <section class="card"><h2>Influenciadores: mais ativos</h2><div class="scroll"><table id="auth"><thead><tr><th>Autor</th><th>Posts</th><th>Acerto 5d</th><th>Pump</th></tr></thead><tbody></tbody></table></div></section>
