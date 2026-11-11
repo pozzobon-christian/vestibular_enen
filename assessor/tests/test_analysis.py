@@ -93,3 +93,18 @@ def test_parsers():
 def test_sources_are_public_only():
     from advisor.data.sources import SOURCES
     assert all(s.kind in ("oficial", "alternativa") for s in SOURCES)
+
+
+def test_yahoo_parser_and_youtube_regex():
+    from advisor.data.market import parse_yahoo_chart
+    data = {"chart": {"result": [{"timestamp": [1704153600, 1704240000],
+            "indicators": {"quote": [{"open": [10, 11], "high": [11, 12], "low": [9, 10], "close": [10.5, None], "volume": [100, 200]}]}}]}}
+    bars = parse_yahoo_chart(data)
+    assert len(bars) == 1 and bars[0].close == 10.5 and bars[0].day.isoformat() == "2024-01-02"
+    from advisor.influencers.collectors import _YT_CANON, _YT_SEARCH, _YT_EXTERNAL
+    html = '<link rel="canonical" href="https://www.youtube.com/channel/UCabc_123-x">'
+    assert _YT_CANON.search(html).group(1) == "UCabc_123-x"
+    assert _YT_EXTERNAL.search('{"externalId":"UCzzz"}').group(1) == "UCzzz"
+    page = '{"channelRenderer":{"channelId":"UC111","title":{},"navigationEndpoint":{"browseEndpoint":{"canonicalBaseUrl":"/@canal"}}}}'
+    m = _YT_SEARCH.search(page)
+    assert m.group(1) == "UC111" and m.group(2) == "@canal"

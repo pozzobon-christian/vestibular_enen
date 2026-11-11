@@ -45,12 +45,76 @@ def stooq_symbol(ticker: str, market: str) -> str:
     return ticker.lower() + suffix
 
 
-def fetch_daily_bars(ticker: str, market: str = "BR", timeout: int = 20) -> list[PriceBar]:
+def yahoo_symbol(ticker: str, market: str) -> str:
+    """PETR4 (BR) -> PETR4.SA ; AAPL (US) -> AAPL"""
+    return f"{ticker}.SA" if market.upper() == "BR" else ticker
+
+
+def fetch_daily_bars_yahoo(ticker: str, market: str = "BR", range_: str = "2y", timeout: int = 20) -> list[PriceBar]:
     _require_requests()
+    url = f"https://query1.finance.yahoo.com/v8/finance/chart/{yahoo_symbol(ticker, market)}"
+    resp = requests.get(url, params={"range": range_, "interval": "1d"}, timeout=timeout,
+                        headers={"User-Agent": "Mozilla/5.0 " + USER_AGENT})
+    resp.raise_for_status()
+    return parse_yahoo_chart(resp.json())
+
+
+def parse_yahoo_chart(data: dict) -> list[PriceBar]:
+    from datetime import datetime, timezone
+    result = (data.get("chart") or {}).get("result") or []
+    if not result:
+        raise ValueError("resposta Yahoo sem resultado")
+    r = result[0]
+    ts = r.get("timestamp") or []
+    q = (r.get("indicators") or {}).get("quote", [{}])[0]
+    bars = []
+    for i, t in enumerate(ts):
+        c = (q.get("close") or [None])[i]
+        if c is None:
+            continue
+        bars.append(PriceBar(
+            day=datetime.fromtimestamp(t, tz=timezone.utc).date(),
+            open=float((q.get("open") or [c])[i] or c), high=float((q.get("high") or [c])[i] or c),
+            low=float((q.get("low") or [c])[i] or c), close=float(c),
+            volume=float((q.get("volume") or [0])[i] or 0)))
+    return bars
+
+
+def fetch_daily_bars(ticker: str, market: str = "BR", timeout: int = 20) -> list[PriceBar]:
+    """Yahoo primeiro (aceita IPs de nuvem); Stooq como reserva."""
+    _require_requests()
+    try:
+        bars = fetch_daily_bars_yahoo(ticker, market, timeout=timeout)
+        if bars:
+            return bars
+    except Exception:  # noqa: BLE001
+        pass
     url = f"https://stooq.com/q/d/l/?s={stooq_symbol(ticker, market)}&i=d"
     resp = requests.get(url, timeout=timeout, headers={"User-Agent": USER_AGENT})
     resp.raise_for_status()
-    return parse_stooq_csv(resp.text)
+    bars = parse_stooq_csv(resp.text)
+    if not bars:
+        raise ValueError(f"sem dados para {ticker} ({resp.text[:80]!r})")
+    return bars
+
+
+def fetch_crypto_daily(coin_id: str, days: int = 365, vs: str = "usd", timeout: int = 20) -> list[PriceBar]:
+    """Histórico diário via CoinGecko market_chart (sem chave)."""
+    from datetime import datetime, timezone
+    _require_requests()
+    url = f"https://api.coingecko.com/api/v3/coins/{coin_id}/market_chart"
+    resp = requests.get(url, params={"vs_currency": vs, "days": days, "interval": "daily"},
+                        timeout=timeout, headers={"User-Agent": USER_AGENT})
+    resp.raise_for_status()
+    prices = resp.json().get("prices", [])
+    vols = {int(t // 86400000): v for t, v in resp.json().get("total_volumes", [])}
+    bars = []
+    for t, price in prices:
+        d = datetime.fromtimestamp(t / 1000, tz=timezone.utc).date()
+        if bars and bars[-1].day == d:
+            continue
+        bars.append(PriceBar(d, price, price, price, price, vols.get(int(t // 86400000), 0.0)))
+    return bars
 
 
 def parse_stooq_csv(text: str) -> list[PriceBar]:

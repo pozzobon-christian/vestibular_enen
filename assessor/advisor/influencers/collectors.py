@@ -32,9 +32,30 @@ def _req():
     return requests
 
 
+_reddit_token: dict = {}
+
+
+def _reddit_headers() -> tuple[str, dict]:
+    """Com REDDIT_CLIENT_ID/REDDIT_CLIENT_SECRET usa OAuth (funciona em IPs de
+    nuvem, que o endpoint público bloqueia). Sem eles, tenta o público."""
+    cid, sec = os.environ.get("REDDIT_CLIENT_ID"), os.environ.get("REDDIT_CLIENT_SECRET")
+    ua = os.environ.get("REDDIT_USER_AGENT", "script:assessor-investimentos:0.1 (monitor)")
+    if not (cid and sec):
+        return "https://www.reddit.com", {"User-Agent": ua}
+    import time as _t
+    if _reddit_token.get("exp", 0) < _t.time() + 60:
+        r = _req().post("https://www.reddit.com/api/v1/access_token", auth=(cid, sec),
+                        data={"grant_type": "client_credentials"}, headers={"User-Agent": ua}, timeout=20)
+        r.raise_for_status()
+        j = r.json()
+        _reddit_token.update(token=j["access_token"], exp=_t.time() + int(j.get("expires_in", 3600)))
+    return "https://oauth.reddit.com", {"User-Agent": ua, "Authorization": f"Bearer {_reddit_token['token']}"}
+
+
 def reddit_public(subreddit: str, listing: str = "new", limit: int = 50) -> list[Post]:
-    r = _req().get(f"https://www.reddit.com/r/{subreddit}/{listing}.json",
-                   params={"limit": limit}, headers={"User-Agent": UA}, timeout=20)
+    base, headers = _reddit_headers()
+    path = f"/r/{subreddit}/{listing}" + ("" if "oauth" in base else ".json")
+    r = _req().get(base + path, params={"limit": limit}, headers=headers, timeout=20)
     r.raise_for_status()
     out = []
     for child in r.json().get("data", {}).get("children", []):
@@ -82,6 +103,30 @@ def x_recent_search(query: str, max_results: int = 50) -> list[Post]:
                         text=t["text"], url=f"https://x.com/i/status/{t['id']}",
                         engagement=sum(m.get(k, 0) for k in ("like_count", "retweet_count", "reply_count", "quote_count"))))
     return out
+
+
+_YT_CANON = re.compile(r'<link rel="canonical" href="https://www\.youtube\.com/channel/(UC[\w-]+)"')
+_YT_EXTERNAL = re.compile(r'"externalId":"(UC[\w-]+)"')
+_YT_SEARCH = re.compile(r'"channelRenderer":\{"channelId":"(UC[\w-]+)".*?"canonicalBaseUrl":"/(@[^"]+)"', re.S)
+
+
+def resolve_youtube_channel(handle_or_name: str) -> tuple[str, str] | None:
+    """Devolve (channel_id, @handle). Tenta a página do @handle (canonical /
+    externalId, que são do próprio canal); se falhar, busca pelo nome e pega o
+    primeiro resultado de canal."""
+    h = {"User-Agent": "Mozilla/5.0 " + UA, "Accept-Language": "pt-BR,pt;q=0.9,en;q=0.8"}
+    if handle_or_name.startswith("@"):
+        r = _req().get(f"https://www.youtube.com/{handle_or_name}", headers=h, timeout=20)
+        if r.status_code == 200:
+            m = _YT_CANON.search(r.text) or _YT_EXTERNAL.search(r.text)
+            if m:
+                return m.group(1), handle_or_name
+    q = handle_or_name.lstrip("@")
+    r = _req().get("https://www.youtube.com/results", params={"search_query": q, "sp": "EgIQAg%3D%3D"},
+                   headers=h, timeout=20)
+    r.raise_for_status()
+    m = _YT_SEARCH.search(r.text)
+    return (m.group(1), m.group(2)) if m else None
 
 
 def youtube_channel_uploads(channel_id: str) -> list[Post]:

@@ -9,13 +9,12 @@ from __future__ import annotations
 
 import argparse
 import json
-import re
 import sys
 import time
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
-from .data.market import fetch_daily_bars
+from .data.market import fetch_daily_bars, fetch_crypto_daily
 from .influencers import (InfluencerRegistry, detect_campaigns, CoMentionGraph, clusters,
                           evaluate_calls, influencer_stats, herd_signal)
 from .influencers import collectors
@@ -26,14 +25,19 @@ DB = Path("data/monitor.db")
 WATCHLIST = Path("data/watchlist.json")
 
 
-def resolve_youtube_channel_id(handle_or_url: str) -> str | None:
-    """Converte @handle ou URL em channel_id (UC...). Precisa de rede."""
-    import requests
-    url = handle_or_url if handle_or_url.startswith("http") else f"https://www.youtube.com/{handle_or_url}"
-    r = requests.get(url, headers={"User-Agent": "Mozilla/5.0 assessor-investimentos/0.1"}, timeout=20)
-    r.raise_for_status()
-    m = re.search(r'"channelId":"(UC[^"]+)"', r.text) or re.search(r'youtube\.com/channel/(UC[^"/?]+)', r.text)
-    return m.group(1) if m else None
+def resolve_youtube_feed(inf, feed: str) -> str:
+    """youtube:@handle -> youtube:UC... (tenta handle, depois o nome). Persiste
+    no registro para não resolver de novo."""
+    cid = feed.split(":", 1)[1]
+    if cid.startswith("UC"):
+        return cid
+    res = collectors.resolve_youtube_channel(cid) or collectors.resolve_youtube_channel(inf.name.split("(")[0].strip())
+    if not res:
+        raise ValueError(f"canal não encontrado para {cid} / {inf.name}")
+    channel_id, handle = res
+    inf.feeds = [f"youtube:{channel_id}" if f == feed else f for f in inf.feeds]
+    inf.notes = (inf.notes + f" | resolvido: {handle} -> {channel_id}").strip(" |")
+    return channel_id
 
 
 def collect(reg: InfluencerRegistry, db: MonitorDB, sleep: float = 1.5) -> tuple[int, list[str]]:
@@ -46,10 +50,7 @@ def collect(reg: InfluencerRegistry, db: MonitorDB, sleep: float = 1.5) -> tuple
                 elif feed.startswith("telegram:"):
                     posts = collectors.telegram_public_channel(feed.split(":", 1)[1])
                 elif feed.startswith("youtube:"):
-                    cid = feed.split(":", 1)[1]
-                    if not cid.startswith("UC"):
-                        cid = resolve_youtube_channel_id(cid) or cid
-                    posts = collectors.youtube_channel_uploads(cid)
+                    posts = collectors.youtube_channel_uploads(resolve_youtube_feed(inf, feed))
                 elif feed.startswith("stocktwits:"):
                     posts = collectors.stocktwits_symbol(feed.split(":", 1)[1])
                 elif feed.startswith("x:"):
@@ -67,6 +68,7 @@ def collect(reg: InfluencerRegistry, db: MonitorDB, sleep: float = 1.5) -> tuple
                 msg = f"{inf.key} {feed}: {type(e).__name__}: {str(e)[:160]}"
                 errors.append(msg); print(f"[erro] {msg}", file=sys.stderr)
             time.sleep(sleep)
+    reg.save()   # persiste channel_ids resolvidos
     return total, errors
 
 
@@ -74,6 +76,14 @@ def update_prices(db: MonitorDB, errors: list[str]) -> None:
     if not WATCHLIST.exists():
         return
     wl = json.loads(WATCHLIST.read_text(encoding="utf-8"))
+    for coin in wl.get("cripto", []):
+        try:
+            bars = fetch_crypto_daily(coin)
+            sym = {"bitcoin": "BTC", "ethereum": "ETH", "solana": "SOL"}.get(coin, coin.upper())
+            db.upsert_prices(sym, "cripto", bars)
+            time.sleep(2)
+        except Exception as e:  # noqa: BLE001
+            errors.append(f"preco {coin}: {type(e).__name__}: {str(e)[:120]}")
     for market, tickers in wl.items():
         if market not in ("BR", "US"):
             continue
