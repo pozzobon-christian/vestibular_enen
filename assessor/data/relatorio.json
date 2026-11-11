@@ -1,17 +1,17 @@
 {
-  "gerado_em": "2026-11-11T04:47:02.237782+00:00",
+  "gerado_em": "2026-11-11T04:50:37.267968+00:00",
   "janela_dias": 30,
-  "posts_na_janela": 145,
+  "posts_na_janela": 151,
   "campanhas": [
     {
       "ativo": "NVDA",
       "direcao": "compra",
       "inicio": "2026-11-10T22:18:22+00:00",
-      "autores": 25,
+      "autores": 27,
       "lider": "stocktwits:nedflandersiii",
-      "duracao_h": 6.46,
-      "alcance": 53,
-      "posts": 29,
+      "duracao_h": 6.52,
+      "alcance": 55,
+      "posts": 31,
       "seguidores_em_ordem": [
         "stocktwits:sovihabi",
         "stocktwits:starrbarr",
@@ -36,7 +36,9 @@
         "stocktwits:yeaabuddy",
         "stocktwits:xxxfactor",
         "stocktwits:ariter2756",
-        "stocktwits:pompus"
+        "stocktwits:pompus",
+        "stocktwits:testadiminchia",
+        "stocktwits:nataskapus"
       ],
       "fase": "lotada",
       "acao": "não entrar; se posicionado, realizar 50% e subir o stop para o custo",
@@ -87,11 +89,11 @@
       "ativo": "BTC",
       "direcao": "compra",
       "inicio": "2026-11-10T22:18:22+00:00",
-      "autores": 11,
+      "autores": 12,
       "lider": "stocktwits:nedflandersiii",
-      "duracao_h": 6.42,
+      "duracao_h": 6.51,
       "alcance": 25,
-      "posts": 23,
+      "posts": 24,
       "seguidores_em_ordem": [
         "stocktwits:honeybadgerdgaf",
         "stocktwits:jaredsotken",
@@ -102,7 +104,8 @@
         "stocktwits:lizlovesreddit",
         "stocktwits:meandu2",
         "stocktwits:sammed",
-        "stocktwits:web30"
+        "stocktwits:web30",
+        "stocktwits:goldaltcoins"
       ],
       "fase": "lotada",
       "acao": "não entrar; se posicionado, realizar 50% e subir o stop para o custo",
@@ -189,6 +192,23 @@
       "confianca": 0.4
     },
     {
+      "ativo": "SPY",
+      "direcao": "venda",
+      "inicio": "2026-11-11T03:34:43+00:00",
+      "autores": 3,
+      "lider": "stocktwits:marcusmccord",
+      "duracao_h": 1.23,
+      "alcance": 4,
+      "posts": 3,
+      "seguidores_em_ordem": [
+        "stocktwits:transcendasset",
+        "stocktwits:pullbackalerts"
+      ],
+      "fase": "inicio",
+      "acao": "entrar a favor (venda) com tamanho pelo RiskBudget",
+      "confianca": 0.4
+    },
+    {
       "ativo": "MSTR",
       "direcao": "compra",
       "inicio": "2026-11-11T03:44:10+00:00",
@@ -243,14 +263,15 @@
       "ativo": "NVDA",
       "direcao": "venda",
       "inicio": "2026-11-11T04:33:05+00:00",
-      "autores": 3,
+      "autores": 4,
       "lider": "stocktwits:peanutloverdrool",
-      "duracao_h": 0.15,
-      "alcance": 2,
-      "posts": 3,
+      "duracao_h": 0.26,
+      "alcance": 4,
+      "posts": 4,
       "seguidores_em_ordem": [
         "stocktwits:topoptionsaierts",
-        "stocktwits:40mikemike"
+        "stocktwits:40mikemike",
+        "stocktwits:pullbackalerts"
       ],
       "fase": "inicio",
       "acao": "entrar a favor (venda) com tamanho pelo RiskBudget",
@@ -285,30 +306,34 @@
   "lideres": [
     [
       "stocktwits:nedflandersiii",
-      45
+      48
     ],
     [
       "stocktwits:sovihabi",
-      26
+      28
     ],
     [
       "stocktwits:starrbarr",
-      18
+      20
     ],
     [
       "stocktwits:august_west",
-      14
+      16
     ],
     [
       "stocktwits:jesterp88",
-      14
+      16
     ],
     [
       "stocktwits:mokena1234",
-      12
+      14
     ],
     [
       "stocktwits:maribor",
+      14
+    ],
+    [
+      "stocktwits:hyde1634",
       12
     ],
     [
@@ -316,41 +341,37 @@
       12
     ],
     [
-      "stocktwits:hyde1634",
-      10
-    ],
-    [
       "stocktwits:honeybadgerdgaf",
-      10
+      11
     ],
     [
       "stocktwits:iplaysmart",
+      10
+    ],
+    [
+      "stocktwits:franking71",
       8
+    ],
+    [
+      "stocktwits:jaredsotken",
+      7
     ],
     [
       "stocktwits:_thumper_",
       7
     ],
     [
-      "stocktwits:franking71",
-      6
-    ],
-    [
-      "stocktwits:billycashisking",
-      6
-    ],
-    [
-      "stocktwits:jaredsotken",
+      "stocktwits:zer0daylevels",
       6
     ]
   ],
-  "autores_com_historico": 62,
+  "autores_com_historico": 66,
   "resumo_db": {
-    "posts": 145,
-    "autores": 99,
-    "campanhas": 12,
-    "sinais": 47,
+    "posts": 151,
+    "autores": 103,
+    "campanhas": 13,
+    "sinais": 60,
     "precos": 10695,
-    "ultima_execucao": "2026-11-11T04:47:02.216413+00:00"
+    "ultima_execucao": "2026-11-11T04:50:37.240274+00:00"
   }
 }
