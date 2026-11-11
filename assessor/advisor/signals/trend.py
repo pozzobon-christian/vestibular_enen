@@ -133,3 +133,30 @@ def trend_report(ticker: str, highs: Sequence[float], lows: Sequence[float], clo
                        round(a, 1) if a is not None else None, above50, above200, bo,
                        {k: (round(v, 4) if v is not None else None) for k, v in mom.items()},
                        {k: (round(v, 4) if v is not None else None) for k, v in vol.items()}, notes)
+
+
+def market_regime(index_closes: Sequence[float], vix: float | None = None) -> dict:
+    """Regime do mercado pelo índice (BOVA11 ou SPY): alta, baixa ou lateral,
+    com modo de carteira: ofensivo, defensivo ou neutro."""
+    if len(index_closes) < 200:
+        return {"regime": "indefinido", "modo": "neutro", "motivo": "histórico curto"}
+    c = index_closes[-1]
+    sma50 = sum(index_closes[-50:]) / 50
+    sma200 = sum(index_closes[-200:]) / 200
+    slope, t = slope_tstat(index_closes, 60)
+    dd = c / max(index_closes[-120:]) - 1
+    if c > sma50 > sma200 and t >= 1:
+        regime, modo = "alta", "ofensivo"
+    elif c < sma50 < sma200 and t <= -1:
+        regime, modo = "baixa", "defensivo"
+    elif c < sma200 and dd <= -0.15:
+        regime, modo = "baixa", "defensivo"
+    else:
+        regime, modo = "lateral", "neutro"
+    if vix is not None and vix >= 25 and modo == "ofensivo":
+        modo = "neutro"
+    return {"regime": regime, "modo": modo, "preco_vs_mm50": round(c / sma50 - 1, 4), "preco_vs_mm200": round(c / sma200 - 1, 4),
+            "drawdown_120d": round(dd, 4), "tstat_60d": round(t, 2), "vix": vix,
+            "regras": {"ofensivo": "compras normais; vendas só em ativos com tendência de baixa própria",
+                       "neutro": "metade do tamanho; preferir operações curtas e FIIs de papel; caixa 30%+",
+                       "defensivo": "sem compras novas em ações; caixa 50%+; proteção (dólar, ouro, puts quando liberadas); vendas a favor da tendência com risco definido"}[modo]}

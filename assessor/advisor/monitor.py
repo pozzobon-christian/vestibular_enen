@@ -143,7 +143,7 @@ def analyze(db: MonitorDB, days: int = 30) -> dict:
 
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(prog="advisor.monitor")
-    ap.add_argument("cmd", choices=["run", "collect", "analyze", "status", "diag", "morning"])
+    ap.add_argument("cmd", choices=["run", "collect", "analyze", "status", "diag", "morning", "short"])
     ap.add_argument("--days", type=int, default=30)
     ap.add_argument("--query", default="@gustavocerbasi")
     a = ap.parse_args(argv)
@@ -152,6 +152,9 @@ def main(argv: list[str] | None = None) -> int:
     db = MonitorDB(DB)
     if a.cmd == "morning":
         print(json.dumps(morning_brief(db), ensure_ascii=False, indent=2, default=str)); return 0
+    if a.cmd == "short":
+        out = short_ops(db)
+        print(json.dumps({k: out[k] for k in ("gerado_em", "setups", "erros")}, ensure_ascii=False, indent=2, default=str)[:6000]); return 0
     if a.cmd == "status":
         print(json.dumps(db.summary(), indent=2, ensure_ascii=False)); return 0
     if a.cmd in ("run", "collect"):
@@ -161,6 +164,17 @@ def main(argv: list[str] | None = None) -> int:
         wl = json.loads(WATCHLIST.read_text(encoding="utf-8")) if WATCHLIST.exists() else {}
         n += collect_news(db, wl.get("noticias", []), errors)
         update_prices(db, errors)
+        try:
+            from .calendar import build_calendar
+            wl2 = json.loads(WATCHLIST.read_text(encoding="utf-8"))
+            cal = build_calendar([(t, "BR") for t in wl2.get("BR", [])] + [(t, "US") for t in wl2.get("US", [])], errors=errors)
+            Path("data/calendario.json").write_text(json.dumps(cal, ensure_ascii=False, indent=2), encoding="utf-8")
+        except Exception as e:  # noqa: BLE001
+            errors.append(f"calendario: {type(e).__name__}: {str(e)[:120]}")
+        try:
+            errors += short_ops(db)["erros"]
+        except Exception as e:  # noqa: BLE001
+            errors.append(f"operacoes curtas: {type(e).__name__}: {str(e)[:120]}")
         db.log_run(started, "all", n, errors)
         print(f"coleta: {n} posts novos, {len(errors)} erros")
     if a.cmd in ("run", "analyze"):
@@ -199,14 +213,106 @@ def morning_brief(db: MonitorDB, hours: float = 14.0) -> dict:
     since = (datetime.now(timezone.utc) - timedelta(hours=hours)).isoformat()
     headlines = db.conn.execute("SELECT published, source, market, title, sentiment, tickers FROM news WHERE published >= ? "
                                 "ORDER BY ABS(sentiment) DESC, published DESC LIMIT 25", (since,)).fetchall()
+    from .signals import market_regime
+    regimes = {}
+    for idx in ("BOVA11", "SPY"):
+        rows = db.conn.execute("SELECT close FROM prices WHERE ticker=? ORDER BY day", (idx,)).fetchall()
+        vix = db.conn.execute("SELECT close FROM prices WHERE ticker='^VIX' ORDER BY day DESC LIMIT 1").fetchone()
+        regimes[idx] = market_regime([r[0] for r in rows], vix[0] if vix else None)
     brief = {
         "gerado_em": datetime.now(timezone.utc).isoformat(), "janela_horas": hours,
+        "regime": regimes,
         "overnight": overnight, "tendencias": trends, "sinais_de_noticia": signals,
         "manchetes": [{"quando": p, "fonte": s, "mercado": m, "titulo": t, "sentimento": round(sn or 0, 2), "tickers": json.loads(tk or "[]")}
                       for p, s, m, t, sn, tk in headlines],
     }
     Path("data/briefing-6h.json").write_text(json.dumps(brief, ensure_ascii=False, indent=2, default=str), encoding="utf-8")
     return brief
+
+
+def short_ops(db: MonitorDB, with_fundamentals: bool = True, with_intraday: bool = True) -> dict:
+    """Operações curtas: cruza balanço (público), análogos históricos, notícias
+    recentes, tendência e intradia. Grava data/operacoes-curtas.json."""
+    from .signals import find_analogs, short_setups, trend_report, news_signals
+    from .signals.intraday import fetch_many as fetch_intra
+    from .signals.technical import atr
+    from .data.fundamentals_feed import fetch_many as fetch_fund
+    from .fundamentals import score_company, ratios
+    wl = json.loads(WATCHLIST.read_text(encoding="utf-8")) if WATCHLIST.exists() else {}
+    errors: list[str] = []
+    tickers = [(t, "BR") for t in wl.get("BR", [])] + [(t, "US") for t in wl.get("US", [])]
+    equities = [t for t, m in tickers if not t.endswith("11")]
+    funds = {}
+    if with_fundamentals:
+        funds.update(fetch_fund([t for t in equities if t in wl.get("BR", [])], "BR", errors))
+        funds.update(fetch_fund([t for t in equities if t in wl.get("US", [])], "US", errors))
+    intra = {}
+    if with_intraday:
+        intra.update(fetch_intra([t for t, m in tickers if m == "BR"], "BR", errors))
+        intra.update(fetch_intra([t for t, m in tickers if m == "US"], "US", errors))
+    news = {s.ticker: s for s in news_signals(db, hours=24)}
+    proxies = {"PETR4": "PBR", "VALE3": "VALE", "ITUB4": "ITUB", "BOVA11": "EWZ", "PRIO3": "BZ=F"}
+    pool = {}
+    for t, m in tickers:
+        rows = db.conn.execute("SELECT day, high, low, close FROM prices WHERE ticker=? ORDER BY day", (t,)).fetchall()
+        if len(rows) >= 230:
+            pool[t] = [r[3] for r in rows]
+    setups = []
+    for t, m in tickers:
+        rows = db.conn.execute("SELECT day, high, low, close FROM prices WHERE ticker=? ORDER BY day", (t,)).fetchall()
+        if len(rows) < 60:
+            continue
+        hi, lo, cl, days = [r[1] for r in rows], [r[2] for r in rows], [r[3] for r in rows], [r[0] for r in rows]
+        a = atr(hi, lo, cl)[-1] or 0.0
+        tr = trend_report(t, hi, lo, cl)
+        an = find_analogs(t, cl, days, extra={k: v for k, v in pool.items() if k != t and (k.endswith("3") or k.endswith("4")) == (t.endswith("3") or t.endswith("4"))}) if len(cl) >= 230 else None
+        proxy_move = None
+        if t in proxies:
+            pr = db.conn.execute("SELECT close FROM prices WHERE ticker=? ORDER BY day DESC LIMIT 2", (proxies[t],)).fetchall()
+            if len(pr) == 2 and pr[1][0]:
+                proxy_move = pr[0][0] / pr[1][0] - 1
+        st = short_setups(t, intra.get(t, []), a, cl[-1] if not intra.get(t) else None, proxy_move) if intra.get(t) else None
+        f = funds.get(t)
+        fund = None
+        if f and f.price and f.shares_outstanding:
+            sc = score_company(f); rt = ratios(f)
+            fund = {"score": sc.total, "valuation": sc.valuation, "qualidade": sc.quality, "seguranca": sc.safety,
+                    "crescimento": sc.growth, "alertas": sc.flags,
+                    "P/L": rt["P/L"] and round(rt["P/L"], 1), "EV/EBITDA": rt["EV/EBITDA"] and round(rt["EV/EBITDA"], 1),
+                    "ROE": rt["ROE"] and round(rt["ROE"], 3), "div_liq/EBITDA": rt["divida_liquida/EBITDA"] and round(rt["divida_liquida/EBITDA"], 2),
+                    "FCF_yield": rt["FCF_yield"] and round(rt["FCF_yield"], 3), "fonte": f.notes}
+        ns = news.get(t)
+        # cruzamento: cada camada vota; só vira candidato com 2+ camadas a favor e nenhuma forte contra
+        votes = {"balanco": None, "analogos": None, "noticias": None, "tendencia": None, "intradia": None}
+        if fund: votes["balanco"] = "a_favor" if fund["score"] >= 60 else "contra" if fund["score"] < 40 else "neutro"
+        if an and 20 in an.horizons:
+            h = an.horizons[20]; votes["analogos"] = "a_favor" if h["p_positivo"] >= 0.65 and h["mediana"] > 0.01 else "contra" if h["p_positivo"] <= 0.35 and h["mediana"] < -0.01 else "neutro"
+        if ns: votes["noticias"] = "a_favor" if ns.action == "compra" else "contra" if ns.action == "venda" else "neutro"
+        votes["tendencia"] = "a_favor" if tr.direction == "alta" and tr.score >= 50 else "contra" if tr.direction == "baixa" and tr.score >= 50 else "neutro"
+        if st: votes["intradia"] = "a_favor" if st.direction == "compra" else "contra" if st.direction == "venda" else "neutro"
+        fav = sum(1 for v in votes.values() if v == "a_favor"); con = sum(1 for v in votes.values() if v == "contra")
+        side = "compra" if fav >= 2 and con == 0 else "venda" if con >= 2 and fav == 0 else "nenhuma"
+        last = cl[-1]
+        stop = target = None
+        if side == "compra":
+            stop = round(last - 1.0 * a, 2); target = round(last + 2.0 * a, 2)
+        elif side == "venda":
+            stop = round(last + 1.0 * a, 2); target = round(last - 2.0 * a, 2)
+        setups.append({
+            "ticker": t, "mercado": m, "ultimo": round(last, 4), "atr": round(a, 4),
+            "operacao": side, "votos": votes, "a_favor": fav, "contra": con,
+            "stop": stop, "alvo": target,
+            "ganho_pct": round((target / last - 1) if target else 0, 4), "risco_pct": round((stop / last - 1) if stop else 0, 4),
+            "razao_ganho_risco": 2.0 if side != "nenhuma" else None, "prazo_esperado": "1 a 5 pregões" if side != "nenhuma" else None,
+            "balanco": fund, "analogos": (an.__dict__ | {"state": None}) if an else None,
+            "noticia": ({"acao": ns.action, "score": ns.score, "fontes": ns.n_sources, "manchetes": ns.headlines[:2], "evidencia": ns.reasons} if ns else None),
+            "tendencia": {"direcao": tr.direction, "score": tr.score, "tstat": tr.tstat, "adx": tr.adx, "rompimento": tr.breakout},
+            "intradia": st.__dict__ if st else None,
+        })
+    setups.sort(key=lambda x: (-(x["a_favor"] - x["contra"]) if x["operacao"] == "compra" else -(x["contra"] - x["a_favor"]) if x["operacao"] == "venda" else 1, x["ticker"]))
+    out = {"gerado_em": datetime.now(timezone.utc).isoformat(), "setups": setups, "erros": errors}
+    Path("data/operacoes-curtas.json").write_text(json.dumps(out, ensure_ascii=False, indent=2, default=str), encoding="utf-8")
+    return out
 
 
 def build_dashboard_data(db: MonitorDB, out: Path = Path("data/dashboard-data.json")) -> dict:
@@ -256,7 +362,9 @@ def build_dashboard_data(db: MonitorDB, out: Path = Path("data/dashboard-data.js
         "posts_recentes": [{"autor": a, "plataforma": pl, "ts": ts, "texto": tx[:200], "url": u, "engajamento": e,
                             "tickers": json.loads(tk or "[]"), "direcao": st} for a, pl, ts, tx, u, e, tk, st in recent_posts],
         "noticias": latest_news(db, 60),
-        "briefing_6h": {k: v for k, v in morning_brief(db).items() if k in ("overnight", "tendencias", "sinais_de_noticia")},
+        "briefing_6h": {k: v for k, v in morning_brief(db).items() if k in ("overnight", "tendencias", "sinais_de_noticia", "regime")},
+        "calendario": (json.loads(Path("data/calendario.json").read_text(encoding="utf-8")) if Path("data/calendario.json").exists() else []),
+        "operacoes_curtas": (json.loads(Path("data/operacoes-curtas.json").read_text(encoding="utf-8")) if Path("data/operacoes-curtas.json").exists() else {}),
         "estatisticas_autores": db.latest_stats(),
         "erros_ultima_execucao": json.loads((db.conn.execute("SELECT errors FROM runs ORDER BY finished_at DESC LIMIT 1").fetchone() or ["[]"])[0]),
     }
