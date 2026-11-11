@@ -114,15 +114,11 @@ def recurring(start: date, end: date) -> list[Event]:
 
 def earnings_for(tickers: list[tuple[str, str]], errors: list[str], sleep: float = 0.5) -> list[Event]:
     """Datas de resultado via Yahoo calendarEvents."""
-    import requests
-    from .data.market import USER_AGENT, yahoo_symbol
+    from .data.market import yahoo_symbol, yahoo_quote_summary
     out = []
     for t, m in tickers:
         try:
-            r = requests.get(f"https://query2.finance.yahoo.com/v10/finance/quoteSummary/{yahoo_symbol(t, m)}",
-                             params={"modules": "calendarEvents"}, timeout=20, headers={"User-Agent": "Mozilla/5.0 " + USER_AGENT})
-            r.raise_for_status()
-            res = ((r.json().get("quoteSummary") or {}).get("result") or [{}])[0]
+            res = yahoo_quote_summary(yahoo_symbol(t, m), "calendarEvents")
             ed = ((res.get("calendarEvents") or {}).get("earnings") or {}).get("earningsDate") or []
             for item in ed[:1]:
                 ts = item.get("raw") if isinstance(item, dict) else item

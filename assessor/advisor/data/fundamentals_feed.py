@@ -5,7 +5,7 @@ from __future__ import annotations
 
 import time
 
-from .market import USER_AGENT, yahoo_symbol, _require_requests
+from .market import yahoo_symbol, yahoo_quote_summary
 from ..fundamentals.analysis import CompanyFinancials
 
 MODULES = "financialData,defaultKeyStatistics,incomeStatementHistory,balanceSheetHistory,cashflowStatementHistory,price,summaryProfile"
@@ -22,17 +22,8 @@ def _num(d, *keys, default=0.0):
 
 
 def fetch_company(ticker: str, market: str = "BR", timeout: int = 20) -> CompanyFinancials:
-    import requests
-    _require_requests()
     sym = yahoo_symbol(ticker, market)
-    # crumb-free endpoint (query2) costuma responder sem sessão
-    url = f"https://query2.finance.yahoo.com/v10/finance/quoteSummary/{sym}"
-    r = requests.get(url, params={"modules": MODULES}, timeout=timeout, headers={"User-Agent": "Mozilla/5.0 " + USER_AGENT})
-    r.raise_for_status()
-    res = (r.json().get("quoteSummary") or {}).get("result") or []
-    if not res:
-        raise ValueError(f"sem dados fundamentalistas para {sym}")
-    d = res[0]
+    d = yahoo_quote_summary(sym, MODULES, timeout)
     fin, ks, price = d.get("financialData", {}), d.get("defaultKeyStatistics", {}), d.get("price", {})
     inc = (d.get("incomeStatementHistory", {}).get("incomeStatementHistory") or [{}])[0]
     bs = (d.get("balanceSheetHistory", {}).get("balanceSheetStatements") or [{}])[0]

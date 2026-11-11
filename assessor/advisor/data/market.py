@@ -169,3 +169,39 @@ def parse_rss(xml_text: str, limit: int = 50) -> list[dict[str, str]]:
             "summary": (entry.findtext("atom:summary", default="", namespaces=ns) or "").strip(),
         })
     return items[:limit]
+
+
+_YF_SESSION = {}
+
+
+def yahoo_session():
+    """Sessão com cookie e crumb, exigidos pelo quoteSummary. Reutilizada."""
+    _require_requests()
+    if _YF_SESSION.get("s") is not None:
+        return _YF_SESSION["s"], _YF_SESSION["crumb"]
+    s = requests.Session()
+    s.headers.update({"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) " + USER_AGENT, "Accept": "*/*"})
+    try:
+        s.get("https://fc.yahoo.com", timeout=15, allow_redirects=True)
+    except Exception:  # noqa: BLE001
+        pass
+    r = s.get("https://query2.finance.yahoo.com/v1/test/getcrumb", timeout=15)
+    crumb = r.text.strip() if r.status_code == 200 and r.text and "<" not in r.text else ""
+    _YF_SESSION.update(s=s, crumb=crumb)
+    return s, crumb
+
+
+def yahoo_quote_summary(symbol: str, modules: str, timeout: int = 20) -> dict:
+    s, crumb = yahoo_session()
+    r = s.get(f"https://query2.finance.yahoo.com/v10/finance/quoteSummary/{symbol}",
+              params={"modules": modules, "crumb": crumb}, timeout=timeout)
+    if r.status_code == 401:
+        _YF_SESSION.clear()
+        s, crumb = yahoo_session()
+        r = s.get(f"https://query2.finance.yahoo.com/v10/finance/quoteSummary/{symbol}",
+                  params={"modules": modules, "crumb": crumb}, timeout=timeout)
+    r.raise_for_status()
+    res = (r.json().get("quoteSummary") or {}).get("result") or []
+    if not res:
+        raise ValueError(f"sem dados para {symbol}")
+    return res[0]
