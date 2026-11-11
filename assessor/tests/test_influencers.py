@@ -98,3 +98,18 @@ def test_parse_posts_jsonl(tmp_path):
     f.write_text('{"author":"a","platform":"x","ts":"2025-03-03T12:00:00+00:00","text":"PETR4 compra"}\n', encoding="utf-8")
     posts = parse_posts_jsonl(f)
     assert posts[0].tickers == ["PETR4"] and posts[0].stance == "compra"
+
+
+def test_youtube_videos_page_parser(monkeypatch):
+    from advisor.influencers import collectors
+    html = ('{"videoRenderer":{"videoId":"abcdefghijk","title":{"runs":[{"text":"PETR4 vai subir? Compra agora"}]},'
+            '"publishedTimeText":{"simpleText":"há 2 dias"},"viewCountText":{"simpleText":"12.345 visualizações"}}}'
+            '{"videoRenderer":{"videoId":"zzzzzzzzzzz","title":{"runs":[{"text":"Outro"}]}}}')
+    class R:
+        status_code = 200; text = html
+        def raise_for_status(self): pass
+    monkeypatch.setattr(collectors, "_req", lambda: type("Q", (), {"get": staticmethod(lambda *a, **k: R())}))
+    posts = collectors.youtube_channel_videos_page("UCx")
+    assert len(posts) == 2 and posts[0].tickers == ["PETR4"] and posts[0].engagement == 12345
+    assert posts[0].url.endswith("abcdefghijk") and posts[0].stance == "compra"
+    assert (datetime.now(timezone.utc) - posts[0].ts).days == 2

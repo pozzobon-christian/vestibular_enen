@@ -114,9 +114,56 @@ _YT_HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) " + UA,
 
 
 def youtube_feed_ok(channel_id: str) -> bool:
+    """Aceita o ID se o RSS responder OU se a página /videos do canal existir
+    (o RSS falha de forma intermitente em IPs de nuvem)."""
     r = _req().get(f"https://www.youtube.com/feeds/videos.xml?channel_id={channel_id}",
                    headers=_YT_HEADERS, timeout=20)
-    return r.status_code == 200 and "<entry>" in r.text
+    if r.status_code == 200 and "<entry>" in r.text:
+        return True
+    r = _req().get(f"https://www.youtube.com/channel/{channel_id}/videos", headers=_YT_HEADERS, timeout=20)
+    return r.status_code == 200 and '"videoId"' in r.text
+
+
+_YT_VIDEO_UNUSED = re.compile(
+    r'"videoRenderer":\{"videoId":"([\w-]{11})".*?"title":\{"runs":\[\{"text":"((?:[^"\\]|\\.)*)"'
+    r'.*?(?:"publishedTimeText":\{"simpleText":"([^"]*)")?.*?(?:"viewCountText":\{"simpleText":"([^"]*)")?', re.S)
+_REL = [("segundo", 1), ("minuto", 60), ("hora", 3600), ("dia", 86400), ("semana", 604800),
+        ("mês", 2592000), ("mes", 2592000), ("ano", 31536000),
+        ("second", 1), ("minute", 60), ("hour", 3600), ("day", 86400), ("week", 604800), ("month", 2592000), ("year", 31536000)]
+
+
+def _relative_to_dt(text: str) -> datetime:
+    """'há 3 dias' / '3 days ago' -> datetime aproximado (UTC)."""
+    now = datetime.now(timezone.utc)
+    m = re.search(r"(\d+)", text or "")
+    if not m:
+        return now
+    n = int(m.group(1))
+    low = text.lower()
+    for word, secs in _REL:
+        if word in low:
+            from datetime import timedelta
+            return now - timedelta(seconds=n * secs)
+    return now
+
+
+def youtube_channel_videos_page(channel_id: str, limit: int = 30) -> list[Post]:
+    """Vídeos recentes lidos da página /videos (ytInitialData). Data aproximada."""
+    r = _req().get(f"https://www.youtube.com/channel/{channel_id}/videos", headers=_YT_HEADERS, timeout=20)
+    r.raise_for_status()
+    out = []
+    for chunk in r.text.split('"videoRenderer":')[1:limit + 1]:
+        vid = re.search(r'"videoId":"([\w-]{11})"', chunk)
+        title = re.search(r'"title":\{"runs":\[\{"text":"((?:[^"\\]|\\.)*)"', chunk)
+        pub = re.search(r'"publishedTimeText":\{"simpleText":"([^"]*)"', chunk)
+        views = re.search(r'"viewCountText":\{"simpleText":"([^"]*)"', chunk)
+        if not vid or not title:
+            continue
+        v = int(re.sub(r"\D", "", views.group(1)) or 0) if views else 0
+        out.append(Post(author=channel_id, platform="youtube", ts=_relative_to_dt(pub.group(1) if pub else ""),
+                        text=title.group(1).encode().decode("unicode_escape", errors="ignore"),
+                        url=f"https://www.youtube.com/watch?v={vid.group(1)}", engagement=v))
+    return out
 
 
 def youtube_candidates(handle_or_name: str) -> list[str]:
@@ -165,7 +212,8 @@ def youtube_channel_uploads(channel_id: str) -> list[Post]:
     from ..data.market import parse_rss
     r = _req().get(f"https://www.youtube.com/feeds/videos.xml?channel_id={channel_id}",
                    headers=_YT_HEADERS, timeout=20)
-    r.raise_for_status()
+    if r.status_code != 200 or "<entry>" not in r.text:
+        return youtube_channel_videos_page(channel_id)
     out = []
     for it in parse_rss(r.text, limit=30):
         ts = datetime.fromisoformat(it["published"]) if it["published"] else datetime.now(timezone.utc)
