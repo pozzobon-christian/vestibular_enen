@@ -1,17 +1,17 @@
 # Monitor de influenciadores
 
-Atualizado em 2026-11-11 13:11 UTC
+Atualizado em 2026-11-11 13:13 UTC
 
 | Posts | Autores | Campanhas | Sinais | Preços |
 |---|---|---|---|---|
-| 933 | 293 | 21 | 209 | 19907 |
+| 948 | 304 | 21 | 230 | 19907 |
 
 ## Campanhas nos últimos 30 dias
 
 | Ativo | Direção | Autores | Líder | Fase | Ação | Confiança |
 |---|---|---|---|---|---|---|
 | BTC | compra | 34 | stocktwits:nedflandersiii | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
-| NVDA | compra | 70 | stocktwits:nedflandersiii | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
+| NVDA | compra | 74 | stocktwits:nedflandersiii | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
 | AAPL | compra | 13 | stocktwits:nedflandersiii | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
 | SPY | compra | 13 | stocktwits:nedflandersiii | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
 | AAPL | venda | 9 | stocktwits:donjuancapistran | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
@@ -29,7 +29,7 @@ Atualizado em 2026-11-11 13:11 UTC
 | QQQ | venda | 7 | stocktwits:transcendasset | ignorar | observar; sem ordem | 0.30 |
 | MU | compra | 4 | stocktwits:maribor | inicio | entrar a favor (compra) com tamanho pelo RiskBudget | 0.40 |
 | QQQ | compra | 6 | stocktwits:maribor | ignorar | observar; sem ordem | 0.30 |
-| NVDA | venda | 17 | stocktwits:peanutloverdrool | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
+| NVDA | venda | 21 | stocktwits:peanutloverdrool | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
 | ETH | venda | 4 | stocktwits:btcc_exchange | inicio | entrar a favor (venda) com tamanho pelo RiskBudget | 0.40 |
 
 ## Grupos descobertos (postam juntos em 2+ campanhas)
@@ -39,21 +39,21 @@ Atualizado em 2026-11-11 13:11 UTC
 
 ## Quem posta primeiro
 
-- stocktwits:nedflandersiii: +126
-- stocktwits:sovihabi: +75
-- stocktwits:maribor: +75
-- stocktwits:starrbarr: +67
-- stocktwits:august_west: +63
-- stocktwits:hyde1634: +59
-- stocktwits:jesterp88: +59
-- stocktwits:mokena1234: +57
-- stocktwits:iplaysmart: +57
-- stocktwits:franking71: +51
+- stocktwits:nedflandersiii: +130
+- stocktwits:sovihabi: +79
+- stocktwits:maribor: +79
+- stocktwits:starrbarr: +71
+- stocktwits:august_west: +67
+- stocktwits:hyde1634: +63
+- stocktwits:jesterp88: +63
+- stocktwits:mokena1234: +61
+- stocktwits:iplaysmart: +61
+- stocktwits:franking71: +55
 
 ## Autores mais ativos (total coletado)
 
+- youtube:professorbaroni: 46 posts
 - youtube:brunoperini: 45 posts
-- youtube:professorbaroni: 45 posts
 - youtube:nathfinancas: 44 posts
 - youtube:humphreytalks: 42 posts
 - youtube:tiofiis: 42 posts
@@ -70,15 +70,15 @@ Atualizado em 2026-11-11 13:11 UTC
 
 ## Ativos mais mencionados
 
-- NVDA: 176
+- NVDA: 189
 - BTC: 143
-- TSLA: 97
-- SPY: 61
+- TSLA: 98
+- SPY: 63
 - AAPL: 53
-- QQQ: 34
+- QQQ: 35
 - AMD: 18
+- SPCX: 16
 - ETH: 16
-- SPCX: 15
 - MSTR: 13
 - CRWV: 13
 - MU: 12
@@ -86,7 +86,7 @@ Atualizado em 2026-11-11 13:11 UTC
 - GLD: 9
 - ZEC: 8
 
-## Última execução: 2026-11-11T13:11:35.113681+00:00 (392 posts novos, 17 erros)
+## Última execução: 2026-11-11T13:13:59.649687+00:00 (23 posts novos, 17 erros)
 
 - x:pablospyer x:@pablospyer: RuntimeError: defina X_BEARER_TOKEN (API v2 do X)
 - reddit:farialimabets reddit:farialimabets: HTTPError: 403 Client Error: Blocked for url: https://www.reddit.com/r/farialimabets/new.json?limit=50

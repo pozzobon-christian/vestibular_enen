@@ -1,7 +1,7 @@
 {
-  "gerado_em": "2026-11-11T13:11:35.162632+00:00",
+  "gerado_em": "2026-11-11T13:13:59.710400+00:00",
   "janela_dias": 30,
-  "posts_na_janela": 661,
+  "posts_na_janela": 676,
   "campanhas": [
     {
       "ativo": "BTC",
@@ -55,11 +55,11 @@
       "ativo": "NVDA",
       "direcao": "compra",
       "inicio": "2026-11-10T22:18:22+00:00",
-      "autores": 70,
+      "autores": 74,
       "lider": "stocktwits:nedflandersiii",
-      "duracao_h": 14.87,
-      "alcance": 128,
-      "posts": 77,
+      "duracao_h": 14.89,
+      "alcance": 133,
+      "posts": 81,
       "seguidores_em_ordem": [
         "stocktwits:sovihabi",
         "stocktwits:starrbarr",
@@ -129,7 +129,11 @@
         "stocktwits:asksunny",
         "stocktwits:person69",
         "stocktwits:billionaire2025",
-        "stocktwits:djdan3"
+        "stocktwits:djdan3",
+        "stocktwits:deeter",
+        "stocktwits:wsbsmash",
+        "stocktwits:stockolert",
+        "stocktwits:admus"
       ],
       "fase": "lotada",
       "acao": "não entrar; se posicionado, realizar 50% e subir o stop para o custo",
@@ -342,9 +346,9 @@
       "inicio": "2026-11-11T03:34:43+00:00",
       "autores": 7,
       "lider": "stocktwits:marcusmccord",
-      "duracao_h": 9.55,
+      "duracao_h": 9.61,
       "alcance": 10,
-      "posts": 11,
+      "posts": 12,
       "seguidores_em_ordem": [
         "stocktwits:transcendasset",
         "stocktwits:pullbackalerts",
@@ -465,9 +469,9 @@
       "inicio": "2026-11-11T04:29:37+00:00",
       "autores": 7,
       "lider": "stocktwits:transcendasset",
-      "duracao_h": 8.63,
+      "duracao_h": 8.7,
       "alcance": 15,
-      "posts": 9,
+      "posts": 10,
       "seguidores_em_ordem": [
         "stocktwits:pullbackalerts",
         "stocktwits:paidguruworstnightmare",
@@ -522,11 +526,11 @@
       "ativo": "NVDA",
       "direcao": "venda",
       "inicio": "2026-11-11T04:33:05+00:00",
-      "autores": 17,
+      "autores": 21,
       "lider": "stocktwits:peanutloverdrool",
-      "duracao_h": 8.61,
-      "alcance": 22,
-      "posts": 20,
+      "duracao_h": 8.66,
+      "alcance": 25,
+      "posts": 26,
       "seguidores_em_ordem": [
         "stocktwits:topoptionsaierts",
         "stocktwits:40mikemike",
@@ -543,7 +547,11 @@
         "stocktwits:nhd",
         "stocktwits:joemon",
         "stocktwits:natoshisakomato",
-        "stocktwits:sammy552"
+        "stocktwits:sammy552",
+        "stocktwits:desertdollar",
+        "stocktwits:candlesbackedsecurities",
+        "stocktwits:whyrupumping",
+        "stocktwits:bladejb"
       ],
       "fase": "lotada",
       "acao": "não entrar; se posicionado, realizar 50% e subir o stop para o custo",
@@ -630,72 +638,72 @@
   "lideres": [
     [
       "stocktwits:nedflandersiii",
-      126
+      130
     ],
     [
       "stocktwits:sovihabi",
-      75
+      79
     ],
     [
       "stocktwits:maribor",
-      75
+      79
     ],
     [
       "stocktwits:starrbarr",
-      67
+      71
     ],
     [
       "stocktwits:august_west",
-      63
+      67
     ],
     [
       "stocktwits:hyde1634",
-      59
+      63
     ],
     [
       "stocktwits:jesterp88",
-      59
+      63
     ],
     [
       "stocktwits:mokena1234",
-      57
+      61
     ],
     [
       "stocktwits:iplaysmart",
-      57
+      61
     ],
     [
       "stocktwits:franking71",
-      51
+      55
     ],
     [
       "stocktwits:zer0daylevels",
-      49
+      53
     ],
     [
       "stocktwits:thefourwind",
-      47
-    ],
-    [
-      "stocktwits:paidguruworstnightmare",
-      46
+      51
     ],
     [
       "stocktwits:goodmeyer83",
-      46
+      50
     ],
     [
       "stocktwits:themadogtrader",
-      45
+      49
+    ],
+    [
+      "stocktwits:leonx",
+      47
     ]
   ],
-  "autores_com_historico": 170,
+  "autores_com_historico": 178,
   "resumo_db": {
-    "posts": 933,
-    "autores": 293,
+    "posts": 948,
+    "autores": 304,
     "campanhas": 21,
-    "sinais": 209,
+    "sinais": 230,
     "precos": 19907,
-    "ultima_execucao": "2026-11-11T13:11:35.113681+00:00"
+    "ultima_execucao": "2026-11-11T13:13:59.649687+00:00"
   }
 }

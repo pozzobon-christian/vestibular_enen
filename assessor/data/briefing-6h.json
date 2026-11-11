@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-11-11T13:11:35.218426+00:00",
+  "gerado_em": "2026-11-11T13:13:59.782566+00:00",
   "janela_horas": 14.0,
   "overnight": [
     {
@@ -13,18 +13,18 @@
     {
       "simbolo": "NQ=F",
       "nome": "Nasdaq futuro",
-      "ultimo": 28337.5,
+      "ultimo": 28327.5,
       "data": "2026-11-11",
-      "var_1d": 0.018,
-      "var_5d": -0.008
+      "var_1d": 0.0177,
+      "var_5d": -0.0084
     },
     {
       "simbolo": "YM=F",
       "nome": "Dow futuro",
-      "ultimo": 52383.0,
+      "ultimo": 52399.0,
       "data": "2026-11-11",
-      "var_1d": 0.0013,
-      "var_5d": -0.0209
+      "var_1d": 0.0016,
+      "var_5d": -0.0206
     },
     {
       "simbolo": "^N225",
@@ -53,15 +53,15 @@
     {
       "simbolo": "^STOXX50E",
       "nome": "Euro Stoxx 50",
-      "ultimo": 6367.46,
+      "ultimo": 6366.52,
       "data": "2026-11-11",
-      "var_1d": 0.0063,
-      "var_5d": 0.0162
+      "var_1d": 0.0061,
+      "var_5d": 0.0161
     },
     {
       "simbolo": "^FTSE",
       "nome": "FTSE 100",
-      "ultimo": 10788.58,
+      "ultimo": 10787.68,
       "data": "2026-11-11",
       "var_1d": 0.0034,
       "var_5d": -0.0038
@@ -69,34 +69,34 @@
     {
       "simbolo": "CL=F",
       "nome": "WTI",
-      "ultimo": 87.26,
+      "ultimo": 87.31,
       "data": "2026-11-11",
-      "var_1d": 0.0142,
-      "var_5d": -0.0098
+      "var_1d": 0.0148,
+      "var_5d": -0.0092
     },
     {
       "simbolo": "BZ=F",
       "nome": "Brent",
-      "ultimo": 93.13,
+      "ultimo": 93.16,
       "data": "2026-11-11",
-      "var_1d": 0.0179,
-      "var_5d": -0.0157
+      "var_1d": 0.0183,
+      "var_5d": -0.0154
     },
     {
       "simbolo": "GC=F",
       "nome": "Ouro",
-      "ultimo": 4049.5,
+      "ultimo": 4050.2,
       "data": "2026-11-11",
-      "var_1d": 0.0048,
-      "var_5d": -0.0058
+      "var_1d": 0.005,
+      "var_5d": -0.0056
     },
     {
       "simbolo": "HG=F",
       "nome": "Cobre",
-      "ultimo": 6.29,
+      "ultimo": 6.28,
       "data": "2026-11-11",
-      "var_1d": 0.0111,
-      "var_5d": -0.0179
+      "var_1d": 0.0099,
+      "var_5d": -0.0191
     },
     {
       "simbolo": "TIO=F",
@@ -109,9 +109,9 @@
     {
       "simbolo": "DX-Y.NYB",
       "nome": "Índice dólar",
-      "ultimo": 102.56,
+      "ultimo": 102.57,
       "data": "2026-11-11",
-      "var_1d": 0.0032,
+      "var_1d": 0.0033,
       "var_5d": 0.0104
     },
     {
@@ -125,10 +125,10 @@
     {
       "simbolo": "^VIX",
       "nome": "VIX",
-      "ultimo": 18.45,
+      "ultimo": 18.47,
       "data": "2026-11-11",
-      "var_1d": -0.0519,
-      "var_5d": 0.1108
+      "var_1d": -0.0509,
+      "var_5d": 0.112
     },
     {
       "simbolo": "EWZ",
@@ -1395,6 +1395,29 @@
       ]
     },
     {
+      "ticker": "ETH",
+      "score": 0.114,
+      "n_items": 2,
+      "n_sources": 1,
+      "headlines": [
+        "Bitmine posts $6.3B net loss for fiscal 2026 as Ether prices slide",
+        "CoreWeave stock jumps 15% premarket after Q3 revenue beats estimates"
+      ],
+      "evidence": {
+        "ticker": "ETH",
+        "n_pos": 0,
+        "n_neg": 0,
+        "ret1_after_pos": null,
+        "ret5_after_pos": null,
+        "ret1_after_neg": null,
+        "ret5_after_neg": null
+      },
+      "action": "ignorar",
+      "reasons": [
+        "uma única fonte"
+      ]
+    },
+    {
       "ticker": "BBAS3",
       "score": 0.1,
       "n_items": 2,
@@ -1518,28 +1541,6 @@
       ],
       "evidence": {
         "ticker": "VVEO3",
-        "n_pos": 0,
-        "n_neg": 0,
-        "ret1_after_pos": null,
-        "ret5_after_pos": null,
-        "ret1_after_neg": null,
-        "ret5_after_neg": null
-      },
-      "action": "ignorar",
-      "reasons": [
-        "uma única fonte"
-      ]
-    },
-    {
-      "ticker": "ETH",
-      "score": 0.0,
-      "n_items": 1,
-      "n_sources": 1,
-      "headlines": [
-        "Bitmine posts $6.3B net loss for fiscal 2026 as Ether prices slide"
-      ],
-      "evidence": {
-        "ticker": "ETH",
         "n_pos": 0,
         "n_neg": 0,
         "ret1_after_pos": null,
@@ -1880,18 +1881,20 @@
       "tickers": []
     },
     {
+      "quando": "2026-11-11T13:02:30+00:00",
+      "fonte": "Cointelegraph",
+      "mercado": "cripto",
+      "titulo": "CoreWeave stock jumps 15% premarket after Q3 revenue beats estimates",
+      "sentimento": 0.23,
+      "tickers": [
+        "ETH"
+      ]
+    },
+    {
       "quando": "2026-11-11T12:44:00+00:00",
       "fonte": "Google News Brasil: mercado",
       "mercado": "BR",
       "titulo": "Dólar abre em queda com plano de ajuste fiscal do governo Lula no radar - Folha de S.Paulo",
-      "sentimento": -0.21,
-      "tickers": []
-    },
-    {
-      "quando": "2026-11-11T12:00:00+00:00",
-      "fonte": "Google News Brasil: mercado",
-      "mercado": "BR",
-      "titulo": "Dólar abre de olho no lucro da Petrobras e nas negociações sobre o ajuste fiscal - G1",
       "sentimento": -0.21,
       "tickers": []
     }
