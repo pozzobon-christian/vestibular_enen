@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-11-11T21:04:41.220191+00:00",
+  "gerado_em": "2026-11-12T02:11:16.010799+00:00",
   "janela_horas": 14.0,
   "regime": {
     "BOVA11": {
@@ -938,354 +938,13 @@
   ],
   "sinais_de_noticia": [
     {
-      "ticker": "PINE4",
-      "score": 0.453,
-      "n_items": 3,
-      "n_sources": 2,
-      "headlines": [
-        "Lucro do Banco Pine (PINE4) salta para R$ 185,2 milhões no 3T26",
-        "Petrobras (PETR4), Telefônica (VIVT3), Cury (CURY3) e mais: veja os destaques das empresas",
-        "Petrobras (PETR4), Energisa (ENGI11), Banco Pine (PINE4) e outros destaques desta quarta-feira (11)"
-      ],
-      "evidence": {
-        "ticker": "PINE4",
-        "n_pos": 0,
-        "n_neg": 0,
-        "ret1_after_pos": null,
-        "ret5_after_pos": null,
-        "ret1_after_neg": null,
-        "ret5_after_neg": null
-      },
-      "action": "observar",
-      "reasons": [
-        "sem histórico de reação suficiente (n=0 eventos)"
-      ]
-    },
-    {
-      "ticker": "ENGI11",
-      "score": 0.449,
-      "n_items": 3,
-      "n_sources": 2,
-      "headlines": [
-        "Energisa (ENGI11) tem lucro líquido consolidado de R$ 951 milhões no 3º trimestre, alta de 47%",
-        "Petrobras (PETR4), Telefônica (VIVT3), Cury (CURY3) e mais: veja os destaques das empresas",
-        "Petrobras (PETR4), Energisa (ENGI11), Banco Pine (PINE4) e outros destaques desta quarta-feira (11)"
-      ],
-      "evidence": {
-        "ticker": "ENGI11",
-        "n_pos": 0,
-        "n_neg": 0,
-        "ret1_after_pos": null,
-        "ret5_after_pos": null,
-        "ret1_after_neg": null,
-        "ret5_after_neg": null
-      },
-      "action": "observar",
-      "reasons": [
-        "sem histórico de reação suficiente (n=0 eventos)"
-      ]
-    },
-    {
-      "ticker": "MOTV3",
-      "score": 0.378,
-      "n_items": 2,
-      "n_sources": 2,
-      "headlines": [
-        "Motiva (MOTV3) tem alta de 1,7% no tráfego em outubro",
-        "Petrobras (PETR4), Telefônica (VIVT3), Cury (CURY3) e mais: veja os destaques das empresas"
-      ],
-      "evidence": {
-        "ticker": "MOTV3",
-        "n_pos": 0,
-        "n_neg": 0,
-        "ret1_after_pos": null,
-        "ret5_after_pos": null,
-        "ret1_after_neg": null,
-        "ret5_after_neg": null
-      },
-      "action": "observar",
-      "reasons": [
-        "sem histórico de reação suficiente (n=0 eventos)"
-      ]
-    },
-    {
-      "ticker": "FLRY3",
-      "score": 0.301,
-      "n_items": 2,
-      "n_sources": 2,
-      "headlines": [
-        "Fleury (FLRY3) e Bradsaúde (SAUD3) criam rede de clínicas de oncologia",
-        "Petrobras (PETR4), Telefônica (VIVT3), Cury (CURY3) e mais: veja os destaques das empresas"
-      ],
-      "evidence": {
-        "ticker": "FLRY3",
-        "n_pos": 0,
-        "n_neg": 0,
-        "ret1_after_pos": null,
-        "ret5_after_pos": null,
-        "ret1_after_neg": null,
-        "ret5_after_neg": null
-      },
-      "action": "observar",
-      "reasons": [
-        "sem histórico de reação suficiente (n=0 eventos)"
-      ]
-    },
-    {
-      "ticker": "SAUD3",
-      "score": 0.301,
-      "n_items": 2,
-      "n_sources": 2,
-      "headlines": [
-        "Fleury (FLRY3) e Bradsaúde (SAUD3) criam rede de clínicas de oncologia",
-        "Petrobras (PETR4), Telefônica (VIVT3), Cury (CURY3) e mais: veja os destaques das empresas"
-      ],
-      "evidence": {
-        "ticker": "SAUD3",
-        "n_pos": 0,
-        "n_neg": 0,
-        "ret1_after_pos": null,
-        "ret5_after_pos": null,
-        "ret1_after_neg": null,
-        "ret5_after_neg": null
-      },
-      "action": "observar",
-      "reasons": [
-        "sem histórico de reação suficiente (n=0 eventos)"
-      ]
-    },
-    {
-      "ticker": "VULC3",
-      "score": 0.301,
-      "n_items": 2,
-      "n_sources": 2,
-      "headlines": [
-        "Petrobras (PETR4), Telefônica (VIVT3), Cury (CURY3) e mais: veja os destaques das empresas",
-        "Vulcabras (VULC3), Cruzeiro do Sul (CSED3), Armac (ARML3) e mais divulgam balanços"
-      ],
-      "evidence": {
-        "ticker": "VULC3",
-        "n_pos": 0,
-        "n_neg": 0,
-        "ret1_after_pos": null,
-        "ret5_after_pos": null,
-        "ret1_after_neg": null,
-        "ret5_after_neg": null
-      },
-      "action": "observar",
-      "reasons": [
-        "sem histórico de reação suficiente (n=0 eventos)"
-      ]
-    },
-    {
-      "ticker": "ONCO3",
-      "score": 0.301,
-      "n_items": 2,
-      "n_sources": 2,
-      "headlines": [
-        "Petrobras (PETR4), Telefônica (VIVT3), Cury (CURY3) e mais: veja os destaques das empresas",
-        "Oncoclínicas (ONCO3) adia divulgação do balanço do 3T26 até conclusão de comitê independente"
-      ],
-      "evidence": {
-        "ticker": "ONCO3",
-        "n_pos": 0,
-        "n_neg": 0,
-        "ret1_after_pos": null,
-        "ret5_after_pos": null,
-        "ret1_after_neg": null,
-        "ret5_after_neg": null
-      },
-      "action": "observar",
-      "reasons": [
-        "sem histórico de reação suficiente (n=0 eventos)"
-      ]
-    },
-    {
-      "ticker": "VIVT3",
-      "score": 0.601,
-      "n_items": 1,
-      "n_sources": 1,
-      "headlines": [
-        "Petrobras (PETR4), Telefônica (VIVT3), Cury (CURY3) e mais: veja os destaques das empresas"
-      ],
-      "evidence": {
-        "ticker": "VIVT3",
-        "n_pos": 0,
-        "n_neg": 0,
-        "ret1_after_pos": null,
-        "ret5_after_pos": null,
-        "ret1_after_neg": null,
-        "ret5_after_neg": null
-      },
-      "action": "ignorar",
-      "reasons": [
-        "uma única fonte"
-      ]
-    },
-    {
-      "ticker": "CURY3",
-      "score": 0.601,
-      "n_items": 1,
-      "n_sources": 1,
-      "headlines": [
-        "Petrobras (PETR4), Telefônica (VIVT3), Cury (CURY3) e mais: veja os destaques das empresas"
-      ],
-      "evidence": {
-        "ticker": "CURY3",
-        "n_pos": 0,
-        "n_neg": 0,
-        "ret1_after_pos": null,
-        "ret5_after_pos": null,
-        "ret1_after_neg": null,
-        "ret5_after_neg": null
-      },
-      "action": "ignorar",
-      "reasons": [
-        "uma única fonte"
-      ]
-    },
-    {
-      "ticker": "IGTI11",
-      "score": 0.601,
-      "n_items": 1,
-      "n_sources": 1,
-      "headlines": [
-        "Petrobras (PETR4), Telefônica (VIVT3), Cury (CURY3) e mais: veja os destaques das empresas"
-      ],
-      "evidence": {
-        "ticker": "IGTI11",
-        "n_pos": 0,
-        "n_neg": 0,
-        "ret1_after_pos": null,
-        "ret5_after_pos": null,
-        "ret1_after_neg": null,
-        "ret5_after_neg": null
-      },
-      "action": "ignorar",
-      "reasons": [
-        "uma única fonte"
-      ]
-    },
-    {
-      "ticker": "AURE3",
-      "score": 0.601,
-      "n_items": 1,
-      "n_sources": 1,
-      "headlines": [
-        "Petrobras (PETR4), Telefônica (VIVT3), Cury (CURY3) e mais: veja os destaques das empresas"
-      ],
-      "evidence": {
-        "ticker": "AURE3",
-        "n_pos": 0,
-        "n_neg": 0,
-        "ret1_after_pos": null,
-        "ret5_after_pos": null,
-        "ret1_after_neg": null,
-        "ret5_after_neg": null
-      },
-      "action": "ignorar",
-      "reasons": [
-        "uma única fonte"
-      ]
-    },
-    {
-      "ticker": "EGIE3",
-      "score": 0.601,
-      "n_items": 1,
-      "n_sources": 1,
-      "headlines": [
-        "Petrobras (PETR4), Telefônica (VIVT3), Cury (CURY3) e mais: veja os destaques das empresas"
-      ],
-      "evidence": {
-        "ticker": "EGIE3",
-        "n_pos": 0,
-        "n_neg": 0,
-        "ret1_after_pos": null,
-        "ret5_after_pos": null,
-        "ret1_after_neg": null,
-        "ret5_after_neg": null
-      },
-      "action": "ignorar",
-      "reasons": [
-        "uma única fonte"
-      ]
-    },
-    {
-      "ticker": "TASA4",
-      "score": 0.601,
-      "n_items": 1,
-      "n_sources": 1,
-      "headlines": [
-        "Petrobras (PETR4), Telefônica (VIVT3), Cury (CURY3) e mais: veja os destaques das empresas"
-      ],
-      "evidence": {
-        "ticker": "TASA4",
-        "n_pos": 0,
-        "n_neg": 0,
-        "ret1_after_pos": null,
-        "ret5_after_pos": null,
-        "ret1_after_neg": null,
-        "ret5_after_neg": null
-      },
-      "action": "ignorar",
-      "reasons": [
-        "uma única fonte"
-      ]
-    },
-    {
-      "ticker": "ASAI3",
-      "score": 0.601,
-      "n_items": 1,
-      "n_sources": 1,
-      "headlines": [
-        "Petrobras (PETR4), Telefônica (VIVT3), Cury (CURY3) e mais: veja os destaques das empresas"
-      ],
-      "evidence": {
-        "ticker": "ASAI3",
-        "n_pos": 0,
-        "n_neg": 0,
-        "ret1_after_pos": null,
-        "ret5_after_pos": null,
-        "ret1_after_neg": null,
-        "ret5_after_neg": null
-      },
-      "action": "ignorar",
-      "reasons": [
-        "uma única fonte"
-      ]
-    },
-    {
-      "ticker": "PNVL3",
-      "score": 0.601,
-      "n_items": 1,
-      "n_sources": 1,
-      "headlines": [
-        "Petrobras (PETR4), Telefônica (VIVT3), Cury (CURY3) e mais: veja os destaques das empresas"
-      ],
-      "evidence": {
-        "ticker": "PNVL3",
-        "n_pos": 0,
-        "n_neg": 0,
-        "ret1_after_pos": null,
-        "ret5_after_pos": null,
-        "ret1_after_neg": null,
-        "ret5_after_neg": null
-      },
-      "action": "ignorar",
-      "reasons": [
-        "uma única fonte"
-      ]
-    },
-    {
       "ticker": "PETR4",
-      "score": 0.229,
-      "n_items": 7,
+      "score": 0.402,
+      "n_items": 2,
       "n_sources": 2,
       "headlines": [
-        "Petrobras (PETR4) nega ter pedido para ANP adiar revisão tarifária do gás, em resposta a diretor da agência",
-        "Balanço da Petrobras (PETR4) mexe com dia de liquidez reduzida com feriado nos EUA; Ibovespa em dólar cai nesta quarta-feira (11)",
-        "Pacote fiscal de até R$ 80 bi e crise na Nvidia ditam o ritmo do mercado",
-        "Petrobras (PETR4), Telefônica (VIVT3), Cury (CURY3) e mais: veja os destaques das empresas"
+        "Petrobras (PETR4), Energisa (ENGI11), Banco Pine (PINE4) e outros destaques desta quarta-feira (11)",
+        "Petrobras (PETR4; PETR3) tomba na bolsa após resultados do 3º tri"
       ],
       "evidence": {
         "ticker": "PETR4",
@@ -1296,19 +955,17 @@
         "ret1_after_neg": null,
         "ret5_after_neg": null
       },
-      "action": "ignorar",
+      "action": "observar",
       "reasons": [
-        "sentimento fraco"
+        "sem histórico de reação suficiente (n=1 eventos)"
       ]
     },
     {
       "ticker": "PETR3",
-      "score": 0.344,
-      "n_items": 3,
+      "score": 0.432,
+      "n_items": 1,
       "n_sources": 1,
       "headlines": [
-        "Pacote fiscal de até R$ 80 bi e crise na Nvidia ditam o ritmo do mercado",
-        "Petrobras (PETR4), Telefônica (VIVT3), Cury (CURY3) e mais: veja os destaques das empresas",
         "Petrobras (PETR4; PETR3) tomba na bolsa após resultados do 3º tri"
       ],
       "evidence": {
@@ -1326,15 +983,59 @@
       ]
     },
     {
+      "ticker": "ENGI11",
+      "score": 0.372,
+      "n_items": 1,
+      "n_sources": 1,
+      "headlines": [
+        "Petrobras (PETR4), Energisa (ENGI11), Banco Pine (PINE4) e outros destaques desta quarta-feira (11)"
+      ],
+      "evidence": {
+        "ticker": "ENGI11",
+        "n_pos": 0,
+        "n_neg": 0,
+        "ret1_after_pos": null,
+        "ret5_after_pos": null,
+        "ret1_after_neg": null,
+        "ret5_after_neg": null
+      },
+      "action": "ignorar",
+      "reasons": [
+        "uma única fonte"
+      ]
+    },
+    {
+      "ticker": "PINE4",
+      "score": 0.372,
+      "n_items": 1,
+      "n_sources": 1,
+      "headlines": [
+        "Petrobras (PETR4), Energisa (ENGI11), Banco Pine (PINE4) e outros destaques desta quarta-feira (11)"
+      ],
+      "evidence": {
+        "ticker": "PINE4",
+        "n_pos": 0,
+        "n_neg": 0,
+        "ret1_after_pos": null,
+        "ret5_after_pos": null,
+        "ret1_after_neg": null,
+        "ret5_after_neg": null
+      },
+      "action": "ignorar",
+      "reasons": [
+        "uma única fonte"
+      ]
+    },
+    {
       "ticker": "BTC",
-      "score": 0.061,
-      "n_items": 21,
+      "score": 0.077,
+      "n_items": 14,
       "n_sources": 4,
       "headlines": [
-        "SEC enforcement actions fall 24%, crypto cases in spotlight",
-        "Stock ETF buyers pounce on dip as Bitcoin funds bleed $1.6 billion",
-        "Governo de Miami-Dade passa a aceitar bitcoin para quitação de impostos imobiliários",
-        "Bitcoin holds steady as CoreWeave earnings revive AI outlook, Anthropic said to raise IPO valuation"
+        "Bitcoin barely flinches at hot CPI as ETF selling slows",
+        "Live news: Bitcoin remains under pressure as CoreWeave, Nvidia lead AI rebound",
+        "Bitcoin Covenants Part 5: MATT and OP_CHECKCONTRACTVERIFY — How Bitcoin could carry state across transactions",
+        "Deutsche Bank launches crypto custody for companies and institutions"
       ],
       "evidence": {
         "ticker": "BTC",
@@ -1351,100 +1052,11 @@
       ]
     },
     {
-      "ticker": "MRVE3",
-      "score": 0.199,
-      "n_items": 1,
-      "n_sources": 1,
-      "headlines": [
-        "Ibovespa e dólar hoje: futuro sobe e moeda cai com possível ajuste fiscal"
-      ],
-      "evidence": {
-        "ticker": "MRVE3",
-        "n_pos": 0,
-        "n_neg": 0,
-        "ret1_after_pos": null,
-        "ret5_after_pos": null,
-        "ret1_after_neg": null,
-        "ret5_after_neg": null
-      },
-      "action": "ignorar",
-      "reasons": [
-        "uma única fonte"
-      ]
-    },
-    {
-      "ticker": "HAPV3",
-      "score": 0.199,
-      "n_items": 1,
-      "n_sources": 1,
-      "headlines": [
-        "Ibovespa e dólar hoje: futuro sobe e moeda cai com possível ajuste fiscal"
-      ],
-      "evidence": {
-        "ticker": "HAPV3",
-        "n_pos": 0,
-        "n_neg": 0,
-        "ret1_after_pos": null,
-        "ret5_after_pos": null,
-        "ret1_after_neg": null,
-        "ret5_after_neg": null
-      },
-      "action": "ignorar",
-      "reasons": [
-        "uma única fonte"
-      ]
-    },
-    {
-      "ticker": "TAEE11",
-      "score": 0.199,
-      "n_items": 1,
-      "n_sources": 1,
-      "headlines": [
-        "Ibovespa e dólar hoje: futuro sobe e moeda cai com possível ajuste fiscal"
-      ],
-      "evidence": {
-        "ticker": "TAEE11",
-        "n_pos": 0,
-        "n_neg": 0,
-        "ret1_after_pos": null,
-        "ret5_after_pos": null,
-        "ret1_after_neg": null,
-        "ret5_after_neg": null
-      },
-      "action": "ignorar",
-      "reasons": [
-        "uma única fonte"
-      ]
-    },
-    {
-      "ticker": "MIDB11",
-      "score": 0.167,
-      "n_items": 1,
-      "n_sources": 1,
-      "headlines": [
-        "ETF de títulos atrelados à inflação de mesmo prazo vira moda. É melhor que Tesouro Direto?"
-      ],
-      "evidence": {
-        "ticker": "MIDB11",
-        "n_pos": 0,
-        "n_neg": 0,
-        "ret1_after_pos": null,
-        "ret5_after_pos": null,
-        "ret1_after_neg": null,
-        "ret5_after_neg": null
-      },
-      "action": "ignorar",
-      "reasons": [
-        "uma única fonte"
-      ]
-    },
-    {
       "ticker": "ETH",
-      "score": 0.152,
-      "n_items": 3,
+      "score": 0.228,
+      "n_items": 2,
       "n_sources": 1,
       "headlines": [
-        "Bitmine posts $6.3B net loss for fiscal 2026 as Ether prices slide",
         "CoreWeave stock jumps 15% premarket after Q3 revenue beats estimates",
         "CoreWeave stock jumps 15% premarket after Q3 revenue beats estimates"
       ],
@@ -1485,51 +1097,6 @@
       ]
     },
     {
-      "ticker": "BBAS3",
-      "score": 0.1,
-      "n_items": 2,
-      "n_sources": 1,
-      "headlines": [
-        "Pacote fiscal de até R$ 80 bi e crise na Nvidia ditam o ritmo do mercado",
-        "Ibovespa e dólar hoje: futuro sobe e moeda cai com possível ajuste fiscal"
-      ],
-      "evidence": {
-        "ticker": "BBAS3",
-        "n_pos": 0,
-        "n_neg": 0,
-        "ret1_after_pos": null,
-        "ret5_after_pos": null,
-        "ret1_after_neg": null,
-        "ret5_after_neg": null
-      },
-      "action": "ignorar",
-      "reasons": [
-        "uma única fonte"
-      ]
-    },
-    {
-      "ticker": "PCAR3",
-      "score": 0.099,
-      "n_items": 1,
-      "n_sources": 1,
-      "headlines": [
-        "GPA (PCAR3) emitirá até R$ 112,9 mi em debêntures como parte de plano de recuperação"
-      ],
-      "evidence": {
-        "ticker": "PCAR3",
-        "n_pos": 0,
-        "n_neg": 0,
-        "ret1_after_pos": null,
-        "ret5_after_pos": null,
-        "ret1_after_neg": null,
-        "ret5_after_neg": null
-      },
-      "action": "ignorar",
-      "reasons": [
-        "uma única fonte"
-      ]
-    },
-    {
       "ticker": "BHIA3",
       "score": -0.025,
       "n_items": 2,
@@ -1562,138 +1129,6 @@
       ],
       "evidence": {
         "ticker": "LINK",
-        "n_pos": 0,
-        "n_neg": 0,
-        "ret1_after_pos": null,
-        "ret5_after_pos": null,
-        "ret1_after_neg": null,
-        "ret5_after_neg": null
-      },
-      "action": "ignorar",
-      "reasons": [
-        "uma única fonte"
-      ]
-    },
-    {
-      "ticker": "VVEO3",
-      "score": 0.0,
-      "n_items": 1,
-      "n_sources": 1,
-      "headlines": [
-        "Viveo (VVEO3) reverte lucro com prejuízo ajustado de R$ 75 mi no 3º trimestre"
-      ],
-      "evidence": {
-        "ticker": "VVEO3",
-        "n_pos": 0,
-        "n_neg": 0,
-        "ret1_after_pos": null,
-        "ret5_after_pos": null,
-        "ret1_after_neg": null,
-        "ret5_after_neg": null
-      },
-      "action": "ignorar",
-      "reasons": [
-        "uma única fonte"
-      ]
-    },
-    {
-      "ticker": "TRBL11",
-      "score": 0.0,
-      "n_items": 1,
-      "n_sources": 1,
-      "headlines": [
-        "Correios cobram R$ 51,6 milhões de fundo imobiliário na Justiça; IFIX aprofunda perdas"
-      ],
-      "evidence": {
-        "ticker": "TRBL11",
-        "n_pos": 0,
-        "n_neg": 0,
-        "ret1_after_pos": null,
-        "ret5_after_pos": null,
-        "ret1_after_neg": null,
-        "ret5_after_neg": null
-      },
-      "action": "ignorar",
-      "reasons": [
-        "uma única fonte"
-      ]
-    },
-    {
-      "ticker": "CSED3",
-      "score": 0.0,
-      "n_items": 1,
-      "n_sources": 1,
-      "headlines": [
-        "Vulcabras (VULC3), Cruzeiro do Sul (CSED3), Armac (ARML3) e mais divulgam balanços"
-      ],
-      "evidence": {
-        "ticker": "CSED3",
-        "n_pos": 0,
-        "n_neg": 0,
-        "ret1_after_pos": null,
-        "ret5_after_pos": null,
-        "ret1_after_neg": null,
-        "ret5_after_neg": null
-      },
-      "action": "ignorar",
-      "reasons": [
-        "uma única fonte"
-      ]
-    },
-    {
-      "ticker": "ARML3",
-      "score": 0.0,
-      "n_items": 1,
-      "n_sources": 1,
-      "headlines": [
-        "Vulcabras (VULC3), Cruzeiro do Sul (CSED3), Armac (ARML3) e mais divulgam balanços"
-      ],
-      "evidence": {
-        "ticker": "ARML3",
-        "n_pos": 0,
-        "n_neg": 0,
-        "ret1_after_pos": null,
-        "ret5_after_pos": null,
-        "ret1_after_neg": null,
-        "ret5_after_neg": null
-      },
-      "action": "ignorar",
-      "reasons": [
-        "uma única fonte"
-      ]
-    },
-    {
-      "ticker": "ESPA3",
-      "score": 0.0,
-      "n_items": 1,
-      "n_sources": 1,
-      "headlines": [
-        "Espaçolaser (ESPA3) anuncia novo CFO; veja quem assume"
-      ],
-      "evidence": {
-        "ticker": "ESPA3",
-        "n_pos": 0,
-        "n_neg": 0,
-        "ret1_after_pos": null,
-        "ret5_after_pos": null,
-        "ret1_after_neg": null,
-        "ret5_after_neg": null
-      },
-      "action": "ignorar",
-      "reasons": [
-        "uma única fonte"
-      ]
-    },
-    {
-      "ticker": "ZAVI11",
-      "score": 0.0,
-      "n_items": 1,
-      "n_sources": 1,
-      "headlines": [
-        "Fundo imobiliário anuncia saída de inquilina de galpão em Guarulhos; ativo representa 16,8% da receita do FII"
-      ],
-      "evidence": {
-        "ticker": "ZAVI11",
         "n_pos": 0,
         "n_neg": 0,
         "ret1_after_pos": null,
@@ -1775,32 +1210,6 @@
   ],
   "manchetes": [
     {
-      "quando": "2026-11-11T11:15:44+00:00",
-      "fonte": "Valor Investe",
-      "mercado": "BR",
-      "titulo": "Petrobras (PETR4), Telefônica (VIVT3), Cury (CURY3) e mais: veja os destaques das empresas",
-      "sentimento": 0.6,
-      "tickers": [
-        "PETR4",
-        "VIVT3",
-        "CURY3",
-        "PETR3",
-        "ENGI11",
-        "IGTI11",
-        "AURE3",
-        "VULC3",
-        "EGIE3",
-        "TASA4",
-        "PINE4",
-        "ASAI3",
-        "FLRY3",
-        "SAUD3",
-        "MOTV3",
-        "PNVL3",
-        "ONCO3"
-      ]
-    },
-    {
       "quando": "2026-11-11T13:06:45+00:00",
       "fonte": "InfoMoney",
       "mercado": "BR",
@@ -1813,14 +1222,6 @@
       "fonte": "Money Times",
       "mercado": "BR",
       "titulo": "Ibovespa sobe com alta do petróleo e ajuste fiscal; 5 coisas para saber antes de investir hoje (11)",
-      "sentimento": 0.47,
-      "tickers": []
-    },
-    {
-      "quando": "2026-11-11T08:29:31+00:00",
-      "fonte": "Bloomberg (via Google News)",
-      "mercado": "global",
-      "titulo": "European Stocks Set for Record as Miners and Tech Rally - Bloomberg.com",
       "sentimento": 0.47,
       "tickers": []
     },
@@ -1844,40 +1245,12 @@
       ]
     },
     {
-      "quando": "2026-11-11T10:47:51+00:00",
-      "fonte": "InfoMoney",
-      "mercado": "BR",
-      "titulo": "Petrobras tem lucro forte, mas capex e provento frustram: o que mercado achou do 3T?",
-      "sentimento": 0.42,
-      "tickers": []
-    },
-    {
       "quando": "2026-11-11T13:06:00+00:00",
       "fonte": "MarketWatch",
       "mercado": "US",
       "titulo": "22 stocks of companies with tremendous sales growth",
       "sentimento": 0.41,
       "tickers": []
-    },
-    {
-      "quando": "2026-11-11T10:55:25+00:00",
-      "fonte": "Money Times",
-      "mercado": "BR",
-      "titulo": "Lucro do Banco Pine (PINE4) salta para R$ 185,2 milhões no 3T26",
-      "sentimento": 0.38,
-      "tickers": [
-        "PINE4"
-      ]
-    },
-    {
-      "quando": "2026-11-11T09:23:00+00:00",
-      "fonte": "Money Times",
-      "mercado": "BR",
-      "titulo": "Energisa (ENGI11) tem lucro líquido consolidado de R$ 951 milhões no 3º trimestre, alta de 47%",
-      "sentimento": 0.38,
-      "tickers": [
-        "ENGI11"
-      ]
     },
     {
       "quando": "2026-11-11T12:48:18+00:00",
@@ -1900,27 +1273,11 @@
       "tickers": []
     },
     {
-      "quando": "2026-11-11T11:30:57+00:00",
-      "fonte": "Valor Investe",
-      "mercado": "BR",
-      "titulo": "Cury (CURY) pagará R$ 200 milhões em dividendos; veja quem recebe e quando",
-      "sentimento": 0.31,
-      "tickers": []
-    },
-    {
       "quando": "2026-11-11T13:09:00+00:00",
       "fonte": "Google News: petróleo e minério",
       "mercado": "commodities",
       "titulo": "OPEC: Global GDP growth forecast up slightly - Breakingthenews.net",
       "sentimento": 0.26,
-      "tickers": []
-    },
-    {
-      "quando": "2026-11-11T10:01:11+00:00",
-      "fonte": "Google News: petróleo e minério",
-      "mercado": "commodities",
-      "titulo": "Mastodon Pushes Back Against Lawsuit Filed by Late Guitarist Brent Hinds’ Estate - CelebrityAccess",
-      "sentimento": -0.26,
       "tickers": []
     },
     {
@@ -1940,43 +1297,11 @@
       "tickers": []
     },
     {
-      "quando": "2026-11-11T11:35:28+00:00",
-      "fonte": "Money Times",
-      "mercado": "BR",
-      "titulo": "TSE aplica multa de R$ 7,5 milhões à Meta por descumprir ordens durante campanha presidencial",
-      "sentimento": -0.25,
-      "tickers": []
-    },
-    {
       "quando": "2026-11-11T12:21:00+00:00",
       "fonte": "Google News Brasil: mercado",
       "mercado": "BR",
       "titulo": "Dólar ameniza queda dos preços do café no Brasil - Agrolink",
       "sentimento": -0.24,
-      "tickers": []
-    },
-    {
-      "quando": "2026-11-11T11:49:09+00:00",
-      "fonte": "Money Times",
-      "mercado": "BR",
-      "titulo": "Balanço da CoreWeave anima mercado de semicondutores e ações saltam 13%; veja os melhores números",
-      "sentimento": 0.24,
-      "tickers": []
-    },
-    {
-      "quando": "2026-11-11T11:11:22+00:00",
-      "fonte": "Bloomberg (via Google News)",
-      "mercado": "global",
-      "titulo": "China Gauges Bond Interest Tax, With Yields Near Record Low - Bloomberg.com",
-      "sentimento": 0.24,
-      "tickers": []
-    },
-    {
-      "quando": "2026-11-11T12:06:15+00:00",
-      "fonte": "Bloomberg (via Google News)",
-      "mercado": "global",
-      "titulo": "Euro-Pound Options Turn Bullish as Traders Bet on Bigger Rebound - Bloomberg.com",
-      "sentimento": 0.24,
       "tickers": []
     },
     {
@@ -1988,20 +1313,116 @@
       "tickers": []
     },
     {
-      "quando": "2026-11-11T08:04:24+00:00",
-      "fonte": "Bloomberg (via Google News)",
-      "mercado": "global",
-      "titulo": "Korea Fines Bond Dealers Record $1.2 Billion Over Collusion - Bloomberg.com",
+      "quando": "2026-11-11T12:33:34+00:00",
+      "fonte": "Google News Brasil: mercado",
+      "mercado": "BR",
+      "titulo": "Dólar abre em queda com pauta fiscal no radar do mercado - CNN Brasil",
+      "sentimento": -0.23,
+      "tickers": []
+    },
+    {
+      "quando": "2026-11-11T20:00:00+00:00",
+      "fonte": "Google News Brasil: mercado",
+      "mercado": "BR",
+      "titulo": "“É preciso defender o óbvio”: Galípolo descarta guidance para a Selic e rejeita “inventar” no BC - NeoFeed",
       "sentimento": 0.23,
       "tickers": []
     },
     {
-      "quando": "2026-11-11T08:00:00+00:00",
-      "fonte": "Google News Brasil: mercado",
-      "mercado": "BR",
-      "titulo": "Dólar nas alturas, juros em alta e mais imposto. Senado prepara bomba contra família - Gazeta do Povo",
+      "quando": "2026-11-11T13:02:30+00:00",
+      "fonte": "Cointelegraph",
+      "mercado": "cripto",
+      "titulo": "CoreWeave stock jumps 15% premarket after Q3 revenue beats estimates",
+      "sentimento": 0.23,
+      "tickers": [
+        "ETH"
+      ]
+    },
+    {
+      "quando": "2026-11-11T13:02:30+00:00",
+      "fonte": "Cointelegraph",
+      "mercado": "cripto",
+      "titulo": "CoreWeave stock jumps 15% premarket after Q3 revenue beats estimates",
+      "sentimento": 0.23,
+      "tickers": [
+        "ETH"
+      ]
+    },
+    {
+      "quando": "2026-11-11T17:00:55+00:00",
+      "fonte": "Google News: petróleo e minério",
+      "mercado": "commodities",
+      "titulo": "Brent Venables' Hot Seat Addressed by Oklahoma's Board of Regents amid 5-4 Record - Bleacher Report",
       "sentimento": 0.23,
       "tickers": []
+    },
+    {
+      "quando": "2026-11-11T17:34:34+00:00",
+      "fonte": "Google News Brasil: mercado",
+      "mercado": "BR",
+      "titulo": "O “dólar brasileiro” como alternativa à Selic elevada e à venda de reservas internacionais - Diplomatique",
+      "sentimento": -0.22,
+      "tickers": []
+    },
+    {
+      "quando": "2026-11-11T15:33:00+00:00",
+      "fonte": "Reuters Business (via Google News)",
+      "mercado": "global",
+      "titulo": "CoreWeave sparks AI cloud stock rally, lifts Nvidia as results ease bubble fears - Reuters",
+      "sentimento": 0.22,
+      "tickers": []
+    },
+    {
+      "quando": "2026-11-11T12:44:00+00:00",
+      "fonte": "Google News Brasil: mercado",
+      "mercado": "BR",
+      "titulo": "Dólar abre em queda com plano de ajuste fiscal do governo Lula no radar - Folha de S.Paulo",
+      "sentimento": -0.21,
+      "tickers": []
+    },
+    {
+      "quando": "2026-11-11T16:03:26+00:00",
+      "fonte": "Livecoins",
+      "mercado": "cripto",
+      "titulo": "Cripto recua 9,1% em outubro, sob pressão macroeconômica, segundo Binance Research",
+      "sentimento": 0.21,
+      "tickers": [
+        "BTC"
+      ]
+    },
+    {
+      "quando": "2026-11-11T14:42:05+00:00",
+      "fonte": "Google News Brasil: mercado",
+      "mercado": "BR",
+      "titulo": "Ibovespa sobe com exterior e noticiário fiscal e corporativo – apesar de Petrobras - InfoMoney",
+      "sentimento": 0.19,
+      "tickers": []
+    },
+    {
+      "quando": "2026-11-11T19:30:27+00:00",
+      "fonte": "Google News Brasil: mercado",
+      "mercado": "BR",
+      "titulo": "Galípolo diz que BC foi até uma Selic alta e 'trincou os dentes' - Valor Econômico",
+      "sentimento": 0.18,
+      "tickers": []
+    },
+    {
+      "quando": "2026-11-11T20:46:31+00:00",
+      "fonte": "Google News Brasil: mercado",
+      "mercado": "BR",
+      "titulo": "Verde reduz posição em ações locais e compra dólar após eleição: ‘Não há boas notícias’ - Valor Econômico",
+      "sentimento": 0.18,
+      "tickers": []
+    },
+    {
+      "quando": "2026-11-11T17:44:28+00:00",
+      "fonte": "Livecoins",
+      "mercado": "cripto",
+      "titulo": "“Todo mundo será hackeado em algum momento”, diz CEO da Ledger",
+      "sentimento": 0.15,
+      "tickers": [
+        "BTC"
+      ]
     }
   ]
 }

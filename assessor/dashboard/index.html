@@ -41,8 +41,9 @@ details summary{cursor:pointer;color:var(--acc);font-size:13px;list-style:none}d
   <h1>Mesa de Operações</h1>
   <small id="when">carregando…</small>
   <nav><a href="#ordens">Ordens</a><a href="#curtas">Curtas</a><a href="#calendario">Calendário</a><a href="#carteira">Carteira</a><a href="#madrugada">Madrugada</a><a href="#noticias">Notícias</a><a href="#boiada">Boiada</a><a href="#influ">Influenciadores</a></nav>
-  <input id="src" placeholder="URL do dashboard-data.json" title="Fonte dos dados">
-  <button id="reload">Atualizar</button>
+  <input id="src" placeholder="URL do dashboard-data.json" title="Fonte dos dados" style="display:none">
+  <button id="reload" title="Busca os dados mais recentes gerados pela coleta">⟳ Atualizar informações</button>
+  <span id="msg" class="mut" style="font-size:12px"></span>
 </header>
 <div id="stamp" style="padding:8px 16px;font-size:13px;border-bottom:1px solid var(--line);background:var(--soft)"></div>
 <main>
@@ -199,17 +200,42 @@ function renderNews() {
 }
 $('#cf').addEventListener('click', e => { if (e.target.dataset.f) { CFILTER = e.target.dataset.f; [...$('#cf').children].forEach(b => b.classList.toggle('on', b.dataset.f === CFILTER)); renderCal(); } });
 $('#nf').addEventListener('click', e => { if (e.target.dataset.f) { FILTER = e.target.dataset.f; [...$('#nf').children].forEach(b => b.classList.toggle('on', b.dataset.f === FILTER)); renderNews(); } });
-async function load() {
+const RAW_SRC = 'https://raw.githubusercontent.com/pozzobon-christian/vestibular_enen/claude/investment-advisor-stocks-crypto-ld7ink/assessor/data/dashboard-data.json';
+let EMBEDDED = null;
+function renderEmbedded() {
   const emb = document.getElementById('data');
-  if (emb && emb.textContent.trim()) { try { render(JSON.parse(emb.textContent)); $('#src').style.display = 'none'; $('#reload').style.display = 'none'; return; } catch (e) {} }
-  const src = $('#src').value || DEFAULT_SRC;
-  try { localStorage.setItem('src', src); } catch (e) {}
-  $('#when').textContent = 'carregando…';
-  try { const r = await fetch(src + (src.includes('?') ? '&' : '?') + 't=' + Date.now(), {cache: 'no-store'}); if (!r.ok) throw new Error(r.status); render(await r.json()); }
-  catch (e) { $('#when').textContent = 'falha ao carregar: ' + e.message; }
+  if (emb && emb.textContent.trim()) { try { EMBEDDED = JSON.parse(emb.textContent); render(EMBEDDED); return true; } catch (e) {} }
+  return false;
 }
-try { $('#src').value = localStorage.getItem('src') || DEFAULT_SRC; } catch (e) { $('#src').value = DEFAULT_SRC; }
-$('#reload').onclick = load; load(); setInterval(load, 10 * 60 * 1000);
+async function fetchLatest(src) {
+  const r = await fetch(src + (src.includes('?') ? '&' : '?') + 't=' + Date.now(), {cache: 'no-store'});
+  if (!r.ok) throw new Error('HTTP ' + r.status);
+  return r.json();
+}
+async function load(manual) {
+  const msg = $('#msg');
+  msg.textContent = 'buscando dados mais recentes…';
+  const candidates = [$('#src').value, DEFAULT_SRC, RAW_SRC].filter(Boolean);
+  let lastErr = null;
+  for (const src of candidates) {
+    try {
+      const data = await fetchLatest(src);
+      const newer = !EMBEDDED || !EMBEDDED.gerado_em || new Date(data.gerado_em) >= new Date(EMBEDDED.gerado_em);
+      if (newer) { render(data); msg.textContent = 'dados atualizados ' + whenFull(data.gerado_em); try { localStorage.setItem('src', src); } catch (e) {} return; }
+      lastErr = new Error('a cópia disponível é mais antiga que a embutida');
+    } catch (e) { lastErr = e; }
+  }
+  if (EMBEDDED) {
+    render(EMBEDDED);
+    msg.textContent = (manual ? 'não foi possível buscar dados novos daqui (' + (lastErr ? lastErr.message : 'bloqueado') + '). ' : '') + 'Mostrando os dados embutidos de ' + whenFull(EMBEDDED.gerado_em) + '. Para forçar uma coleta agora, peça ao assessor "atualiza o painel".';
+  } else {
+    $('#when').textContent = 'falha ao carregar: ' + (lastErr ? lastErr.message : 'sem fonte');
+    msg.textContent = '';
+  }
+}
+try { $('#src').value = localStorage.getItem('src') || ''; } catch (e) { $('#src').value = ''; }
+$('#reload').onclick = () => load(true);
+renderEmbedded(); load(false); setInterval(() => load(false), 10 * 60 * 1000);
 </script>
 </body>
 </html>
