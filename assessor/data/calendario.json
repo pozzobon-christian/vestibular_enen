@@ -1,52 +1,5 @@
 [
   {
-    "data": "2026-11-11",
-    "hora_brt": "",
-    "evento": "Resultado trimestral: BBAS3",
-    "fonte": "RI / CVM / SEC",
-    "categoria": "empresas",
-    "ativos": [
-      "BBAS3"
-    ],
-    "impacto": "alto",
-    "o_que_esperar": "Maior movimento do trimestre no ativo; vol implícita alta antes, crush depois.",
-    "preparacao": "Nunca atravessar resultado alavancado; posição normal só com stop; ler release e call.",
-    "confirmar": true
-  },
-  {
-    "data": "2026-11-11",
-    "hora_brt": "09:00",
-    "evento": "Levantamento de safra (Conab)",
-    "fonte": "Conab",
-    "categoria": "commodities",
-    "ativos": [
-      "SLCE3",
-      "SMTO3",
-      "BRL=X"
-    ],
-    "impacto": "baixo",
-    "o_que_esperar": "Estimativa de produção de grãos.",
-    "preparacao": "Observar para agro.",
-    "confirmar": true
-  },
-  {
-    "data": "2026-11-11",
-    "hora_brt": "12:30",
-    "evento": "Estoques de petróleo dos EUA (EIA)",
-    "fonte": "EIA",
-    "categoria": "commodities",
-    "ativos": [
-      "PETR4",
-      "PRIO3",
-      "CL=F",
-      "BZ=F"
-    ],
-    "impacto": "medio",
-    "o_que_esperar": "Queda de estoque acima do esperado = petróleo sobe.",
-    "preparacao": "Evitar abrir petróleo 30 min antes.",
-    "confirmar": false
-  },
-  {
     "data": "2026-11-12",
     "hora_brt": "",
     "evento": "Boletim ENSO (El Niño / La Niña)",
@@ -559,6 +512,21 @@
     "impacto": "medio",
     "o_que_esperar": "Queda de estoque acima do esperado = petróleo sobe.",
     "preparacao": "Evitar abrir petróleo 30 min antes.",
+    "confirmar": false
+  },
+  {
+    "data": "2026-12-17",
+    "hora_brt": "10:30",
+    "evento": "Pedidos de seguro-desemprego dos EUA",
+    "fonte": "Dept. of Labor",
+    "categoria": "macro_us",
+    "ativos": [
+      "SPY",
+      "QQQ"
+    ],
+    "impacto": "baixo",
+    "o_que_esperar": "Surpresas grandes mexem com Treasury e dólar.",
+    "preparacao": "Só observar.",
     "confirmar": false
   }
 ]
