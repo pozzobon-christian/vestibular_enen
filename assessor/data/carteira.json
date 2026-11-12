@@ -15,11 +15,11 @@
       "mercado": "BR",
       "lado": "buy",
       "quantidade": 2,
-      "preco_ref": 51.58,
-      "limite_max_abertura": 53.1,
+      "preco_ref": 51.61,
+      "limite_max_abertura": 53.15,
       "stop": 47.0,
-      "risco_brl": 9.16,
-      "valor_brl": 103.16,
+      "risco_brl": 9.22,
+      "valor_brl": 103.22,
       "porque": "Única ação da lista em tendência de alta num mercado em queda: preço acima das médias de 50 e 200 dias, subiu 24% em 20 dias enquanto o Ibovespa caiu 16%. Empresa global, de motores e automação, com histórico de retorno alto e dívida baixa. Compramos força relativa, não barganha.",
       "passo_a_passo": [
         "Abra o app do BTG e entre em Investimentos > Renda variável > Home broker.",
@@ -31,13 +31,14 @@
         "Anote preço pago e taxa (deve ser zero de corretagem; emolumentos de centavos) e me envie para registro."
       ],
       "proximo_movimento": "Se o preço fechar acima de R$ 55, subo o stop para R$ 51 (custo). Se fechar abaixo de R$ 47, o stop vende sozinho e a tese termina; não recomprar por 10 dias. Sem alvo fixo: seguimos a tendência enquanto ela durar.",
-      "alvo_preco": 60.74,
-      "alvo_regra": "2x o risco (R$ 4,58 por ação) acima da entrada; depois stop móvel",
-      "ganho_possivel_brl": 18.32,
-      "ganho_possivel_pct": 0.1776,
-      "risco_pct": -0.0888,
+      "alvo_preco": 60.83,
+      "alvo_regra": "2x o risco (R$ 4,61 por ação) acima da entrada; depois stop móvel",
+      "ganho_possivel_brl": 18.44,
+      "ganho_possivel_pct": 0.1786,
+      "risco_pct": -0.0893,
       "razao_ganho_risco": 2.0,
-      "prazo_esperado": "2 a 6 semanas para o alvo de R$ 60,74; se a tendência seguir, a posição fica aberta com stop móvel"
+      "prazo_esperado": "2 a 6 semanas para o alvo de R$ 60,83; se a tendência seguir, a posição fica aberta com stop móvel",
+      "condicao": "abertura ≤ R$ 53,15; executar após 10h15; futuros dos EUA em queda na madrugada: se a B3 abrir em queda forte (BOVA11 < -1%), esperar a 2ª hora"
     },
     {
       "data": "2026-11-12",
@@ -65,7 +66,9 @@
       "ganho_possivel_pct": 0.2,
       "risco_pct": -0.1,
       "razao_ganho_risco": 2.0,
-      "prazo_esperado": "4 a 12 semanas para +20% sobre o preço médio da grade; a grade completa leva 1 a 3 semanas"
+      "prazo_esperado": "4 a 12 semanas para +20% sobre o preço médio da grade; a grade completa leva 1 a 3 semanas",
+      "preco_ref_usd": 73974,
+      "preco_ref_brl": 412775
     },
     {
       "data": "aguardando gatilho",
