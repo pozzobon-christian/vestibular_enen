@@ -9,17 +9,17 @@
   "trades": [],
   "ordens_planejadas": [
     {
-      "data": "2026-11-13",
+      "data": "2026-11-16",
       "conta": "BTG",
       "ticker": "WEGE3",
       "mercado": "BR",
       "lado": "buy",
       "quantidade": 2,
-      "preco_ref": 51.65,
-      "limite_max_abertura": 53.2,
+      "preco_ref": 51.35,
+      "limite_max_abertura": 52.9,
       "stop": 47.0,
-      "risco_brl": 9.3,
-      "valor_brl": 103.3,
+      "risco_brl": 8.7,
+      "valor_brl": 102.7,
       "porque": "Única ação da lista em tendência de alta num mercado em queda: preço acima das médias de 50 e 200 dias, subiu 24% em 20 dias enquanto o Ibovespa caiu 16%. Empresa global, de motores e automação, com histórico de retorno alto e dívida baixa. Compramos força relativa, não barganha.",
       "passo_a_passo": [
         "Abra o app do BTG e entre em Investimentos > Renda variável > Home broker.",
@@ -31,17 +31,17 @@
         "Anote preço pago e taxa (deve ser zero de corretagem; emolumentos de centavos) e me envie para registro."
       ],
       "proximo_movimento": "Se o preço fechar acima de R$ 55, subo o stop para R$ 51 (custo). Se fechar abaixo de R$ 47, o stop vende sozinho e a tese termina; não recomprar por 10 dias. Sem alvo fixo: seguimos a tendência enquanto ela durar.",
-      "alvo_preco": 60.95,
-      "alvo_regra": "2x o risco (R$ 4,65 por ação) acima da entrada; depois stop móvel",
-      "ganho_possivel_brl": 18.6,
-      "ganho_possivel_pct": 0.1801,
-      "risco_pct": -0.09,
+      "alvo_preco": 60.05,
+      "alvo_regra": "2x o risco (R$ 4,35 por ação) acima da entrada; depois stop móvel",
+      "ganho_possivel_brl": 17.4,
+      "ganho_possivel_pct": 0.1694,
+      "risco_pct": -0.0847,
       "razao_ganho_risco": 2.0,
-      "prazo_esperado": "2 a 6 semanas para o alvo de R$ 60,95; se a tendência seguir, a posição fica aberta com stop móvel",
-      "condicao": "abertura ≤ R$ 53,20; CPI dos EUA às 10h30 (impacto alto): executar só após 11h00 e se BOVA11 não estiver abaixo de -1%"
+      "prazo_esperado": "2 a 6 semanas para o alvo de R$ 60,05; se a tendência seguir, a posição fica aberta com stop móvel",
+      "condicao": "abertura ≤ R$ 52,90; após 10h15; Focus às 8h25 não bloqueia"
     },
     {
-      "data": "2026-11-13",
+      "data": "2026-11-16",
       "conta": "Foxbit",
       "ticker": "BTC",
       "mercado": "cripto",
@@ -68,8 +68,8 @@
       "razao_ganho_risco": 2.0,
       "prazo_esperado": "4 a 12 semanas para +20% sobre o preço médio da grade; a grade completa leva 1 a 3 semanas",
       "preco_ref_usd": 71372,
-      "preco_ref_brl": 402538,
-      "condicao": "fora da janela 10h00-11h00 (CPI dos EUA); BTC caiu 3,5% na madrugada: a grade compra assim mesmo, é a 1ª parcela"
+      "preco_ref_brl": 403966,
+      "condicao": "fim de semana sem ordem (regra: cripto no fim de semana só com lucro retido); segunda a qualquer hora"
     },
     {
       "data": "aguardando gatilho",
