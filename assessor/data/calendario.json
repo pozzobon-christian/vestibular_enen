@@ -1,37 +1,5 @@
 [
   {
-    "data": "2026-11-12",
-    "hora_brt": "",
-    "evento": "Boletim ENSO (El Niño / La Niña)",
-    "fonte": "NOAA",
-    "categoria": "clima",
-    "ativos": [
-      "SLCE3",
-      "SMTO3",
-      "ZS=F",
-      "ELET3"
-    ],
-    "impacto": "baixo",
-    "o_que_esperar": "La Niña = seca no Sul e chuva no Norte; afeta safra e hidrelétricas.",
-    "preparacao": "Agro e energia em prazo de meses.",
-    "confirmar": false
-  },
-  {
-    "data": "2026-11-12",
-    "hora_brt": "10:30",
-    "evento": "Pedidos de seguro-desemprego dos EUA",
-    "fonte": "Dept. of Labor",
-    "categoria": "macro_us",
-    "ativos": [
-      "SPY",
-      "QQQ"
-    ],
-    "impacto": "baixo",
-    "o_que_esperar": "Surpresas grandes mexem com Treasury e dólar.",
-    "preparacao": "Só observar.",
-    "confirmar": false
-  },
-  {
     "data": "2026-11-13",
     "hora_brt": "10:30",
     "evento": "CPI (inflação dos EUA)",
@@ -527,6 +495,24 @@
     "impacto": "baixo",
     "o_que_esperar": "Surpresas grandes mexem com Treasury e dólar.",
     "preparacao": "Só observar.",
+    "confirmar": false
+  },
+  {
+    "data": "2026-12-18",
+    "hora_brt": "",
+    "evento": "Vencimento mensal de opções (B3 e EUA, 3ª sexta)",
+    "fonte": "B3 / CBOE",
+    "categoria": "mercado",
+    "ativos": [
+      "PETR4",
+      "VALE3",
+      "BOVA11",
+      "SPY",
+      "NVDA"
+    ],
+    "impacto": "medio",
+    "o_que_esperar": "Gamma alto: preço gravita para strikes com mais aberto; volatilidade na última hora.",
+    "preparacao": "Não iniciar swing no dia; stops mais largos ou ficar fora.",
     "confirmar": false
   }
 ]
