@@ -41,7 +41,7 @@
       "condicao": "abertura ≤ R$ 53,20; CPI dos EUA às 10h30 (impacto alto): executar só após 11h00 e se BOVA11 não estiver abaixo de -1%"
     },
     {
-      "data": "2026-11-13 (ou hoje à noite)",
+      "data": "2026-11-13",
       "conta": "Foxbit",
       "ticker": "BTC",
       "mercado": "cripto",
@@ -49,7 +49,7 @@
       "valor_brl": 50,
       "stop_pct": -0.1,
       "risco_brl": 5.0,
-      "porque": "Bitcoin na mínima de 20 dias (queda de 9% desde US$ 81 mil), RSI 34, detentores de curto prazo vendendo no prejuízo e saída de US$ 1,6 bi dos ETFs. Momentos de capitulação costumam ser boas entradas em grade, mas o fundo não é conhecido: por isso só a primeira de três parcelas.",
+      "porque": "Bitcoin fez nova mínima (US$ 71.372, -3,5% na madrugada; IBIT -4,5%), RSI abaixo de 35, saída de ETFs e detentores de curto prazo vendendo. A grade existe para isso: 1ª parcela pequena agora, 2ª em 18/11, 3ª só 10% abaixo desta compra. Fechamento semanal abaixo de US$ 65 mil cancela a 3ª.",
       "passo_a_passo": [
         "Abra o app da Foxbit, confirme que o Pix de R$ 150 entrou em 'Saldo em reais'.",
         "Vá em Negociar (ou Comprar) e escolha BTC/BRL.",
@@ -67,9 +67,9 @@
       "risco_pct": -0.1,
       "razao_ganho_risco": 2.0,
       "prazo_esperado": "4 a 12 semanas para +20% sobre o preço médio da grade; a grade completa leva 1 a 3 semanas",
-      "preco_ref_usd": 73974,
-      "preco_ref_brl": 417213,
-      "condicao": "evitar entre 10h00 e 11h00 de sexta (CPI dos EUA); o restante do dia e a noite valem"
+      "preco_ref_usd": 71372,
+      "preco_ref_brl": 402538,
+      "condicao": "fora da janela 10h00-11h00 (CPI dos EUA); BTC caiu 3,5% na madrugada: a grade compra assim mesmo, é a 1ª parcela"
     },
     {
       "data": "aguardando gatilho",
