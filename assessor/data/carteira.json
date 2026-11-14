@@ -49,7 +49,7 @@
       "valor_brl": 50,
       "stop_pct": -0.1,
       "risco_brl": 5.0,
-      "porque": "Bitcoin fez nova mínima (US$ 71.372, -3,5% na madrugada; IBIT -4,5%), RSI abaixo de 35, saída de ETFs e detentores de curto prazo vendendo. A grade existe para isso: 1ª parcela pequena agora, 2ª em 18/11, 3ª só 10% abaixo desta compra. Fechamento semanal abaixo de US$ 65 mil cancela a 3ª.",
+      "porque": "Bitcoin em US$ 68.314, -9,9% em 7 dias, abaixo de US$ 70 mil pela 1ª vez desde agosto; ETFs com saída; MSTR -22% e COIN -16% na semana. Capitulação em curso; a grade compra a 1ª parcela pequena na segunda. Fechamento semanal ficou acima de US$ 65 mil, então a 3ª parcela segue válida. Fim de semana sem ordem: regra de cripto só com lucro retido.",
       "passo_a_passo": [
         "Abra o app da Foxbit, confirme que o Pix de R$ 150 entrou em 'Saldo em reais'.",
         "Vá em Negociar (ou Comprar) e escolha BTC/BRL.",
@@ -67,8 +67,8 @@
       "risco_pct": -0.1,
       "razao_ganho_risco": 2.0,
       "prazo_esperado": "4 a 12 semanas para +20% sobre o preço médio da grade; a grade completa leva 1 a 3 semanas",
-      "preco_ref_usd": 71372,
-      "preco_ref_brl": 403966,
+      "preco_ref_usd": 68314,
+      "preco_ref_brl": 385291,
       "condicao": "fim de semana sem ordem (regra: cripto no fim de semana só com lucro retido); segunda a qualquer hora"
     },
     {
