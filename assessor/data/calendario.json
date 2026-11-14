@@ -1,23 +1,5 @@
 [
   {
-    "data": "2026-11-13",
-    "hora_brt": "10:30",
-    "evento": "CPI (inflação dos EUA)",
-    "fonte": "BLS",
-    "categoria": "macro_us",
-    "ativos": [
-      "SPY",
-      "QQQ",
-      "NVDA",
-      "BTC",
-      "GC=F"
-    ],
-    "impacto": "alto",
-    "o_que_esperar": "Acima do esperado = Treasury sobe = tudo cai, cripto mais.",
-    "preparacao": "Reduzir cripto na véspera; esperar 10h35.",
-    "confirmar": true
-  },
-  {
     "data": "2026-11-15",
     "hora_brt": "",
     "evento": "Cúpula do G20 (Líderes)",
