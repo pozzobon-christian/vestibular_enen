@@ -9,7 +9,7 @@
   "trades": [],
   "ordens_planejadas": [
     {
-      "data": "2026-11-16",
+      "data": "em observação (bloqueada pelo porteiro)",
       "conta": "BTG",
       "ticker": "WEGE3",
       "mercado": "BR",
@@ -20,7 +20,7 @@
       "stop": 47.0,
       "risco_brl": 8.62,
       "valor_brl": 102.62,
-      "porque": "Única ação da lista em tendência de alta num mercado em queda: preço acima das médias de 50 e 200 dias, subiu 24% em 20 dias enquanto o Ibovespa caiu 16%. Empresa global, de motores e automação, com histórico de retorno alto e dívida baixa. Compramos força relativa, não barganha.",
+      "porque": "A leitura de 'alta' vinha só das médias de 50 e 200 dias. O motor de tendência (regressão de 60 dias) diz baixa fraca (t-stat -2,4, ADX 18 = lateral), o balanço tem score 59 (limite é 60) e não há rompimento intradiário. Zero camadas a favor: pelo porteiro, não entra. Fica na lista de observação.",
       "passo_a_passo": [
         "Abra o app do BTG e entre em Investimentos > Renda variável > Home broker.",
         "Na busca, digite WEGE3F (o F é o mercado fracionário, que permite comprar 1 ação por vez).",
@@ -38,7 +38,7 @@
       "risco_pct": -0.084,
       "razao_ganho_risco": 2.0,
       "prazo_esperado": "2 a 6 semanas para o alvo de R$ 59,93; se a tendência seguir, a posição fica aberta com stop móvel",
-      "condicao": "abertura ≤ R$ 52,90; após 10h15; Focus às 8h25 não bloqueia",
+      "condicao": "volta a ser ordem quando: regressão de 60 dias deixar de ser negativa (t-stat > -1) OU estabilização (fechamento acima da máxima de 3 dias e da média de 5) E 2 camadas a favor",
       "porteiro": {
         "aprovada": false,
         "motivos": [],
@@ -60,7 +60,7 @@
       }
     },
     {
-      "data": "2026-11-16 (condicional)",
+      "data": "suspensa (bloqueada pelo porteiro)",
       "conta": "Foxbit",
       "ticker": "BTC",
       "mercado": "cripto",
@@ -88,7 +88,7 @@
       "prazo_esperado": "4 a 12 semanas para +20% sobre o preço médio da grade; a grade completa leva 1 a 3 semanas",
       "preco_ref_usd": 65305,
       "preco_ref_brl": 370279,
-      "condicao": "SÓ se BTC estiver acima de US$ 65.000 às 10h de segunda e não tiver feito nova mínima nas 12h anteriores; abaixo disso a grade inteira é suspensa e reavaliada",
+      "condicao": "grade volta quando houver estabilização (fechamento acima da máxima de 3 dias e da média de 5) E composto de risco cripto deixar de ser negativo (IBIT, COIN/MSTR, mínima de 20d)",
       "porteiro": {
         "aprovada": false,
         "motivos": [
@@ -114,7 +114,7 @@
       }
     },
     {
-      "data": "2026-11-16 (alternativa)",
+      "data": "2026-11-16",
       "conta": "BTG",
       "ticker": "PETR4",
       "mercado": "BR",
@@ -130,9 +130,9 @@
       "ganho_possivel_brl": 8.52,
       "ganho_possivel_pct": 0.094,
       "razao_ganho_risco": 2.0,
-      "prazo_esperado": "1 a 5 pregões (operação curta); se virar tendência, stop móvel",
+      "prazo_esperado": "1 a 5 pregões; se virar tendência, stop móvel",
       "alvo_regra": "2x ATR (R$ 2,13) acima; stop 1x ATR abaixo",
-      "condicao": "entra no lugar do BTC se a grade de cripto for suspensa; abertura ≤ R$ 46,20; após 10h15; Brent não pode estar abaixo de US$ 93",
+      "condicao": "abertura ≤ R$ 46,20; após 10h15; Brent ≥ US$ 93; única ordem do dia",
       "porque": "Cruzamento com 3 camadas a favor: balanço score 97 após lucro de R$ 39,7 bi (P/L 2,3), tendência de alta e rompimento da faixa de abertura na sexta. Brent a US$ 95 com tensão EUA-Irã. Contra: regime defensivo e volume fraco na sexta (0,44x), por isso só 2 ações e prazo curto.",
       "passo_a_passo": [
         "Home broker do BTG > buscar PETR4F (fracionário).",
@@ -161,7 +161,7 @@
       }
     },
     {
-      "data": "aguardando gatilho",
+      "data": "em observação (bloqueada pelo porteiro)",
       "conta": "BTG",
       "ticker": "MXRF11",
       "mercado": "BR",
@@ -211,7 +211,7 @@
       }
     },
     {
-      "data": "7 dias após a 1ª parcela",
+      "data": "suspensa (bloqueada pelo porteiro)",
       "conta": "Foxbit",
       "ticker": "BTC",
       "mercado": "cripto",
@@ -252,7 +252,8 @@
         },
         "tendencia": "baixa 85",
         "ultimo": 65305.281
-      }
+      },
+      "condicao": "grade volta quando houver estabilização (fechamento acima da máxima de 3 dias e da média de 5) E composto de risco cripto deixar de ser negativo (IBIT, COIN/MSTR, mínima de 20d)"
     }
   ]
 }
