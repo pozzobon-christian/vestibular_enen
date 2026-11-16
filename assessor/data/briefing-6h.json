@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-11-16T02:52:30.229812+00:00",
+  "gerado_em": "2026-11-16T03:53:06.203686+00:00",
   "janela_horas": 14.0,
   "regime": {
     "BOVA11": {
@@ -939,11 +939,10 @@
   "sinais_de_noticia": [
     {
       "ticker": "BTC",
-      "score": -0.05,
-      "n_items": 4,
-      "n_sources": 3,
+      "score": -0.024,
+      "n_items": 3,
+      "n_sources": 2,
       "headlines": [
-        "Bitcoin recua neste domingo (15) e acumula perdas na semana; veja os preços das criptomoedas",
         "Dia do Joalheiro: Programa SP Produz reconhece cadeias produtivas do setor que movimenta a economia",
         "US sellers drive Bitcoin crash, Jensen plots Nvidia comeback: Hodler’s Digest",
         "Luxor CEO warns of AI ‘dark forest’ after Bitcoin miner hijack"
@@ -960,28 +959,6 @@
       "action": "ignorar",
       "reasons": [
         "sentimento fraco"
-      ]
-    },
-    {
-      "ticker": "ETH",
-      "score": -0.126,
-      "n_items": 1,
-      "n_sources": 1,
-      "headlines": [
-        "Bitcoin recua neste domingo (15) e acumula perdas na semana; veja os preços das criptomoedas"
-      ],
-      "evidence": {
-        "ticker": "ETH",
-        "n_pos": 0,
-        "n_neg": 1,
-        "ret1_after_pos": null,
-        "ret5_after_pos": null,
-        "ret1_after_neg": -0.0848,
-        "ret5_after_neg": null
-      },
-      "action": "ignorar",
-      "reasons": [
-        "uma única fonte"
       ]
     },
     {
@@ -1029,14 +1006,6 @@
       "fonte": "Google News: petróleo e minério",
       "mercado": "commodities",
       "titulo": "Brent Venables reacts to Oklahoma’s 24-17 win over Ole Miss - News 9",
-      "sentimento": -0.24,
-      "tickers": []
-    },
-    {
-      "quando": "2026-11-15T13:31:08+00:00",
-      "fonte": "Money Times",
-      "mercado": "BR",
-      "titulo": "Incerteza fiscal leva gestoras a elevar caixa e a rever apostas em ativos brasileiros",
       "sentimento": -0.24,
       "tickers": []
     },
@@ -1125,17 +1094,6 @@
       ]
     },
     {
-      "quando": "2026-11-15T13:24:56+00:00",
-      "fonte": "Money Times",
-      "mercado": "BR",
-      "titulo": "Bitcoin recua neste domingo (15) e acumula perdas na semana; veja os preços das criptomoedas",
-      "sentimento": -0.13,
-      "tickers": [
-        "BTC",
-        "ETH"
-      ]
-    },
-    {
       "quando": "2026-11-15T20:41:59+00:00",
       "fonte": "InfoMoney",
       "mercado": "BR",
@@ -1216,6 +1174,22 @@
       "fonte": "Google News: petróleo e minério",
       "mercado": "commodities",
       "titulo": "Brent oil may fall to $94.09 - TradingView",
+      "sentimento": 0,
+      "tickers": []
+    },
+    {
+      "quando": "2026-11-16T01:20:00+00:00",
+      "fonte": "Bloomberg (via Google News)",
+      "mercado": "global",
+      "titulo": "Asian Stocks Brace for AI Pressure, Data Dump: Markets Wrap - Bloomberg",
+      "sentimento": 0,
+      "tickers": []
+    },
+    {
+      "quando": "2026-11-16T01:15:00+00:00",
+      "fonte": "Google News: petróleo e minério",
+      "mercado": "commodities",
+      "titulo": "Environmental investigator seeks answers about Brent Industries explosion and MC Tank chemical release - wtol.com",
       "sentimento": 0,
       "tickers": []
     }

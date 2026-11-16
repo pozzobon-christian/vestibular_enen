@@ -233,15 +233,16 @@ def morning_brief(db: MonitorDB, hours: float = 14.0) -> dict:
 def short_ops(db: MonitorDB, with_fundamentals: bool = True, with_intraday: bool = True) -> dict:
     """Operações curtas: cruza balanço (público), análogos históricos, notícias
     recentes, tendência e intradia. Grava data/operacoes-curtas.json."""
-    from .signals import find_analogs, short_setups, trend_report, news_signals
+    from .signals import find_analogs, short_setups, trend_report, news_signals, order_gate, stabilization, structural_stop, crypto_risk_composite, market_regime
     from .signals.intraday import fetch_many as fetch_intra
     from .signals.technical import atr
     from .data.fundamentals_feed import fetch_many as fetch_fund
     from .fundamentals import score_company, ratios
     wl = json.loads(WATCHLIST.read_text(encoding="utf-8")) if WATCHLIST.exists() else {}
     errors: list[str] = []
-    tickers = [(t, "BR") for t in wl.get("BR", [])] + [(t, "US") for t in wl.get("US", [])]
-    equities = [t for t, m in tickers if not t.endswith("11")]
+    CRYPTO = {"bitcoin": "BTC", "ethereum": "ETH", "solana": "SOL"}
+    tickers = [(t, "BR") for t in wl.get("BR", [])] + [(t, "US") for t in wl.get("US", [])] + [(CRYPTO.get(t, t), "cripto") for t in wl.get("cripto", [])]
+    equities = [t for t, m in tickers if not t.endswith("11") and m != "cripto"]
     funds = {}
     if with_fundamentals:
         funds.update(fetch_fund([t for t in equities if t in wl.get("BR", [])], "BR", errors))
@@ -250,8 +251,28 @@ def short_ops(db: MonitorDB, with_fundamentals: bool = True, with_intraday: bool
     if with_intraday:
         intra.update(fetch_intra([t for t, m in tickers if m == "BR"], "BR", errors))
         intra.update(fetch_intra([t for t, m in tickers if m == "US"], "US", errors))
+        for t, m in tickers:
+            if m == "cripto":
+                try:
+                    from .signals.intraday import fetch_intraday
+                    intra[t] = fetch_intraday(f"{t}-USD", "US")
+                except Exception as e:  # noqa: BLE001
+                    errors.append(f"intradia {t}: {type(e).__name__}: {str(e)[:80]}")
     news = {s.ticker: s for s in news_signals(db, hours=24)}
     proxies = {"PETR4": "PBR", "VALE3": "VALE", "ITUB4": "ITUB", "BOVA11": "EWZ", "PRIO3": "BZ=F"}
+    # regime e composto de risco cripto, calculados uma vez
+    def _closes(sym):
+        return [r[0] for r in db.conn.execute("SELECT close FROM prices WHERE ticker=? ORDER BY day", (sym,)).fetchall()]
+    vix_row = db.conn.execute("SELECT close FROM prices WHERE ticker='^VIX' ORDER BY day DESC LIMIT 1").fetchone()
+    regimes = {"BR": market_regime(_closes("BOVA11"), vix_row[0] if vix_row else None),
+               "US": market_regime(_closes("SPY"), vix_row[0] if vix_row else None),
+               "cripto": market_regime(_closes("BTC"), vix_row[0] if vix_row else None)}
+    def _trend_dir(sym):
+        rows = db.conn.execute("SELECT high, low, close FROM prices WHERE ticker=? ORDER BY day", (sym,)).fetchall()
+        return trend_report(sym, [r[0] for r in rows], [r[1] for r in rows], [r[2] for r in rows]).direction if len(rows) >= 60 else None
+    ibit = _closes("IBIT"); btc = _closes("BTC")
+    crypto_risk = crypto_risk_composite(ibit[-1] / ibit[-6] - 1 if len(ibit) > 6 else None, _trend_dir("COIN"), _trend_dir("MSTR"),
+                                        btc[-1] if btc else 0.0, min(btc[-20:]) if len(btc) >= 20 else 0.0) if btc else None
     pool = {}
     for t, m in tickers:
         rows = db.conn.execute("SELECT day, high, low, close FROM prices WHERE ticker=? ORDER BY day", (t,)).fetchall()
@@ -294,24 +315,70 @@ def short_ops(db: MonitorDB, with_fundamentals: bool = True, with_intraday: bool
         side = "compra" if fav >= 2 and con == 0 else "venda" if con >= 2 and fav == 0 else "nenhuma"
         last = cl[-1]
         stop = target = None
-        if side == "compra":
-            stop = round(last - 1.0 * a, 2); target = round(last + 2.0 * a, 2)
-        elif side == "venda":
-            stop = round(last + 1.0 * a, 2); target = round(last - 2.0 * a, 2)
+        gate = None
+        if side != "nenhuma":
+            stab = stabilization(hi, lo, cl, side)
+            gate = order_gate(side, votes, tr.direction, tr.score, regimes.get(m, {}).get("modo", "neutro"), stab,
+                              an.n if an else None, crypto_risk if m == "cripto" else None)
+            stop = structural_stop(lo, hi, cl, a, side)
+            risk_unit = abs(last - stop)
+            target = round(last + 2 * risk_unit, 2) if side == "compra" else round(last - 2 * risk_unit, 2)
+            if not gate.approved:
+                side = f"{side}_bloqueada"
         setups.append({
             "ticker": t, "mercado": m, "ultimo": round(last, 4), "atr": round(a, 4),
             "operacao": side, "votos": votes, "a_favor": fav, "contra": con,
-            "stop": stop, "alvo": target,
+            "stop": stop, "alvo": target, "porteiro": gate.as_dict() if gate else None,
             "ganho_pct": round((target / last - 1) if target else 0, 4), "risco_pct": round((stop / last - 1) if stop else 0, 4),
-            "razao_ganho_risco": 2.0 if side != "nenhuma" else None, "prazo_esperado": "1 a 5 pregões" if side != "nenhuma" else None,
+            "razao_ganho_risco": 2.0 if side in ("compra", "venda") else None, "prazo_esperado": "1 a 5 pregões" if side in ("compra", "venda") else None,
             "balanco": fund, "analogos": (an.__dict__ | {"state": None}) if an else None,
             "noticia": ({"acao": ns.action, "score": ns.score, "fontes": ns.n_sources, "manchetes": ns.headlines[:2], "evidencia": ns.reasons} if ns else None),
             "tendencia": {"direcao": tr.direction, "score": tr.score, "tstat": tr.tstat, "adx": tr.adx, "rompimento": tr.breakout},
             "intradia": st.__dict__ if st else None,
         })
     setups.sort(key=lambda x: (-(x["a_favor"] - x["contra"]) if x["operacao"] == "compra" else -(x["contra"] - x["a_favor"]) if x["operacao"] == "venda" else 1, x["ticker"]))
-    out = {"gerado_em": datetime.now(timezone.utc).isoformat(), "setups": setups, "erros": errors}
+    out = {"gerado_em": datetime.now(timezone.utc).isoformat(), "setups": setups, "erros": errors,
+           "regimes": regimes, "risco_cripto": crypto_risk, "ordens_planejadas": gate_planned_orders(db, regimes, crypto_risk)}
     Path("data/operacoes-curtas.json").write_text(json.dumps(out, ensure_ascii=False, indent=2, default=str), encoding="utf-8")
+    return out
+
+
+def gate_planned_orders(db: MonitorDB, regimes: dict, crypto_risk: dict | None) -> list[dict]:
+    """Passa cada ordem planejada em carteira.json pelo porteiro de tese e grava o veredito."""
+    from .signals import trend_report, find_analogs, order_gate, stabilization, structural_stop
+    from .signals.technical import atr
+    path = Path("data/carteira.json")
+    if not path.exists():
+        return []
+    c = json.loads(path.read_text(encoding="utf-8"))
+    plano = json.loads(Path("data/plano.json").read_text(encoding="utf-8")) if Path("data/plano.json").exists() else {}
+    cap = float(plano.get("capital_inicial_brl", 0) or 0); lim = cap * float((plano.get("risco") or {}).get("por_operacao", 0.02))
+    out = []
+    for o in c.get("ordens_planejadas", []):
+        t = o["ticker"]
+        rows = db.conn.execute("SELECT high, low, close FROM prices WHERE ticker=? ORDER BY day", (t,)).fetchall()
+        if len(rows) < 60:
+            o["porteiro"] = {"aprovada": None, "motivos": ["sem histórico suficiente"], "bloqueios": []}; out.append(o); continue
+        hi, lo, cl = [r[0] for r in rows], [r[1] for r in rows], [r[2] for r in rows]
+        tr = trend_report(t, hi, lo, cl); an = find_analogs(t, cl, k=15) if len(cl) >= 230 else None
+        side = "compra" if o.get("lado") == "buy" else "venda"
+        votes = {"tendencia": "a_favor" if tr.direction == side.replace("compra", "alta").replace("venda", "baixa") and tr.score >= 50
+                 else "contra" if tr.direction in ("alta", "baixa") and tr.score >= 50 else "neutro",
+                 "analogos": None, "balanco": None, "noticias": None, "intradia": None}
+        if an and 20 in an.horizons:
+            h = an.horizons[20]; votes["analogos"] = "a_favor" if h["p_positivo"] >= 0.65 and h["mediana"] > 0.01 else "contra" if h["p_positivo"] <= 0.35 else "neutro"
+        if o.get("tese_manual_camadas"):
+            votes.update(o["tese_manual_camadas"])
+        stab = stabilization(hi, lo, cl, side)
+        m = o.get("mercado", "BR")
+        g = order_gate(side, votes, tr.direction, tr.score, regimes.get(m, {}).get("modo", "neutro"), stab,
+                       an.n if an else None, crypto_risk if m == "cripto" else None, o.get("risco_brl"), lim or None)
+        a = atr(hi, lo, cl)[-1] or 0.0
+        g.structural_stop = structural_stop(lo, hi, cl, a, side)
+        o["porteiro"] = g.as_dict() | {"votos": votes, "tendencia": f"{tr.direction} {tr.score}", "ultimo": round(cl[-1], 4)}
+        out.append(o)
+    c["ordens_planejadas"] = out
+    path.write_text(json.dumps(c, ensure_ascii=False, indent=2), encoding="utf-8")
     return out
 
 
