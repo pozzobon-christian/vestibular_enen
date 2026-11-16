@@ -114,7 +114,7 @@
       }
     },
     {
-      "data": "2026-11-16",
+      "data": "2026-11-16 (condicional)",
       "conta": "BTG",
       "ticker": "PETR4",
       "mercado": "BR",
@@ -132,7 +132,7 @@
       "razao_ganho_risco": 2.0,
       "prazo_esperado": "1 a 5 pregões; se virar tendência, stop móvel",
       "alvo_regra": "2x ATR (R$ 2,13) acima; stop 1x ATR abaixo",
-      "condicao": "abertura ≤ R$ 46,20; após 10h15; Brent ≥ US$ 93; única ordem do dia",
+      "condicao": "Brent caiu 3,2% na madrugada para US$ 92,74, abaixo da condição de US$ 93. Só entra se às 10h15 o Brent estiver de volta acima de US$ 93 E PETR4 abrir até R$ 46,20 E a abertura não romper a mínima de sexta (R$ 44,70). Caso contrário, nenhuma ordem hoje.",
       "porque": "Cruzamento com 3 camadas a favor: balanço score 97 após lucro de R$ 39,7 bi (P/L 2,3), tendência de alta e rompimento da faixa de abertura na sexta. Brent a US$ 95 com tensão EUA-Irã. Contra: regime defensivo e volume fraco na sexta (0,44x), por isso só 2 ações e prazo curto.",
       "passo_a_passo": [
         "Home broker do BTG > buscar PETR4F (fracionário).",
@@ -140,7 +140,7 @@
         "Após executar: Vender > Stop: disparo 43,20, limite 43,17, validade 30 dias.",
         "Anotar preço e taxa e enviar para registro."
       ],
-      "proximo_movimento": "Alvo R$ 49,56 em até 5 pregões; se bater, realizar metade e subir o stop para o custo. Se o Brent cair abaixo de US$ 90, sair mesmo sem stop.",
+      "proximo_movimento": "Se não entrar hoje, reavaliar terça após o resultado da NVDA (que afeta o apetite a risco). Alvo R$ 49,56 em até 5 pregões; se bater, realizar metade e subir o stop para o custo. Brent abaixo de US$ 90 = sair.",
       "porteiro": {
         "aprovada": false,
         "motivos": [],

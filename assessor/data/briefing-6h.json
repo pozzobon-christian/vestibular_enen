@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-11-16T08:58:22.904427+00:00",
+  "gerado_em": "2026-11-16T08:58:58.702448+00:00",
   "janela_horas": 14.0,
   "regime": {
     "BOVA11": {
@@ -1055,27 +1055,11 @@
       "tickers": []
     },
     {
-      "quando": "2026-11-15T22:29:00+00:00",
-      "fonte": "Google News: petróleo e minério",
-      "mercado": "commodities",
-      "titulo": "Brent Venables proud of OU football's performance vs. Ole Miss - Tulsa World",
-      "sentimento": -0.25,
-      "tickers": []
-    },
-    {
       "quando": "2026-11-16T01:35:00+00:00",
       "fonte": "Reuters Business (via Google News)",
       "mercado": "global",
       "titulo": "Asian shares fall before Nvidia earnings, Anthropic IPO test tech rally - Reuters",
       "sentimento": 0.25,
-      "tickers": []
-    },
-    {
-      "quando": "2026-11-15T23:43:24+00:00",
-      "fonte": "Google News: petróleo e minério",
-      "mercado": "commodities",
-      "titulo": "Brent Venables reacts to Oklahoma’s 24-17 win over Ole Miss - News 9",
-      "sentimento": -0.24,
       "tickers": []
     },
     {
@@ -1095,14 +1079,6 @@
       "tickers": []
     },
     {
-      "quando": "2026-11-16T00:20:00+00:00",
-      "fonte": "Google News: petróleo e minério",
-      "mercado": "commodities",
-      "titulo": "Oklahoma football’s Brent Venables blasts ‘insensitive’ decision to move Ole Miss game to Sunday - Yahoo Sports",
-      "sentimento": -0.23,
-      "tickers": []
-    },
-    {
       "quando": "2026-11-16T07:09:00+00:00",
       "fonte": "Reuters Business (via Google News)",
       "mercado": "global",
@@ -1115,14 +1091,6 @@
       "fonte": "Bloomberg (via Google News)",
       "mercado": "global",
       "titulo": "Copper Sinks to Four-Month Low on Tech Rout, China Growth Woes - Bloomberg.com",
-      "sentimento": 0.22,
-      "tickers": []
-    },
-    {
-      "quando": "2026-11-16T01:50:48+00:00",
-      "fonte": "Google News: petróleo e minério",
-      "mercado": "commodities",
-      "titulo": "Brent Venables' thoughts on Oklahoma's 24-17 win over No. 19 Ole Miss Stream of NCAA Football - CBS Sports",
       "sentimento": 0.22,
       "tickers": []
     },
@@ -1142,14 +1110,6 @@
       "mercado": "BR",
       "titulo": "Ibovespa hoje: prévia do PIB, Focus e Fed testam Bolsa após encerrar semana em alta - Estadão",
       "sentimento": 0.21,
-      "tickers": []
-    },
-    {
-      "quando": "2026-11-16T00:02:00+00:00",
-      "fonte": "Google News: petróleo e minério",
-      "mercado": "commodities",
-      "titulo": "Brent Venables lays out the reality of Ole Miss and SEC forcing Oklahoma to reschedule to Sunday - Stormin in Norman",
-      "sentimento": -0.21,
       "tickers": []
     },
     {
@@ -1234,6 +1194,46 @@
       "mercado": "BR",
       "titulo": "Enem 2026: carros elétricos, genética e meio ambiente marcam 2º dia; veja o que caiu",
       "sentimento": -0.1,
+      "tickers": []
+    },
+    {
+      "quando": "2026-11-16T08:00:00+00:00",
+      "fonte": "InfoMoney",
+      "mercado": "BR",
+      "titulo": "Construção civil cresce, mas lida com juro restritivo e apagão de mão de obra",
+      "sentimento": 0.05,
+      "tickers": []
+    },
+    {
+      "quando": "2026-11-15T20:32:13+00:00",
+      "fonte": "InfoMoney",
+      "mercado": "BR",
+      "titulo": "Inflação nos EUA está ‘caminhando na direção errada’, alerta dirigente do Fed",
+      "sentimento": 0.05,
+      "tickers": []
+    },
+    {
+      "quando": "2026-11-16T08:50:50+00:00",
+      "fonte": "Cointelegraph",
+      "mercado": "cripto",
+      "titulo": "DBS, JPMorgan’s Kinexys launch 24/7 transfers of tokenized deposits",
+      "sentimento": 0,
+      "tickers": []
+    },
+    {
+      "quando": "2026-11-16T08:43:00+00:00",
+      "fonte": "Money Times",
+      "mercado": "BR",
+      "titulo": "Coincidência ou previsão dos Simpsons? Como nasceu o boato do apagão global de 17 de novembro",
+      "sentimento": 0,
+      "tickers": []
+    },
+    {
+      "quando": "2026-11-16T08:32:00+00:00",
+      "fonte": "Money Times",
+      "mercado": "BR",
+      "titulo": "Brasil e Filipinas firmam acordo para ampliar cooperação agropecuária",
+      "sentimento": 0,
       "tickers": []
     }
   ]
