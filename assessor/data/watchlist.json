@@ -137,7 +137,7 @@
     },
     {
       "nome": "Google News: petróleo e minério",
-      "url": "https://news.google.com/rss/search?q=brent+OR+%22iron+ore%22+OR+OPEC&hl=en-US&gl=US&ceid=US:en",
+      "url": "https://news.google.com/rss/search?q=%22brent+crude%22+OR+%22iron+ore%22+OR+OPEC+-Venables&hl=en-US&gl=US&ceid=US:en",
       "fonte": "imprensa",
       "mercado": "commodities"
     },
