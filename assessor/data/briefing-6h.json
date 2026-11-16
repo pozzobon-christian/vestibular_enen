@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-11-14T13:27:56.389782+00:00",
+  "gerado_em": "2026-11-16T02:51:25.448870+00:00",
   "janela_horas": 14.0,
   "regime": {
     "BOVA11": {
@@ -27,50 +27,50 @@
     {
       "simbolo": "ES=F",
       "nome": "S&P 500 futuro",
-      "ultimo": 7583.0,
-      "data": "2026-11-13",
-      "var_1d": -0.0042,
-      "var_5d": 0.0245
+      "ultimo": 7585.0,
+      "data": "2026-11-16",
+      "var_1d": 0.0003,
+      "var_5d": 0.0014
     },
     {
       "simbolo": "NQ=F",
       "nome": "Nasdaq futuro",
-      "ultimo": 28034.75,
-      "data": "2026-11-13",
-      "var_1d": -0.0123,
-      "var_5d": 0.0351
+      "ultimo": 28037.5,
+      "data": "2026-11-16",
+      "var_1d": 0.0001,
+      "var_5d": 0.0008
     },
     {
       "simbolo": "YM=F",
       "nome": "Dow futuro",
-      "ultimo": 52418.0,
-      "data": "2026-11-13",
-      "var_1d": 0.0005,
-      "var_5d": 0.0201
+      "ultimo": 52469.0,
+      "data": "2026-11-16",
+      "var_1d": 0.001,
+      "var_5d": -0.0006
     },
     {
       "simbolo": "^N225",
       "nome": "Nikkei",
-      "ultimo": 61142.35,
-      "data": "2026-11-13",
-      "var_1d": 0.0053,
-      "var_5d": 0.0646
+      "ultimo": 60182.5,
+      "data": "2026-11-16",
+      "var_1d": -0.0157,
+      "var_5d": 0.0239
     },
     {
       "simbolo": "^HSI",
       "nome": "Hang Seng",
-      "ultimo": 23637.6,
-      "data": "2026-11-13",
-      "var_1d": -0.0155,
-      "var_5d": -0.0345
+      "ultimo": 23866.29,
+      "data": "2026-11-16",
+      "var_1d": 0.0097,
+      "var_5d": -0.0238
     },
     {
       "simbolo": "000001.SS",
       "nome": "Xangai",
-      "ultimo": 3634.35,
-      "data": "2026-11-13",
-      "var_1d": -0.0059,
-      "var_5d": -0.0041
+      "ultimo": 3610.5,
+      "data": "2026-11-16",
+      "var_1d": -0.0066,
+      "var_5d": -0.0137
     },
     {
       "simbolo": "^STOXX50E",
@@ -91,34 +91,34 @@
     {
       "simbolo": "CL=F",
       "nome": "WTI",
-      "ultimo": 88.56,
-      "data": "2026-11-13",
-      "var_1d": -0.002,
-      "var_5d": -0.025
+      "ultimo": 88.12,
+      "data": "2026-11-16",
+      "var_1d": -0.005,
+      "var_5d": 0.0146
     },
     {
       "simbolo": "BZ=F",
       "nome": "Brent",
-      "ultimo": 95.84,
-      "data": "2026-11-13",
-      "var_1d": 0.0002,
-      "var_5d": -0.0252
+      "ultimo": 95.14,
+      "data": "2026-11-16",
+      "var_1d": -0.0073,
+      "var_5d": 0.0278
     },
     {
       "simbolo": "GC=F",
       "nome": "Ouro",
-      "ultimo": 3886.3,
-      "data": "2026-11-13",
-      "var_1d": 0.0003,
-      "var_5d": -0.0463
+      "ultimo": 3889.2,
+      "data": "2026-11-16",
+      "var_1d": 0.0007,
+      "var_5d": -0.0548
     },
     {
       "simbolo": "HG=F",
       "nome": "Cobre",
-      "ultimo": 6.08,
-      "data": "2026-11-13",
-      "var_1d": -0.0167,
-      "var_5d": -0.0223
+      "ultimo": 6.03,
+      "data": "2026-11-16",
+      "var_1d": -0.0074,
+      "var_5d": -0.0465
     },
     {
       "simbolo": "TIO=F",
@@ -131,10 +131,10 @@
     {
       "simbolo": "DX-Y.NYB",
       "nome": "Índice dólar",
-      "ultimo": 103.41,
-      "data": "2026-11-13",
-      "var_1d": 0.0023,
-      "var_5d": 0.0109
+      "ultimo": 103.44,
+      "data": "2026-11-16",
+      "var_1d": 0.0003,
+      "var_5d": 0.0176
     },
     {
       "simbolo": "^TNX",
@@ -227,62 +227,6 @@
       "notes": [
         "inclinação 60d significativa (t=-8.7)",
         "ADX 33: tendência com força",
-        "rompimento_baixa_20d"
-      ]
-    },
-    {
-      "ticker": "ETH",
-      "mercado": "cripto",
-      "direction": "baixa",
-      "score": 100,
-      "slope_annual_pct": -66.1,
-      "tstat": -12.9,
-      "adx": 30.5,
-      "above_sma50": false,
-      "above_sma200": false,
-      "breakout": "rompimento_baixa_20d",
-      "momentum": {
-        "m_12_1": 0.205,
-        "m_3": -0.2316,
-        "m_1": -0.1897,
-        "m_1w": -0.0904
-      },
-      "vol": {
-        "vol_20d": 0.4805,
-        "vol_100d": 0.4711,
-        "razao": 1.02
-      },
-      "notes": [
-        "inclinação 60d significativa (t=-12.9)",
-        "ADX 30: tendência com força",
-        "rompimento_baixa_20d"
-      ]
-    },
-    {
-      "ticker": "SOL",
-      "mercado": "cripto",
-      "direction": "baixa",
-      "score": 100,
-      "slope_annual_pct": -74.5,
-      "tstat": -10.62,
-      "adx": 38.7,
-      "above_sma50": false,
-      "above_sma200": false,
-      "breakout": "rompimento_baixa_20d",
-      "momentum": {
-        "m_12_1": 0.2125,
-        "m_3": -0.2357,
-        "m_1": -0.2383,
-        "m_1w": -0.0944
-      },
-      "vol": {
-        "vol_20d": 0.4105,
-        "vol_100d": 0.4888,
-        "razao": 0.8399
-      },
-      "notes": [
-        "inclinação 60d significativa (t=-10.6)",
-        "ADX 39: tendência com força",
         "rompimento_baixa_20d"
       ]
     },
@@ -457,27 +401,81 @@
       "ticker": "BTC",
       "mercado": "cripto",
       "direction": "baixa",
-      "score": 80,
-      "slope_annual_pct": -37.3,
-      "tstat": -6.31,
-      "adx": 24.0,
+      "score": 85,
+      "slope_annual_pct": -50.2,
+      "tstat": -8.88,
+      "adx": 28.3,
       "above_sma50": false,
       "above_sma200": false,
-      "breakout": "rompimento_baixa_20d",
+      "breakout": "nenhum",
       "momentum": {
-        "m_12_1": 0.1902,
-        "m_3": -0.1151,
-        "m_1": -0.1577,
-        "m_1w": -0.086
+        "m_12_1": 0.2121,
+        "m_3": -0.1499,
+        "m_1": -0.1842,
+        "m_1w": -0.1142
       },
       "vol": {
-        "vol_20d": 0.3585,
-        "vol_100d": 0.3435,
-        "razao": 1.0438
+        "vol_20d": 0.4171,
+        "vol_100d": 0.3581,
+        "razao": 1.1647
       },
       "notes": [
-        "inclinação 60d significativa (t=-6.3)",
-        "rompimento_baixa_20d"
+        "inclinação 60d significativa (t=-8.9)",
+        "ADX 28: tendência com força"
+      ]
+    },
+    {
+      "ticker": "ETH",
+      "mercado": "cripto",
+      "direction": "baixa",
+      "score": 85,
+      "slope_annual_pct": -73.8,
+      "tstat": -15.83,
+      "adx": 33.7,
+      "above_sma50": false,
+      "above_sma200": false,
+      "breakout": "nenhum",
+      "momentum": {
+        "m_12_1": 0.1998,
+        "m_3": -0.2593,
+        "m_1": -0.2116,
+        "m_1w": -0.1053
+      },
+      "vol": {
+        "vol_20d": 0.5778,
+        "vol_100d": 0.4938,
+        "razao": 1.1702
+      },
+      "notes": [
+        "inclinação 60d significativa (t=-15.8)",
+        "ADX 34: tendência com força"
+      ]
+    },
+    {
+      "ticker": "SOL",
+      "mercado": "cripto",
+      "direction": "baixa",
+      "score": 85,
+      "slope_annual_pct": -82.2,
+      "tstat": -14.78,
+      "adx": 42.1,
+      "above_sma50": false,
+      "above_sma200": false,
+      "breakout": "nenhum",
+      "momentum": {
+        "m_12_1": 0.2364,
+        "m_3": -0.268,
+        "m_1": -0.2818,
+        "m_1w": -0.1268
+      },
+      "vol": {
+        "vol_20d": 0.5501,
+        "vol_100d": 0.5173,
+        "razao": 1.0633
+      },
+      "notes": [
+        "inclinação 60d significativa (t=-14.8)",
+        "ADX 42: tendência com força"
       ]
     },
     {
@@ -940,20 +938,45 @@
   ],
   "sinais_de_noticia": [
     {
-      "ticker": "PMLL11",
-      "score": -0.236,
+      "ticker": "BTC",
+      "score": -0.05,
+      "n_items": 4,
+      "n_sources": 3,
+      "headlines": [
+        "Bitcoin recua neste domingo (15) e acumula perdas na semana; veja os preços das criptomoedas",
+        "Dia do Joalheiro: Programa SP Produz reconhece cadeias produtivas do setor que movimenta a economia",
+        "US sellers drive Bitcoin crash, Jensen plots Nvidia comeback: Hodler’s Digest",
+        "Luxor CEO warns of AI ‘dark forest’ after Bitcoin miner hijack"
+      ],
+      "evidence": {
+        "ticker": "BTC",
+        "n_pos": 5,
+        "n_neg": 4,
+        "ret1_after_pos": -0.0253,
+        "ret5_after_pos": -0.117,
+        "ret1_after_neg": -0.0294,
+        "ret5_after_neg": -0.117
+      },
+      "action": "ignorar",
+      "reasons": [
+        "sentimento fraco"
+      ]
+    },
+    {
+      "ticker": "ETH",
+      "score": -0.126,
       "n_items": 1,
       "n_sources": 1,
       "headlines": [
-        "De calote a briga milionária na Justiça: veja o que movimentou os fundos imobiliários (FIIs) na semana"
+        "Bitcoin recua neste domingo (15) e acumula perdas na semana; veja os preços das criptomoedas"
       ],
       "evidence": {
-        "ticker": "PMLL11",
+        "ticker": "ETH",
         "n_pos": 0,
-        "n_neg": 0,
+        "n_neg": 1,
         "ret1_after_pos": null,
         "ret5_after_pos": null,
-        "ret1_after_neg": null,
+        "ret1_after_neg": -0.0848,
         "ret5_after_neg": null
       },
       "action": "ignorar",
@@ -962,37 +985,12 @@
       ]
     },
     {
-      "ticker": "BTC",
-      "score": -0.024,
-      "n_items": 8,
-      "n_sources": 5,
-      "headlines": [
-        "Bitcoin miners pay Paraguay $350 million a year, but AI is pushing them out",
-        "Bitcoin’s Billion-Dollar Wipeouts Are Becoming a Familiar Sight - Bloomberg",
-        "Satoshi-era wallet served in a $260 billion lawsuit moves 75 BTC it held since 2011",
-        "Bitcoin ETFs shed $2.35B in 2 weeks, BlackRock’s losing streak hits 11"
-      ],
-      "evidence": {
-        "ticker": "BTC",
-        "n_pos": 5,
-        "n_neg": 3,
-        "ret1_after_pos": -0.0253,
-        "ret5_after_pos": -0.086,
-        "ret1_after_neg": -0.0188,
-        "ret5_after_neg": -0.086
-      },
-      "action": "ignorar",
-      "reasons": [
-        "sentimento fraco"
-      ]
-    },
-    {
       "ticker": "LINK",
-      "score": 0.0,
+      "score": 0.026,
       "n_items": 1,
       "n_sources": 1,
       "headlines": [
-        "Gasoline, Diesel, Jet Fuel And Brent - TalkMarkets - Howl.Link"
+        "Ninguém acerta as seis dezenas da Mega-Sena 3086, e prêmio acumula em R$ 34 milhões; veja números sorteados"
       ],
       "evidence": {
         "ticker": "LINK",
@@ -1011,212 +1009,213 @@
   ],
   "manchetes": [
     {
-      "quando": "2026-11-14T12:22:00+00:00",
-      "fonte": "InfoMoney",
-      "mercado": "BR",
-      "titulo": "Sem sinal fiscal crível, pessimismo com Selic e PIB seguirá punindo ações cíclicas",
-      "sentimento": -0.65,
+      "quando": "2026-11-15T22:29:00+00:00",
+      "fonte": "Google News: petróleo e minério",
+      "mercado": "commodities",
+      "titulo": "Brent Venables proud of OU football's performance vs. Ole Miss - Tulsa World",
+      "sentimento": -0.25,
       "tickers": []
     },
     {
-      "quando": "2026-11-14T11:17:30+00:00",
-      "fonte": "Money Times",
-      "mercado": "BR",
-      "titulo": "PT protocola projeto para taxar lucros e dividendos em 15%, além de imposto sobre grandes fortunas",
-      "sentimento": 0.36,
-      "tickers": []
-    },
-    {
-      "quando": "2026-11-14T00:13:31+00:00",
-      "fonte": "Google News Brasil: mercado",
-      "mercado": "BR",
-      "titulo": "Dólar: estável a R$ 5,65, mas sobe 2,63% na semana - Monitor Mercantil",
-      "sentimento": 0.26,
-      "tickers": []
-    },
-    {
-      "quando": "2026-11-13T23:39:03+00:00",
-      "fonte": "Bloomberg (via Google News)",
+      "quando": "2026-11-16T01:35:00+00:00",
+      "fonte": "Reuters Business (via Google News)",
       "mercado": "global",
-      "titulo": "Troubled Sherritt Misses Payment as Liquidity Crisis Deepens - Bloomberg.com",
+      "titulo": "Asian shares fall before Nvidia earnings, Anthropic IPO test tech rally - Reuters",
+      "sentimento": 0.25,
+      "tickers": []
+    },
+    {
+      "quando": "2026-11-15T23:43:24+00:00",
+      "fonte": "Google News: petróleo e minério",
+      "mercado": "commodities",
+      "titulo": "Brent Venables reacts to Oklahoma’s 24-17 win over Ole Miss - News 9",
       "sentimento": -0.24,
       "tickers": []
     },
     {
-      "quando": "2026-11-14T01:28:00+00:00",
-      "fonte": "Google News: petróleo e minério",
-      "mercado": "commodities",
-      "titulo": "Brent Bland leads No. 17 Miami to record-setting win over North Alabama - Canes Warning",
-      "sentimento": 0.24,
-      "tickers": []
-    },
-    {
-      "quando": "2026-11-14T00:59:16+00:00",
-      "fonte": "Google News: petróleo e minério",
-      "mercado": "commodities",
-      "titulo": "Brent Bland leads record 3-point barrage as No. 17 Miami routs N. Alabama - Field Level Media",
-      "sentimento": 0.24,
-      "tickers": []
-    },
-    {
-      "quando": "2026-11-14T12:30:00+00:00",
+      "quando": "2026-11-15T13:31:08+00:00",
       "fonte": "Money Times",
       "mercado": "BR",
-      "titulo": "De calote a briga milionária na Justiça: veja o que movimentou os fundos imobiliários (FIIs) na semana",
+      "titulo": "Incerteza fiscal leva gestoras a elevar caixa e a rever apostas em ativos brasileiros",
       "sentimento": -0.24,
+      "tickers": []
+    },
+    {
+      "quando": "2026-11-16T00:20:00+00:00",
+      "fonte": "Google News: petróleo e minério",
+      "mercado": "commodities",
+      "titulo": "Oklahoma football’s Brent Venables blasts ‘insensitive’ decision to move Ole Miss game to Sunday - Yahoo Sports",
+      "sentimento": -0.23,
+      "tickers": []
+    },
+    {
+      "quando": "2026-11-15T18:05:25+00:00",
+      "fonte": "Google News: petróleo e minério",
+      "mercado": "commodities",
+      "titulo": "Small Business Development Center Names Flint Brent as State Star - University of Mississippi | Ole Miss",
+      "sentimento": -0.22,
+      "tickers": []
+    },
+    {
+      "quando": "2026-11-16T01:50:48+00:00",
+      "fonte": "Google News: petróleo e minério",
+      "mercado": "commodities",
+      "titulo": "Brent Venables' thoughts on Oklahoma's 24-17 win over No. 19 Ole Miss Stream of NCAA Football - CBS Sports",
+      "sentimento": 0.22,
+      "tickers": []
+    },
+    {
+      "quando": "2026-11-15T22:50:59+00:00",
+      "fonte": "Cointelegraph",
+      "mercado": "cripto",
+      "titulo": "US sellers drive Bitcoin crash, Jensen plots Nvidia comeback: Hodler’s Digest",
+      "sentimento": -0.21,
       "tickers": [
-        "PMLL11"
+        "BTC"
       ]
     },
     {
-      "quando": "2026-11-14T02:50:24+00:00",
-      "fonte": "Google News Brasil: mercado",
-      "mercado": "BR",
-      "titulo": "Bolsa sobe 0,66% e dólar segue em R$ 5,65 com ajuste fiscal em vista - Poder360",
-      "sentimento": 0.23,
+      "quando": "2026-11-16T00:02:00+00:00",
+      "fonte": "Google News: petróleo e minério",
+      "mercado": "commodities",
+      "titulo": "Brent Venables lays out the reality of Ole Miss and SEC forcing Oklahoma to reschedule to Sunday - Stormin in Norman",
+      "sentimento": -0.21,
       "tickers": []
     },
     {
-      "quando": "2026-11-14T00:39:00+00:00",
+      "quando": "2026-11-16T02:25:18+00:00",
       "fonte": "Google News: petróleo e minério",
       "mercado": "commodities",
-      "titulo": "Brent Bland leads record 3-point barrage as No. 17 Miami routs N. Alabama - Fort Worth Star-Telegram",
-      "sentimento": 0.23,
-      "tickers": []
-    },
-    {
-      "quando": "2026-11-14T00:20:55+00:00",
-      "fonte": "Google News: petróleo e minério",
-      "mercado": "commodities",
-      "titulo": "Led By Brent Bland, No. 17 Miami Snaps Single-Game Record In Victory Over North Alabama - Sports Illustrated",
+      "titulo": "No. 2 Montana State celebrated Brent Vigen's record-breaking win while still looking to improve - MontanaSports.com",
       "sentimento": 0.21,
       "tickers": []
     },
     {
-      "quando": "2026-11-14T05:45:27+00:00",
-      "fonte": "Google News Brasil: mercado",
-      "mercado": "BR",
-      "titulo": "O dólar fechou praticamente estável nesta sexta-feira (13), cotado a R$ 5,65, mas acumulou alta de 2,63% na semana. Além das incertezas sobre o pacote fiscal do governo, pesou a continuidade das turbulências no mercado internacional. Na bolsa, o Ibove - Instagram",
-      "sentimento": 0.19,
+      "quando": "2026-11-16T02:13:58+00:00",
+      "fonte": "Google News: petróleo e minério",
+      "mercado": "commodities",
+      "titulo": "No. 2 Montana State celebrated Brent Vigen's record-breaking win while still looking to improve - MontanaSports.com",
+      "sentimento": 0.2,
       "tickers": []
     },
     {
-      "quando": "2026-11-14T01:58:00+00:00",
-      "fonte": "MarketWatch",
-      "mercado": "US",
-      "titulo": "14 dividend stocks selected for long-term growth",
-      "sentimento": 0.18,
-      "tickers": []
-    },
-    {
-      "quando": "2026-11-14T04:30:00+00:00",
+      "quando": "2026-11-15T19:30:00+00:00",
       "fonte": "CoinDesk",
       "mercado": "cripto",
-      "titulo": "Satoshi-era wallet served in a $260 billion lawsuit moves 75 BTC it held since 2011",
-      "sentimento": -0.17,
-      "tickers": [
-        "BTC"
-      ]
-    },
-    {
-      "quando": "2026-11-14T02:42:00+00:00",
-      "fonte": "MarketWatch",
-      "mercado": "US",
-      "titulo": "FAA lifts rare nationwide ground stop on flights; air travel may take days to recover",
-      "sentimento": 0.16,
+      "titulo": "Did prediction markets call the U.S. midterm election?: State of Crypto",
+      "sentimento": -0.18,
       "tickers": []
     },
     {
-      "quando": "2026-11-14T13:00:00+00:00",
-      "fonte": "CoinDesk",
-      "mercado": "cripto",
-      "titulo": "Britain could turn wasted Scottish wind power into bitcoin to cut its $1.3 billion grid bill",
-      "sentimento": -0.15,
-      "tickers": [
-        "BTC"
-      ]
+      "quando": "2026-11-16T02:14:03+00:00",
+      "fonte": "CNBC Markets",
+      "mercado": "US",
+      "titulo": "China’s slowdown deepens in October as industrial output, retail sales, investment miss estimates",
+      "sentimento": -0.16,
+      "tickers": []
     },
     {
-      "quando": "2026-11-14T13:06:11+00:00",
+      "quando": "2026-11-15T21:33:45+00:00",
       "fonte": "Livecoins",
       "mercado": "cripto",
-      "titulo": "BEE4 e Núclea anunciam participação conjunta no Programa Piloto DLT da CVM, com projeto que testa a interoperabilidade entre redes blockchain",
+      "titulo": "Dia do Joalheiro: Programa SP Produz reconhece cadeias produtivas do setor que movimenta a economia",
       "sentimento": 0.14,
       "tickers": [
         "BTC"
       ]
     },
     {
-      "quando": "2026-11-14T12:23:00+00:00",
+      "quando": "2026-11-15T13:24:56+00:00",
       "fonte": "Money Times",
       "mercado": "BR",
-      "titulo": "Sem sinal fiscal crível, pessimismo com Selic e PIB deve seguir punindo ações cíclicas",
-      "sentimento": 0.13,
+      "titulo": "Bitcoin recua neste domingo (15) e acumula perdas na semana; veja os preços das criptomoedas",
+      "sentimento": -0.13,
+      "tickers": [
+        "BTC",
+        "ETH"
+      ]
+    },
+    {
+      "quando": "2026-11-15T20:41:59+00:00",
+      "fonte": "InfoMoney",
+      "mercado": "BR",
+      "titulo": "Enem 2026: carros elétricos, genética e meio ambiente marcam 2º dia; veja o que caiu",
+      "sentimento": -0.1,
       "tickers": []
     },
     {
-      "quando": "2026-11-14T11:45:30+00:00",
-      "fonte": "Money Times",
+      "quando": "2026-11-15T20:32:13+00:00",
+      "fonte": "InfoMoney",
       "mercado": "BR",
-      "titulo": "Fazenda deixa vencer subvenção extra de R$ 1,40 ao diesel importado",
-      "sentimento": 0.13,
+      "titulo": "Inflação nos EUA está ‘caminhando na direção errada’, alerta dirigente do Fed",
+      "sentimento": 0.05,
       "tickers": []
     },
     {
-      "quando": "2026-11-14T13:00:00+00:00",
-      "fonte": "Money Times",
+      "quando": "2026-11-15T14:05:04+00:00",
+      "fonte": "Valor Investe",
       "mercado": "BR",
-      "titulo": "Dívidas rurais: renegociação avança em meio à crise de crédito e à pressão sobre o Banco do Brasil",
-      "sentimento": 0.12,
-      "tickers": []
+      "titulo": "Ninguém acerta as seis dezenas da Mega-Sena 3086, e prêmio acumula em R$ 34 milhões; veja números sorteados",
+      "sentimento": 0.03,
+      "tickers": [
+        "LINK"
+      ]
     },
     {
-      "quando": "2026-11-14T12:00:50+00:00",
-      "fonte": "Money Times",
-      "mercado": "BR",
-      "titulo": "Cúpula do PT decide apoiar ajuste fiscal do governo e elege Banco Central o culpado por crise",
-      "sentimento": 0.12,
-      "tickers": []
-    },
-    {
-      "quando": "2026-11-14T10:34:06+00:00",
+      "quando": "2026-11-16T02:33:07+00:00",
       "fonte": "Cointelegraph",
       "mercado": "cripto",
-      "titulo": "Microsoft confirms global outage resolved, rules out cyberattack",
-      "sentimento": 0.11,
-      "tickers": []
-    },
-    {
-      "quando": "2026-11-14T08:12:30+00:00",
-      "fonte": "Cointelegraph",
-      "mercado": "cripto",
-      "titulo": "MegaETH parent cuts 20% of staff amid restructuring, AI push",
-      "sentimento": -0.11,
-      "tickers": []
-    },
-    {
-      "quando": "2026-11-14T13:20:16+00:00",
-      "fonte": "Google News Brasil: mercado",
-      "mercado": "BR",
-      "titulo": "Tema 1.368/STJ: mudança para Selic encontra limite na coisa julgada - Consultor Jurídico",
-      "sentimento": 0,
-      "tickers": []
-    },
-    {
-      "quando": "2026-11-14T13:00:00+00:00",
-      "fonte": "Money Times",
-      "mercado": "BR",
-      "titulo": "Mais de um ano depois, preço do bitcoin segue mais de 40% abaixo da máxima histórica, enquanto Black Friday da Empiricus abre acesso a três IAs para o mercado cripto",
+      "titulo": "Luxor CEO warns of AI ‘dark forest’ after Bitcoin miner hijack",
       "sentimento": 0,
       "tickers": [
         "BTC"
       ]
     },
     {
-      "quando": "2026-11-14T13:00:00+00:00",
-      "fonte": "MarketWatch",
-      "mercado": "US",
-      "titulo": "These 6 battered AI stocks could bounce back big, an analyst says",
+      "quando": "2026-11-16T02:18:00+00:00",
+      "fonte": "Google News: petróleo e minério",
+      "mercado": "commodities",
+      "titulo": "[WA iron ore sales reach A$122 billion in FY2025-26 as shipments rise to 905 Mt] - Shanghai Metals Market",
+      "sentimento": 0,
+      "tickers": []
+    },
+    {
+      "quando": "2026-11-16T02:00:00+00:00",
+      "fonte": "Google News Brasil: mercado",
+      "mercado": "BR",
+      "titulo": "Adesão a consórcios cresce, e especialistas dizem que modalidade 'sem juros' pode sair cara - Folha de S.Paulo",
+      "sentimento": 0,
+      "tickers": []
+    },
+    {
+      "quando": "2026-11-16T01:48:00+00:00",
+      "fonte": "Bloomberg (via Google News)",
+      "mercado": "global",
+      "titulo": "Morgan Stanley ‘Max Overweight’ Global Stocks on Intact AI Cycle - Bloomberg",
+      "sentimento": 0,
+      "tickers": []
+    },
+    {
+      "quando": "2026-11-16T01:36:00+00:00",
+      "fonte": "Bloomberg (via Google News)",
+      "mercado": "global",
+      "titulo": "Jensen Huang Comeback Report Primes Nvidia Shares for a Bounce - Bloomberg",
+      "sentimento": 0,
+      "tickers": []
+    },
+    {
+      "quando": "2026-11-16T01:25:00+00:00",
+      "fonte": "Reuters Business (via Google News)",
+      "mercado": "global",
+      "titulo": "Gold edges higher as investors await Warsh remarks for rate signals - Reuters",
+      "sentimento": 0,
+      "tickers": []
+    },
+    {
+      "quando": "2026-11-16T01:22:00+00:00",
+      "fonte": "Google News: petróleo e minério",
+      "mercado": "commodities",
+      "titulo": "Brent oil may fall to $94.09 - TradingView",
       "sentimento": 0,
       "tickers": []
     }

@@ -1,20 +1,5 @@
 [
   {
-    "data": "2026-11-15",
-    "hora_brt": "",
-    "evento": "Cúpula do G20 (Líderes)",
-    "fonte": "G20",
-    "categoria": "geopolitica",
-    "ativos": [
-      "DX-Y.NYB",
-      "EWZ"
-    ],
-    "impacto": "medio",
-    "o_que_esperar": "Comunicados sobre comércio e clima; raramente move preço no dia.",
-    "preparacao": "Só observar.",
-    "confirmar": true
-  },
-  {
     "data": "2026-11-16",
     "hora_brt": "08:25",
     "evento": "Boletim Focus (expectativas Selic, IPCA, câmbio)",
@@ -495,6 +480,21 @@
     "impacto": "medio",
     "o_que_esperar": "Gamma alto: preço gravita para strikes com mais aberto; volatilidade na última hora.",
     "preparacao": "Não iniciar swing no dia; stops mais largos ou ficar fora.",
+    "confirmar": false
+  },
+  {
+    "data": "2026-12-21",
+    "hora_brt": "08:25",
+    "evento": "Boletim Focus (expectativas Selic, IPCA, câmbio)",
+    "fonte": "Banco Central",
+    "categoria": "macro_br",
+    "ativos": [
+      "BOVA11",
+      "BRL=X"
+    ],
+    "impacto": "medio",
+    "o_que_esperar": "Revisões de Selic e inflação ajustam juros futuros na abertura.",
+    "preparacao": "Ler antes das 10h; muda a leitura de bancos e FIIs.",
     "confirmar": false
   }
 ]

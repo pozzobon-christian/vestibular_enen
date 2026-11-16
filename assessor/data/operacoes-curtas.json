@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-11-14T13:27:17.289486+00:00",
+  "gerado_em": "2026-11-16T02:51:25.212817+00:00",
   "setups": [
     {
       "ticker": "BBAS3",
@@ -10,7 +10,7 @@
       "votos": {
         "balanco": "contra",
         "analogos": "neutro",
-        "noticias": "neutro",
+        "noticias": null,
         "tendencia": "contra",
         "intradia": "contra"
       },
@@ -127,18 +127,7 @@
         ],
         "state": null
       },
-      "noticia": {
-        "acao": "ignorar",
-        "score": -0.032,
-        "fontes": 2,
-        "manchetes": [
-          "Banco do Brasil (BBAS3): ações estendem queda após tombo no lucro",
-          "Aceita BB? Banco do Brasil (BBAS3) amplia oferta e coloca mais 400 imóveis à venda até o fim de novembro"
-        ],
-        "evidencia": [
-          "sentimento fraco"
-        ]
-      },
+      "noticia": null,
       "tendencia": {
         "direcao": "baixa",
         "score": 85,
@@ -327,7 +316,7 @@
       "votos": {
         "balanco": "a_favor",
         "analogos": "neutro",
-        "noticias": "neutro",
+        "noticias": null,
         "tendencia": "a_favor",
         "intradia": "a_favor"
       },
@@ -340,15 +329,15 @@
       "razao_ganho_risco": 2.0,
       "prazo_esperado": "1 a 5 pregões",
       "balanco": {
-        "score": 85,
+        "score": 97,
         "valuation": 30,
-        "qualidade": 18,
+        "qualidade": 30,
         "seguranca": 22,
         "crescimento": 15,
         "alertas": [],
         "P/L": 2.4,
         "EV/EBITDA": 1.9,
-        "ROE": 0.097,
+        "ROE": 0.485,
         "div_liq/EBITDA": 1.05,
         "FCF_yield": 0.902,
         "fonte": [
@@ -444,17 +433,7 @@
         ],
         "state": null
       },
-      "noticia": {
-        "acao": "ignorar",
-        "score": 0.122,
-        "fontes": 1,
-        "manchetes": [
-          "Ibovespa e dólar contrariam a lógica do mercado e sobem na semana; entenda"
-        ],
-        "evidencia": [
-          "uma única fonte"
-        ]
-      },
+      "noticia": null,
       "tendencia": {
         "direcao": "alta",
         "score": 70,
@@ -1835,7 +1814,7 @@
       "votos": {
         "balanco": "contra",
         "analogos": "contra",
-        "noticias": "neutro",
+        "noticias": null,
         "tendencia": "a_favor",
         "intradia": "a_favor"
       },
@@ -1955,17 +1934,7 @@
         ],
         "state": null
       },
-      "noticia": {
-        "acao": "ignorar",
-        "score": 0.122,
-        "fontes": 1,
-        "manchetes": [
-          "Ibovespa e dólar contrariam a lógica do mercado e sobem na semana; entenda"
-        ],
-        "evidencia": [
-          "uma única fonte"
-        ]
-      },
+      "noticia": null,
       "tendencia": {
         "direcao": "alta",
         "score": 55,
@@ -2141,7 +2110,7 @@
       "votos": {
         "balanco": "contra",
         "analogos": "neutro",
-        "noticias": "neutro",
+        "noticias": null,
         "tendencia": "a_favor",
         "intradia": "a_favor"
       },
@@ -2260,17 +2229,7 @@
         ],
         "state": null
       },
-      "noticia": {
-        "acao": "ignorar",
-        "score": 0.122,
-        "fontes": 1,
-        "manchetes": [
-          "Ibovespa e dólar contrariam a lógica do mercado e sobem na semana; entenda"
-        ],
-        "evidencia": [
-          "uma única fonte"
-        ]
-      },
+      "noticia": null,
       "tendencia": {
         "direcao": "alta",
         "score": 85,
