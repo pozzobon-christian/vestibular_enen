@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-11-16T03:53:06.203686+00:00",
+  "gerado_em": "2026-11-16T03:56:38.324754+00:00",
   "janela_horas": 14.0,
   "regime": {
     "BOVA11": {
@@ -27,50 +27,50 @@
     {
       "simbolo": "ES=F",
       "nome": "S&P 500 futuro",
-      "ultimo": 7585.0,
+      "ultimo": 7565.25,
       "data": "2026-11-16",
-      "var_1d": 0.0003,
-      "var_5d": 0.0014
+      "var_1d": -0.0023,
+      "var_5d": -0.0012
     },
     {
       "simbolo": "NQ=F",
       "nome": "Nasdaq futuro",
-      "ultimo": 28037.5,
+      "ultimo": 27885.0,
       "data": "2026-11-16",
-      "var_1d": 0.0001,
-      "var_5d": 0.0008
+      "var_1d": -0.0053,
+      "var_5d": -0.0046
     },
     {
       "simbolo": "YM=F",
       "nome": "Dow futuro",
-      "ultimo": 52469.0,
+      "ultimo": 52419.0,
       "data": "2026-11-16",
-      "var_1d": 0.001,
-      "var_5d": -0.0006
+      "var_1d": 0.0,
+      "var_5d": -0.0015
     },
     {
       "simbolo": "^N225",
       "nome": "Nikkei",
-      "ultimo": 60182.5,
+      "ultimo": 59937.64,
       "data": "2026-11-16",
-      "var_1d": -0.0157,
-      "var_5d": 0.0239
+      "var_1d": -0.0197,
+      "var_5d": 0.0198
     },
     {
       "simbolo": "^HSI",
       "nome": "Hang Seng",
-      "ultimo": 23866.29,
+      "ultimo": 23846.25,
       "data": "2026-11-16",
-      "var_1d": 0.0097,
-      "var_5d": -0.0238
+      "var_1d": 0.0088,
+      "var_5d": -0.0247
     },
     {
       "simbolo": "000001.SS",
       "nome": "Xangai",
-      "ultimo": 3610.5,
+      "ultimo": 3620.0,
       "data": "2026-11-16",
-      "var_1d": -0.0066,
-      "var_5d": -0.0137
+      "var_1d": -0.0039,
+      "var_5d": -0.0111
     },
     {
       "simbolo": "^STOXX50E",
@@ -91,34 +91,34 @@
     {
       "simbolo": "CL=F",
       "nome": "WTI",
-      "ultimo": 88.12,
+      "ultimo": 87.96,
       "data": "2026-11-16",
-      "var_1d": -0.005,
-      "var_5d": 0.0146
+      "var_1d": -0.0068,
+      "var_5d": 0.0128
     },
     {
       "simbolo": "BZ=F",
       "nome": "Brent",
-      "ultimo": 95.14,
+      "ultimo": 94.85,
       "data": "2026-11-16",
-      "var_1d": -0.0073,
-      "var_5d": 0.0278
+      "var_1d": -0.0103,
+      "var_5d": 0.0246
     },
     {
       "simbolo": "GC=F",
       "nome": "Ouro",
-      "ultimo": 3889.2,
+      "ultimo": 3874.4,
       "data": "2026-11-16",
-      "var_1d": 0.0007,
-      "var_5d": -0.0548
+      "var_1d": -0.0031,
+      "var_5d": -0.0584
     },
     {
       "simbolo": "HG=F",
       "nome": "Cobre",
-      "ultimo": 6.03,
+      "ultimo": 6.02,
       "data": "2026-11-16",
-      "var_1d": -0.0074,
-      "var_5d": -0.0465
+      "var_1d": -0.0093,
+      "var_5d": -0.0483
     },
     {
       "simbolo": "TIO=F",
@@ -131,10 +131,10 @@
     {
       "simbolo": "DX-Y.NYB",
       "nome": "Índice dólar",
-      "ultimo": 103.44,
+      "ultimo": 103.43,
       "data": "2026-11-16",
-      "var_1d": 0.0003,
-      "var_5d": 0.0176
+      "var_1d": 0.0002,
+      "var_5d": 0.0175
     },
     {
       "simbolo": "^TNX",
@@ -986,6 +986,14 @@
   ],
   "manchetes": [
     {
+      "quando": "2026-11-16T01:35:00+00:00",
+      "fonte": "Bloomberg (via Google News)",
+      "mercado": "global",
+      "titulo": "Quant Trader’s Singapore Profit Surge Mints Two Indian Billionaires - Bloomberg",
+      "sentimento": 0.46,
+      "tickers": []
+    },
+    {
       "quando": "2026-11-15T22:29:00+00:00",
       "fonte": "Google News: petróleo e minério",
       "mercado": "commodities",
@@ -1068,6 +1076,14 @@
       "tickers": []
     },
     {
+      "quando": "2026-11-16T03:44:07+00:00",
+      "fonte": "Google News Brasil: mercado",
+      "mercado": "BR",
+      "titulo": "China aumenta exigência de reservas em dólar para frear alta do yuan - Valor Econômico",
+      "sentimento": 0.19,
+      "tickers": []
+    },
+    {
       "quando": "2026-11-15T19:30:00+00:00",
       "fonte": "CoinDesk",
       "mercado": "cripto",
@@ -1120,6 +1136,30 @@
       ]
     },
     {
+      "quando": "2026-11-16T03:35:00+00:00",
+      "fonte": "Google News: petróleo e minério",
+      "mercado": "commodities",
+      "titulo": "Australia calls out China iron ore trade 'manipulation' - CNA",
+      "sentimento": 0,
+      "tickers": []
+    },
+    {
+      "quando": "2026-11-16T03:00:08+00:00",
+      "fonte": "Google News: petróleo e minério",
+      "mercado": "commodities",
+      "titulo": "Brent Crude Could Fall To US$67 By End 2027 As Global Oil Market Swings To Surplus - BusinessToday Malaysia",
+      "sentimento": 0,
+      "tickers": []
+    },
+    {
+      "quando": "2026-11-16T02:45:00+00:00",
+      "fonte": "Bloomberg (via Google News)",
+      "mercado": "global",
+      "titulo": "Oil Steadies With Iranian Attack on Base in Bahrain in Focus - Bloomberg",
+      "sentimento": 0,
+      "tickers": []
+    },
+    {
       "quando": "2026-11-16T02:33:07+00:00",
       "fonte": "Cointelegraph",
       "mercado": "cripto",
@@ -1146,50 +1186,10 @@
       "tickers": []
     },
     {
-      "quando": "2026-11-16T01:48:00+00:00",
-      "fonte": "Bloomberg (via Google News)",
-      "mercado": "global",
-      "titulo": "Morgan Stanley ‘Max Overweight’ Global Stocks on Intact AI Cycle - Bloomberg",
-      "sentimento": 0,
-      "tickers": []
-    },
-    {
-      "quando": "2026-11-16T01:36:00+00:00",
-      "fonte": "Bloomberg (via Google News)",
-      "mercado": "global",
-      "titulo": "Jensen Huang Comeback Report Primes Nvidia Shares for a Bounce - Bloomberg",
-      "sentimento": 0,
-      "tickers": []
-    },
-    {
-      "quando": "2026-11-16T01:25:00+00:00",
+      "quando": "2026-11-16T02:00:00+00:00",
       "fonte": "Reuters Business (via Google News)",
       "mercado": "global",
-      "titulo": "Gold edges higher as investors await Warsh remarks for rate signals - Reuters",
-      "sentimento": 0,
-      "tickers": []
-    },
-    {
-      "quando": "2026-11-16T01:22:00+00:00",
-      "fonte": "Google News: petróleo e minério",
-      "mercado": "commodities",
-      "titulo": "Brent oil may fall to $94.09 - TradingView",
-      "sentimento": 0,
-      "tickers": []
-    },
-    {
-      "quando": "2026-11-16T01:20:00+00:00",
-      "fonte": "Bloomberg (via Google News)",
-      "mercado": "global",
-      "titulo": "Asian Stocks Brace for AI Pressure, Data Dump: Markets Wrap - Bloomberg",
-      "sentimento": 0,
-      "tickers": []
-    },
-    {
-      "quando": "2026-11-16T01:15:00+00:00",
-      "fonte": "Google News: petróleo e minério",
-      "mercado": "commodities",
-      "titulo": "Environmental investigator seeks answers about Brent Industries explosion and MC Tank chemical release - wtol.com",
+      "titulo": "Oil prices fall on expectations of coming supply surplus - Reuters",
       "sentimento": 0,
       "tickers": []
     }

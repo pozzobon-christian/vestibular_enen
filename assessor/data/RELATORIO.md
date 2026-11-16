@@ -1,10 +1,10 @@
 # Monitor de influenciadores
 
-Atualizado em 2026-11-16 02:51 UTC
+Atualizado em 2026-11-16 03:56 UTC
 
 | Posts | Autores | Campanhas | Sinais | Preços |
 |---|---|---|---|---|
-| 1990 | 816 | 73 | 675 | 20063 |
+| 1990 | 816 | 73 | 748 | 20063 |
 
 ## Campanhas nos últimos 30 dias
 
@@ -87,13 +87,13 @@ Atualizado em 2026-11-16 02:51 UTC
 ## Grupos descobertos (postam juntos em 2+ campanhas)
 
 - stocktwits:15fingers, stocktwits:_thumper_, stocktwits:albertaft, stocktwits:alphabull_10m, stocktwits:amberajax2point0, stocktwits:analystnick, stocktwits:analystnick3, stocktwits:august_west, stocktwits:avgomysugardaddy, stocktwits:bigbreakingwire, stocktwits:billionaire2025, stocktwits:billybobcleetus, stocktwits:bitcoin20k, stocktwits:blatter, stocktwits:blueblood12, stocktwits:boomskitothemoonski, stocktwits:bullishaaff, stocktwits:bullsbearsrtds, stocktwits:bullseyegains, stocktwits:championinvestor, stocktwits:charizardforlife, stocktwits:cjjay, stocktwits:coffeerocks, stocktwits:coolandfast, stocktwits:corderooptions, stocktwits:cpstrag, stocktwits:deadpresidentstrader, stocktwits:deer_admin, stocktwits:doctorwho, stocktwits:dsaad11, stocktwits:earleeretirement, stocktwits:elonmusk101, stocktwits:evanmedeiros, stocktwits:flickted, stocktwits:gayforsanjay, stocktwits:getmoney305, stocktwits:goodmeyer83, stocktwits:graphtistics, stocktwits:greenecotrader, stocktwits:hal9000x, stocktwits:highlife718, stocktwits:holymofgod, stocktwits:honeybadgerdgaf, stocktwits:hownow, stocktwits:hyde1634, stocktwits:hydrogenh2, stocktwits:ihatemylifesavings, stocktwits:intutivetrader, stocktwits:iplaysmart, stocktwits:iseeshit, stocktwits:jaredsotken, stocktwits:jay_trades_, stocktwits:jdrebel, stocktwits:jedi_master, stocktwits:jensennvda, stocktwits:jeremymartin007, stocktwits:jesushatespedos, stocktwits:jimsonlima, stocktwits:joemon, stocktwits:jrh34, stocktwits:kansascash, stocktwits:keepcalmcarryon, stocktwits:kyzw, stocktwits:leonardobonacci, stocktwits:leonx, stocktwits:lieutenantjoe, stocktwits:lighthouseprofit, stocktwits:littlecat, stocktwits:lizlovesreddit, stocktwits:luvtoretire, stocktwits:marcusmccord, stocktwits:maribor, stocktwits:meandu2, stocktwits:meatballtrades, stocktwits:michaelm2136, stocktwits:milkingalgoseverymonday, stocktwits:mobjm, stocktwits:money_gainz2210, stocktwits:moneyblisss, stocktwits:moneymannow, stocktwits:mos543, stocktwits:mrnobody617, stocktwits:natoshisakomato, stocktwits:nedflandersiii, stocktwits:nelsonwaters0110, stocktwits:nuclear_elvis, stocktwits:nzbro, stocktwits:onlyfibs, stocktwits:optionsplayers, stocktwits:paidguruworstnightmare, stocktwits:pizzabunny88, stocktwits:pottromonkey50, stocktwits:poundinburgers, stocktwits:pullbackalerts, stocktwits:puzzles32, stocktwits:reaperblade2233, stocktwits:sa449, stocktwits:shamrocktrading, stocktwits:silvertrader47, stocktwits:skimman, stocktwits:sol_meek, stocktwits:sovihabi, stocktwits:spdrman10, stocktwits:starrbarr, stocktwits:stay_woke, stocktwits:stockhold_syndrome, stocktwits:stocktwits, stocktwits:stowtrader, stocktwits:stubbybrown, stocktwits:sub_zero0, stocktwits:swarmofdogs, stocktwits:tapereader007, stocktwits:thefourwind, stocktwits:thegreekwizard, stocktwits:themagnificentferengi, stocktwits:ticklemymacd, stocktwits:topoptionsaierts, stocktwits:tradernumber0, stocktwits:tradova_markets, stocktwits:transcendasset, stocktwits:tripplett, stocktwits:trumpdisasterprez, stocktwits:trumpwon2024, stocktwits:ub3r5pank, stocktwits:unmaker, stocktwits:updownsidways, stocktwits:us_stock_bubble2026, stocktwits:ver13, stocktwits:vigilantetrader1, stocktwits:warrent_jr, stocktwits:web30, stocktwits:xbt, stocktwits:xxxfactor, stocktwits:zinminmg
-- stocktwits:beaniebaby, stocktwits:jmoney20010, stocktwits:optiongenius, stocktwits:william914
 - stocktwits:bruh5, stocktwits:btcc_exchange, stocktwits:jbtradez254, stocktwits:ljmoney
-- stocktwits:fawl3r, stocktwits:notfinancialadvicedummy
-- stocktwits:samsoncapital, stocktwits:talkmarkets
-- stocktwits:cryptomartin, stocktwits:merid
-- stocktwits:flywithfitz81, stocktwits:prophetmargins
+- stocktwits:beaniebaby, stocktwits:jmoney20010, stocktwits:optiongenius, stocktwits:william914
 - stocktwits:alphatrader30000, stocktwits:hootertrades
+- stocktwits:flywithfitz81, stocktwits:prophetmargins
+- stocktwits:fawl3r, stocktwits:notfinancialadvicedummy
+- stocktwits:cryptomartin, stocktwits:merid
+- stocktwits:samsoncapital, stocktwits:talkmarkets
 
 ## Quem posta primeiro
 
@@ -144,7 +144,7 @@ Atualizado em 2026-11-16 02:51 UTC
 - AMZN: 22
 - GLD: 18
 
-## Última execução: 2026-11-16T02:51:25.216582+00:00 (277 posts novos, 19 erros)
+## Última execução: 2026-11-16T03:56:38.052873+00:00 (17 posts novos, 23 erros)
 
 - x:pablospyer x:@pablospyer: RuntimeError: defina X_BEARER_TOKEN (API v2 do X)
 - reddit:farialimabets reddit:farialimabets: HTTPError: 403 Client Error: Blocked for url: https://www.reddit.com/r/farialimabets/new.json?limit=50
@@ -161,7 +161,8 @@ Atualizado em 2026-11-16 02:51 UTC
 - reddit:wallstreetbets reddit:wallstreetbets: HTTPError: 403 Client Error: Blocked for url: https://www.reddit.com/r/wallstreetbets/new.json?limit=50
 - reddit:stocks reddit:stocks: HTTPError: 403 Client Error: Blocked for url: https://www.reddit.com/r/stocks/new.json?limit=50
 - reddit:options reddit:options: HTTPError: 403 Client Error: Blocked for url: https://www.reddit.com/r/options/new.json?limit=50
+- stocktwits:stocktwits-watch stocktwits:AAPL: HTTPError: 403 Client Error: Forbidden for url: https://api.stocktwits.com/api/2/streams/symbol/AAPL.json
+- stocktwits:stocktwits-watch stocktwits:TSLA: HTTPError: 403 Client Error: Forbidden for url: https://api.stocktwits.com/api/2/streams/symbol/TSLA.json
+- stocktwits:stocktwits-watch stocktwits:NVDA: HTTPError: 403 Client Error: Forbidden for url: https://api.stocktwits.com/api/2/streams/symbol/NVDA.json
+- stocktwits:stocktwits-watch stocktwits:BTC.X: HTTPError: 403 Client Error: Forbidden for url: https://api.stocktwits.com/api/2/streams/symbol/BTC.X.json
 - noticias Banco Central Notícias: HTTPError: 400 Client Error: Bad Request for url: https://www.bcb.gov.br/api/feed/sitefeeds/noticias
-- noticias Federal Reserve Press: ParseError: not well-formed (invalid token): line 1, column 1
-- calendario SPY: HTTPError: 404 Client Error: Not Found for url: https://query2.finance.yahoo.com/v10/financ
-- calendario QQQ: HTTPError: 404 Client Error: Not Found for url: https://query2.finance.yahoo.com/v10/financ

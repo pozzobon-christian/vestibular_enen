@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-11-16T02:51:25.376010+00:00",
+  "gerado_em": "2026-11-16T03:56:38.214349+00:00",
   "janela_dias": 30,
   "posts_na_janela": 1716,
   "campanhas": [
@@ -1993,36 +1993,36 @@
       "stocktwits:zinminmg"
     ],
     [
-      "stocktwits:beaniebaby",
-      "stocktwits:jmoney20010",
-      "stocktwits:optiongenius",
-      "stocktwits:william914"
-    ],
-    [
       "stocktwits:bruh5",
       "stocktwits:btcc_exchange",
       "stocktwits:jbtradez254",
       "stocktwits:ljmoney"
     ],
     [
-      "stocktwits:fawl3r",
-      "stocktwits:notfinancialadvicedummy"
+      "stocktwits:beaniebaby",
+      "stocktwits:jmoney20010",
+      "stocktwits:optiongenius",
+      "stocktwits:william914"
     ],
     [
-      "stocktwits:samsoncapital",
-      "stocktwits:talkmarkets"
-    ],
-    [
-      "stocktwits:cryptomartin",
-      "stocktwits:merid"
+      "stocktwits:alphatrader30000",
+      "stocktwits:hootertrades"
     ],
     [
       "stocktwits:flywithfitz81",
       "stocktwits:prophetmargins"
     ],
     [
-      "stocktwits:alphatrader30000",
-      "stocktwits:hootertrades"
+      "stocktwits:fawl3r",
+      "stocktwits:notfinancialadvicedummy"
+    ],
+    [
+      "stocktwits:cryptomartin",
+      "stocktwits:merid"
+    ],
+    [
+      "stocktwits:samsoncapital",
+      "stocktwits:talkmarkets"
     ]
   ],
   "lideres": [
@@ -2092,8 +2092,8 @@
     "posts": 1990,
     "autores": 816,
     "campanhas": 73,
-    "sinais": 675,
+    "sinais": 748,
     "precos": 20063,
-    "ultima_execucao": "2026-11-16T02:51:25.216582+00:00"
+    "ultima_execucao": "2026-11-16T03:56:38.052873+00:00"
   }
 }
