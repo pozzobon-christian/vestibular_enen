@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-11-16T03:56:37.992937+00:00",
+  "gerado_em": "2026-11-16T08:58:22.620888+00:00",
   "setups": [
     {
       "ticker": "BBAS3",
@@ -1255,10 +1255,10 @@
         "analogos": "a_favor",
         "noticias": "neutro",
         "tendencia": "contra",
-        "intradia": "neutro"
+        "intradia": "contra"
       },
       "a_favor": 1,
-      "contra": 1,
+      "contra": 2,
       "stop": null,
       "alvo": null,
       "porteiro": null,
@@ -1358,11 +1358,11 @@
       },
       "noticia": {
         "acao": "ignorar",
-        "score": -0.007,
+        "score": -0.024,
         "fontes": 4,
         "manchetes": [
-          "Bitcoin Tumbles to Four-Month Low as Liquidations Accelerate - Bloomberg",
-          "Bitcoin falls to four-month low near $62K as crypto selloff deepens"
+          "Bitcoin falls to four-month low near $62K as crypto selloff deepens",
+          "Mercado Bitcoin retoma operações com Pix em reais a partir de terça-feira (17)"
         ],
         "evidencia": [
           "sentimento fraco"
@@ -1377,21 +1377,23 @@
       },
       "intradia": {
         "ticker": "BTC",
-        "kind": "nenhum",
-        "direction": "neutro",
-        "last": 65080.5898,
+        "kind": "rompimento_faixa_baixa",
+        "direction": "venda",
+        "last": 64405.3711,
         "gap_pct": -0.0002,
-        "vwap": 64987.7126,
-        "above_vwap": true,
+        "vwap": 64714.7153,
+        "above_vwap": false,
         "opening_range": [
           64918.9609,
           65357.4688
         ],
-        "volume_ratio": 0.35,
-        "range_vs_atr": 0.48,
-        "stop": null,
-        "target": null,
-        "notes": []
+        "volume_ratio": 0.46,
+        "range_vs_atr": 0.64,
+        "stop": 65357.47,
+        "target": 62663.47,
+        "notes": [
+          "volume fraco: setup sem confirmação"
+        ]
       }
     },
     {
@@ -1561,10 +1563,10 @@
         "analogos": "a_favor",
         "noticias": "neutro",
         "tendencia": "contra",
-        "intradia": "neutro"
+        "intradia": "contra"
       },
       "a_favor": 1,
-      "contra": 1,
+      "contra": 2,
       "stop": null,
       "alvo": null,
       "porteiro": null,
@@ -1664,13 +1666,14 @@
       },
       "noticia": {
         "acao": "ignorar",
-        "score": -0.126,
-        "fontes": 1,
+        "score": -0.063,
+        "fontes": 2,
         "manchetes": [
-          "Bitcoin recua neste domingo (15) e acumula perdas na semana; veja os preços das criptomoedas"
+          "Bitcoin recua neste domingo (15) e acumula perdas na semana; veja os preços das criptomoedas",
+          "Vitalik Buterin flips to ‘total bull’ on a faster route to quantum-safe Ethereum"
         ],
         "evidencia": [
-          "uma única fonte"
+          "sentimento fraco"
         ]
       },
       "tendencia": {
@@ -1682,21 +1685,23 @@
       },
       "intradia": {
         "ticker": "ETH",
-        "kind": "nenhum",
-        "direction": "neutro",
-        "last": 1825.74,
+        "kind": "rompimento_faixa_baixa",
+        "direction": "venda",
+        "last": 1804.3,
         "gap_pct": -0.0001,
-        "vwap": 1819.8324,
-        "above_vwap": true,
+        "vwap": 1814.4758,
+        "above_vwap": false,
         "opening_range": [
           1821.3101,
           1837.25
         ],
-        "volume_ratio": 0.38,
-        "range_vs_atr": 0.51,
-        "stop": null,
-        "target": null,
-        "notes": []
+        "volume_ratio": 0.6,
+        "range_vs_atr": 0.52,
+        "stop": 1837.25,
+        "target": 1736.77,
+        "notes": [
+          "volume fraco: setup sem confirmação"
+        ]
       }
     },
     {
@@ -3222,10 +3227,10 @@
         "analogos": "a_favor",
         "noticias": "neutro",
         "tendencia": "contra",
-        "intradia": "neutro"
+        "intradia": "contra"
       },
       "a_favor": 1,
-      "contra": 1,
+      "contra": 2,
       "stop": null,
       "alvo": null,
       "porteiro": null,
@@ -3328,7 +3333,8 @@
         "score": 0.0,
         "fontes": 1,
         "manchetes": [
-          "Bitcoin falls to four-month low near $62K as crypto selloff deepens"
+          "Bitcoin falls to four-month low near $62K as crypto selloff deepens",
+          "Harvard, Dartmouth keep Bitcoin ETF stakes steady as fund gains 42% in Q3"
         ],
         "evidencia": [
           "uma única fonte"
@@ -3343,21 +3349,23 @@
       },
       "intradia": {
         "ticker": "SOL",
-        "kind": "nenhum",
-        "direction": "neutro",
-        "last": 72.09,
+        "kind": "rompimento_faixa_baixa",
+        "direction": "venda",
+        "last": 70.81,
         "gap_pct": -0.0003,
-        "vwap": 71.87,
-        "above_vwap": true,
+        "vwap": 71.2097,
+        "above_vwap": false,
         "opening_range": [
           71.98,
           72.74
         ],
-        "volume_ratio": 0.01,
-        "range_vs_atr": 0.63,
-        "stop": null,
-        "target": null,
-        "notes": []
+        "volume_ratio": 0.11,
+        "range_vs_atr": 0.85,
+        "stop": 72.74,
+        "target": 68.23,
+        "notes": [
+          "volume fraco: setup sem confirmação"
+        ]
       }
     },
     {
@@ -4110,7 +4118,7 @@
       "preco_vs_mm200": -0.0482,
       "drawdown_120d": -0.1745,
       "tstat_60d": 0.27,
-      "vix": 19.299999237060547,
+      "vix": 19.899999618530273,
       "regras": "sem compras novas em ações; caixa 50%+; proteção (dólar, ouro, puts quando liberadas); vendas a favor da tendência com risco definido"
     },
     "US": {
@@ -4120,7 +4128,7 @@
       "preco_vs_mm200": 0.0307,
       "drawdown_120d": -0.0317,
       "tstat_60d": -2.6,
-      "vix": 19.299999237060547,
+      "vix": 19.899999618530273,
       "regras": "metade do tamanho; preferir operações curtas e FIIs de papel; caixa 30%+"
     },
     "cripto": {
@@ -4130,7 +4138,7 @@
       "preco_vs_mm200": -0.1045,
       "drawdown_120d": -0.2459,
       "tstat_60d": -8.88,
-      "vix": 19.299999237060547,
+      "vix": 19.899999618530273,
       "regras": "sem compras novas em ações; caixa 50%+; proteção (dólar, ouro, puts quando liberadas); vendas a favor da tendência com risco definido"
     }
   },
@@ -4145,7 +4153,7 @@
   },
   "ordens_planejadas": [
     {
-      "data": "2026-11-16",
+      "data": "em observação (bloqueada pelo porteiro)",
       "conta": "BTG",
       "ticker": "WEGE3",
       "mercado": "BR",
@@ -4156,7 +4164,7 @@
       "stop": 47.0,
       "risco_brl": 8.62,
       "valor_brl": 102.62,
-      "porque": "Única ação da lista em tendência de alta num mercado em queda: preço acima das médias de 50 e 200 dias, subiu 24% em 20 dias enquanto o Ibovespa caiu 16%. Empresa global, de motores e automação, com histórico de retorno alto e dívida baixa. Compramos força relativa, não barganha.",
+      "porque": "A leitura de 'alta' vinha só das médias de 50 e 200 dias. O motor de tendência (regressão de 60 dias) diz baixa fraca (t-stat -2,4, ADX 18 = lateral), o balanço tem score 59 (limite é 60) e não há rompimento intradiário. Zero camadas a favor: pelo porteiro, não entra. Fica na lista de observação.",
       "passo_a_passo": [
         "Abra o app do BTG e entre em Investimentos > Renda variável > Home broker.",
         "Na busca, digite WEGE3F (o F é o mercado fracionário, que permite comprar 1 ação por vez).",
@@ -4174,7 +4182,7 @@
       "risco_pct": -0.084,
       "razao_ganho_risco": 2.0,
       "prazo_esperado": "2 a 6 semanas para o alvo de R$ 59,93; se a tendência seguir, a posição fica aberta com stop móvel",
-      "condicao": "abertura ≤ R$ 52,90; após 10h15; Focus às 8h25 não bloqueia",
+      "condicao": "volta a ser ordem quando: regressão de 60 dias deixar de ser negativa (t-stat > -1) OU estabilização (fechamento acima da máxima de 3 dias e da média de 5) E 2 camadas a favor",
       "porteiro": {
         "aprovada": false,
         "motivos": [],
@@ -4196,7 +4204,7 @@
       }
     },
     {
-      "data": "2026-11-16 (condicional)",
+      "data": "suspensa (bloqueada pelo porteiro)",
       "conta": "Foxbit",
       "ticker": "BTC",
       "mercado": "cripto",
@@ -4224,7 +4232,7 @@
       "prazo_esperado": "4 a 12 semanas para +20% sobre o preço médio da grade; a grade completa leva 1 a 3 semanas",
       "preco_ref_usd": 65305,
       "preco_ref_brl": 370279,
-      "condicao": "SÓ se BTC estiver acima de US$ 65.000 às 10h de segunda e não tiver feito nova mínima nas 12h anteriores; abaixo disso a grade inteira é suspensa e reavaliada",
+      "condicao": "grade volta quando houver estabilização (fechamento acima da máxima de 3 dias e da média de 5) E composto de risco cripto deixar de ser negativo (IBIT, COIN/MSTR, mínima de 20d)",
       "porteiro": {
         "aprovada": false,
         "motivos": [
@@ -4234,7 +4242,7 @@
           "contra a tendência (baixa 85) sem estabilização",
           "composto de risco cripto negativo (ibit_saindo, proxies_em_baixa) sem estabilização",
           "regime defensivo: compra só com tendência própria de alta ou estabilização",
-          "votação insuficiente: 0 a favor, 1 contra (precisa 2+ a favor e 0 contra)"
+          "votação insuficiente: 0 a favor, 2 contra (precisa 2+ a favor e 0 contra)"
         ],
         "estabilizacao": false,
         "stop_estrutural": 63563.3833,
@@ -4243,14 +4251,14 @@
           "analogos": "neutro",
           "balanco": null,
           "noticias": "neutro",
-          "intradia": "neutro"
+          "intradia": "contra"
         },
         "tendencia": "baixa 85",
         "ultimo": 65305.281
       }
     },
     {
-      "data": "2026-11-16 (alternativa)",
+      "data": "2026-11-16",
       "conta": "BTG",
       "ticker": "PETR4",
       "mercado": "BR",
@@ -4266,9 +4274,9 @@
       "ganho_possivel_brl": 8.52,
       "ganho_possivel_pct": 0.094,
       "razao_ganho_risco": 2.0,
-      "prazo_esperado": "1 a 5 pregões (operação curta); se virar tendência, stop móvel",
+      "prazo_esperado": "1 a 5 pregões; se virar tendência, stop móvel",
       "alvo_regra": "2x ATR (R$ 2,13) acima; stop 1x ATR abaixo",
-      "condicao": "entra no lugar do BTC se a grade de cripto for suspensa; abertura ≤ R$ 46,20; após 10h15; Brent não pode estar abaixo de US$ 93",
+      "condicao": "abertura ≤ R$ 46,20; após 10h15; Brent ≥ US$ 93; única ordem do dia",
       "porque": "Cruzamento com 3 camadas a favor: balanço score 97 após lucro de R$ 39,7 bi (P/L 2,3), tendência de alta e rompimento da faixa de abertura na sexta. Brent a US$ 95 com tensão EUA-Irã. Contra: regime defensivo e volume fraco na sexta (0,44x), por isso só 2 ações e prazo curto.",
       "passo_a_passo": [
         "Home broker do BTG > buscar PETR4F (fracionário).",
@@ -4297,7 +4305,7 @@
       }
     },
     {
-      "data": "aguardando gatilho",
+      "data": "em observação (bloqueada pelo porteiro)",
       "conta": "BTG",
       "ticker": "MXRF11",
       "mercado": "BR",
@@ -4347,7 +4355,7 @@
       }
     },
     {
-      "data": "7 dias após a 1ª parcela",
+      "data": "suspensa (bloqueada pelo porteiro)",
       "conta": "Foxbit",
       "ticker": "BTC",
       "mercado": "cripto",
@@ -4375,7 +4383,7 @@
           "contra a tendência (baixa 85) sem estabilização",
           "composto de risco cripto negativo (ibit_saindo, proxies_em_baixa) sem estabilização",
           "regime defensivo: compra só com tendência própria de alta ou estabilização",
-          "votação insuficiente: 0 a favor, 1 contra (precisa 2+ a favor e 0 contra)"
+          "votação insuficiente: 0 a favor, 2 contra (precisa 2+ a favor e 0 contra)"
         ],
         "estabilizacao": false,
         "stop_estrutural": 63563.3833,
@@ -4384,11 +4392,12 @@
           "analogos": "neutro",
           "balanco": null,
           "noticias": "neutro",
-          "intradia": "neutro"
+          "intradia": "contra"
         },
         "tendencia": "baixa 85",
         "ultimo": 65305.281
-      }
+      },
+      "condicao": "grade volta quando houver estabilização (fechamento acima da máxima de 3 dias e da média de 5) E composto de risco cripto deixar de ser negativo (IBIT, COIN/MSTR, mínima de 20d)"
     }
   ]
 }
