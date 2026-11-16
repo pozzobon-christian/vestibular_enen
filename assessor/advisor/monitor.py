@@ -338,12 +338,13 @@ def short_ops(db: MonitorDB, with_fundamentals: bool = True, with_intraday: bool
         })
     setups.sort(key=lambda x: (-(x["a_favor"] - x["contra"]) if x["operacao"] == "compra" else -(x["contra"] - x["a_favor"]) if x["operacao"] == "venda" else 1, x["ticker"]))
     out = {"gerado_em": datetime.now(timezone.utc).isoformat(), "setups": setups, "erros": errors,
-           "regimes": regimes, "risco_cripto": crypto_risk, "ordens_planejadas": gate_planned_orders(db, regimes, crypto_risk)}
+           "regimes": regimes, "risco_cripto": crypto_risk,
+           "ordens_planejadas": gate_planned_orders(db, regimes, crypto_risk, {x["ticker"]: x for x in setups})}
     Path("data/operacoes-curtas.json").write_text(json.dumps(out, ensure_ascii=False, indent=2, default=str), encoding="utf-8")
     return out
 
 
-def gate_planned_orders(db: MonitorDB, regimes: dict, crypto_risk: dict | None) -> list[dict]:
+def gate_planned_orders(db: MonitorDB, regimes: dict, crypto_risk: dict | None, setups: dict | None = None) -> list[dict]:
     """Passa cada ordem planejada em carteira.json pelo porteiro de tese e grava o veredito."""
     from .signals import trend_report, find_analogs, order_gate, stabilization, structural_stop
     from .signals.technical import atr
@@ -367,6 +368,11 @@ def gate_planned_orders(db: MonitorDB, regimes: dict, crypto_risk: dict | None) 
                  "analogos": None, "balanco": None, "noticias": None, "intradia": None}
         if an and 20 in an.horizons:
             h = an.horizons[20]; votes["analogos"] = "a_favor" if h["p_positivo"] >= 0.65 and h["mediana"] > 0.01 else "contra" if h["p_positivo"] <= 0.35 else "neutro"
+        su = (setups or {}).get(t)
+        if su:   # reaproveita balanço, notícias e intradia calculados no cruzamento
+            for k in ("balanco", "noticias", "intradia"):
+                if su["votos"].get(k) is not None:
+                    votes[k] = su["votos"][k]
         if o.get("tese_manual_camadas"):
             votes.update(o["tese_manual_camadas"])
         stab = stabilization(hi, lo, cl, side)
