@@ -47,7 +47,22 @@ details summary{cursor:pointer;color:var(--acc);font-size:13px;list-style:none}d
 </header>
 <div id="stamp" style="padding:8px 16px;font-size:13px;border-bottom:1px solid var(--line);background:var(--soft)"></div>
 <main>
-  <section class="card wide" id="ordens"><h2>Operações: o que fazer, por quê e o próximo movimento <span class="stampsec mut" style="float:right;text-transform:none;letter-spacing:0;font-weight:400"></span></h2><div id="ordensbox"></div></section>
+  <section class="card wide" id="hoje" style="border-color:var(--acc);border-width:2px"><h2>Hoje: o que fazer agora <span id="hojedata" class="mut" style="float:right;text-transform:none;letter-spacing:0;font-weight:400"></span></h2>
+    <div id="hojeregime" class="filters"></div>
+    <div id="hojebox"></div>
+    <details style="margin-top:8px"><summary>▸ Como interagir com o assessor</summary>
+      <ul style="margin:6px 0 0 18px;font-size:13px;line-height:1.6">
+        <li><b>"rode agora"</b> ou <b>"atualiza o painel"</b>: coleta nova, cruzamento, porteiro e republicação deste painel.</li>
+        <li><b>"executei PETR4, 2 ações a 45,30, taxa 0,02"</b>: registra a operação em carteira.json; o painel passa a mostrar posição, stop e alvo.</li>
+        <li><b>"quais as apostas de hoje"</b>: resposta com conta, ativo, quantidade, limite, alvo, ganho, risco, razão e prazo.</li>
+        <li><b>"por que X foi bloqueada"</b>: o porteiro explica camada por camada.</li>
+        <li><b>"adiciona o ativo X à lista"</b> / <b>"cadastra o influenciador @y"</b>: entram na próxima coleta.</li>
+        <li><b>"muda o limite de risco para 1%"</b>: altera plano.json e o porteiro passa a usar.</li>
+        <li>Automático: briefing 5h55, fechamento 17h47 (dias úteis), cripto sábado 10h23. Cada um chega como mensagem nesta conversa.</li>
+        <li>Botão <b>⟳ Atualizar informações</b> no topo: tenta buscar dados mais novos; dentro do claude.ai mostra a data dos dados embutidos.</li>
+      </ul></details>
+  </section>
+  <section class="card wide" id="ordens"><h2>Ordens: ativas hoje primeiro; bloqueadas e suspensas recolhidas <span class="stampsec mut" style="float:right;text-transform:none;letter-spacing:0;font-weight:400"></span></h2><div id="ordensbox"></div></section>
 
   <section class="card wide" id="regime"><h2>Regime de mercado: como a carteira deve se posicionar</h2><div id="regimebox" class="kpis"></div></section>
   <section class="card wide" id="curtas"><h2>Operações curtas (1 a 5 pregões): cruzamento de balanço, análogos, notícias, tendência e intradia <span id="stampcurtas" class="mut" style="float:right;text-transform:none;letter-spacing:0;font-weight:400"></span></h2><div class="scroll"><table id="curtastab"><thead><tr><th>Ativo</th><th>Operação</th><th>Balanço</th><th>Análogos (20d)</th><th>Notícias</th><th>Tendência</th><th>Intradia</th><th>Alvo / stop</th><th>Ganho / risco</th><th>Prazo</th></tr></thead><tbody></tbody></table></div><p class="mut" style="font-size:12px">Regra: só vira operação com 2 ou mais camadas a favor e nenhuma contra. Clique no ativo para a cotação; passe o mouse nas células para o detalhe.</p></section>
@@ -128,7 +143,24 @@ function render(d) {
   $('#stamp').innerHTML = `<b>Dados atualizados em ${whenFull(d.gerado_em)}</b> · última coleta ${whenFull(lastRun)} · preços de fechamento até ${dateBR(lastPx)}${d.usdbrl ? ` · dólar R$ ${fmt(d.usdbrl, 3)}` : ''} · notícia mais recente ${when(lastNews)} · post mais recente ${when(lastPost)} · a página mostra a hora de Brasília`;
   const c = d.carteira || {};
   const ordens = c.ordens_planejadas || [];
-  $('#ordensbox').innerHTML = ordens.map(o => `<div class="ordem"><h3>${esc(o.data)} · ${esc(o.conta)} · ${LADO[o.lado] || esc(o.lado)} de ${tickerLink(o.ticker, o.mercado)} ${o.quantidade ? `· ${o.quantidade} ${o.mercado === 'BR' && /\d$/.test(o.ticker) && o.ticker.endsWith('11') ? 'cotas' : 'ações'}` : ''}${o.valor_brl ? ` · R$ ${fmt(o.valor_brl, 0)}` : ''}</h3>
+  const todayISO = new Date(new Date().toLocaleString('en-US', {timeZone: TZ})).toISOString().slice(0, 10);
+  const isToday = o => String(o.data || '').startsWith(todayISO);
+  const approved = o => o.porteiro && o.porteiro.aprovada === true;
+  const hoje = ordens.filter(o => isToday(o));
+  const regs = (d.operacoes_curtas || {}).regimes || {};
+  $('#hojedata').textContent = new Date().toLocaleDateString('pt-BR', {timeZone: TZ, weekday: 'long', day: '2-digit', month: '2-digit', year: 'numeric'}) + ' · dados de ' + whenFull(d.gerado_em);
+  $('#hojeregime').innerHTML = Object.entries(regs).map(([k, r]) => `<span class="tag ${r.modo === 'ofensivo' ? 'inicio' : r.modo === 'defensivo' ? 'reversao' : 'lotada'}">${esc({BR: 'Ibovespa', US: 'S&P', cripto: 'Cripto'}[k] || k)}: ${esc(r.regime)} · ${esc(r.modo)}</span>`).join('') + (d.operacoes_curtas && d.operacoes_curtas.risco_cripto ? `<span class="tag ${d.operacoes_curtas.risco_cripto.negativo ? 'reversao' : 'inicio'}">risco cripto ${d.operacoes_curtas.risco_cripto.negativo ? 'negativo' : 'ok'}</span>` : '');
+  const okHoje = hoje.filter(approved), condHoje = hoje.filter(o => approved(o) && /condicional/.test(o.data)), blocked = ordens.filter(o => !isToday(o));
+  const cal = d.calendario || [];
+  const evHoje = cal.filter(e => e.data === todayISO && e.impacto !== 'baixo');
+  const curtas = ((d.operacoes_curtas || {}).setups || []).filter(x => x.operacao === 'compra' || x.operacao === 'venda');
+  $('#hojebox').innerHTML = (okHoje.length ? `<p><b>${okHoje.length} ordem(ns) aprovada(s) pelo porteiro para hoje.</b> ${condHoje.length ? 'Atenção: condicional, confira a condição antes de enviar.' : ''}</p>` : `<p class="dn"><b>Nenhuma ordem para hoje.</b> ${hoje.length ? 'A(s) ordem(ns) do dia foi(ram) bloqueada(s) pelo porteiro; veja os motivos abaixo.' : 'Nada aprovado; o resto está em observação.'}</p>`)
+    + `<table><thead><tr><th>Status</th><th>Conta</th><th>Ativo</th><th>Ordem</th><th>Condição</th><th>Alvo / ganho</th><th>Stop / risco</th><th>Prazo</th></tr></thead><tbody>${hoje.map(o => `<tr><td>${approved(o) ? '<span class="tag inicio">aprovada</span>' : '<span class="tag reversao">bloqueada</span>'}</td><td>${esc(o.conta)}</td><td>${tickerLink(o.ticker, o.mercado)}</td><td>${LADO[o.lado] || esc(o.lado)} ${o.quantidade ? o.quantidade + ' un.' : ''}${o.valor_brl ? ' · R$ ' + fmt(o.valor_brl, 0) : ''}${o.preco_ref ? '<div class="mut" style="font-size:11px">limite: último negócio (ref. ' + fmt(o.preco_ref) + ')</div>' : ''}</td><td style="font-size:12px">${esc(o.condicao || '–')}</td><td>${o.alvo_preco ? fmt(o.alvo_preco) : (o.alvo_pct ? '+' + (o.alvo_pct * 100).toFixed(0) + '%' : '–')}<div class="up" style="font-size:11px">${o.ganho_possivel_brl != null ? 'R$ ' + fmt(o.ganho_possivel_brl) + ' (' + (o.ganho_possivel_pct * 100).toFixed(1) + '%)' : ''}</div></td><td>${o.stop ? fmt(o.stop) : (o.stop_pct ? (o.stop_pct * 100).toFixed(0) + '%' : '–')}<div class="dn" style="font-size:11px">${o.risco_brl != null ? 'R$ ' + fmt(o.risco_brl) + ' (' + ((o.risco_pct || 0) * 100).toFixed(1) + '%)' : ''}</div></td><td style="font-size:12px">${esc(o.prazo_esperado || '–')}</td></tr>`).join('') || '<tr><td colspan="8" class="mut">sem ordens datadas para hoje</td></tr>'}</tbody></table>`
+    + `<p style="margin:10px 0 0;font-size:13px"><b>Calendário de hoje:</b> ${evHoje.length ? evHoje.map(e => `${esc(e.hora_brt || '')} ${esc(e.evento)} (${esc(e.impacto)})`).join(' · ') : 'nenhum evento de impacto médio ou alto'}.</p>`
+    + `<p style="margin:4px 0 0;font-size:13px"><b>Candidatos do cruzamento hoje:</b> ${curtas.length ? curtas.map(x => `${tickerLink(x.ticker, x.mercado)} <span class="${x.operacao === 'compra' ? 'up' : 'dn'}">${esc(x.operacao)}</span> (${x.a_favor} a favor, ${x.contra} contra)`).join(' · ') : 'nenhum com 2+ camadas a favor'}. Vendas valem como "não comprar" neste estágio.</p>`
+    + `<p style="margin:4px 0 0;font-size:13px"><b>Em observação / suspensas:</b> ${blocked.map(o => `${tickerLink(o.ticker, o.mercado)} <span class="mut">(${esc(String(o.data).replace(/\(.*\)/, '').trim())})</span>`).join(' · ') || 'nenhuma'}.</p>`;
+  const ordenados = [...hoje, ...blocked];
+  $('#ordensbox').innerHTML = ordenados.map(o => `<div class="ordem"${isToday(o) ? '' : ' style="opacity:.85"'}><h3>${esc(o.data)} · ${esc(o.conta)} · ${LADO[o.lado] || esc(o.lado)} de ${tickerLink(o.ticker, o.mercado)} ${o.quantidade ? `· ${o.quantidade} ${o.mercado === 'BR' && /\d$/.test(o.ticker) && o.ticker.endsWith('11') ? 'cotas' : 'ações'}` : ''}${o.valor_brl ? ` · R$ ${fmt(o.valor_brl, 0)}` : ''}</h3>
     <div class="meta">${o.preco_ref ? `<span>preço de referência R$ ${fmt(o.preco_ref)}</span>` : ''}${o.limite_max_abertura ? `<span>só se a abertura ≤ R$ ${fmt(o.limite_max_abertura)}</span>` : ''}${o.condicao ? `<span>condição: ${esc(o.condicao)}</span>` : ''}${o.stop ? `<span>stop R$ ${fmt(o.stop)}</span>` : ''}${o.stop_pct ? `<span>stop ${(o.stop_pct * 100).toFixed(0)}%</span>` : ''}</div>
     <div class="meta" style="font-size:13px;color:var(--ink)">${o.alvo_preco ? `<span>🎯 alvo R$ ${fmt(o.alvo_preco)}</span>` : ''}${o.ganho_possivel_brl != null ? `<span class="up">ganho possível R$ ${fmt(o.ganho_possivel_brl)} (${(o.ganho_possivel_pct * 100).toFixed(1).replace('.', ',')}%)</span>` : ''}${o.risco_brl != null ? `<span class="dn">risco R$ ${fmt(o.risco_brl)} (${((o.risco_pct || 0) * 100).toFixed(1).replace('.', ',')}%)</span>` : ''}${o.razao_ganho_risco ? `<span>ganho/risco ${fmt(o.razao_ganho_risco, 1)}x</span>` : ''}</div>
     ${o.alvo_regra ? `<p class="mut" style="font-size:12px;margin:0 0 6px"><b>Como o alvo foi definido:</b> ${esc(o.alvo_regra)}</p>` : ''}
@@ -137,6 +169,8 @@ function render(d) {
     <p><b>Por quê:</b> ${esc(o.porque || '')}</p>
     <details><summary>▸ Como fazer (${(o.passo_a_passo || []).length} passos, clique para abrir)</summary><ol>${(o.passo_a_passo || []).map(p => `<li>${esc(p)}</li>`).join('')}</ol></details>
     <p><b>Próximo movimento:</b> ${esc(o.proximo_movimento || '')}</p></div>`).join('') || '<p class="mut">Nenhuma ordem planejada.</p>';
+  // recolhe as que não são de hoje
+  document.querySelectorAll('#ordensbox .ordem').forEach((el, i) => { if (!isToday(ordenados[i])) { const w = document.createElement('details'); w.innerHTML = `<summary>▸ ${esc(ordenados[i].ticker)} · ${esc(ordenados[i].data)} (clique para ver)</summary>`; el.parentNode.insertBefore(w, el); w.appendChild(el); } });
   $('#kpis').innerHTML = [
     ['Patrimônio', 'R$ ' + fmt(c.patrimonio_brl)], ['Aportes', 'R$ ' + fmt(c.aportes_brl)], ['Caixa', 'R$ ' + fmt(c.caixa_brl)],
     ['Investido', 'R$ ' + fmt(c.investido_brl)], ['Resultado total', `<span class="${(c.pnl_total_brl || 0) >= 0 ? 'up' : 'dn'}">R$ ${fmt(c.pnl_total_brl)}</span>`],

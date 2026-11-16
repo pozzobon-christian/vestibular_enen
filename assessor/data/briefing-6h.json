@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-11-16T08:58:58.702448+00:00",
+  "gerado_em": "2026-11-16T11:40:19.819635+00:00",
   "janela_horas": 14.0,
   "regime": {
     "BOVA11": {
@@ -939,14 +939,14 @@
   "sinais_de_noticia": [
     {
       "ticker": "BTC",
-      "score": -0.04,
-      "n_items": 6,
-      "n_sources": 3,
+      "score": -0.076,
+      "n_items": 5,
+      "n_sources": 2,
       "headlines": [
-        "Dia do Joalheiro: Programa SP Produz reconhece cadeias produtivas do setor que movimenta a economia",
         "US sellers drive Bitcoin crash, Jensen plots Nvidia comeback: Hodler’s Digest",
         "Luxor CEO warns of AI ‘dark forest’ after Bitcoin miner hijack",
-        "Bitcoin’s biggest bet is now a drop below $60,000, not a rally above $100,000"
+        "Bitcoin’s biggest bet is now a drop below $60,000, not a rally above $100,000",
+        "Bitcoin miners were hijacked and their BTC rewards redirected to an attacker"
       ],
       "evidence": {
         "ticker": "BTC",
@@ -1145,14 +1145,6 @@
       "tickers": []
     },
     {
-      "quando": "2026-11-15T19:30:00+00:00",
-      "fonte": "CoinDesk",
-      "mercado": "cripto",
-      "titulo": "Did prediction markets call the U.S. midterm election?: State of Crypto",
-      "sentimento": -0.18,
-      "tickers": []
-    },
-    {
       "quando": "2026-11-16T05:01:17+00:00",
       "fonte": "CoinDesk",
       "mercado": "cripto",
@@ -1179,36 +1171,10 @@
       "tickers": []
     },
     {
-      "quando": "2026-11-15T21:33:45+00:00",
-      "fonte": "Livecoins",
-      "mercado": "cripto",
-      "titulo": "Dia do Joalheiro: Programa SP Produz reconhece cadeias produtivas do setor que movimenta a economia",
-      "sentimento": 0.14,
-      "tickers": [
-        "BTC"
-      ]
-    },
-    {
-      "quando": "2026-11-15T20:41:59+00:00",
-      "fonte": "InfoMoney",
-      "mercado": "BR",
-      "titulo": "Enem 2026: carros elétricos, genética e meio ambiente marcam 2º dia; veja o que caiu",
-      "sentimento": -0.1,
-      "tickers": []
-    },
-    {
       "quando": "2026-11-16T08:00:00+00:00",
       "fonte": "InfoMoney",
       "mercado": "BR",
       "titulo": "Construção civil cresce, mas lida com juro restritivo e apagão de mão de obra",
-      "sentimento": 0.05,
-      "tickers": []
-    },
-    {
-      "quando": "2026-11-15T20:32:13+00:00",
-      "fonte": "InfoMoney",
-      "mercado": "BR",
-      "titulo": "Inflação nos EUA está ‘caminhando na direção errada’, alerta dirigente do Fed",
       "sentimento": 0.05,
       "tickers": []
     },
@@ -1233,6 +1199,43 @@
       "fonte": "Money Times",
       "mercado": "BR",
       "titulo": "Brasil e Filipinas firmam acordo para ampliar cooperação agropecuária",
+      "sentimento": 0,
+      "tickers": []
+    },
+    {
+      "quando": "2026-11-16T08:27:39+00:00",
+      "fonte": "Cointelegraph",
+      "mercado": "cripto",
+      "titulo": "Harvard, Dartmouth keep Bitcoin ETF stakes steady as fund gains 42% in Q3",
+      "sentimento": 0,
+      "tickers": [
+        "BTC",
+        "SOL"
+      ]
+    },
+    {
+      "quando": "2026-11-16T08:18:03+00:00",
+      "fonte": "CoinDesk",
+      "mercado": "cripto",
+      "titulo": "Vitalik Buterin flips to ‘total bull’ on a faster route to quantum-safe Ethereum",
+      "sentimento": 0,
+      "tickers": [
+        "ETH"
+      ]
+    },
+    {
+      "quando": "2026-11-16T08:17:23+00:00",
+      "fonte": "Bloomberg (via Google News)",
+      "mercado": "global",
+      "titulo": "Nvidia Fallout, Anthropic Listing Squeeze Asian Chip Stocks Anew - Bloomberg.com",
+      "sentimento": 0,
+      "tickers": []
+    },
+    {
+      "quando": "2026-11-16T08:16:00+00:00",
+      "fonte": "Money Times",
+      "mercado": "BR",
+      "titulo": "Canadá promete até US$ 392,5 milhões para fundo de florestas tropicais liderado pelo Brasil",
       "sentimento": 0,
       "tickers": []
     }

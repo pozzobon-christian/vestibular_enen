@@ -51,9 +51,9 @@
         "votos": {
           "tendencia": "neutro",
           "analogos": "neutro",
-          "balanco": null,
+          "balanco": "neutro",
           "noticias": null,
-          "intradia": null
+          "intradia": "neutro"
         },
         "tendencia": "baixa 25",
         "ultimo": 51.31
@@ -98,7 +98,7 @@
           "contra a tendência (baixa 85) sem estabilização",
           "composto de risco cripto negativo (ibit_saindo, proxies_em_baixa) sem estabilização",
           "regime defensivo: compra só com tendência própria de alta ou estabilização",
-          "votação insuficiente: 0 a favor, 1 contra (precisa 2+ a favor e 0 contra)"
+          "votação insuficiente: 0 a favor, 2 contra (precisa 2+ a favor e 0 contra)"
         ],
         "estabilizacao": false,
         "stop_estrutural": 63563.3833,
@@ -106,8 +106,8 @@
           "tendencia": "contra",
           "analogos": "neutro",
           "balanco": null,
-          "noticias": null,
-          "intradia": null
+          "noticias": "neutro",
+          "intradia": "contra"
         },
         "tendencia": "baixa 85",
         "ultimo": 65305.281
@@ -142,19 +142,19 @@
       ],
       "proximo_movimento": "Se não entrar hoje, reavaliar terça após o resultado da NVDA (que afeta o apetite a risco). Alvo R$ 49,56 em até 5 pregões; se bater, realizar metade e subir o stop para o custo. Brent abaixo de US$ 90 = sair.",
       "porteiro": {
-        "aprovada": false,
-        "motivos": [],
-        "bloqueios": [
-          "votação insuficiente: 1 a favor, 0 contra (precisa 2+ a favor e 0 contra)"
+        "aprovada": true,
+        "motivos": [
+          "votação 3 a favor, 0 contra; tendência alta 70; regime defensivo"
         ],
+        "bloqueios": [],
         "estabilizacao": false,
         "stop_estrutural": 43.1693,
         "votos": {
           "tendencia": "a_favor",
           "analogos": "neutro",
-          "balanco": null,
+          "balanco": "a_favor",
           "noticias": null,
-          "intradia": null
+          "intradia": "a_favor"
         },
         "tendencia": "alta 70",
         "ultimo": 45.3
@@ -204,7 +204,7 @@
           "analogos": "contra",
           "balanco": null,
           "noticias": null,
-          "intradia": null
+          "intradia": "neutro"
         },
         "tendencia": "baixa 85",
         "ultimo": 8.75
@@ -239,7 +239,7 @@
           "contra a tendência (baixa 85) sem estabilização",
           "composto de risco cripto negativo (ibit_saindo, proxies_em_baixa) sem estabilização",
           "regime defensivo: compra só com tendência própria de alta ou estabilização",
-          "votação insuficiente: 0 a favor, 1 contra (precisa 2+ a favor e 0 contra)"
+          "votação insuficiente: 0 a favor, 2 contra (precisa 2+ a favor e 0 contra)"
         ],
         "estabilizacao": false,
         "stop_estrutural": 63563.3833,
@@ -247,8 +247,8 @@
           "tendencia": "contra",
           "analogos": "neutro",
           "balanco": null,
-          "noticias": null,
-          "intradia": null
+          "noticias": "neutro",
+          "intradia": "contra"
         },
         "tendencia": "baixa 85",
         "ultimo": 65305.281
