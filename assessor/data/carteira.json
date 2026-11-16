@@ -114,13 +114,13 @@
       }
     },
     {
-      "data": "2026-11-16 (condicional)",
+      "data": "em observação (bloqueada pelo porteiro)",
       "conta": "BTG",
       "ticker": "PETR4",
       "mercado": "BR",
       "lado": "buy",
       "quantidade": 2,
-      "preco_ref": 45.3,
+      "preco_ref": 43.9,
       "limite_max_abertura": 46.2,
       "stop": 43.17,
       "alvo_preco": 49.56,
@@ -132,7 +132,7 @@
       "razao_ganho_risco": 2.0,
       "prazo_esperado": "1 a 5 pregões; se virar tendência, stop móvel",
       "alvo_regra": "2x ATR (R$ 2,13) acima; stop 1x ATR abaixo",
-      "condicao": "Brent caiu 3,2% na madrugada para US$ 92,74, abaixo da condição de US$ 93. Só entra se às 10h15 o Brent estiver de volta acima de US$ 93 E PETR4 abrir até R$ 46,20 E a abertura não romper a mínima de sexta (R$ 44,70). Caso contrário, nenhuma ordem hoje.",
+      "condicao": "a condição do Brent (>= US$ 93) falhou às 10h15 e a ordem não foi enviada; hoje o intradia virou contra (rompimento de baixa). Volta quando: Brent > US$ 93, fechamento acima da máxima de 3 dias e 2+ camadas a favor sem contra",
       "porque": "Cruzamento com 3 camadas a favor: balanço score 97 após lucro de R$ 39,7 bi (P/L 2,3), tendência de alta e rompimento da faixa de abertura na sexta. Brent a US$ 95 com tensão EUA-Irã. Contra: regime defensivo e volume fraco na sexta (0,44x), por isso só 2 ações e prazo curto.",
       "passo_a_passo": [
         "Home broker do BTG > buscar PETR4F (fracionário).",
@@ -140,7 +140,7 @@
         "Após executar: Vender > Stop: disparo 43,20, limite 43,17, validade 30 dias.",
         "Anotar preço e taxa e enviar para registro."
       ],
-      "proximo_movimento": "Se não entrar hoje, reavaliar terça após o resultado da NVDA (que afeta o apetite a risco). Alvo R$ 49,56 em até 5 pregões; se bater, realizar metade e subir o stop para o custo. Brent abaixo de US$ 90 = sair.",
+      "proximo_movimento": "Reavaliar após o resultado da NVDA (17/11) e com o VIX abaixo de 22. Enquanto o Ibovespa estiver em modo defensivo e com rebaixamento do Morgan Stanley no radar, PETR4 só com estabilização.",
       "porteiro": {
         "aprovada": true,
         "motivos": [
