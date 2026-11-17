@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-11-16T20:51:46.659502+00:00",
+  "gerado_em": "2026-11-17T08:58:40.615308+00:00",
   "janela_horas": 14.0,
   "regime": {
     "BOVA11": {
@@ -9,17 +9,17 @@
       "preco_vs_mm200": -0.0652,
       "drawdown_120d": -0.1896,
       "tstat_60d": -0.28,
-      "vix": 23.799999237060547,
+      "vix": 23.290000915527344,
       "regras": "sem compras novas em ações; caixa 50%+; proteção (dólar, ouro, puts quando liberadas); vendas a favor da tendência com risco definido"
     },
     "SPY": {
       "regime": "lateral",
       "modo": "neutro",
-      "preco_vs_mm50": -0.0319,
-      "preco_vs_mm200": 0.01,
-      "drawdown_120d": -0.0509,
-      "tstat_60d": -3.1,
-      "vix": 23.799999237060547,
+      "preco_vs_mm50": -0.0313,
+      "preco_vs_mm200": 0.0106,
+      "drawdown_120d": -0.0502,
+      "tstat_60d": -3.09,
+      "vix": 23.290000915527344,
       "regras": "metade do tamanho; preferir operações curtas e FIIs de papel; caixa 30%+"
     }
   },
@@ -27,114 +27,114 @@
     {
       "simbolo": "ES=F",
       "nome": "S&P 500 futuro",
-      "ultimo": 7427.25,
-      "data": "2026-11-16",
-      "var_1d": -0.0205,
-      "var_5d": -0.0194
+      "ultimo": 7419.25,
+      "data": "2026-11-17",
+      "var_1d": -0.0027,
+      "var_5d": -0.0166
     },
     {
       "simbolo": "NQ=F",
       "nome": "Nasdaq futuro",
-      "ultimo": 27255.75,
-      "data": "2026-11-16",
-      "var_1d": -0.0278,
-      "var_5d": -0.0271
+      "ultimo": 27260.25,
+      "data": "2026-11-17",
+      "var_1d": -0.0009,
+      "var_5d": -0.0207
     },
     {
       "simbolo": "YM=F",
       "nome": "Dow futuro",
-      "ultimo": 51600.0,
-      "data": "2026-11-16",
-      "var_1d": -0.0156,
-      "var_5d": -0.0171
+      "ultimo": 51446.0,
+      "data": "2026-11-17",
+      "var_1d": -0.0043,
+      "var_5d": -0.0166
     },
     {
       "simbolo": "^N225",
       "nome": "Nikkei",
-      "ultimo": 59662.02,
-      "data": "2026-11-16",
-      "var_1d": -0.0242,
-      "var_5d": 0.0151
+      "ultimo": 58860.43,
+      "data": "2026-11-17",
+      "var_1d": -0.0134,
+      "var_5d": -0.0264
     },
     {
       "simbolo": "^HSI",
       "nome": "Hang Seng",
-      "ultimo": 23753.84,
-      "data": "2026-11-16",
-      "var_1d": 0.0049,
-      "var_5d": -0.0284
+      "ultimo": 23508.17,
+      "data": "2026-11-17",
+      "var_1d": -0.0103,
+      "var_5d": -0.0427
     },
     {
       "simbolo": "000001.SS",
       "nome": "Xangai",
-      "ultimo": 3602.57,
-      "data": "2026-11-16",
-      "var_1d": -0.0087,
-      "var_5d": -0.0159
+      "ultimo": 3584.58,
+      "data": "2026-11-17",
+      "var_1d": -0.005,
+      "var_5d": -0.0216
     },
     {
       "simbolo": "^STOXX50E",
       "nome": "Euro Stoxx 50",
-      "ultimo": 6348.35,
-      "data": "2026-11-16",
-      "var_1d": -0.006,
-      "var_5d": 0.0092
+      "ultimo": 6294.37,
+      "data": "2026-11-17",
+      "var_1d": -0.0085,
+      "var_5d": -0.0053
     },
     {
       "simbolo": "^FTSE",
       "nome": "FTSE 100",
-      "ultimo": 10881.55,
-      "data": "2026-11-16",
-      "var_1d": -0.0019,
-      "var_5d": 0.0091
+      "ultimo": 10798.69,
+      "data": "2026-11-17",
+      "var_1d": -0.0076,
+      "var_5d": 0.0044
     },
     {
       "simbolo": "CL=F",
       "nome": "WTI",
-      "ultimo": 85.59,
-      "data": "2026-11-16",
-      "var_1d": -0.0335,
-      "var_5d": -0.0145
+      "ultimo": 85.39,
+      "data": "2026-11-17",
+      "var_1d": -0.0038,
+      "var_5d": -0.0076
     },
     {
       "simbolo": "BZ=F",
       "nome": "Brent",
-      "ultimo": 92.38,
-      "data": "2026-11-16",
-      "var_1d": -0.0361,
-      "var_5d": -0.0021
+      "ultimo": 92.05,
+      "data": "2026-11-17",
+      "var_1d": -0.0042,
+      "var_5d": 0.0061
     },
     {
       "simbolo": "GC=F",
       "nome": "Ouro",
-      "ultimo": 3856.8,
-      "data": "2026-11-16",
-      "var_1d": -0.0076,
-      "var_5d": -0.0626
+      "ultimo": 3873.9,
+      "data": "2026-11-17",
+      "var_1d": 0.0054,
+      "var_5d": -0.0388
     },
     {
       "simbolo": "HG=F",
       "nome": "Cobre",
       "ultimo": 5.99,
-      "data": "2026-11-16",
-      "var_1d": -0.0149,
-      "var_5d": -0.0536
+      "data": "2026-11-17",
+      "var_1d": -0.002,
+      "var_5d": -0.0376
     },
     {
       "simbolo": "TIO=F",
       "nome": "Minério de ferro",
-      "ultimo": 91.48,
-      "data": "2026-11-13",
-      "var_1d": -0.0013,
-      "var_5d": -0.0132
+      "ultimo": 90.91,
+      "data": "2026-11-16",
+      "var_1d": -0.0062,
+      "var_5d": -0.0194
     },
     {
       "simbolo": "DX-Y.NYB",
       "nome": "Índice dólar",
-      "ultimo": 103.58,
-      "data": "2026-11-16",
-      "var_1d": 0.0017,
-      "var_5d": 0.019
+      "ultimo": 103.46,
+      "data": "2026-11-17",
+      "var_1d": -0.0008,
+      "var_5d": 0.0121
     },
     {
       "simbolo": "^TNX",
@@ -147,34 +147,34 @@
     {
       "simbolo": "^VIX",
       "nome": "VIX",
-      "ultimo": 23.8,
-      "data": "2026-11-16",
-      "var_1d": 0.2332,
-      "var_5d": 0.1948
+      "ultimo": 23.29,
+      "data": "2026-11-17",
+      "var_1d": 0.0166,
+      "var_5d": 0.1968
     },
     {
       "simbolo": "EWZ",
       "nome": "ETF Brasil (NY)",
-      "ultimo": 30.99,
+      "ultimo": 30.92,
       "data": "2026-11-16",
-      "var_1d": -0.0383,
-      "var_5d": -0.0498
+      "var_1d": -0.0403,
+      "var_5d": -0.0518
     },
     {
       "simbolo": "PBR",
       "nome": "Petrobras ADR",
-      "ultimo": 17.35,
+      "ultimo": 17.3,
       "data": "2026-11-16",
-      "var_1d": -0.0537,
-      "var_5d": -0.0542
+      "var_1d": -0.0567,
+      "var_5d": -0.0572
     },
     {
       "simbolo": "VALE",
       "nome": "Vale ADR",
-      "ultimo": 10.51,
+      "ultimo": 10.46,
       "data": "2026-11-16",
-      "var_1d": -0.0633,
-      "var_5d": -0.122
+      "var_1d": -0.0677,
+      "var_5d": -0.1261
     },
     {
       "simbolo": "ITUB",
@@ -195,10 +195,10 @@
     {
       "simbolo": "IBIT",
       "nome": "ETF Bitcoin iShares",
-      "ultimo": 36.76,
+      "ultimo": 36.79,
       "data": "2026-11-16",
-      "var_1d": -0.0559,
-      "var_5d": -0.1313
+      "var_1d": -0.0552,
+      "var_5d": -0.1307
     }
   ],
   "tendencias": [
@@ -208,24 +208,24 @@
       "direction": "baixa",
       "score": 100,
       "slope_annual_pct": -75.9,
-      "tstat": -9.05,
+      "tstat": -9.04,
       "adx": 34.1,
       "above_sma50": false,
       "above_sma200": false,
       "breakout": "rompimento_baixa_20d",
       "momentum": {
         "m_12_1": -0.3884,
-        "m_3": -0.1758,
-        "m_1": -0.304,
-        "m_1w": -0.1145
+        "m_3": -0.1805,
+        "m_1": -0.3079,
+        "m_1w": -0.1195
       },
       "vol": {
-        "vol_20d": 0.6818,
-        "vol_100d": 0.7317,
-        "razao": 0.9318
+        "vol_20d": 0.6862,
+        "vol_100d": 0.7328,
+        "razao": 0.9365
       },
       "notes": [
-        "inclinação 60d significativa (t=-9.1)",
+        "inclinação 60d significativa (t=-9.0)",
         "ADX 34: tendência com força",
         "rompimento_baixa_20d"
       ]
@@ -235,7 +235,7 @@
       "mercado": "BR",
       "direction": "baixa",
       "score": 85,
-      "slope_annual_pct": -59.9,
+      "slope_annual_pct": -59.8,
       "tstat": -3.42,
       "adx": 38.5,
       "above_sma50": false,
@@ -243,14 +243,14 @@
       "breakout": "nenhum",
       "momentum": {
         "m_12_1": 0.038,
-        "m_3": -0.1888,
-        "m_1": -0.3725,
-        "m_1w": -0.124
+        "m_3": -0.1866,
+        "m_1": -0.3708,
+        "m_1w": -0.1216
       },
       "vol": {
-        "vol_20d": 1.0995,
-        "vol_100d": 0.6069,
-        "razao": 1.8117
+        "vol_20d": 1.0998,
+        "vol_100d": 0.6068,
+        "razao": 1.8124
       },
       "notes": [
         "inclinação 60d significativa (t=-3.4)",
@@ -263,22 +263,22 @@
       "mercado": "BR",
       "direction": "baixa",
       "score": 85,
-      "slope_annual_pct": -16.4,
-      "tstat": -2.85,
+      "slope_annual_pct": -16.6,
+      "tstat": -2.88,
       "adx": 32.4,
       "above_sma50": false,
       "above_sma200": false,
       "breakout": "nenhum",
       "momentum": {
         "m_12_1": 0.1159,
-        "m_3": -0.0175,
-        "m_1": -0.0912,
-        "m_1w": 0.0104
+        "m_3": -0.0219,
+        "m_1": -0.0952,
+        "m_1w": 0.0059
       },
       "vol": {
-        "vol_20d": 0.3101,
-        "vol_100d": 0.2042,
-        "razao": 1.5186
+        "vol_20d": 0.3142,
+        "vol_100d": 0.2056,
+        "razao": 1.5277
       },
       "notes": [
         "inclinação 60d significativa (t=-2.9)",
@@ -320,21 +320,21 @@
       "direction": "baixa",
       "score": 85,
       "slope_annual_pct": -19.5,
-      "tstat": -2.67,
+      "tstat": -2.68,
       "adx": 38.0,
       "above_sma50": false,
       "above_sma200": false,
       "breakout": "nenhum",
       "momentum": {
         "m_12_1": 0.0075,
-        "m_3": -0.1137,
-        "m_1": -0.1644,
-        "m_1w": -0.0652
+        "m_3": -0.1141,
+        "m_1": -0.1647,
+        "m_1w": -0.0656
       },
       "vol": {
-        "vol_20d": 0.2994,
-        "vol_100d": 0.1951,
-        "razao": 1.5344
+        "vol_20d": 0.2997,
+        "vol_100d": 0.1953,
+        "razao": 1.535
       },
       "notes": [
         "inclinação 60d significativa (t=-2.7)",
@@ -347,22 +347,22 @@
       "mercado": "US",
       "direction": "baixa",
       "score": 85,
-      "slope_annual_pct": -57.5,
-      "tstat": -5.88,
+      "slope_annual_pct": -57.4,
+      "tstat": -5.89,
       "adx": 43.5,
       "above_sma50": false,
       "above_sma200": false,
       "breakout": "nenhum",
       "momentum": {
         "m_12_1": 0.1459,
-        "m_3": -0.2923,
-        "m_1": -0.2738,
-        "m_1w": -0.1296
+        "m_3": -0.2894,
+        "m_1": -0.2708,
+        "m_1w": -0.1261
       },
       "vol": {
-        "vol_20d": 0.5294,
-        "vol_100d": 0.4155,
-        "razao": 1.2742
+        "vol_20d": 0.5268,
+        "vol_100d": 0.4145,
+        "razao": 1.2708
       },
       "notes": [
         "inclinação 60d significativa (t=-5.9)",
@@ -382,14 +382,14 @@
       "breakout": "nenhum",
       "momentum": {
         "m_12_1": 0.1667,
-        "m_3": -0.0773,
-        "m_1": -0.0673,
-        "m_1w": -0.0255
+        "m_3": -0.0777,
+        "m_1": -0.0677,
+        "m_1w": -0.0259
       },
       "vol": {
-        "vol_20d": 0.36,
-        "vol_100d": 0.238,
-        "razao": 1.5123
+        "vol_20d": 0.3603,
+        "vol_100d": 0.2382,
+        "razao": 1.513
       },
       "notes": [
         "inclinação 60d significativa (t=-3.6)",
@@ -402,26 +402,26 @@
       "mercado": "cripto",
       "direction": "baixa",
       "score": 85,
-      "slope_annual_pct": -50.2,
-      "tstat": -8.88,
-      "adx": 28.3,
+      "slope_annual_pct": -55.3,
+      "tstat": -10.46,
+      "adx": 30.0,
       "above_sma50": false,
       "above_sma200": false,
       "breakout": "nenhum",
       "momentum": {
-        "m_12_1": 0.2121,
-        "m_3": -0.1499,
-        "m_1": -0.1842,
-        "m_1w": -0.1142
+        "m_12_1": 0.1695,
+        "m_3": -0.1706,
+        "m_1": -0.1898,
+        "m_1w": -0.1235
       },
       "vol": {
-        "vol_20d": 0.4171,
-        "vol_100d": 0.3581,
-        "razao": 1.1647
+        "vol_20d": 0.4109,
+        "vol_100d": 0.3583,
+        "razao": 1.1469
       },
       "notes": [
-        "inclinação 60d significativa (t=-8.9)",
-        "ADX 28: tendência com força"
+        "inclinação 60d significativa (t=-10.5)",
+        "ADX 30: tendência com força"
       ]
     },
     {
@@ -429,26 +429,26 @@
       "mercado": "cripto",
       "direction": "baixa",
       "score": 85,
-      "slope_annual_pct": -73.8,
-      "tstat": -15.83,
-      "adx": 33.7,
+      "slope_annual_pct": -76.5,
+      "tstat": -17.88,
+      "adx": 34.8,
       "above_sma50": false,
       "above_sma200": false,
       "breakout": "nenhum",
       "momentum": {
-        "m_12_1": 0.1998,
-        "m_3": -0.2593,
-        "m_1": -0.2116,
-        "m_1w": -0.1053
+        "m_12_1": 0.1644,
+        "m_3": -0.2765,
+        "m_1": -0.216,
+        "m_1w": -0.1148
       },
       "vol": {
-        "vol_20d": 0.5778,
-        "vol_100d": 0.4938,
-        "razao": 1.1702
+        "vol_20d": 0.5718,
+        "vol_100d": 0.4939,
+        "razao": 1.1577
       },
       "notes": [
-        "inclinação 60d significativa (t=-15.8)",
-        "ADX 34: tendência com força"
+        "inclinação 60d significativa (t=-17.9)",
+        "ADX 35: tendência com força"
       ]
     },
     {
@@ -456,26 +456,26 @@
       "mercado": "cripto",
       "direction": "baixa",
       "score": 85,
-      "slope_annual_pct": -82.2,
-      "tstat": -14.78,
-      "adx": 42.1,
+      "slope_annual_pct": -84.8,
+      "tstat": -17.32,
+      "adx": 43.4,
       "above_sma50": false,
       "above_sma200": false,
       "breakout": "nenhum",
       "momentum": {
-        "m_12_1": 0.2364,
-        "m_3": -0.268,
-        "m_1": -0.2818,
-        "m_1w": -0.1268
+        "m_12_1": 0.1851,
+        "m_3": -0.3023,
+        "m_1": -0.2902,
+        "m_1w": -0.1408
       },
       "vol": {
-        "vol_20d": 0.5501,
-        "vol_100d": 0.5173,
-        "razao": 1.0633
+        "vol_20d": 0.545,
+        "vol_100d": 0.5155,
+        "razao": 1.0571
       },
       "notes": [
-        "inclinação 60d significativa (t=-14.8)",
-        "ADX 42: tendência com força"
+        "inclinação 60d significativa (t=-17.3)",
+        "ADX 43: tendência com força"
       ]
     },
     {
@@ -483,7 +483,7 @@
       "mercado": "BR",
       "direction": "alta",
       "score": 70,
-      "slope_annual_pct": 838.1,
+      "slope_annual_pct": 841.2,
       "tstat": 4.07,
       "adx": 31.8,
       "above_sma50": false,
@@ -491,14 +491,14 @@
       "breakout": "nenhum",
       "momentum": {
         "m_12_1": 0.3402,
-        "m_3": 0.9003,
-        "m_1": -0.2849,
-        "m_1w": 0.2723
+        "m_3": 0.9156,
+        "m_1": -0.2791,
+        "m_1w": 0.2825
       },
       "vol": {
-        "vol_20d": 2.4703,
-        "vol_100d": 1.3431,
-        "razao": 1.8392
+        "vol_20d": 2.4686,
+        "vol_100d": 1.3424,
+        "razao": 1.839
       },
       "notes": [
         "inclinação 60d significativa (t=4.1)",
@@ -511,22 +511,22 @@
       "mercado": "BR",
       "direction": "alta",
       "score": 70,
-      "slope_annual_pct": 40.1,
-      "tstat": 3.22,
+      "slope_annual_pct": 40.4,
+      "tstat": 3.25,
       "adx": 26.6,
       "above_sma50": false,
       "above_sma200": true,
       "breakout": "nenhum",
       "momentum": {
         "m_12_1": 0.7593,
-        "m_3": 0.0621,
-        "m_1": -0.089,
-        "m_1w": 0.0485
+        "m_3": 0.0682,
+        "m_1": -0.0837,
+        "m_1w": 0.0546
       },
       "vol": {
-        "vol_20d": 0.4438,
-        "vol_100d": 0.3759,
-        "razao": 1.1805
+        "vol_20d": 0.4424,
+        "vol_100d": 0.3753,
+        "razao": 1.1787
       },
       "notes": [
         "inclinação 60d significativa (t=3.2)",
@@ -546,14 +546,14 @@
       "breakout": "nenhum",
       "momentum": {
         "m_12_1": 0.0253,
-        "m_3": -0.1478,
-        "m_1": -0.0852,
-        "m_1w": -0.0809
+        "m_3": -0.1487,
+        "m_1": -0.0861,
+        "m_1w": -0.0818
       },
       "vol": {
-        "vol_20d": 0.4023,
-        "vol_100d": 0.2798,
-        "razao": 1.438
+        "vol_20d": 0.4036,
+        "vol_100d": 0.2801,
+        "razao": 1.4406
       },
       "notes": [
         "inclinação 60d significativa (t=-20.3)",
@@ -565,25 +565,25 @@
       "mercado": "US",
       "direction": "alta",
       "score": 65,
-      "slope_annual_pct": 55.6,
-      "tstat": 14.42,
+      "slope_annual_pct": 55.7,
+      "tstat": 14.47,
       "adx": 18.6,
       "above_sma50": true,
       "above_sma200": true,
       "breakout": "nenhum",
       "momentum": {
         "m_12_1": 0.2583,
-        "m_3": 0.1351,
-        "m_1": 0.0246,
-        "m_1w": 0.0035
+        "m_3": 0.1379,
+        "m_1": 0.0271,
+        "m_1w": 0.006
       },
       "vol": {
-        "vol_20d": 0.283,
-        "vol_100d": 0.2681,
-        "razao": 1.0558
+        "vol_20d": 0.2816,
+        "vol_100d": 0.2677,
+        "razao": 1.0516
       },
       "notes": [
-        "inclinação 60d significativa (t=14.4)",
+        "inclinação 60d significativa (t=14.5)",
         "ADX 19: lateral"
       ]
     },
@@ -592,22 +592,22 @@
       "mercado": "US",
       "direction": "alta",
       "score": 65,
-      "slope_annual_pct": 344.3,
-      "tstat": 10.38,
+      "slope_annual_pct": 343.9,
+      "tstat": 10.37,
       "adx": 22.1,
       "above_sma50": true,
       "above_sma200": true,
       "breakout": "nenhum",
       "momentum": {
         "m_12_1": 0.2791,
-        "m_3": 0.4295,
-        "m_1": -0.0429,
-        "m_1w": 0.0027
+        "m_3": 0.4262,
+        "m_1": -0.0451,
+        "m_1w": 0.0004
       },
       "vol": {
-        "vol_20d": 0.3527,
-        "vol_100d": 0.396,
-        "razao": 0.8907
+        "vol_20d": 0.3533,
+        "vol_100d": 0.3961,
+        "razao": 0.892
       },
       "notes": [
         "inclinação 60d significativa (t=10.4)"
@@ -618,22 +618,22 @@
       "mercado": "US",
       "direction": "alta",
       "score": 65,
-      "slope_annual_pct": 217.0,
-      "tstat": 12.49,
+      "slope_annual_pct": 217.4,
+      "tstat": 12.51,
       "adx": 16.1,
       "above_sma50": true,
       "above_sma200": true,
       "breakout": "nenhum",
       "momentum": {
         "m_12_1": 0.2436,
-        "m_3": 0.3529,
-        "m_1": 0.1065,
-        "m_1w": -0.0529
+        "m_3": 0.3571,
+        "m_1": 0.11,
+        "m_1w": -0.05
       },
       "vol": {
-        "vol_20d": 0.7007,
-        "vol_100d": 0.8397,
-        "razao": 0.8345
+        "vol_20d": 0.7,
+        "vol_100d": 0.8396,
+        "razao": 0.8337
       },
       "notes": [
         "inclinação 60d significativa (t=12.5)",
@@ -645,22 +645,22 @@
       "mercado": "BR",
       "direction": "alta",
       "score": 55,
-      "slope_annual_pct": 65.7,
-      "tstat": 2.91,
+      "slope_annual_pct": 65.9,
+      "tstat": 2.92,
       "adx": 39.4,
       "above_sma50": false,
       "above_sma200": false,
       "breakout": "nenhum",
       "momentum": {
         "m_12_1": 0.7825,
-        "m_3": 0.043,
-        "m_1": -0.2347,
-        "m_1w": -0.0285
+        "m_3": 0.0459,
+        "m_1": -0.2326,
+        "m_1w": -0.0259
       },
       "vol": {
-        "vol_20d": 0.4313,
-        "vol_100d": 0.3656,
-        "razao": 1.1796
+        "vol_20d": 0.4301,
+        "vol_100d": 0.365,
+        "razao": 1.1782
       },
       "notes": [
         "inclinação 60d significativa (t=2.9)",
@@ -680,14 +680,14 @@
       "breakout": "nenhum",
       "momentum": {
         "m_12_1": 0.2397,
-        "m_3": 0.0577,
-        "m_1": -0.1468,
-        "m_1w": -0.0113
+        "m_3": 0.059,
+        "m_1": -0.1458,
+        "m_1w": -0.0101
       },
       "vol": {
-        "vol_20d": 0.5582,
-        "vol_100d": 0.3728,
-        "razao": 1.4971
+        "vol_20d": 0.5577,
+        "vol_100d": 0.3726,
+        "razao": 1.4967
       },
       "notes": [
         "inclinação 60d significativa (t=2.0)",
@@ -699,22 +699,22 @@
       "mercado": "US",
       "direction": "baixa",
       "score": 55,
-      "slope_annual_pct": -19.7,
-      "tstat": -1.08,
+      "slope_annual_pct": -19.9,
+      "tstat": -1.09,
       "adx": 21.6,
       "above_sma50": false,
       "above_sma200": false,
       "breakout": "rompimento_baixa_20d",
       "momentum": {
         "m_12_1": -0.3439,
-        "m_3": 0.1219,
-        "m_1": -0.2414,
-        "m_1w": -0.1735
+        "m_3": 0.1136,
+        "m_1": -0.247,
+        "m_1w": -0.1796
       },
       "vol": {
-        "vol_20d": 0.7405,
-        "vol_100d": 0.8329,
-        "razao": 0.8891
+        "vol_20d": 0.748,
+        "vol_100d": 0.8345,
+        "razao": 0.8963
       },
       "notes": [
         "rompimento_baixa_20d"
@@ -752,22 +752,22 @@
       "mercado": "US",
       "direction": "alta",
       "score": 50,
-      "slope_annual_pct": 48.6,
-      "tstat": 6.31,
+      "slope_annual_pct": 48.7,
+      "tstat": 6.33,
       "adx": 12.9,
       "above_sma50": true,
       "above_sma200": false,
       "breakout": "nenhum",
       "momentum": {
         "m_12_1": -0.1176,
-        "m_3": 0.125,
-        "m_1": 0.0684,
-        "m_1w": 0.0024
+        "m_3": 0.1273,
+        "m_1": 0.0705,
+        "m_1w": 0.0045
       },
       "vol": {
-        "vol_20d": 0.5979,
-        "vol_100d": 0.528,
-        "razao": 1.1324
+        "vol_20d": 0.5966,
+        "vol_100d": 0.5278,
+        "razao": 1.1305
       },
       "notes": [
         "inclinação 60d significativa (t=6.3)",
@@ -779,22 +779,22 @@
       "mercado": "US",
       "direction": "alta",
       "score": 50,
-      "slope_annual_pct": 43.9,
-      "tstat": 9.19,
+      "slope_annual_pct": 43.8,
+      "tstat": 9.16,
       "adx": 16.7,
       "above_sma50": false,
       "above_sma200": true,
       "breakout": "nenhum",
       "momentum": {
         "m_12_1": 0.0512,
-        "m_3": 0.0768,
-        "m_1": -0.0198,
-        "m_1w": -0.0488
+        "m_3": 0.0755,
+        "m_1": -0.0209,
+        "m_1w": -0.0499
       },
       "vol": {
-        "vol_20d": 0.3691,
-        "vol_100d": 0.3749,
-        "razao": 0.9845
+        "vol_20d": 0.3695,
+        "vol_100d": 0.375,
+        "razao": 0.9852
       },
       "notes": [
         "inclinação 60d significativa (t=9.2)",
@@ -807,21 +807,21 @@
       "direction": "baixa",
       "score": 50,
       "slope_annual_pct": -6.7,
-      "tstat": -3.1,
+      "tstat": -3.09,
       "adx": 14.3,
       "above_sma50": false,
       "above_sma200": true,
       "breakout": "nenhum",
       "momentum": {
         "m_12_1": 0.1357,
-        "m_3": -0.0365,
-        "m_1": -0.0312,
-        "m_1w": -0.0176
+        "m_3": -0.0358,
+        "m_1": -0.0305,
+        "m_1w": -0.0169
       },
       "vol": {
-        "vol_20d": 0.2302,
-        "vol_100d": 0.142,
-        "razao": 1.6214
+        "vol_20d": 0.2295,
+        "vol_100d": 0.1417,
+        "razao": 1.6192
       },
       "notes": [
         "inclinação 60d significativa (t=-3.1)",
@@ -834,7 +834,7 @@
       "mercado": "US",
       "direction": "lateral",
       "score": 35,
-      "slope_annual_pct": 3.5,
+      "slope_annual_pct": 3.6,
       "tstat": 0.26,
       "adx": 28.4,
       "above_sma50": false,
@@ -842,14 +842,14 @@
       "breakout": "nenhum",
       "momentum": {
         "m_12_1": 0.0807,
-        "m_3": -0.0662,
-        "m_1": -0.1389,
-        "m_1w": -0.0533
+        "m_3": -0.065,
+        "m_1": -0.1378,
+        "m_1w": -0.0521
       },
       "vol": {
-        "vol_20d": 0.5651,
-        "vol_100d": 0.6936,
-        "razao": 0.8147
+        "vol_20d": 0.5641,
+        "vol_100d": 0.6934,
+        "razao": 0.8134
       },
       "notes": [
         "ADX 28: tendência com força"
@@ -868,14 +868,14 @@
       "breakout": "nenhum",
       "momentum": {
         "m_12_1": 0.0523,
-        "m_3": -0.0063,
-        "m_1": 0.0313,
-        "m_1w": -0.0341
+        "m_3": -0.0066,
+        "m_1": 0.031,
+        "m_1w": -0.0344
       },
       "vol": {
-        "vol_20d": 0.4014,
-        "vol_100d": 0.394,
-        "razao": 1.0186
+        "vol_20d": 0.4016,
+        "vol_100d": 0.3941,
+        "razao": 1.0192
       },
       "notes": [
         "ADX 12: lateral"
@@ -886,7 +886,7 @@
       "mercado": "BR",
       "direction": "baixa",
       "score": 25,
-      "slope_annual_pct": -17.6,
+      "slope_annual_pct": -17.7,
       "tstat": -2.52,
       "adx": 16.7,
       "above_sma50": true,
@@ -894,14 +894,14 @@
       "breakout": "nenhum",
       "momentum": {
         "m_12_1": 0.0909,
-        "m_3": 0.0621,
-        "m_1": 0.0277,
-        "m_1w": -0.0057
+        "m_3": 0.0611,
+        "m_1": 0.0267,
+        "m_1w": -0.0067
       },
       "vol": {
-        "vol_20d": 0.4941,
-        "vol_100d": 0.3323,
-        "razao": 1.4868
+        "vol_20d": 0.4946,
+        "vol_100d": 0.3324,
+        "razao": 1.4878
       },
       "notes": [
         "inclinação 60d significativa (t=-2.5)",
@@ -914,21 +914,21 @@
       "direction": "alta",
       "score": 25,
       "slope_annual_pct": 6.1,
-      "tstat": 1.18,
+      "tstat": 1.17,
       "adx": 23.0,
       "above_sma50": false,
       "above_sma200": false,
       "breakout": "rompimento_baixa_20d",
       "momentum": {
         "m_12_1": -0.0095,
-        "m_3": -0.0176,
-        "m_1": -0.0852,
-        "m_1w": -0.0127
+        "m_3": -0.0186,
+        "m_1": -0.0861,
+        "m_1w": -0.0136
       },
       "vol": {
-        "vol_20d": 0.2539,
-        "vol_100d": 0.1451,
-        "razao": 1.7504
+        "vol_20d": 0.2547,
+        "vol_100d": 0.1454,
+        "razao": 1.7518
       },
       "notes": [
         "rompimento_baixa_20d",
@@ -938,22 +938,66 @@
   ],
   "sinais_de_noticia": [
     {
-      "ticker": "BTC",
-      "score": 0.074,
-      "n_items": 21,
-      "n_sources": 5,
+      "ticker": "XRP",
+      "score": 0.18,
+      "n_items": 1,
+      "n_sources": 1,
       "headlines": [
-        "Bitcoin miners were hijacked and their BTC rewards redirected to an attacker",
-        "Harvard, Dartmouth keep Bitcoin ETF stakes steady as fund gains 42% in Q3",
-        "Live updates: Bitcoin holds near weekend lows as Nasdaq extends decline to more than 2%",
-        "Cúpula do G7 em Paris condena roubos de criptomoedas da Coreia do Norte e golpes na internet"
+        "Ripple-backed Evernorth has written down its pre-listing XRP holdings by 60%"
+      ],
+      "evidence": {
+        "ticker": "XRP",
+        "n_pos": 0,
+        "n_neg": 0,
+        "ret1_after_pos": null,
+        "ret5_after_pos": null,
+        "ret1_after_neg": null,
+        "ret5_after_neg": null
+      },
+      "action": "ignorar",
+      "reasons": [
+        "uma única fonte"
+      ]
+    },
+    {
+      "ticker": "PAGS34",
+      "score": 0.12,
+      "n_items": 1,
+      "n_sources": 1,
+      "headlines": [
+        "PagBank (PAGS34) tem lucro dentro do esperado e prevê pagar pelo menos R$ 2 bi até 2028 a acionistas"
+      ],
+      "evidence": {
+        "ticker": "PAGS34",
+        "n_pos": 0,
+        "n_neg": 0,
+        "ret1_after_pos": null,
+        "ret5_after_pos": null,
+        "ret1_after_neg": null,
+        "ret5_after_neg": null
+      },
+      "action": "ignorar",
+      "reasons": [
+        "uma única fonte"
+      ]
+    },
+    {
+      "ticker": "BTC",
+      "score": 0.027,
+      "n_items": 8,
+      "n_sources": 4,
+      "headlines": [
+        "Peter Brandt sugere que o Bitcoin pode nunca mais superar o seu topo histórico",
+        "Bitcoin Options Traders Brace for Slide to $60,000 After Selloff - Bloomberg.com",
+        "Bitcoin risks falling below $60,000 as Nvidia earnings threaten to deepen crypto sell-off",
+        "Bitmine edges toward 5% of ETH supply as treasuries report buys amid market slump"
       ],
       "evidence": {
         "ticker": "BTC",
-        "n_pos": 5,
+        "n_pos": 7,
         "n_neg": 4,
-        "ret1_after_pos": -0.0253,
-        "ret5_after_pos": -0.117,
+        "ret1_after_pos": -0.0201,
+        "ret5_after_pos": -0.1203,
         "ret1_after_neg": -0.0294,
         "ret5_after_neg": -0.117
       },
@@ -963,122 +1007,12 @@
       ]
     },
     {
-      "ticker": "CSAN3",
-      "score": 0.151,
-      "n_items": 1,
-      "n_sources": 1,
-      "headlines": [
-        "Cosan (CSAN3), Casas Bahia (BHIA3), Mitre (MTRE3), ABC Brasil (ABCB4) e mais: Veja os destaques das empresas"
-      ],
-      "evidence": {
-        "ticker": "CSAN3",
-        "n_pos": 0,
-        "n_neg": 0,
-        "ret1_after_pos": null,
-        "ret5_after_pos": null,
-        "ret1_after_neg": null,
-        "ret5_after_neg": null
-      },
-      "action": "ignorar",
-      "reasons": [
-        "uma única fonte"
-      ]
-    },
-    {
-      "ticker": "BHIA3",
-      "score": 0.151,
-      "n_items": 1,
-      "n_sources": 1,
-      "headlines": [
-        "Cosan (CSAN3), Casas Bahia (BHIA3), Mitre (MTRE3), ABC Brasil (ABCB4) e mais: Veja os destaques das empresas"
-      ],
-      "evidence": {
-        "ticker": "BHIA3",
-        "n_pos": 0,
-        "n_neg": 0,
-        "ret1_after_pos": null,
-        "ret5_after_pos": null,
-        "ret1_after_neg": null,
-        "ret5_after_neg": null
-      },
-      "action": "ignorar",
-      "reasons": [
-        "uma única fonte"
-      ]
-    },
-    {
-      "ticker": "MTRE3",
-      "score": 0.151,
-      "n_items": 1,
-      "n_sources": 1,
-      "headlines": [
-        "Cosan (CSAN3), Casas Bahia (BHIA3), Mitre (MTRE3), ABC Brasil (ABCB4) e mais: Veja os destaques das empresas"
-      ],
-      "evidence": {
-        "ticker": "MTRE3",
-        "n_pos": 0,
-        "n_neg": 0,
-        "ret1_after_pos": null,
-        "ret5_after_pos": null,
-        "ret1_after_neg": null,
-        "ret5_after_neg": null
-      },
-      "action": "ignorar",
-      "reasons": [
-        "uma única fonte"
-      ]
-    },
-    {
-      "ticker": "ABCB4",
-      "score": 0.151,
-      "n_items": 1,
-      "n_sources": 1,
-      "headlines": [
-        "Cosan (CSAN3), Casas Bahia (BHIA3), Mitre (MTRE3), ABC Brasil (ABCB4) e mais: Veja os destaques das empresas"
-      ],
-      "evidence": {
-        "ticker": "ABCB4",
-        "n_pos": 0,
-        "n_neg": 0,
-        "ret1_after_pos": null,
-        "ret5_after_pos": null,
-        "ret1_after_neg": null,
-        "ret5_after_neg": null
-      },
-      "action": "ignorar",
-      "reasons": [
-        "uma única fonte"
-      ]
-    },
-    {
-      "ticker": "TTEN3",
-      "score": 0.116,
-      "n_items": 1,
-      "n_sources": 1,
-      "headlines": [
-        "Biodiesel: A canola da 3tentos (TTEN3), o girassol da Caramuru e os planos para agregar valor no Arco Norte"
-      ],
-      "evidence": {
-        "ticker": "TTEN3",
-        "n_pos": 0,
-        "n_neg": 0,
-        "ret1_after_pos": null,
-        "ret5_after_pos": null,
-        "ret1_after_neg": null,
-        "ret5_after_neg": null
-      },
-      "action": "ignorar",
-      "reasons": [
-        "uma única fonte"
-      ]
-    },
-    {
       "ticker": "ETH",
       "score": 0.0,
       "n_items": 1,
       "n_sources": 1,
       "headlines": [
-        "Vitalik Buterin flips to ‘total bull’ on a faster route to quantum-safe Ethereum"
+        "Bitmine edges toward 5% of ETH supply as treasuries report buys amid market slump"
       ],
       "evidence": {
         "ticker": "ETH",
@@ -1095,17 +1029,16 @@
       ]
     },
     {
-      "ticker": "SOL",
+      "ticker": "VALE3",
       "score": 0.0,
-      "n_items": 3,
+      "n_items": 2,
       "n_sources": 2,
       "headlines": [
-        "Harvard, Dartmouth keep Bitcoin ETF stakes steady as fund gains 42% in Q3",
-        "Solana drops ‘beta’ label after more than six years",
-        "Zelle picks Solana for ZelleUSD stablecoin and international payments"
+        "Ibovespa perde mais de 3 mil pontos em um dia; dólar dispara e Vale (VALE3) afunda 4% - Suno - Investimentos Inteligentes",
+        "Ibovespa cai quase 2% e dólar vai a R$ 5,77 com ruídos sobre Lula 4 e fuga de estrangeiros"
       ],
       "evidence": {
-        "ticker": "SOL",
+        "ticker": "VALE3",
         "n_pos": 0,
         "n_neg": 0,
         "ret1_after_pos": null,
@@ -1119,40 +1052,18 @@
       ]
     },
     {
-      "ticker": "BNB",
+      "ticker": "PETR3",
       "score": 0.0,
       "n_items": 1,
       "n_sources": 1,
       "headlines": [
-        "Binance Pay Later offers credit backed by Bitcoin, Ether and BNB holdings"
+        "Ibovespa cai quase 2% e dólar vai a R$ 5,77 com ruídos sobre Lula 4 e fuga de estrangeiros"
       ],
       "evidence": {
-        "ticker": "BNB",
+        "ticker": "PETR3",
         "n_pos": 0,
         "n_neg": 0,
         "ret1_after_pos": null,
-        "ret5_after_pos": null,
-        "ret1_after_neg": null,
-        "ret5_after_neg": null
-      },
-      "action": "ignorar",
-      "reasons": [
-        "uma única fonte"
-      ]
-    },
-    {
-      "ticker": "BBAS3",
-      "score": 0.0,
-      "n_items": 1,
-      "n_sources": 1,
-      "headlines": [
-        "Banco do Brasil (BBAS3), Petrobras (PETR4) e Vale (VALE3): o que está por trás das quedas nesta segunda (16)?"
-      ],
-      "evidence": {
-        "ticker": "BBAS3",
-        "n_pos": 6,
-        "n_neg": 0,
-        "ret1_after_pos": -0.0442,
         "ret5_after_pos": null,
         "ret1_after_neg": null,
         "ret5_after_neg": null
@@ -1168,7 +1079,7 @@
       "n_items": 1,
       "n_sources": 1,
       "headlines": [
-        "Banco do Brasil (BBAS3), Petrobras (PETR4) e Vale (VALE3): o que está por trás das quedas nesta segunda (16)?"
+        "Ibovespa cai quase 2% e dólar vai a R$ 5,77 com ruídos sobre Lula 4 e fuga de estrangeiros"
       ],
       "evidence": {
         "ticker": "PETR4",
@@ -1185,15 +1096,147 @@
       ]
     },
     {
-      "ticker": "VALE3",
+      "ticker": "MGLU3",
       "score": 0.0,
       "n_items": 1,
       "n_sources": 1,
       "headlines": [
-        "Banco do Brasil (BBAS3), Petrobras (PETR4) e Vale (VALE3): o que está por trás das quedas nesta segunda (16)?"
+        "Ibovespa cai quase 2% e dólar vai a R$ 5,77 com ruídos sobre Lula 4 e fuga de estrangeiros"
       ],
       "evidence": {
-        "ticker": "VALE3",
+        "ticker": "MGLU3",
+        "n_pos": 0,
+        "n_neg": 1,
+        "ret1_after_pos": null,
+        "ret5_after_pos": null,
+        "ret1_after_neg": 0.1164,
+        "ret5_after_neg": 0.2825
+      },
+      "action": "ignorar",
+      "reasons": [
+        "uma única fonte"
+      ]
+    },
+    {
+      "ticker": "HAPV3",
+      "score": 0.0,
+      "n_items": 1,
+      "n_sources": 1,
+      "headlines": [
+        "Ibovespa cai quase 2% e dólar vai a R$ 5,77 com ruídos sobre Lula 4 e fuga de estrangeiros"
+      ],
+      "evidence": {
+        "ticker": "HAPV3",
+        "n_pos": 0,
+        "n_neg": 0,
+        "ret1_after_pos": null,
+        "ret5_after_pos": null,
+        "ret1_after_neg": null,
+        "ret5_after_neg": null
+      },
+      "action": "ignorar",
+      "reasons": [
+        "uma única fonte"
+      ]
+    },
+    {
+      "ticker": "KLBN11",
+      "score": 0.0,
+      "n_items": 1,
+      "n_sources": 1,
+      "headlines": [
+        "Klabin (KLBN11) pega US$ 100 mi com banco argentino para controle das dívidas"
+      ],
+      "evidence": {
+        "ticker": "KLBN11",
+        "n_pos": 0,
+        "n_neg": 0,
+        "ret1_after_pos": null,
+        "ret5_after_pos": null,
+        "ret1_after_neg": null,
+        "ret5_after_neg": null
+      },
+      "action": "ignorar",
+      "reasons": [
+        "uma única fonte"
+      ]
+    },
+    {
+      "ticker": "SCAR3",
+      "score": 0.0,
+      "n_items": 1,
+      "n_sources": 1,
+      "headlines": [
+        "Com caixa cheio, empresa de Lemann propõe redução de capital de R$ 100 mi e quer distribuir R$ 1,74 a acionista"
+      ],
+      "evidence": {
+        "ticker": "SCAR3",
+        "n_pos": 0,
+        "n_neg": 0,
+        "ret1_after_pos": null,
+        "ret5_after_pos": null,
+        "ret1_after_neg": null,
+        "ret5_after_neg": null
+      },
+      "action": "ignorar",
+      "reasons": [
+        "uma única fonte"
+      ]
+    },
+    {
+      "ticker": "ADA",
+      "score": 0.0,
+      "n_items": 1,
+      "n_sources": 1,
+      "headlines": [
+        "Cardano Foundation seeks $5 million from treasury using ADA price 33% above market"
+      ],
+      "evidence": {
+        "ticker": "ADA",
+        "n_pos": 0,
+        "n_neg": 0,
+        "ret1_after_pos": null,
+        "ret5_after_pos": null,
+        "ret1_after_neg": null,
+        "ret5_after_neg": null
+      },
+      "action": "ignorar",
+      "reasons": [
+        "uma única fonte"
+      ]
+    },
+    {
+      "ticker": "RAPT4",
+      "score": 0.0,
+      "n_items": 1,
+      "n_sources": 1,
+      "headlines": [
+        "Controladora da Randoncorp (RAPT4) eleva participação após leilão"
+      ],
+      "evidence": {
+        "ticker": "RAPT4",
+        "n_pos": 0,
+        "n_neg": 0,
+        "ret1_after_pos": null,
+        "ret5_after_pos": null,
+        "ret1_after_neg": null,
+        "ret5_after_neg": null
+      },
+      "action": "ignorar",
+      "reasons": [
+        "uma única fonte"
+      ]
+    },
+    {
+      "ticker": "PRIO3",
+      "score": 0.0,
+      "n_items": 1,
+      "n_sources": 1,
+      "headlines": [
+        "ExxonMobil e Prio (PRIO3) arrematam cargas do campo de Búzios em leilão da PPSA"
+      ],
+      "evidence": {
+        "ticker": "PRIO3",
         "n_pos": 0,
         "n_neg": 0,
         "ret1_after_pos": null,
@@ -1209,55 +1252,27 @@
   ],
   "manchetes": [
     {
-      "quando": "2026-11-16T15:39:54+00:00",
-      "fonte": "Google News Brasil: mercado",
-      "mercado": "BR",
-      "titulo": "Morgan Stanley rebaixa Brasil para venda; Ibovespa cai e dólar sobe - Suno - Investimentos Inteligentes",
-      "sentimento": -0.43,
-      "tickers": []
-    },
-    {
-      "quando": "2026-11-16T13:42:38+00:00",
-      "fonte": "Livecoins",
-      "mercado": "cripto",
-      "titulo": "Michael Saylor confirma compra de 485 bitcoins pela Strategy",
-      "sentimento": 0.39,
-      "tickers": [
-        "BTC"
-      ]
-    },
-    {
-      "quando": "2026-11-16T16:52:12+00:00",
-      "fonte": "Livecoins",
-      "mercado": "cripto",
-      "titulo": "Trezor lança serviço de compra anônima com retirada de carteiras em pontos de coleta",
-      "sentimento": 0.37,
-      "tickers": [
-        "BTC"
-      ]
-    },
-    {
-      "quando": "2026-11-16T17:00:25+00:00",
-      "fonte": "Google News Brasil: mercado",
-      "mercado": "BR",
-      "titulo": "Morgan Stanley rebaixa ações brasileiras e projeta queda de 7% do Ibovespa em 2027 - Bloomberg Línea Brasil",
-      "sentimento": -0.37,
-      "tickers": []
-    },
-    {
-      "quando": "2026-11-16T11:45:28+00:00",
+      "quando": "2026-11-16T22:22:30+00:00",
       "fonte": "Valor Investe",
       "mercado": "BR",
-      "titulo": "Boletim Focus: Sobe expectativa para dólar, inflação e juros em 2027",
+      "titulo": "XP tem lucro de R$ 1,4 bi, alta de 4% no 3º trimestre e anuncia proventos recordes para o ano",
+      "sentimento": 0.61,
+      "tickers": []
+    },
+    {
+      "quando": "2026-11-16T22:46:08+00:00",
+      "fonte": "Money Times",
+      "mercado": "BR",
+      "titulo": "PicPay (PICS) vê lucro saltar 157% no 3T26; fintech revê política de baixa de inadimplência em crédito pessoal",
       "sentimento": 0.36,
       "tickers": []
     },
     {
-      "quando": "2026-11-16T08:49:00+00:00",
-      "fonte": "Money Times",
-      "mercado": "BR",
-      "titulo": "Após ter votado contra, presidente do PL diz que ajuste fiscal do Lula gera calote, aumento de impostos e pedalada fiscal",
-      "sentimento": -0.34,
+      "quando": "2026-11-16T22:19:41+00:00",
+      "fonte": "Cointelegraph",
+      "mercado": "cripto",
+      "titulo": "Binance hack may push institutions to outside custody, FalconX exec says",
+      "sentimento": -0.33,
       "tickers": []
     },
     {
@@ -1269,18 +1284,26 @@
       "tickers": []
     },
     {
-      "quando": "2026-11-16T13:30:00+00:00",
-      "fonte": "Google News Brasil: mercado",
+      "quando": "2026-11-17T08:00:00+00:00",
+      "fonte": "InfoMoney",
       "mercado": "BR",
-      "titulo": "Ibovespa abre em queda em meio ao Boletim Focus e ao IBC-Br - TradeMap",
-      "sentimento": -0.26,
+      "titulo": "De hobby infantil a milhões de dólares: mercado de cartas de Pokémon está em alta",
+      "sentimento": 0.26,
       "tickers": []
     },
     {
-      "quando": "2026-11-16T06:59:09+00:00",
-      "fonte": "Google News Brasil: mercado",
+      "quando": "2026-11-17T08:15:00+00:00",
+      "fonte": "InfoMoney",
       "mercado": "BR",
-      "titulo": "Dólar fecha em leve alta, a R$ 5,65; Ibovespa avança 0,66% - brasilagro.com.br",
+      "titulo": "Com quase US$ 17 bi em compras de estrangeiros, dólar se aproxima de R$ 6",
+      "sentimento": 0.26,
+      "tickers": []
+    },
+    {
+      "quando": "2026-11-17T07:41:00+00:00",
+      "fonte": "Money Times",
+      "mercado": "BR",
+      "titulo": "Petróleo recua com recuperação das exportações do Oriente Médio",
       "sentimento": 0.25,
       "tickers": []
     },
@@ -1293,27 +1316,27 @@
       "tickers": []
     },
     {
-      "quando": "2026-11-16T12:12:00+00:00",
-      "fonte": "Google News Brasil: mercado",
-      "mercado": "BR",
-      "titulo": "Mercado reduz projeções para inflação e crescimento econômico em 2026 - Agência Brasil",
+      "quando": "2026-11-16T22:14:00+00:00",
+      "fonte": "Nikkei Asia (via Google News)",
+      "mercado": "asia",
+      "titulo": "SoftBank, Rakuten push Japan retail bond issuance to record high - Nikkei Asia",
       "sentimento": 0.24,
       "tickers": []
     },
     {
-      "quando": "2026-11-16T18:39:59+00:00",
-      "fonte": "Google News Brasil: mercado",
-      "mercado": "BR",
-      "titulo": "Ibovespa Hoje Ao Vivo: Bolsa já desce mais de 2% e dólar sobe mais de 2,2% - InfoMoney",
+      "quando": "2026-11-16T21:45:20+00:00",
+      "fonte": "Reuters Business (via Google News)",
+      "mercado": "global",
+      "titulo": "Trump Media faces possible $1 billion debt repayment as stock nears record lows - Reuters",
       "sentimento": 0.24,
       "tickers": []
     },
     {
-      "quando": "2026-11-16T15:02:35+00:00",
-      "fonte": "Google News: petróleo e minério",
-      "mercado": "commodities",
-      "titulo": "Jefferies fund eased lending checks on iron ore traders accused of fraud - Financial Times",
-      "sentimento": -0.24,
+      "quando": "2026-11-17T00:20:00+00:00",
+      "fonte": "Bloomberg (via Google News)",
+      "mercado": "global",
+      "titulo": "China’s Buyback Push Struggles to Put a Floor Under Stocks - Bloomberg.com",
+      "sentimento": 0.23,
       "tickers": []
     },
     {
@@ -1325,59 +1348,35 @@
       "tickers": []
     },
     {
-      "quando": "2026-11-16T14:33:28+00:00",
+      "quando": "2026-11-17T07:26:08+00:00",
       "fonte": "Google News Brasil: mercado",
       "mercado": "BR",
-      "titulo": "Ibovespa cai após Morgan Stanley rebaixar Brasil e dólar vai a R$ 5,73 - VEJA",
+      "titulo": "Dólar dispara a R$ 5,77, maior nível desde abril de 2025; Ibovespa cai - brasilagro.com.br",
       "sentimento": -0.23,
       "tickers": []
     },
     {
-      "quando": "2026-11-16T07:09:00+00:00",
-      "fonte": "Reuters Business (via Google News)",
-      "mercado": "global",
-      "titulo": "Global banks set to enter 2027 on strong footing, Moody's report says - Reuters",
-      "sentimento": 0.22,
+      "quando": "2026-11-16T23:06:00+00:00",
+      "fonte": "Google News Brasil: mercado",
+      "mercado": "BR",
+      "titulo": "Dólar sobe para R$ 5,77 e fecha no maior valor desde abril de 2025 - Agência Brasil",
+      "sentimento": 0.23,
       "tickers": []
     },
     {
-      "quando": "2026-11-16T15:52:19+00:00",
-      "fonte": "Valor Investe",
+      "quando": "2026-11-16T20:36:36+00:00",
+      "fonte": "Google News Brasil: mercado",
       "mercado": "BR",
-      "titulo": "Morgan Stanley rebaixa ações brasileiras para venda com saída forte da bolsa",
-      "sentimento": -0.22,
+      "titulo": "Dólar tem maior alta desde reeleição de Lula e vai a R$ 5,77, pico em 19 meses - Exame",
+      "sentimento": 0.23,
       "tickers": []
     },
     {
-      "quando": "2026-11-16T09:00:00+00:00",
-      "fonte": "Valor Investe",
+      "quando": "2026-11-17T08:00:00+00:00",
+      "fonte": "InfoMoney",
       "mercado": "BR",
-      "titulo": "De oferta cancelada a produto não entregue: os motivos que mais geram processos na Black Friday",
-      "sentimento": 0.21,
-      "tickers": []
-    },
-    {
-      "quando": "2026-11-16T12:54:47+00:00",
-      "fonte": "Valor Investe",
-      "mercado": "BR",
-      "titulo": "IBC-Br, prévia do PIB, cai e reforça sensação de que economia está desaquecendo",
+      "titulo": "Bolsa cairá em 2027? Por que bancos globais estão mais cautelosos com o Brasil",
       "sentimento": -0.21,
-      "tickers": []
-    },
-    {
-      "quando": "2026-11-16T07:32:51+00:00",
-      "fonte": "Google News Brasil: mercado",
-      "mercado": "BR",
-      "titulo": "Ibovespa hoje: prévia do PIB, Focus e Fed testam Bolsa após encerrar semana em alta - Estadão",
-      "sentimento": 0.21,
-      "tickers": []
-    },
-    {
-      "quando": "2026-11-16T12:38:41+00:00",
-      "fonte": "Google News Brasil: mercado",
-      "mercado": "BR",
-      "titulo": "Dólar dispara a R$ 5,77, maior nível desde abril de 2025; Ibovespa cai com dúvidas sobre pacote fiscal - G1",
-      "sentimento": -0.2,
       "tickers": []
     },
     {
@@ -1389,28 +1388,72 @@
       "tickers": []
     },
     {
-      "quando": "2026-11-16T18:51:53+00:00",
-      "fonte": "Money Times",
-      "mercado": "BR",
-      "titulo": "Ouro fecha em queda e atinge menor valor em um ano",
-      "sentimento": -0.2,
-      "tickers": []
-    },
-    {
-      "quando": "2026-11-16T11:05:52+00:00",
+      "quando": "2026-11-17T08:00:00+00:00",
       "fonte": "Google News Brasil: mercado",
       "mercado": "BR",
-      "titulo": "Morgan rebaixa Brasil para “underweight” e vê Ibovespa a 160 mil pontos em 2027 - InfoMoney",
-      "sentimento": -0.2,
+      "titulo": "Dólar supera R$ 5,77 e bolsa recua 1,83% com incertezas fiscais no radar - Valor Econômico",
+      "sentimento": 0.2,
       "tickers": []
     },
     {
-      "quando": "2026-11-16T08:45:30+00:00",
+      "quando": "2026-11-17T08:00:00+00:00",
       "fonte": "InfoMoney",
       "mercado": "BR",
-      "titulo": "Dow Jones Futuro cai em semana decisiva para Nvidia e mercado de IA",
-      "sentimento": -0.2,
+      "titulo": "“Não use a IA apenas para cortar custos. Use-a para gerar crescimento”",
+      "sentimento": 0.19,
       "tickers": []
+    },
+    {
+      "quando": "2026-11-16T22:46:00+00:00",
+      "fonte": "MarketWatch",
+      "mercado": "US",
+      "titulo": "U.S. dollar’s AI-driven breakout could become a stock-market wrecking ball",
+      "sentimento": 0.19,
+      "tickers": []
+    },
+    {
+      "quando": "2026-11-17T05:02:05+00:00",
+      "fonte": "CoinDesk",
+      "mercado": "cripto",
+      "titulo": "Ripple-backed Evernorth has written down its pre-listing XRP holdings by 60%",
+      "sentimento": 0.18,
+      "tickers": [
+        "XRP"
+      ]
+    },
+    {
+      "quando": "2026-11-17T08:41:45+00:00",
+      "fonte": "InfoMoney",
+      "mercado": "BR",
+      "titulo": "Dow Jones Futuro cai com restrições dos EUA a chips para China e balanço da Nvidia",
+      "sentimento": -0.17,
+      "tickers": []
+    },
+    {
+      "quando": "2026-11-17T03:00:00+00:00",
+      "fonte": "Google News Brasil: mercado",
+      "mercado": "BR",
+      "titulo": "Dólar já subiu mais de 15% desde a reeleição de Lula: o que está pesando contra o real no Brasil e lá fora? - O GLOBO",
+      "sentimento": 0.16,
+      "tickers": []
+    },
+    {
+      "quando": "2026-11-17T03:01:00+00:00",
+      "fonte": "InfoMoney",
+      "mercado": "BR",
+      "titulo": "Aluguel sobe 9% em 12 meses, quase o dobro da inflação, aponta FipeZAP",
+      "sentimento": 0.16,
+      "tickers": []
+    },
+    {
+      "quando": "2026-11-16T21:17:33+00:00",
+      "fonte": "Livecoins",
+      "mercado": "cripto",
+      "titulo": "Deputado propõe ensino de criptomoedas e blockchain nas escolas públicas de MS",
+      "sentimento": 0.14,
+      "tickers": [
+        "BTC"
+      ]
     }
   ]
 }
