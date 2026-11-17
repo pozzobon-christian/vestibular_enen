@@ -116,7 +116,10 @@ def earnings_for(tickers: list[tuple[str, str]], errors: list[str], sleep: float
     """Datas de resultado via Yahoo calendarEvents."""
     from .data.market import yahoo_symbol, yahoo_quote_summary
     out = []
+    ETFS = {"SPY", "QQQ", "BOVA11", "IBIT", "EWZ"}
     for t, m in tickers:
+        if t in ETFS or (m == "BR" and t.endswith("11")):
+            continue   # ETFs e FIIs não têm resultado trimestral no Yahoo
         try:
             res = yahoo_quote_summary(yahoo_symbol(t, m), "calendarEvents")
             ed = ((res.get("calendarEvents") or {}).get("earnings") or {}).get("earningsDate") or []

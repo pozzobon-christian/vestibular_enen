@@ -59,7 +59,7 @@
     },
     {
       "nome": "Banco Central Notícias",
-      "url": "https://www.bcb.gov.br/api/feed/sitefeeds/noticias",
+      "url": "https://news.google.com/rss/search?q=site:bcb.gov.br&hl=pt-BR&gl=BR&ceid=BR:pt-419",
       "fonte": "oficial",
       "mercado": "BR"
     },
@@ -101,7 +101,7 @@
     },
     {
       "nome": "Federal Reserve Press",
-      "url": "https://www.federalreserve.gov/feeds/press_all.xml",
+      "url": "https://news.google.com/rss/search?q=site:federalreserve.gov+press&hl=en-US&gl=US&ceid=US:en",
       "fonte": "oficial",
       "mercado": "US"
     },
