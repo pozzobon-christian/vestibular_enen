@@ -34,3 +34,10 @@ def test_stabilization_and_structural_stop():
     closes2 = closes[:-1] + [9.6]
     assert stabilization(highs, lows, closes2, "compra") is False
     assert structural_stop(lows, highs, closes, atr_value=0.5, side="compra") == 9.2   # min 5d (9.2) < 10.3-0.5
+
+
+def test_vix_panic_blocks_buys():
+    votes = {"balanco": "a_favor", "analogos": "neutro", "noticias": None, "tendencia": "a_favor", "intradia": "a_favor"}
+    g = order_gate("buy", votes, "alta", 85, "neutro", stab=True, analog_n=15, vix=25.9)
+    assert not g.approved and any("VIX" in b for b in g.blockers)
+    assert order_gate("buy", votes, "alta", 85, "neutro", stab=True, analog_n=15, vix=19.0).approved

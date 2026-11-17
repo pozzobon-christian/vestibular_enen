@@ -67,8 +67,10 @@ def crypto_risk_composite(ibit_5d: float | None, coin_trend: str | None, mstr_tr
 
 def order_gate(side: str, votes: dict, trend_direction: str, trend_score: int, regime_mode: str,
                stab: bool, analog_n: int | None, crypto_risk: dict | None = None,
-               risk_brl: float | None = None, risk_limit_brl: float | None = None) -> GateResult:
+               risk_brl: float | None = None, risk_limit_brl: float | None = None, vix: float | None = None) -> GateResult:
     g = GateResult(approved=True, stabilization=stab)
+    if vix is not None and vix >= 25 and (side in ("buy", "compra")):
+        g.blockers.append(f"VIX {vix:.1f} >= 25: sem compras novas (regra de pânico)")
     fav = sum(1 for v in votes.values() if v == "a_favor")
     con = sum(1 for v in votes.values() if v == "contra")
     want = "compra" if side == "buy" or side == "compra" else "venda"

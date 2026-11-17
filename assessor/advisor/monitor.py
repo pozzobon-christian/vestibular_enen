@@ -319,7 +319,7 @@ def short_ops(db: MonitorDB, with_fundamentals: bool = True, with_intraday: bool
         if side != "nenhuma":
             stab = stabilization(hi, lo, cl, side)
             gate = order_gate(side, votes, tr.direction, tr.score, regimes.get(m, {}).get("modo", "neutro"), stab,
-                              an.n if an else None, crypto_risk if m == "cripto" else None)
+                              an.n if an else None, crypto_risk if m == "cripto" else None, vix=vix_row[0] if vix_row else None)
             stop = structural_stop(lo, hi, cl, a, side)
             risk_unit = abs(last - stop)
             target = round(last + 2 * risk_unit, 2) if side == "compra" else round(last - 2 * risk_unit, 2)
@@ -377,8 +377,10 @@ def gate_planned_orders(db: MonitorDB, regimes: dict, crypto_risk: dict | None, 
             votes.update(o["tese_manual_camadas"])
         stab = stabilization(hi, lo, cl, side)
         m = o.get("mercado", "BR")
+        vix_row = db.conn.execute("SELECT close FROM prices WHERE ticker='^VIX' ORDER BY day DESC LIMIT 1").fetchone()
         g = order_gate(side, votes, tr.direction, tr.score, regimes.get(m, {}).get("modo", "neutro"), stab,
-                       an.n if an else None, crypto_risk if m == "cripto" else None, o.get("risco_brl"), lim or None)
+                       an.n if an else None, crypto_risk if m == "cripto" else None, o.get("risco_brl"), lim or None,
+                       vix=vix_row[0] if vix_row else None)
         a = atr(hi, lo, cl)[-1] or 0.0
         g.structural_stop = structural_stop(lo, hi, cl, a, side)
         o["porteiro"] = g.as_dict() | {"votos": votes, "tendencia": f"{tr.direction} {tr.score}", "ultimo": round(cl[-1], 4)}
