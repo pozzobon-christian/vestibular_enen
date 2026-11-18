@@ -41,22 +41,24 @@
       "condicao": "volta a ser ordem quando: regressão de 60 dias deixar de ser negativa (t-stat > -1) OU estabilização (fechamento acima da máxima de 3 dias e da média de 5) E 2 camadas a favor",
       "porteiro": {
         "aprovada": false,
-        "motivos": [],
+        "motivos": [
+          "análogos com n=7 < 8: não contam como evidência"
+        ],
         "bloqueios": [
           "regime defensivo: compra só com tendência própria de alta ou estabilização",
           "votação insuficiente: 0 a favor, 0 contra (precisa 2+ a favor e 0 contra)"
         ],
         "estabilizacao": false,
-        "stop_estrutural": 49.855,
+        "stop_estrutural": 49.7043,
         "votos": {
           "tendencia": "neutro",
-          "analogos": "neutro",
+          "analogos": "contra",
           "balanco": "neutro",
           "noticias": null,
           "intradia": "neutro"
         },
         "tendencia": "baixa 25",
-        "ultimo": 51.53
+        "ultimo": 51.38
       }
     },
     {
@@ -148,7 +150,7 @@
           "votação insuficiente: 3 a favor, 1 contra (precisa 2+ a favor e 0 contra)"
         ],
         "estabilizacao": false,
-        "stop_estrutural": 41.1057,
+        "stop_estrutural": 41.3757,
         "votos": {
           "tendencia": "a_favor",
           "analogos": "a_favor",
@@ -157,7 +159,7 @@
           "intradia": "contra"
         },
         "tendencia": "alta 55",
-        "ultimo": 42.84
+        "ultimo": 43.11
       }
     },
     {
@@ -198,7 +200,7 @@
           "votação insuficiente: 0 a favor, 1 contra (precisa 2+ a favor e 0 contra)"
         ],
         "estabilizacao": false,
-        "stop_estrutural": 8.4029,
+        "stop_estrutural": 8.3629,
         "votos": {
           "tendencia": "contra",
           "analogos": "contra",
@@ -207,7 +209,7 @@
           "intradia": "neutro"
         },
         "tendencia": "baixa 85",
-        "ultimo": 8.62
+        "ultimo": 8.58
       }
     },
     {
