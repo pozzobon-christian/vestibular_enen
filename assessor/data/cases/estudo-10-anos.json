@@ -1,6 +1,1203 @@
 {
   "metodo": "Casos dos últimos 10 anos aplicados ao day trade.",
   "custo_ida_volta": 0.0009,
+  "custo_mini_indice": 0.00015,
+  "noite_vs_dia": {
+    "PETR4": {
+      "pregoes": 2461,
+      "noite_total": 43.661,
+      "dia_total": -0.765
+    },
+    "VALE3": {
+      "pregoes": 2468,
+      "noite_total": 30.065,
+      "dia_total": -0.85
+    },
+    "ITUB4": {
+      "pregoes": 2462,
+      "noite_total": 3.069,
+      "dia_total": -0.531
+    },
+    "BBDC4": {
+      "pregoes": 2467,
+      "noite_total": 0.51,
+      "dia_total": -0.714
+    },
+    "BBAS3": {
+      "pregoes": 2433,
+      "noite_total": 6.201,
+      "dia_total": -0.889
+    },
+    "ABEV3": {
+      "pregoes": 2473,
+      "noite_total": 0.365,
+      "dia_total": -0.039
+    },
+    "WEGE3": {
+      "pregoes": 2469,
+      "noite_total": 6.445,
+      "dia_total": -0.581
+    },
+    "PRIO3": {
+      "pregoes": 2491,
+      "noite_total": 2.561,
+      "dia_total": 0.12
+    },
+    "MGLU3": {
+      "pregoes": 2486,
+      "noite_total": 7.206,
+      "dia_total": -0.989
+    },
+    "B3SA3": {
+      "pregoes": 2450,
+      "noite_total": -0.33,
+      "dia_total": 5.808
+    },
+    "SUZB3": {
+      "pregoes": 2482,
+      "noite_total": 17.78,
+      "dia_total": -0.828
+    },
+    "RENT3": {
+      "pregoes": 2467,
+      "noite_total": -0.615,
+      "dia_total": 1.432
+    },
+    "BOVA11": {
+      "pregoes": 2490,
+      "noite_total": 4.416,
+      "dia_total": -0.473
+    },
+    "IBOV": {
+      "pregoes": 2483,
+      "noite_total": 0.042,
+      "dia_total": 1.689
+    }
+  },
+  "mini_indice_com_stop_1pct": {
+    "gap_alta_reversao": {
+      "descricao": "vender na abertura quando abre >= 1,5% acima do fechamento anterior",
+      "2016_2022": {
+        "operacoes": 1,
+        "acerto": 1.0,
+        "expectancia_pct": 0.401,
+        "profit_factor": null,
+        "t_stat": null,
+        "stops": 0,
+        "anos_lucrativos": "1/1",
+        "soma_por_ano": {
+          "2022": 0.004
+        }
+      },
+      "2023_hoje": {
+        "operacoes": 0
+      },
+      "10_anos": {
+        "operacoes": 1,
+        "acerto": 1.0,
+        "expectancia_pct": 0.401,
+        "profit_factor": null,
+        "t_stat": null,
+        "stops": 0,
+        "anos_lucrativos": "1/1",
+        "soma_por_ano": {
+          "2022": 0.004
+        }
+      },
+      "veredito": {
+        "aprovado": false,
+        "criterios": {
+          "200+ operações em 10 anos": false,
+          "expectância > 0,05% depois dos custos (2016-2022)": true,
+          "expectância > 0 fora da amostra (2023-hoje)": false,
+          "t-stat >= 2 nos 10 anos (não é sorte)": false,
+          "lucrativa em 7+ de cada 10 anos": true
+        }
+      }
+    },
+    "gap_baixa_reversao": {
+      "descricao": "comprar na abertura quando abre >= 1,5% abaixo",
+      "2016_2022": {
+        "operacoes": 1,
+        "acerto": 0.0,
+        "expectancia_pct": -1.015,
+        "profit_factor": 0.0,
+        "t_stat": null,
+        "stops": 1,
+        "anos_lucrativos": "0/1",
+        "soma_por_ano": {
+          "2022": -0.0102
+        }
+      },
+      "2023_hoje": {
+        "operacoes": 0
+      },
+      "10_anos": {
+        "operacoes": 1,
+        "acerto": 0.0,
+        "expectancia_pct": -1.015,
+        "profit_factor": 0.0,
+        "t_stat": null,
+        "stops": 1,
+        "anos_lucrativos": "0/1",
+        "soma_por_ano": {
+          "2022": -0.0102
+        }
+      },
+      "veredito": {
+        "aprovado": false,
+        "criterios": {
+          "200+ operações em 10 anos": false,
+          "expectância > 0,05% depois dos custos (2016-2022)": false,
+          "expectância > 0 fora da amostra (2023-hoje)": false,
+          "t-stat >= 2 nos 10 anos (não é sorte)": false,
+          "lucrativa em 7+ de cada 10 anos": false
+        }
+      }
+    },
+    "gap_alta_continuacao": {
+      "descricao": "comprar na abertura quando abre >= 1,5% acima",
+      "2016_2022": {
+        "operacoes": 1,
+        "acerto": 0.0,
+        "expectancia_pct": -0.431,
+        "profit_factor": 0.0,
+        "t_stat": null,
+        "stops": 0,
+        "anos_lucrativos": "0/1",
+        "soma_por_ano": {
+          "2022": -0.0043
+        }
+      },
+      "2023_hoje": {
+        "operacoes": 0
+      },
+      "10_anos": {
+        "operacoes": 1,
+        "acerto": 0.0,
+        "expectancia_pct": -0.431,
+        "profit_factor": 0.0,
+        "t_stat": null,
+        "stops": 0,
+        "anos_lucrativos": "0/1",
+        "soma_por_ano": {
+          "2022": -0.0043
+        }
+      },
+      "veredito": {
+        "aprovado": false,
+        "criterios": {
+          "200+ operações em 10 anos": false,
+          "expectância > 0,05% depois dos custos (2016-2022)": false,
+          "expectância > 0 fora da amostra (2023-hoje)": false,
+          "t-stat >= 2 nos 10 anos (não é sorte)": false,
+          "lucrativa em 7+ de cada 10 anos": false
+        }
+      }
+    },
+    "gap_baixa_continuacao": {
+      "descricao": "vender na abertura quando abre >= 1,5% abaixo",
+      "2016_2022": {
+        "operacoes": 1,
+        "acerto": 1.0,
+        "expectancia_pct": 0.468,
+        "profit_factor": null,
+        "t_stat": null,
+        "stops": 0,
+        "anos_lucrativos": "1/1",
+        "soma_por_ano": {
+          "2022": 0.0047
+        }
+      },
+      "2023_hoje": {
+        "operacoes": 0
+      },
+      "10_anos": {
+        "operacoes": 1,
+        "acerto": 1.0,
+        "expectancia_pct": 0.468,
+        "profit_factor": null,
+        "t_stat": null,
+        "stops": 0,
+        "anos_lucrativos": "1/1",
+        "soma_por_ano": {
+          "2022": 0.0047
+        }
+      },
+      "veredito": {
+        "aprovado": false,
+        "criterios": {
+          "200+ operações em 10 anos": false,
+          "expectância > 0,05% depois dos custos (2016-2022)": true,
+          "expectância > 0 fora da amostra (2023-hoje)": false,
+          "t-stat >= 2 nos 10 anos (não é sorte)": false,
+          "lucrativa em 7+ de cada 10 anos": true
+        }
+      }
+    },
+    "apos_queda_forte": {
+      "descricao": "comprar no dia seguinte a uma queda >= 3%",
+      "2016_2022": {
+        "operacoes": 31,
+        "acerto": 0.581,
+        "expectancia_pct": 1.625,
+        "profit_factor": 5.1,
+        "t_stat": 2.56,
+        "stops": 12,
+        "anos_lucrativos": "5/7",
+        "soma_por_ano": {
+          "2016": -0.0102,
+          "2017": 0.0168,
+          "2018": -0.0009,
+          "2019": 0.0158,
+          "2020": 0.4196,
+          "2021": 0.0503,
+          "2022": 0.0123
+        }
+      },
+      "2023_hoje": {
+        "operacoes": 5,
+        "acerto": 0.6,
+        "expectancia_pct": 0.103,
+        "profit_factor": 1.34,
+        "t_stat": 0.26,
+        "stops": 1,
+        "anos_lucrativos": "3/4",
+        "soma_por_ano": {
+          "2023": -0.0102,
+          "2024": 0.0033,
+          "2025": 0.005,
+          "2026": 0.0069
+        }
+      },
+      "10_anos": {
+        "operacoes": 36,
+        "acerto": 0.583,
+        "expectancia_pct": 1.414,
+        "profit_factor": 4.68,
+        "t_stat": 2.54,
+        "stops": 13,
+        "anos_lucrativos": "8/11",
+        "soma_por_ano": {
+          "2016": -0.0102,
+          "2017": 0.0168,
+          "2018": -0.0009,
+          "2019": 0.0158,
+          "2020": 0.4196,
+          "2021": 0.0503,
+          "2022": 0.0123,
+          "2023": -0.0102,
+          "2024": 0.0033,
+          "2025": 0.005,
+          "2026": 0.0069
+        }
+      },
+      "veredito": {
+        "aprovado": false,
+        "criterios": {
+          "200+ operações em 10 anos": false,
+          "expectância > 0,05% depois dos custos (2016-2022)": true,
+          "expectância > 0 fora da amostra (2023-hoje)": true,
+          "t-stat >= 2 nos 10 anos (não é sorte)": true,
+          "lucrativa em 7+ de cada 10 anos": true
+        }
+      }
+    },
+    "apos_alta_forte": {
+      "descricao": "vender no dia seguinte a uma alta >= 3%",
+      "2016_2022": {
+        "operacoes": 25,
+        "acerto": 0.28,
+        "expectancia_pct": 0.907,
+        "profit_factor": 2.42,
+        "t_stat": 1.14,
+        "stops": 15,
+        "anos_lucrativos": "2/6",
+        "soma_por_ano": {
+          "2017": 0.0055,
+          "2018": -0.0412,
+          "2019": -0.0062,
+          "2020": 0.2888,
+          "2021": -0.0102,
+          "2022": -0.0102
+        }
+      },
+      "2023_hoje": {
+        "operacoes": 6,
+        "acerto": 0.167,
+        "expectancia_pct": -0.547,
+        "profit_factor": 0.25,
+        "t_stat": -1.56,
+        "stops": 4,
+        "anos_lucrativos": "1/3",
+        "soma_por_ano": {
+          "2023": -0.0102,
+          "2025": 0.0111,
+          "2026": -0.0338
+        }
+      },
+      "10_anos": {
+        "operacoes": 31,
+        "acerto": 0.258,
+        "expectancia_pct": 0.625,
+        "profit_factor": 1.95,
+        "t_stat": 0.96,
+        "stops": 19,
+        "anos_lucrativos": "3/9",
+        "soma_por_ano": {
+          "2017": 0.0055,
+          "2018": -0.0412,
+          "2019": -0.0062,
+          "2020": 0.2888,
+          "2021": -0.0102,
+          "2022": -0.0102,
+          "2023": -0.0102,
+          "2025": 0.0111,
+          "2026": -0.0338
+        }
+      },
+      "veredito": {
+        "aprovado": false,
+        "criterios": {
+          "200+ operações em 10 anos": false,
+          "expectância > 0,05% depois dos custos (2016-2022)": true,
+          "expectância > 0 fora da amostra (2023-hoje)": false,
+          "t-stat >= 2 nos 10 anos (não é sorte)": false,
+          "lucrativa em 7+ de cada 10 anos": false
+        }
+      }
+    },
+    "apos_alta_forte_continuacao": {
+      "descricao": "comprar no dia seguinte a uma alta >= 3%",
+      "2016_2022": {
+        "operacoes": 25,
+        "acerto": 0.56,
+        "expectancia_pct": 0.939,
+        "profit_factor": 3.95,
+        "t_stat": 2.23,
+        "stops": 6,
+        "anos_lucrativos": "3/6",
+        "soma_por_ano": {
+          "2017": -0.0061,
+          "2018": 0.057,
+          "2019": -0.0102,
+          "2020": 0.1926,
+          "2021": 0.0056,
+          "2022": -0.0042
+        }
+      },
+      "2023_hoje": {
+        "operacoes": 6,
+        "acerto": 0.333,
+        "expectancia_pct": -0.046,
+        "profit_factor": 0.91,
+        "t_stat": -0.09,
+        "stops": 3,
+        "anos_lucrativos": "2/3",
+        "soma_por_ano": {
+          "2023": 0.0062,
+          "2025": -0.0102,
+          "2026": 0.0012
+        }
+      },
+      "10_anos": {
+        "operacoes": 31,
+        "acerto": 0.516,
+        "expectancia_pct": 0.748,
+        "profit_factor": 3.1,
+        "t_stat": 2.09,
+        "stops": 9,
+        "anos_lucrativos": "5/9",
+        "soma_por_ano": {
+          "2017": -0.0061,
+          "2018": 0.057,
+          "2019": -0.0102,
+          "2020": 0.1926,
+          "2021": 0.0056,
+          "2022": -0.0042,
+          "2023": 0.0062,
+          "2025": -0.0102,
+          "2026": 0.0012
+        }
+      },
+      "veredito": {
+        "aprovado": false,
+        "criterios": {
+          "200+ operações em 10 anos": false,
+          "expectância > 0,05% depois dos custos (2016-2022)": true,
+          "expectância > 0 fora da amostra (2023-hoje)": false,
+          "t-stat >= 2 nos 10 anos (não é sorte)": true,
+          "lucrativa em 7+ de cada 10 anos": false
+        }
+      }
+    },
+    "primeiro_dia_do_mes": {
+      "descricao": "comprar na abertura do 1º pregão do mês (fluxo de aportes)",
+      "2016_2022": {
+        "operacoes": 73,
+        "acerto": 0.589,
+        "expectancia_pct": 0.355,
+        "profit_factor": 2.02,
+        "t_stat": 2.31,
+        "stops": 22,
+        "anos_lucrativos": "5/7",
+        "soma_por_ano": {
+          "2016": -0.0102,
+          "2017": 0.0411,
+          "2018": -0.0191,
+          "2019": 0.0366,
+          "2020": 0.1166,
+          "2021": 0.0531,
+          "2022": 0.0412
+        }
+      },
+      "2023_hoje": {
+        "operacoes": 47,
+        "acerto": 0.404,
+        "expectancia_pct": -0.09,
+        "profit_factor": 0.78,
+        "t_stat": -0.71,
+        "stops": 15,
+        "anos_lucrativos": "2/4",
+        "soma_por_ano": {
+          "2023": 0.0035,
+          "2024": -0.0197,
+          "2025": 0.0006,
+          "2026": -0.0266
+        }
+      },
+      "10_anos": {
+        "operacoes": 120,
+        "acerto": 0.517,
+        "expectancia_pct": 0.181,
+        "profit_factor": 1.49,
+        "t_stat": 1.68,
+        "stops": 37,
+        "anos_lucrativos": "7/11",
+        "soma_por_ano": {
+          "2016": -0.0102,
+          "2017": 0.0411,
+          "2018": -0.0191,
+          "2019": 0.0366,
+          "2020": 0.1166,
+          "2021": 0.0531,
+          "2022": 0.0412,
+          "2023": 0.0035,
+          "2024": -0.0197,
+          "2025": 0.0006,
+          "2026": -0.0266
+        }
+      },
+      "veredito": {
+        "aprovado": false,
+        "criterios": {
+          "200+ operações em 10 anos": true,
+          "expectância > 0,05% depois dos custos (2016-2022)": true,
+          "expectância > 0 fora da amostra (2023-hoje)": false,
+          "t-stat >= 2 nos 10 anos (não é sorte)": false,
+          "lucrativa em 7+ de cada 10 anos": false
+        }
+      }
+    },
+    "segunda_feira_venda": {
+      "descricao": "vender na abertura de segunda-feira",
+      "2016_2022": {
+        "operacoes": 301,
+        "acerto": 0.445,
+        "expectancia_pct": 0.144,
+        "profit_factor": 1.33,
+        "t_stat": 1.57,
+        "stops": 102,
+        "anos_lucrativos": "5/7",
+        "soma_por_ano": {
+          "2016": 0.0212,
+          "2017": -0.0683,
+          "2018": 0.0473,
+          "2019": 0.0259,
+          "2020": 0.2488,
+          "2021": -0.0219,
+          "2022": 0.1817
+        }
+      },
+      "2023_hoje": {
+        "operacoes": 192,
+        "acerto": 0.469,
+        "expectancia_pct": -0.03,
+        "profit_factor": 0.92,
+        "t_stat": -0.33,
+        "stops": 51,
+        "anos_lucrativos": "1/4",
+        "soma_por_ano": {
+          "2023": -0.0025,
+          "2024": -0.0432,
+          "2025": -0.093,
+          "2026": 0.0812
+        }
+      },
+      "10_anos": {
+        "operacoes": 493,
+        "acerto": 0.454,
+        "expectancia_pct": 0.077,
+        "profit_factor": 1.19,
+        "t_stat": 1.15,
+        "stops": 153,
+        "anos_lucrativos": "6/11",
+        "soma_por_ano": {
+          "2016": 0.0212,
+          "2017": -0.0683,
+          "2018": 0.0473,
+          "2019": 0.0259,
+          "2020": 0.2488,
+          "2021": -0.0219,
+          "2022": 0.1817,
+          "2023": -0.0025,
+          "2024": -0.0432,
+          "2025": -0.093,
+          "2026": 0.0812
+        }
+      },
+      "veredito": {
+        "aprovado": false,
+        "criterios": {
+          "200+ operações em 10 anos": true,
+          "expectância > 0,05% depois dos custos (2016-2022)": true,
+          "expectância > 0 fora da amostra (2023-hoje)": false,
+          "t-stat >= 2 nos 10 anos (não é sorte)": false,
+          "lucrativa em 7+ de cada 10 anos": false
+        }
+      }
+    },
+    "sexta_feira_compra": {
+      "descricao": "comprar na abertura de sexta-feira",
+      "2016_2022": {
+        "operacoes": 298,
+        "acerto": 0.48,
+        "expectancia_pct": 0.084,
+        "profit_factor": 1.2,
+        "t_stat": 1.11,
+        "stops": 109,
+        "anos_lucrativos": "5/7",
+        "soma_por_ano": {
+          "2016": -0.0121,
+          "2017": 0.1156,
+          "2018": 0.0608,
+          "2019": 0.0168,
+          "2020": -0.01,
+          "2021": 0.0588,
+          "2022": 0.0212
+        }
+      },
+      "2023_hoje": {
+        "operacoes": 194,
+        "acerto": 0.459,
+        "expectancia_pct": -0.001,
+        "profit_factor": 1.0,
+        "t_stat": -0.02,
+        "stops": 55,
+        "anos_lucrativos": "2/4",
+        "soma_por_ano": {
+          "2023": 0.0319,
+          "2024": -0.037,
+          "2025": 0.0042,
+          "2026": -0.0012
+        }
+      },
+      "10_anos": {
+        "operacoes": 492,
+        "acerto": 0.472,
+        "expectancia_pct": 0.051,
+        "profit_factor": 1.12,
+        "t_stat": 0.95,
+        "stops": 164,
+        "anos_lucrativos": "7/11",
+        "soma_por_ano": {
+          "2016": -0.0121,
+          "2017": 0.1156,
+          "2018": 0.0608,
+          "2019": 0.0168,
+          "2020": -0.01,
+          "2021": 0.0588,
+          "2022": 0.0212,
+          "2023": 0.0319,
+          "2024": -0.037,
+          "2025": 0.0042,
+          "2026": -0.0012
+        }
+      },
+      "veredito": {
+        "aprovado": false,
+        "criterios": {
+          "200+ operações em 10 anos": true,
+          "expectância > 0,05% depois dos custos (2016-2022)": true,
+          "expectância > 0 fora da amostra (2023-hoje)": false,
+          "t-stat >= 2 nos 10 anos (não é sorte)": false,
+          "lucrativa em 7+ de cada 10 anos": false
+        }
+      }
+    }
+  },
+  "mini_indice_sem_stop": {
+    "gap_alta_reversao": {
+      "descricao": "vender na abertura quando abre >= 1,5% acima do fechamento anterior",
+      "2016_2022": {
+        "operacoes": 1,
+        "acerto": 1.0,
+        "expectancia_pct": 0.401,
+        "profit_factor": null,
+        "t_stat": null,
+        "stops": 0,
+        "anos_lucrativos": "1/1",
+        "soma_por_ano": {
+          "2022": 0.004
+        }
+      },
+      "2023_hoje": {
+        "operacoes": 0
+      },
+      "10_anos": {
+        "operacoes": 1,
+        "acerto": 1.0,
+        "expectancia_pct": 0.401,
+        "profit_factor": null,
+        "t_stat": null,
+        "stops": 0,
+        "anos_lucrativos": "1/1",
+        "soma_por_ano": {
+          "2022": 0.004
+        }
+      },
+      "veredito": {
+        "aprovado": false,
+        "criterios": {
+          "200+ operações em 10 anos": false,
+          "expectância > 0,05% depois dos custos (2016-2022)": true,
+          "expectância > 0 fora da amostra (2023-hoje)": false,
+          "t-stat >= 2 nos 10 anos (não é sorte)": false,
+          "lucrativa em 7+ de cada 10 anos": true
+        }
+      }
+    },
+    "gap_baixa_reversao": {
+      "descricao": "comprar na abertura quando abre >= 1,5% abaixo",
+      "2016_2022": {
+        "operacoes": 1,
+        "acerto": 0.0,
+        "expectancia_pct": -0.498,
+        "profit_factor": 0.0,
+        "t_stat": null,
+        "stops": 0,
+        "anos_lucrativos": "0/1",
+        "soma_por_ano": {
+          "2022": -0.005
+        }
+      },
+      "2023_hoje": {
+        "operacoes": 0
+      },
+      "10_anos": {
+        "operacoes": 1,
+        "acerto": 0.0,
+        "expectancia_pct": -0.498,
+        "profit_factor": 0.0,
+        "t_stat": null,
+        "stops": 0,
+        "anos_lucrativos": "0/1",
+        "soma_por_ano": {
+          "2022": -0.005
+        }
+      },
+      "veredito": {
+        "aprovado": false,
+        "criterios": {
+          "200+ operações em 10 anos": false,
+          "expectância > 0,05% depois dos custos (2016-2022)": false,
+          "expectância > 0 fora da amostra (2023-hoje)": false,
+          "t-stat >= 2 nos 10 anos (não é sorte)": false,
+          "lucrativa em 7+ de cada 10 anos": false
+        }
+      }
+    },
+    "gap_alta_continuacao": {
+      "descricao": "comprar na abertura quando abre >= 1,5% acima",
+      "2016_2022": {
+        "operacoes": 1,
+        "acerto": 0.0,
+        "expectancia_pct": -0.431,
+        "profit_factor": 0.0,
+        "t_stat": null,
+        "stops": 0,
+        "anos_lucrativos": "0/1",
+        "soma_por_ano": {
+          "2022": -0.0043
+        }
+      },
+      "2023_hoje": {
+        "operacoes": 0
+      },
+      "10_anos": {
+        "operacoes": 1,
+        "acerto": 0.0,
+        "expectancia_pct": -0.431,
+        "profit_factor": 0.0,
+        "t_stat": null,
+        "stops": 0,
+        "anos_lucrativos": "0/1",
+        "soma_por_ano": {
+          "2022": -0.0043
+        }
+      },
+      "veredito": {
+        "aprovado": false,
+        "criterios": {
+          "200+ operações em 10 anos": false,
+          "expectância > 0,05% depois dos custos (2016-2022)": false,
+          "expectância > 0 fora da amostra (2023-hoje)": false,
+          "t-stat >= 2 nos 10 anos (não é sorte)": false,
+          "lucrativa em 7+ de cada 10 anos": false
+        }
+      }
+    },
+    "gap_baixa_continuacao": {
+      "descricao": "vender na abertura quando abre >= 1,5% abaixo",
+      "2016_2022": {
+        "operacoes": 1,
+        "acerto": 1.0,
+        "expectancia_pct": 0.468,
+        "profit_factor": null,
+        "t_stat": null,
+        "stops": 0,
+        "anos_lucrativos": "1/1",
+        "soma_por_ano": {
+          "2022": 0.0047
+        }
+      },
+      "2023_hoje": {
+        "operacoes": 0
+      },
+      "10_anos": {
+        "operacoes": 1,
+        "acerto": 1.0,
+        "expectancia_pct": 0.468,
+        "profit_factor": null,
+        "t_stat": null,
+        "stops": 0,
+        "anos_lucrativos": "1/1",
+        "soma_por_ano": {
+          "2022": 0.0047
+        }
+      },
+      "veredito": {
+        "aprovado": false,
+        "criterios": {
+          "200+ operações em 10 anos": false,
+          "expectância > 0,05% depois dos custos (2016-2022)": true,
+          "expectância > 0 fora da amostra (2023-hoje)": false,
+          "t-stat >= 2 nos 10 anos (não é sorte)": false,
+          "lucrativa em 7+ de cada 10 anos": true
+        }
+      }
+    },
+    "apos_queda_forte": {
+      "descricao": "comprar no dia seguinte a uma queda >= 3%",
+      "2016_2022": {
+        "operacoes": 31,
+        "acerto": 0.71,
+        "expectancia_pct": 0.972,
+        "profit_factor": 1.79,
+        "t_stat": 1.04,
+        "stops": 0,
+        "anos_lucrativos": "7/7",
+        "soma_por_ano": {
+          "2016": 0.0136,
+          "2017": 0.0168,
+          "2018": 0.0028,
+          "2019": 0.0232,
+          "2020": 0.1679,
+          "2021": 0.0668,
+          "2022": 0.0103
+        }
+      },
+      "2023_hoje": {
+        "operacoes": 5,
+        "acerto": 0.6,
+        "expectancia_pct": -0.113,
+        "profit_factor": 0.78,
+        "t_stat": -0.2,
+        "stops": 0,
+        "anos_lucrativos": "3/4",
+        "soma_por_ano": {
+          "2023": -0.0209,
+          "2024": 0.0033,
+          "2025": 0.005,
+          "2026": 0.0069
+        }
+      },
+      "10_anos": {
+        "operacoes": 36,
+        "acerto": 0.694,
+        "expectancia_pct": 0.821,
+        "profit_factor": 1.73,
+        "t_stat": 1.01,
+        "stops": 0,
+        "anos_lucrativos": "10/11",
+        "soma_por_ano": {
+          "2016": 0.0136,
+          "2017": 0.0168,
+          "2018": 0.0028,
+          "2019": 0.0232,
+          "2020": 0.1679,
+          "2021": 0.0668,
+          "2022": 0.0103,
+          "2023": -0.0209,
+          "2024": 0.0033,
+          "2025": 0.005,
+          "2026": 0.0069
+        }
+      },
+      "veredito": {
+        "aprovado": false,
+        "criterios": {
+          "200+ operações em 10 anos": false,
+          "expectância > 0,05% depois dos custos (2016-2022)": true,
+          "expectância > 0 fora da amostra (2023-hoje)": false,
+          "t-stat >= 2 nos 10 anos (não é sorte)": false,
+          "lucrativa em 7+ de cada 10 anos": true
+        }
+      }
+    },
+    "apos_alta_forte": {
+      "descricao": "vender no dia seguinte a uma alta >= 3%",
+      "2016_2022": {
+        "operacoes": 25,
+        "acerto": 0.4,
+        "expectancia_pct": 0.293,
+        "profit_factor": 1.23,
+        "t_stat": 0.32,
+        "stops": 0,
+        "anos_lucrativos": "3/6",
+        "soma_por_ano": {
+          "2017": 0.0055,
+          "2018": -0.0585,
+          "2019": -0.0062,
+          "2020": 0.1344,
+          "2021": -0.0059,
+          "2022": 0.0039
+        }
+      },
+      "2023_hoje": {
+        "operacoes": 6,
+        "acerto": 0.5,
+        "expectancia_pct": -0.261,
+        "profit_factor": 0.51,
+        "t_stat": -0.56,
+        "stops": 0,
+        "anos_lucrativos": "1/3",
+        "soma_por_ano": {
+          "2023": -0.0065,
+          "2025": 0.0111,
+          "2026": -0.0203
+        }
+      },
+      "10_anos": {
+        "operacoes": 31,
+        "acerto": 0.419,
+        "expectancia_pct": 0.186,
+        "profit_factor": 1.16,
+        "t_stat": 0.25,
+        "stops": 0,
+        "anos_lucrativos": "4/9",
+        "soma_por_ano": {
+          "2017": 0.0055,
+          "2018": -0.0585,
+          "2019": -0.0062,
+          "2020": 0.1344,
+          "2021": -0.0059,
+          "2022": 0.0039,
+          "2023": -0.0065,
+          "2025": 0.0111,
+          "2026": -0.0203
+        }
+      },
+      "veredito": {
+        "aprovado": false,
+        "criterios": {
+          "200+ operações em 10 anos": false,
+          "expectância > 0,05% depois dos custos (2016-2022)": true,
+          "expectância > 0 fora da amostra (2023-hoje)": false,
+          "t-stat >= 2 nos 10 anos (não é sorte)": false,
+          "lucrativa em 7+ de cada 10 anos": false
+        }
+      }
+    },
+    "apos_alta_forte_continuacao": {
+      "descricao": "comprar no dia seguinte a uma alta >= 3%",
+      "2016_2022": {
+        "operacoes": 25,
+        "acerto": 0.6,
+        "expectancia_pct": -0.323,
+        "profit_factor": 0.8,
+        "t_stat": -0.35,
+        "stops": 0,
+        "anos_lucrativos": "3/6",
+        "soma_por_ano": {
+          "2017": -0.0061,
+          "2018": 0.057,
+          "2019": 0.0059,
+          "2020": -0.1389,
+          "2021": 0.0056,
+          "2022": -0.0042
+        }
+      },
+      "2023_hoje": {
+        "operacoes": 6,
+        "acerto": 0.5,
+        "expectancia_pct": 0.231,
+        "profit_factor": 1.81,
+        "t_stat": 0.5,
+        "stops": 0,
+        "anos_lucrativos": "2/3",
+        "soma_por_ano": {
+          "2023": 0.0062,
+          "2025": -0.0114,
+          "2026": 0.0191
+        }
+      },
+      "10_anos": {
+        "operacoes": 31,
+        "acerto": 0.581,
+        "expectancia_pct": -0.216,
+        "profit_factor": 0.84,
+        "t_stat": -0.29,
+        "stops": 0,
+        "anos_lucrativos": "5/9",
+        "soma_por_ano": {
+          "2017": -0.0061,
+          "2018": 0.057,
+          "2019": 0.0059,
+          "2020": -0.1389,
+          "2021": 0.0056,
+          "2022": -0.0042,
+          "2023": 0.0062,
+          "2025": -0.0114,
+          "2026": 0.0191
+        }
+      },
+      "veredito": {
+        "aprovado": false,
+        "criterios": {
+          "200+ operações em 10 anos": false,
+          "expectância > 0,05% depois dos custos (2016-2022)": false,
+          "expectância > 0 fora da amostra (2023-hoje)": true,
+          "t-stat >= 2 nos 10 anos (não é sorte)": false,
+          "lucrativa em 7+ de cada 10 anos": false
+        }
+      }
+    },
+    "primeiro_dia_do_mes": {
+      "descricao": "comprar na abertura do 1º pregão do mês (fluxo de aportes)",
+      "2016_2022": {
+        "operacoes": 73,
+        "acerto": 0.658,
+        "expectancia_pct": 0.377,
+        "profit_factor": 2.03,
+        "t_stat": 2.25,
+        "stops": 0,
+        "anos_lucrativos": "6/7",
+        "soma_por_ano": {
+          "2016": -0.0389,
+          "2017": 0.0405,
+          "2018": 0.0062,
+          "2019": 0.038,
+          "2020": 0.1077,
+          "2021": 0.051,
+          "2022": 0.0705
+        }
+      },
+      "2023_hoje": {
+        "operacoes": 47,
+        "acerto": 0.426,
+        "expectancia_pct": -0.099,
+        "profit_factor": 0.77,
+        "t_stat": -0.68,
+        "stops": 0,
+        "anos_lucrativos": "1/4",
+        "soma_por_ano": {
+          "2023": -0.0186,
+          "2024": -0.0193,
+          "2025": 0.0006,
+          "2026": -0.0091
+        }
+      },
+      "10_anos": {
+        "operacoes": 120,
+        "acerto": 0.567,
+        "expectancia_pct": 0.19,
+        "profit_factor": 1.49,
+        "t_stat": 1.61,
+        "stops": 0,
+        "anos_lucrativos": "7/11",
+        "soma_por_ano": {
+          "2016": -0.0389,
+          "2017": 0.0405,
+          "2018": 0.0062,
+          "2019": 0.038,
+          "2020": 0.1077,
+          "2021": 0.051,
+          "2022": 0.0705,
+          "2023": -0.0186,
+          "2024": -0.0193,
+          "2025": 0.0006,
+          "2026": -0.0091
+        }
+      },
+      "veredito": {
+        "aprovado": false,
+        "criterios": {
+          "200+ operações em 10 anos": true,
+          "expectância > 0,05% depois dos custos (2016-2022)": true,
+          "expectância > 0 fora da amostra (2023-hoje)": false,
+          "t-stat >= 2 nos 10 anos (não é sorte)": false,
+          "lucrativa em 7+ de cada 10 anos": false
+        }
+      }
+    },
+    "segunda_feira_venda": {
+      "descricao": "vender na abertura de segunda-feira",
+      "2016_2022": {
+        "operacoes": 301,
+        "acerto": 0.482,
+        "expectancia_pct": 0.036,
+        "profit_factor": 1.06,
+        "t_stat": 0.34,
+        "stops": 0,
+        "anos_lucrativos": "5/7",
+        "soma_por_ano": {
+          "2016": 0.0,
+          "2017": -0.1187,
+          "2018": 0.0808,
+          "2019": 0.0281,
+          "2020": 0.008,
+          "2021": 0.0037,
+          "2022": 0.1072
+        }
+      },
+      "2023_hoje": {
+        "operacoes": 192,
+        "acerto": 0.479,
+        "expectancia_pct": -0.074,
+        "profit_factor": 0.82,
+        "t_stat": -0.73,
+        "stops": 0,
+        "anos_lucrativos": "0/4",
+        "soma_por_ano": {
+          "2023": -0.0073,
+          "2024": -0.0586,
+          "2025": -0.073,
+          "2026": -0.0032
+        }
+      },
+      "10_anos": {
+        "operacoes": 493,
+        "acerto": 0.481,
+        "expectancia_pct": -0.007,
+        "profit_factor": 0.99,
+        "t_stat": -0.09,
+        "stops": 0,
+        "anos_lucrativos": "5/11",
+        "soma_por_ano": {
+          "2016": 0.0,
+          "2017": -0.1187,
+          "2018": 0.0808,
+          "2019": 0.0281,
+          "2020": 0.008,
+          "2021": 0.0037,
+          "2022": 0.1072,
+          "2023": -0.0073,
+          "2024": -0.0586,
+          "2025": -0.073,
+          "2026": -0.0032
+        }
+      },
+      "veredito": {
+        "aprovado": false,
+        "criterios": {
+          "200+ operações em 10 anos": true,
+          "expectância > 0,05% depois dos custos (2016-2022)": false,
+          "expectância > 0 fora da amostra (2023-hoje)": false,
+          "t-stat >= 2 nos 10 anos (não é sorte)": false,
+          "lucrativa em 7+ de cada 10 anos": false
+        }
+      }
+    },
+    "sexta_feira_compra": {
+      "descricao": "comprar na abertura de sexta-feira",
+      "2016_2022": {
+        "operacoes": 298,
+        "acerto": 0.534,
+        "expectancia_pct": 0.02,
+        "profit_factor": 1.04,
+        "t_stat": 0.22,
+        "stops": 0,
+        "anos_lucrativos": "5/7",
+        "soma_por_ano": {
+          "2016": 0.0243,
+          "2017": 0.1233,
+          "2018": 0.0785,
+          "2019": 0.0143,
+          "2020": -0.1446,
+          "2021": -0.041,
+          "2022": 0.0037
+        }
+      },
+      "2023_hoje": {
+        "operacoes": 194,
+        "acerto": 0.469,
+        "expectancia_pct": -0.032,
+        "profit_factor": 0.92,
+        "t_stat": -0.42,
+        "stops": 0,
+        "anos_lucrativos": "2/4",
+        "soma_por_ano": {
+          "2023": 0.0297,
+          "2024": -0.0704,
+          "2025": -0.0367,
+          "2026": 0.0149
+        }
+      },
+      "10_anos": {
+        "operacoes": 492,
+        "acerto": 0.508,
+        "expectancia_pct": -0.001,
+        "profit_factor": 1.0,
+        "t_stat": -0.01,
+        "stops": 0,
+        "anos_lucrativos": "7/11",
+        "soma_por_ano": {
+          "2016": 0.0243,
+          "2017": 0.1233,
+          "2018": 0.0785,
+          "2019": 0.0143,
+          "2020": -0.1446,
+          "2021": -0.041,
+          "2022": 0.0037,
+          "2023": 0.0297,
+          "2024": -0.0704,
+          "2025": -0.0367,
+          "2026": 0.0149
+        }
+      },
+      "veredito": {
+        "aprovado": false,
+        "criterios": {
+          "200+ operações em 10 anos": true,
+          "expectância > 0,05% depois dos custos (2016-2022)": false,
+          "expectância > 0 fora da amostra (2023-hoje)": false,
+          "t-stat >= 2 nos 10 anos (não é sorte)": false,
+          "lucrativa em 7+ de cada 10 anos": false
+        }
+      }
+    }
+  },
   "stop": "1,5% (pela máxima/mínima do dia, conservador)",
   "fontes": {
     "PETR4": "B3 COTAHIST oficial + fator de ajuste Yahoo; 2492 pregões de 2016-11-18 a 2026-11-18",
@@ -15,7 +1212,8 @@
     "B3SA3": "B3 COTAHIST oficial + fator de ajuste Yahoo; 2492 pregões de 2016-11-18 a 2026-11-18",
     "SUZB3": "B3 COTAHIST oficial + fator de ajuste Yahoo; 2492 pregões de 2016-11-18 a 2026-11-18",
     "RENT3": "B3 COTAHIST oficial + fator de ajuste Yahoo; 2492 pregões de 2016-11-18 a 2026-11-18",
-    "BOVA11": "B3 COTAHIST oficial + fator de ajuste Yahoo; 2491 pregões de 2016-11-18 a 2026-11-18"
+    "BOVA11": "B3 COTAHIST oficial + fator de ajuste Yahoo; 2491 pregões de 2016-11-18 a 2026-11-18",
+    "IBOV": "Yahoo ^BVSP (proxy do mini-índice); 2484 pregões"
   },
   "erros": [],
   "com_stop": {
@@ -2071,14 +3269,14 @@
         "acerto": 0.504,
         "expectancia_pct": -0.026,
         "profit_factor": 0.97,
-        "t_stat": -0.25,
+        "t_stat": -0.24,
         "stops": 0,
         "anos_lucrativos": "2/4",
         "soma_por_ano": {
           "2023": 0.0411,
           "2024": 0.3854,
           "2025": -0.2851,
-          "2026": -0.3332
+          "2026": -0.3319
         }
       },
       "10_anos": {
@@ -2100,7 +3298,7 @@
           "2023": 0.0411,
           "2024": 0.3854,
           "2025": -0.2851,
-          "2026": -0.3332
+          "2026": -0.3319
         }
       },
       "veredito": {
@@ -2213,7 +3411,7 @@
           "2023": -0.4137,
           "2024": -0.6176,
           "2025": -0.0389,
-          "2026": -0.0808
+          "2026": -0.0821
         }
       },
       "10_anos": {
@@ -2235,7 +3433,7 @@
           "2023": -0.4137,
           "2024": -0.6176,
           "2025": -0.0389,
-          "2026": -0.0808
+          "2026": -0.0821
         }
       },
       "veredito": {
