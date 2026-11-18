@@ -1,0 +1,84 @@
+{
+  "gerado_em": "2026-11-18T19:11:04.191788+00:00",
+  "sessoes": {
+    "agora_brasilia": "2026-11-18 16:11",
+    "cripto": true,
+    "b3_aberta": true,
+    "eua_abertos": true,
+    "fim_de_semana": false
+  },
+  "tarefas_agora": [
+    "cripto",
+    "b3_intradia",
+    "eua"
+  ],
+  "plano_24h": [
+    {
+      "quando": "toda hora, 24x7",
+      "tarefa": "cripto: sinal de tendência do BTC/ETH, risco cripto, robô de papel do day trade (se houver tese aprovada)"
+    },
+    {
+      "quando": "05h55 dias úteis",
+      "tarefa": "briefing global: madrugada, calendário, regime, ordens do dia"
+    },
+    {
+      "quando": "B3 aberta (10h-17h55), de hora em hora",
+      "tarefa": "intradia: rompimentos, gaps, volume anormal, stops das posições abertas"
+    },
+    {
+      "quando": "17h40 dias úteis",
+      "tarefa": "sinal do efeito noite: comprar no leilão de fechamento das ações aprovadas"
+    },
+    {
+      "quando": "17h47 dias úteis",
+      "tarefa": "fechamento: carteira, P&L, ordens de amanhã"
+    },
+    {
+      "quando": "EUA abertos, de hora em hora",
+      "tarefa": "ações e opções dos EUA (quando houver conta), fluxo de IBIT/COIN/MSTR"
+    },
+    {
+      "quando": "1º pregão do mês",
+      "tarefa": "momentum do índice: BOVA11 contra CDI; rolagem da venda coberta"
+    },
+    {
+      "quando": "domingo 20h",
+      "tarefa": "recalcula os backtests de 10 anos, histórico de acerto dos influenciadores e revisão semanal"
+    }
+  ],
+  "sinais_hoje": {
+    "btc_tendencia_50": {
+      "posicao": "caixa",
+      "preco": 64889,
+      "media": 79015,
+      "distancia_pct": -17.9
+    },
+    "btc_tendencia_100": {
+      "posicao": "caixa",
+      "preco": 64889,
+      "media": 77745,
+      "distancia_pct": -16.5
+    },
+    "btc_tendencia_200": {
+      "posicao": "caixa",
+      "preco": 64889,
+      "media": 72806,
+      "distancia_pct": -10.9
+    },
+    "bova11_momentum_vs_cdi": {
+      "posicao": "CDI",
+      "retorno_10m": 0.0186,
+      "cdi_10m": 0.117,
+      "rebalanceia": "1º pregão do mês"
+    },
+    "efeito_noite": {
+      "ativos_aprovados": [],
+      "acao": "nenhum ativo aprovado",
+      "regra": "só ativos cujo efeito noite em 10 anos superou comprar e segurar e o CDI médio"
+    }
+  },
+  "day_trade": {
+    "teses_aprovadas": [],
+    "robo_de_papel": "desligado: nenhuma tese aprovada"
+  }
+}

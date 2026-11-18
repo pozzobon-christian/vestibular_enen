@@ -1,0 +1,177 @@
+{
+  "nota": "Estratégias com evidência acadêmica, testadas em 10 anos de dados reais.\n\nAções (B3): efeito noite (Lou, Polk e Skouras, 2019); momentum de série\ntemporal no índice (Moskowitz, Ooi e Pedersen, 2012; Faber, 2007).\nOpções: venda coberta sistemática (prêmio de risco de volatilidade: Whaley,\n2002; Israelov e Nielsen, 2015). Sem histórico gratuito de opções da B3, o\nprêmio é ESTIMADO por Black-Scholes com vol implícita = vol realizada x 1,15.\nBitcoin: seguir tendência (Detzel, Liu, Strauss, Zhou e Zhu, 2021).\n\nTodas com custos, contra o \"comprar e segurar\" do mesmo ativo e contra o CDI.",
+  "erros": [],
+  "acoes": {
+    "BOVA11": {
+      "comprar_e_segurar": {
+        "retorno_total": 1.853,
+        "ao_ano": 0.1106,
+        "queda_maxima": 0.469,
+        "sharpe": 0.19,
+        "anos": 10.0
+      },
+      "efeito_noite": {
+        "retorno_total": -0.532,
+        "ao_ano": -0.0731,
+        "queda_maxima": 0.635,
+        "sharpe": -0.81,
+        "anos": 10.0
+      },
+      "momentum_vs_cdi": {
+        "retorno_total": 0.316,
+        "ao_ano": 0.0278,
+        "queda_maxima": 0.469,
+        "sharpe": -0.24,
+        "anos": 10.0
+      },
+      "cdi": {
+        "retorno_total": 1.424,
+        "ao_ano": 0.0926,
+        "queda_maxima": 0.0,
+        "sharpe": 0.0,
+        "anos": 10.0
+      }
+    },
+    "PETR4": {
+      "comprar_e_segurar": {
+        "retorno_total": 10.778,
+        "ao_ano": 0.2797,
+        "queda_maxima": 0.634,
+        "sharpe": 0.6,
+        "anos": 10.0
+      },
+      "efeito_noite": {
+        "retorno_total": 3.106,
+        "ao_ano": 0.1517,
+        "queda_maxima": 0.426,
+        "sharpe": 0.34,
+        "anos": 10.0
+      }
+    },
+    "VALE3": {
+      "comprar_e_segurar": {
+        "retorno_total": 4.013,
+        "ao_ano": 0.175,
+        "queda_maxima": 0.437,
+        "sharpe": 0.38,
+        "anos": 10.0
+      },
+      "efeito_noite": {
+        "retorno_total": 2.348,
+        "ao_ano": 0.1285,
+        "queda_maxima": 0.326,
+        "sharpe": 0.26,
+        "anos": 10.0
+      }
+    },
+    "ITUB4": {
+      "comprar_e_segurar": {
+        "retorno_total": 2.465,
+        "ao_ano": 0.1323,
+        "queda_maxima": 0.443,
+        "sharpe": 0.27,
+        "anos": 10.0
+      },
+      "efeito_noite": {
+        "retorno_total": -0.146,
+        "ao_ano": -0.0157,
+        "queda_maxima": 0.49,
+        "sharpe": -0.46,
+        "anos": 10.0
+      }
+    },
+    "WEGE3": {
+      "comprar_e_segurar": {
+        "retorno_total": 8.851,
+        "ao_ano": 0.2571,
+        "queda_maxima": 0.495,
+        "sharpe": 0.59,
+        "anos": 10.0
+      },
+      "efeito_noite": {
+        "retorno_total": 1.092,
+        "ao_ano": 0.0766,
+        "queda_maxima": 0.542,
+        "sharpe": -0.01,
+        "anos": 10.0
+      }
+    },
+    "SUZB3": {
+      "comprar_e_segurar": {
+        "retorno_total": 2.284,
+        "ao_ano": 0.1263,
+        "queda_maxima": 0.543,
+        "sharpe": 0.26,
+        "anos": 10.0
+      },
+      "efeito_noite": {
+        "retorno_total": 1.159,
+        "ao_ano": 0.08,
+        "queda_maxima": 0.325,
+        "sharpe": 0.01,
+        "anos": 10.0
+      }
+    }
+  },
+  "opcoes": {
+    "venda_coberta_BOVA11_estimada": {
+      "retorno_total": 1.612,
+      "ao_ano": 0.1012,
+      "queda_maxima": 0.475,
+      "sharpe": 0.16,
+      "anos": 10.0
+    },
+    "referencia_BOVA11_comprar_e_segurar": {
+      "retorno_total": 1.853,
+      "ao_ano": 0.1106,
+      "queda_maxima": 0.469,
+      "sharpe": 0.19,
+      "anos": 10.0
+    },
+    "venda_coberta_PETR4_estimada": {
+      "retorno_total": 7.533,
+      "ao_ano": 0.2405,
+      "queda_maxima": 0.627,
+      "sharpe": 0.52,
+      "anos": 9.9
+    },
+    "referencia_PETR4_comprar_e_segurar": {
+      "retorno_total": 10.778,
+      "ao_ano": 0.2797,
+      "queda_maxima": 0.634,
+      "sharpe": 0.6,
+      "anos": 10.0
+    }
+  },
+  "bitcoin": {
+    "periodo": "2016-11-18 a 2026-11-18",
+    "comprar_e_segurar": {
+      "retorno_total": 82.92,
+      "ao_ano": 0.5574,
+      "queda_maxima": 0.834,
+      "sharpe": 0.83,
+      "anos": 10.0
+    },
+    "tendencia_media_50": {
+      "retorno_total": 173.614,
+      "ao_ano": 0.6759,
+      "queda_maxima": 0.596,
+      "sharpe": 1.1,
+      "anos": 10.0
+    },
+    "tendencia_media_100": {
+      "retorno_total": 112.162,
+      "ao_ano": 0.6047,
+      "queda_maxima": 0.621,
+      "sharpe": 1.0,
+      "anos": 10.0
+    },
+    "tendencia_media_200": {
+      "retorno_total": 18.72,
+      "ao_ano": 0.3474,
+      "queda_maxima": 0.704,
+      "sharpe": 0.7,
+      "anos": 10.0
+    }
+  }
+}

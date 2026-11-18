@@ -16,7 +16,7 @@
     "ITUB4": {
       "pregoes": 2462,
       "noite_total": 3.069,
-      "dia_total": -0.531
+      "dia_total": -0.533
     },
     "BBDC4": {
       "pregoes": 2467,
@@ -31,17 +31,17 @@
     "ABEV3": {
       "pregoes": 2473,
       "noite_total": 0.365,
-      "dia_total": -0.039
+      "dia_total": -0.04
     },
     "WEGE3": {
       "pregoes": 2469,
       "noite_total": 6.445,
-      "dia_total": -0.581
+      "dia_total": -0.582
     },
     "PRIO3": {
       "pregoes": 2491,
       "noite_total": 2.561,
-      "dia_total": 0.12
+      "dia_total": 0.118
     },
     "MGLU3": {
       "pregoes": 2486,
@@ -51,7 +51,7 @@
     "B3SA3": {
       "pregoes": 2450,
       "noite_total": -0.33,
-      "dia_total": 5.808
+      "dia_total": 5.789
     },
     "SUZB3": {
       "pregoes": 2482,
@@ -61,17 +61,17 @@
     "RENT3": {
       "pregoes": 2467,
       "noite_total": -0.615,
-      "dia_total": 1.432
+      "dia_total": 1.42
     },
     "BOVA11": {
       "pregoes": 2490,
       "noite_total": 4.416,
-      "dia_total": -0.473
+      "dia_total": -0.474
     },
     "IBOV": {
       "pregoes": 2483,
       "noite_total": 0.042,
-      "dia_total": 1.689
+      "dia_total": 1.686
     }
   },
   "mini_indice_com_stop_1pct": {
@@ -3269,14 +3269,14 @@
         "acerto": 0.504,
         "expectancia_pct": -0.026,
         "profit_factor": 0.97,
-        "t_stat": -0.24,
+        "t_stat": -0.25,
         "stops": 0,
         "anos_lucrativos": "2/4",
         "soma_por_ano": {
           "2023": 0.0411,
           "2024": 0.3854,
           "2025": -0.2851,
-          "2026": -0.3319
+          "2026": -0.337
         }
       },
       "10_anos": {
@@ -3284,7 +3284,7 @@
         "acerto": 0.513,
         "expectancia_pct": 0.011,
         "profit_factor": 1.01,
-        "t_stat": 0.19,
+        "t_stat": 0.18,
         "stops": 0,
         "anos_lucrativos": "6/11",
         "soma_por_ano": {
@@ -3298,7 +3298,7 @@
           "2023": 0.0411,
           "2024": 0.3854,
           "2025": -0.2851,
-          "2026": -0.3319
+          "2026": -0.337
         }
       },
       "veredito": {
@@ -3354,7 +3354,7 @@
         },
         "MGLU3": {
           "operacoes": 495,
-          "expectancia_pct": 0.147,
+          "expectancia_pct": 0.146,
           "anos_lucrativos": "6/11"
         },
         "B3SA3": {
@@ -3411,7 +3411,7 @@
           "2023": -0.4137,
           "2024": -0.6176,
           "2025": -0.0389,
-          "2026": -0.0821
+          "2026": -0.077
         }
       },
       "10_anos": {
@@ -3433,7 +3433,7 @@
           "2023": -0.4137,
           "2024": -0.6176,
           "2025": -0.0389,
-          "2026": -0.0821
+          "2026": -0.077
         }
       },
       "veredito": {
@@ -3489,7 +3489,7 @@
         },
         "MGLU3": {
           "operacoes": 495,
-          "expectancia_pct": -0.327,
+          "expectancia_pct": -0.326,
           "anos_lucrativos": "3/11"
         },
         "B3SA3": {

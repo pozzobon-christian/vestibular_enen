@@ -1,7 +1,7 @@
 {
-  "gerado_em": "2026-11-18T08:58:47.484732+00:00",
+  "gerado_em": "2026-11-18T18:53:32.397509+00:00",
   "janela_dias": 30,
-  "posts_na_janela": 2349,
+  "posts_na_janela": 2475,
   "campanhas": [
     {
       "ativo": "BTC",
@@ -287,7 +287,7 @@
       ],
       "fase": "lotada",
       "acao": "não entrar; se posicionado, realizar 50% e subir o stop para o custo",
-      "confianca": 0.3
+      "confianca": 0.4
     },
     {
       "ativo": "CRWV",
@@ -433,7 +433,7 @@
       ],
       "fase": "lotada",
       "acao": "não entrar; se posicionado, realizar 50% e subir o stop para o custo",
-      "confianca": 0.5
+      "confianca": 0.6000000000000001
     },
     {
       "ativo": "SPY",
@@ -609,7 +609,7 @@
       ],
       "fase": "lotada",
       "acao": "não entrar; se posicionado, realizar 50% e subir o stop para o custo",
-      "confianca": 0.5
+      "confianca": 0.6000000000000001
     },
     {
       "ativo": "MU",
@@ -1164,7 +1164,7 @@
       ],
       "fase": "inicio",
       "acao": "entrar a favor (venda) com tamanho pelo RiskBudget",
-      "confianca": 0.4
+      "confianca": 0.5
     },
     {
       "ativo": "MU",
@@ -1272,7 +1272,7 @@
       ],
       "fase": "lotada",
       "acao": "não entrar; se posicionado, realizar 50% e subir o stop para o custo",
-      "confianca": 0.4
+      "confianca": 0.5
     },
     {
       "ativo": "AAPL",
@@ -1523,7 +1523,7 @@
       ],
       "fase": "ignorar",
       "acao": "observar; sem ordem",
-      "confianca": 0.3
+      "confianca": 0.4
     },
     {
       "ativo": "SPY",
@@ -1758,7 +1758,7 @@
       ],
       "fase": "lotada",
       "acao": "não entrar; se posicionado, realizar 50% e subir o stop para o custo",
-      "confianca": 0.3
+      "confianca": 0.4
     },
     {
       "ativo": "NVDA",
@@ -2477,14 +2477,69 @@
       "confianca": 0.3
     },
     {
+      "ativo": "SPY",
+      "direcao": "venda",
+      "inicio": "2026-11-17T19:56:04+00:00",
+      "autores": 5,
+      "lider": "stocktwits:lowkeygenius",
+      "duracao_h": 22.91,
+      "alcance": 9,
+      "posts": 6,
+      "seguidores_em_ordem": [
+        "stocktwits:jacksanders68",
+        "stocktwits:thematrix2027",
+        "stocktwits:lovelylee",
+        "stocktwits:richandbroke"
+      ],
+      "fase": "ignorar",
+      "acao": "observar; sem ordem",
+      "confianca": 0.3
+    },
+    {
+      "ativo": "QQQ",
+      "direcao": "venda",
+      "inicio": "2026-11-17T19:56:04+00:00",
+      "autores": 5,
+      "lider": "stocktwits:lowkeygenius",
+      "duracao_h": 22.92,
+      "alcance": 8,
+      "posts": 5,
+      "seguidores_em_ordem": [
+        "stocktwits:nvidiato85",
+        "stocktwits:lovelylee",
+        "stocktwits:richandbroke",
+        "stocktwits:ranthor"
+      ],
+      "fase": "ignorar",
+      "acao": "observar; sem ordem",
+      "confianca": 0.3
+    },
+    {
+      "ativo": "INTC",
+      "direcao": "compra",
+      "inicio": "2026-11-17T20:11:34+00:00",
+      "autores": 3,
+      "lider": "stocktwits:grinkk",
+      "duracao_h": 21.73,
+      "alcance": 4,
+      "posts": 3,
+      "seguidores_em_ordem": [
+        "stocktwits:ub3r5pank",
+        "stocktwits:youngmoneymachine"
+      ],
+      "fase": "inicio",
+      "acao": "entrar a favor (compra) com tamanho pelo RiskBudget",
+      "confianca": 0.4
+    },
+    {
       "ativo": "AMD",
       "direcao": "compra",
       "inicio": "2026-11-17T20:11:34+00:00",
       "autores": 4,
       "lider": "stocktwits:grinkk",
-      "duracao_h": 10.19,
-      "alcance": 7,
-      "posts": 4,
+      "duracao_h": 22.63,
+      "alcance": 8,
+      "posts": 5,
       "seguidores_em_ordem": [
         "stocktwits:theunmaker",
         "stocktwits:ihatemylifesavings",
@@ -2492,6 +2547,77 @@
       ],
       "fase": "inicio",
       "acao": "entrar a favor (compra) com tamanho pelo RiskBudget",
+      "confianca": 0.4
+    },
+    {
+      "ativo": "MSFT",
+      "direcao": "compra",
+      "inicio": "2026-11-17T20:11:34+00:00",
+      "autores": 5,
+      "lider": "stocktwits:grinkk",
+      "duracao_h": 22.22,
+      "alcance": 6,
+      "posts": 5,
+      "seguidores_em_ordem": [
+        "stocktwits:lieutenantjoe",
+        "stocktwits:youngmoneymachine",
+        "stocktwits:ewaveplayer",
+        "stocktwits:mf__doom"
+      ],
+      "fase": "ignorar",
+      "acao": "observar; sem ordem",
+      "confianca": 0.3
+    },
+    {
+      "ativo": "DJT",
+      "direcao": "venda",
+      "inicio": "2026-11-17T20:28:08+00:00",
+      "autores": 3,
+      "lider": "stocktwits:barkingpuppy",
+      "duracao_h": 22.31,
+      "alcance": 2,
+      "posts": 5,
+      "seguidores_em_ordem": [
+        "stocktwits:thematrix2027",
+        "stocktwits:ynk"
+      ],
+      "fase": "inicio",
+      "acao": "entrar a favor (venda) com tamanho pelo RiskBudget",
+      "confianca": 0.4
+    },
+    {
+      "ativo": "DJT",
+      "direcao": "compra",
+      "inicio": "2026-11-17T20:31:14+00:00",
+      "autores": 4,
+      "lider": "stocktwits:boilingpoint",
+      "duracao_h": 22.24,
+      "alcance": 6,
+      "posts": 4,
+      "seguidores_em_ordem": [
+        "stocktwits:virdiluxviventium",
+        "stocktwits:shadowpawn",
+        "stocktwits:nelsonwaters0110"
+      ],
+      "fase": "inicio",
+      "acao": "entrar a favor (compra) com tamanho pelo RiskBudget",
+      "confianca": 0.4
+    },
+    {
+      "ativo": "SPCX",
+      "direcao": "venda",
+      "inicio": "2026-11-17T20:33:07+00:00",
+      "autores": 3,
+      "lider": "stocktwits:marketwatcher2525",
+      "duracao_h": 22.06,
+      "alcance": 4,
+      "posts": 3,
+      "seguidores_em_ordem": [
+        "stocktwits:skinnydipping",
+        "stocktwits:thematrix2027"
+      ],
+      "fase": "inicio",
+      "acao": "entrar a favor (venda) com tamanho pelo RiskBudget",
       "confianca": 0.4
     },
     {
@@ -2515,11 +2641,11 @@
       "ativo": "AAPL",
       "direcao": "venda",
       "inicio": "2026-11-18T01:33:37+00:00",
-      "autores": 9,
+      "autores": 13,
       "lider": "stocktwits:moneyorbagholder",
-      "duracao_h": 6.33,
-      "alcance": 11,
-      "posts": 9,
+      "duracao_h": 17.11,
+      "alcance": 14,
+      "posts": 13,
       "seguidores_em_ordem": [
         "stocktwits:stocks_brannigan",
         "stocktwits:zuluuu",
@@ -2528,7 +2654,11 @@
         "stocktwits:kevinohwarsh",
         "stocktwits:cvmoney",
         "stocktwits:uragabeitch",
-        "stocktwits:stronginvestor1994"
+        "stocktwits:stronginvestor1994",
+        "stocktwits:slothtrades",
+        "stocktwits:yi_long_ma",
+        "stocktwits:sasiusa",
+        "stocktwits:a_p_e_536398340"
       ],
       "fase": "lotada",
       "acao": "não entrar; se posicionado, realizar 50% e subir o stop para o custo",
@@ -2538,45 +2668,57 @@
       "ativo": "AAPL",
       "direcao": "compra",
       "inicio": "2026-11-18T03:19:01+00:00",
-      "autores": 3,
+      "autores": 10,
       "lider": "stocktwits:tradewithinsight",
-      "duracao_h": 2.97,
-      "alcance": 5,
-      "posts": 3,
+      "duracao_h": 15.54,
+      "alcance": 14,
+      "posts": 13,
       "seguidores_em_ordem": [
         "stocktwits:theunmaker",
-        "stocktwits:ihatemylifesavings"
+        "stocktwits:ihatemylifesavings",
+        "stocktwits:mf__doom",
+        "stocktwits:youngmoneymachine",
+        "stocktwits:ewaveplayer",
+        "stocktwits:gta_terminal",
+        "stocktwits:wolfpack_alerts",
+        "stocktwits:kangarooman",
+        "stocktwits:goodnewsbull"
       ],
-      "fase": "inicio",
-      "acao": "entrar a favor (compra) com tamanho pelo RiskBudget",
-      "confianca": 0.4
+      "fase": "lotada",
+      "acao": "não entrar; se posicionado, realizar 50% e subir o stop para o custo",
+      "confianca": 0.3
     },
     {
       "ativo": "SPY",
       "direcao": "compra",
       "inicio": "2026-11-18T04:19:10+00:00",
-      "autores": 3,
+      "autores": 8,
       "lider": "stocktwits:virdiluxviventium",
-      "duracao_h": 3.05,
-      "alcance": 3,
-      "posts": 3,
+      "duracao_h": 14.53,
+      "alcance": 18,
+      "posts": 14,
       "seguidores_em_ordem": [
         "stocktwits:economyengine",
-        "stocktwits:paidguruworstnightmare"
+        "stocktwits:paidguruworstnightmare",
+        "stocktwits:mf__doom",
+        "stocktwits:nelsonwaters0110",
+        "stocktwits:wolfpack_alerts",
+        "stocktwits:roar01",
+        "stocktwits:goodnewsbull"
       ],
-      "fase": "inicio",
-      "acao": "entrar a favor (compra) com tamanho pelo RiskBudget",
-      "confianca": 0.5
+      "fase": "lotada",
+      "acao": "não entrar; se posicionado, realizar 50% e subir o stop para o custo",
+      "confianca": 0.4
     },
     {
       "ativo": "TSLA",
       "direcao": "compra",
       "inicio": "2026-11-18T04:19:10+00:00",
-      "autores": 8,
+      "autores": 13,
       "lider": "stocktwits:virdiluxviventium",
-      "duracao_h": 4.6,
-      "alcance": 17,
-      "posts": 10,
+      "duracao_h": 14.53,
+      "alcance": 24,
+      "posts": 18,
       "seguidores_em_ordem": [
         "stocktwits:economyengine",
         "stocktwits:cjspoe",
@@ -2584,7 +2726,12 @@
         "stocktwits:bio_investor_",
         "stocktwits:ihatemylifesavings",
         "stocktwits:ub3r5pank",
-        "stocktwits:thenew_mr_investor"
+        "stocktwits:thenew_mr_investor",
+        "stocktwits:nelsonwaters0110",
+        "stocktwits:gta_terminal",
+        "stocktwits:homedec",
+        "stocktwits:15fingers",
+        "stocktwits:hn20"
       ],
       "fase": "lotada",
       "acao": "não entrar; se posicionado, realizar 50% e subir o stop para o custo",
@@ -2594,11 +2741,11 @@
       "ativo": "NVDA",
       "direcao": "compra",
       "inicio": "2026-11-18T04:32:25+00:00",
-      "autores": 17,
+      "autores": 29,
       "lider": "stocktwits:economyengine",
-      "duracao_h": 4.4,
-      "alcance": 44,
-      "posts": 22,
+      "duracao_h": 14.32,
+      "alcance": 67,
+      "posts": 40,
       "seguidores_em_ordem": [
         "stocktwits:theunmaker",
         "stocktwits:cjspoe",
@@ -2615,65 +2762,152 @@
         "stocktwits:zeev11",
         "stocktwits:traden4cash",
         "stocktwits:thenew_mr_investor",
-        "stocktwits:afonsoev_"
+        "stocktwits:afonsoev_",
+        "stocktwits:ewaveplayer",
+        "stocktwits:mf__doom",
+        "stocktwits:nelsonwaters0110",
+        "stocktwits:homedec",
+        "stocktwits:krill97",
+        "stocktwits:elonwonabee",
+        "stocktwits:roar01",
+        "stocktwits:dutch2017",
+        "stocktwits:hn20",
+        "stocktwits:mrstockpriceguesser",
+        "stocktwits:spencerf",
+        "stocktwits:joecoolio"
       ],
       "fase": "lotada",
       "acao": "não entrar; se posicionado, realizar 50% e subir o stop para o custo",
       "confianca": 0.3
     },
     {
+      "ativo": "QQQ",
+      "direcao": "compra",
+      "inicio": "2026-11-18T04:32:25+00:00",
+      "autores": 4,
+      "lider": "stocktwits:economyengine",
+      "duracao_h": 14.29,
+      "alcance": 7,
+      "posts": 6,
+      "seguidores_em_ordem": [
+        "stocktwits:theunmaker",
+        "stocktwits:mf__doom",
+        "stocktwits:wolfpack_alerts"
+      ],
+      "fase": "inicio",
+      "acao": "entrar a favor (compra) com tamanho pelo RiskBudget",
+      "confianca": 0.4
+    },
+    {
       "ativo": "TSLA",
       "direcao": "venda",
       "inicio": "2026-11-18T04:36:37+00:00",
-      "autores": 4,
+      "autores": 6,
       "lider": "stocktwits:nvidiato85",
-      "duracao_h": 1.08,
-      "alcance": 5,
-      "posts": 4,
+      "duracao_h": 14.17,
+      "alcance": 10,
+      "posts": 8,
       "seguidores_em_ordem": [
         "stocktwits:noddy100",
         "stocktwits:prophetmargins",
-        "stocktwits:skinnydipping"
+        "stocktwits:skinnydipping",
+        "stocktwits:thematrix2027",
+        "stocktwits:lovelylee"
       ],
-      "fase": "inicio",
-      "acao": "entrar a favor (venda) com tamanho pelo RiskBudget",
-      "confianca": 0.4
+      "fase": "ignorar",
+      "acao": "observar; sem ordem",
+      "confianca": 0.3
     },
     {
       "ativo": "BTC",
       "direcao": "venda",
       "inicio": "2026-11-18T06:45:45+00:00",
-      "autores": 4,
+      "autores": 6,
       "lider": "stocktwits:mergerinfo",
-      "duracao_h": 2.0,
+      "duracao_h": 12.09,
       "alcance": 7,
-      "posts": 5,
+      "posts": 7,
       "seguidores_em_ordem": [
         "stocktwits:stocktwitsnews",
         "stocktwits:jutski_bipolar",
-        "stocktwits:magewizard"
+        "stocktwits:magewizard",
+        "stocktwits:ynk",
+        "stocktwits:bosstrade"
       ],
-      "fase": "inicio",
-      "acao": "entrar a favor (venda) com tamanho pelo RiskBudget",
-      "confianca": 0.4
+      "fase": "ignorar",
+      "acao": "observar; sem ordem",
+      "confianca": 0.3
     },
     {
       "ativo": "BTC",
       "direcao": "compra",
       "inicio": "2026-11-18T07:09:21+00:00",
-      "autores": 4,
+      "autores": 16,
       "lider": "stocktwits:web30",
-      "duracao_h": 1.58,
-      "alcance": 7,
-      "posts": 9,
+      "duracao_h": 11.63,
+      "alcance": 22,
+      "posts": 27,
       "seguidores_em_ordem": [
         "stocktwits:paidguruworstnightmare",
         "stocktwits:layerz",
-        "stocktwits:lieutenantjoe"
+        "stocktwits:lieutenantjoe",
+        "youtube:primopobre",
+        "stocktwits:samurai0",
+        "stocktwits:jckasta",
+        "stocktwits:silverbull13",
+        "stocktwits:shadowpawn",
+        "stocktwits:xbt",
+        "stocktwits:stubbybrown",
+        "stocktwits:nelsonwaters0110",
+        "stocktwits:ultrainstinct",
+        "stocktwits:robinload",
+        "stocktwits:milk25",
+        "stocktwits:apesthot"
+      ],
+      "fase": "lotada",
+      "acao": "não entrar; se posicionado, realizar 50% e subir o stop para o custo",
+      "confianca": 0.4
+    },
+    {
+      "ativo": "NVDA",
+      "direcao": "venda",
+      "inicio": "2026-11-18T08:46:14+00:00",
+      "autores": 10,
+      "lider": "stocktwits:bechoosy",
+      "duracao_h": 10.09,
+      "alcance": 4,
+      "posts": 10,
+      "seguidores_em_ordem": [
+        "stocktwits:ace_of_king",
+        "stocktwits:thistimeisdifferent",
+        "stocktwits:tifa_lockhart",
+        "stocktwits:richandbroke",
+        "stocktwits:lee101",
+        "stocktwits:papui",
+        "stocktwits:illiquid",
+        "stocktwits:thematrix2027",
+        "stocktwits:ranthor"
+      ],
+      "fase": "lotada",
+      "acao": "não entrar; se posicionado, realizar 50% e subir o stop para o custo",
+      "confianca": 0.3
+    },
+    {
+      "ativo": "SPCX",
+      "direcao": "compra",
+      "inicio": "2026-11-18T08:54:05+00:00",
+      "autores": 3,
+      "lider": "stocktwits:thenew_mr_investor",
+      "duracao_h": 9.89,
+      "alcance": 4,
+      "posts": 3,
+      "seguidores_em_ordem": [
+        "stocktwits:homedec",
+        "stocktwits:15fingers"
       ],
       "fase": "inicio",
       "acao": "entrar a favor (compra) com tamanho pelo RiskBudget",
-      "confianca": 0.5
+      "confianca": 0.4
     }
   ],
   "grupos_descobertos": [
@@ -2700,6 +2934,7 @@
       "stocktwits:blacknigiri",
       "stocktwits:blatter",
       "stocktwits:blueblood12",
+      "stocktwits:boilingpoint",
       "stocktwits:boomskitothemoonski",
       "stocktwits:bullishaaff",
       "stocktwits:bullsbearsrtds",
@@ -2727,6 +2962,7 @@
       "stocktwits:elonmusk101",
       "stocktwits:elonswifey",
       "stocktwits:evanmedeiros",
+      "stocktwits:ewaveplayer",
       "stocktwits:fidelco",
       "stocktwits:flickted",
       "stocktwits:flywithfitz81",
@@ -2735,12 +2971,16 @@
       "stocktwits:gayforsanjay",
       "stocktwits:getmoney305",
       "stocktwits:goodmeyer83",
+      "stocktwits:goodnewsbull",
       "stocktwits:graphtistics",
       "stocktwits:greenecotrader",
       "stocktwits:grinkk",
+      "stocktwits:gta_terminal",
       "stocktwits:hal9000x",
       "stocktwits:highlife718",
+      "stocktwits:hn20",
       "stocktwits:holymofgod",
+      "stocktwits:homedec",
       "stocktwits:honeybadgerdgaf",
       "stocktwits:hoodrichinvestor",
       "stocktwits:hownow",
@@ -2750,6 +2990,7 @@
       "stocktwits:intutivetrader",
       "stocktwits:iplaysmart",
       "stocktwits:iseeshit",
+      "stocktwits:jacksanders68",
       "stocktwits:jaredsotken",
       "stocktwits:jay_trades_",
       "stocktwits:jdrebel",
@@ -2776,6 +3017,8 @@
       "stocktwits:littlecat",
       "stocktwits:lizlovesreddit",
       "stocktwits:losing2winning",
+      "stocktwits:lovelylee",
+      "stocktwits:lowkeygenius",
       "stocktwits:luvtoretire",
       "stocktwits:marcusmccord",
       "stocktwits:maribor",
@@ -2783,6 +3026,7 @@
       "stocktwits:meandu2",
       "stocktwits:meatballtrades",
       "stocktwits:metropolitans1986",
+      "stocktwits:mf__doom",
       "stocktwits:michaelm2136",
       "stocktwits:milkingalgoseverymonday",
       "stocktwits:mobjm",
@@ -2797,6 +3041,7 @@
       "stocktwits:nedflandersiii",
       "stocktwits:nelsonwaters0110",
       "stocktwits:nuclear_elvis",
+      "stocktwits:nvidiato85",
       "stocktwits:nzbro",
       "stocktwits:onlyfibs",
       "stocktwits:openclassaction2",
@@ -2810,16 +3055,20 @@
       "stocktwits:prophetmargins",
       "stocktwits:pullbackalerts",
       "stocktwits:puzzles32",
+      "stocktwits:ranthor",
       "stocktwits:reaperblade2233",
       "stocktwits:retireby40club",
       "stocktwits:richandbroke",
+      "stocktwits:roar01",
       "stocktwits:rodzilla01",
       "stocktwits:sa449",
       "stocktwits:samsoncapital",
       "stocktwits:scisector9",
+      "stocktwits:shadowpawn",
       "stocktwits:shamrocktrading",
       "stocktwits:silvertrader47",
       "stocktwits:skimman",
+      "stocktwits:skinnydipping",
       "stocktwits:skumars",
       "stocktwits:smart_investment",
       "stocktwits:sol_meek",
@@ -2842,6 +3091,7 @@
       "stocktwits:thekingofregards",
       "stocktwits:themadogtrader",
       "stocktwits:themagnificentferengi",
+      "stocktwits:thematrix2027",
       "stocktwits:thenew_mr_investor",
       "stocktwits:theunmaker",
       "stocktwits:ticklemymacd",
@@ -2859,6 +3109,7 @@
       "stocktwits:updownsidways",
       "stocktwits:urduja13",
       "stocktwits:us_stock_bubble2026",
+      "stocktwits:utreggg",
       "stocktwits:ver13",
       "stocktwits:vigilantetrader1",
       "stocktwits:virdiluxviventium",
@@ -2867,9 +3118,11 @@
       "stocktwits:warrent_jr",
       "stocktwits:web30",
       "stocktwits:weeklyoptionstrading",
+      "stocktwits:wolfpack_alerts",
       "stocktwits:worldwidewesley",
       "stocktwits:xbt",
       "stocktwits:xxxfactor",
+      "stocktwits:youngmoneymachine",
       "stocktwits:zinminmg"
     ],
     [
@@ -2880,16 +3133,16 @@
       "stocktwits:stocktwitsnews"
     ],
     [
-      "stocktwits:beaniebaby",
-      "stocktwits:jmoney20010",
-      "stocktwits:optiongenius",
-      "stocktwits:william914"
-    ],
-    [
       "stocktwits:bruh5",
       "stocktwits:btcc_exchange",
       "stocktwits:jbtradez254",
       "stocktwits:ljmoney"
+    ],
+    [
+      "stocktwits:beaniebaby",
+      "stocktwits:jmoney20010",
+      "stocktwits:optiongenius",
+      "stocktwits:william914"
     ],
     [
       "stocktwits:barkingpuppy",
@@ -2897,40 +3150,36 @@
       "stocktwits:thecryptofire"
     ],
     [
-      "stocktwits:jutski_bipolar",
-      "stocktwits:magewizard"
-    ],
-    [
-      "stocktwits:alphatrader30000",
-      "stocktwits:hootertrades"
+      "stocktwits:cyberboss",
+      "stocktwits:glps4life"
     ],
     [
       "stocktwits:fawl3r",
       "stocktwits:notfinancialadvicedummy"
     ],
     [
-      "stocktwits:mrstocks785",
-      "stocktwits:stockpikalliance"
-    ],
-    [
-      "stocktwits:stocks_brannigan",
-      "stocktwits:zuluuu"
-    ],
-    [
-      "stocktwits:nvidiato85",
-      "stocktwits:skinnydipping"
-    ],
-    [
-      "stocktwits:boilingpoint",
-      "stocktwits:utreggg"
+      "stocktwits:alphatrader30000",
+      "stocktwits:hootertrades"
     ],
     [
       "stocktwits:cryptomartin",
       "stocktwits:merid"
     ],
     [
-      "stocktwits:cyberboss",
-      "stocktwits:glps4life"
+      "stocktwits:stocks_brannigan",
+      "stocktwits:zuluuu"
+    ],
+    [
+      "stocktwits:jutski_bipolar",
+      "stocktwits:magewizard"
+    ],
+    [
+      "stocktwits:kevinohwarsh",
+      "stocktwits:slothtrades"
+    ],
+    [
+      "stocktwits:mrstocks785",
+      "stocktwits:stockpikalliance"
     ]
   ],
   "lideres": [
@@ -2991,17 +3240,17 @@
       90
     ],
     [
-      "stocktwits:bullseyegains",
-      82
+      "stocktwits:paidguruworstnightmare",
+      86
     ]
   ],
-  "autores_com_historico": 657,
+  "autores_com_historico": 694,
   "resumo_db": {
-    "posts": 2623,
-    "autores": 1084,
-    "campanhas": 105,
-    "sinais": 1202,
-    "precos": 20166,
-    "ultima_execucao": "2026-11-18T08:58:47.314065+00:00"
+    "posts": 2750,
+    "autores": 1131,
+    "campanhas": 115,
+    "sinais": 1317,
+    "precos": 20197,
+    "ultima_execucao": "2026-11-18T18:53:32.210114+00:00"
   }
 }

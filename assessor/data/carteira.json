@@ -47,7 +47,7 @@
           "votação insuficiente: 0 a favor, 0 contra (precisa 2+ a favor e 0 contra)"
         ],
         "estabilizacao": false,
-        "stop_estrutural": 48.26,
+        "stop_estrutural": 49.855,
         "votos": {
           "tendencia": "neutro",
           "analogos": "neutro",
@@ -56,7 +56,7 @@
           "intradia": "neutro"
         },
         "tendencia": "baixa 25",
-        "ultimo": 51.31
+        "ultimo": 51.53
       }
     },
     {
@@ -101,7 +101,7 @@
           "votação insuficiente: 0 a favor, 2 contra (precisa 2+ a favor e 0 contra)"
         ],
         "estabilizacao": false,
-        "stop_estrutural": 63563.3833,
+        "stop_estrutural": 63272.2771,
         "votos": {
           "tendencia": "contra",
           "analogos": "neutro",
@@ -110,7 +110,7 @@
           "intradia": "contra"
         },
         "tendencia": "baixa 85",
-        "ultimo": 65305.281
+        "ultimo": 64889.4129
       }
     },
     {
@@ -142,22 +142,22 @@
       ],
       "proximo_movimento": "Reavaliar após o resultado da NVDA (17/11) e com o VIX abaixo de 22. Enquanto o Ibovespa estiver em modo defensivo e com rebaixamento do Morgan Stanley no radar, PETR4 só com estabilização.",
       "porteiro": {
-        "aprovada": true,
-        "motivos": [
-          "votação 3 a favor, 0 contra; tendência alta 70; regime defensivo"
+        "aprovada": false,
+        "motivos": [],
+        "bloqueios": [
+          "votação insuficiente: 3 a favor, 1 contra (precisa 2+ a favor e 0 contra)"
         ],
-        "bloqueios": [],
         "estabilizacao": false,
-        "stop_estrutural": 43.1693,
+        "stop_estrutural": 41.1057,
         "votos": {
           "tendencia": "a_favor",
-          "analogos": "neutro",
+          "analogos": "a_favor",
           "balanco": "a_favor",
           "noticias": null,
-          "intradia": "a_favor"
+          "intradia": "contra"
         },
-        "tendencia": "alta 70",
-        "ultimo": 45.3
+        "tendencia": "alta 55",
+        "ultimo": 42.84
       }
     },
     {
@@ -198,7 +198,7 @@
           "votação insuficiente: 0 a favor, 1 contra (precisa 2+ a favor e 0 contra)"
         ],
         "estabilizacao": false,
-        "stop_estrutural": 8.4957,
+        "stop_estrutural": 8.4029,
         "votos": {
           "tendencia": "contra",
           "analogos": "contra",
@@ -207,7 +207,7 @@
           "intradia": "neutro"
         },
         "tendencia": "baixa 85",
-        "ultimo": 8.75
+        "ultimo": 8.62
       }
     },
     {
@@ -242,7 +242,7 @@
           "votação insuficiente: 0 a favor, 2 contra (precisa 2+ a favor e 0 contra)"
         ],
         "estabilizacao": false,
-        "stop_estrutural": 63563.3833,
+        "stop_estrutural": 63272.2771,
         "votos": {
           "tendencia": "contra",
           "analogos": "neutro",
@@ -251,7 +251,7 @@
           "intradia": "contra"
         },
         "tendencia": "baixa 85",
-        "ultimo": 65305.281
+        "ultimo": 64889.4129
       },
       "condicao": "grade volta quando houver estabilização (fechamento acima da máxima de 3 dias e da média de 5) E composto de risco cripto deixar de ser negativo (IBIT, COIN/MSTR, mínima de 20d)"
     }
