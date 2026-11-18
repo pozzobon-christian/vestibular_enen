@@ -1,10 +1,10 @@
-name: Laboratório de day trade
+name: Laboratorio de day trade
 
 on:
   workflow_dispatch:
     inputs:
       cmd:
-        description: "lab (backtest das teses) ou paper (um passo do robô de papel)"
+        description: "lab (backtest das teses em ações B3, EUA e cripto) ou paper (robô de papel)"
         required: false
         default: "lab"
       thesis:

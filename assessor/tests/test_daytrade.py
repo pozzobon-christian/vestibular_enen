@@ -30,3 +30,16 @@ def test_evaluate_criteria():
     assert dt.evaluate(good, oos)["aprovada"]
     bad = dict(good, profit_factor=1.1)
     assert not dt.evaluate(bad, oos)["aprovada"]
+
+
+
+def test_stock_eod_exit_and_costs():
+    bars = _bars(n=26 * 40)   # 40 "pregões" de 26 candles de 15 min
+    for k, b in enumerate(bars):  # agrupa em dias de 26 candles
+        day = k // 26
+        bars[k] = dt.Bar(1_760_000_000_000 + day * 86_400_000 + (k % 26) * 900_000, b.o, b.h, b.l, b.c, b.v)
+    st, trades = dt.backtest(bars, "momentum", cost=dt.COSTS["BR"], eod_exit=True, return_trades=True)
+    assert all(dt.session_day(t.entry_ts) == dt.session_day(t.exit_ts) for t in trades)   # nunca dorme posicionado
+    assert st["custo_ida_volta"] == dt.COSTS["BR"] < dt.COSTS["cripto"]
+    pooled = dt._pooled(trades, 40)
+    assert pooled["operacoes"] == len(trades)
