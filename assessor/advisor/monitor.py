@@ -438,6 +438,8 @@ def build_dashboard_data(db: MonitorDB, out: Path = Path("data/dashboard-data.js
                             "tickers": json.loads(tk or "[]"), "direcao": st} for a, pl, ts, tx, u, e, tk, st in recent_posts],
         "noticias": latest_news(db, 60),
         "briefing_6h": {k: v for k, v in morning_brief(db).items() if k in ("overnight", "tendencias", "sinais_de_noticia", "regime")},
+        "estado_24h": (json.loads(Path("data/estado-24h.json").read_text(encoding="utf-8")) if Path("data/estado-24h.json").exists() else {}),
+        "estrategias_10_anos": (json.loads(Path("data/cases/estrategias-10-anos.json").read_text(encoding="utf-8")) if Path("data/cases/estrategias-10-anos.json").exists() else {}),
         "calendario": (json.loads(Path("data/calendario.json").read_text(encoding="utf-8")) if Path("data/calendario.json").exists() else []),
         "operacoes_curtas": (json.loads(Path("data/operacoes-curtas.json").read_text(encoding="utf-8")) if Path("data/operacoes-curtas.json").exists() else {}),
         "estatisticas_autores": db.latest_stats(),

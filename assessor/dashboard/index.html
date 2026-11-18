@@ -62,6 +62,7 @@ details summary{cursor:pointer;color:var(--acc);font-size:13px;list-style:none}d
         <li>Botão <b>⟳ Atualizar informações</b> no topo: tenta buscar dados mais novos; dentro do claude.ai mostra a data dos dados embutidos.</li>
       </ul></details>
   </section>
+  <section class="card wide" id="e24"><h2>Estratégias 24h: sinal de hoje e evidência de 10 anos</h2><div id="e24box"></div></section>
   <section class="card wide" id="ordens"><h2>Ordens: ativas hoje primeiro; bloqueadas e suspensas recolhidas <span class="stampsec mut" style="float:right;text-transform:none;letter-spacing:0;font-weight:400"></span></h2><div id="ordensbox"></div></section>
 
   <section class="card wide" id="regime"><h2>Regime de mercado: como a carteira deve se posicionar</h2><div id="regimebox" class="kpis"></div></section>
@@ -191,6 +192,17 @@ function render(d) {
     <p><b>Opções:</b> liberadas a partir de R$ ${fmt(pl.opcoes_liberadas_a_partir_de_brl, 0)}</p>
     <p><b>Cenários até a meta (reinvestindo tudo):</b> ${Object.entries(pl.cenarios_ate_meta || {}).map(([k, v]) => `${esc(k)}: ${esc(v)}`).join(' · ')}</p>
     <p><b>Contas:</b> ${Object.entries(pl.contas || {}).map(([k, v]) => `${esc(k)} (R$ ${fmt(v.deposito_inicial_brl, 0)}: ${esc(v.uso)})`).join(' · ')}</p>`;
+  const e24 = d.estado_24h || {}, ev = d.estrategias_10_anos || {};
+  const sig = e24.sinais_hoje || {}, ses = e24.sessoes || {};
+  const met = m => m && m.ao_ano != null ? `${(m.ao_ano * 100).toFixed(1)}% a.a. · queda máx ${(m.queda_maxima * 100).toFixed(0)}%` : '–';
+  $('#e24box').innerHTML = `<p class="mut" style="font-size:12px">Agora (Brasília ${esc(ses.agora_brasilia || '')}): cripto aberto${ses.b3_aberta ? ' · B3 aberta' : ' · B3 fechada'}${ses.eua_abertos ? ' · EUA abertos' : ' · EUA fechados'}. Tarefas da hora: ${(e24.tarefas_agora || []).map(esc).join(', ') || '–'}.</p>
+    <table><thead><tr><th>Estratégia</th><th>Sinal de hoje</th><th>10 anos (estratégia)</th><th>10 anos (comparação)</th></tr></thead><tbody>
+    <tr><td><b>Bitcoin: tendência (média de 100 dias)</b></td><td>${sig.btc_tendencia_100 ? `<b class="${sig.btc_tendencia_100.posicao === 'comprado' ? 'up' : 'dn'}">${esc(sig.btc_tendencia_100.posicao)}</b> · preço ${fmt(sig.btc_tendencia_100.preco, 0)} vs média ${fmt(sig.btc_tendencia_100.media, 0)} (${sig.btc_tendencia_100.distancia_pct}%)` : '–'}</td><td>${met((ev.bitcoin || {}).tendencia_media_100)}</td><td>comprar e segurar: ${met((ev.bitcoin || {}).comprar_e_segurar)}</td></tr>
+    <tr><td><b>Índice: BOVA11 contra CDI (momentum)</b></td><td>${sig.bova11_momentum_vs_cdi ? `<b>${esc(sig.bova11_momentum_vs_cdi.posicao)}</b> · 10 meses ${(sig.bova11_momentum_vs_cdi.retorno_10m * 100).toFixed(1)}% vs CDI ${(sig.bova11_momentum_vs_cdi.cdi_10m * 100).toFixed(1)}%` : '–'}</td><td>${met(((ev.acoes || {}).BOVA11 || {}).momentum_vs_cdi)}</td><td>BOVA11: ${met(((ev.acoes || {}).BOVA11 || {}).comprar_e_segurar)} · CDI: ${met(((ev.acoes || {}).BOVA11 || {}).cdi)}</td></tr>
+    <tr><td><b>Ações: efeito noite</b></td><td>${sig.efeito_noite ? esc(sig.efeito_noite.acao) + (sig.efeito_noite.ativos_aprovados.length ? ': ' + sig.efeito_noite.ativos_aprovados.map(esc).join(', ') : '') : '–'}</td><td>${Object.entries(ev.acoes || {}).map(([t, v]) => `${esc(t)} ${met(v.efeito_noite)}`).join('<br>')}</td><td>${Object.entries(ev.acoes || {}).map(([t, v]) => `${esc(t)} ${met(v.comprar_e_segurar)}`).join('<br>')}</td></tr>
+    <tr><td><b>Opções: venda coberta mensal (estimada)</b></td><td>rolagem no 1º pregão do mês</td><td>BOVA11 ${met((ev.opcoes || {}).venda_coberta_BOVA11_estimada)}<br>PETR4 ${met((ev.opcoes || {}).venda_coberta_PETR4_estimada)}</td><td>BOVA11 ${met((ev.opcoes || {}).referencia_BOVA11_comprar_e_segurar)}<br>PETR4 ${met((ev.opcoes || {}).referencia_PETR4_comprar_e_segurar)}</td></tr>
+    <tr><td><b>Day trade</b></td><td>${esc((e24.day_trade || {}).robo_de_papel || '–')}</td><td colspan="2" class="mut">${((e24.day_trade || {}).teses_aprovadas || []).map(esc).join(', ') || 'nenhuma tese aprovada nos testes'}</td></tr>
+    </tbody></table>`;
   const b6 = d.briefing_6h || {};
   const rg = b6.regime || {};
   $('#regimebox').innerHTML = Object.entries(rg).map(([idx, r]) => `<div class="kpi" style="grid-column:span 2"><b class="${r.regime === 'alta' ? 'up' : r.regime === 'baixa' ? 'dn' : ''}">${esc(idx)}: ${esc(r.regime)} · modo ${esc(r.modo)}</b><span>vs MM50 ${r.preco_vs_mm50 != null ? (r.preco_vs_mm50 * 100).toFixed(1) + '%' : '–'} · vs MM200 ${r.preco_vs_mm200 != null ? (r.preco_vs_mm200 * 100).toFixed(1) + '%' : '–'} · queda da máxima 120d ${r.drawdown_120d != null ? (r.drawdown_120d * 100).toFixed(1) + '%' : '–'}${r.vix ? ' · VIX ' + fmt(r.vix, 1) : ''}</span><div style="font-size:12px;margin-top:6px">${esc(r.regras || r.motivo || '')}</div></div>`).join('') || '<p class="mut">sem dados</p>';

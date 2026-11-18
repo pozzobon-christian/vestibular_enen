@@ -1,0 +1,59 @@
+name: Orquestrador 24h
+
+on:
+  schedule:
+    - cron: "7 * * * *"          # toda hora (só dispara na branch padrão, main)
+  workflow_dispatch:
+    inputs:
+      backtests:
+        description: "rodar também os backtests de 10 anos (sim/não)"
+        required: false
+        default: "nao"
+  push:
+    paths: [".github/workflows/orquestrador.yml"]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: orquestrador
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -e "assessor"
+      - name: Ciclo da hora
+        working-directory: assessor
+        env:
+          X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
+          REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}
+          REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
+        run: |
+          TASKS=$(python -c "from advisor.orchestrator import due_tasks; from datetime import datetime, timezone; print(' '.join(due_tasks(datetime.now(timezone.utc))))")
+          echo "tarefas: $TASKS"
+          python -m advisor.monitor run
+          if echo "$TASKS" | grep -q backtests_semanais || [ "${{ github.event.inputs.backtests }}" = "sim" ] || [ "${{ github.event_name }}" = "push" ]; then
+            python -m advisor.strategies
+            python -m advisor.cases
+            python -m advisor.daytrade lab --days 180 || true
+          fi
+          python -m advisor.orchestrator
+          python -c "from advisor import monitor; from advisor.storage import MonitorDB; monitor.build_dashboard_data(MonitorDB('data/monitor.db'))"
+      - name: Versionar
+        working-directory: assessor
+        run: |
+          git config user.name "monitor-bot"
+          git config user.email "monitor-bot@users.noreply.github.com"
+          for f in data/monitor.db data/exports data/relatorio.json data/RELATORIO.md data/dashboard-data.json dashboard/painel.html data/briefing-6h.json data/operacoes-curtas.json data/calendario.json data/estado-24h.json data/cases/estrategias-10-anos.json data/cases/estudo-10-anos.json data/cases/cdi.json data/daytrade/lab.json data/carteira.json; do [ -e "$f" ] && git add "$f"; done
+          git diff --cached --quiet && echo "sem novidades" || git commit -m "orquestrador: $(date -u +%Y-%m-%dT%H:%MZ)"
+          git pull --rebase origin "${{ github.ref_name }}" || true
+          git push origin HEAD:"${{ github.ref_name }}"
