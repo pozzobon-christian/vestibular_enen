@@ -8,3 +8,6 @@ dist/
 !data/exports/*.jsonl
 !posts.exemplo.jsonl
 .env
+
+data/daytrade/*_15m.json
+data/daytrade/*_funding.json

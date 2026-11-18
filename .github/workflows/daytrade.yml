@@ -1,0 +1,55 @@
+name: Laboratório de day trade
+
+on:
+  workflow_dispatch:
+    inputs:
+      cmd:
+        description: "lab (backtest das teses) ou paper (um passo do robô de papel)"
+        required: false
+        default: "lab"
+      thesis:
+        description: "tese para o paper trading (orb, vwap, momentum, funding)"
+        required: false
+        default: "orb"
+  push:
+    paths: [".github/workflows/daytrade.yml"]
+  schedule:
+    - cron: "*/15 * * * *"   # paper trading a cada 15 min (só ativo na branch padrão)
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daytrade
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -e "assessor"
+      - name: Executar
+        working-directory: assessor
+        run: |
+          CMD="${{ github.event.inputs.cmd }}"; TH="${{ github.event.inputs.thesis }}"
+          if [ -z "$CMD" ]; then CMD=lab; [ "${{ github.event_name }}" = "schedule" ] && CMD=paper; fi
+          if [ "$CMD" = "paper" ]; then
+            for S in BTCUSDT ETHUSDT; do python -m advisor.daytrade paper --symbol $S --thesis ${TH:-orb}; done
+          else
+            python -m advisor.daytrade lab --days 180
+          fi
+      - name: Versionar resultados
+        working-directory: assessor
+        run: |
+          git config user.name "monitor-bot"
+          git config user.email "monitor-bot@users.noreply.github.com"
+          git add data/daytrade/lab.json data/daytrade/paper_*.json 2>/dev/null || true
+          git diff --cached --quiet && echo "sem novidades" || git commit -m "daytrade: $(date -u +%Y-%m-%dT%H:%MZ)"
+          git pull --rebase origin "${{ github.ref_name }}" || true
+          git push origin HEAD:"${{ github.ref_name }}"
