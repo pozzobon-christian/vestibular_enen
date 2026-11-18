@@ -15,7 +15,7 @@ def _bars(n=2000, seed=3):
 def test_backtest_all_theses_run_and_cost_applied():
     bars = _bars()
     funding = [(bars[i].ts, random.gauss(0.0001, 0.0003)) for i in range(0, len(bars), 32)]
-    for name in dt.THESES:
+    for name in ("orb", "vwap", "momentum", "funding"):
         s = dt.backtest(bars, name, funding)
         assert "operacoes" in s
         if s["operacoes"]:
@@ -43,3 +43,20 @@ def test_stock_eod_exit_and_costs():
     assert st["custo_ida_volta"] == dt.COSTS["BR"] < dt.COSTS["cripto"]
     pooled = dt._pooled(trades, 40)
     assert pooled["operacoes"] == len(trades)
+
+
+
+def test_intraday_momentum_and_gap_fade_enter_on_the_right_bar():
+    bars = []
+    base = 1_760_000_000_000
+    for day in range(30):
+        prev = bars[-1].c if bars else 100.0
+        o = prev * (1.02 if day % 2 == 0 else 1.0)       # gap de 2% em dias pares
+        for k in range(26):
+            c = o * (1 + 0.001 * k)
+            bars.append(dt.Bar(base + day * 86_400_000 + k * 900_000, o if k == 0 else bars[-1].c, max(o, c) * 1.001, min(o, c) * 0.999, c, 100))
+    st, tr = dt.backtest(bars, "intraday_momentum", cost=0.0, eod_exit=True, return_trades=True)
+    assert tr and all(dt._day_pos(bars)[[b.ts for b in bars].index(t.entry_ts)][0] == 23 for t in tr)
+    assert all(t.reason == "fim_do_pregao" for t in tr)
+    st2, tr2 = dt.backtest(bars, "gap_fade", cost=0.0, eod_exit=True, return_trades=True)
+    assert tr2 and all(t.side == "short" for t in tr2)

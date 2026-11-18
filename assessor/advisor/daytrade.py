@@ -274,7 +274,61 @@ def thesis_funding_contrarian(bars: list[Bar], i: int, ctx: dict, z: float = 2.0
     return None
 
 
-THESES = {"orb": thesis_orb, "vwap": thesis_vwap_reversion, "momentum": thesis_momentum_breakout, "funding": thesis_funding_contrarian}
+def _day_pos(bars: list[Bar]) -> list[tuple[int, int, int]]:
+    """Para cada candle: (posição no dia, total de candles do dia, índice do 1º candle do dia)."""
+    out = [None] * len(bars); i = 0
+    while i < len(bars):
+        d = session_day(bars[i].ts); j = i
+        while j < len(bars) and session_day(bars[j].ts) == d:
+            j += 1
+        for k in range(i, j):
+            out[k] = (k - i, j - i, i)
+        i = j
+    return out
+
+
+def thesis_intraday_momentum(bars: list[Bar], i: int, ctx: dict, first_bars: int = 2, last_bars: int = 2, min_move: float = 0.002) -> Signal | None:
+    """Gao, Han, Li e Zhou (2018), 'Market intraday momentum': o retorno do
+    fechamento anterior até o fim da primeira meia hora prevê o retorno da
+    última meia hora. Entra faltando `last_bars` candles para o fim do pregão,
+    na direção do retorno inicial; sai no fechamento (saída de fim de pregão)."""
+    dp = ctx.get("day_pos")
+    if not dp or dp[i] is None:
+        return None
+    pos, n, start = dp[i]
+    if n < first_bars + last_bars + 4 or pos != n - last_bars - 1 or start == 0:
+        return None
+    prev_close = bars[start - 1].c
+    r_open = bars[start + first_bars - 1].c / prev_close - 1
+    if abs(r_open) < min_move:
+        return None
+    a = ctx["atr"][i] or 0.0
+    c = bars[i].c
+    if r_open > 0:
+        return Signal("long", c - 2 * a, c + 10 * a, f"1ª meia hora {r_open:+.2%}: momentum para o fechamento")
+    return Signal("short", c + 2 * a, c - 10 * a, f"1ª meia hora {r_open:+.2%}: momentum para o fechamento")
+
+
+def thesis_gap_fade(bars: list[Bar], i: int, ctx: dict, min_gap: float = 0.01, atr_stop: float = 1.0) -> Signal | None:
+    """Reversão de gap: abertura com gap >= 1% contra o fechamento anterior tende
+    a devolver parte do gap. Entra no 1º candle, alvo no fechamento anterior."""
+    dp = ctx.get("day_pos")
+    if not dp or dp[i] is None:
+        return None
+    pos, n, start = dp[i]
+    if pos != 0 or start == 0:
+        return None
+    prev_close = bars[start - 1].c; c = bars[i].c
+    gap = bars[i].o / prev_close - 1
+    a = ctx["atr"][i]
+    if a is None or abs(gap) < min_gap:
+        return None
+    if gap > 0:
+        return Signal("short", c + atr_stop * a, prev_close, f"gap de alta {gap:+.2%}: devolver")
+    return Signal("long", c - atr_stop * a, prev_close, f"gap de baixa {gap:+.2%}: devolver")
+
+
+THESES = {"orb": thesis_orb, "intraday_momentum": thesis_intraday_momentum, "gap_fade": thesis_gap_fade, "vwap": thesis_vwap_reversion, "momentum": thesis_momentum_breakout, "funding": thesis_funding_contrarian}
 
 
 # ------------------------------------------------------------------ backtest
@@ -286,7 +340,7 @@ class DTrade:
 def backtest(bars: list[Bar], thesis: str, funding=None, max_bars: int = 32, risk_frac: float = 0.01,
              cost: float = COST_RT, eod_exit: bool = False, return_trades: bool = False, **kw):
     fn = THESES[thesis]
-    ctx = {"atr": atr(bars), "funding": funding}
+    ctx = {"atr": atr(bars), "funding": funding, "day_pos": _day_pos(bars) if eod_exit else None}
     trades: list[DTrade] = []
     open_t: DTrade | None = None
     equity = [1.0]
@@ -392,7 +446,7 @@ def run_stock_lab(markets=("BR", "US"), out_dir: Path = Path("data/daytrade"), e
     rep = {}
     for m in markets:
         per = {}
-        pooled_is = {k: [] for k in ("orb", "vwap", "momentum")}; pooled_oos = {k: [] for k in pooled_is}
+        pooled_is = {k: [] for k in ("orb", "vwap", "momentum", "intraday_momentum", "gap_fade")}; pooled_oos = {k: [] for k in pooled_is}
         span_is = span_oos = 0.0
         for t in STOCKS[m]:
             try:
@@ -429,7 +483,7 @@ def run_lab(symbols=("BTCUSDT", "ETHUSDT"), days: int = 120, out_dir: Path = Pat
         (out_dir / f"{sym}_funding.json").write_text(json.dumps(funding), encoding="utf-8")
         report.setdefault("dados", {})[sym] = {"candles": len(bars), "de": session_day(bars[0].ts), "ate": session_day(bars[-1].ts), "funding_pontos": len(funding)}
         split = int(len(bars) * 0.7)
-        for name in THESES:
+        for name in ("orb", "vwap", "momentum", "funding"):
             is_, oos = bars[:split], bars[split - 200:]
             s_is = backtest(is_, name, funding); s_oos = backtest(oos, name, funding)
             ev = evaluate(s_is, s_oos)
