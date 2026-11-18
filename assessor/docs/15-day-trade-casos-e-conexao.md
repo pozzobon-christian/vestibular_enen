@@ -31,7 +31,24 @@ Fonte: arquivos COTAHIST da B3 (2016-2026), 13 ativos, mais o Ibovespa. Operaç�
 - **Comprar depois de queda forte, primeiro dia do mês, sexta-feira**: perdem dinheiro de forma consistente.
 - **Seguir gap (continuação)**: perde forte; o mercado brasileiro reverte gaps mais do que continua.
 
-O teste do mini-índice e a decomposição noite contra dia estão no mesmo relatório.
+**Noite contra dia (o achado mais forte dos 10 anos).** Em 10 das 13 ações, praticamente toda a valorização aconteceu entre o fechamento e a abertura seguinte; durante o pregão, o preço caiu em média:
+
+| Ativo | Média por dia de noite | Média por dia no pregão |
+|---|---|---|
+| PETR4 | +0,154% | −0,059% |
+| VALE3 | +0,139% | −0,077% |
+| SUZB3 | +0,118% | −0,071% |
+| BBAS3 | +0,081% | −0,090% |
+| MGLU3 | +0,085% | −0,181% |
+| BOVA11 | +0,068% | −0,026% |
+
+É o mesmo padrão de Lou, Polk e Skouras nos EUA. Consequências práticas:
+- **Comprar e vender no mesmo dia, em ações, rema contra a maré.** A alta do mercado não acontece no pregão.
+- **Vender na abertura e recomprar no fechamento** tem média positiva, mas menor que o custo de 0,09% em ações (PETR4: 0,059% contra 0,09%). Só pagaria com custo de futuro.
+- **Comprar no leilão de fechamento e vender no de abertura** (não é day trade) teve média acima do custo em PETR4 e VALE3. Candidato para o laboratório de swing.
+- Exceções a investigar antes de qualquer conclusão: B3SA3 e RENT3 mostram o padrão invertido, provavelmente por eventos societários não detectados.
+
+**Mini-índice: o teste com o Ibovespa diário não vale.** O valor de abertura do índice no Yahoo é calculado com preços ainda parados do dia anterior, o que joga todo o movimento para o pregão (o índice aparece com +0,04% por dia no pregão, o contrário das ações). Conclusão: para testar o mini-índice é obrigatório usar o próprio contrato WIN, com candles intradiários reais. Essa é a principal razão para conectar o MetaTrader 5.
 
 ## Parte 3. Como conectar à B3 de verdade
 
