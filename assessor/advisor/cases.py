@@ -166,6 +166,25 @@ def study(data: dict[str, list[Bar]], stop_frac: float | None = 0.015) -> dict:
     return rep
 
 
+COST_FUT = 0.00015      # mini-índice: ~R$ 1 de taxas + 1 tick de slippage por lado sobre ~R$ 25 mil de nocional
+
+
+def overnight_vs_intraday(data: dict[str, list[Bar]]) -> dict:
+    """Decompõe o retorno de 10 anos em 'noite' (fechamento -> abertura) e 'dia'
+    (abertura -> fechamento). Lou, Polk e Skouras (2019) mostram que nos EUA quase
+    todo o ganho das ações acontece de noite; se valer na B3, comprar e vender no
+    mesmo dia não captura a alta do mercado."""
+    out = {}
+    for tk, bars in data.items():
+        night = day = 0.0; n = 0
+        for i in range(1, len(bars)):
+            if abs(bars[i].adj / bars[i - 1].adj - 1) > 0.003:
+                continue
+            night += math.log(bars[i].o / bars[i - 1].c); day += math.log(bars[i].c / bars[i].o); n += 1
+        out[tk] = {"pregoes": n, "noite_total": round(math.exp(night) - 1, 3), "dia_total": round(math.exp(day) - 1, 3)}
+    return out
+
+
 TICKERS = ["PETR4", "VALE3", "ITUB4", "BBDC4", "BBAS3", "ABEV3", "WEGE3", "PRIO3", "MGLU3", "B3SA3", "SUZB3", "RENT3", "BOVA11"]
 
 
@@ -188,7 +207,26 @@ def build(out: Path = Path("data/cases/estudo-10-anos.json"), use_official: bool
             sources[t] = f"{'B3 COTAHIST oficial' if official.get(t) else 'Yahoo'} + fator de ajuste Yahoo; {len(data[t])} pregões de {data[t][0].day} a {data[t][-1].day}"
         except Exception as e:  # noqa: BLE001
             errors.append(f"{t}: {type(e).__name__}: {str(e)[:80]}")
-    rep = {"metodo": __doc__.strip().splitlines()[0], "custo_ida_volta": COST_BR, "stop": "1,5% (pela máxima/mínima do dia, conservador)",
+    index = {}
+    try:
+        index["IBOV"] = [Bar(b.day, b.o, b.h, b.l, b.c, 1.0) for b in load_yahoo_daily("^BVSP", "US")]
+        sources["IBOV"] = f"Yahoo ^BVSP (proxy do mini-índice); {len(index['IBOV'])} pregões"
+    except Exception as e:  # noqa: BLE001
+        errors.append(f"IBOV: {type(e).__name__}: {str(e)[:80]}")
+    def _study_idx(stop):
+        rep_i = {}
+        for name, (desc, rule) in CASES.items():
+            trades = [t for tk, bars in index.items() for t in run_case(bars, tk, rule, stop, COST_FUT)]
+            is_ = [t for t in trades if t.day < SPLIT_YEAR]; oos = [t for t in trades if t.day >= SPLIT_YEAR]
+            s_is, s_oos, s_all = stats(is_), stats(oos), stats(trades)
+            v = verdict(s_is, s_oos, s_all)
+            v["criterios"]["200+ operações em 10 anos"] = s_all.get("operacoes", 0) >= 100   # um único ativo: exige 100
+            v["aprovado"] = all(v["criterios"].values())
+            rep_i[name] = {"descricao": desc, "2016_2022": s_is, "2023_hoje": s_oos, "10_anos": s_all, "veredito": v}
+        return rep_i
+    rep = {"metodo": __doc__.strip().splitlines()[0], "custo_ida_volta": COST_BR, "custo_mini_indice": COST_FUT,
+           "noite_vs_dia": overnight_vs_intraday({**data, **index}),
+           "mini_indice_com_stop_1pct": _study_idx(0.01) if index else {}, "mini_indice_sem_stop": _study_idx(None) if index else {}, "stop": "1,5% (pela máxima/mínima do dia, conservador)",
            "fontes": sources, "erros": errors,
            "com_stop": study(data, 0.015), "sem_stop": study(data, None)}
     out.parent.mkdir(parents=True, exist_ok=True)
@@ -198,7 +236,8 @@ def build(out: Path = Path("data/cases/estudo-10-anos.json"), use_official: bool
 
 if __name__ == "__main__":
     rep = build()
-    for mode in ("com_stop", "sem_stop"):
+    print("noite vs dia:", rep["noite_vs_dia"])
+    for mode in ("com_stop", "sem_stop", "mini_indice_com_stop_1pct", "mini_indice_sem_stop"):
         print("==", mode)
         for k, v in rep[mode].items():
             a, i, o = v["10_anos"], v["2016_2022"], v["2023_hoje"]

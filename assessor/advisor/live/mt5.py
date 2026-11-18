@@ -71,3 +71,21 @@ class MT5Connector:
         with self.log.open("a", encoding="utf-8") as f:
             f.write(json.dumps(rec, ensure_ascii=False) + "\n")
         return rec
+
+
+def download_history(conn: "MT5Connector", symbol: str = "WIN$N", timeframe: str = "M5", years: int = 10,
+                     out_dir: Path = Path("data/mt5")) -> Path:
+    """Baixa anos de candles intradiários do MT5 da corretora (ex.: WIN$N =
+    mini-índice contínuo, WDO$N = mini-dólar, PETR4). É a fonte que resolve o
+    'day trade de 10 anos': as corretoras guardam M1/M5 de vários anos."""
+    from datetime import timedelta
+    mt5 = conn.mt5
+    end = datetime.now(timezone.utc); start = end - timedelta(days=365 * years)
+    conn.mt5.symbol_select(symbol, True)
+    rates = mt5.copy_rates_range(symbol, getattr(mt5, f"TIMEFRAME_{timeframe}"), start, end)
+    rows = [{"ts": int(r["time"]) * 1000, "o": float(r["open"]), "h": float(r["high"]), "l": float(r["low"]),
+             "c": float(r["close"]), "v": float(r["real_volume"] or r["tick_volume"])} for r in (rates if rates is not None else [])]
+    out_dir.mkdir(parents=True, exist_ok=True)
+    path = out_dir / f"{symbol.replace('$', '_')}_{timeframe}.json"
+    path.write_text(json.dumps(rows), encoding="utf-8")
+    return path
