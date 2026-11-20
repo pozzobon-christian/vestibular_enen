@@ -1,14 +1,17 @@
 {
-  "gerado_em": "2026-11-20T08:58:33.218425+00:00",
+  "gerado_em": "2026-11-20T20:51:36.596607+00:00",
   "sessoes": {
-    "agora_brasilia": "2026-11-20 05:58",
+    "agora_brasilia": "2026-11-20 17:51",
     "cripto": true,
-    "b3_aberta": false,
-    "eua_abertos": false,
+    "b3_aberta": true,
+    "eua_abertos": true,
     "fim_de_semana": false
   },
   "tarefas_agora": [
-    "cripto"
+    "cripto",
+    "b3_intradia",
+    "efeito_noite",
+    "eua"
   ],
   "plano_24h": [
     {
@@ -65,7 +68,7 @@
     },
     "bova11_momentum_vs_cdi": {
       "posicao": "CDI",
-      "retorno_10m": 0.0141,
+      "retorno_10m": 0.0126,
       "cdi_10m": 0.1164,
       "rebalanceia": "1º pregão do mês"
     },

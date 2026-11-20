@@ -43,7 +43,7 @@
         "aprovada": false,
         "motivos": [],
         "bloqueios": [
-          "VIX 28.6 >= 25: sem compras novas (regra de pânico)",
+          "VIX 37.6 >= 25: sem compras novas (regra de pânico)",
           "regime defensivo: compra só com tendência própria de alta ou estabilização",
           "votação insuficiente: 0 a favor, 1 contra (precisa 2+ a favor e 0 contra)"
         ],
@@ -96,7 +96,7 @@
           "análogos com n=7 < 8: não contam como evidência"
         ],
         "bloqueios": [
-          "VIX 28.6 >= 25: sem compras novas (regra de pânico)",
+          "VIX 37.6 >= 25: sem compras novas (regra de pânico)",
           "contra a tendência (baixa 100) sem estabilização",
           "composto de risco cripto negativo (ibit_saindo, proxies_em_baixa, btc_abaixo_min20) sem estabilização",
           "regime defensivo: compra só com tendência própria de alta ou estabilização",
@@ -147,7 +147,7 @@
         "aprovada": false,
         "motivos": [],
         "bloqueios": [
-          "VIX 28.6 >= 25: sem compras novas (regra de pânico)",
+          "VIX 37.6 >= 25: sem compras novas (regra de pânico)",
           "regime defensivo: compra só com tendência própria de alta ou estabilização",
           "votação insuficiente: 2 a favor, 1 contra (precisa 2+ a favor e 0 contra)"
         ],
@@ -197,7 +197,7 @@
           "análogos com n=7 < 8: não contam como evidência"
         ],
         "bloqueios": [
-          "VIX 28.6 >= 25: sem compras novas (regra de pânico)",
+          "VIX 37.6 >= 25: sem compras novas (regra de pânico)",
           "contra a tendência (baixa 85) sem estabilização",
           "regime defensivo: compra só com tendência própria de alta ou estabilização",
           "votação insuficiente: 0 a favor, 2 contra (precisa 2+ a favor e 0 contra)"
@@ -241,7 +241,7 @@
           "análogos com n=7 < 8: não contam como evidência"
         ],
         "bloqueios": [
-          "VIX 28.6 >= 25: sem compras novas (regra de pânico)",
+          "VIX 37.6 >= 25: sem compras novas (regra de pânico)",
           "contra a tendência (baixa 100) sem estabilização",
           "composto de risco cripto negativo (ibit_saindo, proxies_em_baixa, btc_abaixo_min20) sem estabilização",
           "regime defensivo: compra só com tendência própria de alta ou estabilização",
