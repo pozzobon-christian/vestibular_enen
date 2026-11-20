@@ -1,20 +1,5 @@
 [
   {
-    "data": "2026-11-19",
-    "hora_brt": "10:30",
-    "evento": "Pedidos de seguro-desemprego dos EUA",
-    "fonte": "Dept. of Labor",
-    "categoria": "macro_us",
-    "ativos": [
-      "SPY",
-      "QQQ"
-    ],
-    "impacto": "baixo",
-    "o_que_esperar": "Surpresas grandes mexem com Treasury e dólar.",
-    "preparacao": "Só observar.",
-    "confirmar": false
-  },
-  {
     "data": "2026-11-20",
     "hora_brt": "",
     "evento": "Vencimento mensal de opções (B3 e EUA, 3ª sexta)",
@@ -498,5 +483,20 @@
     "o_que_esperar": "Surpresas grandes mexem com Treasury e dólar.",
     "preparacao": "Só observar.",
     "confirmar": false
+  },
+  {
+    "data": "2026-12-25",
+    "hora_brt": "09:00",
+    "evento": "IPCA-15 (prévia da inflação)",
+    "fonte": "IBGE",
+    "categoria": "macro_br",
+    "ativos": [
+      "BOVA11",
+      "MXRF11"
+    ],
+    "impacto": "medio",
+    "o_que_esperar": "Antecipa o IPCA; mesmo efeito, menor.",
+    "preparacao": "Ler antes das 10h.",
+    "confirmar": true
   }
 ]

@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-11-19T20:51:49.281199+00:00",
+  "gerado_em": "2026-11-20T08:58:33.383432+00:00",
   "janela_horas": 14.0,
   "regime": {
     "BOVA11": {
@@ -9,17 +9,17 @@
       "preco_vs_mm200": -0.0794,
       "drawdown_120d": -0.2029,
       "tstat_60d": -1.94,
-      "vix": 28.40999984741211,
+      "vix": 28.6200008392334,
       "regras": "sem compras novas em ações; caixa 50%+; proteção (dólar, ouro, puts quando liberadas); vendas a favor da tendência com risco definido"
     },
     "SPY": {
       "regime": "lateral",
       "modo": "neutro",
-      "preco_vs_mm50": -0.0578,
-      "preco_vs_mm200": -0.0205,
-      "drawdown_120d": -0.0788,
-      "tstat_60d": -4.69,
-      "vix": 28.40999984741211,
+      "preco_vs_mm50": -0.0601,
+      "preco_vs_mm200": -0.023,
+      "drawdown_120d": -0.0811,
+      "tstat_60d": -4.68,
+      "vix": 28.6200008392334,
       "regras": "metade do tamanho; preferir operações curtas e FIIs de papel; caixa 30%+"
     }
   },
@@ -27,114 +27,114 @@
     {
       "simbolo": "ES=F",
       "nome": "S&P 500 futuro",
-      "ultimo": 7201.25,
-      "data": "2026-11-19",
-      "var_1d": -0.019,
-      "var_5d": -0.0544
+      "ultimo": 7169.5,
+      "data": "2026-11-20",
+      "var_1d": -0.0039,
+      "var_5d": -0.0545
     },
     {
       "simbolo": "NQ=F",
       "nome": "Nasdaq futuro",
-      "ultimo": 26628.75,
-      "data": "2026-11-19",
-      "var_1d": -0.0205,
-      "var_5d": -0.0619
+      "ultimo": 26359.0,
+      "data": "2026-11-20",
+      "var_1d": -0.0091,
+      "var_5d": -0.0598
     },
     {
       "simbolo": "YM=F",
       "nome": "Dow futuro",
-      "ultimo": 49213.0,
-      "data": "2026-11-19",
-      "var_1d": -0.0211,
-      "var_5d": -0.0606
+      "ultimo": 49189.0,
+      "data": "2026-11-20",
+      "var_1d": 0.0002,
+      "var_5d": -0.0616
     },
     {
       "simbolo": "^N225",
       "nome": "Nikkei",
-      "ultimo": 59024.28,
-      "data": "2026-11-18",
-      "var_1d": 0.0028,
-      "var_5d": -0.0363
+      "ultimo": 56436.65,
+      "data": "2026-11-20",
+      "var_1d": -0.0506,
+      "var_5d": -0.077
     },
     {
       "simbolo": "^HSI",
       "nome": "Hang Seng",
-      "ultimo": 23294.75,
-      "data": "2026-11-18",
-      "var_1d": -0.0091,
-      "var_5d": -0.042
+      "ultimo": 22410.8,
+      "data": "2026-11-20",
+      "var_1d": -0.0189,
+      "var_5d": -0.0519
     },
     {
       "simbolo": "000001.SS",
       "nome": "Xangai",
-      "ultimo": 3587.83,
-      "data": "2026-11-18",
-      "var_1d": 0.0009,
-      "var_5d": -0.0252
+      "ultimo": 3533.79,
+      "data": "2026-11-20",
+      "var_1d": -0.0122,
+      "var_5d": -0.0277
     },
     {
       "simbolo": "^STOXX50E",
       "nome": "Euro Stoxx 50",
-      "ultimo": 6113.86,
-      "data": "2026-11-19",
-      "var_1d": -0.0066,
-      "var_5d": -0.0446
+      "ultimo": 6027.34,
+      "data": "2026-11-20",
+      "var_1d": -0.0142,
+      "var_5d": -0.0563
     },
     {
       "simbolo": "^FTSE",
       "nome": "FTSE 100",
-      "ultimo": 10452.68,
-      "data": "2026-11-19",
-      "var_1d": -0.0093,
-      "var_5d": -0.0378
+      "ultimo": 10419.67,
+      "data": "2026-11-20",
+      "var_1d": -0.0032,
+      "var_5d": -0.0443
     },
     {
       "simbolo": "CL=F",
       "nome": "WTI",
-      "ultimo": 83.15,
-      "data": "2026-11-19",
-      "var_1d": -0.0013,
-      "var_5d": -0.063
+      "ultimo": 81.65,
+      "data": "2026-11-20",
+      "var_1d": -0.0187,
+      "var_5d": -0.078
     },
     {
       "simbolo": "BZ=F",
       "nome": "Brent",
-      "ultimo": 89.97,
-      "data": "2026-11-19",
-      "var_1d": -0.0215,
-      "var_5d": -0.0611
+      "ultimo": 88.57,
+      "data": "2026-11-20",
+      "var_1d": -0.0371,
+      "var_5d": -0.0759
     },
     {
       "simbolo": "GC=F",
       "nome": "Ouro",
-      "ultimo": 3668.8,
-      "data": "2026-11-19",
-      "var_1d": -0.0195,
-      "var_5d": -0.0557
+      "ultimo": 3581.9,
+      "data": "2026-11-20",
+      "var_1d": -0.0281,
+      "var_5d": -0.0783
     },
     {
       "simbolo": "HG=F",
       "nome": "Cobre",
-      "ultimo": 5.61,
-      "data": "2026-11-19",
-      "var_1d": -0.0082,
-      "var_5d": -0.0921
+      "ultimo": 5.57,
+      "data": "2026-11-20",
+      "var_1d": -0.0096,
+      "var_5d": -0.0836
     },
     {
       "simbolo": "TIO=F",
       "nome": "Minério de ferro",
-      "ultimo": 90.72,
-      "data": "2026-11-18",
+      "ultimo": 90.86,
+      "data": "2026-11-19",
       "var_1d": 0.0015,
-      "var_5d": -0.0155
+      "var_5d": -0.0081
     },
     {
       "simbolo": "DX-Y.NYB",
       "nome": "Índice dólar",
-      "ultimo": 103.9,
-      "data": "2026-11-19",
-      "var_1d": 0.0003,
-      "var_5d": 0.007
+      "ultimo": 103.87,
+      "data": "2026-11-20",
+      "var_1d": -0.0003,
+      "var_5d": 0.0044
     },
     {
       "simbolo": "^TNX",
@@ -147,58 +147,58 @@
     {
       "simbolo": "^VIX",
       "nome": "VIX",
-      "ultimo": 28.41,
-      "data": "2026-11-19",
-      "var_1d": 0.1568,
-      "var_5d": 0.5193
+      "ultimo": 28.62,
+      "data": "2026-11-20",
+      "var_1d": 0.0063,
+      "var_5d": 0.4829
     },
     {
       "simbolo": "EWZ",
       "nome": "ETF Brasil (NY)",
-      "ultimo": 29.53,
+      "ultimo": 29.51,
       "data": "2026-11-19",
-      "var_1d": -0.0178,
-      "var_5d": -0.0706
+      "var_1d": -0.0186,
+      "var_5d": -0.0714
     },
     {
       "simbolo": "PBR",
       "nome": "Petrobras ADR",
-      "ultimo": 16.32,
+      "ultimo": 16.29,
       "data": "2026-11-19",
-      "var_1d": -0.0242,
-      "var_5d": -0.0981
+      "var_1d": -0.0263,
+      "var_5d": -0.1
     },
     {
       "simbolo": "VALE",
       "nome": "Vale ADR",
-      "ultimo": 9.84,
+      "ultimo": 9.83,
       "data": "2026-11-19",
-      "var_1d": -0.0204,
-      "var_5d": -0.1281
+      "var_1d": -0.0209,
+      "var_5d": -0.1285
     },
     {
       "simbolo": "ITUB",
       "nome": "Itaú ADR",
-      "ultimo": 6.73,
+      "ultimo": 6.69,
       "data": "2026-11-19",
-      "var_1d": -0.0146,
-      "var_5d": -0.0868
+      "var_1d": -0.0205,
+      "var_5d": -0.0923
     },
     {
       "simbolo": "BBD",
       "nome": "Bradesco ADR",
-      "ultimo": 2.33,
+      "ultimo": 2.3,
       "data": "2026-11-19",
-      "var_1d": -0.0272,
-      "var_5d": -0.0737
+      "var_1d": -0.0377,
+      "var_5d": -0.0837
     },
     {
       "simbolo": "IBIT",
       "nome": "ETF Bitcoin iShares",
-      "ultimo": 35.15,
+      "ultimo": 35.08,
       "data": "2026-11-19",
-      "var_1d": -0.0058,
-      "var_5d": -0.129
+      "var_1d": -0.0079,
+      "var_5d": -0.1308
     }
   ],
   "tendencias": [
@@ -207,22 +207,22 @@
       "mercado": "BR",
       "direction": "baixa",
       "score": 100,
-      "slope_annual_pct": -24.6,
-      "tstat": -4.42,
-      "adx": 31.5,
+      "slope_annual_pct": -24.7,
+      "tstat": -4.43,
+      "adx": 31.4,
       "above_sma50": false,
       "above_sma200": false,
       "breakout": "rompimento_baixa_20d",
       "momentum": {
         "m_12_1": 0.1157,
-        "m_3": -0.0636,
-        "m_1": -0.1237,
-        "m_1w": -0.0173
+        "m_3": -0.0676,
+        "m_1": -0.1274,
+        "m_1w": -0.0215
       },
       "vol": {
-        "vol_20d": 0.3103,
-        "vol_100d": 0.2045,
-        "razao": 1.5168
+        "vol_20d": 0.3108,
+        "vol_100d": 0.205,
+        "razao": 1.5161
       },
       "notes": [
         "inclinação 60d significativa (t=-4.4)",
@@ -236,7 +236,7 @@
       "mercado": "BR",
       "direction": "baixa",
       "score": 100,
-      "slope_annual_pct": -35.7,
+      "slope_annual_pct": -35.6,
       "tstat": -4.71,
       "adx": 42.2,
       "above_sma50": false,
@@ -244,14 +244,14 @@
       "breakout": "rompimento_baixa_20d",
       "momentum": {
         "m_12_1": -0.0077,
-        "m_3": -0.1675,
-        "m_1": -0.2284,
-        "m_1w": -0.0864
+        "m_3": -0.1654,
+        "m_1": -0.2264,
+        "m_1w": -0.084
       },
       "vol": {
-        "vol_20d": 0.3303,
-        "vol_100d": 0.2124,
-        "razao": 1.5554
+        "vol_20d": 0.327,
+        "vol_100d": 0.2111,
+        "razao": 1.5491
       },
       "notes": [
         "inclinação 60d significativa (t=-4.7)",
@@ -265,22 +265,22 @@
       "mercado": "US",
       "direction": "baixa",
       "score": 100,
-      "slope_annual_pct": -72.3,
-      "tstat": -8.0,
+      "slope_annual_pct": -72.4,
+      "tstat": -7.99,
       "adx": 48.6,
       "above_sma50": false,
       "above_sma200": false,
       "breakout": "rompimento_baixa_20d",
       "momentum": {
         "m_12_1": 0.2239,
-        "m_3": -0.3135,
-        "m_1": -0.3359,
-        "m_1w": -0.113
+        "m_3": -0.3201,
+        "m_1": -0.3423,
+        "m_1w": -0.1216
       },
       "vol": {
-        "vol_20d": 0.4962,
-        "vol_100d": 0.4143,
-        "razao": 1.1977
+        "vol_20d": 0.4988,
+        "vol_100d": 0.4158,
+        "razao": 1.1998
       },
       "notes": [
         "inclinação 60d significativa (t=-8.0)",
@@ -289,11 +289,68 @@
       ]
     },
     {
+      "ticker": "QQQ",
+      "mercado": "US",
+      "direction": "baixa",
+      "score": 100,
+      "slope_annual_pct": -29.1,
+      "tstat": -5.41,
+      "adx": 30.8,
+      "above_sma50": false,
+      "above_sma200": false,
+      "breakout": "rompimento_baixa_20d",
+      "momentum": {
+        "m_12_1": 0.2161,
+        "m_3": -0.0959,
+        "m_1": -0.1105,
+        "m_1w": -0.0627
+      },
+      "vol": {
+        "vol_20d": 0.3523,
+        "vol_100d": 0.2347,
+        "razao": 1.5014
+      },
+      "notes": [
+        "inclinação 60d significativa (t=-5.4)",
+        "ADX 31: tendência com força",
+        "rompimento_baixa_20d",
+        "vol em expansão: reduzir tamanho"
+      ]
+    },
+    {
+      "ticker": "COIN",
+      "mercado": "US",
+      "direction": "baixa",
+      "score": 100,
+      "slope_annual_pct": -84.1,
+      "tstat": -10.41,
+      "adx": 38.8,
+      "above_sma50": false,
+      "above_sma200": false,
+      "breakout": "rompimento_baixa_20d",
+      "momentum": {
+        "m_12_1": -0.3236,
+        "m_3": -0.4162,
+        "m_1": -0.3852,
+        "m_1w": -0.1668
+      },
+      "vol": {
+        "vol_20d": 0.6477,
+        "vol_100d": 0.7317,
+        "razao": 0.8851
+      },
+      "notes": [
+        "inclinação 60d significativa (t=-10.4)",
+        "ADX 39: tendência com força",
+        "rompimento_baixa_20d"
+      ]
+    },
+    {
       "ticker": "MSTR",
       "mercado": "US",
       "direction": "baixa",
       "score": 100,
-      "slope_annual_pct": -59.0,
+      "slope_annual_pct": -59.1,
       "tstat": -3.67,
       "adx": 27.9,
       "above_sma50": false,
@@ -301,14 +358,14 @@
       "breakout": "rompimento_baixa_20d",
       "momentum": {
         "m_12_1": -0.2578,
-        "m_3": -0.2725,
-        "m_1": -0.4347,
-        "m_1w": -0.2417
+        "m_3": -0.2777,
+        "m_1": -0.4388,
+        "m_1w": -0.2472
       },
       "vol": {
-        "vol_20d": 0.6534,
-        "vol_100d": 0.8185,
-        "razao": 0.7983
+        "vol_20d": 0.6559,
+        "vol_100d": 0.8194,
+        "razao": 0.8004
       },
       "notes": [
         "inclinação 60d significativa (t=-3.7)",
@@ -321,26 +378,54 @@
       "mercado": "cripto",
       "direction": "baixa",
       "score": 100,
-      "slope_annual_pct": -62.3,
-      "tstat": -12.03,
-      "adx": 33.4,
+      "slope_annual_pct": -65.6,
+      "tstat": -12.82,
+      "adx": 35.2,
       "above_sma50": false,
       "above_sma200": false,
       "breakout": "rompimento_baixa_20d",
       "momentum": {
-        "m_12_1": 0.1606,
-        "m_3": -0.1727,
-        "m_1": -0.2249,
-        "m_1w": -0.0778
+        "m_12_1": 0.1054,
+        "m_3": -0.1892,
+        "m_1": -0.2045,
+        "m_1w": -0.0343
       },
       "vol": {
-        "vol_20d": 0.3978,
-        "vol_100d": 0.3606,
-        "razao": 1.1031
+        "vol_20d": 0.3983,
+        "vol_100d": 0.3615,
+        "razao": 1.1018
       },
       "notes": [
-        "inclinação 60d significativa (t=-12.0)",
-        "ADX 33: tendência com força",
+        "inclinação 60d significativa (t=-12.8)",
+        "ADX 35: tendência com força",
+        "rompimento_baixa_20d"
+      ]
+    },
+    {
+      "ticker": "ETH",
+      "mercado": "cripto",
+      "direction": "baixa",
+      "score": 100,
+      "slope_annual_pct": -81.5,
+      "tstat": -20.05,
+      "adx": 38.0,
+      "above_sma50": false,
+      "above_sma200": false,
+      "breakout": "rompimento_baixa_20d",
+      "momentum": {
+        "m_12_1": 0.0857,
+        "m_3": -0.2823,
+        "m_1": -0.2196,
+        "m_1w": -0.0073
+      },
+      "vol": {
+        "vol_20d": 0.559,
+        "vol_100d": 0.4949,
+        "razao": 1.1294
+      },
+      "notes": [
+        "inclinação 60d significativa (t=-20.1)",
+        "ADX 38: tendência com força",
         "rompimento_baixa_20d"
       ]
     },
@@ -349,7 +434,7 @@
       "mercado": "BR",
       "direction": "baixa",
       "score": 85,
-      "slope_annual_pct": -78.1,
+      "slope_annual_pct": -78.0,
       "tstat": -5.85,
       "adx": 41.4,
       "above_sma50": false,
@@ -357,17 +442,17 @@
       "breakout": "nenhum",
       "momentum": {
         "m_12_1": 0.0614,
-        "m_3": -0.2163,
-        "m_1": -0.4145,
-        "m_1w": -0.0846
+        "m_3": -0.2091,
+        "m_1": -0.4091,
+        "m_1w": -0.0762
       },
       "vol": {
-        "vol_20d": 1.089,
-        "vol_100d": 0.6085,
-        "razao": 1.7896
+        "vol_20d": 1.0925,
+        "vol_100d": 0.6089,
+        "razao": 1.7942
       },
       "notes": [
-        "inclinação 60d significativa (t=-5.9)",
+        "inclinação 60d significativa (t=-5.8)",
         "ADX 41: tendência com força",
         "vol em expansão: reduzir tamanho"
       ]
@@ -377,22 +462,22 @@
       "mercado": "BR",
       "direction": "alta",
       "score": 85,
-      "slope_annual_pct": 521.1,
-      "tstat": 3.39,
+      "slope_annual_pct": 515.8,
+      "tstat": 3.38,
       "adx": 28.8,
       "above_sma50": true,
       "above_sma200": true,
       "breakout": "nenhum",
       "momentum": {
         "m_12_1": 0.5584,
-        "m_3": 1.0667,
-        "m_1": -0.3837,
-        "m_1w": 0.1839
+        "m_3": 1.0247,
+        "m_1": -0.3962,
+        "m_1w": 0.1598
       },
       "vol": {
-        "vol_20d": 2.4084,
-        "vol_100d": 1.3449,
-        "razao": 1.7908
+        "vol_20d": 2.4082,
+        "vol_100d": 1.3455,
+        "razao": 1.7899
       },
       "notes": [
         "inclinação 60d significativa (t=3.4)",
@@ -429,110 +514,29 @@
       ]
     },
     {
-      "ticker": "QQQ",
-      "mercado": "US",
-      "direction": "baixa",
-      "score": 85,
-      "slope_annual_pct": -29.0,
-      "tstat": -5.41,
-      "adx": 30.8,
-      "above_sma50": false,
-      "above_sma200": false,
-      "breakout": "nenhum",
-      "momentum": {
-        "m_12_1": 0.2161,
-        "m_3": -0.0931,
-        "m_1": -0.1078,
-        "m_1w": -0.0598
-      },
-      "vol": {
-        "vol_20d": 0.3505,
-        "vol_100d": 0.234,
-        "razao": 1.4975
-      },
-      "notes": [
-        "inclinação 60d significativa (t=-5.4)",
-        "ADX 31: tendência com força"
-      ]
-    },
-    {
-      "ticker": "COIN",
-      "mercado": "US",
-      "direction": "baixa",
-      "score": 85,
-      "slope_annual_pct": -84.0,
-      "tstat": -10.43,
-      "adx": 38.7,
-      "above_sma50": false,
-      "above_sma200": false,
-      "breakout": "nenhum",
-      "momentum": {
-        "m_12_1": -0.3236,
-        "m_3": -0.4104,
-        "m_1": -0.3791,
-        "m_1w": -0.1586
-      },
-      "vol": {
-        "vol_20d": 0.6498,
-        "vol_100d": 0.7314,
-        "razao": 0.8884
-      },
-      "notes": [
-        "inclinação 60d significativa (t=-10.4)",
-        "ADX 39: tendência com força"
-      ]
-    },
-    {
-      "ticker": "ETH",
-      "mercado": "cripto",
-      "direction": "baixa",
-      "score": 85,
-      "slope_annual_pct": -80.0,
-      "tstat": -19.4,
-      "adx": 36.9,
-      "above_sma50": false,
-      "above_sma200": false,
-      "breakout": "nenhum",
-      "momentum": {
-        "m_12_1": 0.1489,
-        "m_3": -0.2653,
-        "m_1": -0.247,
-        "m_1w": -0.0813
-      },
-      "vol": {
-        "vol_20d": 0.5598,
-        "vol_100d": 0.4947,
-        "razao": 1.1316
-      },
-      "notes": [
-        "inclinação 60d significativa (t=-19.4)",
-        "ADX 37: tendência com força"
-      ]
-    },
-    {
       "ticker": "SOL",
       "mercado": "cripto",
       "direction": "baixa",
       "score": 85,
-      "slope_annual_pct": -87.4,
-      "tstat": -20.54,
-      "adx": 43.3,
+      "slope_annual_pct": -88.5,
+      "tstat": -22.81,
+      "adx": 43.5,
       "above_sma50": false,
       "above_sma200": false,
       "breakout": "nenhum",
       "momentum": {
-        "m_12_1": 0.1821,
-        "m_3": -0.2535,
-        "m_1": -0.2811,
-        "m_1w": -0.0601
+        "m_12_1": 0.0985,
+        "m_3": -0.2806,
+        "m_1": -0.2347,
+        "m_1w": 0.0403
       },
       "vol": {
-        "vol_20d": 0.5553,
+        "vol_20d": 0.5505,
         "vol_100d": 0.5228,
-        "razao": 1.0623
+        "razao": 1.053
       },
       "notes": [
-        "inclinação 60d significativa (t=-20.5)",
+        "inclinação 60d significativa (t=-22.8)",
         "ADX 43: tendência com força"
       ]
     },
@@ -542,21 +546,21 @@
       "direction": "baixa",
       "score": 80,
       "slope_annual_pct": -72.6,
-      "tstat": -25.27,
+      "tstat": -25.28,
       "adx": 17.3,
       "above_sma50": false,
       "above_sma200": false,
       "breakout": "rompimento_baixa_20d",
       "momentum": {
         "m_12_1": -0.0049,
-        "m_3": -0.1876,
-        "m_1": -0.1045,
-        "m_1w": -0.0837
+        "m_3": -0.1892,
+        "m_1": -0.1064,
+        "m_1w": -0.0855
       },
       "vol": {
-        "vol_20d": 0.4019,
-        "vol_100d": 0.281,
-        "razao": 1.4303
+        "vol_20d": 0.4021,
+        "vol_100d": 0.2811,
+        "razao": 1.4307
       },
       "notes": [
         "inclinação 60d significativa (t=-25.3)",
@@ -569,22 +573,22 @@
       "mercado": "US",
       "direction": "baixa",
       "score": 80,
-      "slope_annual_pct": -12.0,
-      "tstat": -4.69,
+      "slope_annual_pct": -12.1,
+      "tstat": -4.68,
       "adx": 17.3,
       "above_sma50": false,
       "above_sma200": false,
       "breakout": "rompimento_baixa_20d",
       "momentum": {
         "m_12_1": 0.1712,
-        "m_3": -0.0627,
-        "m_1": -0.0716,
-        "m_1w": -0.0521
+        "m_3": -0.0651,
+        "m_1": -0.074,
+        "m_1w": -0.0545
       },
       "vol": {
-        "vol_20d": 0.2323,
-        "vol_100d": 0.1418,
-        "razao": 1.6385
+        "vol_20d": 0.2345,
+        "vol_100d": 0.1426,
+        "razao": 1.6445
       },
       "notes": [
         "inclinação 60d significativa (t=-4.7)",
@@ -598,22 +602,22 @@
       "mercado": "US",
       "direction": "alta",
       "score": 80,
-      "slope_annual_pct": 269.2,
-      "tstat": 9.34,
+      "slope_annual_pct": 268.8,
+      "tstat": 9.33,
       "adx": 21.7,
       "above_sma50": true,
       "above_sma200": true,
       "breakout": "rompimento_alta_20d",
       "momentum": {
         "m_12_1": 0.2824,
-        "m_3": 0.4832,
-        "m_1": 0.0274,
-        "m_1w": 0.0543
+        "m_3": 0.4789,
+        "m_1": 0.0243,
+        "m_1w": 0.0511
       },
       "vol": {
-        "vol_20d": 0.3741,
-        "vol_100d": 0.3996,
-        "razao": 0.936
+        "vol_20d": 0.3726,
+        "vol_100d": 0.3994,
+        "razao": 0.9331
       },
       "notes": [
         "inclinação 60d significativa (t=9.3)",
@@ -648,26 +652,52 @@
       ]
     },
     {
+      "ticker": "PLTR",
+      "mercado": "US",
+      "direction": "baixa",
+      "score": 70,
+      "slope_annual_pct": -19.6,
+      "tstat": -1.49,
+      "adx": 29.7,
+      "above_sma50": false,
+      "above_sma200": false,
+      "breakout": "nenhum",
+      "momentum": {
+        "m_12_1": 0.2055,
+        "m_3": -0.1459,
+        "m_1": -0.2382,
+        "m_1w": -0.1043
+      },
+      "vol": {
+        "vol_20d": 0.5247,
+        "vol_100d": 0.6908,
+        "razao": 0.7595
+      },
+      "notes": [
+        "ADX 30: tendência com força"
+      ]
+    },
+    {
       "ticker": "AAPL",
       "mercado": "US",
       "direction": "alta",
       "score": 65,
-      "slope_annual_pct": 48.3,
-      "tstat": 13.97,
+      "slope_annual_pct": 48.4,
+      "tstat": 14.02,
       "adx": 17.1,
       "above_sma50": true,
       "above_sma200": true,
       "breakout": "nenhum",
       "momentum": {
         "m_12_1": 0.2862,
-        "m_3": 0.1272,
-        "m_1": 0.0137,
-        "m_1w": -0.0174
+        "m_3": 0.1289,
+        "m_1": 0.0152,
+        "m_1w": -0.016
       },
       "vol": {
-        "vol_20d": 0.2755,
-        "vol_100d": 0.2612,
-        "razao": 1.0545
+        "vol_20d": 0.2747,
+        "vol_100d": 0.2611,
+        "razao": 1.0524
       },
       "notes": [
         "inclinação 60d significativa (t=14.0)",
@@ -679,25 +709,25 @@
       "mercado": "US",
       "direction": "alta",
       "score": 65,
-      "slope_annual_pct": 194.5,
-      "tstat": 10.59,
-      "adx": 14.9,
+      "slope_annual_pct": 192.5,
+      "tstat": 10.36,
+      "adx": 15.2,
       "above_sma50": false,
       "above_sma200": true,
       "breakout": "rompimento_baixa_20d",
       "momentum": {
         "m_12_1": 0.3945,
-        "m_3": 0.1127,
-        "m_1": -0.0667,
-        "m_1w": -0.1505
+        "m_3": 0.0941,
+        "m_1": -0.0822,
+        "m_1w": -0.1647
       },
       "vol": {
-        "vol_20d": 0.7394,
-        "vol_100d": 0.8087,
-        "razao": 0.9143
+        "vol_20d": 0.7573,
+        "vol_100d": 0.8122,
+        "razao": 0.9324
       },
       "notes": [
-        "inclinação 60d significativa (t=10.6)",
+        "inclinação 60d significativa (t=10.4)",
         "ADX 15: lateral",
         "rompimento_baixa_20d"
       ]
@@ -707,22 +737,22 @@
       "mercado": "BR",
       "direction": "lateral",
       "score": 55,
-      "slope_annual_pct": -2.2,
-      "tstat": -0.41,
+      "slope_annual_pct": -2.0,
+      "tstat": -0.38,
       "adx": 24.0,
       "above_sma50": false,
       "above_sma200": false,
       "breakout": "rompimento_baixa_20d",
       "momentum": {
         "m_12_1": -0.017,
-        "m_3": -0.0315,
-        "m_1": -0.096,
-        "m_1w": -0.0301
+        "m_3": -0.0281,
+        "m_1": -0.0928,
+        "m_1w": -0.0267
       },
       "vol": {
-        "vol_20d": 0.2508,
-        "vol_100d": 0.1452,
-        "razao": 1.7269
+        "vol_20d": 0.2504,
+        "vol_100d": 0.1448,
+        "razao": 1.7288
       },
       "notes": [
         "rompimento_baixa_20d",
@@ -734,22 +764,22 @@
       "mercado": "US",
       "direction": "alta",
       "score": 55,
-      "slope_annual_pct": 10.7,
-      "tstat": 2.09,
+      "slope_annual_pct": 10.6,
+      "tstat": 2.08,
       "adx": 11.5,
       "above_sma50": true,
       "above_sma200": true,
       "breakout": "nenhum",
       "momentum": {
         "m_12_1": 0.1789,
-        "m_3": -0.0026,
-        "m_1": -0.0168,
-        "m_1w": -0.0355
+        "m_3": -0.0049,
+        "m_1": -0.0191,
+        "m_1w": -0.0377
       },
       "vol": {
-        "vol_20d": 0.4122,
-        "vol_100d": 0.398,
-        "razao": 1.0357
+        "vol_20d": 0.4149,
+        "vol_100d": 0.3985,
+        "razao": 1.0412
       },
       "notes": [
         "inclinação 60d significativa (t=2.1)",
@@ -757,82 +787,29 @@
       ]
     },
     {
-      "ticker": "PLTR",
-      "mercado": "US",
-      "direction": "baixa",
-      "score": 55,
-      "slope_annual_pct": -19.5,
-      "tstat": -1.48,
-      "adx": 29.7,
-      "above_sma50": false,
-      "above_sma200": true,
-      "breakout": "nenhum",
-      "momentum": {
-        "m_12_1": 0.2055,
-        "m_3": -0.1438,
-        "m_1": -0.2362,
-        "m_1w": -0.1021
-      },
-      "vol": {
-        "vol_20d": 0.5243,
-        "vol_100d": 0.6906,
-        "razao": 0.7591
-      },
-      "notes": [
-        "ADX 30: tendência com força"
-      ]
-    },
-    {
-      "ticker": "TSLA",
-      "mercado": "US",
-      "direction": "alta",
-      "score": 50,
-      "slope_annual_pct": 40.1,
-      "tstat": 5.37,
-      "adx": 10.9,
-      "above_sma50": true,
-      "above_sma200": false,
-      "breakout": "nenhum",
-      "momentum": {
-        "m_12_1": -0.0368,
-        "m_3": 0.0369,
-        "m_1": -0.0265,
-        "m_1w": -0.0534
-      },
-      "vol": {
-        "vol_20d": 0.5764,
-        "vol_100d": 0.5099,
-        "razao": 1.1304
-      },
-      "notes": [
-        "inclinação 60d significativa (t=5.4)",
-        "ADX 11: lateral"
-      ]
-    },
-    {
       "ticker": "MSFT",
       "mercado": "US",
       "direction": "alta",
       "score": 50,
-      "slope_annual_pct": 31.4,
-      "tstat": 5.79,
+      "slope_annual_pct": 31.2,
+      "tstat": 5.73,
       "adx": 17.9,
       "above_sma50": false,
       "above_sma200": true,
       "breakout": "nenhum",
       "momentum": {
         "m_12_1": 0.0793,
-        "m_3": 0.0345,
-        "m_1": -0.062,
-        "m_1w": -0.0442
+        "m_3": 0.0312,
+        "m_1": -0.065,
+        "m_1w": -0.0472
       },
       "vol": {
-        "vol_20d": 0.3741,
-        "vol_100d": 0.368,
-        "razao": 1.0167
+        "vol_20d": 0.3759,
+        "vol_100d": 0.3684,
+        "razao": 1.0203
       },
       "notes": [
-        "inclinação 60d significativa (t=5.8)",
+        "inclinação 60d significativa (t=5.7)",
         "ADX 18: lateral"
       ]
     },
@@ -849,18 +826,45 @@
       "breakout": "nenhum",
       "momentum": {
         "m_12_1": 0.7808,
-        "m_3": -0.0223,
-        "m_1": -0.1556,
-        "m_1w": -0.0496
+        "m_3": -0.0216,
+        "m_1": -0.1551,
+        "m_1w": -0.049
       },
       "vol": {
-        "vol_20d": 0.4623,
-        "vol_100d": 0.3827,
-        "razao": 1.208
+        "vol_20d": 0.4619,
+        "vol_100d": 0.3826,
+        "razao": 1.2075
       },
       "notes": [
         "inclinação 60d significativa (t=2.4)",
         "ADX 26: tendência com força"
+      ]
+    },
+    {
+      "ticker": "TSLA",
+      "mercado": "US",
+      "direction": "alta",
+      "score": 35,
+      "slope_annual_pct": 39.9,
+      "tstat": 5.32,
+      "adx": 10.9,
+      "above_sma50": false,
+      "above_sma200": false,
+      "breakout": "nenhum",
+      "momentum": {
+        "m_12_1": -0.0368,
+        "m_3": 0.0318,
+        "m_1": -0.0312,
+        "m_1w": -0.058
+      },
+      "vol": {
+        "vol_20d": 0.5789,
+        "vol_100d": 0.5104,
+        "razao": 1.1341
+      },
+      "notes": [
+        "inclinação 60d significativa (t=5.3)",
+        "ADX 11: lateral"
       ]
     },
     {
@@ -876,14 +880,14 @@
       "breakout": "nenhum",
       "momentum": {
         "m_12_1": 0.2479,
-        "m_3": 0.044,
-        "m_1": -0.1791,
-        "m_1w": -0.0389
+        "m_3": 0.0443,
+        "m_1": -0.1789,
+        "m_1w": -0.0386
       },
       "vol": {
         "vol_20d": 0.5489,
         "vol_100d": 0.3723,
-        "razao": 1.4742
+        "razao": 1.4743
       },
       "notes": [
         "ADX 26: tendência com força"
@@ -894,25 +898,25 @@
       "mercado": "BR",
       "direction": "baixa",
       "score": 25,
-      "slope_annual_pct": -17.3,
-      "tstat": -2.46,
+      "slope_annual_pct": -17.0,
+      "tstat": -2.41,
       "adx": 14.3,
       "above_sma50": true,
       "above_sma200": true,
       "breakout": "nenhum",
       "momentum": {
         "m_12_1": 0.0869,
-        "m_3": 0.0451,
-        "m_1": 0.0391,
-        "m_1w": -0.0184
+        "m_3": 0.054,
+        "m_1": 0.048,
+        "m_1w": -0.0101
       },
       "vol": {
-        "vol_20d": 0.4042,
-        "vol_100d": 0.3337,
-        "razao": 1.2113
+        "vol_20d": 0.4,
+        "vol_100d": 0.333,
+        "razao": 1.201
       },
       "notes": [
-        "inclinação 60d significativa (t=-2.5)",
+        "inclinação 60d significativa (t=-2.4)",
         "ADX 14: lateral"
       ]
     },
@@ -921,22 +925,22 @@
       "mercado": "BR",
       "direction": "lateral",
       "score": 20,
-      "slope_annual_pct": 19.4,
-      "tstat": 0.96,
+      "slope_annual_pct": 19.3,
+      "tstat": 0.95,
       "adx": 40.9,
       "above_sma50": false,
       "above_sma200": false,
       "breakout": "nenhum",
       "momentum": {
         "m_12_1": 0.7994,
-        "m_3": -0.0088,
-        "m_1": -0.2659,
-        "m_1w": -0.0441
+        "m_3": -0.0102,
+        "m_1": -0.267,
+        "m_1w": -0.0454
       },
       "vol": {
-        "vol_20d": 0.4248,
-        "vol_100d": 0.3664,
-        "razao": 1.1594
+        "vol_20d": 0.4247,
+        "vol_100d": 0.3665,
+        "razao": 1.1586
       },
       "notes": [
         "ADX 41: tendência com força"
@@ -945,40 +949,13 @@
   ],
   "sinais_de_noticia": [
     {
-      "ticker": "BTC",
-      "score": 0.066,
-      "n_items": 20,
-      "n_sources": 5,
-      "headlines": [
-        "Bitcoin retests $62K as Nasdaq futures rise ahead of Anthropic debut",
-        "Bitcoin ETF assets fall to three-month low as 2026 net outflows top $2.5B",
-        "Privacidade não é crime",
-        "PF participa de operação internacional que rastreou 576 carteiras de criptomoedas"
-      ],
-      "evidence": {
-        "ticker": "BTC",
-        "n_pos": 10,
-        "n_neg": 6,
-        "ret1_after_pos": -0.0199,
-        "ret5_after_pos": -0.1144,
-        "ret1_after_neg": -0.0293,
-        "ret5_after_neg": -0.1007
-      },
-      "action": "ignorar",
-      "reasons": [
-        "sentimento fraco"
-      ]
-    },
-    {
       "ticker": "ETH",
-      "score": 0.138,
-      "n_items": 4,
+      "score": 0.159,
+      "n_items": 2,
       "n_sources": 2,
       "headlines": [
-        "PF participa de operação internacional que rastreou 576 carteiras de criptomoedas",
-        "Ethereum’s new DeFi security tool raises questions over censorship",
-        "Ethereum’s Glamsterdam upgrade could slip to May 2027 over compatibility concerns",
-        "Vitalik Buterin defende que investimentos em criptomoedas tenham as mesmas características que imóveis"
+        "Vitalik Buterin defende que investimentos em criptomoedas tenham as mesmas características que imóveis",
+        "Ethereum’s next big upgrade is pushed into 2027 by apps it would break"
       ],
       "evidence": {
         "ticker": "ETH",
@@ -995,12 +972,103 @@
       ]
     },
     {
-      "ticker": "ANTH34",
-      "score": -0.171,
+      "ticker": "VALE3",
+      "score": -0.213,
       "n_items": 1,
       "n_sources": 1,
       "headlines": [
-        "Anthropic capta US$ 81 bilhões em estreia; vale investir?"
+        "Ibovespa perde 3,53% na semana e dólar dispara; Vale (VALE3) cai pela 8ª vez - Suno - Investimentos Inteligentes"
+      ],
+      "evidence": {
+        "ticker": "VALE3",
+        "n_pos": 1,
+        "n_neg": 0,
+        "ret1_after_pos": -0.0222,
+        "ret5_after_pos": null,
+        "ret1_after_neg": null,
+        "ret5_after_neg": null
+      },
+      "action": "ignorar",
+      "reasons": [
+        "uma única fonte"
+      ]
+    },
+    {
+      "ticker": "BTC",
+      "score": 0.071,
+      "n_items": 9,
+      "n_sources": 3,
+      "headlines": [
+        "Vitalik Buterin defende que investimentos em criptomoedas tenham as mesmas características que imóveis",
+        "Encontro mundial de economias circulares com bitcoin começa em El Salvador para mostrar função de dinheiro da moeda digital",
+        "Bitcoin hits four-month low after Anthropic's IPO as tech stocks wilt",
+        "Institutions pile back into US Bitcoin ETFs in Q3 after selling streak"
+      ],
+      "evidence": {
+        "ticker": "BTC",
+        "n_pos": 10,
+        "n_neg": 6,
+        "ret1_after_pos": -0.0199,
+        "ret5_after_pos": -0.1144,
+        "ret1_after_neg": -0.0293,
+        "ret5_after_neg": -0.1007
+      },
+      "action": "ignorar",
+      "reasons": [
+        "sentimento fraco"
+      ]
+    },
+    {
+      "ticker": "PCAR3",
+      "score": 0.127,
+      "n_items": 1,
+      "n_sources": 1,
+      "headlines": [
+        "72 vezes, mas com juros: GPA (PCAR3) parcela dívida trabalhista milionária"
+      ],
+      "evidence": {
+        "ticker": "PCAR3",
+        "n_pos": 0,
+        "n_neg": 0,
+        "ret1_after_pos": null,
+        "ret5_after_pos": null,
+        "ret1_after_neg": null,
+        "ret5_after_neg": null
+      },
+      "action": "ignorar",
+      "reasons": [
+        "uma única fonte"
+      ]
+    },
+    {
+      "ticker": "JBSS32",
+      "score": 0.12,
+      "n_items": 1,
+      "n_sources": 1,
+      "headlines": [
+        "JBS (JBSS32) conclui joint venture em Omã e avança em hub multiproteína no Oriente Médio"
+      ],
+      "evidence": {
+        "ticker": "JBSS32",
+        "n_pos": 0,
+        "n_neg": 0,
+        "ret1_after_pos": null,
+        "ret5_after_pos": null,
+        "ret1_after_neg": null,
+        "ret5_after_neg": null
+      },
+      "action": "ignorar",
+      "reasons": [
+        "uma única fonte"
+      ]
+    },
+    {
+      "ticker": "ANTH34",
+      "score": 0.108,
+      "n_items": 1,
+      "n_sources": 1,
+      "headlines": [
+        "BDR da Anthropic estreia na B3 com negociação de R$ 460 milhões, o triplo da SpaceX"
       ],
       "evidence": {
         "ticker": "ANTH34",
@@ -1017,15 +1085,15 @@
       ]
     },
     {
-      "ticker": "NOVO11",
-      "score": 0.169,
+      "ticker": "SPCX34",
+      "score": 0.108,
       "n_items": 1,
       "n_sources": 1,
       "headlines": [
-        "ETF de ações de empresas brasileiras negociadas nos EUA chega à B3"
+        "BDR da Anthropic estreia na B3 com negociação de R$ 460 milhões, o triplo da SpaceX"
       ],
       "evidence": {
-        "ticker": "NOVO11",
+        "ticker": "SPCX34",
         "n_pos": 0,
         "n_neg": 0,
         "ret1_after_pos": null,
@@ -1039,15 +1107,15 @@
       ]
     },
     {
-      "ticker": "PLUS11",
-      "score": 0.169,
+      "ticker": "XPBR31",
+      "score": 0.108,
       "n_items": 1,
       "n_sources": 1,
       "headlines": [
-        "ETF de ações de empresas brasileiras negociadas nos EUA chega à B3"
+        "BDR da Anthropic estreia na B3 com negociação de R$ 460 milhões, o triplo da SpaceX"
       ],
       "evidence": {
-        "ticker": "PLUS11",
+        "ticker": "XPBR31",
         "n_pos": 0,
         "n_neg": 0,
         "ret1_after_pos": null,
@@ -1061,15 +1129,15 @@
       ]
     },
     {
-      "ticker": "CSNA3",
-      "score": 0.062,
+      "ticker": "ROXO34",
+      "score": 0.108,
       "n_items": 1,
       "n_sources": 1,
       "headlines": [
-        "Anthropic (ANT), CSN (CSNA3), Priner (PRNR3), Toky (TOKY3) e mais: Veja os destaques das empresas"
+        "BDR da Anthropic estreia na B3 com negociação de R$ 460 milhões, o triplo da SpaceX"
       ],
       "evidence": {
-        "ticker": "CSNA3",
+        "ticker": "ROXO34",
         "n_pos": 0,
         "n_neg": 0,
         "ret1_after_pos": null,
@@ -1083,15 +1151,15 @@
       ]
     },
     {
-      "ticker": "PRNR3",
-      "score": 0.062,
+      "ticker": "MELI34",
+      "score": 0.108,
       "n_items": 1,
       "n_sources": 1,
       "headlines": [
-        "Anthropic (ANT), CSN (CSNA3), Priner (PRNR3), Toky (TOKY3) e mais: Veja os destaques das empresas"
+        "BDR da Anthropic estreia na B3 com negociação de R$ 460 milhões, o triplo da SpaceX"
       ],
       "evidence": {
-        "ticker": "PRNR3",
+        "ticker": "MELI34",
         "n_pos": 0,
         "n_neg": 0,
         "ret1_after_pos": null,
@@ -1105,15 +1173,15 @@
       ]
     },
     {
-      "ticker": "TOKY3",
-      "score": 0.062,
+      "ticker": "SBSP3",
+      "score": 0.072,
       "n_items": 1,
       "n_sources": 1,
       "headlines": [
-        "Anthropic (ANT), CSN (CSNA3), Priner (PRNR3), Toky (TOKY3) e mais: Veja os destaques das empresas"
+        "Nem atuação do BC segura o dólar, que já sobe quase R$ 1 desde a eleição; bolsa cai 19%"
       ],
       "evidence": {
-        "ticker": "TOKY3",
+        "ticker": "SBSP3",
         "n_pos": 0,
         "n_neg": 0,
         "ret1_after_pos": null,
@@ -1127,15 +1195,15 @@
       ]
     },
     {
-      "ticker": "SNEC34",
-      "score": 0.0,
+      "ticker": "CPFE3",
+      "score": 0.072,
       "n_items": 1,
       "n_sources": 1,
       "headlines": [
-        "GTA 6 faz ação da Take-Two subir 6% na véspera do lançamento; veja como investir no setor de games"
+        "Nem atuação do BC segura o dólar, que já sobe quase R$ 1 desde a eleição; bolsa cai 19%"
       ],
       "evidence": {
-        "ticker": "SNEC34",
+        "ticker": "CPFE3",
         "n_pos": 0,
         "n_neg": 0,
         "ret1_after_pos": null,
@@ -1149,15 +1217,15 @@
       ]
     },
     {
-      "ticker": "MSFT34",
-      "score": 0.0,
+      "ticker": "CPLE3",
+      "score": 0.072,
       "n_items": 1,
       "n_sources": 1,
       "headlines": [
-        "GTA 6 faz ação da Take-Two subir 6% na véspera do lançamento; veja como investir no setor de games"
+        "Nem atuação do BC segura o dólar, que já sobe quase R$ 1 desde a eleição; bolsa cai 19%"
       ],
       "evidence": {
-        "ticker": "MSFT34",
+        "ticker": "CPLE3",
         "n_pos": 0,
         "n_neg": 0,
         "ret1_after_pos": null,
@@ -1171,15 +1239,37 @@
       ]
     },
     {
-      "ticker": "BBYY34",
-      "score": 0.0,
+      "ticker": "PETR4",
+      "score": 0.072,
       "n_items": 1,
       "n_sources": 1,
       "headlines": [
-        "GTA 6 faz ação da Take-Two subir 6% na véspera do lançamento; veja como investir no setor de games"
+        "Nem atuação do BC segura o dólar, que já sobe quase R$ 1 desde a eleição; bolsa cai 19%"
       ],
       "evidence": {
-        "ticker": "BBYY34",
+        "ticker": "PETR4",
+        "n_pos": 5,
+        "n_neg": 0,
+        "ret1_after_pos": 0.0123,
+        "ret5_after_pos": -0.0186,
+        "ret1_after_neg": null,
+        "ret5_after_neg": null
+      },
+      "action": "ignorar",
+      "reasons": [
+        "uma única fonte"
+      ]
+    },
+    {
+      "ticker": "EMBJ3",
+      "score": 0.072,
+      "n_items": 1,
+      "n_sources": 1,
+      "headlines": [
+        "Nem atuação do BC segura o dólar, que já sobe quase R$ 1 desde a eleição; bolsa cai 19%"
+      ],
+      "evidence": {
+        "ticker": "EMBJ3",
         "n_pos": 0,
         "n_neg": 0,
         "ret1_after_pos": null,
@@ -1193,15 +1283,15 @@
       ]
     },
     {
-      "ticker": "EAIN34",
-      "score": 0.0,
+      "ticker": "WEGE3",
+      "score": 0.072,
       "n_items": 1,
       "n_sources": 1,
       "headlines": [
-        "GTA 6 faz ação da Take-Two subir 6% na véspera do lançamento; veja como investir no setor de games"
+        "Nem atuação do BC segura o dólar, que já sobe quase R$ 1 desde a eleição; bolsa cai 19%"
       ],
       "evidence": {
-        "ticker": "EAIN34",
+        "ticker": "WEGE3",
         "n_pos": 0,
         "n_neg": 0,
         "ret1_after_pos": null,
@@ -1215,15 +1305,15 @@
       ]
     },
     {
-      "ticker": "NVDC34",
-      "score": 0.0,
+      "ticker": "MULT3",
+      "score": 0.072,
       "n_items": 1,
       "n_sources": 1,
       "headlines": [
-        "GTA 6 faz ação da Take-Two subir 6% na véspera do lançamento; veja como investir no setor de games"
+        "Nem atuação do BC segura o dólar, que já sobe quase R$ 1 desde a eleição; bolsa cai 19%"
       ],
       "evidence": {
-        "ticker": "NVDC34",
+        "ticker": "MULT3",
         "n_pos": 0,
         "n_neg": 0,
         "ret1_after_pos": null,
@@ -1237,15 +1327,15 @@
       ]
     },
     {
-      "ticker": "JOGO11",
-      "score": 0.0,
+      "ticker": "CURY3",
+      "score": 0.072,
       "n_items": 1,
       "n_sources": 1,
       "headlines": [
-        "GTA 6 faz ação da Take-Two subir 6% na véspera do lançamento; veja como investir no setor de games"
+        "Nem atuação do BC segura o dólar, que já sobe quase R$ 1 desde a eleição; bolsa cai 19%"
       ],
       "evidence": {
-        "ticker": "JOGO11",
+        "ticker": "CURY3",
         "n_pos": 0,
         "n_neg": 0,
         "ret1_after_pos": null,
@@ -1259,15 +1349,15 @@
       ]
     },
     {
-      "ticker": "BHER39",
-      "score": 0.0,
+      "ticker": "RDOR3",
+      "score": 0.072,
       "n_items": 1,
       "n_sources": 1,
       "headlines": [
-        "GTA 6 faz ação da Take-Two subir 6% na véspera do lançamento; veja como investir no setor de games"
+        "Nem atuação do BC segura o dólar, que já sobe quase R$ 1 desde a eleição; bolsa cai 19%"
       ],
       "evidence": {
-        "ticker": "BHER39",
+        "ticker": "RDOR3",
         "n_pos": 0,
         "n_neg": 0,
         "ret1_after_pos": null,
@@ -1283,58 +1373,13 @@
     {
       "ticker": "SOL",
       "score": 0.0,
-      "n_items": 2,
-      "n_sources": 2,
+      "n_items": 1,
+      "n_sources": 1,
       "headlines": [
-        "Roundhill scraps Solana and XRP income ETFs as rival funds indicate low demand",
-        "IOSCO warns quantum upgrades could slow blockchains, leave security gaps"
+        "VanEck drops Gemini as custodian of its bitcoin, ether and SOL ETFs"
       ],
       "evidence": {
         "ticker": "SOL",
-        "n_pos": 0,
-        "n_neg": 0,
-        "ret1_after_pos": null,
-        "ret5_after_pos": null,
-        "ret1_after_neg": null,
-        "ret5_after_neg": null
-      },
-      "action": "ignorar",
-      "reasons": [
-        "sentimento fraco"
-      ]
-    },
-    {
-      "ticker": "XRP",
-      "score": 0.0,
-      "n_items": 1,
-      "n_sources": 1,
-      "headlines": [
-        "Roundhill scraps Solana and XRP income ETFs as rival funds indicate low demand"
-      ],
-      "evidence": {
-        "ticker": "XRP",
-        "n_pos": 0,
-        "n_neg": 0,
-        "ret1_after_pos": null,
-        "ret5_after_pos": null,
-        "ret1_after_neg": null,
-        "ret5_after_neg": null
-      },
-      "action": "ignorar",
-      "reasons": [
-        "uma única fonte"
-      ]
-    },
-    {
-      "ticker": "CPLE3",
-      "score": 0.0,
-      "n_items": 1,
-      "n_sources": 1,
-      "headlines": [
-        "Copel (CPLE3) aprova o pagamento de R$ 871 milhões em juros sobre capital próprio"
-      ],
-      "evidence": {
-        "ticker": "CPLE3",
         "n_pos": 0,
         "n_neg": 0,
         "ret1_after_pos": null,
@@ -1358,27 +1403,19 @@
       "tickers": []
     },
     {
-      "quando": "2026-11-19T09:10:00+00:00",
-      "fonte": "Valor Investe",
+      "quando": "2026-11-19T20:23:00+00:00",
+      "fonte": "Money Times",
       "mercado": "BR",
-      "titulo": "Dólar, compro agora ou espero? Especialistas dizem o que fazer neste momento de estresse com a moeda",
-      "sentimento": 0.55,
+      "titulo": "Queda na cota do FIDC nem sempre é prejuízo: Saiba como funciona a liquidação por amortização",
+      "sentimento": -0.51,
       "tickers": []
     },
     {
-      "quando": "2026-11-19T17:29:00+00:00",
-      "fonte": "Google News Brasil: mercado",
-      "mercado": "BR",
-      "titulo": "Mercado agora | Bolsas da Europa fecham em queda, com pressão dos riscos geopolíticas; Ibovespa cai - InvesTalk",
-      "sentimento": -0.47,
-      "tickers": []
-    },
-    {
-      "quando": "2026-11-19T13:50:24+00:00",
+      "quando": "2026-11-19T23:37:59+00:00",
       "fonte": "Reuters Business (via Google News)",
       "mercado": "global",
-      "titulo": "Temu owner PDD beats third-quarter profit estimates as marketing spending falls - Reuters",
-      "sentimento": 0.46,
+      "titulo": "Record profits but record outflows: 'Sell Korea' trade stalks Seoul market - Reuters",
+      "sentimento": 0.45,
       "tickers": []
     },
     {
@@ -1390,11 +1427,37 @@
       "tickers": []
     },
     {
+      "quando": "2026-11-20T08:30:46+00:00",
+      "fonte": "Bloomberg (via Google News)",
+      "mercado": "global",
+      "titulo": "Bond Sales Hit €2 Trillion Europe Record as AI Surge Takes Hold - Bloomberg.com",
+      "sentimento": 0.44,
+      "tickers": []
+    },
+    {
       "quando": "2026-11-19T19:08:13+00:00",
       "fonte": "Google News Brasil: mercado",
       "mercado": "BR",
       "titulo": "O dólar abriu em alta e superou R$ 5,91 nesta quinta (19), após a votação do pacote fiscal apelidado de 'plano Moretti' ser concluída na noite de quarta-feira (18). Por volta das 9h20, a moeda americana avançava 0,41%, a R$ 5,891. Na máxima do dia, cheg - Instagram",
       "sentimento": 0.36,
+      "tickers": []
+    },
+    {
+      "quando": "2026-11-20T08:18:42+00:00",
+      "fonte": "Cointelegraph",
+      "mercado": "cripto",
+      "titulo": "BlackRock’s IBIT loses record $541M amid Anthropic market debut",
+      "sentimento": 0.34,
+      "tickers": [
+        "BTC"
+      ]
+    },
+    {
+      "quando": "2026-11-20T08:03:34+00:00",
+      "fonte": "Cointelegraph",
+      "mercado": "cripto",
+      "titulo": "SEC charges eight firms over fake crypto platforms tied to $37M fraud",
+      "sentimento": -0.33,
       "tickers": []
     },
     {
@@ -1406,19 +1469,19 @@
       "tickers": []
     },
     {
-      "quando": "2026-11-19T13:02:47+00:00",
+      "quando": "2026-11-19T21:02:09+00:00",
       "fonte": "Financial Times (via Google News)",
       "mercado": "global",
-      "titulo": "Germany hit by AI-driven surge in cyber attacks - Financial Times",
+      "titulo": "Anthropic shares jump 17% after record Wall Street listing - Financial Times",
       "sentimento": 0.26,
       "tickers": []
     },
     {
-      "quando": "2026-11-19T13:29:00+00:00",
-      "fonte": "Google News Brasil: mercado",
-      "mercado": "BR",
-      "titulo": "Ibovespa abre em alta em meio à aprovação do ajuste fiscal e a movimentações corporativas - TradeMap",
-      "sentimento": 0.25,
+      "quando": "2026-11-20T08:00:44+00:00",
+      "fonte": "Bloomberg (via Google News)",
+      "mercado": "global",
+      "titulo": "Anthropic Slumps 5% Post-Market After Record $107.3 Billion IPO - Bloomberg.com",
+      "sentimento": 0.26,
       "tickers": []
     },
     {
@@ -1430,75 +1493,59 @@
       "tickers": []
     },
     {
-      "quando": "2026-11-19T09:00:04+00:00",
-      "fonte": "Bloomberg (via Google News)",
-      "mercado": "global",
-      "titulo": "This Is The Problem With AI's Most Bullish Chart - Bloomberg.com",
+      "quando": "2026-11-19T21:29:25+00:00",
+      "fonte": "Money Times",
+      "mercado": "BR",
+      "titulo": "Ibovespa perde os 167 mil pontos com incertezas fiscais e políticas do Brasil",
+      "sentimento": -0.25,
+      "tickers": []
+    },
+    {
+      "quando": "2026-11-19T21:28:00+00:00",
+      "fonte": "Nikkei Asia (via Google News)",
+      "mercado": "asia",
+      "titulo": "Anthropic closes 17% above IPO price after 34% opening surge - Nikkei Asia",
       "sentimento": 0.25,
       "tickers": []
     },
     {
-      "quando": "2026-11-19T11:00:07+00:00",
+      "quando": "2026-11-20T05:42:00+00:00",
       "fonte": "Bloomberg (via Google News)",
       "mercado": "global",
-      "titulo": "Anthropic Gray Markets Indicate First-Day Pop After Record IPO - Bloomberg.com",
-      "sentimento": 0.25,
+      "titulo": "Why Indonesia’s Rupiah Keeps Hitting Record Lows - Bloomberg.com",
+      "sentimento": 0.24,
       "tickers": []
     },
     {
-      "quando": "2026-11-19T14:21:07+00:00",
+      "quando": "2026-11-20T05:58:00+00:00",
+      "fonte": "Bloomberg (via Google News)",
+      "mercado": "global",
+      "titulo": "Taiwan Stocks Plunge Again to Head for Worst Week Since 1991 - Bloomberg.com",
+      "sentimento": -0.24,
+      "tickers": []
+    },
+    {
+      "quando": "2026-11-19T22:47:00+00:00",
       "fonte": "Google News Brasil: mercado",
       "mercado": "BR",
-      "titulo": "Ibovespa tem leve alta após aprovação do pacote fiscal pelo Senado - VEJA",
-      "sentimento": 0.24,
-      "tickers": []
-    },
-    {
-      "quando": "2026-11-19T07:31:00+00:00",
-      "fonte": "Bloomberg (via Google News)",
-      "mercado": "global",
-      "titulo": "Anthropic Raises $107.3 Billion to Top SpaceX’s Record Debut - Bloomberg.com",
-      "sentimento": 0.24,
-      "tickers": []
-    },
-    {
-      "quando": "2026-11-19T06:53:00+00:00",
-      "fonte": "Reuters Business (via Google News)",
-      "mercado": "global",
-      "titulo": "Gold hits 14-month low as strong dollar, rate bets weigh - Reuters",
-      "sentimento": 0.24,
-      "tickers": []
-    },
-    {
-      "quando": "2026-11-19T18:40:50+00:00",
-      "fonte": "Bloomberg (via Google News)",
-      "mercado": "global",
-      "titulo": "Anthropic Poised to Surge After $107.3 Billion IPO Tops SpaceX - Bloomberg.com",
-      "sentimento": 0.24,
-      "tickers": []
-    },
-    {
-      "quando": "2026-11-19T15:56:52+00:00",
-      "fonte": "Bloomberg (via Google News)",
-      "mercado": "global",
-      "titulo": "What to Know About Anthropic’s Record-Setting IPO - Bloomberg.com",
-      "sentimento": 0.24,
-      "tickers": []
-    },
-    {
-      "quando": "2026-11-19T18:42:10+00:00",
-      "fonte": "Bloomberg (via Google News)",
-      "mercado": "global",
-      "titulo": "Anthropic IPO Has Stock Bulls Dreaming of a Year-End Rally - Bloomberg.com",
+      "titulo": "Dólar supera R$ 5,93 e fecha no maior valor desde abril de 2025 - Agência Brasil",
       "sentimento": 0.23,
       "tickers": []
     },
     {
-      "quando": "2026-11-19T12:37:15+00:00",
+      "quando": "2026-11-20T07:27:00+00:00",
       "fonte": "Bloomberg (via Google News)",
       "mercado": "global",
-      "titulo": "Anthropic Banks Land $550 Million Fee Windfall on Record IPO - Bloomberg.com",
-      "sentimento": 0.23,
+      "titulo": "Tech Valuation Plunge Brings Some Opportunities: Taking Stock - Bloomberg.com",
+      "sentimento": -0.23,
+      "tickers": []
+    },
+    {
+      "quando": "2026-11-19T21:11:13+00:00",
+      "fonte": "Bloomberg (via Google News)",
+      "mercado": "global",
+      "titulo": "US Banks Send Bearish ‘Death Cross’ Signal as Stock Rout Extends - Bloomberg.com",
+      "sentimento": -0.23,
       "tickers": []
     },
     {
@@ -1506,6 +1553,14 @@
       "fonte": "Valor Investe",
       "mercado": "BR",
       "titulo": "Ouro cai ao menor valor em mais de um ano, em meio à demanda por liquidez após o IPO da Anthropic",
+      "sentimento": -0.23,
+      "tickers": []
+    },
+    {
+      "quando": "2026-11-19T22:03:52+00:00",
+      "fonte": "Google News Brasil: mercado",
+      "mercado": "BR",
+      "titulo": "Ibovespa amarga nova queda, enquanto dólar dispara para o maior nível em sete meses - VEJA",
       "sentimento": -0.23,
       "tickers": []
     },
@@ -1518,6 +1573,14 @@
       "tickers": []
     },
     {
+      "quando": "2026-11-19T22:37:18+00:00",
+      "fonte": "Google News Brasil: mercado",
+      "mercado": "BR",
+      "titulo": "Dólar dispara a R$ 5,93 e Ibovespa acumula queda de 3,53% na semana - brazileconomy.com.br",
+      "sentimento": -0.23,
+      "tickers": []
+    },
+    {
       "quando": "2026-11-19T20:11:46+00:00",
       "fonte": "Google News Brasil: mercado",
       "mercado": "BR",
@@ -1526,28 +1589,14 @@
       "tickers": []
     },
     {
-      "quando": "2026-11-19T09:29:37+00:00",
-      "fonte": "Bloomberg (via Google News)",
-      "mercado": "global",
-      "titulo": "The Path to a Year-End Stock Rally Looks Clearer After Anthropic - Bloomberg.com",
-      "sentimento": 0.23,
-      "tickers": []
-    },
-    {
-      "quando": "2026-11-19T17:26:26+00:00",
+      "quando": "2026-11-19T22:12:23+00:00",
       "fonte": "Google News Brasil: mercado",
       "mercado": "BR",
-      "titulo": "Dólar chega a R$ 5,92, mas modera alta após intervenção do Banco Central - UOL Economia",
-      "sentimento": 0.22,
-      "tickers": []
-    },
-    {
-      "quando": "2026-11-19T07:27:04+00:00",
-      "fonte": "Google News Brasil: mercado",
-      "mercado": "BR",
-      "titulo": "Dólar dispara a R$ 5,86, maior valor desde abril de 2025; Ibovespa cai - brasilagro.com.br",
-      "sentimento": -0.22,
-      "tickers": []
+      "titulo": "Ibovespa perde 3,53% na semana e dólar dispara; Vale (VALE3) cai pela 8ª vez - Suno - Investimentos Inteligentes",
+      "sentimento": -0.21,
+      "tickers": [
+        "VALE3"
+      ]
     }
   ]
 }
