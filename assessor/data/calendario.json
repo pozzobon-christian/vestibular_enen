@@ -1,23 +1,5 @@
 [
   {
-    "data": "2026-11-20",
-    "hora_brt": "",
-    "evento": "Vencimento mensal de opções (B3 e EUA, 3ª sexta)",
-    "fonte": "B3 / CBOE",
-    "categoria": "mercado",
-    "ativos": [
-      "PETR4",
-      "VALE3",
-      "BOVA11",
-      "SPY",
-      "NVDA"
-    ],
-    "impacto": "medio",
-    "o_que_esperar": "Gamma alto: preço gravita para strikes com mais aberto; volatilidade na última hora.",
-    "preparacao": "Não iniciar swing no dia; stops mais largos ou ficar fora.",
-    "confirmar": false
-  },
-  {
     "data": "2026-11-23",
     "hora_brt": "08:25",
     "evento": "Boletim Focus (expectativas Selic, IPCA, câmbio)",
