@@ -1,10 +1,10 @@
 # Monitor de influenciadores
 
-Atualizado em 2026-11-23 08:58 UTC
+Atualizado em 2026-11-23 20:51 UTC
 
 | Posts | Autores | Campanhas | Sinais | Preços |
 |---|---|---|---|---|
-| 3535 | 1448 | 164 | 2179 | 20310 |
+| 3663 | 1508 | 168 | 2347 | 20341 |
 
 ## Campanhas nos últimos 30 dias
 
@@ -18,7 +18,7 @@ Atualizado em 2026-11-23 08:58 UTC
 | CRWV | compra | 7 | stocktwits:wyoming2020 | ignorar | observar; sem ordem | 0.30 |
 | AMD | compra | 9 | stocktwits:corderooptions | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
 | AMZN | compra | 4 | stocktwits:corderooptions | inicio | entrar a favor (compra) com tamanho pelo RiskBudget | 0.40 |
-| TSLA | compra | 37 | stocktwits:corderooptions | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
+| TSLA | compra | 37 | stocktwits:corderooptions | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.40 |
 | TSLA | venda | 19 | stocktwits:ghbhhjc | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.60 |
 | SPY | venda | 9 | stocktwits:marcusmccord | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.50 |
 | MSTR | compra | 8 | stocktwits:honeybadgerdgaf | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
@@ -43,7 +43,7 @@ Atualizado em 2026-11-23 08:58 UTC
 | AAPL | compra | 14 | stocktwits:billionaire2025 | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
 | BTC | compra | 12 | stocktwits:vigilantetrader1 | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
 | SPCX | compra | 8 | stocktwits:alphabull_10m | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
-| TSLA | compra | 17 | stocktwits:pamptek | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
+| TSLA | compra | 17 | stocktwits:pamptek | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.40 |
 | AMD | compra | 4 | stocktwits:tradova_markets | inicio | entrar a favor (compra) com tamanho pelo RiskBudget | 0.40 |
 | SPY | compra | 5 | stocktwits:swarmofdogs | ignorar | observar; sem ordem | 0.30 |
 | TSLA | venda | 12 | stocktwits:swarmofdogs | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
@@ -68,7 +68,7 @@ Atualizado em 2026-11-23 08:58 UTC
 | QQQ | venda | 5 | stocktwits:stowtrader | ignorar | observar; sem ordem | 0.40 |
 | SPY | compra | 6 | stocktwits:championinvestor | ignorar | observar; sem ordem | 0.30 |
 | QQQ | compra | 4 | stocktwits:championinvestor | inicio | entrar a favor (compra) com tamanho pelo RiskBudget | 0.40 |
-| TSLA | compra | 8 | stocktwits:riseofthebull | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
+| TSLA | compra | 8 | stocktwits:riseofthebull | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.40 |
 | TSLA | venda | 3 | stocktwits:mrappleseed23 | inicio | entrar a favor (venda) com tamanho pelo RiskBudget | 0.40 |
 | AAPL | compra | 3 | stocktwits:microcapstrader | inicio | entrar a favor (compra) com tamanho pelo RiskBudget | 0.40 |
 | NVDA | venda | 4 | stocktwits:nauticaltrader | inicio | entrar a favor (venda) com tamanho pelo RiskBudget | 0.40 |
@@ -78,7 +78,7 @@ Atualizado em 2026-11-23 08:58 UTC
 | AAPL | compra | 16 | stocktwits:edgeleaking | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
 | AAPL | venda | 18 | stocktwits:dsaad11 | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.50 |
 | NVDA | compra | 29 | stocktwits:nelsonwaters0110 | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
-| TSLA | compra | 19 | stocktwits:nelsonwaters0110 | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
+| TSLA | compra | 19 | stocktwits:nelsonwaters0110 | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.40 |
 | SPCX | compra | 4 | stocktwits:nzbro | inicio | entrar a favor (compra) com tamanho pelo RiskBudget | 0.40 |
 | SPY | compra | 9 | stocktwits:bitcoin20k | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
 | QQQ | compra | 7 | stocktwits:bitcoin20k | ignorar | observar; sem ordem | 0.30 |
@@ -98,7 +98,7 @@ Atualizado em 2026-11-23 08:58 UTC
 | NVDA | compra | 28 | stocktwits:cryptoaudiking | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
 | SPY | compra | 6 | stocktwits:cryptoaudiking | ignorar | observar; sem ordem | 0.30 |
 | QQQ | compra | 5 | stocktwits:cryptoaudiking | ignorar | observar; sem ordem | 0.30 |
-| TSLA | compra | 20 | stocktwits:worldwidewesley | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
+| TSLA | compra | 20 | stocktwits:worldwidewesley | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.40 |
 | TSLA | venda | 8 | stocktwits:openclassaction2 | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
 | BTC | venda | 16 | stocktwits:eretheum | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.50 |
 | ETH | venda | 4 | stocktwits:eretheum | inicio | entrar a favor (venda) com tamanho pelo RiskBudget | 0.50 |
@@ -114,8 +114,8 @@ Atualizado em 2026-11-23 08:58 UTC
 | AKAN | compra | 3 | stocktwits:nelsonwaters0110 | inicio | entrar a favor (compra) com tamanho pelo RiskBudget | 0.40 |
 | DJT | compra | 6 | stocktwits:boilingpoint | ignorar | observar; sem ordem | 0.30 |
 | SPCX | venda | 4 | stocktwits:marketwatcher2525 | inicio | entrar a favor (venda) com tamanho pelo RiskBudget | 0.40 |
-| NIO | compra | 3 | stocktwits:bullishaaff | inicio | entrar a favor (compra) com tamanho pelo RiskBudget | 0.40 |
-| LCID | compra | 3 | stocktwits:bullishaaff | inicio | entrar a favor (compra) com tamanho pelo RiskBudget | 0.40 |
+| NIO | compra | 3 | stocktwits:bullishaaff | inicio | entrar a favor (compra) com tamanho pelo RiskBudget | 0.50 |
+| LCID | compra | 3 | stocktwits:bullishaaff | inicio | entrar a favor (compra) com tamanho pelo RiskBudget | 0.50 |
 | MU | compra | 4 | stocktwits:stockpikalliance | inicio | entrar a favor (compra) com tamanho pelo RiskBudget | 0.40 |
 | AAPL | venda | 23 | stocktwits:moneyorbagholder | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
 | AAPL | compra | 12 | stocktwits:tradewithinsight | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
@@ -165,26 +165,31 @@ Atualizado em 2026-11-23 08:58 UTC
 | SPY | venda | 6 | stocktwits:thestocktraderhub | ignorar | observar; sem ordem | 0.30 |
 | QQQ | venda | 5 | stocktwits:jlinvest | ignorar | observar; sem ordem | 0.30 |
 | AMD | compra | 3 | stocktwits:abour | inicio | entrar a favor (compra) com tamanho pelo RiskBudget | 0.40 |
-| AAPL | venda | 4 | stocktwits:dcos | inicio | entrar a favor (venda) com tamanho pelo RiskBudget | 0.40 |
-| AAPL | compra | 8 | stocktwits:flowanomaly | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
-| AMD | compra | 3 | stocktwits:flowanomaly | inicio | entrar a favor (compra) com tamanho pelo RiskBudget | 0.40 |
-| QQQ | compra | 4 | stocktwits:flowanomaly | inicio | entrar a favor (compra) com tamanho pelo RiskBudget | 0.40 |
-| NVDA | compra | 15 | stocktwits:marketmachiavelli | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
-| TSLA | compra | 7 | stocktwits:bullishaaff | ignorar | observar; sem ordem | 0.30 |
-| NVDA | venda | 10 | stocktwits:mibr111 | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
-| BTC | compra | 8 | stocktwits:bolo44 | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
-| BTC | venda | 4 | stocktwits:hedgefundoptionsmaster | inicio | entrar a favor (venda) com tamanho pelo RiskBudget | 0.40 |
+| AAPL | venda | 10 | stocktwits:dcos | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
+| AAPL | compra | 16 | stocktwits:flowanomaly | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
+| AMD | compra | 5 | stocktwits:flowanomaly | ignorar | observar; sem ordem | 0.30 |
+| QQQ | compra | 7 | stocktwits:flowanomaly | ignorar | observar; sem ordem | 0.30 |
+| NVDA | compra | 32 | stocktwits:marketmachiavelli | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
+| TSLA | compra | 17 | stocktwits:bullishaaff | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.40 |
+| SPY | compra | 8 | stocktwits:cubie | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
+| TSLA | venda | 6 | stocktwits:s_micheal_hawk | ignorar | observar; sem ordem | 0.30 |
+| NVDA | venda | 20 | stocktwits:mibr111 | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
+| BTC | compra | 13 | stocktwits:bolo44 | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
+| BTC | venda | 12 | stocktwits:hedgefundoptionsmaster | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
+| SPCX | compra | 5 | stocktwits:wes2020 | ignorar | observar; sem ordem | 0.30 |
+| MU | venda | 3 | stocktwits:beestmod516 | inicio | entrar a favor (venda) com tamanho pelo RiskBudget | 0.40 |
 
 ## Grupos descobertos (postam juntos em 2+ campanhas)
 
-- stocktwits:15fingers, stocktwits:2026bear, stocktwits:_thumper_, stocktwits:abour, stocktwits:afonsoev_, stocktwits:albertaft, stocktwits:alphabull_10m, stocktwits:alphatrader30000, stocktwits:altev, stocktwits:amberajax2point0, stocktwits:amishboy, stocktwits:analystnick, stocktwits:analystnick121, stocktwits:analystnick3, stocktwits:audrey7688, stocktwits:august_west, stocktwits:avgomysugardaddy, stocktwits:bennyboy18, stocktwits:bernardbaruch1, stocktwits:bigbreakingwire, stocktwits:billionaire2025, stocktwits:billybobcleetus, stocktwits:bio_investor_, stocktwits:bitcoin20k, stocktwits:blacknigiri, stocktwits:blatter, stocktwits:blueblood12, stocktwits:bobky2030, stocktwits:boilingpoint, stocktwits:boomskitothemoonski, stocktwits:bosstrade, stocktwits:bugdug, stocktwits:buhbye, stocktwits:bullishaaff, stocktwits:bullsbearsrtds, stocktwits:bullseyegains, stocktwits:bumbaclot, stocktwits:candlesbackedsecurities, stocktwits:championinvestor, stocktwits:chantal1, stocktwits:charizardforlife, stocktwits:cjjay, stocktwits:cjspoe, stocktwits:ck2050, stocktwits:cngllc, stocktwits:coffeerocks, stocktwits:contwits, stocktwits:coolandfast, stocktwits:corderooptions, stocktwits:cpstrag, stocktwits:cryptoaudiking, stocktwits:cubie, stocktwits:cuddlesthestripperindex, stocktwits:cyberboss, stocktwits:deadpresidentstrader, stocktwits:deer_admin, stocktwits:deltax10, stocktwits:doctorwho, stocktwits:donjuancapistran, stocktwits:doozio, stocktwits:doubleup2022, stocktwits:dru123, stocktwits:dsaad11, stocktwits:durocali, stocktwits:earleeretirement, stocktwits:economyengine, stocktwits:eddierod22, stocktwits:edgeleaking, stocktwits:elonmusk101, stocktwits:elonswifey, stocktwits:equityclock, stocktwits:eretheum, stocktwits:eu_lern, stocktwits:evanmedeiros, stocktwits:ewaveplayer, stocktwits:fawl3r, stocktwits:feedmaster, stocktwits:fennicktradings, stocktwits:fidelco, stocktwits:flickted, stocktwits:flowanomaly, stocktwits:flywithfitz81, stocktwits:franking71, stocktwits:friends4eva, stocktwits:futon, stocktwits:galaxy_class_investor, stocktwits:gayforsanjay, stocktwits:getmoney305, stocktwits:glps4life, stocktwits:goodmeyer83, stocktwits:goodnewsbull, stocktwits:graphtistics, stocktwits:greenecotrader, stocktwits:gridirongainz, stocktwits:grinkk, stocktwits:gta_terminal, stocktwits:gypsygirl2, stocktwits:hal9000x, stocktwits:highlife718, stocktwits:hn20, stocktwits:holymofgod, stocktwits:homedec, stocktwits:honeybadgerdgaf, stocktwits:hoodrichinvestor, stocktwits:hootertrades, stocktwits:hownow, stocktwits:hyde1634, stocktwits:hydrogenh2, stocktwits:ihatemylifesavings, stocktwits:intutivetrader, stocktwits:investing_dans_valeur, stocktwits:iplaysmart, stocktwits:iseeshit, stocktwits:itsagamble, stocktwits:j0hncandlewick, stocktwits:jacksanders68, stocktwits:jaredsotken, stocktwits:jay_trades_, stocktwits:jdrebel, stocktwits:jedi_master, stocktwits:jenbunn, stocktwits:jensennvda, stocktwits:jeremymartin007, stocktwits:jerrycharlesthethird, stocktwits:jesushatespedos, stocktwits:jimsonlima, stocktwits:jlinvest, stocktwits:joemon, stocktwits:jrh34, stocktwits:jtsxlr, stocktwits:justwin100, stocktwits:kansascash, stocktwits:keepcalmcarryon, stocktwits:keepthefireburning, stocktwits:kmoz19, stocktwits:koditrump, stocktwits:ksbear, stocktwits:kyzw, stocktwits:layahheilpern_, stocktwits:layerz, stocktwits:lekamaci, stocktwits:leonardobonacci, stocktwits:leonx, stocktwits:lieutenantjoe, stocktwits:lighthouseprofit, stocktwits:lionking, stocktwits:littlecat, stocktwits:lizlovesreddit, stocktwits:losing2winning, stocktwits:lotharchoo, stocktwits:lovelylee, stocktwits:lowkeygenius, stocktwits:lowkeyoptions, stocktwits:luvtoretire, stocktwits:marcusmccord, stocktwits:maribor, stocktwits:marketmachiavelli, stocktwits:marti837, stocktwits:mcbullrib, stocktwits:meandu2, stocktwits:meatballtrades, stocktwits:mentallyill_, stocktwits:mergerinfo, stocktwits:metropolitans1986, stocktwits:mf__doom, stocktwits:michaelm2136, stocktwits:milkingalgoseverymonday, stocktwits:millplay, stocktwits:mobjm, stocktwits:money_gainz2210, stocktwits:moneyblisss, stocktwits:moneyflow_trader, stocktwits:moneymannow, stocktwits:mos543, stocktwits:mr_ben_signal, stocktwits:mrappleseed23, stocktwits:mrnobody617, stocktwits:natoshisakomato, stocktwits:nedflandersiii, stocktwits:nelsonwaters0110, stocktwits:nomadicnoah953, stocktwits:notfinancialadvicedummy, stocktwits:nuclear_elvis, stocktwits:nvidiato85, stocktwits:nychichas, stocktwits:nzbro, stocktwits:onlyfibs, stocktwits:openclassaction2, stocktwits:optionpredicktor, stocktwits:optionsplayers, stocktwits:paddyooohhyeah, stocktwits:paidguruworstnightmare, stocktwits:painfultrade, stocktwits:phoenixqueen, stocktwits:pizzabunny88, stocktwits:pottromonkey50, stocktwits:poundinburgers, stocktwits:prophetmargins, stocktwits:pullbackalerts, stocktwits:puzzles32, stocktwits:ranthor, stocktwits:reaperblade2233, stocktwits:retireby40club, stocktwits:richandbroke, stocktwits:roar01, stocktwits:rodzilla01, stocktwits:runehold, stocktwits:sa449, stocktwits:samsoncapital, stocktwits:saylorsponz, stocktwits:scisector9, stocktwits:shadowpawn, stocktwits:shamrocktrading, stocktwits:shirtburglar, stocktwits:silvertrader47, stocktwits:skimman, stocktwits:skinnydipping, stocktwits:skumars, stocktwits:smart_investment, stocktwits:smarttrade99, stocktwits:smellmyfingers, stocktwits:smokingrabbit, stocktwits:sniperpro, stocktwits:sol_meek, stocktwits:souraapl, stocktwits:sovihabi, stocktwits:spdrman10, stocktwits:starrbarr, stocktwits:stay_woke, stocktwits:stockadvisor07, stocktwits:stockhold_syndrome, stocktwits:stockmon, stocktwits:stocks_brannigan, stocktwits:stocktwits, stocktwits:stocktwitsnews, stocktwits:stowtrader, stocktwits:stronginvestor1994, stocktwits:stubbybrown, stocktwits:sub_zero0, stocktwits:supergreentoday, stocktwits:swarmofdogs, stocktwits:talent_on_loan_from_god, stocktwits:talkmarkets, stocktwits:tapereader007, stocktwits:teslaratiking, stocktwits:the_big_gains, stocktwits:thefourwind, stocktwits:thegreekwizard, stocktwits:thekingofregards, stocktwits:themadogtrader, stocktwits:themagnificentferengi, stocktwits:thematrix2027, stocktwits:thenew_mr_investor, stocktwits:theoptionsplug, stocktwits:thestocktraderhub, stocktwits:theunmaker, stocktwits:ticklemymacd, stocktwits:toejoe, stocktwits:tonysmu, stocktwits:topoptionsaierts, stocktwits:toppi, stocktwits:tradeforlifeking, stocktwits:traderdude69, stocktwits:tradernumber0, stocktwits:tradestyrone, stocktwits:trading105, stocktwits:tradova_markets, stocktwits:transcendasset, stocktwits:trendmastertrader, stocktwits:tribalsublime, stocktwits:tripplett, stocktwits:trumpdisasterprez, stocktwits:trumpwon2024, stocktwits:tslahatersatbarrons, stocktwits:ub3r5pank, stocktwits:unmaker, stocktwits:updownsidways, stocktwits:urduja13, stocktwits:us_stock_bubble2026, stocktwits:utreggg, stocktwits:ver13, stocktwits:vigilantetrader1, stocktwits:vikingsixty2, stocktwits:virdiluxviventium, stocktwits:waldo_5150, stocktwits:wallstbetsdotcom, stocktwits:wallstreetbman, stocktwits:warrent_jr, stocktwits:web30, stocktwits:weeklyoptionstrading, stocktwits:wewontdissapoint, stocktwits:whodo_voodoo_ido, stocktwits:wilsonmuskthesis, stocktwits:wolfpack_alerts, stocktwits:wolverinevcapitalllc, stocktwits:worldwidewesley, stocktwits:xbt, stocktwits:xxxfactor, stocktwits:youngmoneymachine, stocktwits:zenagain, stocktwits:zinminmg, stocktwits:zuluuu
-- stocktwits:bruh5, stocktwits:btcc_exchange, stocktwits:jbtradez254, stocktwits:ljmoney
+- stocktwits:15fingers, stocktwits:2026bear, stocktwits:212broke, stocktwits:_thumper_, stocktwits:abour, stocktwits:afonsoev_, stocktwits:ai_bubble_, stocktwits:albertaft, stocktwits:alphabull_10m, stocktwits:alphatrader30000, stocktwits:altev, stocktwits:amberajax2point0, stocktwits:amishboy, stocktwits:analystnick, stocktwits:analystnick121, stocktwits:analystnick3, stocktwits:audrey7688, stocktwits:august_west, stocktwits:avgomysugardaddy, stocktwits:beestmod516, stocktwits:bennyboy18, stocktwits:bernardbaruch1, stocktwits:bigbreakingwire, stocktwits:bigpapatahir, stocktwits:billionaire2025, stocktwits:billybobcleetus, stocktwits:bio_investor_, stocktwits:bitcoin20k, stocktwits:blacknigiri, stocktwits:blatter, stocktwits:blueblood12, stocktwits:bobky2030, stocktwits:boilingpoint, stocktwits:boomskitothemoonski, stocktwits:bosstrade, stocktwits:bugdug, stocktwits:buhbye, stocktwits:bullishaaff, stocktwits:bullsbearsrtds, stocktwits:bullseyegains, stocktwits:bumbaclot, stocktwits:candlesbackedsecurities, stocktwits:championinvestor, stocktwits:chantal1, stocktwits:charizardforlife, stocktwits:cjjay, stocktwits:cjspoe, stocktwits:ck2050, stocktwits:cmonmangivemeabreak, stocktwits:cngllc, stocktwits:cocoland, stocktwits:coffeerocks, stocktwits:contwits, stocktwits:coolandfast, stocktwits:corderooptions, stocktwits:cpstrag, stocktwits:cryptoaudiking, stocktwits:cubie, stocktwits:cuddlesthestripperindex, stocktwits:cyberboss, stocktwits:deadpresidentstrader, stocktwits:deer_admin, stocktwits:deltax10, stocktwits:doctorwho, stocktwits:donjuancapistran, stocktwits:doozio, stocktwits:doubleup2022, stocktwits:dru123, stocktwits:dsaad11, stocktwits:durocali, stocktwits:earleeretirement, stocktwits:econometrics101, stocktwits:economyengine, stocktwits:eddierod22, stocktwits:edgeleaking, stocktwits:elonmusk101, stocktwits:elonswifey, stocktwits:equityclock, stocktwits:eretheum, stocktwits:eu_lern, stocktwits:evanmedeiros, stocktwits:ewaveplayer, stocktwits:fawl3r, stocktwits:feedmaster, stocktwits:fennicktradings, stocktwits:fidelco, stocktwits:flickted, stocktwits:flowanomaly, stocktwits:flywithfitz81, stocktwits:franking71, stocktwits:friends4eva, stocktwits:futesrip, stocktwits:futon, stocktwits:galaxy_class_investor, stocktwits:gayforsanjay, stocktwits:getmoney305, stocktwits:glps4life, stocktwits:goodmeyer83, stocktwits:goodnewsbull, stocktwits:gordongekko888, stocktwits:graphtistics, stocktwits:greenecotrader, stocktwits:gridirongainz, stocktwits:grinkk, stocktwits:gta_terminal, stocktwits:gypsygirl2, stocktwits:hal9000x, stocktwits:highlife718, stocktwits:hn20, stocktwits:holymofgod, stocktwits:homedec, stocktwits:honeybadgerdgaf, stocktwits:hoodrichinvestor, stocktwits:hootertrades, stocktwits:hownow, stocktwits:hyde1634, stocktwits:hydrogenh2, stocktwits:ihatemylifesavings, stocktwits:intutivetrader, stocktwits:investing_dans_valeur, stocktwits:iplaysmart, stocktwits:iseeshit, stocktwits:itsagamble, stocktwits:j0hncandlewick, stocktwits:jacksanders68, stocktwits:jaredsotken, stocktwits:jay_trades_, stocktwits:jdrebel, stocktwits:jedi_master, stocktwits:jenbunn, stocktwits:jensennvda, stocktwits:jeremymartin007, stocktwits:jerrycharlesthethird, stocktwits:jesushatespedos, stocktwits:jimsonlima, stocktwits:jlinvest, stocktwits:joemon, stocktwits:jrh34, stocktwits:jtsxlr, stocktwits:judy11, stocktwits:justwin100, stocktwits:kansascash, stocktwits:keepcalmcarryon, stocktwits:keepthefireburning, stocktwits:kmoz19, stocktwits:koditrump, stocktwits:ksbear, stocktwits:kyzw, stocktwits:layahheilpern_, stocktwits:layerz, stocktwits:lekamaci, stocktwits:leonardobonacci, stocktwits:leonx, stocktwits:lieutenantjoe, stocktwits:lighthouseprofit, stocktwits:lionking, stocktwits:littlecat, stocktwits:lizlovesreddit, stocktwits:lolplayerbad, stocktwits:losing2winning, stocktwits:lotharchoo, stocktwits:lovelylee, stocktwits:lowkeygenius, stocktwits:lowkeyoptions, stocktwits:luvtoretire, stocktwits:manojaggarwal, stocktwits:marcusmccord, stocktwits:maribor, stocktwits:marketmachiavelli, stocktwits:marti837, stocktwits:mcbullrib, stocktwits:meandu2, stocktwits:meatballtrades, stocktwits:mentallyill_, stocktwits:mergerinfo, stocktwits:metropolitans1986, stocktwits:mf__doom, stocktwits:mibr111, stocktwits:michaelm2136, stocktwits:milkingalgoseverymonday, stocktwits:millplay, stocktwits:mobjm, stocktwits:money_gainz2210, stocktwits:moneyblisss, stocktwits:moneyflow_trader, stocktwits:moneymannow, stocktwits:mos543, stocktwits:mr_ben_signal, stocktwits:mrappleseed23, stocktwits:mrnobody617, stocktwits:mrrodgersneighborhood, stocktwits:natoshisakomato, stocktwits:nedflandersiii, stocktwits:nelsonwaters0110, stocktwits:nomadicnoah953, stocktwits:notfinancialadvicedummy, stocktwits:nuclear_elvis, stocktwits:nvidiato85, stocktwits:nychichas, stocktwits:nzbro, stocktwits:onlyfibs, stocktwits:openclassaction2, stocktwits:optionpredicktor, stocktwits:optionsplayers, stocktwits:paddyooohhyeah, stocktwits:paidguruworstnightmare, stocktwits:painfultrade, stocktwits:panicsellerr, stocktwits:phoenixqueen, stocktwits:pizzabunny88, stocktwits:pottromonkey50, stocktwits:poundinburgers, stocktwits:prophetmargins, stocktwits:pullbackalerts, stocktwits:puzzles32, stocktwits:ranthor, stocktwits:reaperblade2233, stocktwits:retireby40club, stocktwits:richandbroke, stocktwits:ro_patel, stocktwits:roar01, stocktwits:rodzilla01, stocktwits:runehold, stocktwits:sa449, stocktwits:samsoncapital, stocktwits:saylorsponz, stocktwits:scisector9, stocktwits:shadowpawn, stocktwits:shamrocktrading, stocktwits:shirtburglar, stocktwits:silvertrader47, stocktwits:skimman, stocktwits:skinnydipping, stocktwits:skumars, stocktwits:smart_investment, stocktwits:smarttrade99, stocktwits:smellmyfingers, stocktwits:smokingrabbit, stocktwits:sniperpro, stocktwits:sol_meek, stocktwits:souraapl, stocktwits:sovihabi, stocktwits:spdrman10, stocktwits:starrbarr, stocktwits:stay_woke, stocktwits:stockadvisor07, stocktwits:stockhold_syndrome, stocktwits:stockmon, stocktwits:stocks_brannigan, stocktwits:stocktwits, stocktwits:stocktwitsnews, stocktwits:stowtrader, stocktwits:stronginvestor1994, stocktwits:stubbybrown, stocktwits:sub_zero0, stocktwits:sunnys88, stocktwits:supergreentoday, stocktwits:swarmofdogs, stocktwits:talent_on_loan_from_god, stocktwits:talkmarkets, stocktwits:tapereader007, stocktwits:tbh2013, stocktwits:teslaratiking, stocktwits:the_big_gains, stocktwits:thefourwind, stocktwits:thegreekwizard, stocktwits:thekingofregards, stocktwits:themadogtrader, stocktwits:themagnificentferengi, stocktwits:thematrix2027, stocktwits:thenew_mr_investor, stocktwits:theoptionsplug, stocktwits:thestocktraderhub, stocktwits:theunmaker, stocktwits:ticklemymacd, stocktwits:toejoe, stocktwits:tonysmu, stocktwits:topoptionsaierts, stocktwits:toppi, stocktwits:tradeforlifeking, stocktwits:traderdude69, stocktwits:tradernumber0, stocktwits:tradestyrone, stocktwits:trading105, stocktwits:tradova_markets, stocktwits:transcendasset, stocktwits:trendmastertrader, stocktwits:tribalsublime, stocktwits:tripplett, stocktwits:trumpdisasterprez, stocktwits:trumpwon2024, stocktwits:tslahatersatbarrons, stocktwits:ub3r5pank, stocktwits:unclesteven, stocktwits:unmaker, stocktwits:updownsidways, stocktwits:urduja13, stocktwits:us_stock_bubble2026, stocktwits:utreggg, stocktwits:ver13, stocktwits:vigilantetrader1, stocktwits:vikingsixty2, stocktwits:virdiluxviventium, stocktwits:waldo_5150, stocktwits:wallstbetsdotcom, stocktwits:wallstreetbman, stocktwits:warrent_jr, stocktwits:web30, stocktwits:weeklyoptionstrading, stocktwits:wes2020, stocktwits:wewontdissapoint, stocktwits:whodo_voodoo_ido, stocktwits:wilsonmuskthesis, stocktwits:wolfpack_alerts, stocktwits:wolverinevcapitalllc, stocktwits:worldwidewesley, stocktwits:xbt, stocktwits:xxxfactor, stocktwits:youngmoneymachine, stocktwits:zenagain, stocktwits:zinminmg, stocktwits:zuluuu
 - stocktwits:beaniebaby, stocktwits:jmoney20010, stocktwits:optiongenius, stocktwits:william914
+- stocktwits:bruh5, stocktwits:btcc_exchange, stocktwits:jbtradez254, stocktwits:ljmoney
 - stocktwits:barkingpuppy, stocktwits:cclink, stocktwits:thecryptofire
-- stocktwits:cryptomartin, stocktwits:merid
-- stocktwits:jutski_bipolar, stocktwits:magewizard
 - stocktwits:kevinohwarsh, stocktwits:slothtrades
+- stocktwits:cryptomartin, stocktwits:merid
 - stocktwits:mrstocks785, stocktwits:stockpikalliance
+- stocktwits:jutski_bipolar, stocktwits:magewizard
+- stocktwits:skcots_13, stocktwits:squawkalley
 
 ## Quem posta primeiro
 
@@ -201,15 +206,15 @@ Atualizado em 2026-11-23 08:58 UTC
 
 ## Autores mais ativos (total coletado)
 
-- youtube:professorbaroni: 132 posts
-- stocktwits:openclassaction2: 75 posts
+- youtube:professorbaroni: 138 posts
+- stocktwits:openclassaction2: 76 posts
 - youtube:oprimorico: 57 posts
 - youtube:brunoperini: 56 posts
-- youtube:tiofiis: 54 posts
-- youtube:economistasincero: 52 posts
-- youtube:nathfinancas: 52 posts
+- youtube:tiofiis: 55 posts
+- youtube:economistasincero: 53 posts
+- youtube:nathfinancas: 53 posts
 - youtube:primopobre: 52 posts
-- youtube:humphreytalks: 49 posts
+- youtube:humphreytalks: 50 posts
 - youtube:alexandrewinkler: 47 posts
 - youtube:curingaeconomico: 41 posts
 - youtube:investidorsardinha: 40 posts
@@ -219,23 +224,23 @@ Atualizado em 2026-11-23 08:58 UTC
 
 ## Ativos mais mencionados
 
-- NVDA: 1131
-- BTC: 783
-- TSLA: 696
-- AAPL: 621
-- SPY: 381
-- QQQ: 244
-- SPCX: 143
-- AMD: 80
-- DJT: 79
-- MSTR: 77
-- MU: 59
+- NVDA: 1179
+- BTC: 814
+- TSLA: 726
+- AAPL: 651
+- SPY: 393
+- QQQ: 248
+- SPCX: 153
+- AMD: 88
+- DJT: 84
+- MSTR: 79
+- MU: 65
 - ETH: 52
 - MSFT: 49
-- ANT: 39
-- AMZN: 39
+- ANT: 42
+- AMZN: 40
 
-## Última execução: 2026-11-23T08:58:38.793284+00:00 (338 posts novos, 16 erros)
+## Última execução: 2026-11-23T20:51:19.620849+00:00 (339 posts novos, 16 erros)
 
 - x:pablospyer x:@pablospyer: RuntimeError: defina X_BEARER_TOKEN (API v2 do X)
 - reddit:farialimabets reddit:farialimabets: HTTPError: 403 Client Error: Blocked for url: https://www.reddit.com/r/farialimabets/new.json?limit=50

@@ -1,158 +1,11 @@
 {
-  "gerado_em": "2026-11-23T08:58:38.728316+00:00",
+  "gerado_em": "2026-11-23T20:51:19.570431+00:00",
   "setups": [
-    {
-      "ticker": "BOVA11",
-      "mercado": "BR",
-      "ultimo": 163.6,
-      "atr": 2.7486,
-      "operacao": "venda",
-      "votos": {
-        "balanco": null,
-        "analogos": "neutro",
-        "noticias": null,
-        "tendencia": "contra",
-        "intradia": "contra"
-      },
-      "a_favor": 0,
-      "contra": 2,
-      "stop": 170.13,
-      "alvo": 150.54,
-      "porteiro": {
-        "aprovada": true,
-        "motivos": [
-          "votação 0 a favor, 2 contra; tendência baixa 70; regime defensivo"
-        ],
-        "bloqueios": [],
-        "estabilizacao": true,
-        "stop_estrutural": null
-      },
-      "ganho_pct": -0.0798,
-      "risco_pct": 0.0399,
-      "razao_ganho_risco": 2.0,
-      "prazo_esperado": "1 a 5 pregões",
-      "balanco": null,
-      "analogos": {
-        "ticker": "BOVA11",
-        "n": 15,
-        "horizons": {
-          "5": {
-            "media": 0.0211,
-            "mediana": 0.0069,
-            "p_positivo": 0.6,
-            "pior": -0.0339,
-            "melhor": 0.1325,
-            "n": 15
-          },
-          "10": {
-            "media": 0.0366,
-            "mediana": 0.0398,
-            "p_positivo": 0.67,
-            "pior": -0.0541,
-            "melhor": 0.1621,
-            "n": 15
-          },
-          "20": {
-            "media": 0.0436,
-            "mediana": 0.0442,
-            "p_positivo": 0.6,
-            "pior": -0.1487,
-            "melhor": 0.2499,
-            "n": 15
-          }
-        },
-        "examples": [
-          {
-            "ativo": "MSFT",
-            "indice": 206,
-            "data": null,
-            "distancia": 0.206,
-            "ret_20d": -0.0085
-          },
-          {
-            "ativo": "KNRI11",
-            "indice": 301,
-            "data": null,
-            "distancia": 0.321,
-            "ret_20d": 0.0442
-          },
-          {
-            "ativo": "GME",
-            "indice": 275,
-            "data": null,
-            "distancia": 0.339,
-            "ret_20d": 0.0074
-          },
-          {
-            "ativo": "TSLA",
-            "indice": 322,
-            "data": null,
-            "distancia": 0.343,
-            "ret_20d": 0.0796
-          },
-          {
-            "ativo": "MSFT",
-            "indice": 303,
-            "data": null,
-            "distancia": 0.348,
-            "ret_20d": 0.0818
-          },
-          {
-            "ativo": "HGLG11",
-            "indice": 309,
-            "data": null,
-            "distancia": 0.362,
-            "ret_20d": -0.0134
-          },
-          {
-            "ativo": "AAPL",
-            "indice": 213,
-            "data": null,
-            "distancia": 0.373,
-            "ret_20d": -0.0116
-          },
-          {
-            "ativo": "XPML11",
-            "indice": 365,
-            "data": null,
-            "distancia": 0.407,
-            "ret_20d": 0.0796
-          }
-        ],
-        "state": null
-      },
-      "noticia": null,
-      "tendencia": {
-        "direcao": "baixa",
-        "score": 70,
-        "tstat": -1.94,
-        "adx": 51.9,
-        "rompimento": "nenhum"
-      },
-      "intradia": {
-        "ticker": "BOVA11",
-        "kind": "rompimento_faixa_baixa",
-        "direction": "venda",
-        "last": 163.6,
-        "gap_pct": 0.0008,
-        "vwap": 164.3999,
-        "above_vwap": false,
-        "opening_range": [
-          165.1,
-          165.7
-        ],
-        "volume_ratio": 0.89,
-        "range_vs_atr": 0.97,
-        "stop": 165.7,
-        "target": 160.85,
-        "notes": []
-      }
-    },
     {
       "ticker": "KNRI11",
       "mercado": "BR",
-      "ultimo": 143.11,
-      "atr": 3.0064,
+      "ultimo": 140.2,
+      "atr": 3.0829,
       "operacao": "venda",
       "votos": {
         "balanco": null,
@@ -163,8 +16,8 @@
       },
       "a_favor": 0,
       "contra": 2,
-      "stop": 151.79,
-      "alvo": 125.75,
+      "stop": 151.6,
+      "alvo": 117.4,
       "porteiro": {
         "aprovada": true,
         "motivos": [
@@ -174,8 +27,8 @@
         "estabilizacao": true,
         "stop_estrutural": null
       },
-      "ganho_pct": -0.1213,
-      "risco_pct": 0.0607,
+      "ganho_pct": -0.1626,
+      "risco_pct": 0.0813,
       "razao_ganho_risco": 2.0,
       "prazo_esperado": "1 a 5 pregões",
       "balanco": null,
@@ -184,86 +37,86 @@
         "n": 15,
         "horizons": {
           "5": {
-            "media": -0.0006,
-            "mediana": 0.0089,
-            "p_positivo": 0.67,
-            "pior": -0.1633,
-            "melhor": 0.1026,
+            "media": 0.0145,
+            "mediana": 0.0078,
+            "p_positivo": 0.73,
+            "pior": -0.0343,
+            "melhor": 0.1067,
             "n": 15
           },
           "10": {
-            "media": 0.0127,
-            "mediana": 0.0173,
-            "p_positivo": 0.6,
-            "pior": -0.1285,
-            "melhor": 0.1176,
+            "media": 0.0183,
+            "mediana": -0.0005,
+            "p_positivo": 0.47,
+            "pior": -0.0619,
+            "melhor": 0.1318,
             "n": 15
           },
           "20": {
-            "media": 0.0218,
-            "mediana": -0.0022,
+            "media": 0.0344,
+            "mediana": 0.0,
             "p_positivo": 0.47,
-            "pior": -0.094,
-            "melhor": 0.2071,
+            "pior": -0.0237,
+            "melhor": 0.1541,
             "n": 15
           }
         },
         "examples": [
           {
             "ativo": "KNRI11",
-            "indice": 301,
-            "data": "2026-06-19",
-            "distancia": 0.129,
-            "ret_20d": 0.0442
+            "indice": 302,
+            "data": "2026-06-22",
+            "distancia": 0.174,
+            "ret_20d": 0.0466
           },
           {
-            "ativo": "HGLG11",
-            "indice": 309,
+            "ativo": "MSFT",
+            "indice": 206,
             "data": null,
-            "distancia": 0.171,
-            "ret_20d": -0.0134
+            "distancia": 0.198,
+            "ret_20d": -0.0085
           },
           {
             "ativo": "GME",
-            "indice": 276,
+            "indice": 285,
             "data": null,
-            "distancia": 0.186,
-            "ret_20d": 0.0069
+            "distancia": 0.212,
+            "ret_20d": 0.0401
           },
           {
             "ativo": "MSFT",
-            "indice": 202,
+            "indice": 303,
             "data": null,
-            "distancia": 0.207,
-            "ret_20d": -0.094
+            "distancia": 0.242,
+            "ret_20d": 0.0818
+          },
+          {
+            "ativo": "HGLG11",
+            "indice": 294,
+            "data": null,
+            "distancia": 0.251,
+            "ret_20d": -0.0146
           },
           {
             "ativo": "XPML11",
-            "indice": 366,
+            "indice": 365,
             "data": null,
-            "distancia": 0.213,
-            "ret_20d": 0.0806
+            "distancia": 0.259,
+            "ret_20d": 0.0796
           },
           {
             "ativo": "TSLA",
-            "indice": 319,
+            "indice": 322,
             "data": null,
-            "distancia": 0.233,
-            "ret_20d": -0.0819
+            "distancia": 0.259,
+            "ret_20d": 0.0796
           },
           {
-            "ativo": "MSFT",
-            "indice": 302,
+            "ativo": "BTC",
+            "indice": 219,
             "data": null,
-            "distancia": 0.247,
-            "ret_20d": 0.0441
-          },
-          {
-            "ativo": "KNRI11",
-            "indice": 278,
-            "data": "2026-05-18",
-            "distancia": 0.257,
-            "ret_20d": -0.0169
+            "distancia": 0.272,
+            "ret_20d": -0.0103
           }
         ],
         "state": null
@@ -272,34 +125,36 @@
       "tendencia": {
         "direcao": "baixa",
         "score": 100,
-        "tstat": -4.43,
-        "adx": 31.4,
+        "tstat": -4.96,
+        "adx": 32.4,
         "rompimento": "rompimento_baixa_20d"
       },
       "intradia": {
         "ticker": "KNRI11",
         "kind": "rompimento_faixa_baixa",
         "direction": "venda",
-        "last": 143.11,
-        "gap_pct": -0.004,
-        "vwap": 144.1754,
+        "last": 140.21,
+        "gap_pct": -0.0111,
+        "vwap": 140.7068,
         "above_vwap": false,
         "opening_range": [
-          144.71,
-          146.13
+          140.8,
+          143.1
         ],
-        "volume_ratio": 1.01,
-        "range_vs_atr": 1.05,
-        "stop": 146.13,
-        "target": 140.1,
-        "notes": []
+        "volume_ratio": 2.06,
+        "range_vs_atr": 1.1,
+        "stop": 143.1,
+        "target": 137.13,
+        "notes": [
+          "volume 2.1x o normal para este horário"
+        ]
       }
     },
     {
-      "ticker": "MXRF11",
-      "mercado": "BR",
-      "ultimo": 8.5,
-      "atr": 0.2229,
+      "ticker": "QQQ",
+      "mercado": "US",
+      "ultimo": 650.86,
+      "atr": 24.0945,
       "operacao": "venda",
       "votos": {
         "balanco": null,
@@ -310,44 +165,44 @@
       },
       "a_favor": 0,
       "contra": 2,
-      "stop": 8.89,
-      "alvo": 7.72,
+      "stop": 676.49,
+      "alvo": 599.6,
       "porteiro": {
         "aprovada": true,
         "motivos": [
-          "votação 0 a favor, 2 contra; tendência baixa 85; regime defensivo"
+          "votação 0 a favor, 2 contra; tendência baixa 85; regime neutro"
         ],
         "bloqueios": [],
-        "estabilizacao": true,
+        "estabilizacao": false,
         "stop_estrutural": null
       },
-      "ganho_pct": -0.0918,
-      "risco_pct": 0.0459,
+      "ganho_pct": -0.0788,
+      "risco_pct": 0.0394,
       "razao_ganho_risco": 2.0,
       "prazo_esperado": "1 a 5 pregões",
       "balanco": null,
       "analogos": {
-        "ticker": "MXRF11",
+        "ticker": "QQQ",
         "n": 15,
         "horizons": {
           "5": {
-            "media": -0.016,
-            "mediana": 0.0041,
-            "p_positivo": 0.53,
+            "media": -0.0182,
+            "mediana": -0.0052,
+            "p_positivo": 0.47,
             "pior": -0.1633,
             "melhor": 0.0501,
             "n": 15
           },
           "10": {
-            "media": 0.0056,
-            "mediana": 0.0052,
-            "p_positivo": 0.6,
+            "media": 0.002,
+            "mediana": 0.002,
+            "p_positivo": 0.53,
             "pior": -0.1285,
             "melhor": 0.1043,
             "n": 15
           },
           "20": {
-            "media": 0.0214,
+            "media": 0.0202,
             "mediana": 0.0022,
             "p_positivo": 0.53,
             "pior": -0.094,
@@ -360,57 +215,57 @@
             "ativo": "MSFT",
             "indice": 202,
             "data": null,
-            "distancia": 0.161,
+            "distancia": 0.181,
             "ret_20d": -0.094
           },
           {
             "ativo": "KNRI11",
             "indice": 288,
             "data": null,
-            "distancia": 0.302,
+            "distancia": 0.237,
             "ret_20d": -0.0266
           },
           {
             "ativo": "AAPL",
             "indice": 213,
             "data": null,
-            "distancia": 0.304,
+            "distancia": 0.244,
             "ret_20d": -0.0116
-          },
-          {
-            "ativo": "HGLG11",
-            "indice": 310,
-            "data": null,
-            "distancia": 0.322,
-            "ret_20d": -0.0143
           },
           {
             "ativo": "GME",
             "indice": 273,
             "data": null,
-            "distancia": 0.349,
+            "distancia": 0.266,
             "ret_20d": 0.0022
+          },
+          {
+            "ativo": "HGLG11",
+            "indice": 310,
+            "data": null,
+            "distancia": 0.275,
+            "ret_20d": -0.0143
           },
           {
             "ativo": "MXRF11",
             "indice": 227,
-            "data": "2026-03-03",
-            "distancia": 0.385,
+            "data": null,
+            "distancia": 0.303,
             "ret_20d": 0.0269
           },
           {
             "ativo": "SPY",
             "indice": 244,
             "data": null,
-            "distancia": 0.396,
+            "distancia": 0.315,
             "ret_20d": 0.0942
           },
           {
-            "ativo": "MSFT",
-            "indice": 304,
+            "ativo": "AMZN",
+            "indice": 347,
             "data": null,
-            "distancia": 0.407,
-            "ret_20d": 0.0432
+            "distancia": 0.35,
+            "ret_20d": -0.0257
           }
         ],
         "state": null
@@ -419,184 +274,37 @@
       "tendencia": {
         "direcao": "baixa",
         "score": 85,
-        "tstat": -5.09,
-        "adx": 39.9,
+        "tstat": -6.37,
+        "adx": 31.5,
         "rompimento": "nenhum"
       },
       "intradia": {
-        "ticker": "MXRF11",
-        "kind": "rompimento_faixa_baixa",
+        "ticker": "QQQ",
+        "kind": "reversao_vwap",
         "direction": "venda",
-        "last": 8.5,
-        "gap_pct": -0.0058,
-        "vwap": 8.5413,
+        "last": 650.75,
+        "gap_pct": 0.0753,
+        "vwap": 651.5129,
         "above_vwap": false,
         "opening_range": [
-          8.55,
-          8.6
+          641.9501,
+          656.25
         ],
-        "volume_ratio": 0.92,
-        "range_vs_atr": 0.54,
-        "stop": 8.6,
-        "target": 8.28,
-        "notes": []
-      }
-    },
-    {
-      "ticker": "QQQ",
-      "mercado": "US",
-      "ultimo": 608.45,
-      "atr": 21.1336,
-      "operacao": "venda",
-      "votos": {
-        "balanco": null,
-        "analogos": "neutro",
-        "noticias": null,
-        "tendencia": "contra",
-        "intradia": "contra"
-      },
-      "a_favor": 0,
-      "contra": 2,
-      "stop": 676.49,
-      "alvo": 472.37,
-      "porteiro": {
-        "aprovada": true,
-        "motivos": [
-          "votação 0 a favor, 2 contra; tendência baixa 100; regime neutro"
-        ],
-        "bloqueios": [],
-        "estabilizacao": true,
-        "stop_estrutural": null
-      },
-      "ganho_pct": -0.2237,
-      "risco_pct": 0.1118,
-      "razao_ganho_risco": 2.0,
-      "prazo_esperado": "1 a 5 pregões",
-      "balanco": null,
-      "analogos": {
-        "ticker": "QQQ",
-        "n": 15,
-        "horizons": {
-          "5": {
-            "media": 0.0128,
-            "mediana": 0.0069,
-            "p_positivo": 0.53,
-            "pior": -0.0339,
-            "melhor": 0.1067,
-            "n": 15
-          },
-          "10": {
-            "media": 0.0338,
-            "mediana": 0.035,
-            "p_positivo": 0.6,
-            "pior": -0.0541,
-            "melhor": 0.1318,
-            "n": 15
-          },
-          "20": {
-            "media": 0.0528,
-            "mediana": 0.0466,
-            "p_positivo": 0.6,
-            "pior": -0.0357,
-            "melhor": 0.1664,
-            "n": 15
-          }
-        },
-        "examples": [
-          {
-            "ativo": "MSFT",
-            "indice": 206,
-            "data": null,
-            "distancia": 0.127,
-            "ret_20d": -0.0085
-          },
-          {
-            "ativo": "TSLA",
-            "indice": 322,
-            "data": null,
-            "distancia": 0.224,
-            "ret_20d": 0.0796
-          },
-          {
-            "ativo": "KNRI11",
-            "indice": 302,
-            "data": null,
-            "distancia": 0.273,
-            "ret_20d": 0.0466
-          },
-          {
-            "ativo": "MSFT",
-            "indice": 303,
-            "data": null,
-            "distancia": 0.305,
-            "ret_20d": 0.0818
-          },
-          {
-            "ativo": "GME",
-            "indice": 285,
-            "data": null,
-            "distancia": 0.305,
-            "ret_20d": 0.0401
-          },
-          {
-            "ativo": "BTC",
-            "indice": 219,
-            "data": null,
-            "distancia": 0.342,
-            "ret_20d": -0.0103
-          },
-          {
-            "ativo": "HGLG11",
-            "indice": 295,
-            "data": null,
-            "distancia": 0.342,
-            "ret_20d": -0.0116
-          },
-          {
-            "ativo": "XPML11",
-            "indice": 365,
-            "data": null,
-            "distancia": 0.359,
-            "ret_20d": 0.0796
-          }
-        ],
-        "state": null
-      },
-      "noticia": null,
-      "tendencia": {
-        "direcao": "baixa",
-        "score": 100,
-        "tstat": -5.87,
-        "adx": 31.6,
-        "rompimento": "rompimento_baixa_20d"
-      },
-      "intradia": {
-        "ticker": "QQQ",
-        "kind": "rompimento_faixa_baixa",
-        "direction": "venda",
-        "last": 608.45,
-        "gap_pct": -0.0097,
-        "vwap": 622.8825,
-        "above_vwap": false,
-        "opening_range": [
-          633.86,
-          641.925
-        ],
-        "volume_ratio": 2.97,
-        "range_vs_atr": 1.75,
-        "stop": 641.92,
-        "target": 587.32,
+        "volume_ratio": 6.53,
+        "range_vs_atr": 0.65,
+        "stop": 657.5,
+        "target": 610.04,
         "notes": [
-          "volume 3.0x o normal para este horário",
-          "dia já andou 1.8x o ATR: entrada tardia"
+          "gap de +7.5% na abertura",
+          "volume 6.5x o normal para este horário"
         ]
       }
     },
     {
       "ticker": "SPY",
       "mercado": "US",
-      "ultimo": 689.81,
-      "atr": 16.0736,
+      "ultimo": 722.67,
+      "atr": 18.4443,
       "operacao": "venda",
       "votos": {
         "balanco": null,
@@ -607,19 +315,19 @@
       },
       "a_favor": 0,
       "contra": 2,
-      "stop": 749.82,
-      "alvo": 569.79,
+      "stop": 741.1143,
+      "alvo": 685.78,
       "porteiro": {
         "aprovada": true,
         "motivos": [
-          "votação 0 a favor, 2 contra; tendência baixa 80; regime neutro"
+          "votação 0 a favor, 2 contra; tendência baixa 65; regime neutro"
         ],
         "bloqueios": [],
-        "estabilizacao": true,
+        "estabilizacao": false,
         "stop_estrutural": null
       },
-      "ganho_pct": -0.174,
-      "risco_pct": 0.087,
+      "ganho_pct": -0.051,
+      "risco_pct": 0.0255,
       "razao_ganho_risco": 2.0,
       "prazo_esperado": "1 a 5 pregões",
       "balanco": null,
@@ -628,86 +336,86 @@
         "n": 15,
         "horizons": {
           "5": {
-            "media": 0.019,
-            "mediana": 0.0069,
+            "media": 0.0061,
+            "mediana": 0.0108,
             "p_positivo": 0.67,
-            "pior": -0.0339,
-            "melhor": 0.1217,
+            "pior": -0.0919,
+            "melhor": 0.0501,
             "n": 15
           },
           "10": {
-            "media": 0.0182,
-            "mediana": -0.0005,
+            "media": 0.005,
+            "mediana": -0.0018,
             "p_positivo": 0.47,
-            "pior": -0.0656,
-            "melhor": 0.146,
+            "pior": -0.073,
+            "melhor": 0.1043,
             "n": 15
           },
           "20": {
-            "media": 0.0337,
-            "mediana": -0.0085,
-            "p_positivo": 0.47,
-            "pior": -0.0392,
-            "melhor": 0.2103,
+            "media": -0.0063,
+            "mediana": -0.0118,
+            "p_positivo": 0.4,
+            "pior": -0.209,
+            "melhor": 0.1462,
             "n": 15
           }
         },
         "examples": [
-          {
-            "ativo": "MSFT",
-            "indice": 206,
-            "data": null,
-            "distancia": 0.213,
-            "ret_20d": -0.0085
-          },
-          {
-            "ativo": "KNRI11",
-            "indice": 302,
-            "data": null,
-            "distancia": 0.302,
-            "ret_20d": 0.0466
-          },
-          {
-            "ativo": "HGLG11",
-            "indice": 295,
-            "data": null,
-            "distancia": 0.316,
-            "ret_20d": -0.0116
-          },
           {
             "ativo": "AAPL",
             "indice": 213,
             "data": null,
-            "distancia": 0.342,
+            "distancia": 0.276,
             "ret_20d": -0.0116
           },
           {
-            "ativo": "XPML11",
-            "indice": 365,
+            "ativo": "MSFT",
+            "indice": 202,
             "data": null,
-            "distancia": 0.375,
-            "ret_20d": 0.0796
+            "distancia": 0.282,
+            "ret_20d": -0.094
           },
           {
-            "ativo": "TSLA",
-            "indice": 322,
+            "ativo": "KNRI11",
+            "indice": 288,
             "data": null,
-            "distancia": 0.38,
-            "ret_20d": 0.0796
+            "distancia": 0.29,
+            "ret_20d": -0.0266
+          },
+          {
+            "ativo": "MXRF11",
+            "indice": 227,
+            "data": null,
+            "distancia": 0.292,
+            "ret_20d": 0.0269
+          },
+          {
+            "ativo": "HGLG11",
+            "indice": 310,
+            "data": null,
+            "distancia": 0.327,
+            "ret_20d": -0.0143
+          },
+          {
+            "ativo": "AMZN",
+            "indice": 340,
+            "data": null,
+            "distancia": 0.341,
+            "ret_20d": -0.052
           },
           {
             "ativo": "GME",
-            "indice": 276,
+            "indice": 273,
             "data": null,
-            "distancia": 0.387,
-            "ret_20d": 0.0069
+            "distancia": 0.36,
+            "ret_20d": 0.0022
           },
           {
-            "ativo": "MSFT",
-            "indice": 303,
-            "data": null,
-            "distancia": 0.424,
-            "ret_20d": 0.0818
+            "ativo": "SPY",
+            "indice": 244,
+            "data": "2026-03-31",
+            "distancia": 0.379,
+            "ret_20d": 0.0942
           }
         ],
         "state": null
@@ -715,215 +423,61 @@
       "noticia": null,
       "tendencia": {
         "direcao": "baixa",
-        "score": 80,
-        "tstat": -4.85,
-        "adx": 19.8,
-        "rompimento": "rompimento_baixa_20d"
+        "score": 65,
+        "tstat": -5.23,
+        "adx": 21.1,
+        "rompimento": "nenhum"
       },
       "intradia": {
         "ticker": "SPY",
-        "kind": "rompimento_faixa_baixa",
+        "kind": "reversao_vwap",
         "direction": "venda",
-        "last": 689.81,
-        "gap_pct": -0.0031,
-        "vwap": 700.1591,
+        "last": 722.47,
+        "gap_pct": 0.0484,
+        "vwap": 722.5059,
         "above_vwap": false,
         "opening_range": [
-          711.72,
-          717.27
+          713.53,
+          724.8
         ],
-        "volume_ratio": 2.22,
-        "range_vs_atr": 1.96,
-        "stop": 717.27,
-        "target": 673.74,
+        "volume_ratio": 3.05,
+        "range_vs_atr": 0.78,
+        "stop": 727.98,
+        "target": 690.91,
         "notes": [
-          "volume 2.2x o normal para este horário",
-          "dia já andou 2.0x o ATR: entrada tardia"
+          "gap de +4.8% na abertura",
+          "volume 3.1x o normal para este horário"
         ]
-      }
-    },
-    {
-      "ticker": "VALE3",
-      "mercado": "BR",
-      "ultimo": 58.48,
-      "atr": 1.9229,
-      "operacao": "venda",
-      "votos": {
-        "balanco": "neutro",
-        "analogos": "neutro",
-        "noticias": null,
-        "tendencia": "contra",
-        "intradia": "contra"
-      },
-      "a_favor": 0,
-      "contra": 2,
-      "stop": 64.24,
-      "alvo": 46.96,
-      "porteiro": {
-        "aprovada": true,
-        "motivos": [
-          "votação 0 a favor, 2 contra; tendência baixa 80; regime defensivo"
-        ],
-        "bloqueios": [],
-        "estabilizacao": true,
-        "stop_estrutural": null
-      },
-      "ganho_pct": -0.197,
-      "risco_pct": 0.0985,
-      "razao_ganho_risco": 2.0,
-      "prazo_esperado": "1 a 5 pregões",
-      "balanco": {
-        "score": 54,
-        "valuation": 18,
-        "qualidade": 14,
-        "seguranca": 22,
-        "crescimento": 0,
-        "alertas": [],
-        "P/L": 105.8,
-        "EV/EBITDA": 4.7,
-        "ROE": 0.012,
-        "div_liq/EBITDA": 1.2,
-        "FCF_yield": 0.2,
-        "fonte": [
-          "fonte: Yahoo quoteSummary (VALE3.SA); crescimento é o último ano, não CAGR 5 anos"
-        ]
-      },
-      "analogos": {
-        "ticker": "VALE3",
-        "n": 15,
-        "horizons": {
-          "5": {
-            "media": 0.0224,
-            "mediana": 0.0359,
-            "p_positivo": 0.8,
-            "pior": -0.1403,
-            "melhor": 0.1563,
-            "n": 15
-          },
-          "10": {
-            "media": 0.0598,
-            "mediana": 0.0457,
-            "p_positivo": 0.67,
-            "pior": -0.1891,
-            "melhor": 0.4014,
-            "n": 15
-          },
-          "20": {
-            "media": 0.0211,
-            "mediana": -0.0086,
-            "p_positivo": 0.47,
-            "pior": -0.3471,
-            "melhor": 0.4183,
-            "n": 15
-          }
-        },
-        "examples": [
-          {
-            "ativo": "BBAS3",
-            "indice": 342,
-            "data": null,
-            "distancia": 0.245,
-            "ret_20d": 0.2279
-          },
-          {
-            "ativo": "WEGE3",
-            "indice": 266,
-            "data": null,
-            "distancia": 0.332,
-            "ret_20d": -0.0086
-          },
-          {
-            "ativo": "MGLU3",
-            "indice": 246,
-            "data": null,
-            "distancia": 0.342,
-            "ret_20d": 0.01
-          },
-          {
-            "ativo": "BBAS3",
-            "indice": 266,
-            "data": null,
-            "distancia": 0.395,
-            "ret_20d": -0.0507
-          },
-          {
-            "ativo": "ITUB4",
-            "indice": 346,
-            "data": null,
-            "distancia": 0.42,
-            "ret_20d": 0.1161
-          },
-          {
-            "ativo": "VALE3",
-            "indice": 372,
-            "data": "2026-09-29",
-            "distancia": 0.451,
-            "ret_20d": -0.1182
-          },
-          {
-            "ativo": "MGLU3",
-            "indice": 347,
-            "data": null,
-            "distancia": 0.483,
-            "ret_20d": 0.4183
-          },
-          {
-            "ativo": "MGLU3",
-            "indice": 283,
-            "data": null,
-            "distancia": 0.506,
-            "ret_20d": -0.3471
-          }
-        ],
-        "state": null
-      },
-      "noticia": null,
-      "tendencia": {
-        "direcao": "baixa",
-        "score": 80,
-        "tstat": -25.28,
-        "adx": 17.3,
-        "rompimento": "rompimento_baixa_20d"
-      },
-      "intradia": {
-        "ticker": "VALE3",
-        "kind": "rompimento_faixa_baixa",
-        "direction": "venda",
-        "last": 58.48,
-        "gap_pct": 0.0046,
-        "vwap": 59.001,
-        "above_vwap": false,
-        "opening_range": [
-          59.18,
-          59.65
-        ],
-        "volume_ratio": 1.26,
-        "range_vs_atr": 0.75,
-        "stop": 59.65,
-        "target": 56.56,
-        "notes": []
       }
     },
     {
       "ticker": "AAPL",
       "mercado": "US",
-      "ultimo": 342.56,
-      "atr": 9.3664,
-      "operacao": "nenhuma",
+      "ultimo": 350.44,
+      "atr": 9.1557,
+      "operacao": "compra_bloqueada",
       "votos": {
         "balanco": "a_favor",
         "analogos": "neutro",
         "noticias": null,
         "tendencia": "a_favor",
-        "intradia": "contra"
+        "intradia": "a_favor"
       },
-      "a_favor": 2,
-      "contra": 1,
-      "stop": null,
-      "alvo": null,
-      "porteiro": null,
-      "ganho_pct": 0,
-      "risco_pct": 0,
+      "a_favor": 3,
+      "contra": 0,
+      "stop": 340.56,
+      "alvo": 370.2,
+      "porteiro": {
+        "aprovada": false,
+        "motivos": [],
+        "bloqueios": [
+          "VIX 26.9 >= 25: sem compras novas (regra de pânico)"
+        ],
+        "estabilizacao": false,
+        "stop_estrutural": null
+      },
+      "ganho_pct": 0.0564,
+      "risco_pct": -0.0282,
       "razao_ganho_risco": null,
       "prazo_esperado": null,
       "balanco": {
@@ -933,11 +487,11 @@
         "seguranca": 22,
         "crescimento": 10,
         "alertas": [],
-        "P/L": 37.7,
-        "EV/EBITDA": 29.2,
+        "P/L": 38.5,
+        "EV/EBITDA": 29.9,
         "ROE": 1.179,
         "div_liq/EBITDA": 0.22,
-        "FCF_yield": 0.029,
+        "FCF_yield": 0.028,
         "fonte": [
           "fonte: Yahoo quoteSummary (AAPL); crescimento é o último ano, não CAGR 5 anos"
         ]
@@ -947,86 +501,86 @@
         "n": 15,
         "horizons": {
           "5": {
-            "media": 0.0023,
-            "mediana": 0.0047,
+            "media": -0.0007,
+            "mediana": 0.0025,
             "p_positivo": 0.53,
-            "pior": -0.0472,
-            "melhor": 0.0415,
+            "pior": -0.0665,
+            "melhor": 0.0514,
             "n": 15
           },
           "10": {
-            "media": 0.0106,
-            "mediana": 0.0033,
-            "p_positivo": 0.6,
-            "pior": -0.0432,
-            "melhor": 0.0649,
+            "media": -0.0077,
+            "mediana": -0.0038,
+            "p_positivo": 0.27,
+            "pior": -0.111,
+            "melhor": 0.0677,
             "n": 15
           },
           "20": {
-            "media": 0.0158,
-            "mediana": 0.012,
-            "p_positivo": 0.6,
-            "pior": -0.0486,
-            "melhor": 0.1073,
+            "media": -0.0018,
+            "mediana": -0.006,
+            "p_positivo": 0.47,
+            "pior": -0.0902,
+            "melhor": 0.1232,
             "n": 15
           }
         },
         "examples": [
           {
-            "ativo": "QQQ",
-            "indice": 320,
+            "ativo": "NVDA",
+            "indice": 362,
             "data": null,
-            "distancia": 0.073,
-            "ret_20d": 0.012
+            "distancia": 0.072,
+            "ret_20d": -0.0366
           },
           {
             "ativo": "KNRI11",
-            "indice": 234,
+            "indice": 227,
             "data": null,
-            "distancia": 0.098,
-            "ret_20d": 0.0284
+            "distancia": 0.073,
+            "ret_20d": 0.0196
           },
           {
-            "ativo": "NVDA",
-            "indice": 361,
+            "ativo": "SPY",
+            "indice": 312,
             "data": null,
-            "distancia": 0.099,
-            "ret_20d": -0.0096
+            "distancia": 0.09,
+            "ret_20d": 0.0224
+          },
+          {
+            "ativo": "KNRI11",
+            "indice": 271,
+            "data": null,
+            "distancia": 0.095,
+            "ret_20d": -0.0688
           },
           {
             "ativo": "BOVA11",
-            "indice": 237,
+            "indice": 249,
             "data": null,
-            "distancia": 0.103,
-            "ret_20d": 0.0963
+            "distancia": 0.107,
+            "ret_20d": -0.006
           },
           {
-            "ativo": "SPY",
-            "indice": 301,
+            "ativo": "NVDA",
+            "indice": 217,
             "data": null,
             "distancia": 0.11,
-            "ret_20d": 0.0189
+            "ret_20d": -0.0902
+          },
+          {
+            "ativo": "BOVA11",
+            "indice": 227,
+            "data": null,
+            "distancia": 0.112,
+            "ret_20d": 0.0278
           },
           {
             "ativo": "SPY",
-            "indice": 215,
-            "data": null,
-            "distancia": 0.119,
-            "ret_20d": -0.0362
-          },
-          {
-            "ativo": "AAPL",
-            "indice": 346,
-            "data": "2026-08-26",
-            "distancia": 0.12,
-            "ret_20d": 0.0717
-          },
-          {
-            "ativo": "QQQ",
             "indice": 211,
             "data": null,
-            "distancia": 0.122,
-            "ret_20d": -0.0259
+            "distancia": 0.12,
+            "ret_20d": -0.0374
           }
         ],
         "state": null
@@ -1035,47 +589,46 @@
       "tendencia": {
         "direcao": "alta",
         "score": 65,
-        "tstat": 12.96,
-        "adx": 16.3,
+        "tstat": 12.67,
+        "adx": 15.6,
         "rompimento": "nenhum"
       },
       "intradia": {
         "ticker": "AAPL",
-        "kind": "rompimento_faixa_baixa",
-        "direction": "venda",
-        "last": 342.56,
-        "gap_pct": 0.0101,
-        "vwap": 346.1503,
-        "above_vwap": false,
+        "kind": "rompimento_faixa_alta",
+        "direction": "compra",
+        "last": 350.25,
+        "gap_pct": 0.0149,
+        "vwap": 349.103,
+        "above_vwap": true,
         "opening_range": [
-          348.63,
-          354.3
+          345.4422,
+          349.76
         ],
-        "volume_ratio": 2.02,
-        "range_vs_atr": 1.47,
-        "stop": 354.3,
-        "target": 333.19,
+        "volume_ratio": 3.28,
+        "range_vs_atr": 0.78,
+        "stop": 345.44,
+        "target": 359.41,
         "notes": [
-          "volume 2.0x o normal para este horário",
-          "dia já andou 1.5x o ATR: entrada tardia"
+          "volume 3.3x o normal para este horário"
         ]
       }
     },
     {
       "ticker": "AMC",
       "mercado": "US",
-      "ultimo": 2.57,
-      "atr": 0.2557,
+      "ultimo": 2.835,
+      "atr": 0.2629,
       "operacao": "nenhuma",
       "votos": {
         "balanco": "contra",
-        "analogos": "neutro",
+        "analogos": "a_favor",
         "noticias": null,
         "tendencia": "a_favor",
-        "intradia": "contra"
+        "intradia": "a_favor"
       },
-      "a_favor": 1,
-      "contra": 2,
+      "a_favor": 3,
+      "contra": 1,
       "stop": null,
       "alvo": null,
       "porteiro": null,
@@ -1093,11 +646,11 @@
           "lucro negativo ou nulo",
           "alavancagem alta: dívida líquida/EBITDA = 8.6x"
         ],
-        "P/L": -3.6,
-        "EV/EBITDA": 11.5,
-        "ROE": -0.276,
+        "P/L": -4.0,
+        "EV/EBITDA": 11.8,
+        "ROE": -0.25,
         "div_liq/EBITDA": 8.59,
-        "FCF_yield": 0.179,
+        "FCF_yield": 0.162,
         "fonte": [
           "fonte: Yahoo quoteSummary (AMC); crescimento é o último ano, não CAGR 5 anos"
         ]
@@ -1107,86 +660,86 @@
         "n": 15,
         "horizons": {
           "5": {
-            "media": 0.0103,
-            "mediana": 0.0142,
-            "p_positivo": 0.6,
-            "pior": -0.1164,
-            "melhor": 0.1537,
+            "media": 0.0086,
+            "mediana": 0.0143,
+            "p_positivo": 0.53,
+            "pior": -0.0484,
+            "melhor": 0.0778,
             "n": 15
           },
           "10": {
-            "media": 0.0115,
-            "mediana": 0.0033,
-            "p_positivo": 0.6,
-            "pior": -0.1425,
-            "melhor": 0.1794,
+            "media": 0.0008,
+            "mediana": -0.0096,
+            "p_positivo": 0.4,
+            "pior": -0.0441,
+            "melhor": 0.0849,
             "n": 15
           },
           "20": {
-            "media": -0.0204,
-            "mediana": -0.0297,
-            "p_positivo": 0.47,
-            "pior": -0.2409,
-            "melhor": 0.2162,
+            "media": 0.0218,
+            "mediana": 0.0363,
+            "p_positivo": 0.67,
+            "pior": -0.0776,
+            "melhor": 0.1102,
             "n": 15
           }
         },
         "examples": [
           {
-            "ativo": "NVDA",
-            "indice": 207,
+            "ativo": "BOVA11",
+            "indice": 230,
             "data": null,
-            "distancia": 0.285,
-            "ret_20d": 0.0346
-          },
-          {
-            "ativo": "TSLA",
-            "indice": 202,
-            "data": null,
-            "distancia": 0.293,
-            "ret_20d": -0.0337
+            "distancia": 0.268,
+            "ret_20d": 0.0493
           },
           {
             "ativo": "NVDA",
-            "indice": 326,
+            "indice": 292,
             "data": null,
-            "distancia": 0.299,
-            "ret_20d": 0.1034
+            "distancia": 0.294,
+            "ret_20d": -0.026
           },
           {
             "ativo": "BOVA11",
-            "indice": 279,
+            "indice": 271,
             "data": null,
-            "distancia": 0.318,
-            "ret_20d": -0.0335
-          },
-          {
-            "ativo": "SOL",
-            "indice": 353,
-            "data": null,
-            "distancia": 0.328,
-            "ret_20d": -0.2409
+            "distancia": 0.308,
+            "ret_20d": -0.0776
           },
           {
             "ativo": "QQQ",
-            "indice": 326,
+            "indice": 317,
             "data": null,
-            "distancia": 0.33,
-            "ret_20d": 0.075
+            "distancia": 0.312,
+            "ret_20d": 0.037
           },
           {
-            "ativo": "ETH",
-            "indice": 349,
+            "ativo": "QQQ",
+            "indice": 293,
             "data": null,
-            "distancia": 0.339,
-            "ret_20d": -0.2095
+            "distancia": 0.317,
+            "ret_20d": 0.0459
           },
           {
-            "ativo": "PLTR",
-            "indice": 205,
+            "ativo": "AAPL",
+            "indice": 328,
             "data": null,
-            "distancia": 0.341,
-            "ret_20d": -0.0297
+            "distancia": 0.32,
+            "ret_20d": 0.0349
+          },
+          {
+            "ativo": "NVDA",
+            "indice": 358,
+            "data": null,
+            "distancia": 0.324,
+            "ret_20d": 0.0728
+          },
+          {
+            "ativo": "TSLA",
+            "indice": 210,
+            "data": null,
+            "distancia": 0.335,
+            "ret_20d": -0.0409
           }
         ],
         "state": null
@@ -1194,48 +747,47 @@
       "noticia": null,
       "tendencia": {
         "direcao": "alta",
-        "score": 55,
-        "tstat": 8.27,
-        "adx": 16.6,
-        "rompimento": "rompimento_baixa_20d"
+        "score": 50,
+        "tstat": 7.47,
+        "adx": 17.5,
+        "rompimento": "nenhum"
       },
       "intradia": {
         "ticker": "AMC",
-        "kind": "rompimento_faixa_baixa",
-        "direction": "venda",
-        "last": 2.57,
-        "gap_pct": -0.015,
-        "vwap": 2.6324,
-        "above_vwap": false,
+        "kind": "rompimento_faixa_alta",
+        "direction": "compra",
+        "last": 2.835,
+        "gap_pct": 0.0916,
+        "vwap": 2.7516,
+        "above_vwap": true,
         "opening_range": [
-          2.72,
-          2.82
+          2.65,
+          2.81
         ],
-        "volume_ratio": 1.27,
-        "range_vs_atr": 1.21,
-        "stop": 2.82,
-        "target": 2.31,
+        "volume_ratio": 1.47,
+        "range_vs_atr": 0.84,
+        "stop": 2.65,
+        "target": 3.1,
         "notes": [
-          "gap de -1.5% na abertura",
-          "dia já andou 1.2x o ATR: entrada tardia"
+          "gap de +9.2% na abertura"
         ]
       }
     },
     {
       "ticker": "AMZN",
       "mercado": "US",
-      "ultimo": 246.82,
-      "atr": 11.2871,
+      "ultimo": 256.26,
+      "atr": 11.9186,
       "operacao": "nenhuma",
       "votos": {
         "balanco": "neutro",
-        "analogos": "a_favor",
+        "analogos": "neutro",
         "noticias": null,
-        "tendencia": "neutro",
-        "intradia": "contra"
+        "tendencia": "a_favor",
+        "intradia": "neutro"
       },
       "a_favor": 1,
-      "contra": 1,
+      "contra": 0,
       "stop": null,
       "alvo": null,
       "porteiro": null,
@@ -1250,11 +802,11 @@
         "seguranca": 22,
         "crescimento": 10,
         "alertas": [],
-        "P/L": 34.4,
-        "EV/EBITDA": 15.6,
+        "P/L": 35.7,
+        "EV/EBITDA": 16.1,
         "ROE": 0.127,
         "div_liq/EBITDA": 1.04,
-        "FCF_yield": 0.063,
+        "FCF_yield": 0.061,
         "fonte": [
           "fonte: Yahoo quoteSummary (AMZN); crescimento é o último ano, não CAGR 5 anos"
         ]
@@ -1264,86 +816,86 @@
         "n": 15,
         "horizons": {
           "5": {
-            "media": -0.0001,
-            "mediana": -0.0064,
-            "p_positivo": 0.4,
-            "pior": -0.0596,
-            "melhor": 0.1228,
+            "media": 0.0093,
+            "mediana": 0.0002,
+            "p_positivo": 0.53,
+            "pior": -0.0459,
+            "melhor": 0.1156,
             "n": 15
           },
           "10": {
-            "media": 0.0174,
-            "mediana": 0.0005,
-            "p_positivo": 0.53,
-            "pior": -0.0554,
-            "melhor": 0.1652,
+            "media": 0.0061,
+            "mediana": -0.0065,
+            "p_positivo": 0.47,
+            "pior": -0.0672,
+            "melhor": 0.1216,
             "n": 15
           },
           "20": {
-            "media": 0.0376,
-            "mediana": 0.0441,
-            "p_positivo": 0.73,
-            "pior": -0.2045,
-            "melhor": 0.1689,
+            "media": 0.0202,
+            "mediana": 0.0195,
+            "p_positivo": 0.53,
+            "pior": -0.0819,
+            "melhor": 0.1105,
             "n": 15
           }
         },
         "examples": [
           {
-            "ativo": "NVDA",
-            "indice": 327,
-            "data": null,
-            "distancia": 0.068,
-            "ret_20d": 0.1689
-          },
-          {
-            "ativo": "AAPL",
-            "indice": 233,
-            "data": null,
-            "distancia": 0.089,
-            "ret_20d": 0.0238
-          },
-          {
-            "ativo": "QQQ",
-            "indice": 238,
-            "data": null,
-            "distancia": 0.093,
-            "ret_20d": 0.0958
-          },
-          {
-            "ativo": "HGLG11",
-            "indice": 360,
-            "data": null,
-            "distancia": 0.111,
-            "ret_20d": 0.0793
-          },
-          {
-            "ativo": "XPML11",
-            "indice": 308,
-            "data": null,
-            "distancia": 0.113,
-            "ret_20d": -0.0007
+            "ativo": "AMZN",
+            "indice": 315,
+            "data": "2026-07-14",
+            "distancia": 0.054,
+            "ret_20d": 0.1001
           },
           {
             "ativo": "BOVA11",
-            "indice": 336,
+            "indice": 335,
             "data": null,
-            "distancia": 0.116,
-            "ret_20d": 0.0742
+            "distancia": 0.07,
+            "ret_20d": 0.0593
+          },
+          {
+            "ativo": "NVDA",
+            "indice": 226,
+            "data": null,
+            "distancia": 0.073,
+            "ret_20d": -0.0325
+          },
+          {
+            "ativo": "KNRI11",
+            "indice": 313,
+            "data": null,
+            "distancia": 0.09,
+            "ret_20d": -0.0222
           },
           {
             "ativo": "XPML11",
-            "indice": 364,
+            "indice": 313,
             "data": null,
-            "distancia": 0.117,
-            "ret_20d": 0.0453
+            "distancia": 0.094,
+            "ret_20d": -0.0098
           },
           {
-            "ativo": "AMZN",
-            "indice": 322,
-            "data": "2026-07-23",
-            "distancia": 0.119,
-            "ret_20d": 0.1132
+            "ativo": "NVDA",
+            "indice": 328,
+            "data": null,
+            "distancia": 0.102,
+            "ret_20d": 0.0837
+          },
+          {
+            "ativo": "HGLG11",
+            "indice": 261,
+            "data": null,
+            "distancia": 0.104,
+            "ret_20d": -0.0143
+          },
+          {
+            "ativo": "KNRI11",
+            "indice": 345,
+            "data": null,
+            "distancia": 0.109,
+            "ret_20d": 0.0229
           }
         ],
         "state": null
@@ -1351,46 +903,46 @@
       "noticia": null,
       "tendencia": {
         "direcao": "alta",
-        "score": 25,
-        "tstat": 1.77,
-        "adx": 11.0,
+        "score": 55,
+        "tstat": 2.25,
+        "adx": 10.2,
         "rompimento": "nenhum"
       },
       "intradia": {
         "ticker": "AMZN",
-        "kind": "rompimento_faixa_baixa",
-        "direction": "venda",
-        "last": 246.82,
-        "gap_pct": -0.0145,
-        "vwap": 251.5736,
-        "above_vwap": false,
+        "kind": "gap_alta",
+        "direction": "neutro",
+        "last": 256.33,
+        "gap_pct": 0.053,
+        "vwap": 255.8245,
+        "above_vwap": true,
         "opening_range": [
-          251.12,
-          259.4899
+          251.25,
+          262.48
         ],
-        "volume_ratio": 1.61,
-        "range_vs_atr": 1.3,
-        "stop": 259.49,
-        "target": 235.53,
+        "volume_ratio": 1.69,
+        "range_vs_atr": 0.94,
+        "stop": null,
+        "target": null,
         "notes": [
-          "dia já andou 1.3x o ATR: entrada tardia"
+          "gap de +5.3% na abertura"
         ]
       }
     },
     {
       "ticker": "BBAS3",
       "mercado": "BR",
-      "ultimo": 14.3,
-      "atr": 0.64,
+      "ultimo": 14.27,
+      "atr": 0.6214,
       "operacao": "nenhuma",
       "votos": {
         "balanco": "contra",
         "analogos": "a_favor",
         "noticias": null,
         "tendencia": "contra",
-        "intradia": "a_favor"
+        "intradia": "neutro"
       },
-      "a_favor": 2,
+      "a_favor": 1,
       "contra": 2,
       "stop": null,
       "alvo": null,
@@ -1410,7 +962,7 @@
         "EV/EBITDA": null,
         "ROE": 0.098,
         "div_liq/EBITDA": null,
-        "FCF_yield": 0.403,
+        "FCF_yield": 0.404,
         "fonte": [
           "fonte: Yahoo quoteSummary (BBAS3.SA); crescimento é o último ano, não CAGR 5 anos"
         ]
@@ -1420,26 +972,26 @@
         "n": 15,
         "horizons": {
           "5": {
-            "media": 0.0263,
-            "mediana": 0.0362,
-            "p_positivo": 0.73,
-            "pior": -0.1909,
+            "media": 0.0385,
+            "mediana": 0.0387,
+            "p_positivo": 0.8,
+            "pior": -0.0429,
             "melhor": 0.2474,
             "n": 15
           },
           "10": {
-            "media": 0.0635,
-            "mediana": 0.0457,
-            "p_positivo": 0.67,
-            "pior": -0.1924,
+            "media": 0.069,
+            "mediana": 0.0683,
+            "p_positivo": 0.73,
+            "pior": -0.2065,
             "melhor": 0.433,
             "n": 15
           },
           "20": {
-            "media": 0.0601,
+            "media": 0.0592,
             "mediana": 0.0473,
             "p_positivo": 0.73,
-            "pior": -0.3303,
+            "pior": -0.3314,
             "melhor": 0.5077,
             "n": 15
           }
@@ -1449,28 +1001,28 @@
             "ativo": "BBAS3",
             "indice": 342,
             "data": "2026-08-17",
-            "distancia": 0.741,
+            "distancia": 0.745,
             "ret_20d": 0.2279
           },
           {
             "ativo": "MGLU3",
             "indice": 306,
             "data": null,
-            "distancia": 0.758,
+            "distancia": 0.747,
             "ret_20d": 0.0473
           },
           {
             "ativo": "MGLU3",
             "indice": 345,
             "data": null,
-            "distancia": 0.797,
+            "distancia": 0.785,
             "ret_20d": 0.5077
           },
           {
             "ativo": "MGLU3",
             "indice": 245,
             "data": null,
-            "distancia": 0.815,
+            "distancia": 0.82,
             "ret_20d": 0.0556
           },
           {
@@ -1482,24 +1034,24 @@
           },
           {
             "ativo": "MGLU3",
-            "indice": 285,
+            "indice": 280,
             "data": null,
-            "distancia": 0.831,
-            "ret_20d": -0.3303
+            "distancia": 0.827,
+            "ret_20d": -0.3314
+          },
+          {
+            "ativo": "WEGE3",
+            "indice": 387,
+            "data": null,
+            "distancia": 0.889,
+            "ret_20d": 0.1309
           },
           {
             "ativo": "ITUB4",
             "indice": 345,
             "data": null,
-            "distancia": 0.9,
+            "distancia": 0.905,
             "ret_20d": 0.1285
-          },
-          {
-            "ativo": "BBAS3",
-            "indice": 266,
-            "data": "2026-04-29",
-            "distancia": 0.924,
-            "ret_20d": -0.0507
           }
         ],
         "state": null
@@ -1508,29 +1060,166 @@
       "tendencia": {
         "direcao": "baixa",
         "score": 85,
-        "tstat": -5.85,
-        "adx": 41.4,
+        "tstat": -6.58,
+        "adx": 42.3,
         "rompimento": "nenhum"
       },
       "intradia": {
         "ticker": "BBAS3",
-        "kind": "rompimento_faixa_alta",
-        "direction": "compra",
-        "last": 14.3,
-        "gap_pct": -0.007,
-        "vwap": 14.2122,
+        "kind": "nenhum",
+        "direction": "neutro",
+        "last": 14.29,
+        "gap_pct": 0.0064,
+        "vwap": 14.2813,
         "above_vwap": true,
         "opening_range": [
-          14.02,
-          14.18
+          14.16,
+          14.3
         ],
-        "volume_ratio": 0.78,
-        "range_vs_atr": 0.75,
-        "stop": 14.02,
-        "target": 14.94,
-        "notes": [
-          "volume fraco: setup sem confirmação"
-        ]
+        "volume_ratio": 0.57,
+        "range_vs_atr": 0.58,
+        "stop": null,
+        "target": null,
+        "notes": []
+      }
+    },
+    {
+      "ticker": "BOVA11",
+      "mercado": "BR",
+      "ultimo": 162.48,
+      "atr": 2.7307,
+      "operacao": "nenhuma",
+      "votos": {
+        "balanco": null,
+        "analogos": "a_favor",
+        "noticias": null,
+        "tendencia": "contra",
+        "intradia": "a_favor"
+      },
+      "a_favor": 2,
+      "contra": 1,
+      "stop": null,
+      "alvo": null,
+      "porteiro": null,
+      "ganho_pct": 0,
+      "risco_pct": 0,
+      "razao_ganho_risco": null,
+      "prazo_esperado": null,
+      "balanco": null,
+      "analogos": {
+        "ticker": "BOVA11",
+        "n": 15,
+        "horizons": {
+          "5": {
+            "media": 0.0084,
+            "mediana": 0.0007,
+            "p_positivo": 0.53,
+            "pior": -0.0516,
+            "melhor": 0.1067,
+            "n": 15
+          },
+          "10": {
+            "media": 0.0256,
+            "mediana": 0.035,
+            "p_positivo": 0.6,
+            "pior": -0.058,
+            "melhor": 0.1318,
+            "n": 15
+          },
+          "20": {
+            "media": 0.0598,
+            "mediana": 0.0442,
+            "p_positivo": 0.67,
+            "pior": -0.0237,
+            "melhor": 0.2499,
+            "n": 15
+          }
+        },
+        "examples": [
+          {
+            "ativo": "MSFT",
+            "indice": 206,
+            "data": null,
+            "distancia": 0.181,
+            "ret_20d": -0.0085
+          },
+          {
+            "ativo": "KNRI11",
+            "indice": 301,
+            "data": null,
+            "distancia": 0.323,
+            "ret_20d": 0.0442
+          },
+          {
+            "ativo": "TSLA",
+            "indice": 322,
+            "data": null,
+            "distancia": 0.325,
+            "ret_20d": 0.0796
+          },
+          {
+            "ativo": "GME",
+            "indice": 275,
+            "data": null,
+            "distancia": 0.346,
+            "ret_20d": 0.0074
+          },
+          {
+            "ativo": "MSFT",
+            "indice": 303,
+            "data": null,
+            "distancia": 0.347,
+            "ret_20d": 0.0818
+          },
+          {
+            "ativo": "HGLG11",
+            "indice": 309,
+            "data": null,
+            "distancia": 0.371,
+            "ret_20d": -0.0134
+          },
+          {
+            "ativo": "AAPL",
+            "indice": 213,
+            "data": null,
+            "distancia": 0.383,
+            "ret_20d": -0.0116
+          },
+          {
+            "ativo": "XPML11",
+            "indice": 365,
+            "data": null,
+            "distancia": 0.41,
+            "ret_20d": 0.0796
+          }
+        ],
+        "state": null
+      },
+      "noticia": null,
+      "tendencia": {
+        "direcao": "baixa",
+        "score": 85,
+        "tstat": -2.47,
+        "adx": 52.4,
+        "rompimento": "nenhum"
+      },
+      "intradia": {
+        "ticker": "BOVA11",
+        "kind": "rompimento_faixa_alta",
+        "direction": "compra",
+        "last": 162.52,
+        "gap_pct": -0.0083,
+        "vwap": 162.4985,
+        "above_vwap": true,
+        "opening_range": [
+          161.55,
+          162.37
+        ],
+        "volume_ratio": 0.81,
+        "range_vs_atr": 0.67,
+        "stop": 161.55,
+        "target": 165.25,
+        "notes": []
       }
     },
     {
@@ -1544,10 +1233,10 @@
         "analogos": "a_favor",
         "noticias": "neutro",
         "tendencia": "contra",
-        "intradia": "a_favor"
+        "intradia": "contra"
       },
-      "a_favor": 2,
-      "contra": 1,
+      "a_favor": 1,
+      "contra": 2,
       "stop": null,
       "alvo": null,
       "porteiro": null,
@@ -1647,11 +1336,11 @@
       },
       "noticia": {
         "acao": "ignorar",
-        "score": 0.052,
-        "fontes": 4,
+        "score": 0.06,
+        "fontes": 5,
         "manchetes": [
-          "Bitcoin briefly drops to $17K on Kraken, exchange upholds trades",
-          "Parece real, mas pode ser golpe: Binance faz campanha de educação contra fraudes com IA no sistema financeiro"
+          "Will Bitcoin’s big rebound hold? More tampered Ledgers found: Hodler’s Digest",
+          "Bitcoin ETF Exodus Gathers Pace, Removing Key Source of Support - Bloomberg.com"
         ],
         "evidencia": [
           "sentimento fraco"
@@ -1666,30 +1355,30 @@
       },
       "intradia": {
         "ticker": "BTC",
-        "kind": "rompimento_faixa_alta",
-        "direction": "compra",
-        "last": 61423.6602,
-        "gap_pct": 0.0003,
-        "vwap": 61157.7631,
-        "above_vwap": true,
+        "kind": "rompimento_faixa_baixa",
+        "direction": "venda",
+        "last": 61018.8594,
+        "gap_pct": 0.0,
+        "vwap": 62317.7186,
+        "above_vwap": false,
         "opening_range": [
-          61034.9492,
-          61239.3711
+          61035.5,
+          61240.4492
         ],
-        "volume_ratio": 0.45,
-        "range_vs_atr": 0.93,
-        "stop": 61034.95,
-        "target": 63016.72,
+        "volume_ratio": 1.03,
+        "range_vs_atr": 2.61,
+        "stop": 61240.45,
+        "target": 59425.8,
         "notes": [
-          "volume fraco: setup sem confirmação"
+          "dia já andou 2.6x o ATR: entrada tardia"
         ]
       }
     },
     {
       "ticker": "COIN",
       "mercado": "US",
-      "ultimo": 101.97,
-      "atr": 8.8464,
+      "ultimo": 108.66,
+      "atr": 8.6143,
       "operacao": "nenhuma",
       "votos": {
         "balanco": "contra",
@@ -1714,11 +1403,11 @@
         "seguranca": 25,
         "crescimento": 0,
         "alertas": [],
-        "P/L": 18.1,
-        "EV/EBITDA": 76.9,
+        "P/L": 19.3,
+        "EV/EBITDA": 82.3,
         "ROE": 0.107,
         "div_liq/EBITDA": -7.13,
-        "FCF_yield": 0.062,
+        "FCF_yield": 0.058,
         "fonte": [
           "fonte: Yahoo quoteSummary (COIN); crescimento é o último ano, não CAGR 5 anos"
         ]
@@ -1728,86 +1417,86 @@
         "n": 15,
         "horizons": {
           "5": {
-            "media": 0.0568,
-            "mediana": 0.0484,
+            "media": 0.0573,
+            "mediana": 0.0529,
             "p_positivo": 0.67,
-            "pior": -0.0914,
+            "pior": -0.1533,
             "melhor": 0.3263,
             "n": 15
           },
           "10": {
-            "media": 0.098,
-            "mediana": 0.0816,
-            "p_positivo": 0.73,
-            "pior": -0.0828,
+            "media": 0.0797,
+            "mediana": 0.0479,
+            "p_positivo": 0.8,
+            "pior": -0.1163,
             "melhor": 0.5263,
             "n": 15
           },
           "20": {
-            "media": 0.12,
-            "mediana": 0.1459,
-            "p_positivo": 0.73,
-            "pior": -0.2,
+            "media": 0.1196,
+            "mediana": 0.083,
+            "p_positivo": 0.67,
+            "pior": -0.1453,
             "melhor": 0.7368,
             "n": 15
           }
         },
         "examples": [
           {
-            "ativo": "COIN",
-            "indice": 206,
-            "data": "2026-02-04",
-            "distancia": 0.224,
-            "ret_20d": 0.22
+            "ativo": "MSTR",
+            "indice": 300,
+            "data": null,
+            "distancia": 0.235,
+            "ret_20d": -0.0686
           },
           {
-            "ativo": "MSTR",
-            "indice": 302,
-            "data": null,
-            "distancia": 0.239,
-            "ret_20d": -0.0053
+            "ativo": "COIN",
+            "indice": 204,
+            "data": "2026-02-02",
+            "distancia": 0.244,
+            "ret_20d": -0.0293
           },
           {
             "ativo": "SOL",
-            "indice": 207,
+            "indice": 211,
             "data": null,
-            "distancia": 0.329,
-            "ret_20d": 0.155
-          },
-          {
-            "ativo": "ETH",
-            "indice": 207,
-            "data": null,
-            "distancia": 0.369,
-            "ret_20d": 0.0052
-          },
-          {
-            "ativo": "AMC",
-            "indice": 220,
-            "data": null,
-            "distancia": 0.406,
-            "ret_20d": -0.1466
+            "distancia": 0.307,
+            "ret_20d": 0.1643
           },
           {
             "ativo": "PLTR",
             "indice": 207,
             "data": null,
-            "distancia": 0.423,
+            "distancia": 0.307,
             "ret_20d": 0.2088
           },
           {
             "ativo": "COIN",
             "indice": 290,
             "data": "2026-06-05",
-            "distancia": 0.453,
+            "distancia": 0.317,
             "ret_20d": 0.0729
           },
           {
-            "ativo": "MSTR",
-            "indice": 206,
+            "ativo": "ETH",
+            "indice": 210,
             "data": null,
-            "distancia": 0.47,
-            "ret_20d": 0.083
+            "distancia": 0.324,
+            "ret_20d": -0.0177
+          },
+          {
+            "ativo": "AMC",
+            "indice": 219,
+            "data": null,
+            "distancia": 0.326,
+            "ret_20d": -0.1453
+          },
+          {
+            "ativo": "PLTR",
+            "indice": 303,
+            "data": null,
+            "distancia": 0.34,
+            "ret_20d": 0.1459
           }
         ],
         "state": null
@@ -1815,29 +1504,29 @@
       "noticia": null,
       "tendencia": {
         "direcao": "baixa",
-        "score": 100,
-        "tstat": -10.63,
-        "adx": 40.6,
-        "rompimento": "rompimento_baixa_20d"
+        "score": 85,
+        "tstat": -11.32,
+        "adx": 42.2,
+        "rompimento": "nenhum"
       },
       "intradia": {
         "ticker": "COIN",
-        "kind": "rompimento_faixa_baixa",
+        "kind": "reversao_vwap",
         "direction": "venda",
-        "last": 101.97,
-        "gap_pct": -0.017,
-        "vwap": 105.9262,
+        "last": 108.555,
+        "gap_pct": 0.0746,
+        "vwap": 109.0039,
         "above_vwap": false,
         "opening_range": [
-          106.87,
-          110.75
+          107.2,
+          111.21
         ],
-        "volume_ratio": 1.42,
-        "range_vs_atr": 1.06,
-        "stop": 110.75,
-        "target": 93.12,
+        "volume_ratio": 1.17,
+        "range_vs_atr": 0.49,
+        "stop": 111.4,
+        "target": 101.95,
         "notes": [
-          "gap de -1.7% na abertura"
+          "gap de +7.5% na abertura"
         ]
       }
     },
@@ -1850,7 +1539,7 @@
       "votos": {
         "balanco": null,
         "analogos": "a_favor",
-        "noticias": null,
+        "noticias": "neutro",
         "tendencia": "contra",
         "intradia": "neutro"
       },
@@ -1953,7 +1642,18 @@
         ],
         "state": null
       },
-      "noticia": null,
+      "noticia": {
+        "acao": "ignorar",
+        "score": 0.047,
+        "fontes": 3,
+        "manchetes": [
+          "Ethereum wallets holding $72 billion ETH are under threat of a future quantum attack",
+          "Robert Kiyosaki diz estar comprando ouro, prata, Bitcoin e Ethereum: “Os EUA estão imprimindo US$ 1 trilhão a cada 90 dias”"
+        ],
+        "evidencia": [
+          "sentimento fraco"
+        ]
+      },
       "tendencia": {
         "direcao": "baixa",
         "score": 85,
@@ -1965,41 +1665,51 @@
         "ticker": "ETH",
         "kind": "nenhum",
         "direction": "neutro",
-        "last": 1723.3199,
-        "gap_pct": 0.0004,
-        "vwap": 1720.5409,
-        "above_vwap": true,
+        "last": 1718.55,
+        "gap_pct": 0.0002,
+        "vwap": 1757.2593,
+        "above_vwap": false,
         "opening_range": [
-          1717.1801,
+          1717.1899,
           1723.48
         ],
-        "volume_ratio": 0.64,
-        "range_vs_atr": 0.97,
+        "volume_ratio": 1.06,
+        "range_vs_atr": 2.69,
         "stop": null,
         "target": null,
-        "notes": []
+        "notes": [
+          "dia já andou 2.7x o ATR: entrada tardia"
+        ]
       }
     },
     {
       "ticker": "GME",
       "mercado": "US",
-      "ultimo": 26.66,
-      "atr": 1.0271,
-      "operacao": "nenhuma",
+      "ultimo": 27.26,
+      "atr": 1.0643,
+      "operacao": "compra_bloqueada",
       "votos": {
         "balanco": "neutro",
         "analogos": "neutro",
         "noticias": null,
         "tendencia": "a_favor",
-        "intradia": "contra"
+        "intradia": "a_favor"
       },
-      "a_favor": 1,
-      "contra": 1,
-      "stop": null,
-      "alvo": null,
-      "porteiro": null,
-      "ganho_pct": 0,
-      "risco_pct": 0,
+      "a_favor": 2,
+      "contra": 0,
+      "stop": 25.12,
+      "alvo": 31.54,
+      "porteiro": {
+        "aprovada": false,
+        "motivos": [],
+        "bloqueios": [
+          "VIX 26.9 >= 25: sem compras novas (regra de pânico)"
+        ],
+        "estabilizacao": false,
+        "stop_estrutural": null
+      },
+      "ganho_pct": 0.157,
+      "risco_pct": -0.0785,
       "razao_ganho_risco": null,
       "prazo_esperado": null,
       "balanco": {
@@ -2009,11 +1719,11 @@
         "seguranca": 25,
         "crescimento": 0,
         "alertas": [],
-        "P/L": 17.5,
-        "EV/EBITDA": 25.2,
+        "P/L": 17.9,
+        "EV/EBITDA": 25.8,
         "ROE": 0.111,
         "div_liq/EBITDA": -1.44,
-        "FCF_yield": 0.052,
+        "FCF_yield": 0.051,
         "fonte": [
           "fonte: Yahoo quoteSummary (GME); crescimento é o último ano, não CAGR 5 anos"
         ]
@@ -2023,86 +1733,86 @@
         "n": 15,
         "horizons": {
           "5": {
-            "media": 0.003,
-            "mediana": -0.0092,
-            "p_positivo": 0.4,
-            "pior": -0.0657,
+            "media": -0.012,
+            "mediana": -0.0137,
+            "p_positivo": 0.33,
+            "pior": -0.0911,
             "melhor": 0.1668,
             "n": 15
           },
           "10": {
-            "media": -0.0034,
-            "mediana": -0.0162,
-            "p_positivo": 0.47,
-            "pior": -0.21,
+            "media": -0.0135,
+            "mediana": -0.0336,
+            "p_positivo": 0.4,
+            "pior": -0.1849,
             "melhor": 0.2007,
             "n": 15
           },
           "20": {
-            "media": -0.0304,
-            "mediana": -0.0565,
-            "p_positivo": 0.4,
-            "pior": -0.2438,
-            "melhor": 0.1527,
+            "media": -0.0356,
+            "mediana": 0.0108,
+            "p_positivo": 0.53,
+            "pior": -0.2707,
+            "melhor": 0.1443,
             "n": 15
           }
         },
         "examples": [
           {
             "ativo": "ETH",
-            "indice": 325,
+            "indice": 323,
             "data": null,
-            "distancia": 0.128,
-            "ret_20d": -0.1055
+            "distancia": 0.137,
+            "ret_20d": -0.0887
           },
           {
             "ativo": "PLTR",
-            "indice": 360,
+            "indice": 362,
             "data": null,
-            "distancia": 0.195,
-            "ret_20d": 0.1527
-          },
-          {
-            "ativo": "BTC",
-            "indice": 333,
-            "data": null,
-            "distancia": 0.203,
-            "ret_20d": -0.0681
-          },
-          {
-            "ativo": "SOL",
-            "indice": 310,
-            "data": null,
-            "distancia": 0.215,
-            "ret_20d": 0.1443
+            "distancia": 0.188,
+            "ret_20d": 0.0472
           },
           {
             "ativo": "ETH",
-            "indice": 302,
+            "indice": 301,
             "data": null,
-            "distancia": 0.218,
-            "ret_20d": 0.085
+            "distancia": 0.23,
+            "ret_20d": 0.0816
+          },
+          {
+            "ativo": "PLTR",
+            "indice": 387,
+            "data": null,
+            "distancia": 0.242,
+            "ret_20d": -0.2707
+          },
+          {
+            "ativo": "BTC",
+            "indice": 328,
+            "data": null,
+            "distancia": 0.274,
+            "ret_20d": -0.0667
           },
           {
             "ativo": "MSTR",
             "indice": 381,
             "data": null,
-            "distancia": 0.249,
+            "distancia": 0.284,
             "ret_20d": -0.2438
           },
           {
             "ativo": "AMZN",
-            "indice": 278,
+            "indice": 283,
             "data": null,
-            "distancia": 0.251,
-            "ret_20d": -0.0842
+            "distancia": 0.284,
+            "ret_20d": -0.1649
           },
           {
-            "ativo": "BTC",
-            "indice": 304,
+            "ativo": "MSFT",
+            "indice": 367,
             "data": null,
-            "distancia": 0.265,
-            "ret_20d": 0.0989
+            "distancia": 0.289,
+            "ret_20d": 0.0162
           }
         ],
         "state": null
@@ -2111,34 +1821,36 @@
       "tendencia": {
         "direcao": "alta",
         "score": 65,
-        "tstat": 9.04,
-        "adx": 22.4,
+        "tstat": 8.87,
+        "adx": 23.1,
         "rompimento": "nenhum"
       },
       "intradia": {
         "ticker": "GME",
-        "kind": "rompimento_faixa_baixa",
-        "direction": "venda",
-        "last": 26.66,
-        "gap_pct": -0.0041,
-        "vwap": 26.878,
-        "above_vwap": false,
+        "kind": "rompimento_faixa_alta",
+        "direction": "compra",
+        "last": 27.26,
+        "gap_pct": 0.0152,
+        "vwap": 26.7875,
+        "above_vwap": true,
         "opening_range": [
-          26.74,
-          27.49
+          26.53,
+          27.15
         ],
-        "volume_ratio": 1.15,
-        "range_vs_atr": 1.2,
-        "stop": 27.49,
-        "target": 25.63,
-        "notes": []
+        "volume_ratio": 0.94,
+        "range_vs_atr": 1.0,
+        "stop": 26.53,
+        "target": 28.32,
+        "notes": [
+          "gap de +1.5% na abertura"
+        ]
       }
     },
     {
       "ticker": "HGLG11",
       "mercado": "BR",
-      "ultimo": 141.8,
-      "atr": 2.3893,
+      "ultimo": 140.51,
+      "atr": 2.3207,
       "operacao": "nenhuma",
       "votos": {
         "balanco": null,
@@ -2162,26 +1874,26 @@
         "n": 15,
         "horizons": {
           "5": {
-            "media": -0.0044,
+            "media": 0.0209,
             "mediana": 0.0069,
-            "p_positivo": 0.6,
-            "pior": -0.1633,
-            "melhor": 0.1026,
+            "p_positivo": 0.67,
+            "pior": -0.0677,
+            "melhor": 0.1325,
             "n": 15
           },
           "10": {
-            "media": 0.006,
-            "mediana": 0.002,
+            "media": 0.0197,
+            "mediana": 0.0005,
             "p_positivo": 0.6,
-            "pior": -0.1285,
+            "pior": -0.0673,
             "melhor": 0.1176,
             "n": 15
           },
           "20": {
-            "media": 0.023,
-            "mediana": -0.0022,
+            "media": 0.0184,
+            "mediana": -0.0103,
             "p_positivo": 0.47,
-            "pior": -0.094,
+            "pior": -0.1487,
             "melhor": 0.2071,
             "n": 15
           }
@@ -2189,59 +1901,59 @@
         "examples": [
           {
             "ativo": "MSFT",
-            "indice": 202,
+            "indice": 203,
             "data": null,
-            "distancia": 0.176,
-            "ret_20d": -0.094
+            "distancia": 0.21,
+            "ret_20d": -0.0738
           },
           {
             "ativo": "KNRI11",
             "indice": 289,
             "data": null,
-            "distancia": 0.218,
+            "distancia": 0.269,
             "ret_20d": -0.0132
-          },
-          {
-            "ativo": "AAPL",
-            "indice": 213,
-            "data": null,
-            "distancia": 0.242,
-            "ret_20d": -0.0116
           },
           {
             "ativo": "HGLG11",
             "indice": 309,
             "data": "2026-07-01",
-            "distancia": 0.252,
+            "distancia": 0.292,
             "ret_20d": -0.0134
           },
           {
-            "ativo": "GME",
-            "indice": 274,
+            "ativo": "AAPL",
+            "indice": 213,
             "data": null,
-            "distancia": 0.318,
-            "ret_20d": 0.0045
+            "distancia": 0.304,
+            "ret_20d": -0.0116
           },
           {
             "ativo": "XPML11",
             "indice": 365,
             "data": null,
-            "distancia": 0.343,
+            "distancia": 0.356,
             "ret_20d": 0.0796
           },
           {
-            "ativo": "SPY",
-            "indice": 244,
+            "ativo": "GME",
+            "indice": 276,
             "data": null,
-            "distancia": 0.353,
-            "ret_20d": 0.0942
+            "distancia": 0.36,
+            "ret_20d": 0.0069
+          },
+          {
+            "ativo": "TSLA",
+            "indice": 322,
+            "data": null,
+            "distancia": 0.405,
+            "ret_20d": 0.0796
           },
           {
             "ativo": "MSFT",
-            "indice": 304,
+            "indice": 303,
             "data": null,
-            "distancia": 0.388,
-            "ret_20d": 0.0432
+            "distancia": 0.408,
+            "ret_20d": 0.0818
           }
         ],
         "state": null
@@ -2250,24 +1962,24 @@
       "tendencia": {
         "direcao": "lateral",
         "score": 55,
-        "tstat": -0.38,
-        "adx": 24.0,
+        "tstat": -0.9,
+        "adx": 25.0,
         "rompimento": "rompimento_baixa_20d"
       },
       "intradia": {
         "ticker": "HGLG11",
         "kind": "nenhum",
         "direction": "neutro",
-        "last": 141.8,
-        "gap_pct": -0.0009,
-        "vwap": 141.7202,
-        "above_vwap": true,
+        "last": 140.47,
+        "gap_pct": 0.003,
+        "vwap": 140.6056,
+        "above_vwap": false,
         "opening_range": [
-          142.03,
-          142.6
+          139.87,
+          141.8
         ],
-        "volume_ratio": 0.97,
-        "range_vs_atr": 0.63,
+        "volume_ratio": 1.06,
+        "range_vs_atr": 0.9,
         "stop": null,
         "target": null,
         "notes": []
@@ -2276,13 +1988,13 @@
     {
       "ticker": "ITUB4",
       "mercado": "BR",
-      "ultimo": 40.07,
-      "atr": 1.0064,
+      "ultimo": 39.69,
+      "atr": 0.99,
       "operacao": "nenhuma",
       "votos": {
         "balanco": "contra",
         "analogos": "neutro",
-        "noticias": null,
+        "noticias": "neutro",
         "tendencia": "neutro",
         "intradia": "neutro"
       },
@@ -2309,7 +2021,7 @@
         "EV/EBITDA": null,
         "ROE": 0.406,
         "div_liq/EBITDA": null,
-        "FCF_yield": -0.222,
+        "FCF_yield": -0.224,
         "fonte": [
           "fonte: Yahoo quoteSummary (ITUB4.SA); crescimento é o último ano, não CAGR 5 anos"
         ]
@@ -2319,7 +2031,7 @@
         "n": 15,
         "horizons": {
           "5": {
-            "media": 0.0058,
+            "media": 0.005,
             "mediana": 0.0007,
             "p_positivo": 0.53,
             "pior": -0.0429,
@@ -2327,15 +2039,15 @@
             "n": 15
           },
           "10": {
-            "media": 0.004,
-            "mediana": -0.0249,
+            "media": 0.0028,
+            "mediana": -0.0253,
             "p_positivo": 0.27,
             "pior": -0.0647,
             "melhor": 0.1384,
             "n": 15
           },
           "20": {
-            "media": 0.0232,
+            "media": 0.0186,
             "mediana": 0.0421,
             "p_positivo": 0.6,
             "pior": -0.1348,
@@ -2348,66 +2060,76 @@
             "ativo": "WEGE3",
             "indice": 266,
             "data": null,
-            "distancia": 0.279,
+            "distancia": 0.258,
             "ret_20d": -0.0086
+          },
+          {
+            "ativo": "MGLU3",
+            "indice": 245,
+            "data": null,
+            "distancia": 0.315,
+            "ret_20d": 0.0556
           },
           {
             "ativo": "BBAS3",
             "indice": 235,
             "data": null,
-            "distancia": 0.305,
+            "distancia": 0.316,
             "ret_20d": 0.0421
           },
           {
             "ativo": "ITUB4",
             "indice": 347,
             "data": "2026-08-24",
-            "distancia": 0.322,
+            "distancia": 0.32,
             "ret_20d": 0.1149
           },
           {
-            "ativo": "MGLU3",
-            "indice": 245,
-            "data": null,
-            "distancia": 0.331,
-            "ret_20d": 0.0556
-          },
-          {
             "ativo": "WEGE3",
-            "indice": 228,
+            "indice": 387,
             "data": null,
-            "distancia": 0.347,
-            "ret_20d": 0.0775
-          },
-          {
-            "ativo": "ITUB4",
-            "indice": 230,
-            "data": "2026-03-06",
-            "distancia": 0.357,
-            "ret_20d": 0.013
+            "distancia": 0.323,
+            "ret_20d": 0.1309
           },
           {
             "ativo": "BBAS3",
             "indice": 341,
             "data": null,
-            "distancia": 0.36,
+            "distancia": 0.336,
             "ret_20d": 0.2035
           },
           {
-            "ativo": "VALE3",
-            "indice": 230,
+            "ativo": "WEGE3",
+            "indice": 227,
             "data": null,
-            "distancia": 0.37,
-            "ret_20d": 0.0536
+            "distancia": 0.355,
+            "ret_20d": 0.0762
+          },
+          {
+            "ativo": "ITUB4",
+            "indice": 230,
+            "data": "2026-03-06",
+            "distancia": 0.362,
+            "ret_20d": 0.013
           }
         ],
         "state": null
       },
-      "noticia": null,
+      "noticia": {
+        "acao": "ignorar",
+        "score": 0.0,
+        "fontes": 1,
+        "manchetes": [
+          "‘Congresso precisa colocar a casa em ordem’, diz Tarcísio em evento do Itaú (ITUB4)"
+        ],
+        "evidencia": [
+          "uma única fonte"
+        ]
+      },
       "tendencia": {
         "direcao": "lateral",
         "score": 30,
-        "tstat": 0.55,
+        "tstat": 0.08,
         "adx": 26.1,
         "rompimento": "nenhum"
       },
@@ -2415,16 +2137,16 @@
         "ticker": "ITUB4",
         "kind": "nenhum",
         "direction": "neutro",
-        "last": 40.07,
-        "gap_pct": 0.0025,
-        "vwap": 40.0191,
-        "above_vwap": true,
+        "last": 39.7,
+        "gap_pct": -0.004,
+        "vwap": 39.8068,
+        "above_vwap": false,
         "opening_range": [
-          40.15,
-          40.41
+          39.47,
+          39.83
         ],
-        "volume_ratio": 1.4,
-        "range_vs_atr": 0.72,
+        "volume_ratio": 1.1,
+        "range_vs_atr": 0.63,
         "stop": null,
         "target": null,
         "notes": []
@@ -2433,18 +2155,18 @@
     {
       "ticker": "MGLU3",
       "mercado": "BR",
-      "ultimo": 8.2,
-      "atr": 0.6157,
+      "ultimo": 9.01,
+      "atr": 0.6543,
       "operacao": "nenhuma",
       "votos": {
         "balanco": "contra",
         "analogos": "neutro",
         "noticias": null,
         "tendencia": "a_favor",
-        "intradia": "contra"
+        "intradia": "a_favor"
       },
-      "a_favor": 1,
-      "contra": 2,
+      "a_favor": 2,
+      "contra": 1,
       "stop": null,
       "alvo": null,
       "porteiro": null,
@@ -2461,11 +2183,11 @@
         "alertas": [
           "alavancagem alta: dívida líquida/EBITDA = 5.2x"
         ],
-        "P/L": 31.1,
-        "EV/EBITDA": 10.0,
+        "P/L": 34.2,
+        "EV/EBITDA": 10.5,
         "ROE": 0.018,
         "div_liq/EBITDA": 5.16,
-        "FCF_yield": 3.071,
+        "FCF_yield": 2.789,
         "fonte": [
           "fonte: Yahoo quoteSummary (MGLU3.SA); crescimento é o último ano, não CAGR 5 anos"
         ]
@@ -2475,23 +2197,23 @@
         "n": 15,
         "horizons": {
           "5": {
-            "media": -0.0261,
-            "mediana": -0.0074,
+            "media": -0.0314,
+            "mediana": -0.0183,
             "p_positivo": 0.47,
             "pior": -0.2818,
-            "melhor": 0.1746,
+            "melhor": 0.0686,
             "n": 15
           },
           "10": {
-            "media": -0.0134,
-            "mediana": 0.0234,
-            "p_positivo": 0.53,
+            "media": -0.0253,
+            "mediana": 0.0,
+            "p_positivo": 0.47,
             "pior": -0.3186,
-            "melhor": 0.2253,
+            "melhor": 0.1533,
             "n": 15
           },
           "20": {
-            "media": -0.0268,
+            "media": -0.0281,
             "mediana": -0.0028,
             "p_positivo": 0.47,
             "pior": -0.4165,
@@ -2502,59 +2224,59 @@
         "examples": [
           {
             "ativo": "PRIO3",
-            "indice": 257,
+            "indice": 253,
             "data": null,
-            "distancia": 0.876,
-            "ret_20d": 0.0888
+            "distancia": 0.801,
+            "ret_20d": -0.0278
           },
           {
             "ativo": "PETR4",
             "indice": 259,
             "data": null,
-            "distancia": 0.893,
+            "distancia": 0.833,
             "ret_20d": -0.0028
           },
           {
             "ativo": "PRIO3",
-            "indice": 235,
+            "indice": 227,
             "data": null,
-            "distancia": 0.97,
-            "ret_20d": 0.1557
+            "distancia": 0.873,
+            "ret_20d": 0.2012
           },
           {
             "ativo": "VALE3",
             "indice": 222,
             "data": null,
-            "distancia": 0.973,
+            "distancia": 0.884,
             "ret_20d": -0.1098
           },
           {
             "ativo": "BBAS3",
             "indice": 386,
             "data": null,
-            "distancia": 1.035,
+            "distancia": 0.995,
             "ret_20d": -0.4165
           },
           {
             "ativo": "PETR4",
             "indice": 366,
             "data": null,
-            "distancia": 1.08,
+            "distancia": 1.025,
             "ret_20d": 0.2127
           },
           {
-            "ativo": "WEGE3",
-            "indice": 222,
+            "ativo": "PETR4",
+            "indice": 387,
             "data": null,
-            "distancia": 1.097,
-            "ret_20d": -0.077
+            "distancia": 1.03,
+            "ret_20d": -0.2611
           },
           {
-            "ativo": "BBAS3",
-            "indice": 354,
+            "ativo": "ITUB4",
+            "indice": 223,
             "data": null,
-            "distancia": 1.112,
-            "ret_20d": 0.0368
+            "distancia": 1.054,
+            "ret_20d": -0.0981
           }
         ],
         "state": null
@@ -2563,43 +2285,47 @@
       "tendencia": {
         "direcao": "alta",
         "score": 85,
-        "tstat": 3.38,
-        "adx": 28.8,
+        "tstat": 3.26,
+        "adx": 28.5,
         "rompimento": "nenhum"
       },
       "intradia": {
         "ticker": "MGLU3",
-        "kind": "rompimento_faixa_baixa",
-        "direction": "venda",
-        "last": 8.2,
-        "gap_pct": 0.0144,
-        "vwap": 8.4718,
-        "above_vwap": false,
+        "kind": "rompimento_faixa_alta",
+        "direction": "compra",
+        "last": 9.03,
+        "gap_pct": -0.0264,
+        "vwap": 8.686,
+        "above_vwap": true,
         "opening_range": [
-          8.41,
-          8.75
+          8.03,
+          8.44
         ],
-        "volume_ratio": 0.86,
-        "range_vs_atr": 0.89,
-        "stop": 8.75,
-        "target": 7.58,
-        "notes": []
+        "volume_ratio": 2.21,
+        "range_vs_atr": 1.53,
+        "stop": 8.03,
+        "target": 9.68,
+        "notes": [
+          "gap de -2.6% na abertura",
+          "volume 2.2x o normal para este horário",
+          "dia já andou 1.5x o ATR: entrada tardia"
+        ]
       }
     },
     {
       "ticker": "MSFT",
       "mercado": "US",
-      "ultimo": 484.52,
-      "atr": 18.6714,
+      "ultimo": 496.12,
+      "atr": 19.265,
       "operacao": "nenhuma",
       "votos": {
         "balanco": "a_favor",
-        "analogos": "a_favor",
+        "analogos": "neutro",
         "noticias": null,
         "tendencia": "a_favor",
         "intradia": "contra"
       },
-      "a_favor": 3,
+      "a_favor": 2,
       "contra": 1,
       "stop": null,
       "alvo": null,
@@ -2615,11 +2341,11 @@
         "seguranca": 22,
         "crescimento": 15,
         "alertas": [],
-        "P/L": 26.9,
-        "EV/EBITDA": 17.8,
+        "P/L": 27.6,
+        "EV/EBITDA": 18.3,
         "ROE": 0.284,
         "div_liq/EBITDA": 0.34,
-        "FCF_yield": 0.054,
+        "FCF_yield": 0.053,
         "fonte": [
           "fonte: Yahoo quoteSummary (MSFT); crescimento é o último ano, não CAGR 5 anos"
         ]
@@ -2629,86 +2355,86 @@
         "n": 15,
         "horizons": {
           "5": {
-            "media": 0.0176,
-            "mediana": 0.0107,
-            "p_positivo": 0.67,
+            "media": 0.004,
+            "mediana": -0.0046,
+            "p_positivo": 0.4,
             "pior": -0.1037,
-            "melhor": 0.1537,
+            "melhor": 0.1228,
             "n": 15
           },
           "10": {
-            "media": 0.0303,
-            "mediana": 0.0228,
-            "p_positivo": 0.67,
+            "media": 0.0185,
+            "mediana": 0.0111,
+            "p_positivo": 0.6,
             "pior": -0.0565,
-            "melhor": 0.1794,
+            "melhor": 0.1551,
             "n": 15
           },
           "20": {
-            "media": 0.0452,
-            "mediana": 0.0522,
-            "p_positivo": 0.73,
-            "pior": -0.0426,
-            "melhor": 0.157,
+            "media": 0.0375,
+            "mediana": 0.0355,
+            "p_positivo": 0.6,
+            "pior": -0.0493,
+            "melhor": 0.1689,
             "n": 15
           }
         },
         "examples": [
           {
             "ativo": "AAPL",
-            "indice": 235,
+            "indice": 234,
             "data": null,
-            "distancia": 0.115,
-            "ret_20d": 0.0539
+            "distancia": 0.11,
+            "ret_20d": 0.048
           },
           {
             "ativo": "QQQ",
-            "indice": 207,
+            "indice": 324,
             "data": null,
-            "distancia": 0.125,
-            "ret_20d": 0.0046
+            "distancia": 0.112,
+            "ret_20d": 0.0355
+          },
+          {
+            "ativo": "AAPL",
+            "indice": 201,
+            "data": null,
+            "distancia": 0.12,
+            "ret_20d": 0.0644
           },
           {
             "ativo": "BOVA11",
-            "indice": 285,
+            "indice": 280,
             "data": null,
-            "distancia": 0.133,
-            "ret_20d": -0.0205
+            "distancia": 0.127,
+            "ret_20d": -0.0493
           },
           {
             "ativo": "QQQ",
-            "indice": 241,
+            "indice": 212,
             "data": null,
-            "distancia": 0.145,
-            "ret_20d": 0.157
+            "distancia": 0.135,
+            "ret_20d": -0.0115
           },
           {
-            "ativo": "NVDA",
-            "indice": 326,
+            "ativo": "AAPL",
+            "indice": 339,
             "data": null,
-            "distancia": 0.145,
-            "ret_20d": 0.1034
+            "distancia": 0.144,
+            "ret_20d": 0.0843
           },
           {
             "ativo": "QQQ",
-            "indice": 325,
+            "indice": 237,
             "data": null,
-            "distancia": 0.153,
-            "ret_20d": 0.0522
+            "distancia": 0.146,
+            "ret_20d": 0.1112
           },
           {
             "ativo": "SPY",
-            "indice": 231,
+            "indice": 240,
             "data": null,
-            "distancia": 0.153,
-            "ret_20d": 0.0201
-          },
-          {
-            "ativo": "BOVA11",
-            "indice": 340,
-            "data": null,
-            "distancia": 0.154,
-            "ret_20d": 0.12
+            "distancia": 0.147,
+            "ret_20d": 0.0786
           }
         ],
         "state": null
@@ -2716,37 +2442,38 @@
       "noticia": null,
       "tendencia": {
         "direcao": "alta",
-        "score": 55,
-        "tstat": 4.46,
+        "score": 50,
+        "tstat": 3.94,
         "adx": 18.3,
-        "rompimento": "rompimento_baixa_20d"
+        "rompimento": "nenhum"
       },
       "intradia": {
         "ticker": "MSFT",
         "kind": "rompimento_faixa_baixa",
         "direction": "venda",
-        "last": 484.52,
-        "gap_pct": -0.0094,
-        "vwap": 491.0004,
+        "last": 495.87,
+        "gap_pct": 0.0434,
+        "vwap": 499.8946,
         "above_vwap": false,
         "opening_range": [
-          490.88,
-          503.55
+          499.625,
+          509.15
         ],
-        "volume_ratio": 1.6,
-        "range_vs_atr": 1.22,
-        "stop": 503.55,
-        "target": 465.85,
+        "volume_ratio": 2.05,
+        "range_vs_atr": 0.76,
+        "stop": 509.15,
+        "target": 476.6,
         "notes": [
-          "dia já andou 1.2x o ATR: entrada tardia"
+          "gap de +4.3% na abertura",
+          "volume 2.1x o normal para este horário"
         ]
       }
     },
     {
       "ticker": "MSTR",
       "mercado": "US",
-      "ultimo": 77.8,
-      "atr": 8.4614,
+      "ultimo": 84.615,
+      "atr": 8.8834,
       "operacao": "nenhuma",
       "votos": {
         "balanco": "contra",
@@ -2774,8 +2501,8 @@
           "lucro negativo ou nulo",
           "queima caixa (FCF negativo)"
         ],
-        "P/L": -7.4,
-        "EV/EBITDA": -5.9,
+        "P/L": -8.1,
+        "EV/EBITDA": -6.4,
         "ROE": -0.08,
         "div_liq/EBITDA": -0.16,
         "FCF_yield": -0.0,
@@ -2788,24 +2515,24 @@
         "n": 15,
         "horizons": {
           "5": {
-            "media": 0.0646,
-            "mediana": 0.0658,
+            "media": 0.0482,
+            "mediana": 0.0655,
             "p_positivo": 0.73,
             "pior": -0.065,
-            "melhor": 0.2243,
+            "melhor": 0.2054,
             "n": 15
           },
           "10": {
-            "media": 0.1256,
-            "mediana": 0.1268,
+            "media": 0.1018,
+            "mediana": 0.0978,
             "p_positivo": 0.93,
             "pior": -0.0732,
             "melhor": 0.2857,
             "n": 15
           },
           "20": {
-            "media": 0.1885,
-            "mediana": 0.171,
+            "media": 0.1624,
+            "mediana": 0.155,
             "p_positivo": 0.87,
             "pior": -0.1382,
             "melhor": 0.8673,
@@ -2815,59 +2542,200 @@
         "examples": [
           {
             "ativo": "MSTR",
-            "indice": 304,
-            "data": "2026-06-26",
-            "distancia": 0.208,
-            "ret_20d": 0.1985
+            "indice": 305,
+            "data": "2026-06-29",
+            "distancia": 0.193,
+            "ret_20d": 0.0375
           },
           {
             "ativo": "COIN",
-            "indice": 207,
+            "indice": 211,
             "data": null,
-            "distancia": 0.236,
-            "ret_20d": 0.3497
+            "distancia": 0.306,
+            "ret_20d": 0.2613
           },
           {
             "ativo": "SOL",
             "indice": 207,
             "data": null,
-            "distancia": 0.435,
+            "distancia": 0.337,
             "ret_20d": 0.155
-          },
-          {
-            "ativo": "ETH",
-            "indice": 207,
-            "data": null,
-            "distancia": 0.463,
-            "ret_20d": 0.0052
-          },
-          {
-            "ativo": "AMC",
-            "indice": 237,
-            "data": null,
-            "distancia": 0.54,
-            "ret_20d": 0.8673
           },
           {
             "ativo": "PLTR",
             "indice": 207,
             "data": null,
-            "distancia": 0.552,
+            "distancia": 0.349,
             "ret_20d": 0.2088
           },
           {
-            "ativo": "MSTR",
+            "ativo": "COIN",
+            "indice": 290,
+            "data": null,
+            "distancia": 0.383,
+            "ret_20d": 0.0729
+          },
+          {
+            "ativo": "ETH",
             "indice": 207,
-            "data": "2026-02-05",
-            "distancia": 0.563,
-            "ret_20d": 0.2481
+            "data": null,
+            "distancia": 0.405,
+            "ret_20d": 0.0052
           },
           {
             "ativo": "AMC",
             "indice": 213,
             "data": null,
-            "distancia": 0.579,
+            "distancia": 0.407,
             "ret_20d": -0.1382
+          },
+          {
+            "ativo": "PLTR",
+            "indice": 303,
+            "data": null,
+            "distancia": 0.413,
+            "ret_20d": 0.1459
+          }
+        ],
+        "state": null
+      },
+      "noticia": null,
+      "tendencia": {
+        "direcao": "baixa",
+        "score": 85,
+        "tstat": -4.98,
+        "adx": 32.1,
+        "rompimento": "nenhum"
+      },
+      "intradia": {
+        "ticker": "MSTR",
+        "kind": "rompimento_faixa_baixa",
+        "direction": "venda",
+        "last": 84.505,
+        "gap_pct": 0.1717,
+        "vwap": 87.203,
+        "above_vwap": false,
+        "opening_range": [
+          86.5396,
+          91.358
+        ],
+        "volume_ratio": 0.89,
+        "range_vs_atr": 0.83,
+        "stop": 91.36,
+        "target": 75.62,
+        "notes": [
+          "gap de +17.2% na abertura"
+        ]
+      }
+    },
+    {
+      "ticker": "MXRF11",
+      "mercado": "BR",
+      "ultimo": 8.3,
+      "atr": 0.2293,
+      "operacao": "nenhuma",
+      "votos": {
+        "balanco": null,
+        "analogos": "neutro",
+        "noticias": null,
+        "tendencia": "contra",
+        "intradia": "neutro"
+      },
+      "a_favor": 0,
+      "contra": 1,
+      "stop": null,
+      "alvo": null,
+      "porteiro": null,
+      "ganho_pct": 0,
+      "risco_pct": 0,
+      "razao_ganho_risco": null,
+      "prazo_esperado": null,
+      "balanco": null,
+      "analogos": {
+        "ticker": "MXRF11",
+        "n": 15,
+        "horizons": {
+          "5": {
+            "media": 0.0034,
+            "mediana": 0.0041,
+            "p_positivo": 0.53,
+            "pior": -0.0996,
+            "melhor": 0.1416,
+            "n": 15
+          },
+          "10": {
+            "media": 0.0109,
+            "mediana": 0.002,
+            "p_positivo": 0.6,
+            "pior": -0.0974,
+            "melhor": 0.1297,
+            "n": 15
+          },
+          "20": {
+            "media": 0.0357,
+            "mediana": 0.0269,
+            "p_positivo": 0.6,
+            "pior": -0.0738,
+            "melhor": 0.1548,
+            "n": 15
+          }
+        },
+        "examples": [
+          {
+            "ativo": "MSFT",
+            "indice": 203,
+            "data": null,
+            "distancia": 0.141,
+            "ret_20d": -0.0738
+          },
+          {
+            "ativo": "KNRI11",
+            "indice": 289,
+            "data": null,
+            "distancia": 0.338,
+            "ret_20d": -0.0132
+          },
+          {
+            "ativo": "AAPL",
+            "indice": 213,
+            "data": null,
+            "distancia": 0.354,
+            "ret_20d": -0.0116
+          },
+          {
+            "ativo": "HGLG11",
+            "indice": 309,
+            "data": null,
+            "distancia": 0.369,
+            "ret_20d": -0.0134
+          },
+          {
+            "ativo": "GME",
+            "indice": 275,
+            "data": null,
+            "distancia": 0.379,
+            "ret_20d": 0.0074
+          },
+          {
+            "ativo": "TSLA",
+            "indice": 322,
+            "data": null,
+            "distancia": 0.389,
+            "ret_20d": 0.0796
+          },
+          {
+            "ativo": "XPML11",
+            "indice": 365,
+            "data": null,
+            "distancia": 0.439,
+            "ret_20d": 0.0796
+          },
+          {
+            "ativo": "MSFT",
+            "indice": 303,
+            "data": null,
+            "distancia": 0.446,
+            "ret_20d": 0.0818
           }
         ],
         "state": null
@@ -2876,45 +2744,43 @@
       "tendencia": {
         "direcao": "baixa",
         "score": 100,
-        "tstat": -4.26,
-        "adx": 30.4,
+        "tstat": -5.49,
+        "adx": 41.1,
         "rompimento": "rompimento_baixa_20d"
       },
       "intradia": {
-        "ticker": "MSTR",
-        "kind": "rompimento_faixa_baixa",
-        "direction": "venda",
-        "last": 77.8,
-        "gap_pct": 0.0035,
-        "vwap": 81.1653,
+        "ticker": "MXRF11",
+        "kind": "nenhum",
+        "direction": "neutro",
+        "last": 8.3,
+        "gap_pct": -0.0047,
+        "vwap": 8.3608,
         "above_vwap": false,
         "opening_range": [
-          84.38,
-          87.95
+          8.3,
+          8.48
         ],
-        "volume_ratio": 1.51,
-        "range_vs_atr": 1.21,
-        "stop": 87.95,
-        "target": 69.34,
-        "notes": [
-          "dia já andou 1.2x o ATR: entrada tardia"
-        ]
+        "volume_ratio": 1.31,
+        "range_vs_atr": 0.83,
+        "stop": null,
+        "target": null,
+        "notes": []
       }
     },
     {
       "ticker": "NVDA",
       "mercado": "US",
-      "ultimo": 125.53,
-      "atr": 12.8414,
+      "ultimo": 164.401,
+      "atr": 15.6193,
       "operacao": "nenhuma",
       "votos": {
         "balanco": "a_favor",
-        "analogos": "a_favor",
+        "analogos": "neutro",
         "noticias": null,
         "tendencia": "contra",
         "intradia": "contra"
       },
-      "a_favor": 2,
+      "a_favor": 1,
       "contra": 2,
       "stop": null,
       "alvo": null,
@@ -2924,17 +2790,17 @@
       "razao_ganho_risco": null,
       "prazo_esperado": null,
       "balanco": {
-        "score": 78,
-        "valuation": 8,
+        "score": 72,
+        "valuation": 2,
         "qualidade": 30,
         "seguranca": 25,
         "crescimento": 15,
         "alertas": [],
-        "P/L": 25.2,
-        "EV/EBITDA": 12.2,
+        "P/L": 33.1,
+        "EV/EBITDA": 16.1,
         "ROE": 0.449,
         "div_liq/EBITDA": -0.24,
-        "FCF_yield": 0.052,
+        "FCF_yield": 0.04,
         "fonte": [
           "fonte: Yahoo quoteSummary (NVDA); crescimento é o último ano, não CAGR 5 anos"
         ]
@@ -2944,86 +2810,86 @@
         "n": 15,
         "horizons": {
           "5": {
-            "media": 0.0607,
-            "mediana": 0.0484,
-            "p_positivo": 0.8,
-            "pior": -0.0177,
-            "melhor": 0.2054,
+            "media": 0.0049,
+            "mediana": -0.0058,
+            "p_positivo": 0.4,
+            "pior": -0.1286,
+            "melhor": 0.1416,
             "n": 15
           },
           "10": {
-            "media": 0.076,
-            "mediana": 0.0816,
-            "p_positivo": 0.8,
-            "pior": -0.1095,
-            "melhor": 0.2249,
+            "media": -0.0005,
+            "mediana": -0.0018,
+            "p_positivo": 0.47,
+            "pior": -0.1429,
+            "melhor": 0.1297,
             "n": 15
           },
           "20": {
-            "media": 0.0879,
-            "mediana": 0.0761,
-            "p_positivo": 0.8,
-            "pior": -0.1533,
-            "melhor": 0.2481,
+            "media": 0.0055,
+            "mediana": -0.0035,
+            "p_positivo": 0.4,
+            "pior": -0.1643,
+            "melhor": 0.1592,
             "n": 15
           }
         },
         "examples": [
           {
+            "ativo": "MSFT",
+            "indice": 210,
+            "data": null,
+            "distancia": 0.296,
+            "ret_20d": -0.0203
+          },
+          {
             "ativo": "COIN",
-            "indice": 208,
+            "indice": 221,
             "data": null,
-            "distancia": 0.392,
-            "ret_20d": 0.21
-          },
-          {
-            "ativo": "TSLA",
-            "indice": 326,
-            "data": null,
-            "distancia": 0.431,
-            "ret_20d": 0.1592
-          },
-          {
-            "ativo": "MSTR",
-            "indice": 306,
-            "data": null,
-            "distancia": 0.447,
-            "ret_20d": 0.0736
-          },
-          {
-            "ativo": "MSTR",
-            "indice": 207,
-            "data": null,
-            "distancia": 0.45,
-            "ret_20d": 0.2481
-          },
-          {
-            "ativo": "ETH",
-            "indice": 207,
-            "data": null,
-            "distancia": 0.451,
-            "ret_20d": 0.0052
+            "distancia": 0.463,
+            "ret_20d": -0.0424
           },
           {
             "ativo": "SOL",
-            "indice": 207,
+            "indice": 222,
             "data": null,
-            "distancia": 0.472,
-            "ret_20d": 0.155
+            "distancia": 0.534,
+            "ret_20d": 0.0593
+          },
+          {
+            "ativo": "TSLA",
+            "indice": 323,
+            "data": null,
+            "distancia": 0.542,
+            "ret_20d": 0.1592
+          },
+          {
+            "ativo": "ETH",
+            "indice": 219,
+            "data": null,
+            "distancia": 0.556,
+            "ret_20d": 0.0188
           },
           {
             "ativo": "PLTR",
-            "indice": 207,
+            "indice": 220,
             "data": null,
-            "distancia": 0.474,
-            "ret_20d": 0.2088
+            "distancia": 0.565,
+            "ret_20d": 0.1548
           },
           {
-            "ativo": "AMC",
-            "indice": 202,
+            "ativo": "GME",
+            "indice": 275,
             "data": null,
-            "distancia": 0.486,
-            "ret_20d": -0.1533
+            "distancia": 0.571,
+            "ret_20d": 0.0074
+          },
+          {
+            "ativo": "MSTR",
+            "indice": 221,
+            "data": null,
+            "distancia": 0.573,
+            "ret_20d": -0.0035
           }
         ],
         "state": null
@@ -3031,48 +2897,47 @@
       "noticia": null,
       "tendencia": {
         "direcao": "baixa",
-        "score": 100,
-        "tstat": -8.08,
-        "adx": 50.6,
-        "rompimento": "rompimento_baixa_20d"
+        "score": 85,
+        "tstat": -8.62,
+        "adx": 49.3,
+        "rompimento": "nenhum"
       },
       "intradia": {
         "ticker": "NVDA",
-        "kind": "rompimento_faixa_baixa",
+        "kind": "reversao_vwap",
         "direction": "venda",
-        "last": 125.53,
-        "gap_pct": -0.0166,
-        "vwap": 133.6658,
+        "last": 164.37,
+        "gap_pct": 0.2958,
+        "vwap": 165.3114,
         "above_vwap": false,
         "opening_range": [
-          138.84,
-          143.725
+          156.93,
+          168.75
         ],
-        "volume_ratio": 1.87,
-        "range_vs_atr": 1.5,
-        "stop": 143.73,
-        "target": 112.69,
+        "volume_ratio": 31.25,
+        "range_vs_atr": 0.93,
+        "stop": 171.5,
+        "target": 125.79,
         "notes": [
-          "gap de -1.7% na abertura",
-          "volume 1.9x o normal para este horário",
-          "dia já andou 1.5x o ATR: entrada tardia"
+          "gap de +29.6% na abertura",
+          "volume 31.3x o normal para este horário"
         ]
       }
     },
     {
       "ticker": "PETR4",
       "mercado": "BR",
-      "ultimo": 42.67,
-      "atr": 1.7286,
+      "ultimo": 41.37,
+      "atr": 1.7243,
       "operacao": "nenhuma",
       "votos": {
         "balanco": "a_favor",
-        "analogos": "neutro",
-        "noticias": null,
+        "analogos": "a_favor",
+        "noticias": "neutro",
         "tendencia": "neutro",
         "intradia": "contra"
       },
-      "a_favor": 1,
+      "a_favor": 2,
       "contra": 1,
       "stop": null,
       "alvo": null,
@@ -3089,10 +2954,10 @@
         "crescimento": 15,
         "alertas": [],
         "P/L": 2.2,
-        "EV/EBITDA": 2.0,
+        "EV/EBITDA": 1.9,
         "ROE": 0.486,
         "div_liq/EBITDA": 1.11,
-        "FCF_yield": 0.957,
+        "FCF_yield": 0.987,
         "fonte": [
           "fonte: Yahoo quoteSummary (PETR4.SA); crescimento é o último ano, não CAGR 5 anos"
         ]
@@ -3102,26 +2967,26 @@
         "n": 15,
         "horizons": {
           "5": {
-            "media": 0.0261,
-            "mediana": 0.0396,
+            "media": 0.0194,
+            "mediana": 0.0387,
             "p_positivo": 0.67,
-            "pior": -0.0227,
+            "pior": -0.0503,
             "melhor": 0.0902,
             "n": 15
           },
           "10": {
-            "media": 0.0423,
-            "mediana": 0.0377,
+            "media": 0.0425,
+            "mediana": 0.0457,
             "p_positivo": 0.73,
-            "pior": -0.0722,
+            "pior": -0.0765,
             "melhor": 0.1384,
             "n": 15
           },
           "20": {
-            "media": 0.0426,
-            "mediana": 0.0473,
-            "p_positivo": 0.6,
-            "pior": -0.09,
+            "media": 0.0498,
+            "mediana": 0.0556,
+            "p_positivo": 0.73,
+            "pior": -0.2531,
             "melhor": 0.235,
             "n": 15
           }
@@ -3131,103 +2996,116 @@
             "ativo": "MGLU3",
             "indice": 245,
             "data": null,
-            "distancia": 0.209,
+            "distancia": 0.264,
             "ret_20d": 0.0556
+          },
+          {
+            "ativo": "BBAS3",
+            "indice": 340,
+            "data": null,
+            "distancia": 0.282,
+            "ret_20d": 0.235
           },
           {
             "ativo": "BBAS3",
             "indice": 246,
             "data": null,
-            "distancia": 0.217,
+            "distancia": 0.283,
             "ret_20d": -0.0308
+          },
+          {
+            "ativo": "WEGE3",
+            "indice": 387,
+            "data": null,
+            "distancia": 0.289,
+            "ret_20d": 0.1309
           },
           {
             "ativo": "ITUB4",
             "indice": 345,
             "data": null,
-            "distancia": 0.258,
+            "distancia": 0.302,
             "ret_20d": 0.1285
           },
           {
             "ativo": "WEGE3",
             "indice": 279,
             "data": null,
-            "distancia": 0.268,
+            "distancia": 0.31,
             "ret_20d": 0.0473
-          },
-          {
-            "ativo": "BBAS3",
-            "indice": 340,
-            "data": null,
-            "distancia": 0.278,
-            "ret_20d": 0.235
           },
           {
             "ativo": "VALE3",
             "indice": 380,
             "data": null,
-            "distancia": 0.293,
+            "distancia": 0.32,
             "ret_20d": -0.0457
-          },
-          {
-            "ativo": "ITUB4",
-            "indice": 245,
-            "data": null,
-            "distancia": 0.307,
-            "ret_20d": 0.0639
           },
           {
             "ativo": "BBAS3",
             "indice": 275,
             "data": null,
-            "distancia": 0.312,
+            "distancia": 0.342,
             "ret_20d": -0.065
           }
         ],
         "state": null
       },
-      "noticia": null,
+      "noticia": {
+        "acao": "ignorar",
+        "score": 0.096,
+        "fontes": 1,
+        "manchetes": [
+          "Ajuste fiscal e indefinição sobre Fazenda podem pressionar mercado na volta do feriado",
+          "Petrobras (PETR4), Braskem (BRKM5), GPA (PCAR3), Brava (BRAV3) e mais: Veja os destaques das empresas"
+        ],
+        "evidencia": [
+          "uma única fonte"
+        ]
+      },
       "tendencia": {
         "direcao": "lateral",
-        "score": 20,
-        "tstat": 0.95,
-        "adx": 40.9,
-        "rompimento": "nenhum"
+        "score": 35,
+        "tstat": 0.14,
+        "adx": 41.8,
+        "rompimento": "rompimento_baixa_20d"
       },
       "intradia": {
         "ticker": "PETR4",
         "kind": "rompimento_faixa_baixa",
         "direction": "venda",
-        "last": 42.67,
-        "gap_pct": 0.0097,
-        "vwap": 43.0372,
+        "last": 41.41,
+        "gap_pct": -0.0092,
+        "vwap": 41.8088,
         "above_vwap": false,
         "opening_range": [
-          43.08,
-          43.59
+          41.73,
+          42.29
         ],
-        "volume_ratio": 1.27,
-        "range_vs_atr": 0.69,
-        "stop": 43.59,
-        "target": 40.94,
-        "notes": []
+        "volume_ratio": 2.5,
+        "range_vs_atr": 0.55,
+        "stop": 42.29,
+        "target": 39.69,
+        "notes": [
+          "volume 2.5x o normal para este horário"
+        ]
       }
     },
     {
       "ticker": "PLTR",
       "mercado": "US",
-      "ultimo": 143.49,
-      "atr": 9.8311,
+      "ultimo": 159.24,
+      "atr": 10.1591,
       "operacao": "nenhuma",
       "votos": {
         "balanco": "a_favor",
-        "analogos": "neutro",
+        "analogos": "a_favor",
         "noticias": null,
         "tendencia": "contra",
-        "intradia": "contra"
+        "intradia": "neutro"
       },
-      "a_favor": 1,
-      "contra": 2,
+      "a_favor": 2,
+      "contra": 1,
       "stop": null,
       "alvo": null,
       "porteiro": null,
@@ -3242,11 +3120,11 @@
         "seguranca": 25,
         "crescimento": 15,
         "alertas": [],
-        "P/L": 203.7,
-        "EV/EBITDA": 95.6,
+        "P/L": 226.2,
+        "EV/EBITDA": 106.5,
         "ROE": 0.151,
         "div_liq/EBITDA": -3.08,
-        "FCF_yield": 0.012,
+        "FCF_yield": 0.011,
         "fonte": [
           "fonte: Yahoo quoteSummary (PLTR); crescimento é o último ano, não CAGR 5 anos"
         ]
@@ -3256,86 +3134,86 @@
         "n": 15,
         "horizons": {
           "5": {
-            "media": -0.0118,
-            "mediana": -0.0153,
-            "p_positivo": 0.47,
-            "pior": -0.1949,
-            "melhor": 0.0805,
+            "media": 0.0331,
+            "mediana": 0.0388,
+            "p_positivo": 0.8,
+            "pior": -0.1164,
+            "melhor": 0.1537,
             "n": 15
           },
           "10": {
-            "media": -0.0245,
-            "mediana": 0.0251,
-            "p_positivo": 0.6,
-            "pior": -0.2685,
-            "melhor": 0.0774,
+            "media": 0.0587,
+            "mediana": 0.0743,
+            "p_positivo": 0.73,
+            "pior": -0.1425,
+            "melhor": 0.2034,
             "n": 15
           },
           "20": {
-            "media": -0.0162,
-            "mediana": -0.0097,
-            "p_positivo": 0.4,
-            "pior": -0.2296,
-            "melhor": 0.2245,
+            "media": 0.0774,
+            "mediana": 0.0822,
+            "p_positivo": 0.73,
+            "pior": -0.0493,
+            "melhor": 0.3099,
             "n": 15
           }
         },
         "examples": [
           {
-            "ativo": "PLTR",
-            "indice": 203,
-            "data": "2026-01-30",
-            "distancia": 0.159,
-            "ret_20d": -0.0097
-          },
-          {
-            "ativo": "SOL",
-            "indice": 205,
-            "data": null,
-            "distancia": 0.28,
-            "ret_20d": -0.0125
-          },
-          {
             "ativo": "AMZN",
-            "indice": 212,
+            "indice": 221,
             "data": null,
-            "distancia": 0.29,
-            "ret_20d": 0.0404
+            "distancia": 0.158,
+            "ret_20d": -0.0018
+          },
+          {
+            "ativo": "PLTR",
+            "indice": 205,
+            "data": "2026-02-03",
+            "distancia": 0.173,
+            "ret_20d": -0.0297
           },
           {
             "ativo": "TSLA",
-            "indice": 243,
+            "indice": 246,
             "data": null,
-            "distancia": 0.291,
-            "ret_20d": 0.0584
+            "distancia": 0.184,
+            "ret_20d": 0.0838
           },
           {
-            "ativo": "BTC",
-            "indice": 204,
+            "ativo": "GME",
+            "indice": 287,
             "data": null,
-            "distancia": 0.294,
-            "ret_20d": -0.0216
+            "distancia": 0.214,
+            "ret_20d": 0.0822
           },
           {
-            "ativo": "ETH",
-            "indice": 204,
+            "ativo": "NVDA",
+            "indice": 241,
             "data": null,
-            "distancia": 0.3,
-            "ret_20d": -0.0806
+            "distancia": 0.214,
+            "ret_20d": 0.2162
           },
           {
-            "ativo": "MSFT",
-            "indice": 242,
+            "ativo": "BOVA11",
+            "indice": 280,
             "data": null,
-            "distancia": 0.331,
-            "ret_20d": 0.1907
+            "distancia": 0.24,
+            "ret_20d": -0.0493
           },
           {
-            "ativo": "SOL",
-            "indice": 352,
+            "ativo": "NVDA",
+            "indice": 207,
             "data": null,
-            "distancia": 0.337,
-            "ret_20d": -0.2296
+            "distancia": 0.245,
+            "ret_20d": 0.0346
+          },
+          {
+            "ativo": "TSLA",
+            "indice": 208,
+            "data": null,
+            "distancia": 0.245,
+            "ret_20d": -0.0302
           }
         ],
         "state": null
@@ -3343,47 +3221,46 @@
       "noticia": null,
       "tendencia": {
         "direcao": "baixa",
-        "score": 85,
-        "tstat": -1.98,
-        "adx": 30.1,
-        "rompimento": "rompimento_baixa_20d"
+        "score": 70,
+        "tstat": -2.23,
+        "adx": 29.2,
+        "rompimento": "nenhum"
       },
       "intradia": {
         "ticker": "PLTR",
-        "kind": "rompimento_faixa_baixa",
-        "direction": "venda",
-        "last": 143.49,
-        "gap_pct": -0.0253,
-        "vwap": 146.2878,
-        "above_vwap": false,
+        "kind": "gap_alta",
+        "direction": "neutro",
+        "last": 159.335,
+        "gap_pct": 0.0942,
+        "vwap": 158.0046,
+        "above_vwap": true,
         "opening_range": [
-          147.55,
-          152.18
+          154.57,
+          160.11
         ],
-        "volume_ratio": 2.02,
-        "range_vs_atr": 1.04,
-        "stop": 152.18,
-        "target": 133.66,
+        "volume_ratio": 1.07,
+        "range_vs_atr": 0.65,
+        "stop": null,
+        "target": null,
         "notes": [
-          "gap de -2.5% na abertura",
-          "volume 2.0x o normal para este horário"
+          "gap de +9.4% na abertura"
         ]
       }
     },
     {
       "ticker": "PRIO3",
       "mercado": "BR",
-      "ultimo": 60.2,
-      "atr": 2.7014,
+      "ultimo": 58.45,
+      "atr": 2.7586,
       "operacao": "nenhuma",
       "votos": {
         "balanco": "a_favor",
-        "analogos": "neutro",
+        "analogos": "a_favor",
         "noticias": null,
         "tendencia": "neutro",
         "intradia": "contra"
       },
-      "a_favor": 1,
+      "a_favor": 2,
       "contra": 1,
       "stop": null,
       "alvo": null,
@@ -3399,11 +3276,11 @@
         "seguranca": 22,
         "crescimento": 15,
         "alertas": [],
-        "P/L": 21.2,
+        "P/L": 20.6,
         "EV/EBITDA": 4.0,
         "ROE": 0.075,
         "div_liq/EBITDA": 1.13,
-        "FCF_yield": 0.289,
+        "FCF_yield": 0.298,
         "fonte": [
           "fonte: Yahoo quoteSummary (PRIO3.SA); crescimento é o último ano, não CAGR 5 anos"
         ]
@@ -3413,25 +3290,25 @@
         "n": 15,
         "horizons": {
           "5": {
-            "media": 0.0172,
-            "mediana": 0.0112,
-            "p_positivo": 0.67,
-            "pior": -0.0594,
-            "melhor": 0.1335,
+            "media": 0.0162,
+            "mediana": 0.0173,
+            "p_positivo": 0.6,
+            "pior": -0.0429,
+            "melhor": 0.1151,
             "n": 15
           },
           "10": {
             "media": 0.0346,
-            "mediana": 0.0299,
+            "mediana": 0.0336,
             "p_positivo": 0.6,
-            "pior": -0.0621,
+            "pior": -0.0508,
             "melhor": 0.2151,
             "n": 15
           },
           "20": {
-            "media": 0.0325,
-            "mediana": 0.0342,
-            "p_positivo": 0.53,
+            "media": 0.0494,
+            "mediana": 0.0489,
+            "p_positivo": 0.67,
             "pior": -0.141,
             "melhor": 0.2188,
             "n": 15
@@ -3440,59 +3317,59 @@
         "examples": [
           {
             "ativo": "MGLU3",
-            "indice": 242,
+            "indice": 240,
             "data": null,
-            "distancia": 0.083,
-            "ret_20d": -0.0046
+            "distancia": 0.112,
+            "ret_20d": 0.1211
           },
           {
             "ativo": "WEGE3",
-            "indice": 270,
+            "indice": 268,
             "data": null,
-            "distancia": 0.131,
-            "ret_20d": -0.0703
+            "distancia": 0.152,
+            "ret_20d": -0.0307
           },
           {
             "ativo": "ITUB4",
-            "indice": 348,
+            "indice": 347,
             "data": null,
-            "distancia": 0.138,
-            "ret_20d": 0.0743
-          },
-          {
-            "ativo": "WEGE3",
-            "indice": 229,
-            "data": null,
-            "distancia": 0.171,
-            "ret_20d": 0.0771
+            "distancia": 0.168,
+            "ret_20d": 0.1149
           },
           {
             "ativo": "BBAS3",
-            "indice": 244,
+            "indice": 245,
             "data": null,
-            "distancia": 0.178,
-            "ret_20d": -0.0239
-          },
-          {
-            "ativo": "VALE3",
-            "indice": 332,
-            "data": null,
-            "distancia": 0.209,
-            "ret_20d": 0.043
+            "distancia": 0.179,
+            "ret_20d": -0.0053
           },
           {
             "ativo": "VALE3",
             "indice": 373,
             "data": null,
-            "distancia": 0.215,
+            "distancia": 0.206,
             "ret_20d": -0.141
           },
           {
-            "ativo": "ITUB4",
-            "indice": 244,
+            "ativo": "WEGE3",
+            "indice": 229,
             "data": null,
-            "distancia": 0.225,
-            "ret_20d": 0.0489
+            "distancia": 0.208,
+            "ret_20d": 0.0771
+          },
+          {
+            "ativo": "BBAS3",
+            "indice": 271,
+            "data": null,
+            "distancia": 0.213,
+            "ret_20d": -0.1162
+          },
+          {
+            "ativo": "BBAS3",
+            "indice": 347,
+            "data": null,
+            "distancia": 0.236,
+            "ret_20d": 0.2188
           }
         ],
         "state": null
@@ -3500,28 +3377,32 @@
       "noticia": null,
       "tendencia": {
         "direcao": "alta",
-        "score": 45,
-        "tstat": 2.36,
-        "adx": 26.0,
+        "score": 30,
+        "tstat": 1.75,
+        "adx": 26.6,
         "rompimento": "nenhum"
       },
       "intradia": {
         "ticker": "PRIO3",
         "kind": "rompimento_faixa_baixa",
         "direction": "venda",
-        "last": 60.2,
-        "gap_pct": 0.0036,
-        "vwap": 60.3847,
+        "last": 58.45,
+        "gap_pct": -0.0162,
+        "vwap": 59.2117,
         "above_vwap": false,
         "opening_range": [
-          61.55,
-          62.29
+          58.83,
+          59.84
         ],
-        "volume_ratio": 1.4,
-        "range_vs_atr": 1.0,
-        "stop": 62.29,
-        "target": 57.5,
-        "notes": []
+        "volume_ratio": 1.96,
+        "range_vs_atr": 0.83,
+        "stop": 59.84,
+        "target": 55.69,
+        "notes": [
+          "gap de -1.6% na abertura",
+          "proxy (ADR/EWZ) na véspera: -6.5%",
+          "volume 2.0x o normal para este horário"
+        ]
       }
     },
     {
@@ -3535,9 +3416,9 @@
         "analogos": "a_favor",
         "noticias": null,
         "tendencia": "contra",
-        "intradia": "a_favor"
+        "intradia": "neutro"
       },
-      "a_favor": 2,
+      "a_favor": 1,
       "contra": 1,
       "stop": null,
       "alvo": null,
@@ -3646,36 +3527,37 @@
       },
       "intradia": {
         "ticker": "SOL",
-        "kind": "rompimento_faixa_alta",
-        "direction": "compra",
-        "last": 72.36,
-        "gap_pct": 0.0,
-        "vwap": 71.3912,
-        "above_vwap": true,
+        "kind": "nenhum",
+        "direction": "neutro",
+        "last": 72.57,
+        "gap_pct": -0.0003,
+        "vwap": 75.3337,
+        "above_vwap": false,
         "opening_range": [
           70.48,
-          70.7
+          70.69
         ],
-        "volume_ratio": 0.45,
-        "range_vs_atr": 1.19,
-        "stop": 70.48,
-        "target": 74.65,
+        "volume_ratio": 2.26,
+        "range_vs_atr": 3.73,
+        "stop": null,
+        "target": null,
         "notes": [
-          "volume fraco: setup sem confirmação"
+          "volume 2.3x o normal para este horário",
+          "dia já andou 3.7x o ATR: entrada tardia"
         ]
       }
     },
     {
       "ticker": "TSLA",
       "mercado": "US",
-      "ultimo": 345.82,
-      "atr": 19.3614,
+      "ultimo": 386.41,
+      "atr": 22.0786,
       "operacao": "nenhuma",
       "votos": {
         "balanco": "contra",
-        "analogos": "a_favor",
+        "analogos": "neutro",
         "noticias": null,
-        "tendencia": "neutro",
+        "tendencia": "a_favor",
         "intradia": "contra"
       },
       "a_favor": 1,
@@ -3694,11 +3576,11 @@
         "seguranca": 25,
         "crescimento": 0,
         "alertas": [],
-        "P/L": 360.3,
-        "EV/EBITDA": 136.0,
+        "P/L": 402.5,
+        "EV/EBITDA": 152.3,
         "ROE": 0.042,
         "div_liq/EBITDA": -2.95,
-        "FCF_yield": 0.014,
+        "FCF_yield": 0.012,
         "fonte": [
           "fonte: Yahoo quoteSummary (TSLA); crescimento é o último ano, não CAGR 5 anos"
         ]
@@ -3708,86 +3590,86 @@
         "n": 15,
         "horizons": {
           "5": {
-            "media": 0.0134,
-            "mediana": 0.0157,
-            "p_positivo": 0.73,
-            "pior": -0.1633,
-            "melhor": 0.1537,
+            "media": -0.003,
+            "mediana": 0.0006,
+            "p_positivo": 0.53,
+            "pior": -0.1108,
+            "melhor": 0.0742,
             "n": 15
           },
           "10": {
-            "media": 0.0157,
-            "mediana": 0.0173,
-            "p_positivo": 0.53,
-            "pior": -0.1285,
-            "melhor": 0.1794,
+            "media": -0.0031,
+            "mediana": -0.002,
+            "p_positivo": 0.4,
+            "pior": -0.0956,
+            "melhor": 0.1321,
             "n": 15
           },
           "20": {
-            "media": 0.0315,
-            "mediana": 0.0353,
-            "p_positivo": 0.73,
-            "pior": -0.2045,
-            "melhor": 0.3088,
+            "media": -0.0053,
+            "mediana": 0.003,
+            "p_positivo": 0.53,
+            "pior": -0.2535,
+            "melhor": 0.1327,
             "n": 15
           }
         },
         "examples": [
           {
             "ativo": "TSLA",
-            "indice": 319,
-            "data": "2026-07-20",
-            "distancia": 0.098,
-            "ret_20d": -0.0819
-          },
-          {
-            "ativo": "MSFT",
-            "indice": 294,
-            "data": null,
-            "distancia": 0.139,
-            "ret_20d": 0.0017
-          },
-          {
-            "ativo": "TSLA",
-            "indice": 293,
-            "data": "2026-06-10",
-            "distancia": 0.145,
-            "ret_20d": 0.0686
-          },
-          {
-            "ativo": "KNRI11",
-            "indice": 304,
-            "data": null,
-            "distancia": 0.149,
-            "ret_20d": 0.0353
-          },
-          {
-            "ativo": "NVDA",
-            "indice": 222,
-            "data": null,
-            "distancia": 0.158,
-            "ret_20d": -0.0546
+            "indice": 305,
+            "data": "2026-06-29",
+            "distancia": 0.072,
+            "ret_20d": -0.2535
           },
           {
             "ativo": "GME",
+            "indice": 218,
+            "data": null,
+            "distancia": 0.105,
+            "ret_20d": -0.0258
+          },
+          {
+            "ativo": "MXRF11",
+            "indice": 242,
+            "data": null,
+            "distancia": 0.132,
+            "ret_20d": 0.0247
+          },
+          {
+            "ativo": "AAPL",
+            "indice": 307,
+            "data": null,
+            "distancia": 0.132,
+            "ret_20d": 0.1327
+          },
+          {
+            "ativo": "MXRF11",
+            "indice": 276,
+            "data": null,
+            "distancia": 0.14,
+            "ret_20d": -0.0262
+          },
+          {
+            "ativo": "AAPL",
+            "indice": 333,
+            "data": null,
+            "distancia": 0.14,
+            "ret_20d": 0.0212
+          },
+          {
+            "ativo": "KNRI11",
             "indice": 284,
             "data": null,
-            "distancia": 0.165,
-            "ret_20d": 0.0037
+            "distancia": 0.158,
+            "ret_20d": -0.0937
           },
           {
-            "ativo": "MSFT",
-            "indice": 315,
+            "ativo": "XPML11",
+            "indice": 358,
             "data": null,
-            "distancia": 0.167,
-            "ret_20d": 0.3088
-          },
-          {
-            "ativo": "BOVA11",
-            "indice": 342,
-            "data": null,
-            "distancia": 0.168,
-            "ret_20d": 0.1226
+            "distancia": 0.16,
+            "ret_20d": 0.0506
           }
         ],
         "state": null
@@ -3795,47 +3677,202 @@
       "noticia": null,
       "tendencia": {
         "direcao": "alta",
-        "score": 25,
-        "tstat": 4.1,
-        "adx": 11.7,
+        "score": 65,
+        "tstat": 3.92,
+        "adx": 11.3,
         "rompimento": "nenhum"
       },
       "intradia": {
         "ticker": "TSLA",
-        "kind": "rompimento_faixa_baixa",
+        "kind": "reversao_vwap",
         "direction": "venda",
-        "last": 345.82,
-        "gap_pct": -0.0112,
-        "vwap": 356.5036,
+        "last": 386.12,
+        "gap_pct": 0.0828,
+        "vwap": 389.7376,
         "above_vwap": false,
         "opening_range": [
-          365.14,
-          373.43
+          372.5,
+          389.59
         ],
-        "volume_ratio": 1.55,
-        "range_vs_atr": 1.53,
-        "stop": 373.43,
-        "target": 326.46,
+        "volume_ratio": 8.75,
+        "range_vs_atr": 0.97,
+        "stop": 393.83,
+        "target": 346.17,
         "notes": [
-          "dia já andou 1.5x o ATR: entrada tardia"
+          "gap de +8.3% na abertura",
+          "volume 8.7x o normal para este horário"
         ]
+      }
+    },
+    {
+      "ticker": "VALE3",
+      "mercado": "BR",
+      "ultimo": 58.61,
+      "atr": 1.7771,
+      "operacao": "nenhuma",
+      "votos": {
+        "balanco": "neutro",
+        "analogos": "neutro",
+        "noticias": null,
+        "tendencia": "contra",
+        "intradia": "neutro"
+      },
+      "a_favor": 0,
+      "contra": 1,
+      "stop": null,
+      "alvo": null,
+      "porteiro": null,
+      "ganho_pct": 0,
+      "risco_pct": 0,
+      "razao_ganho_risco": null,
+      "prazo_esperado": null,
+      "balanco": {
+        "score": 54,
+        "valuation": 18,
+        "qualidade": 14,
+        "seguranca": 22,
+        "crescimento": 0,
+        "alertas": [],
+        "P/L": 106.1,
+        "EV/EBITDA": 4.8,
+        "ROE": 0.012,
+        "div_liq/EBITDA": 1.2,
+        "FCF_yield": 0.2,
+        "fonte": [
+          "fonte: Yahoo quoteSummary (VALE3.SA); crescimento é o último ano, não CAGR 5 anos"
+        ]
+      },
+      "analogos": {
+        "ticker": "VALE3",
+        "n": 15,
+        "horizons": {
+          "5": {
+            "media": 0.0342,
+            "mediana": 0.0362,
+            "p_positivo": 0.8,
+            "pior": -0.0699,
+            "melhor": 0.1563,
+            "n": 15
+          },
+          "10": {
+            "media": 0.0661,
+            "mediana": 0.0683,
+            "p_positivo": 0.73,
+            "pior": -0.1448,
+            "melhor": 0.4014,
+            "n": 15
+          },
+          "20": {
+            "media": 0.0333,
+            "mediana": 0.01,
+            "p_positivo": 0.53,
+            "pior": -0.2141,
+            "melhor": 0.4183,
+            "n": 15
+          }
+        },
+        "examples": [
+          {
+            "ativo": "BBAS3",
+            "indice": 342,
+            "data": null,
+            "distancia": 0.215,
+            "ret_20d": 0.2279
+          },
+          {
+            "ativo": "WEGE3",
+            "indice": 278,
+            "data": null,
+            "distancia": 0.303,
+            "ret_20d": 0.0116
+          },
+          {
+            "ativo": "MGLU3",
+            "indice": 246,
+            "data": null,
+            "distancia": 0.309,
+            "ret_20d": 0.01
+          },
+          {
+            "ativo": "BBAS3",
+            "indice": 266,
+            "data": null,
+            "distancia": 0.344,
+            "ret_20d": -0.0507
+          },
+          {
+            "ativo": "ITUB4",
+            "indice": 346,
+            "data": null,
+            "distancia": 0.382,
+            "ret_20d": 0.1161
+          },
+          {
+            "ativo": "VALE3",
+            "indice": 372,
+            "data": "2026-09-29",
+            "distancia": 0.396,
+            "ret_20d": -0.1182
+          },
+          {
+            "ativo": "WEGE3",
+            "indice": 387,
+            "data": null,
+            "distancia": 0.419,
+            "ret_20d": 0.1309
+          },
+          {
+            "ativo": "MGLU3",
+            "indice": 347,
+            "data": null,
+            "distancia": 0.456,
+            "ret_20d": 0.4183
+          }
+        ],
+        "state": null
+      },
+      "noticia": null,
+      "tendencia": {
+        "direcao": "baixa",
+        "score": 65,
+        "tstat": -25.62,
+        "adx": 18.4,
+        "rompimento": "nenhum"
+      },
+      "intradia": {
+        "ticker": "VALE3",
+        "kind": "nenhum",
+        "direction": "neutro",
+        "last": 58.6,
+        "gap_pct": -0.0061,
+        "vwap": 58.6501,
+        "above_vwap": false,
+        "opening_range": [
+          57.85,
+          58.28
+        ],
+        "volume_ratio": 0.73,
+        "range_vs_atr": 0.86,
+        "stop": null,
+        "target": null,
+        "notes": []
       }
     },
     {
       "ticker": "WEGE3",
       "mercado": "BR",
-      "ultimo": 51.13,
-      "atr": 1.6093,
+      "ultimo": 49.99,
+      "atr": 1.6357,
       "operacao": "nenhuma",
       "votos": {
         "balanco": "neutro",
         "analogos": "neutro",
         "noticias": null,
         "tendencia": "neutro",
-        "intradia": "contra"
+        "intradia": "neutro"
       },
       "a_favor": 0,
-      "contra": 1,
+      "contra": 0,
       "stop": null,
       "alvo": null,
       "porteiro": null,
@@ -3850,11 +3887,11 @@
         "seguranca": 25,
         "crescimento": 5,
         "alertas": [],
-        "P/L": 33.6,
-        "EV/EBITDA": 24.8,
+        "P/L": 32.9,
+        "EV/EBITDA": 24.3,
         "ROE": 0.32,
         "div_liq/EBITDA": -0.21,
-        "FCF_yield": 0.028,
+        "FCF_yield": 0.029,
         "fonte": [
           "fonte: Yahoo quoteSummary (WEGE3.SA); crescimento é o último ano, não CAGR 5 anos"
         ]
@@ -3864,86 +3901,86 @@
         "n": 15,
         "horizons": {
           "5": {
-            "media": -0.0066,
-            "mediana": 0.0172,
-            "p_positivo": 0.53,
-            "pior": -0.1115,
-            "melhor": 0.1138,
+            "media": -0.0004,
+            "mediana": -0.0199,
+            "p_positivo": 0.47,
+            "pior": -0.0736,
+            "melhor": 0.1006,
             "n": 15
           },
           "10": {
-            "media": -0.0015,
-            "mediana": -0.0085,
+            "media": -0.0003,
+            "mediana": -0.0557,
             "p_positivo": 0.47,
-            "pior": -0.1021,
-            "melhor": 0.1475,
+            "pior": -0.0929,
+            "melhor": 0.1492,
             "n": 15
           },
           "20": {
-            "media": -0.0203,
-            "mediana": -0.0245,
+            "media": 0.0015,
+            "mediana": -0.0259,
             "p_positivo": 0.4,
             "pior": -0.1474,
-            "melhor": 0.1731,
+            "melhor": 0.1808,
             "n": 15
           }
         },
         "examples": [
           {
             "ativo": "WEGE3",
-            "indice": 342,
-            "data": "2026-08-17",
-            "distancia": 0.132,
-            "ret_20d": 0.0602
-          },
-          {
-            "ativo": "WEGE3",
-            "indice": 257,
-            "data": "2026-04-15",
-            "distancia": 0.153,
-            "ret_20d": -0.1367
-          },
-          {
-            "ativo": "BBAS3",
-            "indice": 212,
-            "data": null,
-            "distancia": 0.168,
-            "ret_20d": 0.0333
-          },
-          {
-            "ativo": "MGLU3",
-            "indice": 222,
-            "data": null,
-            "distancia": 0.176,
-            "ret_20d": -0.1422
-          },
-          {
-            "ativo": "BBAS3",
-            "indice": 368,
-            "data": null,
-            "distancia": 0.182,
-            "ret_20d": 0.0789
-          },
-          {
-            "ativo": "ITUB4",
-            "indice": 361,
-            "data": null,
-            "distancia": 0.195,
-            "ret_20d": 0.1731
+            "indice": 260,
+            "data": "2026-04-20",
+            "distancia": 0.146,
+            "ret_20d": -0.1217
           },
           {
             "ativo": "PRIO3",
-            "indice": 355,
+            "indice": 356,
             "data": null,
-            "distancia": 0.2,
-            "ret_20d": 0.0246
+            "distancia": 0.182,
+            "ret_20d": 0.0658
+          },
+          {
+            "ativo": "BBAS3",
+            "indice": 369,
+            "data": null,
+            "distancia": 0.182,
+            "ret_20d": 0.1476
+          },
+          {
+            "ativo": "WEGE3",
+            "indice": 340,
+            "data": "2026-08-13",
+            "distancia": 0.184,
+            "ret_20d": 0.084
           },
           {
             "ativo": "BBAS3",
             "indice": 260,
             "data": null,
-            "distancia": 0.203,
+            "distancia": 0.19,
             "ret_20d": -0.1474
+          },
+          {
+            "ativo": "MGLU3",
+            "indice": 223,
+            "data": null,
+            "distancia": 0.21,
+            "ret_20d": -0.0632
+          },
+          {
+            "ativo": "ITUB4",
+            "indice": 262,
+            "data": null,
+            "distancia": 0.215,
+            "ret_20d": -0.1075
+          },
+          {
+            "ativo": "PETR4",
+            "indice": 347,
+            "data": null,
+            "distancia": 0.224,
+            "ret_20d": 0.1482
           }
         ],
         "state": null
@@ -3952,46 +3989,44 @@
       "tendencia": {
         "direcao": "baixa",
         "score": 25,
-        "tstat": -2.41,
-        "adx": 14.3,
+        "tstat": -2.45,
+        "adx": 13.9,
         "rompimento": "nenhum"
       },
       "intradia": {
         "ticker": "WEGE3",
-        "kind": "rompimento_faixa_baixa",
-        "direction": "venda",
-        "last": 51.13,
-        "gap_pct": 0.0004,
-        "vwap": 51.4681,
+        "kind": "nenhum",
+        "direction": "neutro",
+        "last": 49.97,
+        "gap_pct": 0.0036,
+        "vwap": 50.0203,
         "above_vwap": false,
         "opening_range": [
-          51.38,
-          52.31
+          49.81,
+          51.22
         ],
-        "volume_ratio": 1.66,
-        "range_vs_atr": 1.27,
-        "stop": 52.31,
-        "target": 49.52,
-        "notes": [
-          "dia já andou 1.3x o ATR: entrada tardia"
-        ]
+        "volume_ratio": 1.64,
+        "range_vs_atr": 1.02,
+        "stop": null,
+        "target": null,
+        "notes": []
       }
     },
     {
       "ticker": "XPML11",
       "mercado": "BR",
-      "ultimo": 81.99,
-      "atr": 2.7743,
+      "ultimo": 82.9,
+      "atr": 2.88,
       "operacao": "nenhuma",
       "votos": {
         "balanco": null,
         "analogos": "a_favor",
         "noticias": null,
         "tendencia": "contra",
-        "intradia": "contra"
+        "intradia": "a_favor"
       },
-      "a_favor": 1,
-      "contra": 2,
+      "a_favor": 2,
+      "contra": 1,
       "stop": null,
       "alvo": null,
       "porteiro": null,
@@ -4005,27 +4040,27 @@
         "n": 15,
         "horizons": {
           "5": {
-            "media": 0.0452,
+            "media": 0.0389,
             "mediana": 0.0293,
             "p_positivo": 0.8,
             "pior": -0.006,
-            "melhor": 0.2054,
+            "melhor": 0.1427,
             "n": 15
           },
           "10": {
-            "media": 0.0561,
-            "mediana": 0.0479,
+            "media": 0.0543,
+            "mediana": 0.0503,
             "p_positivo": 0.87,
             "pior": -0.0541,
-            "melhor": 0.182,
+            "melhor": 0.1731,
             "n": 15
           },
           "20": {
-            "media": 0.075,
+            "media": 0.0731,
             "mediana": 0.0669,
             "p_positivo": 0.8,
             "pior": -0.0712,
-            "melhor": 0.2245,
+            "melhor": 0.255,
             "n": 15
           }
         },
@@ -4034,57 +4069,57 @@
             "ativo": "MSFT",
             "indice": 207,
             "data": null,
-            "distancia": 0.161,
+            "distancia": 0.131,
             "ret_20d": 0.0388
           },
           {
             "ativo": "TSLA",
             "indice": 324,
             "data": null,
-            "distancia": 0.185,
+            "distancia": 0.188,
             "ret_20d": 0.1285
           },
           {
             "ativo": "MSFT",
             "indice": 303,
             "data": null,
-            "distancia": 0.308,
+            "distancia": 0.312,
             "ret_20d": 0.0818
-          },
-          {
-            "ativo": "ETH",
-            "indice": 209,
-            "data": null,
-            "distancia": 0.335,
-            "ret_20d": -0.0712
           },
           {
             "ativo": "PLTR",
             "indice": 219,
             "data": null,
-            "distancia": 0.341,
+            "distancia": 0.36,
             "ret_20d": 0.2013
           },
           {
-            "ativo": "GME",
-            "indice": 340,
-            "data": null,
-            "distancia": 0.352,
-            "ret_20d": 0.2245
-          },
-          {
-            "ativo": "SOL",
+            "ativo": "ETH",
             "indice": 209,
             "data": null,
             "distancia": 0.363,
-            "ret_20d": 0.0669
+            "ret_20d": -0.0712
           },
           {
             "ativo": "BTC",
             "indice": 219,
             "data": null,
-            "distancia": 0.364,
+            "distancia": 0.369,
             "ret_20d": -0.0103
+          },
+          {
+            "ativo": "GME",
+            "indice": 285,
+            "data": null,
+            "distancia": 0.373,
+            "ret_20d": 0.0401
+          },
+          {
+            "ativo": "GME",
+            "indice": 342,
+            "data": null,
+            "distancia": 0.376,
+            "ret_20d": 0.255
           }
         ],
         "state": null
@@ -4092,30 +4127,28 @@
       "noticia": null,
       "tendencia": {
         "direcao": "baixa",
-        "score": 100,
-        "tstat": -4.71,
-        "adx": 42.2,
-        "rompimento": "rompimento_baixa_20d"
+        "score": 85,
+        "tstat": -5.33,
+        "adx": 44.1,
+        "rompimento": "nenhum"
       },
       "intradia": {
         "ticker": "XPML11",
-        "kind": "rompimento_faixa_baixa",
-        "direction": "venda",
-        "last": 81.99,
-        "gap_pct": 0.0025,
-        "vwap": 82.8443,
-        "above_vwap": false,
+        "kind": "rompimento_faixa_alta",
+        "direction": "compra",
+        "last": 82.89,
+        "gap_pct": 0.0,
+        "vwap": 82.7774,
+        "above_vwap": true,
         "opening_range": [
-          84.92,
-          86.13
+          80.33,
+          82.0
         ],
-        "volume_ratio": 1.19,
-        "range_vs_atr": 1.7,
-        "stop": 86.13,
-        "target": 79.22,
-        "notes": [
-          "dia já andou 1.7x o ATR: entrada tardia"
-        ]
+        "volume_ratio": 1.32,
+        "range_vs_atr": 1.16,
+        "stop": 80.33,
+        "target": 85.77,
+        "notes": []
       }
     }
   ],
@@ -4124,21 +4157,21 @@
     "BR": {
       "regime": "baixa",
       "modo": "defensivo",
-      "preco_vs_mm50": -0.1061,
-      "preco_vs_mm200": -0.0808,
-      "drawdown_120d": -0.2041,
-      "tstat_60d": -1.94,
-      "vix": 31.209999084472656,
+      "preco_vs_mm50": -0.1103,
+      "preco_vs_mm200": -0.0867,
+      "drawdown_120d": -0.2095,
+      "tstat_60d": -2.47,
+      "vix": 26.90999984741211,
       "regras": "sem compras novas em ações; caixa 50%+; proteção (dólar, ouro, puts quando liberadas); vendas a favor da tendência com risco definido"
     },
     "US": {
       "regime": "lateral",
       "modo": "neutro",
-      "preco_vs_mm50": -0.0926,
-      "preco_vs_mm200": -0.0586,
-      "drawdown_120d": -0.1146,
-      "tstat_60d": -4.85,
-      "vix": 31.209999084472656,
+      "preco_vs_mm50": -0.0484,
+      "preco_vs_mm200": -0.014,
+      "drawdown_120d": -0.0724,
+      "tstat_60d": -5.23,
+      "vix": 26.90999984741211,
       "regras": "metade do tamanho; preferir operações curtas e FIIs de papel; caixa 30%+"
     },
     "cripto": {
@@ -4148,7 +4181,7 @@
       "preco_vs_mm200": -0.1543,
       "drawdown_120d": -0.2936,
       "tstat_60d": -13.25,
-      "vix": 31.209999084472656,
+      "vix": 26.90999984741211,
       "regras": "sem compras novas em ações; caixa 50%+; proteção (dólar, ouro, puts quando liberadas); vendas a favor da tendência com risco definido"
     }
   },
@@ -4195,23 +4228,25 @@
       "condicao": "volta a ser ordem quando: regressão de 60 dias deixar de ser negativa (t-stat > -1) OU estabilização (fechamento acima da máxima de 3 dias e da média de 5) E 2 camadas a favor",
       "porteiro": {
         "aprovada": false,
-        "motivos": [],
+        "motivos": [
+          "análogos com n=7 < 8: não contam como evidência"
+        ],
         "bloqueios": [
-          "VIX 31.2 >= 25: sem compras novas (regra de pânico)",
+          "VIX 26.9 >= 25: sem compras novas (regra de pânico)",
           "regime defensivo: compra só com tendência própria de alta ou estabilização",
-          "votação insuficiente: 0 a favor, 1 contra (precisa 2+ a favor e 0 contra)"
+          "votação insuficiente: 0 a favor, 0 contra (precisa 2+ a favor e 0 contra)"
         ],
         "estabilizacao": false,
-        "stop_estrutural": 49.5207,
+        "stop_estrutural": 48.3543,
         "votos": {
           "tendencia": "neutro",
           "analogos": "neutro",
           "balanco": "neutro",
           "noticias": null,
-          "intradia": "contra"
+          "intradia": "neutro"
         },
         "tendencia": "baixa 25",
-        "ultimo": 51.13
+        "ultimo": 49.99
       }
     },
     {
@@ -4250,11 +4285,11 @@
           "análogos com n=7 < 8: não contam como evidência"
         ],
         "bloqueios": [
-          "VIX 31.2 >= 25: sem compras novas (regra de pânico)",
+          "VIX 26.9 >= 25: sem compras novas (regra de pânico)",
           "contra a tendência (baixa 85) sem estabilização",
           "composto de risco cripto negativo (ibit_saindo, proxies_em_baixa) sem estabilização",
           "regime defensivo: compra só com tendência própria de alta ou estabilização",
-          "votação insuficiente: 1 a favor, 1 contra (precisa 2+ a favor e 0 contra)"
+          "votação insuficiente: 0 a favor, 2 contra (precisa 2+ a favor e 0 contra)"
         ],
         "estabilizacao": false,
         "stop_estrutural": 58817.9256,
@@ -4263,7 +4298,7 @@
           "analogos": "neutro",
           "balanco": null,
           "noticias": "neutro",
-          "intradia": "a_favor"
+          "intradia": "contra"
         },
         "tendencia": "baixa 85",
         "ultimo": 61172.0158
@@ -4301,21 +4336,21 @@
         "aprovada": false,
         "motivos": [],
         "bloqueios": [
-          "VIX 31.2 >= 25: sem compras novas (regra de pânico)",
+          "VIX 26.9 >= 25: sem compras novas (regra de pânico)",
           "regime defensivo: compra só com tendência própria de alta ou estabilização",
           "votação insuficiente: 2 a favor, 1 contra (precisa 2+ a favor e 0 contra)"
         ],
         "estabilizacao": false,
-        "stop_estrutural": 40.9414,
+        "stop_estrutural": 39.6457,
         "votos": {
           "tendencia": "neutro",
           "analogos": "a_favor",
           "balanco": "a_favor",
-          "noticias": null,
+          "noticias": "neutro",
           "intradia": "contra"
         },
-        "tendencia": "lateral 20",
-        "ultimo": 42.67
+        "tendencia": "lateral 35",
+        "ultimo": 41.37
       }
     },
     {
@@ -4347,26 +4382,24 @@
       "prazo_esperado": "4 a 10 semanas para R$ 9,50; rendimento mensal começa no mês seguinte à compra",
       "porteiro": {
         "aprovada": false,
-        "motivos": [
-          "análogos com n=7 < 8: não contam como evidência"
-        ],
+        "motivos": [],
         "bloqueios": [
-          "VIX 31.2 >= 25: sem compras novas (regra de pânico)",
-          "contra a tendência (baixa 85) sem estabilização",
+          "VIX 26.9 >= 25: sem compras novas (regra de pânico)",
+          "contra a tendência (baixa 100) sem estabilização",
           "regime defensivo: compra só com tendência própria de alta ou estabilização",
-          "votação insuficiente: 0 a favor, 2 contra (precisa 2+ a favor e 0 contra)"
+          "votação insuficiente: 0 a favor, 1 contra (precisa 2+ a favor e 0 contra)"
         ],
         "estabilizacao": false,
-        "stop_estrutural": 8.2771,
+        "stop_estrutural": 8.0707,
         "votos": {
           "tendencia": "contra",
-          "analogos": "contra",
+          "analogos": "neutro",
           "balanco": null,
           "noticias": null,
-          "intradia": "contra"
+          "intradia": "neutro"
         },
-        "tendencia": "baixa 85",
-        "ultimo": 8.5
+        "tendencia": "baixa 100",
+        "ultimo": 8.3
       }
     },
     {
@@ -4395,11 +4428,11 @@
           "análogos com n=7 < 8: não contam como evidência"
         ],
         "bloqueios": [
-          "VIX 31.2 >= 25: sem compras novas (regra de pânico)",
+          "VIX 26.9 >= 25: sem compras novas (regra de pânico)",
           "contra a tendência (baixa 85) sem estabilização",
           "composto de risco cripto negativo (ibit_saindo, proxies_em_baixa) sem estabilização",
           "regime defensivo: compra só com tendência própria de alta ou estabilização",
-          "votação insuficiente: 1 a favor, 1 contra (precisa 2+ a favor e 0 contra)"
+          "votação insuficiente: 0 a favor, 2 contra (precisa 2+ a favor e 0 contra)"
         ],
         "estabilizacao": false,
         "stop_estrutural": 58817.9256,
@@ -4408,7 +4441,7 @@
           "analogos": "neutro",
           "balanco": null,
           "noticias": "neutro",
-          "intradia": "a_favor"
+          "intradia": "contra"
         },
         "tendencia": "baixa 85",
         "ultimo": 61172.0158
