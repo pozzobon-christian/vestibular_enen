@@ -45,12 +45,12 @@
           "análogos com n=7 < 8: não contam como evidência"
         ],
         "bloqueios": [
-          "VIX 26.5 >= 25: sem compras novas (regra de pânico)",
+          "VIX 27.2 >= 25: sem compras novas (regra de pânico)",
           "regime defensivo: compra só com tendência própria de alta ou estabilização",
           "votação insuficiente: 0 a favor, 0 contra (precisa 2+ a favor e 0 contra)"
         ],
         "estabilizacao": false,
-        "stop_estrutural": 48.2743,
+        "stop_estrutural": 48.5043,
         "votos": {
           "tendencia": "neutro",
           "analogos": "neutro",
@@ -59,7 +59,7 @@
           "intradia": "neutro"
         },
         "tendencia": "baixa 25",
-        "ultimo": 49.91
+        "ultimo": 50.03
       }
     },
     {
@@ -99,7 +99,7 @@
           "análogos com n=7 < 8: não contam como evidência"
         ],
         "bloqueios": [
-          "VIX 26.5 >= 25: sem compras novas (regra de pânico)",
+          "VIX 27.2 >= 25: sem compras novas (regra de pânico)",
           "votação insuficiente: 0 a favor, 2 contra (precisa 2+ a favor e 0 contra)"
         ],
         "estabilizacao": true,
@@ -147,12 +147,12 @@
         "aprovada": false,
         "motivos": [],
         "bloqueios": [
-          "VIX 26.5 >= 25: sem compras novas (regra de pânico)",
+          "VIX 27.2 >= 25: sem compras novas (regra de pânico)",
           "regime defensivo: compra só com tendência própria de alta ou estabilização",
           "votação insuficiente: 2 a favor, 1 contra (precisa 2+ a favor e 0 contra)"
         ],
         "estabilizacao": false,
-        "stop_estrutural": 39.5757,
+        "stop_estrutural": 38.9236,
         "votos": {
           "tendencia": "neutro",
           "analogos": "a_favor",
@@ -160,8 +160,8 @@
           "noticias": "neutro",
           "intradia": "contra"
         },
-        "tendencia": "lateral 35",
-        "ultimo": 41.3
+        "tendencia": "lateral 75",
+        "ultimo": 40.52
       }
     },
     {
@@ -193,24 +193,26 @@
       "prazo_esperado": "4 a 10 semanas para R$ 9,50; rendimento mensal começa no mês seguinte à compra",
       "porteiro": {
         "aprovada": false,
-        "motivos": [],
+        "motivos": [
+          "análogos com n=7 < 8: não contam como evidência"
+        ],
         "bloqueios": [
-          "VIX 26.5 >= 25: sem compras novas (regra de pânico)",
-          "contra a tendência (baixa 100) sem estabilização",
+          "VIX 27.2 >= 25: sem compras novas (regra de pânico)",
+          "contra a tendência (baixa 85) sem estabilização",
           "regime defensivo: compra só com tendência própria de alta ou estabilização",
           "votação insuficiente: 0 a favor, 1 contra (precisa 2+ a favor e 0 contra)"
         ],
         "estabilizacao": false,
-        "stop_estrutural": 8.0907,
+        "stop_estrutural": 8.1521,
         "votos": {
           "tendencia": "contra",
-          "analogos": "neutro",
+          "analogos": "contra",
           "balanco": null,
           "noticias": null,
           "intradia": "neutro"
         },
-        "tendencia": "baixa 100",
-        "ultimo": 8.32
+        "tendencia": "baixa 85",
+        "ultimo": 8.36
       }
     },
     {
@@ -240,7 +242,7 @@
           "análogos com n=7 < 8: não contam como evidência"
         ],
         "bloqueios": [
-          "VIX 26.5 >= 25: sem compras novas (regra de pânico)",
+          "VIX 27.2 >= 25: sem compras novas (regra de pânico)",
           "votação insuficiente: 0 a favor, 2 contra (precisa 2+ a favor e 0 contra)"
         ],
         "estabilizacao": true,
