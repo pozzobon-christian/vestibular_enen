@@ -1,20 +1,5 @@
 [
   {
-    "data": "2026-11-23",
-    "hora_brt": "08:25",
-    "evento": "Boletim Focus (expectativas Selic, IPCA, câmbio)",
-    "fonte": "Banco Central",
-    "categoria": "macro_br",
-    "ativos": [
-      "BOVA11",
-      "BRL=X"
-    ],
-    "impacto": "medio",
-    "o_que_esperar": "Revisões de Selic e inflação ajustam juros futuros na abertura.",
-    "preparacao": "Ler antes das 10h; muda a leitura de bancos e FIIs.",
-    "confirmar": false
-  },
-  {
     "data": "2026-11-25",
     "hora_brt": "09:00",
     "evento": "IPCA-15 (prévia da inflação)",
