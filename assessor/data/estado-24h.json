@@ -1,17 +1,14 @@
 {
-  "gerado_em": "2026-11-24T20:51:23.813836+00:00",
+  "gerado_em": "2026-11-25T08:59:05.057843+00:00",
   "sessoes": {
-    "agora_brasilia": "2026-11-24 17:51",
+    "agora_brasilia": "2026-11-25 05:59",
     "cripto": true,
-    "b3_aberta": true,
-    "eua_abertos": true,
+    "b3_aberta": false,
+    "eua_abertos": false,
     "fim_de_semana": false
   },
   "tarefas_agora": [
-    "cripto",
-    "b3_intradia",
-    "efeito_noite",
-    "eua"
+    "cripto"
   ],
   "plano_24h": [
     {
@@ -50,21 +47,21 @@
   "sinais_hoje": {
     "btc_tendencia_50": {
       "posicao": "caixa",
-      "preco": 61228,
-      "media": 76184,
-      "distancia_pct": -19.6
+      "preco": 59759,
+      "media": 75664,
+      "distancia_pct": -21.0
     },
     "btc_tendencia_100": {
       "posicao": "caixa",
-      "preco": 61228,
-      "media": 77605,
-      "distancia_pct": -21.1
+      "preco": 59759,
+      "media": 77574,
+      "distancia_pct": -23.0
     },
     "btc_tendencia_200": {
       "posicao": "caixa",
-      "preco": 61228,
-      "media": 72240,
-      "distancia_pct": -15.2
+      "preco": 59759,
+      "media": 72138,
+      "distancia_pct": -17.2
     },
     "bova11_momentum_vs_cdi": {
       "posicao": "CDI",
