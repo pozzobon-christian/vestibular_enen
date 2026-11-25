@@ -45,12 +45,12 @@
           "análogos com n=7 < 8: não contam como evidência"
         ],
         "bloqueios": [
-          "VIX 27.7 >= 25: sem compras novas (regra de pânico)",
+          "VIX 28.4 >= 25: sem compras novas (regra de pânico)",
           "regime defensivo: compra só com tendência própria de alta ou estabilização",
           "votação insuficiente: 0 a favor, 0 contra (precisa 2+ a favor e 0 contra)"
         ],
         "estabilizacao": false,
-        "stop_estrutural": 48.6743,
+        "stop_estrutural": 48.1279,
         "votos": {
           "tendencia": "neutro",
           "analogos": "neutro",
@@ -58,8 +58,8 @@
           "noticias": null,
           "intradia": "neutro"
         },
-        "tendencia": "baixa 25",
-        "ultimo": 50.2
+        "tendencia": "baixa 40",
+        "ultimo": 49.64
       }
     },
     {
@@ -98,11 +98,11 @@
           "análogos com n=7 < 8: não contam como evidência"
         ],
         "bloqueios": [
-          "VIX 27.7 >= 25: sem compras novas (regra de pânico)",
+          "VIX 28.4 >= 25: sem compras novas (regra de pânico)",
           "contra a tendência (baixa 85) sem estabilização",
           "composto de risco cripto negativo (ibit_saindo, proxies_em_baixa) sem estabilização",
           "regime defensivo: compra só com tendência própria de alta ou estabilização",
-          "votação insuficiente: 0 a favor, 1 contra (precisa 2+ a favor e 0 contra)"
+          "votação insuficiente: 1 a favor, 1 contra (precisa 2+ a favor e 0 contra)"
         ],
         "estabilizacao": false,
         "stop_estrutural": 58204.9852,
@@ -111,7 +111,7 @@
           "analogos": "neutro",
           "balanco": null,
           "noticias": "neutro",
-          "intradia": "neutro"
+          "intradia": "a_favor"
         },
         "tendencia": "baixa 85",
         "ultimo": 59758.9205
@@ -149,21 +149,22 @@
         "aprovada": false,
         "motivos": [],
         "bloqueios": [
-          "VIX 27.7 >= 25: sem compras novas (regra de pânico)",
+          "VIX 28.4 >= 25: sem compras novas (regra de pânico)",
+          "contra a tendência (baixa 70) sem estabilização",
           "regime defensivo: compra só com tendência própria de alta ou estabilização",
-          "votação insuficiente: 2 a favor, 1 contra (precisa 2+ a favor e 0 contra)"
+          "votação insuficiente: 3 a favor, 1 contra (precisa 2+ a favor e 0 contra)"
         ],
         "estabilizacao": false,
-        "stop_estrutural": 38.9486,
+        "stop_estrutural": 39.8207,
         "votos": {
-          "tendencia": "neutro",
+          "tendencia": "contra",
           "analogos": "a_favor",
           "balanco": "a_favor",
           "noticias": "neutro",
-          "intradia": "contra"
+          "intradia": "a_favor"
         },
-        "tendencia": "lateral 75",
-        "ultimo": 40.55
+        "tendencia": "baixa 70",
+        "ultimo": 41.21
       }
     },
     {
@@ -199,22 +200,22 @@
           "análogos com n=7 < 8: não contam como evidência"
         ],
         "bloqueios": [
-          "VIX 27.7 >= 25: sem compras novas (regra de pânico)",
+          "VIX 28.4 >= 25: sem compras novas (regra de pânico)",
           "contra a tendência (baixa 85) sem estabilização",
           "regime defensivo: compra só com tendência própria de alta ou estabilização",
-          "votação insuficiente: 0 a favor, 1 contra (precisa 2+ a favor e 0 contra)"
+          "votação insuficiente: 1 a favor, 1 contra (precisa 2+ a favor e 0 contra)"
         ],
         "estabilizacao": false,
-        "stop_estrutural": 8.1621,
+        "stop_estrutural": 8.26,
         "votos": {
           "tendencia": "contra",
           "analogos": "contra",
           "balanco": null,
           "noticias": null,
-          "intradia": "neutro"
+          "intradia": "a_favor"
         },
         "tendencia": "baixa 85",
-        "ultimo": 8.37
+        "ultimo": 8.48
       }
     },
     {
@@ -243,11 +244,11 @@
           "análogos com n=7 < 8: não contam como evidência"
         ],
         "bloqueios": [
-          "VIX 27.7 >= 25: sem compras novas (regra de pânico)",
+          "VIX 28.4 >= 25: sem compras novas (regra de pânico)",
           "contra a tendência (baixa 85) sem estabilização",
           "composto de risco cripto negativo (ibit_saindo, proxies_em_baixa) sem estabilização",
           "regime defensivo: compra só com tendência própria de alta ou estabilização",
-          "votação insuficiente: 0 a favor, 1 contra (precisa 2+ a favor e 0 contra)"
+          "votação insuficiente: 1 a favor, 1 contra (precisa 2+ a favor e 0 contra)"
         ],
         "estabilizacao": false,
         "stop_estrutural": 58204.9852,
@@ -256,7 +257,7 @@
           "analogos": "neutro",
           "balanco": null,
           "noticias": "neutro",
-          "intradia": "neutro"
+          "intradia": "a_favor"
         },
         "tendencia": "baixa 85",
         "ultimo": 59758.9205
