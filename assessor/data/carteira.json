@@ -45,21 +45,21 @@
           "análogos com n=7 < 8: não contam como evidência"
         ],
         "bloqueios": [
-          "VIX 26.9 >= 25: sem compras novas (regra de pânico)",
+          "VIX 26.8 >= 25: sem compras novas (regra de pânico)",
           "regime defensivo: compra só com tendência própria de alta ou estabilização",
-          "votação insuficiente: 0 a favor, 0 contra (precisa 2+ a favor e 0 contra)"
+          "votação insuficiente: 1 a favor, 0 contra (precisa 2+ a favor e 0 contra)"
         ],
         "estabilizacao": false,
-        "stop_estrutural": 48.1379,
+        "stop_estrutural": 48.57,
         "votos": {
           "tendencia": "neutro",
           "analogos": "neutro",
           "balanco": "neutro",
-          "noticias": null,
-          "intradia": "neutro"
+          "noticias": "neutro",
+          "intradia": "a_favor"
         },
-        "tendencia": "baixa 40",
-        "ultimo": 49.65
+        "tendencia": "baixa 25",
+        "ultimo": 50.6
       }
     },
     {
@@ -98,7 +98,7 @@
           "análogos com n=7 < 8: não contam como evidência"
         ],
         "bloqueios": [
-          "VIX 26.9 >= 25: sem compras novas (regra de pânico)",
+          "VIX 26.8 >= 25: sem compras novas (regra de pânico)",
           "contra a tendência (baixa 85) sem estabilização",
           "composto de risco cripto negativo (ibit_saindo, proxies_em_baixa) sem estabilização",
           "regime defensivo: compra só com tendência própria de alta ou estabilização",
@@ -147,24 +147,24 @@
       "proximo_movimento": "Reavaliar após o resultado da NVDA (17/11) e com o VIX abaixo de 22. Enquanto o Ibovespa estiver em modo defensivo e com rebaixamento do Morgan Stanley no radar, PETR4 só com estabilização.",
       "porteiro": {
         "aprovada": false,
-        "motivos": [],
-        "bloqueios": [
-          "VIX 26.9 >= 25: sem compras novas (regra de pânico)",
-          "contra a tendência (baixa 70) sem estabilização",
-          "regime defensivo: compra só com tendência própria de alta ou estabilização",
-          "votação insuficiente: 3 a favor, 1 contra (precisa 2+ a favor e 0 contra)"
+        "motivos": [
+          "contra a tendência, mas com estabilização confirmada: tamanho reduzido à metade"
         ],
-        "estabilizacao": false,
-        "stop_estrutural": 39.9707,
+        "bloqueios": [
+          "VIX 26.8 >= 25: sem compras novas (regra de pânico)",
+          "votação insuficiente: 2 a favor, 1 contra (precisa 2+ a favor e 0 contra)"
+        ],
+        "estabilizacao": true,
+        "stop_estrutural": 40.41,
         "votos": {
           "tendencia": "contra",
           "analogos": "a_favor",
           "balanco": "a_favor",
-          "noticias": "neutro",
-          "intradia": "a_favor"
+          "noticias": null,
+          "intradia": "neutro"
         },
-        "tendencia": "baixa 70",
-        "ultimo": 41.36
+        "tendencia": "baixa 75",
+        "ultimo": 42.83
       }
     },
     {
@@ -197,16 +197,14 @@
       "porteiro": {
         "aprovada": false,
         "motivos": [
-          "análogos com n=7 < 8: não contam como evidência"
+          "contra a tendência, mas com estabilização confirmada: tamanho reduzido à metade"
         ],
         "bloqueios": [
-          "VIX 26.9 >= 25: sem compras novas (regra de pânico)",
-          "contra a tendência (baixa 85) sem estabilização",
-          "regime defensivo: compra só com tendência própria de alta ou estabilização",
-          "votação insuficiente: 1 a favor, 1 contra (precisa 2+ a favor e 0 contra)"
+          "VIX 26.8 >= 25: sem compras novas (regra de pânico)",
+          "votação insuficiente: 1 a favor, 2 contra (precisa 2+ a favor e 0 contra)"
         ],
-        "estabilizacao": false,
-        "stop_estrutural": 8.2529,
+        "estabilizacao": true,
+        "stop_estrutural": 8.26,
         "votos": {
           "tendencia": "contra",
           "analogos": "contra",
@@ -215,7 +213,7 @@
           "intradia": "a_favor"
         },
         "tendencia": "baixa 85",
-        "ultimo": 8.46
+        "ultimo": 8.7
       }
     },
     {
@@ -244,7 +242,7 @@
           "análogos com n=7 < 8: não contam como evidência"
         ],
         "bloqueios": [
-          "VIX 26.9 >= 25: sem compras novas (regra de pânico)",
+          "VIX 26.8 >= 25: sem compras novas (regra de pânico)",
           "contra a tendência (baixa 85) sem estabilização",
           "composto de risco cripto negativo (ibit_saindo, proxies_em_baixa) sem estabilização",
           "regime defensivo: compra só com tendência própria de alta ou estabilização",
