@@ -1,37 +1,5 @@
 [
   {
-    "data": "2026-11-25",
-    "hora_brt": "09:00",
-    "evento": "IPCA-15 (prévia da inflação)",
-    "fonte": "IBGE",
-    "categoria": "macro_br",
-    "ativos": [
-      "BOVA11",
-      "MXRF11"
-    ],
-    "impacto": "medio",
-    "o_que_esperar": "Antecipa o IPCA; mesmo efeito, menor.",
-    "preparacao": "Ler antes das 10h.",
-    "confirmar": true
-  },
-  {
-    "data": "2026-11-25",
-    "hora_brt": "12:30",
-    "evento": "Estoques de petróleo dos EUA (EIA)",
-    "fonte": "EIA",
-    "categoria": "commodities",
-    "ativos": [
-      "PETR4",
-      "PRIO3",
-      "CL=F",
-      "BZ=F"
-    ],
-    "impacto": "medio",
-    "o_que_esperar": "Queda de estoque acima do esperado = petróleo sobe.",
-    "preparacao": "Evitar abrir petróleo 30 min antes.",
-    "confirmar": false
-  },
-  {
     "data": "2026-11-26",
     "hora_brt": "",
     "evento": "Caged: emprego formal no Brasil",
@@ -496,6 +464,21 @@
     "impacto": "medio",
     "o_que_esperar": "Queda de estoque acima do esperado = petróleo sobe.",
     "preparacao": "Evitar abrir petróleo 30 min antes.",
+    "confirmar": false
+  },
+  {
+    "data": "2026-12-31",
+    "hora_brt": "10:30",
+    "evento": "Pedidos de seguro-desemprego dos EUA",
+    "fonte": "Dept. of Labor",
+    "categoria": "macro_us",
+    "ativos": [
+      "SPY",
+      "QQQ"
+    ],
+    "impacto": "baixo",
+    "o_que_esperar": "Surpresas grandes mexem com Treasury e dólar.",
+    "preparacao": "Só observar.",
     "confirmar": false
   }
 ]
