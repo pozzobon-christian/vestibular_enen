@@ -1,10 +1,10 @@
 # Monitor de influenciadores
 
-Atualizado em 2026-11-27 08:58 UTC
+Atualizado em 2026-11-27 20:50 UTC
 
 | Posts | Autores | Campanhas | Sinais | Preços |
 |---|---|---|---|---|
-| 4551 | 1778 | 227 | 3761 | 20490 |
+| 4557 | 1778 | 227 | 3988 | 20521 |
 
 ## Campanhas nos últimos 30 dias
 
@@ -130,9 +130,9 @@ Atualizado em 2026-11-27 08:58 UTC
 | NVDA | venda | 16 | stocktwits:bechoosy | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.40 |
 | SPCX | compra | 6 | stocktwits:thenew_mr_investor | ignorar | observar; sem ordem | 0.30 |
 | PLTR | compra | 3 | stocktwits:chantal1 | inicio | entrar a favor (compra) com tamanho pelo RiskBudget | 0.40 |
-| AMD | compra | 3 | stocktwits:theunmaker | inicio | entrar a favor (compra) com tamanho pelo RiskBudget | 0.40 |
+| AMD | compra | 3 | stocktwits:theunmaker | inicio | entrar a favor (compra) com tamanho pelo RiskBudget | 0.50 |
 | INTC | compra | 3 | stocktwits:smellmyfingers | inicio | entrar a favor (compra) com tamanho pelo RiskBudget | 0.40 |
-| AAPL | compra | 11 | stocktwits:smarttrade99 | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
+| AAPL | compra | 11 | stocktwits:smarttrade99 | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.40 |
 | AAPL | venda | 20 | stocktwits:gta_terminal | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
 | SPY | compra | 4 | stocktwits:kansascash | inicio | entrar a favor (compra) com tamanho pelo RiskBudget | 0.40 |
 | TSLA | compra | 14 | stocktwits:kansascash | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
@@ -141,12 +141,12 @@ Atualizado em 2026-11-27 08:58 UTC
 | ANT | venda | 3 | stocktwits:jtsxlr | inicio | entrar a favor (venda) com tamanho pelo RiskBudget | 0.40 |
 | SOXL | venda | 3 | stocktwits:jtsxlr | inicio | entrar a favor (venda) com tamanho pelo RiskBudget | 0.40 |
 | BTC | compra | 14 | stocktwits:zenagain | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
-| NVDA | compra | 16 | stocktwits:nelsonwaters0110 | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
+| NVDA | compra | 16 | stocktwits:nelsonwaters0110 | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.40 |
 | BTC | venda | 18 | stocktwits:equityclock | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.60 |
 | MSTR | venda | 3 | stocktwits:equityclock | inicio | entrar a favor (venda) com tamanho pelo RiskBudget | 0.50 |
 | ANT | compra | 6 | stocktwits:sniperpro | ignorar | observar; sem ordem | 0.30 |
 | SPCX | compra | 3 | stocktwits:gridirongainz | inicio | entrar a favor (compra) com tamanho pelo RiskBudget | 0.40 |
-| MU | compra | 3 | stocktwits:gridirongainz | inicio | entrar a favor (compra) com tamanho pelo RiskBudget | 0.40 |
+| MU | compra | 3 | stocktwits:gridirongainz | inicio | entrar a favor (compra) com tamanho pelo RiskBudget | 0.50 |
 | SPY | venda | 13 | stocktwits:kansascash | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.40 |
 | QQQ | venda | 8 | stocktwits:bugdug | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
 | AMD | venda | 4 | stocktwits:futon | inicio | entrar a favor (venda) com tamanho pelo RiskBudget | 0.40 |
@@ -185,7 +185,7 @@ Atualizado em 2026-11-27 08:58 UTC
 | AAPL | compra | 12 | stocktwits:learnedpatience | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
 | AAPL | venda | 9 | stocktwits:keir09 | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
 | TSLA | compra | 18 | stocktwits:bullishaaff | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.40 |
-| NVDA | compra | 29 | stocktwits:honest_abe | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
+| NVDA | compra | 29 | stocktwits:honest_abe | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.40 |
 | QQQ | compra | 7 | stocktwits:honest_abe | ignorar | observar; sem ordem | 0.30 |
 | TSLA | venda | 10 | stocktwits:openclassaction2 | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
 | SPY | compra | 9 | stocktwits:pptrader3 | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
@@ -199,13 +199,13 @@ Atualizado em 2026-11-27 08:58 UTC
 | MSTR | venda | 3 | stocktwits:buhbye | inicio | entrar a favor (venda) com tamanho pelo RiskBudget | 0.60 |
 | AMD | compra | 3 | stocktwits:aa906814 | inicio | entrar a favor (compra) com tamanho pelo RiskBudget | 0.40 |
 | AAPL | venda | 21 | stocktwits:aldogg | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
-| AAPL | compra | 14 | stocktwits:supergreentoday | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.40 |
-| MU | compra | 3 | stocktwits:cngllc | inicio | entrar a favor (compra) com tamanho pelo RiskBudget | 0.40 |
-| SOXL | compra | 4 | stocktwits:cngllc | inicio | entrar a favor (compra) com tamanho pelo RiskBudget | 0.40 |
+| AAPL | compra | 14 | stocktwits:supergreentoday | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.50 |
+| MU | compra | 3 | stocktwits:cngllc | inicio | entrar a favor (compra) com tamanho pelo RiskBudget | 0.50 |
+| SOXL | compra | 4 | stocktwits:cngllc | inicio | entrar a favor (compra) com tamanho pelo RiskBudget | 0.50 |
 | MSFT | compra | 3 | stocktwits:1929steam | inicio | entrar a favor (compra) com tamanho pelo RiskBudget | 0.40 |
 | TSLA | compra | 19 | stocktwits:jp4025 | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.40 |
 | QQQ | compra | 7 | stocktwits:itsallaboutheoptions | ignorar | observar; sem ordem | 0.30 |
-| NVDA | compra | 25 | stocktwits:pptrader3 | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.30 |
+| NVDA | compra | 25 | stocktwits:pptrader3 | lotada | não entrar; se posicionado, realizar 50% e subir o stop para o custo | 0.40 |
 | TSLA | venda | 6 | stocktwits:justwin100 | ignorar | observar; sem ordem | 0.30 |
 | SPY | compra | 5 | stocktwits:bigbreakingwire | ignorar | observar; sem ordem | 0.30 |
 | ETH | compra | 3 | stocktwits:weili5454 | inicio | entrar a favor (compra) com tamanho pelo RiskBudget | 0.40 |
@@ -261,19 +261,19 @@ Atualizado em 2026-11-27 08:58 UTC
 
 ## Autores mais ativos (total coletado)
 
-- youtube:professorbaroni: 172 posts
+- youtube:professorbaroni: 174 posts
 - stocktwits:openclassaction2: 125 posts
-- youtube:oprimorico: 63 posts
+- youtube:oprimorico: 64 posts
 - youtube:tiofiis: 60 posts
-- youtube:primopobre: 58 posts
+- youtube:primopobre: 59 posts
 - youtube:brunoperini: 57 posts
 - youtube:economistasincero: 56 posts
 - youtube:nathfinancas: 56 posts
-- youtube:humphreytalks: 51 posts
+- youtube:humphreytalks: 52 posts
 - youtube:alexandrewinkler: 50 posts
 - stocktwits:jaredsotken: 46 posts
 - youtube:investidorsardinha: 44 posts
-- youtube:faveladoinvestidor: 42 posts
+- youtube:faveladoinvestidor: 43 posts
 - youtube:curingaeconomico: 41 posts
 - youtube:criptomaniacos: 37 posts
 
@@ -295,7 +295,7 @@ Atualizado em 2026-11-27 08:58 UTC
 - ANT: 56
 - AMZN: 48
 
-## Última execução: 2026-11-27T08:58:48.807859+00:00 (254 posts novos, 16 erros)
+## Última execução: 2026-11-27T20:50:55.667391+00:00 (189 posts novos, 20 erros)
 
 - x:pablospyer x:@pablospyer: RuntimeError: defina X_BEARER_TOKEN (API v2 do X)
 - reddit:farialimabets reddit:farialimabets: HTTPError: 403 Client Error: Blocked for url: https://www.reddit.com/r/farialimabets/new.json?limit=50
@@ -312,4 +312,8 @@ Atualizado em 2026-11-27 08:58 UTC
 - reddit:wallstreetbets reddit:wallstreetbets: HTTPError: 403 Client Error: Blocked for url: https://www.reddit.com/r/wallstreetbets/new.json?limit=50
 - reddit:stocks reddit:stocks: HTTPError: 403 Client Error: Blocked for url: https://www.reddit.com/r/stocks/new.json?limit=50
 - reddit:options reddit:options: HTTPError: 403 Client Error: Blocked for url: https://www.reddit.com/r/options/new.json?limit=50
+- stocktwits:stocktwits-watch stocktwits:AAPL: HTTPError: 403 Client Error: Forbidden for url: https://api.stocktwits.com/api/2/streams/symbol/AAPL.json
+- stocktwits:stocktwits-watch stocktwits:TSLA: HTTPError: 403 Client Error: Forbidden for url: https://api.stocktwits.com/api/2/streams/symbol/TSLA.json
+- stocktwits:stocktwits-watch stocktwits:NVDA: HTTPError: 403 Client Error: Forbidden for url: https://api.stocktwits.com/api/2/streams/symbol/NVDA.json
+- stocktwits:stocktwits-watch stocktwits:BTC.X: HTTPError: 403 Client Error: Forbidden for url: https://api.stocktwits.com/api/2/streams/symbol/BTC.X.json
 - noticias CVM Notícias: ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))

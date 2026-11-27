@@ -1,7 +1,7 @@
 {
-  "gerado_em": "2026-11-27T08:58:49.257941+00:00",
+  "gerado_em": "2026-11-27T20:50:56.104422+00:00",
   "janela_dias": 30,
-  "posts_na_janela": 4255,
+  "posts_na_janela": 4259,
   "campanhas": [
     {
       "ativo": "BTC",
@@ -3073,7 +3073,7 @@
       ],
       "fase": "inicio",
       "acao": "entrar a favor (compra) com tamanho pelo RiskBudget",
-      "confianca": 0.4
+      "confianca": 0.5
     },
     {
       "ativo": "INTC",
@@ -3115,7 +3115,7 @@
       ],
       "fase": "lotada",
       "acao": "não entrar; se posicionado, realizar 50% e subir o stop para o custo",
-      "confianca": 0.3
+      "confianca": 0.4
     },
     {
       "ativo": "AAPL",
@@ -3355,7 +3355,7 @@
       ],
       "fase": "lotada",
       "acao": "não entrar; se posicionado, realizar 50% e subir o stop para o custo",
-      "confianca": 0.3
+      "confianca": 0.4
     },
     {
       "ativo": "BTC",
@@ -3458,7 +3458,7 @@
       ],
       "fase": "inicio",
       "acao": "entrar a favor (compra) com tamanho pelo RiskBudget",
-      "confianca": 0.4
+      "confianca": 0.5
     },
     {
       "ativo": "SPY",
@@ -4440,7 +4440,7 @@
       ],
       "fase": "lotada",
       "acao": "não entrar; se posicionado, realizar 50% e subir o stop para o custo",
-      "confianca": 0.3
+      "confianca": 0.4
     },
     {
       "ativo": "QQQ",
@@ -4770,7 +4770,7 @@
       ],
       "fase": "lotada",
       "acao": "não entrar; se posicionado, realizar 50% e subir o stop para o custo",
-      "confianca": 0.4
+      "confianca": 0.5
     },
     {
       "ativo": "MU",
@@ -4787,7 +4787,7 @@
       ],
       "fase": "inicio",
       "acao": "entrar a favor (compra) com tamanho pelo RiskBudget",
-      "confianca": 0.4
+      "confianca": 0.5
     },
     {
       "ativo": "SOXL",
@@ -4805,7 +4805,7 @@
       ],
       "fase": "inicio",
       "acao": "entrar a favor (compra) com tamanho pelo RiskBudget",
-      "confianca": 0.4
+      "confianca": 0.5
     },
     {
       "ativo": "MSFT",
@@ -4915,7 +4915,7 @@
       ],
       "fase": "lotada",
       "acao": "não entrar; se posicionado, realizar 50% e subir o stop para o custo",
-      "confianca": 0.3
+      "confianca": 0.4
     },
     {
       "ativo": "TSLA",
@@ -6111,11 +6111,11 @@
   ],
   "autores_com_historico": 1106,
   "resumo_db": {
-    "posts": 4551,
+    "posts": 4557,
     "autores": 1778,
     "campanhas": 227,
-    "sinais": 3761,
-    "precos": 20490,
-    "ultima_execucao": "2026-11-27T08:58:48.807859+00:00"
+    "sinais": 3988,
+    "precos": 20521,
+    "ultima_execucao": "2026-11-27T20:50:55.667391+00:00"
   }
 }

@@ -40,7 +40,27 @@
         "Crie uma ordem de venda limitada (alvo) a R$ 70,91, quantidade 2, validade 'até cancelar' (se a corretora não aceitar as duas juntas, deixe só o stop e me avise).",
         "Me mande preço executado e taxa para eu registrar."
       ],
-      "proximo_movimento": "Se subir 1x ATR (R$ 64,70), subir o stop para o preço de entrada (risco zero). No alvo, vender tudo e o lucro fica como lucro retido. Se o petróleo despencar após a OPEP+ na segunda, sair na abertura sem esperar o stop."
+      "proximo_movimento": "Se subir 1x ATR (R$ 64,70), subir o stop para o preço de entrada (risco zero). No alvo, vender tudo e o lucro fica como lucro retido. Se o petróleo despencar após a OPEP+ na segunda, sair na abertura sem esperar o stop.",
+      "porteiro": {
+        "aprovada": false,
+        "motivos": [
+          "análogos com n=7 < 8: não contam como evidência"
+        ],
+        "bloqueios": [
+          "votação insuficiente para venda: 0 contra, 1 a favor"
+        ],
+        "estabilizacao": false,
+        "stop_estrutural": 64.0271,
+        "votos": {
+          "tendencia": "neutro",
+          "analogos": "a_favor",
+          "balanco": "a_favor",
+          "noticias": null,
+          "intradia": "neutro"
+        },
+        "tendencia": "lateral 45",
+        "ultimo": 61.8
+      }
     },
     {
       "data": "em observação (bloqueada pelo porteiro)",
@@ -75,21 +95,24 @@
       "condicao": "volta a ser ordem quando: regressão de 60 dias deixar de ser negativa (t-stat > -1) OU estabilização (fechamento acima da máxima de 3 dias e da média de 5) E 2 camadas a favor",
       "porteiro": {
         "aprovada": false,
-        "motivos": [],
-        "bloqueios": [
-          "votação insuficiente: 1 a favor, 0 contra (precisa 2+ a favor e 0 contra)"
+        "motivos": [
+          "análogos com n=7 < 8: não contam como evidência"
         ],
-        "estabilizacao": true,
-        "stop_estrutural": 48.57,
+        "bloqueios": [
+          "regime defensivo: compra só com tendência própria de alta ou estabilização",
+          "votação insuficiente: 0 a favor, 1 contra (precisa 2+ a favor e 0 contra)"
+        ],
+        "estabilizacao": false,
+        "stop_estrutural": 48.4307,
         "votos": {
           "tendencia": "neutro",
           "analogos": "neutro",
           "balanco": "neutro",
-          "noticias": "neutro",
-          "intradia": "a_favor"
+          "noticias": null,
+          "intradia": "contra"
         },
-        "tendencia": "baixa 25",
-        "ultimo": 51.36
+        "tendencia": "baixa 35",
+        "ultimo": 50.04
       }
     },
     {
@@ -131,7 +154,7 @@
           "contra a tendência (baixa 85) sem estabilização",
           "composto de risco cripto negativo (ibit_saindo, proxies_em_baixa) sem estabilização",
           "regime defensivo: compra só com tendência própria de alta ou estabilização",
-          "votação insuficiente: 1 a favor, 1 contra (precisa 2+ a favor e 0 contra)"
+          "votação insuficiente: 0 a favor, 2 contra (precisa 2+ a favor e 0 contra)"
         ],
         "estabilizacao": false,
         "stop_estrutural": 59106.7585,
@@ -140,7 +163,7 @@
           "analogos": "neutro",
           "balanco": null,
           "noticias": "neutro",
-          "intradia": "a_favor"
+          "intradia": "contra"
         },
         "tendencia": "baixa 85",
         "ultimo": 60510.3979
@@ -176,23 +199,23 @@
       "proximo_movimento": "Reavaliar após o resultado da NVDA (17/11) e com o VIX abaixo de 22. Enquanto o Ibovespa estiver em modo defensivo e com rebaixamento do Morgan Stanley no radar, PETR4 só com estabilização.",
       "porteiro": {
         "aprovada": false,
-        "motivos": [
-          "contra a tendência, mas com estabilização confirmada: tamanho reduzido à metade"
-        ],
+        "motivos": [],
         "bloqueios": [
-          "votação insuficiente: 3 a favor, 1 contra (precisa 2+ a favor e 0 contra)"
+          "contra a tendência (baixa 75) sem estabilização",
+          "regime defensivo: compra só com tendência própria de alta ou estabilização",
+          "votação insuficiente: 2 a favor, 2 contra (precisa 2+ a favor e 0 contra)"
         ],
-        "estabilizacao": true,
+        "estabilizacao": false,
         "stop_estrutural": 40.41,
         "votos": {
           "tendencia": "contra",
           "analogos": "a_favor",
           "balanco": "a_favor",
-          "noticias": null,
-          "intradia": "a_favor"
+          "noticias": "neutro",
+          "intradia": "contra"
         },
         "tendencia": "baixa 75",
-        "ultimo": 43.19
+        "ultimo": 42.18
       }
     },
     {
@@ -228,19 +251,19 @@
           "contra a tendência, mas com estabilização confirmada: tamanho reduzido à metade"
         ],
         "bloqueios": [
-          "votação insuficiente: 1 a favor, 2 contra (precisa 2+ a favor e 0 contra)"
+          "votação insuficiente: 1 a favor, 1 contra (precisa 2+ a favor e 0 contra)"
         ],
         "estabilizacao": true,
         "stop_estrutural": 8.26,
         "votos": {
           "tendencia": "contra",
-          "analogos": "contra",
+          "analogos": "neutro",
           "balanco": null,
           "noticias": null,
           "intradia": "a_favor"
         },
         "tendencia": "baixa 85",
-        "ultimo": 8.69
+        "ultimo": 8.96
       }
     },
     {
@@ -272,7 +295,7 @@
           "contra a tendência (baixa 85) sem estabilização",
           "composto de risco cripto negativo (ibit_saindo, proxies_em_baixa) sem estabilização",
           "regime defensivo: compra só com tendência própria de alta ou estabilização",
-          "votação insuficiente: 1 a favor, 1 contra (precisa 2+ a favor e 0 contra)"
+          "votação insuficiente: 0 a favor, 2 contra (precisa 2+ a favor e 0 contra)"
         ],
         "estabilizacao": false,
         "stop_estrutural": 59106.7585,
@@ -281,7 +304,7 @@
           "analogos": "neutro",
           "balanco": null,
           "noticias": "neutro",
-          "intradia": "a_favor"
+          "intradia": "contra"
         },
         "tendencia": "baixa 85",
         "ultimo": 60510.3979
