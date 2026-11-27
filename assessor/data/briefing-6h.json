@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-11-26T20:50:49.462859+00:00",
+  "gerado_em": "2026-11-27T08:58:49.921853+00:00",
   "janela_horas": 14.0,
   "regime": {
     "BOVA11": {
@@ -9,7 +9,7 @@
       "preco_vs_mm200": -0.0267,
       "drawdown_120d": -0.1586,
       "tstat_60d": -3.91,
-      "vix": 26.799999237060547,
+      "vix": 24.649999618530273,
       "regras": "sem compras novas em ações; caixa 50%+; proteção (dólar, ouro, puts quando liberadas); vendas a favor da tendência com risco definido"
     },
     "SPY": {
@@ -19,7 +19,7 @@
       "preco_vs_mm200": -0.0225,
       "drawdown_120d": -0.0801,
       "tstat_60d": -6.21,
-      "vix": 26.799999237060547,
+      "vix": 24.649999618530273,
       "regras": "metade do tamanho; preferir operações curtas e FIIs de papel; caixa 30%+"
     }
   },
@@ -27,98 +27,98 @@
     {
       "simbolo": "ES=F",
       "nome": "S&P 500 futuro",
-      "ultimo": 7234.5,
-      "data": "2026-11-26",
-      "var_1d": 0.0054,
-      "var_5d": 0.0052
+      "ultimo": 7335.0,
+      "data": "2026-11-27",
+      "var_1d": 0.0139,
+      "var_5d": 0.0577
     },
     {
       "simbolo": "NQ=F",
       "nome": "Nasdaq futuro",
-      "ultimo": 26221.25,
-      "data": "2026-11-26",
-      "var_1d": 0.0046,
-      "var_5d": -0.0142
+      "ultimo": 26828.5,
+      "data": "2026-11-27",
+      "var_1d": 0.0232,
+      "var_5d": 0.0677
     },
     {
       "simbolo": "YM=F",
       "nome": "Dow futuro",
-      "ultimo": 50443.0,
-      "data": "2026-11-26",
-      "var_1d": 0.0043,
-      "var_5d": 0.0257
+      "ultimo": 50862.0,
+      "data": "2026-11-27",
+      "var_1d": 0.0083,
+      "var_5d": 0.0549
     },
     {
       "simbolo": "^N225",
       "nome": "Nikkei",
-      "ultimo": 57499.16,
-      "data": "2026-11-26",
-      "var_1d": 0.0086,
-      "var_5d": -0.0258
+      "ultimo": 58711.11,
+      "data": "2026-11-27",
+      "var_1d": 0.0211,
+      "var_5d": -0.0123
     },
     {
       "simbolo": "^HSI",
       "nome": "Hang Seng",
-      "ultimo": 22226.88,
-      "data": "2026-11-26",
-      "var_1d": 0.0119,
-      "var_5d": -0.0269
+      "ultimo": 22694.77,
+      "data": "2026-11-27",
+      "var_1d": 0.0211,
+      "var_5d": 0.0127
     },
     {
       "simbolo": "000001.SS",
       "nome": "Xangai",
-      "ultimo": 3476.88,
-      "data": "2026-11-26",
-      "var_1d": 0.0001,
-      "var_5d": -0.0282
+      "ultimo": 3606.49,
+      "data": "2026-11-27",
+      "var_1d": 0.0373,
+      "var_5d": 0.0206
     },
     {
       "simbolo": "^STOXX50E",
       "nome": "Euro Stoxx 50",
-      "ultimo": 6014.74,
-      "data": "2026-11-26",
-      "var_1d": 0.0204,
-      "var_5d": -0.0162
+      "ultimo": 6086.78,
+      "data": "2026-11-27",
+      "var_1d": 0.012,
+      "var_5d": 0.0244
     },
     {
       "simbolo": "^FTSE",
       "nome": "FTSE 100",
-      "ultimo": 10609.3,
-      "data": "2026-11-26",
-      "var_1d": 0.0175,
-      "var_5d": 0.015
+      "ultimo": 10678.75,
+      "data": "2026-11-27",
+      "var_1d": 0.0065,
+      "var_5d": 0.0321
     },
     {
       "simbolo": "CL=F",
       "nome": "WTI",
-      "ultimo": 84.91,
-      "data": "2026-11-26",
-      "var_1d": 0.0147,
-      "var_5d": 0.0204
+      "ultimo": 85.78,
+      "data": "2026-11-27",
+      "var_1d": 0.0102,
+      "var_5d": 0.0214
     },
     {
       "simbolo": "BZ=F",
       "nome": "Brent",
-      "ultimo": 91.73,
-      "data": "2026-11-26",
-      "var_1d": -0.0304,
-      "var_5d": -0.0027
+      "ultimo": 92.27,
+      "data": "2026-11-27",
+      "var_1d": 0.0059,
+      "var_5d": -0.0032
     },
     {
       "simbolo": "GC=F",
       "nome": "Ouro",
-      "ultimo": 3593.4,
-      "data": "2026-11-26",
-      "var_1d": 0.0163,
-      "var_5d": -0.025
+      "ultimo": 3706.2,
+      "data": "2026-11-27",
+      "var_1d": 0.0314,
+      "var_5d": 0.0543
     },
     {
       "simbolo": "HG=F",
       "nome": "Cobre",
-      "ultimo": 5.43,
-      "data": "2026-11-26",
-      "var_1d": 0.0189,
-      "var_5d": -0.034
+      "ultimo": 5.7,
+      "data": "2026-11-27",
+      "var_1d": 0.0498,
+      "var_5d": 0.0414
     },
     {
       "simbolo": "TIO=F",
@@ -131,10 +131,10 @@
     {
       "simbolo": "DX-Y.NYB",
       "nome": "Índice dólar",
-      "ultimo": 103.77,
-      "data": "2026-11-26",
-      "var_1d": 0.001,
-      "var_5d": -0.0013
+      "ultimo": 103.81,
+      "data": "2026-11-27",
+      "var_1d": 0.0003,
+      "var_5d": -0.0
     },
     {
       "simbolo": "^TNX",
@@ -147,10 +147,10 @@
     {
       "simbolo": "^VIX",
       "nome": "VIX",
-      "ultimo": 26.8,
-      "data": "2026-11-26",
-      "var_1d": -0.0527,
-      "var_5d": -0.0577
+      "ultimo": 24.65,
+      "data": "2026-11-27",
+      "var_1d": -0.0802,
+      "var_5d": -0.3132
     },
     {
       "simbolo": "EWZ",
@@ -207,7 +207,7 @@
       "mercado": "BR",
       "direction": "alta",
       "score": 100,
-      "slope_annual_pct": 372.9,
+      "slope_annual_pct": 372.1,
       "tstat": 2.94,
       "adx": 29.4,
       "above_sma50": true,
@@ -215,14 +215,14 @@
       "breakout": "rompimento_alta_20d",
       "momentum": {
         "m_12_1": -0.4124,
-        "m_3": 1.1344,
-        "m_1": 0.8283,
-        "m_1w": 0.1647
+        "m_3": 1.1256,
+        "m_1": 0.8208,
+        "m_1w": 0.1599
       },
       "vol": {
-        "vol_20d": 1.0957,
-        "vol_100d": 1.35,
-        "razao": 0.8117
+        "vol_20d": 1.0951,
+        "vol_100d": 1.3497,
+        "razao": 0.8113
       },
       "notes": [
         "inclinação 60d significativa (t=2.9)",
@@ -235,25 +235,25 @@
       "mercado": "BR",
       "direction": "baixa",
       "score": 85,
-      "slope_annual_pct": -87.7,
-      "tstat": -8.79,
-      "adx": 41.5,
+      "slope_annual_pct": -87.5,
+      "tstat": -8.72,
+      "adx": 40.8,
       "above_sma50": false,
       "above_sma200": false,
       "breakout": "nenhum",
       "momentum": {
         "m_12_1": -0.2016,
-        "m_3": -0.1834,
-        "m_1": -0.0853,
-        "m_1w": 0.1317
+        "m_3": -0.1548,
+        "m_1": -0.0532,
+        "m_1w": 0.1714
       },
       "vol": {
-        "vol_20d": 0.5423,
-        "vol_100d": 0.6275,
-        "razao": 0.8643
+        "vol_20d": 0.6363,
+        "vol_100d": 0.644,
+        "razao": 0.9881
       },
       "notes": [
-        "inclinação 60d significativa (t=-8.8)",
+        "inclinação 60d significativa (t=-8.7)",
         "ADX 41: tendência com força"
       ]
     },
@@ -262,25 +262,25 @@
       "mercado": "BR",
       "direction": "baixa",
       "score": 85,
-      "slope_annual_pct": -32.5,
-      "tstat": -6.07,
-      "adx": 29.9,
+      "slope_annual_pct": -32.3,
+      "tstat": -6.01,
+      "adx": 29.6,
       "above_sma50": false,
       "above_sma200": false,
       "breakout": "nenhum",
       "momentum": {
         "m_12_1": 0.051,
-        "m_3": -0.0456,
-        "m_1": -0.0298,
-        "m_1w": 0.0288
+        "m_3": -0.0385,
+        "m_1": -0.0225,
+        "m_1w": 0.0366
       },
       "vol": {
-        "vol_20d": 0.2959,
-        "vol_100d": 0.2162,
-        "razao": 1.3689
+        "vol_20d": 0.3003,
+        "vol_100d": 0.2174,
+        "razao": 1.3817
       },
       "notes": [
-        "inclinação 60d significativa (t=-6.1)",
+        "inclinação 60d significativa (t=-6.0)",
         "ADX 30: tendência com força"
       ]
     },
@@ -289,22 +289,22 @@
       "mercado": "BR",
       "direction": "baixa",
       "score": 85,
-      "slope_annual_pct": -27.2,
-      "tstat": -6.26,
+      "slope_annual_pct": -27.3,
+      "tstat": -6.27,
       "adx": 41.1,
       "above_sma50": false,
       "above_sma200": false,
       "breakout": "nenhum",
       "momentum": {
         "m_12_1": -0.0491,
-        "m_3": -0.0574,
-        "m_1": -0.045,
-        "m_1w": 0.0164
+        "m_3": -0.0585,
+        "m_1": -0.0461,
+        "m_1w": 0.0152
       },
       "vol": {
-        "vol_20d": 0.301,
-        "vol_100d": 0.1673,
-        "razao": 1.7991
+        "vol_20d": 0.2994,
+        "vol_100d": 0.1668,
+        "razao": 1.7955
       },
       "notes": [
         "inclinação 60d significativa (t=-6.3)",
@@ -317,22 +317,22 @@
       "mercado": "BR",
       "direction": "baixa",
       "score": 85,
-      "slope_annual_pct": -50.1,
-      "tstat": -7.04,
+      "slope_annual_pct": -50.0,
+      "tstat": -7.03,
       "adx": 43.4,
       "above_sma50": false,
       "above_sma200": false,
       "breakout": "nenhum",
       "momentum": {
         "m_12_1": -0.0556,
-        "m_3": -0.1407,
-        "m_1": -0.1511,
-        "m_1w": -0.0086
+        "m_3": -0.1363,
+        "m_1": -0.1467,
+        "m_1w": -0.0035
       },
       "vol": {
-        "vol_20d": 0.3676,
-        "vol_100d": 0.224,
-        "razao": 1.6414
+        "vol_20d": 0.3654,
+        "vol_100d": 0.223,
+        "razao": 1.6389
       },
       "notes": [
         "inclinação 60d significativa (t=-7.0)",
@@ -455,25 +455,25 @@
       "mercado": "cripto",
       "direction": "baixa",
       "score": 85,
-      "slope_annual_pct": -77.1,
-      "tstat": -15.11,
-      "adx": 40.8,
+      "slope_annual_pct": -78.3,
+      "tstat": -15.79,
+      "adx": 41.0,
       "above_sma50": false,
       "above_sma200": false,
       "breakout": "nenhum",
       "momentum": {
-        "m_12_1": 0.1295,
-        "m_3": -0.2845,
-        "m_1": -0.2495,
-        "m_1w": 0.0265
+        "m_12_1": 0.0868,
+        "m_3": -0.2829,
+        "m_1": -0.2039,
+        "m_1w": 0.0065
       },
       "vol": {
-        "vol_20d": 0.374,
+        "vol_20d": 0.376,
         "vol_100d": 0.3727,
-        "razao": 1.0036
+        "razao": 1.009
       },
       "notes": [
-        "inclinação 60d significativa (t=-15.1)",
+        "inclinação 60d significativa (t=-15.8)",
         "ADX 41: tendência com força"
       ]
     },
@@ -482,25 +482,25 @@
       "mercado": "cripto",
       "direction": "baixa",
       "score": 85,
-      "slope_annual_pct": -87.2,
-      "tstat": -21.55,
+      "slope_annual_pct": -87.7,
+      "tstat": -22.19,
       "adx": 40.7,
       "above_sma50": false,
       "above_sma200": false,
       "breakout": "nenhum",
       "momentum": {
-        "m_12_1": 0.0998,
-        "m_3": -0.3702,
-        "m_1": -0.3023,
-        "m_1w": 0.0438
+        "m_12_1": 0.045,
+        "m_3": -0.3718,
+        "m_1": -0.245,
+        "m_1w": 0.003
       },
       "vol": {
-        "vol_20d": 0.5222,
+        "vol_20d": 0.5216,
         "vol_100d": 0.5151,
-        "razao": 1.0137
+        "razao": 1.0127
       },
       "notes": [
-        "inclinação 60d significativa (t=-21.6)",
+        "inclinação 60d significativa (t=-22.2)",
         "ADX 41: tendência com força"
       ]
     },
@@ -509,25 +509,25 @@
       "mercado": "cripto",
       "direction": "baixa",
       "score": 85,
-      "slope_annual_pct": -91.9,
-      "tstat": -29.44,
-      "adx": 43.2,
+      "slope_annual_pct": -92.0,
+      "tstat": -29.92,
+      "adx": 42.6,
       "above_sma50": false,
       "above_sma200": false,
       "breakout": "nenhum",
       "momentum": {
-        "m_12_1": 0.0599,
-        "m_3": -0.3879,
-        "m_1": -0.2631,
-        "m_1w": 0.0236
+        "m_12_1": 0.001,
+        "m_3": -0.3935,
+        "m_1": -0.2046,
+        "m_1w": 0.0109
       },
       "vol": {
-        "vol_20d": 0.5533,
-        "vol_100d": 0.5344,
-        "razao": 1.0353
+        "vol_20d": 0.5528,
+        "vol_100d": 0.5342,
+        "razao": 1.035
       },
       "notes": [
-        "inclinação 60d significativa (t=-29.4)",
+        "inclinação 60d significativa (t=-29.9)",
         "ADX 43: tendência com força"
       ]
     },
@@ -536,22 +536,22 @@
       "mercado": "BR",
       "direction": "baixa",
       "score": 75,
-      "slope_annual_pct": -31.8,
-      "tstat": -2.09,
-      "adx": 43.1,
+      "slope_annual_pct": -31.6,
+      "tstat": -2.07,
+      "adx": 42.6,
       "above_sma50": false,
       "above_sma200": false,
       "breakout": "nenhum",
       "momentum": {
         "m_12_1": 0.6332,
-        "m_3": 0.0358,
-        "m_1": -0.2051,
-        "m_1w": -0.0079
+        "m_3": 0.0445,
+        "m_1": -0.1984,
+        "m_1w": 0.0005
       },
       "vol": {
-        "vol_20d": 0.3916,
-        "vol_100d": 0.3764,
-        "razao": 1.0404
+        "vol_20d": 0.406,
+        "vol_100d": 0.3786,
+        "razao": 1.0723
       },
       "notes": [
         "inclinação 60d significativa (t=-2.1)",
@@ -617,25 +617,25 @@
       "mercado": "BR",
       "direction": "baixa",
       "score": 65,
-      "slope_annual_pct": -74.2,
-      "tstat": -25.61,
+      "slope_annual_pct": -74.1,
+      "tstat": -25.51,
       "adx": 22.9,
       "above_sma50": false,
       "above_sma200": false,
       "breakout": "nenhum",
       "momentum": {
         "m_12_1": -0.0098,
-        "m_3": -0.2588,
-        "m_1": -0.094,
-        "m_1w": -0.0114
+        "m_3": -0.2537,
+        "m_1": -0.0878,
+        "m_1w": -0.0046
       },
       "vol": {
-        "vol_20d": 0.4192,
-        "vol_100d": 0.3008,
-        "razao": 1.3939
+        "vol_20d": 0.4263,
+        "vol_100d": 0.3026,
+        "razao": 1.4086
       },
       "notes": [
-        "inclinação 60d significativa (t=-25.6)"
+        "inclinação 60d significativa (t=-25.5)"
       ]
     },
     {
@@ -751,21 +751,21 @@
       "direction": "baixa",
       "score": 50,
       "slope_annual_pct": -10.1,
-      "tstat": -1.87,
+      "tstat": -1.86,
       "adx": 23.8,
       "above_sma50": false,
       "above_sma200": false,
       "breakout": "nenhum",
       "momentum": {
         "m_12_1": -0.0501,
-        "m_3": -0.017,
-        "m_1": -0.0459,
-        "m_1w": 0.0147
+        "m_3": -0.0154,
+        "m_1": -0.0444,
+        "m_1w": 0.0163
       },
       "vol": {
-        "vol_20d": 0.1918,
-        "vol_100d": 0.1474,
-        "razao": 1.3012
+        "vol_20d": 0.193,
+        "vol_100d": 0.1477,
+        "razao": 1.3067
       },
       "notes": []
     },
@@ -797,26 +797,52 @@
       ]
     },
     {
+      "ticker": "PRIO3",
+      "mercado": "BR",
+      "direction": "lateral",
+      "score": 45,
+      "slope_annual_pct": 6.9,
+      "tstat": 0.57,
+      "adx": 26.8,
+      "above_sma50": false,
+      "above_sma200": true,
+      "breakout": "nenhum",
+      "momentum": {
+        "m_12_1": 0.7767,
+        "m_3": 0.0258,
+        "m_1": -0.1222,
+        "m_1w": 0.0094
+      },
+      "vol": {
+        "vol_20d": 0.4841,
+        "vol_100d": 0.3902,
+        "razao": 1.2406
+      },
+      "notes": [
+        "ADX 27: tendência com força"
+      ]
+    },
+    {
       "ticker": "ITUB4",
       "mercado": "BR",
       "direction": "baixa",
       "score": 40,
-      "slope_annual_pct": -16.0,
-      "tstat": -1.2,
-      "adx": 23.4,
+      "slope_annual_pct": -15.9,
+      "tstat": -1.19,
+      "adx": 23.5,
       "above_sma50": false,
       "above_sma200": false,
       "breakout": "nenhum",
       "momentum": {
         "m_12_1": 0.0711,
-        "m_3": 0.0766,
-        "m_1": 0.0182,
-        "m_1w": 0.0565
+        "m_3": 0.0791,
+        "m_1": 0.0206,
+        "m_1w": 0.059
       },
       "vol": {
-        "vol_20d": 0.3465,
-        "vol_100d": 0.385,
-        "razao": 0.9002
+        "vol_20d": 0.3523,
+        "vol_100d": 0.386,
+        "razao": 0.9127
       },
       "notes": []
     },
@@ -848,56 +874,30 @@
       ]
     },
     {
-      "ticker": "PRIO3",
-      "mercado": "BR",
-      "direction": "lateral",
-      "score": 30,
-      "slope_annual_pct": 6.3,
-      "tstat": 0.52,
-      "adx": 26.8,
-      "above_sma50": false,
-      "above_sma200": false,
-      "breakout": "nenhum",
-      "momentum": {
-        "m_12_1": 0.7767,
-        "m_3": 0.012,
-        "m_1": -0.134,
-        "m_1w": -0.0042
-      },
-      "vol": {
-        "vol_20d": 0.4721,
-        "vol_100d": 0.3881,
-        "razao": 1.2165
-      },
-      "notes": [
-        "ADX 27: tendência com força"
-      ]
-    },
-    {
       "ticker": "WEGE3",
       "mercado": "BR",
       "direction": "baixa",
       "score": 25,
-      "slope_annual_pct": -16.4,
-      "tstat": -2.3,
-      "adx": 13.9,
+      "slope_annual_pct": -15.9,
+      "tstat": -2.21,
+      "adx": 13.1,
       "above_sma50": true,
       "above_sma200": true,
       "breakout": "nenhum",
       "momentum": {
         "m_12_1": 0.0251,
-        "m_3": 0.0206,
-        "m_1": 0.1363,
-        "m_1w": -0.0152
+        "m_3": 0.0359,
+        "m_1": 0.1534,
+        "m_1w": -0.0004
       },
       "vol": {
-        "vol_20d": 0.3428,
-        "vol_100d": 0.3364,
-        "razao": 1.0191
+        "vol_20d": 0.3553,
+        "vol_100d": 0.3393,
+        "razao": 1.0472
       },
       "notes": [
-        "inclinação 60d significativa (t=-2.3)",
-        "ADX 14: lateral"
+        "inclinação 60d significativa (t=-2.2)",
+        "ADX 13: lateral"
       ]
     },
     {
@@ -929,59 +929,13 @@
   ],
   "sinais_de_noticia": [
     {
-      "ticker": "BPAC11",
-      "score": 0.187,
+      "ticker": "BBAS3",
+      "score": 0.223,
       "n_items": 2,
       "n_sources": 2,
       "headlines": [
-        "Ações do Bradesco (BBDC4) chegam a saltar 8% com especulação sobre Trabuco na Fazenda",
-        "UBS BB passa a tesoura no preço-alvo das units do BTG Pactual (BPAC11) em mais de 20%; o que motivou o corte?"
-      ],
-      "evidence": {
-        "ticker": "BPAC11",
-        "n_pos": 0,
-        "n_neg": 0,
-        "ret1_after_pos": null,
-        "ret5_after_pos": null,
-        "ret1_after_neg": null,
-        "ret5_after_neg": null
-      },
-      "action": "ignorar",
-      "reasons": [
-        "sentimento fraco"
-      ]
-    },
-    {
-      "ticker": "SUZB3",
-      "score": -0.359,
-      "n_items": 1,
-      "n_sources": 1,
-      "headlines": [
-        "Nenhuma ação em queda no Ibovespa: os dois motivos por trás da festa de hoje"
-      ],
-      "evidence": {
-        "ticker": "SUZB3",
-        "n_pos": 0,
-        "n_neg": 0,
-        "ret1_after_pos": null,
-        "ret5_after_pos": null,
-        "ret1_after_neg": null,
-        "ret5_after_neg": null
-      },
-      "action": "ignorar",
-      "reasons": [
-        "uma única fonte"
-      ]
-    },
-    {
-      "ticker": "BBAS3",
-      "score": 0.099,
-      "n_items": 3,
-      "n_sources": 3,
-      "headlines": [
-        "Brasil vê queda de alocação de investidores e México ganha espaço; Vale lidera saídas",
-        "Ações do Bradesco (BBDC4) chegam a saltar 8% com especulação sobre Trabuco na Fazenda",
-        "Alta do Banco do Brasil (BBAS3) é ‘fogo de palha’? Gestora vê uma foto ruim de uma realidade pior ainda"
+        "Alta do Banco do Brasil (BBAS3) é ‘fogo de palha’? Gestora vê uma foto ruim de uma realidade pior ainda",
+        "Ibovespa dispara 10 mil pontos e Banco do Brasil (BBAS3) sobe 12% - Suno - Investimentos Inteligentes"
       ],
       "evidence": {
         "ticker": "BBAS3",
@@ -998,260 +952,15 @@
       ]
     },
     {
-      "ticker": "GGBR4",
-      "score": 0.24,
-      "n_items": 1,
-      "n_sources": 1,
-      "headlines": [
-        "Um mês depois da eleição, Ibovespa acumula queda de 19% e algumas ações ficaram baratas. Veja quais são"
-      ],
-      "evidence": {
-        "ticker": "GGBR4",
-        "n_pos": 0,
-        "n_neg": 0,
-        "ret1_after_pos": null,
-        "ret5_after_pos": null,
-        "ret1_after_neg": null,
-        "ret5_after_neg": null
-      },
-      "action": "ignorar",
-      "reasons": [
-        "uma única fonte"
-      ]
-    },
-    {
-      "ticker": "WEGE3",
-      "score": 0.24,
-      "n_items": 1,
-      "n_sources": 1,
-      "headlines": [
-        "Um mês depois da eleição, Ibovespa acumula queda de 19% e algumas ações ficaram baratas. Veja quais são"
-      ],
-      "evidence": {
-        "ticker": "WEGE3",
-        "n_pos": 0,
-        "n_neg": 0,
-        "ret1_after_pos": null,
-        "ret5_after_pos": null,
-        "ret1_after_neg": null,
-        "ret5_after_neg": null
-      },
-      "action": "ignorar",
-      "reasons": [
-        "uma única fonte"
-      ]
-    },
-    {
-      "ticker": "ITUB4",
-      "score": 0.24,
-      "n_items": 1,
-      "n_sources": 1,
-      "headlines": [
-        "Um mês depois da eleição, Ibovespa acumula queda de 19% e algumas ações ficaram baratas. Veja quais são"
-      ],
-      "evidence": {
-        "ticker": "ITUB4",
-        "n_pos": 0,
-        "n_neg": 0,
-        "ret1_after_pos": null,
-        "ret5_after_pos": null,
-        "ret1_after_neg": null,
-        "ret5_after_neg": null
-      },
-      "action": "ignorar",
-      "reasons": [
-        "uma única fonte"
-      ]
-    },
-    {
-      "ticker": "SBSP3",
-      "score": 0.24,
-      "n_items": 1,
-      "n_sources": 1,
-      "headlines": [
-        "Um mês depois da eleição, Ibovespa acumula queda de 19% e algumas ações ficaram baratas. Veja quais são"
-      ],
-      "evidence": {
-        "ticker": "SBSP3",
-        "n_pos": 0,
-        "n_neg": 0,
-        "ret1_after_pos": null,
-        "ret5_after_pos": null,
-        "ret1_after_neg": null,
-        "ret5_after_neg": null
-      },
-      "action": "ignorar",
-      "reasons": [
-        "uma única fonte"
-      ]
-    },
-    {
-      "ticker": "TOTS3",
-      "score": 0.24,
-      "n_items": 1,
-      "n_sources": 1,
-      "headlines": [
-        "Um mês depois da eleição, Ibovespa acumula queda de 19% e algumas ações ficaram baratas. Veja quais são"
-      ],
-      "evidence": {
-        "ticker": "TOTS3",
-        "n_pos": 0,
-        "n_neg": 0,
-        "ret1_after_pos": null,
-        "ret5_after_pos": null,
-        "ret1_after_neg": null,
-        "ret5_after_neg": null
-      },
-      "action": "ignorar",
-      "reasons": [
-        "uma única fonte"
-      ]
-    },
-    {
-      "ticker": "CURY3",
-      "score": 0.24,
-      "n_items": 1,
-      "n_sources": 1,
-      "headlines": [
-        "Um mês depois da eleição, Ibovespa acumula queda de 19% e algumas ações ficaram baratas. Veja quais são"
-      ],
-      "evidence": {
-        "ticker": "CURY3",
-        "n_pos": 0,
-        "n_neg": 0,
-        "ret1_after_pos": null,
-        "ret5_after_pos": null,
-        "ret1_after_neg": null,
-        "ret5_after_neg": null
-      },
-      "action": "ignorar",
-      "reasons": [
-        "uma única fonte"
-      ]
-    },
-    {
-      "ticker": "RDOR3",
-      "score": 0.24,
-      "n_items": 1,
-      "n_sources": 1,
-      "headlines": [
-        "Um mês depois da eleição, Ibovespa acumula queda de 19% e algumas ações ficaram baratas. Veja quais são"
-      ],
-      "evidence": {
-        "ticker": "RDOR3",
-        "n_pos": 0,
-        "n_neg": 0,
-        "ret1_after_pos": null,
-        "ret5_after_pos": null,
-        "ret1_after_neg": null,
-        "ret5_after_neg": null
-      },
-      "action": "ignorar",
-      "reasons": [
-        "uma única fonte"
-      ]
-    },
-    {
-      "ticker": "TTEN3",
-      "score": 0.24,
-      "n_items": 1,
-      "n_sources": 1,
-      "headlines": [
-        "Um mês depois da eleição, Ibovespa acumula queda de 19% e algumas ações ficaram baratas. Veja quais são"
-      ],
-      "evidence": {
-        "ticker": "TTEN3",
-        "n_pos": 0,
-        "n_neg": 0,
-        "ret1_after_pos": null,
-        "ret5_after_pos": null,
-        "ret1_after_neg": null,
-        "ret5_after_neg": null
-      },
-      "action": "ignorar",
-      "reasons": [
-        "uma única fonte"
-      ]
-    },
-    {
-      "ticker": "KEPL3",
-      "score": 0.24,
-      "n_items": 1,
-      "n_sources": 1,
-      "headlines": [
-        "Um mês depois da eleição, Ibovespa acumula queda de 19% e algumas ações ficaram baratas. Veja quais são"
-      ],
-      "evidence": {
-        "ticker": "KEPL3",
-        "n_pos": 0,
-        "n_neg": 0,
-        "ret1_after_pos": null,
-        "ret5_after_pos": null,
-        "ret1_after_neg": null,
-        "ret5_after_neg": null
-      },
-      "action": "ignorar",
-      "reasons": [
-        "uma única fonte"
-      ]
-    },
-    {
-      "ticker": "BBDC4",
-      "score": -0.074,
-      "n_items": 4,
-      "n_sources": 3,
-      "headlines": [
-        "Brasil vê queda de alocação de investidores e México ganha espaço; Vale lidera saídas",
-        "Nenhuma ação em queda no Ibovespa: os dois motivos por trás da festa de hoje",
-        "Ações do Bradesco (BBDC4) chegam a saltar 8% com especulação sobre Trabuco na Fazenda",
-        "Depois do Itaú, Bradesco (BBDC4) e Santander Brasil (SANB11) confirmam planos para entrar no Minha Casa, Minha Vida"
-      ],
-      "evidence": {
-        "ticker": "BBDC4",
-        "n_pos": 0,
-        "n_neg": 0,
-        "ret1_after_pos": null,
-        "ret5_after_pos": null,
-        "ret1_after_neg": null,
-        "ret5_after_neg": null
-      },
-      "action": "ignorar",
-      "reasons": [
-        "sentimento fraco"
-      ]
-    },
-    {
-      "ticker": "VALE3",
-      "score": -0.195,
-      "n_items": 1,
-      "n_sources": 1,
-      "headlines": [
-        "Brasil vê queda de alocação de investidores e México ganha espaço; Vale lidera saídas"
-      ],
-      "evidence": {
-        "ticker": "VALE3",
-        "n_pos": 1,
-        "n_neg": 0,
-        "ret1_after_pos": -0.0222,
-        "ret5_after_pos": -0.057,
-        "ret1_after_neg": null,
-        "ret5_after_neg": null
-      },
-      "action": "ignorar",
-      "reasons": [
-        "uma única fonte"
-      ]
-    },
-    {
       "ticker": "BTC",
-      "score": 0.042,
-      "n_items": 16,
-      "n_sources": 4,
+      "score": 0.095,
+      "n_items": 5,
+      "n_sources": 2,
       "headlines": [
-        "$7 billion of bitcoin options expire Friday, and the biggest bets look starkly different from October",
-        "Switzerland’s first spot Bitcoin ETF ticks up 0.6% in opening hour",
-        "Bitcoin ETF November outflows top $5B, Morgan Stanley bucks trend",
-        "Bitcoin little changed, DeFi tokens lead the bounce as U.S. marks Thanksgiving"
+        "Polícia investiga youtuber que promovia plataforma de investimentos suspeita em seu canal",
+        "Alerta do Reino Unido leva PF a investigar furto de R$ 350 mil em criptomoedas no Mato Grosso",
+        "Binance completes withdrawal recovery four weeks after $6.3B hack",
+        "iFood dobra correção de falhas com agentes de IA da dona do ChatGPT em 15 mil repositórios por US$ 0,04"
       ],
       "evidence": {
         "ticker": "BTC",
@@ -1268,88 +977,23 @@
       ]
     },
     {
-      "ticker": "BOVA11",
-      "score": 0.142,
-      "n_items": 1,
-      "n_sources": 1,
-      "headlines": [
-        "Negociação de ETFs bate recorde na bolsa brasileira e movimenta R$ 419 bilhões no ano"
-      ],
-      "evidence": {
-        "ticker": "BOVA11",
-        "n_pos": 0,
-        "n_neg": 0,
-        "ret1_after_pos": null,
-        "ret5_after_pos": null,
-        "ret1_after_neg": null,
-        "ret5_after_neg": null
-      },
-      "action": "ignorar",
-      "reasons": [
-        "uma única fonte"
-      ]
-    },
-    {
-      "ticker": "SMAL11",
-      "score": 0.142,
-      "n_items": 1,
-      "n_sources": 1,
-      "headlines": [
-        "Negociação de ETFs bate recorde na bolsa brasileira e movimenta R$ 419 bilhões no ano"
-      ],
-      "evidence": {
-        "ticker": "SMAL11",
-        "n_pos": 0,
-        "n_neg": 0,
-        "ret1_after_pos": null,
-        "ret5_after_pos": null,
-        "ret1_after_neg": null,
-        "ret5_after_neg": null
-      },
-      "action": "ignorar",
-      "reasons": [
-        "uma única fonte"
-      ]
-    },
-    {
-      "ticker": "BDEV11",
-      "score": 0.1,
-      "n_items": 1,
-      "n_sources": 1,
-      "headlines": [
-        "Com apoio do BNDES, Bradesco lança ETF de ações brasileiras essenciais para economia"
-      ],
-      "evidence": {
-        "ticker": "BDEV11",
-        "n_pos": 0,
-        "n_neg": 0,
-        "ret1_after_pos": null,
-        "ret5_after_pos": null,
-        "ret1_after_neg": null,
-        "ret5_after_neg": null
-      },
-      "action": "ignorar",
-      "reasons": [
-        "uma única fonte"
-      ]
-    },
-    {
-      "ticker": "USIM5",
-      "score": -0.021,
-      "n_items": 2,
+      "ticker": "ETH",
+      "score": 0.089,
+      "n_items": 3,
       "n_sources": 2,
       "headlines": [
-        "Smart Fit (SMFT3), Auren (AURE3), Usiminas (USIM5) e mais: Veja os destaques das empresas",
-        "Usiminas (USIM5) espera resultado menor no 4º trimestre com pressão do câmbio"
+        "Japan weighs tighter oversight of DeFi, self-custodial wallets",
+        "Ethereum's much-awaited Glamsterdam upgrade cleared for December test. Here's what to know",
+        "Ethereum devs set Glamsterdam’s Hoodi rollout for mid-December after delays"
       ],
       "evidence": {
-        "ticker": "USIM5",
-        "n_pos": 0,
-        "n_neg": 0,
-        "ret1_after_pos": null,
-        "ret5_after_pos": null,
-        "ret1_after_neg": null,
-        "ret5_after_neg": null
+        "ticker": "ETH",
+        "n_pos": 1,
+        "n_neg": 2,
+        "ret1_after_pos": -0.0263,
+        "ret5_after_pos": -0.0556,
+        "ret1_after_neg": -0.0309,
+        "ret5_after_neg": -0.0392
       },
       "action": "ignorar",
       "reasons": [
@@ -1357,147 +1001,15 @@
       ]
     },
     {
-      "ticker": "SMFT3",
-      "score": 0.0,
+      "ticker": "USIM5",
+      "score": -0.043,
       "n_items": 1,
       "n_sources": 1,
       "headlines": [
-        "Smart Fit (SMFT3), Auren (AURE3), Usiminas (USIM5) e mais: Veja os destaques das empresas"
+        "Usiminas (USIM5) espera resultado menor no 4º trimestre com pressão do câmbio"
       ],
       "evidence": {
-        "ticker": "SMFT3",
-        "n_pos": 0,
-        "n_neg": 0,
-        "ret1_after_pos": null,
-        "ret5_after_pos": null,
-        "ret1_after_neg": null,
-        "ret5_after_neg": null
-      },
-      "action": "ignorar",
-      "reasons": [
-        "uma única fonte"
-      ]
-    },
-    {
-      "ticker": "AURE3",
-      "score": 0.0,
-      "n_items": 1,
-      "n_sources": 1,
-      "headlines": [
-        "Smart Fit (SMFT3), Auren (AURE3), Usiminas (USIM5) e mais: Veja os destaques das empresas"
-      ],
-      "evidence": {
-        "ticker": "AURE3",
-        "n_pos": 0,
-        "n_neg": 0,
-        "ret1_after_pos": null,
-        "ret5_after_pos": null,
-        "ret1_after_neg": null,
-        "ret5_after_neg": null
-      },
-      "action": "ignorar",
-      "reasons": [
-        "uma única fonte"
-      ]
-    },
-    {
-      "ticker": "KLBN11",
-      "score": 0.0,
-      "n_items": 1,
-      "n_sources": 1,
-      "headlines": [
-        "Smart Fit (SMFT3), Auren (AURE3), Usiminas (USIM5) e mais: Veja os destaques das empresas"
-      ],
-      "evidence": {
-        "ticker": "KLBN11",
-        "n_pos": 0,
-        "n_neg": 0,
-        "ret1_after_pos": null,
-        "ret5_after_pos": null,
-        "ret1_after_neg": null,
-        "ret5_after_neg": null
-      },
-      "action": "ignorar",
-      "reasons": [
-        "uma única fonte"
-      ]
-    },
-    {
-      "ticker": "ONCO3",
-      "score": 0.0,
-      "n_items": 1,
-      "n_sources": 1,
-      "headlines": [
-        "Smart Fit (SMFT3), Auren (AURE3), Usiminas (USIM5) e mais: Veja os destaques das empresas"
-      ],
-      "evidence": {
-        "ticker": "ONCO3",
-        "n_pos": 0,
-        "n_neg": 0,
-        "ret1_after_pos": null,
-        "ret5_after_pos": null,
-        "ret1_after_neg": null,
-        "ret5_after_neg": null
-      },
-      "action": "ignorar",
-      "reasons": [
-        "uma única fonte"
-      ]
-    },
-    {
-      "ticker": "GGPS3",
-      "score": 0.0,
-      "n_items": 1,
-      "n_sources": 1,
-      "headlines": [
-        "Smart Fit (SMFT3), Auren (AURE3), Usiminas (USIM5) e mais: Veja os destaques das empresas"
-      ],
-      "evidence": {
-        "ticker": "GGPS3",
-        "n_pos": 0,
-        "n_neg": 0,
-        "ret1_after_pos": null,
-        "ret5_after_pos": null,
-        "ret1_after_neg": null,
-        "ret5_after_neg": null
-      },
-      "action": "ignorar",
-      "reasons": [
-        "uma única fonte"
-      ]
-    },
-    {
-      "ticker": "TIMS3",
-      "score": 0.0,
-      "n_items": 1,
-      "n_sources": 1,
-      "headlines": [
-        "Smart Fit (SMFT3), Auren (AURE3), Usiminas (USIM5) e mais: Veja os destaques das empresas"
-      ],
-      "evidence": {
-        "ticker": "TIMS3",
-        "n_pos": 0,
-        "n_neg": 0,
-        "ret1_after_pos": null,
-        "ret5_after_pos": null,
-        "ret1_after_neg": null,
-        "ret5_after_neg": null
-      },
-      "action": "ignorar",
-      "reasons": [
-        "uma única fonte"
-      ]
-    },
-    {
-      "ticker": "MOTV3",
-      "score": 0.0,
-      "n_items": 1,
-      "n_sources": 1,
-      "headlines": [
-        "Smart Fit (SMFT3), Auren (AURE3), Usiminas (USIM5) e mais: Veja os destaques das empresas"
-      ],
-      "evidence": {
-        "ticker": "MOTV3",
+        "ticker": "USIM5",
         "n_pos": 0,
         "n_neg": 0,
         "ret1_after_pos": null,
@@ -1512,14 +1024,36 @@
     },
     {
       "ticker": "LINK",
+      "score": 0.026,
+      "n_items": 1,
+      "n_sources": 1,
+      "headlines": [
+        "Ninguém acerta as seis dezenas da Mega-Sena 3091, e prêmio acumula em R$ 82 milhões; veja números"
+      ],
+      "evidence": {
+        "ticker": "LINK",
+        "n_pos": 0,
+        "n_neg": 0,
+        "ret1_after_pos": null,
+        "ret5_after_pos": null,
+        "ret1_after_neg": null,
+        "ret5_after_neg": null
+      },
+      "action": "ignorar",
+      "reasons": [
+        "uma única fonte"
+      ]
+    },
+    {
+      "ticker": "BBDC4",
       "score": 0.0,
       "n_items": 1,
       "n_sources": 1,
       "headlines": [
-        "A tiny payment can expose the IP address behind a bitcoin wallet, developer finds"
+        "Depois do Itaú, Bradesco (BBDC4) e Santander Brasil (SANB11) confirmam planos para entrar no Minha Casa, Minha Vida"
       ],
       "evidence": {
-        "ticker": "LINK",
+        "ticker": "BBDC4",
         "n_pos": 0,
         "n_neg": 0,
         "ret1_after_pos": null,
@@ -1555,21 +1089,43 @@
       ]
     },
     {
-      "ticker": "ETH",
+      "ticker": "BNB",
       "score": 0.0,
       "n_items": 1,
       "n_sources": 1,
       "headlines": [
-        "Japan weighs tighter oversight of DeFi, self-custodial wallets"
+        "BNB Chain details new layer-1 for trading, private finance and AI"
       ],
       "evidence": {
-        "ticker": "ETH",
-        "n_pos": 1,
-        "n_neg": 2,
-        "ret1_after_pos": -0.0263,
-        "ret5_after_pos": -0.0556,
-        "ret1_after_neg": -0.0309,
-        "ret5_after_neg": -0.0813
+        "ticker": "BNB",
+        "n_pos": 0,
+        "n_neg": 0,
+        "ret1_after_pos": null,
+        "ret5_after_pos": null,
+        "ret1_after_neg": null,
+        "ret5_after_neg": null
+      },
+      "action": "ignorar",
+      "reasons": [
+        "uma única fonte"
+      ]
+    },
+    {
+      "ticker": "XRP",
+      "score": 0.0,
+      "n_items": 1,
+      "n_sources": 1,
+      "headlines": [
+        "Ripple's lending plan moves closer to tapping XRP Ledger's $800 million in stablecoins"
+      ],
+      "evidence": {
+        "ticker": "XRP",
+        "n_pos": 0,
+        "n_neg": 0,
+        "ret1_after_pos": null,
+        "ret5_after_pos": null,
+        "ret1_after_neg": null,
+        "ret5_after_neg": null
       },
       "action": "ignorar",
       "reasons": [
@@ -1595,35 +1151,28 @@
       "tickers": []
     },
     {
-      "quando": "2026-11-26T17:48:55+00:00",
-      "fonte": "Money Times",
-      "mercado": "BR",
-      "titulo": "Nenhuma ação em queda no Ibovespa: os dois motivos por trás da festa de hoje",
-      "sentimento": -0.36,
-      "tickers": [
-        "SUZB3",
-        "BBDC4"
-      ]
-    },
-    {
-      "quando": "2026-11-26T11:56:13+00:00",
-      "fonte": "Valor Investe",
-      "mercado": "BR",
-      "titulo": "Quem é a Fictor, grupo que tentou comprar o Master e é alvo de operação",
-      "sentimento": 0.26,
+      "quando": "2026-11-27T01:36:00+00:00",
+      "fonte": "Reuters Business (via Google News)",
+      "mercado": "global",
+      "titulo": "China's industrial profit growth fastest in five months as recovery remains uneven - Reuters",
+      "sentimento": 0.45,
       "tickers": []
     },
     {
-      "quando": "2026-11-26T18:08:03+00:00",
-      "fonte": "Valor Investe",
-      "mercado": "BR",
-      "titulo": "Ações do Bradesco (BBDC4) chegam a saltar 8% com especulação sobre Trabuco na Fazenda",
+      "quando": "2026-11-27T04:45:47+00:00",
+      "fonte": "CoinDesk",
+      "mercado": "cripto",
+      "titulo": "Binance says customer withdrawals are fully restored, four weeks after the $6.3 billion hack",
+      "sentimento": -0.32,
+      "tickers": []
+    },
+    {
+      "quando": "2026-11-27T07:34:00+00:00",
+      "fonte": "Reuters Business (via Google News)",
+      "mercado": "global",
+      "titulo": "Wall St futures surge as investors return from holiday - Reuters",
       "sentimento": 0.26,
-      "tickers": [
-        "BBDC4",
-        "BBAS3",
-        "BPAC11"
-      ]
+      "tickers": []
     },
     {
       "quando": "2026-11-26T19:16:12+00:00",
@@ -1634,11 +1183,19 @@
       "tickers": []
     },
     {
-      "quando": "2026-11-26T13:19:00+00:00",
+      "quando": "2026-11-27T07:25:48+00:00",
       "fonte": "Google News Brasil: mercado",
       "mercado": "BR",
-      "titulo": "Ibovespa abre em alta em meio ao IPCA-15 e à expectativa de novas medidas fiscais - TradeMap",
-      "sentimento": 0.25,
+      "titulo": "Ibovespa dispara 6% e dólar cai a R$ 5,74 - brasilagro.com.br",
+      "sentimento": -0.25,
+      "tickers": []
+    },
+    {
+      "quando": "2026-11-27T06:24:00+00:00",
+      "fonte": "Reuters Business (via Google News)",
+      "mercado": "global",
+      "titulo": "China stocks, yuan rally after Beijing vows stronger market support - Reuters",
+      "sentimento": 0.24,
       "tickers": []
     },
     {
@@ -1650,37 +1207,19 @@
       "tickers": []
     },
     {
-      "quando": "2026-11-26T12:45:29+00:00",
+      "quando": "2026-11-26T20:57:00+00:00",
       "fonte": "Google News Brasil: mercado",
       "mercado": "BR",
-      "titulo": "Dólar hoje cai abaixo de R$ 5,80 com Trabuco no radar para a Fazenda - ISTOÉ DINHEIRO",
+      "titulo": "Dólar cai pela quarta vez consecutiva e Ibovespa dispara mais de 5% - Agrolink",
       "sentimento": -0.24,
       "tickers": []
     },
     {
-      "quando": "2026-11-26T09:00:00+00:00",
-      "fonte": "Valor Investe",
-      "mercado": "BR",
-      "titulo": "Um mês depois da eleição, Ibovespa acumula queda de 19% e algumas ações ficaram baratas. Veja quais são",
-      "sentimento": 0.24,
-      "tickers": [
-        "GGBR4",
-        "WEGE3",
-        "ITUB4",
-        "SBSP3",
-        "TOTS3",
-        "CURY3",
-        "RDOR3",
-        "TTEN3",
-        "KEPL3"
-      ]
-    },
-    {
-      "quando": "2026-11-26T08:15:00+00:00",
-      "fonte": "Google News Brasil: mercado",
-      "mercado": "BR",
-      "titulo": "Expectativas sobre Lula 4 melhoram e dólar cai a R$ 5,81 | Finanças - Valor Econômico",
-      "sentimento": -0.23,
+      "quando": "2026-11-27T02:47:00+00:00",
+      "fonte": "Reuters Business (via Google News)",
+      "mercado": "global",
+      "titulo": "Rupee rally stumbles alongside equities on tentative AI trade comeback - Reuters",
+      "sentimento": 0.23,
       "tickers": []
     },
     {
@@ -1694,18 +1233,10 @@
       ]
     },
     {
-      "quando": "2026-11-26T08:27:21+00:00",
+      "quando": "2026-11-26T22:54:00+00:00",
       "fonte": "Google News Brasil: mercado",
       "mercado": "BR",
-      "titulo": "Alta do dólar agrava situação das indústrias de defensivos agrícolas - brasilagro.com.br",
-      "sentimento": 0.23,
-      "tickers": []
-    },
-    {
-      "quando": "2026-11-26T14:45:00+00:00",
-      "fonte": "Google News Brasil: mercado",
-      "mercado": "BR",
-      "titulo": "Latam reforça aposta nos aviões da Embraer apesar de custos e dólar em alta - NeoFeed",
+      "titulo": "Bolsa sobe 6% e tem maior alta desde o 1º turno; dólar cai a R$ 5,74 - Agência Brasil",
       "sentimento": 0.23,
       "tickers": []
     },
@@ -1726,22 +1257,14 @@
       "tickers": []
     },
     {
-      "quando": "2026-11-26T17:09:09+00:00",
-      "fonte": "Livecoins",
-      "mercado": "cripto",
-      "titulo": "Banco Central injeta US$ 2 bilhões no câmbio e derruba dólar para R$ 5,75 após escalada pós-eleição",
-      "sentimento": 0.21,
-      "tickers": [
-        "BTC"
-      ]
-    },
-    {
-      "quando": "2026-11-26T12:11:29+00:00",
+      "quando": "2026-11-26T22:31:43+00:00",
       "fonte": "Google News Brasil: mercado",
       "mercado": "BR",
-      "titulo": "Ibovespa Futuro sobe mais de 1% com fiscal e Fazenda no centro das atenções - InfoMoney",
+      "titulo": "Ibovespa dispara 10 mil pontos e Banco do Brasil (BBAS3) sobe 12% - Suno - Investimentos Inteligentes",
       "sentimento": 0.21,
-      "tickers": []
+      "tickers": [
+        "BBAS3"
+      ]
     },
     {
       "quando": "2026-11-26T20:00:16+00:00",
@@ -1760,48 +1283,66 @@
       "tickers": []
     },
     {
-      "quando": "2026-11-26T12:00:22+00:00",
-      "fonte": "Valor Investe",
+      "quando": "2026-11-26T21:48:09+00:00",
+      "fonte": "Google News Brasil: mercado",
       "mercado": "BR",
-      "titulo": "Dólar fecha a R$ 5,74 e Ibovespa dispara com Trabuco e novas medidas fiscais",
+      "titulo": "Ibovespa dispara 6% com convite a Trabuco para a Fazenda e tem segunda maior alta desde 2021 - G1",
       "sentimento": 0.2,
       "tickers": []
     },
     {
-      "quando": "2026-11-26T12:00:00+00:00",
+      "quando": "2026-11-26T22:08:24+00:00",
       "fonte": "Google News Brasil: mercado",
       "mercado": "BR",
-      "titulo": "Ibovespa dispara e dólar cai a R$ 5,74, de olho em nomes para a Fazenda e política fiscal - G1",
-      "sentimento": -0.2,
+      "titulo": "Ibovespa tem 2ª maior alta diária desde 2021; 4 ações sobem mais de 50% no mês - InfoMoney",
+      "sentimento": 0.2,
       "tickers": []
     },
     {
-      "quando": "2026-11-26T15:13:54+00:00",
+      "quando": "2026-11-26T21:42:43+00:00",
       "fonte": "Google News Brasil: mercado",
       "mercado": "BR",
-      "titulo": "Dólar cai abaixo de R$ 5,80 após Lula sondar possibilidade de Trabuco assumir Fazenda - InfoMoney",
-      "sentimento": -0.2,
+      "titulo": "Ibovespa sobe mais de 6% com notícia de que Trabuco assumirá Fazenda; ações do Bradesco avançam 11,6% - Valor Econômico",
+      "sentimento": 0.17,
       "tickers": []
     },
     {
-      "quando": "2026-11-26T08:00:00+00:00",
+      "quando": "2026-11-27T08:51:15+00:00",
       "fonte": "InfoMoney",
       "mercado": "BR",
-      "titulo": "Brasil vê queda de alocação de investidores e México ganha espaço; Vale lidera saídas",
-      "sentimento": -0.19,
+      "titulo": "Dow Jones Futuro sobe mais de 1% no retorno do feriado de Ação de Graças",
+      "sentimento": 0.17,
+      "tickers": []
+    },
+    {
+      "quando": "2026-11-27T04:29:47+00:00",
+      "fonte": "CoinDesk",
+      "mercado": "cripto",
+      "titulo": "Ethereum's much-awaited Glamsterdam upgrade cleared for December test. Here's what to know",
+      "sentimento": 0.16,
       "tickers": [
-        "VALE3",
-        "BBDC4",
-        "BBAS3"
+        "ETH"
       ]
     },
     {
-      "quando": "2026-11-26T12:29:27+00:00",
-      "fonte": "Valor Investe",
-      "mercado": "BR",
-      "titulo": "IPCA-15 desacelera para 0,22% em novembro e vem abaixo do esperado",
-      "sentimento": 0.19,
-      "tickers": []
+      "quando": "2026-11-26T19:04:44+00:00",
+      "fonte": "Livecoins",
+      "mercado": "cripto",
+      "titulo": "Polícia investiga youtuber que promovia plataforma de investimentos suspeita em seu canal",
+      "sentimento": 0.16,
+      "tickers": [
+        "BTC"
+      ]
+    },
+    {
+      "quando": "2026-11-26T22:47:11+00:00",
+      "fonte": "Livecoins",
+      "mercado": "cripto",
+      "titulo": "Reviravolta na Brasil Bitcoin leva Justiça a impedir exclusão de sócio horas após nota do CEO",
+      "sentimento": 0.14,
+      "tickers": [
+        "BTC"
+      ]
     }
   ]
 }

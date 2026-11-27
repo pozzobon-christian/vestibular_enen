@@ -1,36 +1,5 @@
 [
   {
-    "data": "2026-11-26",
-    "hora_brt": "",
-    "evento": "Caged: emprego formal no Brasil",
-    "fonte": "Ministério do Trabalho",
-    "categoria": "macro_br",
-    "ativos": [
-      "BOVA11",
-      "MGLU3",
-      "ITUB4"
-    ],
-    "impacto": "baixo",
-    "o_que_esperar": "Consumo e crédito.",
-    "preparacao": "Só observar.",
-    "confirmar": true
-  },
-  {
-    "data": "2026-11-26",
-    "hora_brt": "10:30",
-    "evento": "Pedidos de seguro-desemprego dos EUA",
-    "fonte": "Dept. of Labor",
-    "categoria": "macro_us",
-    "ativos": [
-      "SPY",
-      "QQQ"
-    ],
-    "impacto": "baixo",
-    "o_que_esperar": "Surpresas grandes mexem com Treasury e dólar.",
-    "preparacao": "Só observar.",
-    "confirmar": false
-  },
-  {
     "data": "2026-11-30",
     "hora_brt": "",
     "evento": "OPEP+: reunião ministerial (cotas de produção)",
@@ -480,5 +449,22 @@
     "o_que_esperar": "Surpresas grandes mexem com Treasury e dólar.",
     "preparacao": "Só observar.",
     "confirmar": false
+  },
+  {
+    "data": "2027-01-01",
+    "hora_brt": "10:30",
+    "evento": "Payroll (emprego nos EUA)",
+    "fonte": "BLS",
+    "categoria": "macro_us",
+    "ativos": [
+      "SPY",
+      "QQQ",
+      "DX-Y.NYB",
+      "BTC"
+    ],
+    "impacto": "alto",
+    "o_que_esperar": "Forte = juro sobe = dólar sobe, cripto e tecnologia caem.",
+    "preparacao": "Sem posição nova em cripto/tecnologia na véspera; operar após 10h35.",
+    "confirmar": true
   }
 ]
