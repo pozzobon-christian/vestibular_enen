@@ -14,10 +14,10 @@
       "codigo_fracionario": "PRIO3F",
       "data": "2026-11-27",
       "conta": "BTG",
-      "lado": "compra",
+      "lado": "buy",
       "quantidade": 2,
       "limite": 62.6,
-      "preco_ref": 62.45,
+      "preco_ref": 61.8,
       "condicao": "só se, após 10h15, PRIO3 estiver acima de 61,72 (mínima da faixa de abertura de ontem); se abrir abaixo, cancelar",
       "alvo_preco": 70.91,
       "alvo_pct": 0.1355,
@@ -47,20 +47,22 @@
           "análogos com n=7 < 8: não contam como evidência"
         ],
         "bloqueios": [
-          "votação insuficiente para venda: 0 contra, 1 a favor"
+          "regime defensivo: compra só com tendência própria de alta ou estabilização",
+          "votação insuficiente: 0 a favor, 0 contra (precisa 2+ a favor e 0 contra)"
         ],
         "estabilizacao": false,
-        "stop_estrutural": 64.0271,
+        "stop_estrutural": 58.22,
         "votos": {
           "tendencia": "neutro",
           "analogos": "a_favor",
-          "balanco": "a_favor",
+          "balanco": null,
           "noticias": null,
-          "intradia": "neutro"
+          "intradia": null
         },
         "tendencia": "lateral 45",
         "ultimo": 61.8
-      }
+      },
+      "status": "validade encerrada em 27/11 (ordem do dia); não renovar para segunda: porteiro reprovou no fechamento e OPEP+ na segunda"
     },
     {
       "data": "em observação (bloqueada pelo porteiro)",
@@ -100,16 +102,16 @@
         ],
         "bloqueios": [
           "regime defensivo: compra só com tendência própria de alta ou estabilização",
-          "votação insuficiente: 0 a favor, 1 contra (precisa 2+ a favor e 0 contra)"
+          "votação insuficiente: 0 a favor, 0 contra (precisa 2+ a favor e 0 contra)"
         ],
         "estabilizacao": false,
         "stop_estrutural": 48.4307,
         "votos": {
           "tendencia": "neutro",
           "analogos": "neutro",
-          "balanco": "neutro",
+          "balanco": null,
           "noticias": null,
-          "intradia": "contra"
+          "intradia": null
         },
         "tendencia": "baixa 35",
         "ultimo": 50.04
@@ -154,7 +156,7 @@
           "contra a tendência (baixa 85) sem estabilização",
           "composto de risco cripto negativo (ibit_saindo, proxies_em_baixa) sem estabilização",
           "regime defensivo: compra só com tendência própria de alta ou estabilização",
-          "votação insuficiente: 0 a favor, 2 contra (precisa 2+ a favor e 0 contra)"
+          "votação insuficiente: 0 a favor, 1 contra (precisa 2+ a favor e 0 contra)"
         ],
         "estabilizacao": false,
         "stop_estrutural": 59106.7585,
@@ -163,7 +165,7 @@
           "analogos": "neutro",
           "balanco": null,
           "noticias": "neutro",
-          "intradia": "contra"
+          "intradia": null
         },
         "tendencia": "baixa 85",
         "ultimo": 60510.3979
@@ -203,16 +205,16 @@
         "bloqueios": [
           "contra a tendência (baixa 75) sem estabilização",
           "regime defensivo: compra só com tendência própria de alta ou estabilização",
-          "votação insuficiente: 2 a favor, 2 contra (precisa 2+ a favor e 0 contra)"
+          "votação insuficiente: 1 a favor, 1 contra (precisa 2+ a favor e 0 contra)"
         ],
         "estabilizacao": false,
         "stop_estrutural": 40.41,
         "votos": {
           "tendencia": "contra",
           "analogos": "a_favor",
-          "balanco": "a_favor",
+          "balanco": null,
           "noticias": "neutro",
-          "intradia": "contra"
+          "intradia": null
         },
         "tendencia": "baixa 75",
         "ultimo": 42.18
@@ -251,7 +253,7 @@
           "contra a tendência, mas com estabilização confirmada: tamanho reduzido à metade"
         ],
         "bloqueios": [
-          "votação insuficiente: 1 a favor, 1 contra (precisa 2+ a favor e 0 contra)"
+          "votação insuficiente: 0 a favor, 1 contra (precisa 2+ a favor e 0 contra)"
         ],
         "estabilizacao": true,
         "stop_estrutural": 8.26,
@@ -260,7 +262,7 @@
           "analogos": "neutro",
           "balanco": null,
           "noticias": null,
-          "intradia": "a_favor"
+          "intradia": null
         },
         "tendencia": "baixa 85",
         "ultimo": 8.96
@@ -295,7 +297,7 @@
           "contra a tendência (baixa 85) sem estabilização",
           "composto de risco cripto negativo (ibit_saindo, proxies_em_baixa) sem estabilização",
           "regime defensivo: compra só com tendência própria de alta ou estabilização",
-          "votação insuficiente: 0 a favor, 2 contra (precisa 2+ a favor e 0 contra)"
+          "votação insuficiente: 0 a favor, 1 contra (precisa 2+ a favor e 0 contra)"
         ],
         "estabilizacao": false,
         "stop_estrutural": 59106.7585,
@@ -304,7 +306,7 @@
           "analogos": "neutro",
           "balanco": null,
           "noticias": "neutro",
-          "intradia": "contra"
+          "intradia": null
         },
         "tendencia": "baixa 85",
         "ultimo": 60510.3979

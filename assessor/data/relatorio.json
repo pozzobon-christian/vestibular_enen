@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-11-27T20:50:56.104422+00:00",
+  "gerado_em": "2026-11-27T20:51:29.780255+00:00",
   "janela_dias": 30,
   "posts_na_janela": 4259,
   "campanhas": [
@@ -6039,12 +6039,12 @@
       "stocktwits:thecryptofire"
     ],
     [
-      "stocktwits:mrstocks785",
-      "stocktwits:stockpikalliance"
-    ],
-    [
       "stocktwits:kevinohwarsh",
       "stocktwits:slothtrades"
+    ],
+    [
+      "stocktwits:mrstocks785",
+      "stocktwits:stockpikalliance"
     ]
   ],
   "lideres": [
@@ -6114,7 +6114,7 @@
     "posts": 4557,
     "autores": 1778,
     "campanhas": 227,
-    "sinais": 3988,
+    "sinais": 4215,
     "precos": 20521,
     "ultima_execucao": "2026-11-27T20:50:55.667391+00:00"
   }

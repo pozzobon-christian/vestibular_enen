@@ -362,7 +362,7 @@ def gate_planned_orders(db: MonitorDB, regimes: dict, crypto_risk: dict | None, 
             o["porteiro"] = {"aprovada": None, "motivos": ["sem histórico suficiente"], "bloqueios": []}; out.append(o); continue
         hi, lo, cl = [r[0] for r in rows], [r[1] for r in rows], [r[2] for r in rows]
         tr = trend_report(t, hi, lo, cl); an = find_analogs(t, cl, k=15) if len(cl) >= 230 else None
-        side = "compra" if o.get("lado") == "buy" else "venda"
+        side = "compra" if str(o.get("lado", "")).lower() in ("buy", "compra") else "venda"
         votes = {"tendencia": "a_favor" if tr.direction == side.replace("compra", "alta").replace("venda", "baixa") and tr.score >= 50
                  else "contra" if tr.direction in ("alta", "baixa") and tr.score >= 50 else "neutro",
                  "analogos": None, "balanco": None, "noticias": None, "intradia": None}
